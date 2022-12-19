@@ -14,3 +14,6 @@ Contents
 .. toctree::
 
    gettingstarted
+   commonConfigs
+   trafficCarConfigs
+   pedestrianConfigs

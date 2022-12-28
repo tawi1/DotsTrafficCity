@@ -22,6 +22,11 @@ How to create
 	
 	/test
 	/test.rst
+	./test.rst
+	
+	:doc: `the docs <files/test.rst>`.
+	:doc: `the docs <./test.rst>`.
+	:doc: `the docs </test.rst>`.
 	
 	**Prefab settings**
 	**Prefab settings**

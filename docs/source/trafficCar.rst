@@ -16,15 +16,15 @@ How to create
 
 	.. image:: images/trafficCar/carPrefabCreator/PrefabSettings.png
 	
-#. Configure the general settings for creating a car.
+#. Configure the :ref:`common settings <carPrefabCreatorCommonSettings>` for creating a car.
 
 	.. image:: images/trafficCar/carPrefabCreator/CommonSettings.png
 	
-#. Configure the save settings for creating a car.
+#. Configure the :ref:`save settings <carPrefabCreatorSaveSettings>` for creating a car.
 
 	.. image:: images/trafficCar/carPrefabCreator/SaveSettings.png
 	
-#. Change the template depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
+#. Change the :ref:`template settings <carPrefabCreatorTemplateSettings>` depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
 
 	.. image:: images/trafficCar/carPrefabCreator/TemplateSettings.png
 	

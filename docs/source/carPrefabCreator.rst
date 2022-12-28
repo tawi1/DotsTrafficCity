@@ -17,6 +17,9 @@ Prefab Settings
 	**Player car convert template** :
 	**Custom atlas material** :
 		
+		
+.. _carPrefabCreatorCommonSettings:
+
 Common Settings
 ----------------
 
@@ -33,6 +36,8 @@ Common Settings
 	**Corrective hull mesh pivot:**
 		* **Additional pivot offset** :
 	
+.. _carPrefabCreatorSaveSettings:
+	
 Save Settings
 ----------------
 
@@ -46,6 +51,8 @@ Save Settings
 	**Prefab save type** :
 	**Prefab save path type** :
 	**New prefab template name** :
+	
+.. _carPrefabCreatorTemplateSettings:
 	
 Template Settings
 ----------------

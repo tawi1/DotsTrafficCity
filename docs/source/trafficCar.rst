@@ -28,6 +28,8 @@ How to create
 	:doc: `the docs <./test.rst>`.
 	:doc: `the docs </test.rst>`.
 	
+	.. include:: test.rst
+	
 	**Prefab settings**
 	**Prefab settings**
 	**Prefabs** :

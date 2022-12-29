@@ -79,6 +79,9 @@ CarSoundAuthoring
 		* **Horne**
 		* **Enter car**
 		* **Exit car**		
+		
+	.. note::
+		Fmod plugin for sounds should be installed.
 
 Configs
 ----------------

@@ -1,4 +1,4 @@
-Traffic Car Configs
+Car Configs
 ************
 
 .. _trafficCarConfigs:
@@ -16,12 +16,12 @@ Traffic Car Spawner Config
 
 	.. image:: images/configs/traffic/TrafficCarSpawnerConfig.png
 	
-	**Preferable count** :
-	**HashMap capacity** :
-	**Max spawn count** :
-	**Max parking cars** :
-	**Min/Max spawn delay** :
-	**Min spawn distance** :
+	**Preferable count** : maximum number of cars in the city.
+	**HashMap capacity** : initial capacity of the hashmap that contains the data of the traffic cars.
+	**Max spawn count by iteration** : maximum number of cars that will be spawned in one iteration.
+	**Max parking cars** : maximum number of parked in the city.
+	**Min/Max spawn delay** : minimum/maximum duration between spawns.
+	**Min spawn distance** : minimum distance for spawning between cars.
 	
 Traffic Car Settings
 ------------
@@ -174,15 +174,7 @@ Traffic Car Antistuck Config
 	**Stuck distance difference** :
 	**Cull of out the camera only** :
 	
-Traffic Public Spawner Settings
-------------
-
-	.. image:: images/configs/traffic/TrafficPublicSpawnerSettings.png
-	
-	**Spawn frequency** :
-	**Traffic public to car model dictionary** :
-	
-Traffic car horne config
+Traffic Car Horne config
 ------------
 
 	.. image:: images/configs/traffic/TrafficCarHorneConfig.png
@@ -191,6 +183,18 @@ Traffic car horne config
 	**Idle time to start** :
 	**Delay** :
 	**Horne duration** :
+	
+Public Traffic
+============
+
+Traffic Public Spawner Settings
+------------
+
+	.. image:: images/configs/traffic/TrafficPublicSpawnerSettings.png
+	
+	**Spawn frequency** :
+	**Traffic public to car model dictionary** :
+
 
 
 		

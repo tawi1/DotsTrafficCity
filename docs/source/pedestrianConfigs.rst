@@ -1,4 +1,4 @@
-Pedestrian Configs
+Npc Configs
 =====
 
 .. _pedestrianConfigs:
@@ -6,7 +6,7 @@ Pedestrian Configs
 .. contents::
    :local:
 
-Pedestrian Configs
+Pedestrian
 ============
 
 Pedestrian Spawner Config
@@ -118,6 +118,9 @@ Pedestrian Common Sound Config
 	**Enter tram sound** :
 	**Exit tram sound** :
 	
+Common Npc Configs
+============
+
 Npc Common Config
 ------------
 

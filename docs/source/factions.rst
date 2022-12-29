@@ -4,7 +4,7 @@
 Factions
 --------
 
-``Factions are an enum type to solve the problem of friendly fire in damage systems``
+``Factions are an enum type to solve the issue of friendly fire in damage systems``
 
 
 	**Factions:**

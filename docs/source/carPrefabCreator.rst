@@ -1,7 +1,7 @@
+.. _carPrefabCreator:
+
 Car Prefab Creator
 =====
-
-.. _carPrefabCreator:
 
 Prefab Settings
 ----------------

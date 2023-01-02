@@ -23,6 +23,8 @@ Traffic Car Spawner Config
 	**Min/Max spawn delay** : minimum/maximum duration between spawns.
 	**Min spawn distance** : minimum distance for spawning between cars.
 	
+.. _trafficCarSettings:
+	
 Traffic Car Settings
 ------------
 

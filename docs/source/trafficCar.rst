@@ -28,7 +28,7 @@ How to create
 
 	.. image:: images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
 	
-#. Click scan button.
+#. Click `Scan` button.
 
 	.. image:: images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
@@ -49,7 +49,7 @@ TrafficCarEntityAuthoring
 	**Nav mesh obstacle** : vehicle `NavMeshObstcale` reference.
 	**Car model** : selected enum of vehicle.	
 	**Faction type** : selected :ref:`faction type <factions>` of vehicle.
-	**Car type** :
+	**Car type** : selected :ref:`car type <carType>` of vehicle.
 	**Bounds source type** : selected bounds source for the entity bounds.
 	**Traffic type** : Selected traffic type (Default, Tram, Traffic public).
 		
@@ -66,6 +66,8 @@ CarSoundAuthoring
 ~~~~~~~~~~~~
 	
 	.. image:: images/entities/trafficCar/CarSoundAuthoring.png
+	
+	|
 	
 	**Min pitch** : minimum pitch of the car engine.
 	**Max pitch** : maximum pitch of the car engine.

@@ -48,7 +48,7 @@ TrafficCarEntityAuthoring
 	**Physics shape** : vehicle entity `PhysicsShape` reference.
 	**Nav mesh obstacle** : vehicle `NavMeshObstcale` reference.
 	**Car model** : selected enum of vehicle.	
-	**Faction type** : selected :hoverxref:`faction type <factions>` of vehicle.
+	**Faction type** : selected :ref:`faction type <factions>` of vehicle.
 	**Car type** :
 	**Bounds source type** : selected bounds source for the entity bounds.
 	**Traffic type** : Selected traffic type (Default, Tram, Traffic public).

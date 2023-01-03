@@ -19,33 +19,37 @@ Main Components
 Road Segment
 ~~~~~~~~~~~~
 
+Component to connect with other road segments.
+
 	.. image:: images/road/roadSegment/RoadSegment.png
 	
 Variables
 """"""""""""""
 
-| **Road segment placer** :
-| **Short title name** :
+| **Road segment placer** : reference to :ref:`RoadSegmentPlacer<roadSegmentPlacer>`.
+| **Short title name** : short name for `RoadSegmentPlacer`.
 | **Show intersected paths** :
 	
 Buttons
 """"""""""""""
 
-| **Connect nodes** :
-| **Reset nodes** :
-| **Bake data** :
+| **Connect nodes** : auto-connect :ref:`traffic Nodes<trafficNode>`.
+| **Reset nodes** : reset already auto-connected paths of :ref:`traffic Nodes<trafficNode>`.
+| **Bake data** : bake all :ref:`paths<path>` data (path's length, intersections).
 	
 TrafficLightCrossroad
 ~~~~~~~~~~~~
+
+Component for handling traffic lights at crossroad.
 
 Cached
 """"""""""""""
 
 	.. image:: images/road/roadSegment/TrafficLightCrossroadCached.png
 	
-	**Traffic crossroad settings** :
-	**Traffic nodes** :
-	**Traffic light handler data** :
+	**Traffic crossroad settings** : settings that contain general traffic light timings.
+	**Traffic nodes** : all nodes of `RoadSegment`.
+	**Traffic light handler data** : light handlers that contain `TrafficLightCrossroad`.
 
 Timeline common
 """"""""""""""

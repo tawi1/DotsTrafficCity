@@ -18,59 +18,82 @@ How To Use
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 	
 #. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
-#. Adjust custom settings. :ref:`road segment type<roadSegmentCreatorGeneralSettings>`.
+#. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
 #. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
 #. Customize :ref:`light settings<roadSegmentCreatorLightSettings>`.
 #. Customize :ref:`path settings<roadSegmentCreatorPathSettings>`.
 	
-Modes
+.. _roadSegmentCreatorCustomSettings:
+
+Custom Settings
 ------------
 
 Default crossroad
 ~~~~~~~~~~~~ 
+
+	.. image:: images/road/roadSegment/examples/RoadSegmentDefault.png
+	`Example`.
 	
 Turn road
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentTurnRoad.png
+	`Example`.
 
 	
 Straight road
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentStraightSettings.png
-
+	.. image:: images/road/roadSegment/examples/RoadSegmentStraight.png
+	`Example`.
+	
 Transition crossroad	
 ~~~~~~~~~~~~
  
 	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
-
+	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
+	`Example`.
 	
 Transition straight road
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
+	`Example`.
 	
 Transition crossroad to oneway road
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
+	`Example`.
 	
 Oneway straight
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentOneWayStraight.png
+	`Example`.
 	
 Oneway turn
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
+	`Example`.
 	
 Custom straight road
 ~~~~~~~~~~~~ 
 	
 	.. image:: images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
 	.. image:: images/road/roadSegment/creator/RoadSegmentCustomStraightPathSettings.png
+	
+	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraight.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraight2.png
+	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraightSnapExample.png
+	`Example`.
 		
 Custom segment 
 ~~~~~~~~~~~~ 
@@ -78,6 +101,9 @@ Custom segment
 	.. image:: images/road/roadSegment/creator/RoadSegmentCustomCustomSettings.png
 	.. image:: images/road/roadSegment/creator/RoadSegmentCustomSnapNodeSettings.png
 	.. image:: images/road/roadSegment/creator/RoadSegmentCustomTrafficNodeEditorWindow.png
+	
+	.. image:: images/road/roadSegment/creator/RoadSegmentCustomExample.png
+	`Example`.
 
 Components
 ------------

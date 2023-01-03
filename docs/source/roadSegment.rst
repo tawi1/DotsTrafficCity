@@ -19,6 +19,20 @@ Road Segment
 
 	.. image:: images/road/roadSegment/RoadSegment.png
 	
+Variables
+""""""""""""""
+
+	**Road segment placer** :
+	**Short title name** :
+	**Show intersected paths** :
+	
+Buttons
+""""""""""""""
+
+	**Connect nodes** :
+	**Reset nodes** :
+	**Bake data** :
+	
 TrafficLightCrossroad
 ~~~~~~~~~~~~
 
@@ -26,14 +40,19 @@ Cached
 """"""""""""""
 
 	.. image:: images/road/roadSegment/TrafficLightCrossroadCached.png
-
+	
+	**Traffic crossroad settings** :
+	**Traffic nodes** :
+	**Traffic light handler data** :
 
 Timeline common
 """"""""""""""
 	
+Timeline common uses the timeline from the `TrafficCrossroadSettings`.
+	
 	.. image:: images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
 	
-	.. note:: You can change the common timeline by adding new settings `TrafficCrossroadSettings`.
+	.. note:: You can change the common timeline for the current segment by adding new settings `TrafficCrossroadSettings`.
 
 Timeline custom
 """"""""""""""

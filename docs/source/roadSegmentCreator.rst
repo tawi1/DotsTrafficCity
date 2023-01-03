@@ -3,7 +3,7 @@
 Road Segment Creator
 =====
 
-``Road Segment Creator is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
+`Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
 How To Use
 ------------

@@ -24,16 +24,16 @@ Road Segment
 Variables
 """"""""""""""
 
-**Road segment placer** :
-**Short title name** :
-**Show intersected paths** :
+| **Road segment placer** :
+| **Short title name** :
+| **Show intersected paths** :
 	
 Buttons
 """"""""""""""
 
-**Connect nodes** :
-**Reset nodes** :
-**Bake data** :
+| **Connect nodes** :
+| **Reset nodes** :
+| **Bake data** :
 	
 TrafficLightCrossroad
 ~~~~~~~~~~~~

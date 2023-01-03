@@ -63,24 +63,24 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 **How to create arrows:**
 	#. Click `Show Custom Arrow Light Setup`.
 	#. Select `Custom Related Light Index`.
-	#. Select related :ref:`TrafficNode <trafficNode>`.
+	#. Select related :ref:`TrafficNode <trafficNode>` in the toolbar.
 	
 		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
 			
-	#. Select related :ref:`path <path>`.
+	#. Select related :ref:`path <path>` in the toolbar.
 	
 		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
 		`Selected path example`
 		
 	#. Click `Add Custom Light` button.
 	
-	..note: To remove the light arrow, select appropriate `TrafficNode` and `path` and press `Remove Selected Path` button.
+	.. note:: To remove the light arrow, select appropriate `TrafficNode` and `path` and press `Remove Selected Path` button.
 		
 
 How To Customize
 ------------
 
-By default `RoadSegment` contains `RoadSegmentCreator` component which can be used to customize a segment.
+By default `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component which can be used to customize a segment.
 
 
 

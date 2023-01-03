@@ -43,13 +43,13 @@ Timeline custom
 After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd `TrafficLightHandler`.
 	
 **How to loop timeline:**
-	#. **Select the `TrafficLightHandler` that should be looped**
-	#. **Enter `Source Data Handler Index` parameter based on which to loop**
+	#. Select the `TrafficLightHandler` that should be looped.
+	#. Enter `Source Data Handler Index` parameter based on which to loop.
 	
 		.. image:: images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png
 		`Settings example`
 		
-	#. **Click `Loop Time`**
+	#. Click `Loop Time`.
 	
 **Loop result:**
 
@@ -60,9 +60,22 @@ Custom arrow lights
 
 Arrows are used for the custom traffic light for the selected :ref:`path <path>`.
 
-	.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
-	.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
-
+**How to create arrows:**
+	#. Click `Show Custom Arrow Light Setup`.
+	#. Select `Custom Related Light Index`.
+	#. Select related :ref:`TrafficNode <trafficNode>`.
+	
+		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
+			
+	#. Select related :ref:`path <path>`.
+	
+		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
+		`Selected path example`
+		
+	#. Click `Add Custom Light` button.
+	
+	..note: To remove the light arrow, select appropriate `TrafficNode` and `path` and press `Remove Selected Path` button.
+		
 
 How To Customize
 ------------

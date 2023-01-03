@@ -30,8 +30,10 @@ Cached
 
 Timeline common
 """"""""""""""
-
+	
 	.. image:: images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
+	
+	.. note:: You can change the common timeline by adding new settings `TrafficCrossroadSettings`.
 
 Timeline custom
 """"""""""""""

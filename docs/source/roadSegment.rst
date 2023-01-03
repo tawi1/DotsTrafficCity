@@ -3,10 +3,12 @@
 Road Segment
 =====
 
-``Road Segment is the main component of the road that contains :ref:`traffic node<trafficNode>`, :ref:`paths<path>`, and :ref:`pedestrian nodes<pedestrianNode>` ``
+`Road Segment` is the main component of the road that contains :ref:`traffic node<trafficNode>`, :ref:`paths<path>`, and :ref:`pedestrian nodes<pedestrianNode>`.
 
 How To Create
 ------------
+
+Select in the unity toolbar:
 
 	.. image:: images/road/roadSegment/RoadSegmentCreation.png
 	
@@ -22,16 +24,16 @@ Road Segment
 Variables
 """"""""""""""
 
-	**Road segment placer** :
-	**Short title name** :
-	**Show intersected paths** :
+**Road segment placer** :
+**Short title name** :
+**Show intersected paths** :
 	
 Buttons
 """"""""""""""
 
-	**Connect nodes** :
-	**Reset nodes** :
-	**Bake data** :
+**Connect nodes** :
+**Reset nodes** :
+**Bake data** :
 	
 TrafficLightCrossroad
 ~~~~~~~~~~~~

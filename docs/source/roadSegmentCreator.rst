@@ -13,15 +13,15 @@ How To Use
 #. Create :ref:`RoadSegment<roadSegment>`.
 #. Set the segment to the desired position.
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
-#. Select :ref:`road segment type<_roadSegmentCreatorGeneralSettings>`.
+#. Select :ref:`road segment type<roadSegmentCreatorGeneralSettings>`.
 
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 	
-#. Adjust :ref:`general settings<_roadSegmentCreatorGeneralSettings>`.
-#. Adjust custom settings. :ref:`road segment type<_roadSegmentCreatorGeneralSettings>`.
-#. Customize :ref:`pedestrian node settings<_roadSegmentCreatorGeneralSettings>`.
-#. Customize :ref:`light settings<_roadSegmentCreatorGeneralSettings>`.
-#. Customize :ref:`path settings<_roadSegmentCreatorGeneralSettings>`.
+#. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
+#. Adjust custom settings. :ref:`road segment type<roadSegmentCreatorGeneralSettings>`.
+#. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
+#. Customize :ref:`light settings<roadSegmentCreatorLightSettings>`.
+#. Customize :ref:`path settings<roadSegmentCreatorPathSettings>`.
 	
 Modes
 ------------
@@ -90,19 +90,28 @@ General settings
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
 
+.. _roadSegmentCreatorPedestrianSettings:
+
 Pedestrian node settings
 ~~~~~~~~~~~~ 
+
+
+.. _roadSegmentCreatorLightSettings:
 
 Light settings
 ~~~~~~~~~~~~ 
 
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
 	
+.. _roadSegmentCreatorPathSettings:
+
 Path settings
 ~~~~~~~~~~~~ 
 	
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
 
+
+.. _roadSegmentCreatorSegmentSettings:
 
 Segment handler settings
 ~~~~~~~~~~~~ 

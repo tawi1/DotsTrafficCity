@@ -7,10 +7,10 @@ Common Configs
    :local:
 
 Common Configs
-============
+-------------------
 
 General Settings Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/GeneralSettingsConfig.png
 	
@@ -49,7 +49,7 @@ General Settings Config
 	**Show fps** :	
 	
 Cull Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/CullConfig.png
 	
@@ -59,7 +59,7 @@ Cull Config
 	**Show debug** :
 	
 Streaming Level Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/StreamingLevelConfig.png
 	
@@ -68,20 +68,20 @@ Streaming Level Config
 		**Distance for streaming out** :
 
 Player Configs
-============	
+-------------------	
 
 Player Npc Sound Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/PlayerNpcSoundConfig.png
 	
 	**Footstep frequency** :
 	
 Sound Configs
-============	
+-------------------	
 
 Common Sound Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/CommonSoundConfig.png
 	
@@ -90,7 +90,7 @@ Common Sound Config
 	**Random hornes sound** :
 	
 Crowd Sound Config
-------------
+~~~~~~~~~~~~
 
 	.. image:: images/configs/common/CrowdSoundConfig.png
 	

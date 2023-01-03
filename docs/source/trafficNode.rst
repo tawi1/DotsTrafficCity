@@ -1,7 +1,7 @@
+.. _trafficNode:
+
 Traffic Node
 =====
-
-.. _trafficNode:
 
 Traffic Node
 ----------------

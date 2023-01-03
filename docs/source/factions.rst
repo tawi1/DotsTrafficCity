@@ -8,9 +8,9 @@ Factions
 
 
 	**Factions:**
-		**All** :
-		**Player** :
-		**Police** :
-		**City** :
-		**Mafia** :
+		* **All** :
+		* **Player** :
+		* **Police** :
+		* **City** :
+		* **Mafia** :
 

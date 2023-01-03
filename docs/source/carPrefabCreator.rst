@@ -56,7 +56,7 @@ Save Settings
 		* **Override source** : selected prefabs will be replaced by new ones.
 		* **Create new if not exist** : new prefabs will be created only if there are no previously created ones by the selected path.
 		* **Override target** : previously created prefabs will be overwritten in case of a duplicate.
-	**Prefab save path type** :
+	**Prefab save path type:**
 		* **Original prefab path** : prefabs will be created in the directory where the selected prefabs are located.
 		* **Template prefab path** : Prefabs will be created in the directory where the template is located.
 		* **Custom path** : user's path of creation. 

@@ -3,13 +3,13 @@
 Car Type
 --------
 
-``Factions are an enum type to solve the problem of friendly fire in damage systems``
+``Car type is used to convert prefabs of cars of the same model but different types (e.g. from a traffic car to a player's car when getting into it)``
 
 
 	**Car type:**
-		**None** :
-		**Player** :
-		**Police** :
-		**City** :
-		**Mafia** :
+		* **None** :
+		* **Player** :
+		* **Police** :
+		* **City** :
+		* **Mafia** :
 

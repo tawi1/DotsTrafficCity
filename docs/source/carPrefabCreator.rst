@@ -14,8 +14,8 @@ Prefab Settings
 		* **Project**
 			* **Prefabs** : selected prefabs from the project.
 	**Car type:**
-		* **Traffic**
-		* **Player**
+		* **Traffic** : prefab car will be created for the traffic.
+		* **Player** : prefab car will be created for the player.
 	**Traffic car convert template** : template which contains traffic prefab template.
 	**Player car convert template** : template which contains traffic prefab template.
 	**Custom atlas material** : custom material for created vehicles.
@@ -32,7 +32,7 @@ Common Settings
 		* **Parent is hull mesh** : car root contains a car mesh.
 	**Fit physics shape to mesh** : physical shape will be resized to the mesh size.
 	**Has wheels** : should search for wheels on a :ref:`template <carPrefabCreatorTemplateSettings>`.
-	**Has navmesh obstacle:** does the car contain `UnityEngine.AI.NavMeshObstacle` component.
+	**Has navmesh obstacle:** does the car contain `NavMeshObstacle<https://docs.unity3d.com/Manual/class-NavMeshObstacle.html>`_ component. 
 		* **Move threshold**
 		* **Carve stationary**
 		* **Carve time to stationary**
@@ -85,13 +85,13 @@ Prefab Info
 	
 	**Prefab car info:**
 		* **Prefab** : reference to source prefab.
-		* **New enum type** : enum for created prefab entity.
+		* **New enum type** : :ref:`CarModel<carModel>` enum for created prefab entity.
 		
 Buttons
 ----------------
 
 	.. image:: images/trafficCar/carPrefabCreator/Buttons.png
 	
-	**Scan** :
-	**Add enum types** :
-	**Create** :
+	**Scan** : scan the added prefabs and add information about new ones to the `Prefab Info` tab.
+	**Add enum types** : add new :ref:`CarModel<carModel>` enums from the `Prefab Info` tab.
+	**Create** : create new entity prefabs based on the added prefabs.

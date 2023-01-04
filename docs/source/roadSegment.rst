@@ -10,7 +10,7 @@ How To Create
 
 Select in the unity toolbar:
 
-	.. image:: images/road/roadSegment/RoadSegmentCreation.png
+	.. image:: images/road/installation/RoadSegmentCreation.png
 	
 	
 Main Components
@@ -33,8 +33,8 @@ Variables
 Buttons
 """"""""""""""
 
-| **Connect nodes** : auto-connect :ref:`traffic Nodes<trafficNode>`.
-| **Reset nodes** : reset already auto-connected paths of :ref:`traffic Nodes<trafficNode>`.
+| **Connect nodes** : auto-connect :ref:`Traffic Nodes<trafficNode>`.
+| **Reset nodes** : reset already auto-connected paths of :ref:`Traffic Nodes<trafficNode>`.
 | **Bake data** : bake all :ref:`paths<path>` data (path's length, intersections).
 	
 TrafficLightCrossroad
@@ -47,9 +47,9 @@ Cached
 
 	.. image:: images/road/roadSegment/TrafficLightCrossroadCached.png
 	
-	**Traffic crossroad settings** : settings that contain general traffic light timings.
-	**Traffic nodes** : all nodes of `RoadSegment`.
-	**Traffic light handler data** : light handlers that contain `TrafficLightCrossroad`.
+| **Traffic crossroad settings** : settings that contain general traffic light timings.
+| **Traffic nodes** : all nodes of `RoadSegment`.
+| **Traffic light handler data** : light handlers that contain `TrafficLightCrossroad`.
 
 Timeline common
 """"""""""""""

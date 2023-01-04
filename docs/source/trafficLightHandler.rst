@@ -1,12 +1,12 @@
-.. _trafficNode:
+.. _trafficLightHandler:
 
-Traffic Node
+Traffic Light Handler
 =====
 
-Traffic Node Settings
+Traffic Light Handler
 ----------------
 
-``Traffic node is a node for creating pedestrian routes``
+`Traffic Light Handler` is an entity for handling the state of a traffic light.
 
 	.. image:: images/road/TrafficNode.png
 	
@@ -31,8 +31,4 @@ Traffic Node Settings
 	**Connect** :
 	**Force connect** :
 	**Resize** :
-	
-	
-Traffic Node Connection
-----------------
 	

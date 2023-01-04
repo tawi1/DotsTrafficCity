@@ -121,6 +121,7 @@ General settings
 Pedestrian node settings
 ~~~~~~~~~~~~ 
 
+	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
 .. _roadSegmentCreatorLightSettings:
 

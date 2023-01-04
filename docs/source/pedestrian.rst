@@ -1,10 +1,16 @@
+.. _pedestrian:
+
 Pedestrian
 =====
 
-.. _pedestrian:
-
-How to create
+How To Create
 ----------------
+
+Hybrid legacy
+~~~~~~~~~~~~
+
+Baked
+~~~~~~~~~~~~
 
 
 Authoring components

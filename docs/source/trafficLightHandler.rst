@@ -3,32 +3,32 @@
 Traffic Light Handler
 =====
 
-Traffic Light Handler
+Traffic Light Handler settings
 ----------------
 
 `Traffic Light Handler` is an entity for handling the state of a traffic light.
 
-	.. image:: images/road/TrafficNode.png
+	.. image:: images/road/TrafficLightHandler.png
 	
-| **Traffic light handler** :
-| **Lanes** :
-| **External lanes** :
-| **Lane count** :
-| **Lane width** :
-| **Chance to spawn** :
-| **Weight** :
-| **Custom achieve distance** :
-| **Capacity** :
-| **Traffic node type** :
-| **Has crollwalk** :
-| **Allow light for left lanes** :
-| **Is one way** :
-| **Is end of one way** :
-| **Lock path auto creation** :
-| **Auto path is created** :
-	
-| **Buttons:**
-	**Connect** :
-	**Force connect** :
-	**Resize** :
+| **Traffic light crossroad** :
+| **Triggers** :
+| **Traffic light parent** :
+| **Pedestrian light parent** :
+| **Related semaphore index** :
+| **Child lights** :
+| **Custom lights** :
+| **Show world traffic lights** :
+| **Show light connection** :
+| **Visible light connection** :
+| **Semaphore states** :
+
+Traffic Light Handler Components
+----------------
+
+Traffic Light Handler
+~~~~~~~~~~~~ 
+
+Traffic Light Handler Authoring
+~~~~~~~~~~~~ 
+
 	

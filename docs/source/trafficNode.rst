@@ -3,7 +3,7 @@
 Traffic Node
 =====
 
-Traffic Node Settings
+Settings
 ----------------
 
 ``Traffic node is a node for creating pedestrian routes``
@@ -33,6 +33,6 @@ Traffic Node Settings
 	**Resize** :
 	
 	
-Traffic Node Connection
+Connection Info
 ----------------
 	

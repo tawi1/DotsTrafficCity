@@ -136,6 +136,8 @@ Path settings
 ~~~~~~~~~~~~ 
 	
 	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
+	
+	:ref:`Path settings window<pathSettingsWindow>`.
 
 
 .. _roadSegmentCreatorSegmentSettings:

@@ -95,4 +95,3 @@ PhysicsShape & PhysicsBody
 Optional components if the car moves with physics.
 
 	.. include:: trafficCarConfigs.rst
-		literal : flag

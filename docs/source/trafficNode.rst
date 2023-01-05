@@ -3,10 +3,10 @@
 Traffic Node
 =====
 
+``Traffic node is a node for creating pedestrian routes``
+
 Settings
 ----------------
-
-``Traffic node is a node for creating pedestrian routes``
 
 	.. image:: images/road/TrafficNode.png
 	
@@ -33,6 +33,13 @@ Settings
 	**Resize** :
 	
 	
+.. _trafficNodePathCreator:
+
+TrafficNode Path Creator
+----------------
+
+.. _trafficNodeConnectionInfo:
+
 Connection Info
 ----------------
 	

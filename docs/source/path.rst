@@ -3,77 +3,89 @@
 Path
 =====
 
-Path Settings
+`Path` is the component to connect the :ref:`traffic nodes<trafficNode>`.
+
+How To Create
 ----------------
 
-`Path` is the component to connect the :ref:`traffic nodes<trafficNode>`.
+`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator<roadSegmentCreator>` or you can add them to existing :ref:`road segments<roadSegment>` with :ref:`TrafficNodePathCreator<trafficNodePathCreator>`
+
+Path Settings
+----------------
 	
 Cached values
 ~~~~~~~~~~~~
 	
 	.. image:: images/road/path/PathCachedValues.png
 	
-**Source traffic node** : source node traffic from which the path starts.
-**Path connection type:**
+| **Source traffic node** : source node traffic from which the path starts.
+| **Path connection type:**
 	* **Traffic node** :
 		* **Connected traffic node** : connected traffic node.
 	* **Path point** :
 		* **Connected path** : connected path in the custom point.
-**Nodes** : node point to create curves (bezier).
-**Waypoints** : point of path.
-**Custom waypoints** :
-**Intersects** : intersection points with other paths (baked data).
+| **Nodes** : node point to create curves (bezier).
+| **Waypoints** : point of path.
+| **Custom waypoints** :
+| **Intersects** : intersection points with other paths (baked data).
 	
 Settings
 ~~~~~~~~~~~~
 
 	.. image:: images/road/path/PathSettings.png
 		
-**Path length** : path length (baked value).
+| **Path length** : path length (baked value).
+
 .. _pathCurveType:
-**Path curve type:**
+
+| **Path curve type:**
 	* **Straight line** : default point to point line.
 	* **Bezier cube** : bezier cube curved line.
 	* **Bezier quad** : bezier quad curved line.
-**Path road type:**
+| **Path road type:**
 	* **Straight road** : is used to automatically calculate lane changing by traffic.
 	* **Turn road**
+	
 .. _pathTrafficType:
-**Traffic type:** the type of traffic vehicle that can go on this path.
+
+| **Traffic type:** the type of traffic vehicle that can go on this path.
 	* **Default**
 	* **Tram**
 	* **Traffic public**
+	
 .. _pathPriority:
-**Priority** : order of crossing intersected paths (vehicle with the higher priority gets through first).
+
+| **Priority** : order of crossing intersected paths (vehicle with the higher priority gets through first).
+
 .. _pathWaypointsPerCurve:
-**Waypoints count per curve** : number of waypoints in the curve segment.
-**Path speed limit** : speed limit for the entire route
-**Connected lane index** : connected lane index.
-**Hightlight normalized length** : normalized length of the highlighted path (for editor only).
-**Reversed connection side** :
+
+| **Waypoints count per curve** : number of waypoints in the curve segment.
+| **Path speed limit** : speed limit for the entire route
+| **Connected lane index** : connected lane index.
+| **Hightlight normalized length** : normalized length of the highlighted path (for editor only).
+| **Reversed connection side** : path will be connected to the :ref:`opposite side of the node<trafficNodeConnectionInfo>`.
 	
 Visual Settings
 ~~~~~~~~~~~~
 
 	.. image:: images/road/path/PathVisualSettings.png
 
-**Show info on select** : shared parameter between paths instances that automatically enables `Show info waypoints` on selecting new path.
-**Show info waypoints** : show info of waypoints on the scene.
-**Lock Y axis** : lock Y-axis for position handles of nodes.
-**Show intersected points** : show intersected points on the scene.
-**Show handles** : show position handles for nodes.
-**Show edit buttons** : show edit buttons for path (add/remove nodes).
-**Hightlight color** : hightlight color of the path.
-**Show Y position** : show Y-position of nodes.
+| **Show info on select** : shared parameter between paths instances that automatically enables `Show info waypoints` on selecting new path.
+| **Show info waypoints** : show info of waypoints on the scene.
+| **Lock Y axis** : lock Y-axis for position handles of nodes.
+| **Show intersected points** : show intersected points on the scene.
+| **Show handles** : show position handles for nodes.
+| **Show edit buttons** : show edit buttons for path (add/remove nodes).
+| **Hightlight color** : hightlight color of the path.
+| **Show Y position** : show Y-position of nodes.
 
 Buttons
 ~~~~~~~~~~~~
 
-**Open path settings** : open :ref:`Path settings window<pathSettingsWindow>`.
-**Open attach window** : open :ref:`Attach path window<pathAttachWindow>`.
-**Create path** : generation and positioning of waypoints based on the position of the nodes and the selected curve.
-**Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>`. will be added to the path.
-**Reset speed limit** : each waypoint will be assigned a common speed limit of path.
+| **Open path settings** : open :ref:`Path settings window<pathSettingsWindow>`.
+| **Create path** : generation and positioning of waypoints based on the position of the nodes and the selected curve.
+| **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>`. will be added to the path.
+| **Reset speed limit** : each waypoint will be assigned a common speed limit of path.
 	
 .. _pathSettingsWindow:
 
@@ -85,11 +97,11 @@ Path advanced settings window
 Common settings
 ~~~~~~~~~~~~
 
-:ref:`Path curve type<pathCurveType>`.
-:ref:`Path traffic type<pathTrafficType>`.
-:ref:`Waypoints count per curve<pathWaypointsPerCurve>`.
-:ref:`Priority<pathPriority>`.
-**Draw additional settings** : displays additional settings for each waypoint (`Backward Movement`).
+| :ref:`Path curve type<pathCurveType>`.
+| :ref:`Path traffic type<pathTrafficType>`.
+| :ref:`Waypoints count per curve<pathWaypointsPerCurve>`.
+| :ref:`Priority<pathPriority>`.
+| **Draw additional settings** : displays additional settings for each waypoint (`Backward Movement`).
 
 Custom settings
 ~~~~~~~~~~~~
@@ -173,22 +185,23 @@ Custom section
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection1.png
 	
 **Path section type:**
-	* **Start of path** :
-	* **End of path** :
-	* **All path** :
+	* **Start of path** : section will be created at the beginning of the path.
+	* **End of path** : section will be created at the end of the path
+	* **All path** : section will be generated all along the path.
 **Path section create type:**
-	* **Clear path nodes** :
-	* **Use exist nodes** :
-| **Section length** :
-| **Section waypoints** :
-| **Start speed limit** :
-| **End speed limit** :
+	* **Clear path nodes** : waypoints will be generated anew each time a section is created.
+	* **Use exist nodes** : existing waypoints will be used for the section.
+| **Section length** : length of the created section.
+| **Section waypoints** : number of waypoints of the created section.
+| **Start speed limit** : initial speed of the section.
+| **End speed limit** : end speed of the section
 
-
+**How to use:**
+	* Set all parameters.
+	* Click `Create SpeedLimit Segment`.
+	
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection2.png
+	`Source path.`
+	
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection3.png
-
-.. _pathAttachWindow:
-
-Attach path window
-----------------
+	`Result.`

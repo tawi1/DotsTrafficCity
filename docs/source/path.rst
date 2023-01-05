@@ -19,7 +19,7 @@ Cached values
 	.. image:: images/road/path/PathCachedValues.png
 	
 | **Source traffic node** : source node traffic from which the path starts.
-| **Path connection type:**
+**Path connection type:**
 	* **Traffic node** :
 		* **Connected traffic node** : connected traffic node.
 	* **Path point** :
@@ -38,17 +38,18 @@ Settings
 
 .. _pathCurveType:
 
-| **Path curve type:**
+**Path curve type:**
 	* **Straight line** : default point to point line.
 	* **Bezier cube** : bezier cube curved line.
 	* **Bezier quad** : bezier quad curved line.
-| **Path road type:**
+	
+**Path road type:**
 	* **Straight road** : is used to automatically calculate lane changing by traffic.
 	* **Turn road**
 	
 .. _pathTrafficType:
 
-| **Traffic type:** the type of traffic vehicle that can go on this path.
+**Traffic type:** the type of traffic vehicle that can go on this path.
 	* **Default**
 	* **Tram**
 	* **Traffic public**
@@ -84,7 +85,7 @@ Buttons
 
 | **Open path settings** : open :ref:`Path settings window<pathSettingsWindow>`.
 | **Create path** : generation and positioning of waypoints based on the position of the nodes and the selected curve.
-| **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>`. will be added to the path.
+| **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>` will be added to the path.
 | **Reset speed limit** : each waypoint will be assigned a common speed limit of path.
 	
 .. _pathSettingsWindow:
@@ -92,7 +93,7 @@ Buttons
 Path advanced settings window
 ----------------
 
-	.. image:: images/road/path/PathSettingsWindow1.png
+	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow1.png
 	
 Common settings
 ~~~~~~~~~~~~

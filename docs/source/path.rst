@@ -107,7 +107,7 @@ Common settings
 | :ref:`Path traffic type<pathTrafficType>`.
 | :ref:`Waypoints count per curve<pathWaypointsPerCurve>`.
 | :ref:`Priority<pathPriority>`.
-| **Draw additional settings** : displays additional settings for each waypoint (`Backward Movement`).
+| :ref:`Draw additional settings<pathDrawAdditionalSettingsExample>` : displays additional settings for each waypoint (`Backward Movement`).
 
 Custom settings
 ~~~~~~~~~~~~
@@ -120,6 +120,11 @@ Single
 `Single` - change each waypoint one by one.
 
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow1.png
+	
+.. _pathDrawAdditionalSettingsExample:
+	
+	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow2.png
+	`Draw additional settings enabled.`
 
 Multiple
 """"""""""""""

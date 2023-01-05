@@ -27,14 +27,19 @@ Cached values
 | **Nodes** : node point to create curves (bezier).
 | **Waypoints** : point of path.
 | **Custom waypoints** :
-| **Intersects** : intersection points with other paths (baked data).
+
+.. _pathIntersects:
+
+| **Intersects** : intersection points with other paths (:ref:`baked data<pathBakingInfo>`).
 	
 Settings
 ~~~~~~~~~~~~
 
 	.. image:: images/road/path/PathSettings.png
 		
-| **Path length** : path length (baked value).
+.. _pathLength:
+		
+| **Path length** : path length (:ref:`baked value<pathBakingInfo>`).
 
 .. _pathCurveType:
 
@@ -83,7 +88,7 @@ Visual Settings
 Buttons
 ~~~~~~~~~~~~
 
-| **Open path settings** : open :ref:`Path settings window<pathSettingsWindow>`.
+| **Open path settings** : open :ref:`Path Settings Window<pathSettingsWindow>`.
 | **Create path** : generation and positioning of waypoints based on the position of the nodes and the selected curve.
 | **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>` will be added to the path.
 | **Reset speed limit** : each waypoint will be assigned a common speed limit of path.
@@ -144,7 +149,7 @@ Multiple
 	`Source path example.`
 	
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple3.png
-	`Draw Select Buttons enabled example.`
+	`Draw Select Buttons enabled "S" (start) "E" (End) example.`
 	
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple4.png
 	`Path section selected (green circles start & end of section) example.`
@@ -206,3 +211,15 @@ Custom section
 	
 	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection3.png
 	`Result.`
+	
+.. _pathBakingInfo:
+	
+Baking Info
+----------------
+
+Each `path` bakes the data to speed up the entity conversion.
+Baking is activated in the :ref:`road parent<roadParent>`.
+
+**Baked Data:**
+	* :ref:`Path Length<pathLength>`.
+	* :ref:`Intersects<pathIntersects>`.

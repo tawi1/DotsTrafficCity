@@ -1,10 +1,11 @@
 .. _trafficCar:
+   
+Traffic car
+=====
 
 .. contents::
    :local:
    
-Traffic car
-=====
 
 How to create
 ----------------
@@ -93,7 +94,5 @@ PhysicsShape & PhysicsBody
 
 Optional components if the car moves with physics.
 
-Configs
-----------------
-
 	.. include:: trafficCarConfigs.rst
+		literal : flag

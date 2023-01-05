@@ -1,12 +1,15 @@
+.. _trafficCar:
+
+.. contents::
+   :local:
+   
 Traffic car
 =====
-
-.. _trafficCar:
 
 How to create
 ----------------
 
-#. In the Unity toolbar, open `Car Prefab Creator`. More info about :ref:`Car Prefab Creator <carPrefabCreator>`.
+#. In the Unity toolbar, open `Car Prefab Creator`. More info about :ref:`Car Prefab Creator<carPrefabCreator>`.
 
 	``Spirit604/CityEditor/Car Prefab Creator``
 	
@@ -44,23 +47,23 @@ TrafficCarEntityAuthoring
 	
 	.. image:: images/entities/trafficCar/TrafficCarEntityAuthoring.png
 	
-	**Hull mesh renderer** : vehicle hull mesh renderer reference.
-	**Physics shape** : vehicle entity `PhysicsShape` reference.
-	**Nav mesh obstacle** : vehicle `NavMeshObstcale` reference.
-	**Car model** : selected enum of vehicle.	
-	**Faction type** : selected :ref:`faction type <factions>` of vehicle.
-	**Car type** : selected :ref:`car type <carType>` of vehicle.
-	**Bounds source type** : selected bounds source for the entity bounds.
-	**Traffic type** : Selected traffic type (Default, Tram, Traffic public).
+| **Hull mesh renderer** : vehicle hull mesh renderer reference.
+| **Physics shape** : vehicle entity `PhysicsShape` reference.
+| **Nav mesh obstacle** : vehicle `NavMeshObstcale` reference.
+| **Car model** : selected enum of vehicle.	
+| **Faction type** : selected :ref:`faction type <factions>` of vehicle.
+| **Car type** : selected :ref:`car type <carType>` of vehicle.
+| **Bounds source type** : selected bounds source for the entity bounds.
+| **Traffic type** : Selected traffic type (Default, Tram, Traffic public).
 		
 CarWheelAuthoring
 ~~~~~~~~~~~~
 
 	.. image:: images/entities/trafficCar/CarWheelAuthoring.png
 	
-	**Wheel base** : wheel radius.
-	**All wheels** : all wheels of the vehicle.
-	**Steering wheels** : wheels that can turn.
+| **Wheel base** : wheel radius.
+| **All wheels** : all wheels of the vehicle.
+| **Steering wheels** : wheels that can turn.
 	
 CarSoundAuthoring
 ~~~~~~~~~~~~
@@ -69,21 +72,28 @@ CarSoundAuthoring
 	
 	|
 	
-	**Min pitch** : minimum pitch of the car engine.
-	**Max pitch** : maximum pitch of the car engine.
-	**Max load speed** : speed at which the engine has the maximum pitch.
-	**Max volume speed** : speed at which the engine has the maximum volume.
-	**Min volume** : minimum engine volume.
-	**Sounds:**
-		* **Ignition**
-		* **Idle**
-		* **Driving**
-		* **Horne**
-		* **Enter car**
-		* **Exit car**		
-		
+| **Min pitch** : minimum pitch of the car engine.
+| **Max pitch** : maximum pitch of the car engine.
+| **Max load speed** : speed at which the engine has the maximum pitch.
+| **Max volume speed** : speed at which the engine has the maximum volume.
+| **Min volume** : minimum engine volume.
+**Sounds:**
+	* **Ignition**
+	* **Idle**
+	* **Driving**
+	* **Horne**
+	* **Enter car**
+	* **Exit car**		
+
 	.. note::
-		Fmod plugin for sounds should be installed.
+		:ref:`Fmod plugin<sound>` for sounds should be installed.
+		
+PhysicsShape & PhysicsBody
+~~~~~~~~~~~~
+
+Optional components if the car moves with physics.
 
 Configs
 ----------------
+
+	.. include:: trafficCarConfigs.rst

@@ -1,7 +1,7 @@
+.. _gettingstarted:
+
 Getting Started
 ************
-
-.. _gettingstarted:
 
 .. contents::
    :local:

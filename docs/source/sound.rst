@@ -1,0 +1,7 @@
+.. _sound:
+
+Sound
+=====
+
+Installation
+------------

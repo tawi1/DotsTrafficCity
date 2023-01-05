@@ -1,10 +1,10 @@
 .. _trafficCarConfigs:
 
 Traffic Configs
-============
+------------
 
 Traffic Car Spawner Config
-------------
+~~~~~~~~~~~~
 
 ``Single mode is used to position single objects.``
 

@@ -34,14 +34,14 @@ Traffic Car Settings
 	* **Pure entity no physics** :
 	
 **Traffic car detect obstacle mode:**
-	* **Hybrid** :
-	* **Calculate only** :
-	* **Raycast only** :
+	* **Hybrid** : combine types `Calculate` and `Raycast`.
+	* **Calculate only** : mathematically calculates the obstacle.
+	* **Raycast only** : detect obstacle by raycast.
 	
 **Traffic car detect npc mode:**
 	* **Disabled** :
-	* **Calculate** :
-	* **Raycast** :
+	* **Calculate** : mathematically calculates the npc.
+	* **Raycast** : detect obstacle by raycast (npc should have `PhysicsShape` component).
 	
 **Traffic car simple physics type:**
 	* **Car input** :
@@ -85,27 +85,83 @@ Traffic Car Obstacle Config
 
 	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
 	
-| **Max distance to obstacle** :
-| **Min distance to start approach** :
-| **Min distance to check next connected path** :
-| **Short path length** :
-**Calculate distance to intersect point** :
-	**Obstacle intersect calculation method:**
+| **Max distance to obstacle** : (:ref:`example<trafficCarObstacleConfig1>`)
+| **Min distance to start approach** : (:ref:`example<trafficCarObstacleConfig2>`)
+| **Min distance to check next connected path** : (:ref:`example<trafficCarObstacleConfig3>`)
+| **Short path length** : (:ref:`example<trafficCarObstacleConfig4>`)
+| **Calculate distance to intersect point** : (:ref:`example<trafficCarObstacleConfig5>`)
+
+**Obstacle intersect calculation method:**
 	* **Distance** :
 	* **Bounds** :
+	
 | **Size offset to intersect point** :
-| **Close enough distance to stop before intersect point** :
-| **Close enough distance to stop before intersect same target node** :
-| **Close distance to change lane point** :
-| **Max distance to obstacle change lane** :
-**Same direction value** :
-	**Avoid crossroad jam** :
+| **Close enough distance to stop before intersect point** : 
+| **Close enough distance to stop before intersect same target node** : (:ref:`example<trafficCarObstacleConfig6>`)
+| **Close distance to change lane point** : (:ref:`example<trafficCarObstacleConfig7>`)
+| **Max distance to obstacle change lane** : (:ref:`example<trafficCarObstacleConfig8>`)
+| **Same direction value** : (:ref:`example<trafficCarObstacleConfig9>`)
+| **Avoid crossroad jam** : (:ref:`example<trafficCarObstacleConfig10>`)
 	
 	.. note:: 
 		**How to calculate the parameters regarding the size of the vehicle hull:**
 			* Select the mesh renderer of the vehicle hull and insert to the `Target Car Mesh` field.
 			* Press `Recalculate` button.
 			* On the traffic test scene, calibrate the parameters depending on your needs.
+			
+**Parameter visualization:**
+
+.. _trafficCarObstacleConfig1:
+
+	.. image:: images/configs/traffic/obstacleExamples/ObstacleDistanceExample1.png
+	`Obstacle distance example.`
+	
+.. _trafficCarObstacleConfig2:
+
+	.. image:: images/configs/traffic/obstacleExamples/ApproachDistanceExample1.png
+	`Approach distance example.`
+	
+.. _trafficCarObstacleConfig3:
+
+	.. image:: images/configs/traffic/obstacleExamples/MinDistanceToCheckNextConnectedPathExample.png
+	`Min distance to check next ConnectedPath example.`
+	
+.. _trafficCarObstacleConfig4:
+
+	.. image:: images/configs/traffic/obstacleExamples/CheckShortPathExample.png
+	`Short path example.`
+	
+.. _trafficCarObstacleConfig5:
+
+	.. image:: images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectExample1.png
+	`Calculate distance to intersect example.`
+	
+.. _trafficCarObstacleConfig6:
+
+	.. image:: images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectSameTargetExample1.png
+	`Calculate distance to intersect same target example.`
+	
+.. _trafficCarObstacleConfig7:
+
+	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneCloseDistanceExample.png
+	`Change lane close distance to point example.`
+	
+.. _trafficCarObstacleConfig8:
+	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneExample1.png
+	
+	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneExample3.png
+	`Short path example.`
+	
+.. _trafficCarObstacleConfig9:
+
+	.. image:: images/configs/traffic/obstacleExamples/SameDirectionExample.png
+	`Same direction example.`
+	
+.. _trafficCarObstacleConfig10:
+
+	.. image:: images/configs/traffic/obstacleExamples/AvoidCrossroadJamExample.png
+	`Avoid crossroad jam example.`
+
 			
 Traffic Car Approach Config
 ------------

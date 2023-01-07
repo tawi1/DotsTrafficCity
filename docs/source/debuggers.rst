@@ -8,3 +8,9 @@ Debuggers
 
 Installation
 ============
+
+
+.. _trafficCarNpcObstacleDebugger:
+
+TrafficCarNpcObstacleDebugger
+------------

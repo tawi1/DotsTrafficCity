@@ -34,7 +34,7 @@ General Settings Config
 	**Has traffic** : on/off traffic vehicle in the city.	
 	**Change lane support** : on/off feature to change lanes for traffic.
 	**Traffic public support** : on/off public traffic vehicle in the city.	
-	**Antistuck support** :	on/off antistuck feature for traffic vehicles.	
+	**Antistuck support** :	on/off :ref:`antistuck<trafficCarAntistuckConfig>` feature for traffic vehicles.	
 	**Car hit collision reaction** : on/off traffic collision reaction to other traffic cars.
 	**Wheel system support** : on/off simple wheel system for traffic vehicles.	
 	**Has pedestrian** : on/off pedestrians in the city.	
@@ -81,6 +81,8 @@ Player Npc Sound Config
 	
 Sound Configs
 -------------------	
+
+.. _soundConfig:
 
 Common Sound Config
 ~~~~~~~~~~~~

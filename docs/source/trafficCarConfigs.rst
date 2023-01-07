@@ -26,17 +26,30 @@ Traffic Car Settings
 
 	.. image:: images/configs/traffic/TrafficCarSettingsConfig.png
 	
-**Entity type:**
-	* **Hybrid cube entity simple physics** :
-	* **Hybrid entity full physics** :
-	* **Pure entity full physics** :
-	* **Pure entity simple physics** :
-	* **Pure entity no physics** :
+
 	
+**Entity type:**
+	* **Hybrid cube entity simple physics**
+	* **Hybrid entity full physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+	* **Pure entity full physics** : :ref:`pure entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+	* **Pure entity simple physics** : :ref:`pure entities<entityType>` moved by the simple physical system (simply adding physics velocity to the physics body).
+	* **Pure entity no physics** : :ref:`pure entities<entityType>` that moved by tranform system without physics.
+	
+.. _entityType:
+
+	.. note::
+		**Hybrid entity** : entities that combine dots entities and default GameObjects (game objects are tied by position to an entity).
+		**Pure entity** : entities work entirely in the dots space.
+	
+.. _trafficDetectObstacleMode:
+
 **Traffic car detect obstacle mode:**
 	* **Hybrid** : combine types `Calculate` and `Raycast`.
 	* **Calculate only** : mathematically calculates the obstacle.
 	* **Raycast only** : detect obstacle by raycast.
+	
+	.. note::
+		In hybrid mode, raycast is activated only when the selected targets are close to the car.
 	
 **Traffic car detect npc mode:**
 	* **Disabled** :
@@ -47,41 +60,51 @@ Traffic Car Settings
 	* **Car input** :
 	* **Follow target** :
 	
-| **Default lane speed km/h** :
-| **Max car speed km/h** :
-| **Acceleration magnitude** :
-| **Backward acceleration magnitude** :
-| **Brake power** :
-| **Max steer angle** :
-| **Steering damping** :
-| **Health amount** :
-**Has rotation lerp** :
-	**Rotation speed** :
-	**Rotation speed curve** :
+| **Default lane speed km/h** : default lane speed (if the lane speed limit is set to 0 the default speed will be selected).
+| **Max car speed km/h** : maximum speed of the car.
+| **Acceleration magnitude** : vehicle acceleration speed.
+| **Backward acceleration magnitude** : backward vehicle acceleration speed.
+| **Brake power** : brake power.
+| **Max steer angle** : max steer angle of the wheels.
+| **Steering damping** : wheel turn speed.
+| **Health amount** : amount of hit points of the car (health systems should be enabled).
+**Has rotation lerp** : [for `Simple physics` and `No physics` only]
+	**Rotation speed** : vehicle rotation speed.
+	**Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
-| **Cull wheels** :
+| **Cull wheels** : on/off wheel handling if they are outside the camera.
 | **Has nav obstacle** :
 	
 Traffic Car Nav Config
 ------------
 
+Config distance to target nodes and traffic light handlers.
+
 	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
 	
-| **Min distance to target** :
-| **Min distance to path point target** :
-| **Min distance to new light** :
-| **Min distance from previous light** :
-| **Min distance to target route node** :
-| **Min distance to target rail route node** :
-**Out of path resolve method:** 
-	**Disabled** : 
-	**Switch node** : 
-	**Backward** : 
-	**Cull** : 
+| **Min distance to target** : min distance to target node.
+| **Min distance to path point target** : min distance to connected path point.
+| **Min distance to new light** : minimum distance to the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to assign it to the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
+| **Min distance from previous light** : minimum distance from the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to unassign it from the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
+| **Min distance to target route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>`.
+| **Min distance to target rail route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>` (rail movement only (tramc etc...)).
+**Out of path resolve method:** resolving method in case the car is out of the :ref:`path<path>`.
+	**Disabled** : no actions.
+	**Switch node** : switching to the next waypoint.
+	**Backward** : car will try to reach the missed waypoint by reversing.
+	**Cull** : car will be culled.
 | **Continious local node calculation** :
+
+	.. image:: images/configs/traffic/TrafficCarNavOutOfPathConfig.png
+	
+**Out of path resolve method [enabled]:**
+	**Min distance to out of path** : minimum distance from the missed waypoint to the car.
+	**Max distance to out of path** : maximum distance from the missed waypoint to the car.
 	
 Traffic Car Obstacle Config
 ------------
+
+Config to calculate obstacles on the path.
 
 	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
 	
@@ -166,26 +189,32 @@ Traffic Car Obstacle Config
 Traffic Car Approach Config
 ------------
 
+Config of approaching obstacles and lights.
+
 	.. image:: images/configs/traffic/TrafficCarApproachConfig.png
 	
-| **Min approach speed** :
-| **On coming to the red light speed** :
-| **Stopping distance to light** :
+| **Min approach speed** : min approach speed.
+| **On coming to the red light speed** : slowing down the speed of the car when approaching a red light (if the segment speed limit is lower or the speed of the obstacles is lower, the lowest speed of all the conditions will be selected).
+| **Stopping distance to light** : distance at which the car slows down.
 	
 Traffic Car Raycast Config
 ------------
 
+Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`).
+
 	.. image:: images/configs/traffic/TrafficCarRaycastConfig.png
 	
-| **Side offset** :
-| **Min/Max ray length** :
-| **Boxcast height** :
-| **Ray Y axis offset** :
-| **Dot direction** :
-| **Bounds multiplier** :
+| **Side offset** : width of raycast box.
+| **Min/Max ray length** : lenght of raycast box.
+| **Boxcast height** : height raycast box.
+| **Ray Y axis offset** : y-offset position box.
+| **Dot direction** : if the raycast is set to :ref:`Hybrid mode<trafficDetectObstacleMode>` than only those targets that are in front of the car with the set dot parameter will be raycasted.
+| **Bounds multiplier** : value by which the bounds is multiplied.
 	
 Traffic Car Change Lane Config
 ------------
+
+Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only).
 
 	.. image:: images/configs/traffic/TrafficCarChangeLaneConfig.png
 	
@@ -228,40 +257,49 @@ Traffic Car Change Lane Config
 Traffic Car Npc Obstacle Config
 ------------
 
+Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`).
+
 	.. image:: images/configs/traffic/TrafficCarNpcObstacleConfig.png
 	
-| **Check distance** :
-| **Square length** :
-| **Side offset X** :
-| **Max Y diff** :
+| **Obstacle pedestrian action state** : will only react to pedestrians with the selected :ref:`PedestrianActionState<pedestrianActionState>`.
+| **Check distance** : obstacle calculation length.
+| **Square length** : length of the obstacle calculation square.
+| **Side offset X** : width of the obstacle calculation square.
+| **Max Y diff** : maximum difference in Y-axis position between the car and the npc.
 	
 Traffic Car Parking Config
 ------------
 
 	.. image:: images/configs/traffic/TrafficCarParkingConfig.png
 
-**Rotation aligment at node support** :
-	**Rotation speed** :
-	**Complete angle** :
+**Rotation aligment at node support** : on/off car automatically turns in alignment with the parking node.
+	**Rotation speed** : rotation speed.
+	**Complete angle** : angle at which the rotation is complete.
+		
+.. _trafficCarAntistuckConfig:
 		
 Traffic Car Antistuck Config
 ------------
 
+Config to culling car in case of stuckness.
+
 	.. image:: images/configs/traffic/TrafficCarAntistuckConfig.png
 
-| **Obstacle stuck time** :
-| **Stuck distance difference** :
-| **Cull of out the camera only** :
+| **Obstacle stuck time** : duration of sighting of the obstacle after which the car will be culled.
+| **Stuck distance difference** : if the car moved more than the parameter distance the `Obstacle stuck time` is reset.
+| **Cull of out the camera only** : car will be culled only if it is out of the camera's range of vision.
 	
-Traffic Car Horne config
+Traffic Car Horn Config
 ------------
 
-	.. image:: images/configs/traffic/TrafficCarHorneConfig.png
+Config to sound random horns when an obstacle is detected. It can be disabled (:ref:`here<soundConfig>`).
 
-| **Chance to start** :
-| **Idle time to start** :
-| **Delay** :
-| **Horne duration** :
+	.. image:: images/configs/traffic/TrafficCarHornConfig.png
+
+| **Chance to start** : chance to start the horn.
+| **Idle time to start** : idle time to start the horn.
+| **Delay** : delay between horns.
+| **Horn duration** : horn duration.
 	
 Public Traffic Configs
 ============
@@ -271,8 +309,8 @@ Traffic Public Spawner Settings
 
 	.. image:: images/configs/traffic/TrafficPublicSpawnerSettings.png
 	
-| **Spawn frequency** :
-| **Traffic public to car model dictionary** :
+| **Spawn frequency** : spawning frequency.
+| **Traffic public to car model dictionary** : contains data on which :ref:`CarModel<carModel>` belong to :ref:`TrafficPublicType<trafficPublicType>`.
 
 
 

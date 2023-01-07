@@ -48,6 +48,8 @@ Settings
 	* **Bezier cube** : bezier cube curved line.
 	* **Bezier quad** : bezier quad curved line.
 	
+.. _pathRoadType:
+	
 **Path road type:**
 	* **Straight road** : is used to automatically calculate lane changing by traffic.
 	* **Turn road**

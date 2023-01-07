@@ -38,8 +38,8 @@ Traffic Car Settings
 .. _entityType:
 
 	.. note::
-		**Hybrid entity** : entities that combine dots entities and default GameObjects (game objects are tied by position to an entity).
-		**Pure entity** : entities work entirely in the dots space.
+		| **Hybrid entity** : entities that combine `DOTS` entities and default `GameObjects` (game objects are tied by position to an entity).
+		| **Pure entity** : entities work entirely in the `DOTS` space.
 	
 .. _trafficDetectObstacleMode:
 
@@ -49,10 +49,10 @@ Traffic Car Settings
 	* **Raycast only** : detect obstacle by raycast.
 	
 	.. note::
-		In hybrid mode, raycast is activated only when the selected targets are close to the car.
+		In `Hybrid mode`, raycast is activated only when the selected targets are close to the car.
 	
 **Traffic car detect npc mode:**
-	* **Disabled** :
+	* **Disabled**
 	* **Calculate** : mathematically calculates the npc.
 	* **Raycast** : detect obstacle by raycast (npc should have `PhysicsShape` component).
 	
@@ -69,8 +69,8 @@ Traffic Car Settings
 | **Steering damping** : wheel turn speed.
 | **Health amount** : amount of hit points of the car (health systems should be enabled).
 **Has rotation lerp** : [for `Simple physics` and `No physics` only]
-	**Rotation speed** : vehicle rotation speed.
-	**Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
+	* **Rotation speed** : vehicle rotation speed.
+	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
 | **Cull wheels** : on/off wheel handling if they are outside the camera.
 | **Has nav obstacle** :
@@ -82,24 +82,24 @@ Config distance to target nodes and traffic light handlers.
 
 	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
 	
-| **Min distance to target** : min distance to target node.
-| **Min distance to path point target** : min distance to connected path point.
+| **Min distance to target** : min distance to target :ref:`TrafficNode<trafficNode>`.
+| **Min distance to path point target** : min distance to connected :ref:`path point<pathPointConnection>`.
 | **Min distance to new light** : minimum distance to the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to assign it to the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
 | **Min distance from previous light** : minimum distance from the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to unassign it from the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
 | **Min distance to target route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>`.
 | **Min distance to target rail route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>` (rail movement only (tramc etc...)).
 **Out of path resolve method:** resolving method in case the car is out of the :ref:`path<path>`.
-	**Disabled** : no actions.
-	**Switch node** : switching to the next waypoint.
-	**Backward** : car will try to reach the missed waypoint by reversing.
-	**Cull** : car will be culled.
+	* **Disabled** : no actions.
+	* **Switch node** : switching to the next waypoint.
+	* **Backward** : car will try to reach the missed waypoint by reversing.
+	* **Cull** : car will be culled.
 | **Continious local node calculation** :
 
 	.. image:: images/configs/traffic/TrafficCarNavOutOfPathConfig.png
 	
 **Out of path resolve method [enabled]:**
-	**Min distance to out of path** : minimum distance from the missed waypoint to the car.
-	**Max distance to out of path** : maximum distance from the missed waypoint to the car.
+	* **Min distance to out of path** : minimum distance from the missed waypoint to the car.
+	* **Max distance to out of path** : maximum distance from the missed waypoint to the car.
 	
 Traffic Car Obstacle Config
 ------------

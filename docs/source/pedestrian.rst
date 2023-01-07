@@ -6,10 +6,19 @@ Pedestrian
 How To Create
 ----------------
 
+.. _pedestrianHybridLegacy:
+
 Hybrid legacy
 ~~~~~~~~~~~~
 
+.. _pedestrianBaked:
+
 Baked
+~~~~~~~~~~~~
+
+.. _pedestrianRagdoll:
+
+Ragdoll
 ~~~~~~~~~~~~
 
 

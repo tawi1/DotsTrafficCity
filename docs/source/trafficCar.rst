@@ -55,7 +55,7 @@ TrafficCarEntityAuthoring
 | **Faction type** : selected :ref:`faction type <factions>` of vehicle.
 | **Car type** : selected :ref:`car type <carType>` of vehicle.
 | **Bounds source type** : selected bounds source for the entity bounds.
-| **Traffic type** : Selected traffic type (Default, Tram, Traffic public).
+| **Traffic type** : Selected traffic type (Default, :ref:`Tram, Traffic public<trafficPublic>`).
 		
 CarWheelAuthoring
 ~~~~~~~~~~~~
@@ -82,7 +82,7 @@ CarSoundAuthoring
 	* **Ignition**
 	* **Idle**
 	* **Driving**
-	* **Horne**
+	* **Horn**
 	* **Enter car**
 	* **Exit car**		
 

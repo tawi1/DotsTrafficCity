@@ -23,7 +23,7 @@ Cached values
 	* **Traffic node** :
 		* **Connected traffic node** : connected traffic node.
 	* **Path point** :
-		* **Connected path** : connected path in the custom point.
+		* **Connected path** : connected path in the :ref:`custom point<pathPointConnection>`.
 | **Nodes** : node point to create curves (bezier).
 | **Waypoints** : point of path.
 | **Custom waypoints** :
@@ -95,6 +95,11 @@ Buttons
 | **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>` will be added to the path.
 | **Reset speed limit** : each waypoint will be assigned a common speed limit of path.
 	
+.. _pathPointConnection:
+	
+Path point connection
+~~~~~~~~~~~~
+
 .. _pathSettingsWindow:
 
 Path advanced settings window

@@ -35,7 +35,7 @@ How To Use
 """"""""""""""
 
 | **Code example:**
-	.. highlight:: C#
+	.. highlight:: r
 	   :linenothreshold: 8
 	   
 		Entities
@@ -132,7 +132,7 @@ How To Use
 
 **Simple switch animation example:**
 	
-	.. highlight:: C#
+	.. highlight:: r
 	
 		Entities
 		.WithoutBurst()
@@ -151,7 +151,7 @@ How To Use
 
 **Complex animation transition example:**
 
-	.. highlight:: C#
+	.. highlight:: r
 	
 		public partial class PedestrianSittingBakedAnimatorExampleSystem : SystemBase
 		{
@@ -201,7 +201,6 @@ How To Use
 			}
 		}
 
-
 **Used in systems:**
 	* PedestrianLoadBakedSkinSystem
 	* PedestrianBakedTransitionAnimatorSystem
@@ -217,7 +216,7 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 **How To Create:**
 	* Add all colliders and rigidbodies according to the tutorial `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ to character.
 	* Add `PedestrianRagdoll` component.
-	* Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` :ref:`PedestrianBakedFactory <pedestrianBaked>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
+	* Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianBakedFactory <pedestrianBaked>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
 	
 	.. note:: Implemented by `PedestrianRagdollSystem`.
 

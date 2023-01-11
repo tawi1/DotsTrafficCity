@@ -232,11 +232,22 @@ States
 ----------------
 
 **Movement States:**
+	* Default
+	* Idle
+	* Walking
+	* Running
 
 .. _pedestrianActionState:
 
 **Pedestrian Action States:**
-
+	* Default : no state.
+	* Idle : when a pedestrian is waiting.
+	* MovingToNextTargetPoint : when going from `PedestrianNode <pedestrianNode>` to `PedestrianNode <pedestrianNode>` (excluding crosswalk).
+	* WaitForGreenLight : when a pedestrian is waiting for a green traffic light.
+	* CrossingTheRoad : when a pedestrian goes crossing a crosswalk.
+	* ScaryRunning : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
+	* Sitting : when a pedestrian sits.
+	* Talking : when a pedestrian talks.
 
 Configs
 ----------------

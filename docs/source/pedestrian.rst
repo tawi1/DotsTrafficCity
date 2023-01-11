@@ -48,6 +48,9 @@ Baked skin
 ``Hub/Pools/Npc/Pedestrian/PedestrianBakedSkinFactory``
 
 	#. Assign :ref:`Animation Collection<animationBakerAnimationCollection>` to `PedestrianBakedSkinFactory`.
+	
+		.. image:: images/pedestrian/baker/AddNewEntryPanelExample.png
+			
 	#. Click `+` to show `New Entry` panel.
 	
 		.. image:: images/pedestrian/baker/NewEntry.png
@@ -61,10 +64,10 @@ Baked skin
 		
 	#. Select the animation in the inspector that you want to assign to the selected character.
 	
-		.. image:: images/pedestrian/baker/PedestrianAnimationsExample.png
+		.. image:: images/pedestrian/baker/PedestrianAnimationsAssignExample.png
 			
 	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data<animationBakerAnimationSheetData>`.
-	#. Assign values for each animation in the same way
+	#. Assign values for each animation in the same way.
 
 .. _pedestrianRagdoll:
 

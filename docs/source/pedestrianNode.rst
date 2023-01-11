@@ -1,7 +1,10 @@
+.. _pedestrianNode:
+
 Pedestrian Node
 =====
 
-.. _pedestrianNode:
+How To Create
+----------------
 
 Pedestrian Node
 ----------------
@@ -46,6 +49,8 @@ Pedestrian Node
 		**Chance to spawn** : chance to spawn pedestrian at node: 0 = 0%, 1 = 100%.
 		**Max path width** : maximum width of the route around the node.
 		**Has movement random offset** : are supposed to randomize the position around a node.
+		
+.. _pedestrianNodeCreator:
 		
 Pedestrian Node Creator
 ----------------

@@ -14,10 +14,12 @@ Pedestrian Spawner Config
 
 	.. image:: images/configs/pedestrian/PedestrianSpawnerConfig.png
 	
-	**Min pedestrian count** : number of pedestrians in the city.
-	**Pool size** : _pedestrianRagdoll
-	**Ragdoll pool size* : :ref:`pedestrian ragdoll pool size<pedestrianRagdoll>`.
-	**Min/Max spawn delay* : minimum and maximum delay between spawn iterations.
+| **Min pedestrian count** : number of pedestrians in the city.
+| **Pool size** : _pedestrianRagdoll
+| **Ragdoll pool size* : :ref:`pedestrian ragdoll pool size<pedestrianRagdoll>`.
+| **Min/Max spawn delay* : minimum and maximum delay between spawn iterations.
+	
+.. _pedestrianSettingsConfig:
 	
 Pedestrian Settings Config
 ------------
@@ -65,23 +67,23 @@ Pedestrian Obstacle Local Avoidance Config
 
 	.. image:: images/configs/pedestrian/PedestrianObstacleLocalAvoidanceSettings.png
 	
-	**Obstacle avoidance method:**
-		* **Simple** : is able to avoid only 1 object.
-		* **Find neighbors** : multiple objects close to each other are grouped as one (more costly in performance).
-	**Max surface angle** : maximum surface tilt angle at which the avoidance is calculated.
-	**Target point offset** : offset between an obstacle and avoidance waypoints.
-	**Achieve distance** : distance to achieve the avoidance waypoint.
+**Obstacle avoidance method:**
+	* **Simple** : is able to avoid only 1 object.
+	* **Find neighbors** : multiple objects close to each other are grouped as one (more costly in performance).
+| **Max surface angle** : maximum surface tilt angle at which the avoidance is calculated.
+| **Target point offset** : offset between an obstacle and avoidance waypoints.
+| **Achieve distance** : distance to achieve the avoidance waypoint.
 	
 Pedestrian Trigger Config
 ------------
 
 	.. image:: images/configs/pedestrian/PedestrianTriggerConfig.png
 	
-	**Trigger HashMap capacity** : initial hashmap capacity  that contains data of triggers.
-	**Trigger HashMap cell size** : hashmap cell size.
-	**Trigger data:**
-		* **Fear Point Trigger** :
-			* **Impact trigger duration** : duration of the :ref:`trigger<pedestrianScaryTrigger>` on the pedestrian.
+| **Trigger HashMap capacity** : initial hashmap capacity  that contains data of triggers.
+| **Trigger HashMap cell size** : hashmap cell size.
+**Trigger data:**
+	* **Fear Point Trigger** :
+		* **Impact trigger duration** : duration of the :ref:`trigger<pedestrianScaryTrigger>` on the pedestrian.
 
 .. _pedestrianScaryTrigger:
 
@@ -90,37 +92,39 @@ Pedestrian Scary Trigger Config
 
 	.. image:: images/configs/pedestrian/PedestrianScaryTriggerConfig.png
 	
-	**Trigger settings:** 
-		* **Death trigger squared distance** :
-		* **Death trigger duration** :
+**Trigger settings:** 
+	* **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
+	* **Death trigger duration** : death trigger duration.
 		
-	**Sound settings:** 
-		* **Has scream sound** :
-		* **Scream entity limit** :
-		* **Chance to scream** :
-		* **Scream delay** :
-		* **Scream sound data** :
+**Sound settings:** 
+	* **Has scream sound** : on/off scream sound.
+	* **Scream entity limit** : maximum number of screaming pedestrians at the same time.
+	* **Chance to scream** : chance of a pedestrian screaming.
+	* **Scream delay** : delay between screams.
+	* **Scream sound data** : scream :ref:`sound data<soundData>` source.
 		
 Pedestrian Bench Config
 ------------
 
 	.. image:: images/configs/pedestrian/PedestrianBenchConfig.png
 	
-	**Min/Max idle time** :
-	**Custom achieve enter point distance** :
-	**Idle after achieved exit duration** :
-	**Sitting movement speed** :
-	**Sitting rotation speed** :
-	**Custom achieve sit point distance** :
+| **Min/Max idle time** : min/max idle duration on the bench.
+| **Custom achieve enter point distance** : distance to achieve the entry point on the bench.
+| **Idle after achieved exit duration** : idle after achieved exit point duration.
+| **Sitting movement speed** : pedestrian movement speed when sitting on the bench.
+| **Sitting rotation speed** : pedestrian turn speed when sitting on the bench.
+| **Custom achieve sit point distance** :  distance to achieve the sit point on the bench.
 	
 Pedestrian Common Sound Config
 ------------
 
+Common pedestrian sound settings
+
 	.. image:: images/configs/pedestrian/PedestrianCommonSoundConfig.png
 	
-	**Sound death** :
-	**Enter tram sound** :
-	**Exit tram sound** :
+| **Sound death** : sound when a pedestrian died.
+| **Enter tram sound** : sound when entering a tram.
+| **Exit tram sound** : sound when exiting a tram.
 	
 Common Npc Configs
 ============
@@ -130,5 +134,5 @@ Npc Common Config
 
 	.. image:: images/configs/pedestrian/NpcCommonConfig.png
 	
-	**Npc HashMap capacity** :
+| **Npc HashMap capacity** : initial capacity of hashmap containing data about npc (position, state, etc...). 
 	

@@ -1,7 +1,19 @@
+.. _animationBaker
+
 Animation Baker
 =====
 
-.. _animationBaker
-
 Getting started
 ------------
+
+
+.. _animationBakerAnimationCollection
+
+Animation Collection
+------------
+
+.. _animationBakerAnimationSheetData
+
+Baked Animation Sheet Data
+------------
+

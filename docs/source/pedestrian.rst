@@ -34,6 +34,22 @@ Factory
 How To Use
 """"""""""""""
 
+| **Code example:**
+
+	.. code-block:: C#
+		Entities
+		.WithoutBurst()
+		.ForEach((
+			Entity entity,
+			Animator animator) =>
+		{
+			animator.SetFloat("yInput", 1f);
+		}).Run();
+		
+**Example systems:**
+	* PedestrianLegacyAnimatorSystem
+	* PedestrianSittingLegacyAnimatorSystem
+
 .. _pedestrianBaked:
 
 Baked skin

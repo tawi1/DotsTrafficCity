@@ -17,3 +17,18 @@ Animation Collection
 Baked Animation Sheet Data
 ------------
 
+.. _animationBakerAnimatorContainer
+
+Animator Container
+------------
+
+.. _animationBakerAnimatorAnimationNode
+
+Transition Info
+------------
+
+.. _animationBakerAnimatorTransitionNode
+
+Transition Info
+------------
+

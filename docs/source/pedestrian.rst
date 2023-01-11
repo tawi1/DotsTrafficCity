@@ -13,9 +13,12 @@ Hybrid legacy skin
 
 `Hybrid legacy skin` is a hybrid entity that combines the default `GameObject` (with animator) and the DOTS entity.
 
+Factory
+""""""""""""""
+
 	#. Open on the scene `PedestrianSkinFactory`.
 	
-``Hub/Pools/Npc/Pedestrian/PedestrianSkinFactory``
+	``Hub/Pools/Npc/Pedestrian/PedestrianSkinFactory``
 
 	.. image:: images/configs/pedestrian/PedestrianSkinFactory.png
 	
@@ -27,6 +30,9 @@ Hybrid legacy skin
 
 	.. note:: 
 		Every `hybrid legacy` pedestrian prefab should have `PedestrianReferences` component.
+		
+How To Use
+""""""""""""""
 
 .. _pedestrianBaked:
 
@@ -35,17 +41,20 @@ Baked skin
 
 `Baked skin` is a pure entity that combines the GPU baked animations and the DOTS entity.
 
+Factory
+""""""""""""""
+
 	#. :ref:`Create textures and animation sheets<animationBaker>`.
 	#. Create :ref:`Animation Collection<animationBakerAnimationCollection>` in the project context menu.
 	
-``Spirit604/Animation Baker/Animation Collection``
+	``Spirit604/Animation Baker/Animation Collection``
 	
 		.. image:: images/pedestrian/baker/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
-	#. Open `PedestrianBakedSkinFactory`.
+	#. Open on the scene `PedestrianBakedSkinFactory`.
 	
-``Hub/Pools/Npc/Pedestrian/PedestrianBakedSkinFactory``
+	``Hub/Pools/Npc/Pedestrian/PedestrianBakedSkinFactory``
 
 	#. Assign :ref:`Animation Collection<animationBakerAnimationCollection>` to `PedestrianBakedSkinFactory`.
 	
@@ -68,6 +77,12 @@ Baked skin
 			
 	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data<animationBakerAnimationSheetData>`.
 	#. Assign values for each animation in the same way.
+	
+Transitions
+""""""""""""""
+
+How To Use
+""""""""""""""
 
 .. _pedestrianRagdoll:
 
@@ -79,13 +94,13 @@ Ragdoll
 Authoring components
 ----------------
 
-
-.. _pedestrianActionState:
-
 States
 ----------------
 
 Movement State
+
+.. _pedestrianActionState:
+
 Pedestrian Action State
 
 

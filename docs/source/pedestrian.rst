@@ -139,7 +139,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 
 		`Sitout transition example.`
 	
-	#. Copy & paste acquired hash from `AnimatorContainer` to code (:ref:`usage example <pedestrianBakedFactoryTransitionExample>`).
+	#. Copy & paste :ref:`generated hash <animationBakerAnimatorTriggerHash>` from `AnimatorContainer` to code (:ref:`usage example <pedestrianBakedFactoryTransitionExample>`).
 		
 		.. image:: images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
@@ -239,10 +239,20 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 Authoring components
 ----------------
 
-**Components:**
-	* `PedestrianAuthoring` [required].
-	* `PlayerTargetAuthoring` [optional for player targeting systems].
-	* `PhysicsBody` and `PhysicsShape` [optional for physics related systems].
+PedestrianAuthoring
+~~~~~~~~~~~~
+
+Contains the main components of pedestrian entity **[required]**.
+
+PlayerTargetAuthoring
+~~~~~~~~~~~~
+
+Component for player targeting systems **[optional]**.
+
+Physics
+~~~~~~~~~~~~
+
+`PhysicsBody` and `PhysicsShape` components for physics related systems **[optional]**.
 
 States
 ----------------

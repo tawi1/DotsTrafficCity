@@ -8,13 +8,6 @@ Installation
 
 	.. image:: images/configs/road/installation/CityBase.png
 	
-	.. highlight:: r
-	
-		Test code.
-		
-	.. code-block:: r
-	
-		Test code 2.
 	
 .. _roadParent:
 	

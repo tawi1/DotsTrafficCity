@@ -17,7 +17,7 @@ How To Bake
 	#. Drag & drop selected animations of pedestrians to `clips` :ref:`field <animationBakedSourceData>`.
 	
 		.. image:: images/pedestrian/baker/window/BakedSourceDataExample.png
-		`Drag example.`
+		`Drag & drop example.`
 		
 	#. Press `Create new` button.
 	
@@ -56,12 +56,15 @@ Baked Source Data
 	.. image:: images/pedestrian/baker/window/BakedSourceDataExample.png
 	.. image:: images/pedestrian/baker/window/BakedSourceDataResult.png
 	
+Source Data
+""""""""""""""
+
 | **Skins** : source `SkinnedMeshRenderer` of characters.
 **Clips:**
 	* **Clip** : reference to clip.
 	* **Offset** : offset vertices in baked animation.
 	* **Custom animation name** : custom animation name (if the field is empty the name from the clip will be taken).
-| **Texture data** : shows a preview of the created texture.
+**Texture data** : shows a preview of the created texture.
 	* **x** : animation frame vertex coordinate.
 	* **y** : number of vertexes in the skin.
 	
@@ -129,18 +132,30 @@ Open on the scene `PedestrianBakedAnimatorAuthoring`.
 	``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
 		
 	.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+	
+Initial Set Up
+""""""""""""""
 
+#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
+#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
+	
 Create Node
 """"""""""""""
 
 Right-click in the window and select the :ref:`desired node<animationBakerAnimatorNodeTypes>` in the context menu.
 
-Create Sequence
+Create Transition
 """"""""""""""
 	
-Create a sequence of nodes StartNode-->AnimNode-->TransitionNode-->AnimNode-->TransitionNode-->AnimNode-->... (:ref:`more detailed example <animationBakerHowToCreateTransition>`).
+Transition is a sequential set of nodes StartNode-->AnimNode-->TransitionNode-->AnimNode-->TransitionNode-->AnimNode-->... (:ref:`example <animationBakerAnimatorTransitionExample>`).
 	
+**Steps:**
+	#. Create :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
+	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
+	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
+.. _animationBakerAnimatorNewTransitionLayer:
+
 Create Transition Layer
 """"""""""""""
 
@@ -193,6 +208,12 @@ Node with settings for switching between animations.
 		
 	* **To Global Sync** : previous animation is interpolated to the global playback time of the next animation with the set duration.
 		.. image:: images/pedestrian/baker/animator/TransitionNodeToGlobalSyncExample.png
+
+
+.. _animationBakerAnimatorTransitionExample:
+
+Transition example
+""""""""""""""
 
 	.. image:: images/pedestrian/baker/animator/StartSitTransitionExample.png
 	`Start sit transition example.`

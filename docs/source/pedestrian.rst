@@ -87,7 +87,6 @@ Pedestrian Baked Factory
 	#. Click `Add Entry`.	
 	
 	#. Select created :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
-	#. Select created :ref:`short test<animationBakerAnimationSheetData>`.
 	
 		.. image:: images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
 		
@@ -125,6 +124,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
 	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
 	#. Press `Open Animator` button.
+	#. Create :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
 	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	

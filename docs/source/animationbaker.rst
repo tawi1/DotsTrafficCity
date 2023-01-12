@@ -1,9 +1,9 @@
-.. _animationBaker
+.. _animationBaker:
 
 Animation Baker
 =====
 
-.. _animationBakerHowTo
+.. _animationBakerHowTo:
 
 How To Bake
 ------------
@@ -32,7 +32,7 @@ How To Bake
 Baker Window
 ------------
 
-.. _animationBakerSettings
+.. _animationBakerSettings:
 
 Settings
 ~~~~~~~~~~~~
@@ -48,7 +48,7 @@ Settings
 	* **Texture**
 | **Baked animation data** : :ref:`data <animationBakedAnimationData>` about baked animations in texture.
 	
-.. _animationBakedSourceData
+.. _animationBakedSourceData:
 
 Baked Source Data
 ~~~~~~~~~~~~
@@ -82,7 +82,7 @@ Buttons
 | **Save to exist** : save the texture to an existing asset.
 | **Clear** : clean up the texture.
 	
-.. _animationBakedAnimationData
+.. _animationBakedAnimationData:
 	
 Baked Animation Data
 ~~~~~~~~~~~~
@@ -99,7 +99,7 @@ Baked Animation Data
 	* **Texture offset** : texture offset of baked animation.
 	* **Frame count** : frame count of baked animation.
 	
-.. _animationBakedAnimationDataReplace
+.. _animationBakedAnimationDataReplace:
 
 How To Replace
 """"""""""""""
@@ -140,12 +140,18 @@ Create Sequence
 	
 Create a sequence of nodes StartNode-->AnimNode-->TransitionNode-->AnimNode-->TransitionNode-->AnimNode-->... (:ref:`more detailed example <animationBakerHowToCreateTransition>`).
 	
-.. _animationBakerAnimatorNodeTypes
+	
+Create Transition Layer
+""""""""""""""
+
+Press `+` button on the main toolbar at custom animator to create a new layer or press `-` to delete current selected layer.
+
+.. _animationBakerAnimatorNodeTypes:
 
 Node types
 ~~~~~~~~~~~~
 
-.. _animationBakerAnimatorStartNode
+.. _animationBakerAnimatorStartNode:
 
 Start Node
 """"""""""""""
@@ -156,7 +162,7 @@ Node where the transition begins by trigger.
 		
 | **Trigger name** : name of the trigger on which the transition starts.
 
-.. _animationBakerAnimatorAnimationNode
+.. _animationBakerAnimatorAnimationNode:
 
 Animation Node
 """"""""""""""
@@ -170,7 +176,7 @@ Animation playback node.
 | **Anim enum** : list of available animations in the :ref:`Animation Collection <animationBakerAnimationCollection>`
 | **Unique animation** : unique animation mesh instance will be created for this animation.
 
-.. _animationBakerAnimatorTransitionNode
+.. _animationBakerAnimatorTransitionNode:
 
 Transition Node
 """"""""""""""
@@ -194,7 +200,7 @@ Node with settings for switching between animations.
 	.. image:: images/pedestrian/baker/animator/SitoutTransitionExample.png		
 	`Sitout transition example.`
 
-.. _animationBakerAnimationCollection
+.. _animationBakerAnimationCollection:
 
 Animation Collection
 ------------
@@ -219,7 +225,7 @@ Settings
 	* **Allow duplicate** : is it allowed to take an animation from the pool if it is already used by another character.
 	* **Instance count** : animation pool size.
 
-.. _animationBakerAnimatorContainer
+.. _animationBakerAnimatorContainer:
 
 Animator Container
 ------------

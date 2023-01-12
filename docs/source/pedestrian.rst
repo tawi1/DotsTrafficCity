@@ -87,6 +87,7 @@ Pedestrian Baked Factory
 	#. Click `Add Entry`.	
 	
 	#. Select created :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
+	#. Select created :ref:`short test<animationBakerAnimationSheetData>`.
 	
 		.. image:: images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
 		
@@ -97,7 +98,7 @@ Pedestrian Baked Factory
 	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
 	#. Assign values for each animation in the same way.
 	
-.. _animationBakerAnimationSheetData
+.. _animationBakerAnimationSheetData:
 
 Baked Animation Sheet Data
 """"""""""""""
@@ -111,7 +112,7 @@ Baked Custom Animator
 
 Baked Custom animator is used for transitions between baked animations (implemented by `PedestrianBakedTransitionAnimatorSystem` system).
 
-.. _animationBakerHowToCreateTransition
+.. _animationBakerHowToCreateTransition:
 
 **How To Create Transition:**
 	#. Open on the scene `PedestrianBakedAnimatorAuthoring`.

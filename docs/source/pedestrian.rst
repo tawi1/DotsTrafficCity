@@ -60,7 +60,7 @@ Baked skin
 
 .. _pedestrianBakedFactory:
 
-Factory
+Pedestrian Baked Factory
 """"""""""""""
 
 	#. :ref:`Create textures and animation sheets <animationBaker>`.
@@ -97,12 +97,23 @@ Factory
 	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
 	#. Assign values for each animation in the same way.
 	
+.. _animationBakerAnimationSheetData
+
+Baked Animation Sheet Data
+""""""""""""""
+
+Data about baked animations in texture (:ref:`How to create <animationBakerHowTo>`). 
+	
+	.. image:: images/pedestrian/baker/PedestrianAnimationSheetDataExample.png	
+	
 Baked Custom Animator
 """"""""""""""
 
 Baked Custom animator is used for transitions between baked animations (implemented by `PedestrianBakedTransitionAnimatorSystem` system).
 
-**How To Create transition:**
+.. _animationBakerHowToCreateTransition
+
+**How To Create Transition:**
 	#. Open on the scene `PedestrianBakedAnimatorAuthoring`.
 	
 		``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
@@ -113,7 +124,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
 	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
 	#. Press `Open Animator` button.
-	#. Enter the name of the trigger in the start node.
+	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
 	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
 		.. image:: images/pedestrian/baker/animator/StartSitTransitionExample.png

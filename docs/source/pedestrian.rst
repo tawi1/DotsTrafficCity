@@ -64,7 +64,7 @@ Baked skin
 
 .. _pedestrianBakedFactory:
 
-Pedestrian Baked Factory
+Factory
 """"""""""""""
 
 	#. :ref:`Create textures and animation sheets <animationBaker>`.
@@ -286,9 +286,9 @@ Pedestrian Spawner Config
 	.. image:: images/configs/pedestrian/PedestrianSpawnerConfig.png
 	
 | **Min pedestrian count** : number of pedestrians in the city.
-| **Pool size** : _pedestrianRagdoll
-| **Ragdoll pool size* : :ref:`pedestrian ragdoll pool size<pedestrianRagdoll>`.
-| **Min/Max spawn delay* : minimum and maximum delay between spawn iterations.
+| **Pool size** : pool size of `HybridLegacy <pedestrianHybridLegacy>` skins.
+| **Ragdoll pool size** : :ref:`pedestrian ragdoll pool size<pedestrianRagdoll>`.
+| **Min/Max spawn delay** : minimum and maximum delay between spawn iterations.
 	
 .. _pedestrianSettingsConfig:
 	
@@ -393,6 +393,6 @@ Common pedestrian sound settings
 
 	.. image:: images/configs/pedestrian/PedestrianCommonSoundConfig.png
 	
-| **Sound death** : sound when a pedestrian died.
-| **Enter tram sound** : sound when entering a tram.
-| **Exit tram sound** : sound when exiting a tram.
+| **Sound death** : :ref:`sound<soundData>` when a pedestrian died.
+| **Enter tram sound** : :ref:`sound<soundData>` when entering a tram.
+| **Exit tram sound** : :ref:`sound<soundData>` when exiting a tram.

@@ -17,4 +17,7 @@ Contents
    road
    commonConfigs
    trafficCarConfigs
-   pedestrianConfigs
+   pedestrian
+   animationBaker
+   npcData
+   glossary

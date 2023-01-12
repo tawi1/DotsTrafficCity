@@ -137,7 +137,7 @@ Initial Set Up
 """"""""""""""
 
 **Steps:**
-	#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
+	#. Create :ref:`Animator Data Container <animationBakerAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
 	#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
 
 	.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
@@ -251,7 +251,7 @@ Settings
 
 .. _animationBakerAnimatorContainer:
 
-Animator Container
+Animator Data Container
 ------------
 
 Contains data about animation transitions.

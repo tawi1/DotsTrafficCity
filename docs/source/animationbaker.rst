@@ -136,8 +136,11 @@ Open on the scene `PedestrianBakedAnimatorAuthoring`.
 Initial Set Up
 """"""""""""""
 
-#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
-#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
+**Steps:**
+	#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
+	#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
+
+	.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 	
 Create Node
 """"""""""""""
@@ -163,7 +166,7 @@ Press `+` button on the main toolbar at custom animator to create a new layer or
 
 .. _animationBakerAnimatorNodeTypes:
 
-Node types
+Graph Nodes
 ~~~~~~~~~~~~
 
 .. _animationBakerAnimatorStartNode:

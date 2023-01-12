@@ -35,17 +35,17 @@ How To Use
 """"""""""""""
 
 | **Code example:**
-	.. highlight:: r
-	   :linenothreshold: 8
-	   
-		Entities
-		.WithoutBurst()
-		.ForEach((
-			Entity entity,
-			Animator animator) =>
-		{
-			animator.SetFloat("yInput", 1f);
-		}).Run();
+..  highlight:: r
+	:linenothreshold: 8
+	
+	Entities
+	.WithoutBurst()
+	.ForEach((
+		Entity entity,
+		Animator animator) =>
+	{
+		animator.SetFloat("yInput", 1f);
+	}).Run();
 		
 **Used in systems:**
 	* PedestrianLegacyAnimatorSystem
@@ -151,55 +151,55 @@ How To Use
 
 **Complex animation transition example:**
 
-	.. highlight:: r
+..  code-block:: r
 	
-		public partial class PedestrianSittingBakedAnimatorExampleSystem : SystemBase
+	public partial class PedestrianSittingBakedAnimatorExampleSystem : SystemBase
+	{
+		private const int StartSitAnimHash = -1880722739; //StartSit hash trigger
+
+		private BeginPresentationEntityCommandBufferSystem entityCommandBufferSystem;
+		private PedestrianBakedTransitionProviderSystem pedestrianBakedTransitionProviderSystem;
+
+		protected override void OnCreate()
 		{
-			private const int StartSitAnimHash = -1880722739; //StartSit hash trigger
-
-			private BeginPresentationEntityCommandBufferSystem entityCommandBufferSystem;
-			private PedestrianBakedTransitionProviderSystem pedestrianBakedTransitionProviderSystem;
-
-			protected override void OnCreate()
-			{
-				base.OnCreate();
-				entityCommandBufferSystem = World.GetOrCreateSystemManaged<BeginPresentationEntityCommandBufferSystem>();
-				pedestrianBakedTransitionProviderSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<PedestrianBakedTransitionProviderSystem>();
-			}
-
-			protected override void OnUpdate()
-			{
-				var transitions = pedestrianBakedTransitionProviderSystem.Transitions;
-
-				if (!transitions.IsCreated)
-				{
-					return;
-				}
-
-				var commandBuffer = entityCommandBufferSystem.CreateCommandBuffer();
-
-				Entities
-				.WithoutBurst()
-				.WithReadOnly(transitions)
-				.WithAll<HasSkinTag, BakedSkinTag>()
-				.ForEach((
-					Entity entity,
-					ref AnimationTransitionData animationTransitionData) =>
-				{
-					Entity animStateEntity = Entity.Null;
-
-					transitions.TryGetValue(StartSitAnimHash, out animStateEntity);
-
-					if (animStateEntity != Entity.Null)
-					{                 
-						animationTransitionData.CurrentAnimationState = animStateEntity;
-						commandBuffer.SetComponentEnabled<HasAnimTransitionTag>(entity, true);
-					}
-				}).Schedule();
-				
-				entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
-			}
+			base.OnCreate();
+			entityCommandBufferSystem = World.GetOrCreateSystemManaged<BeginPresentationEntityCommandBufferSystem>();
+			pedestrianBakedTransitionProviderSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<PedestrianBakedTransitionProviderSystem>();
 		}
+
+		protected override void OnUpdate()
+		{
+			var transitions = pedestrianBakedTransitionProviderSystem.Transitions;
+
+			if (!transitions.IsCreated)
+			{
+				return;
+			}
+
+			var commandBuffer = entityCommandBufferSystem.CreateCommandBuffer();
+
+			Entities
+			.WithoutBurst()
+			.WithReadOnly(transitions)
+			.WithAll<HasSkinTag, BakedSkinTag>()
+			.ForEach((
+				Entity entity,
+				ref AnimationTransitionData animationTransitionData) =>
+			{
+				Entity animStateEntity = Entity.Null;
+
+				transitions.TryGetValue(StartSitAnimHash, out animStateEntity);
+
+				if (animStateEntity != Entity.Null)
+				{                 
+					animationTransitionData.CurrentAnimationState = animStateEntity;
+					commandBuffer.SetComponentEnabled<HasAnimTransitionTag>(entity, true);
+				}
+			}).Schedule();
+			
+			entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
+		}
+	}
 
 **Used in systems:**
 	* PedestrianLoadBakedSkinSystem

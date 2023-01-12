@@ -68,7 +68,7 @@ Factory
 	
 		``Spirit604/Animation Baker/Animation Collection``
 	
-		.. image:: images/pedestrian/baker/AnimationCollectionExample.png
+		.. image:: images/pedestrian/baker/animator/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
 	#. Open on the scene `PedestrianBakedSkinFactory`.
@@ -107,7 +107,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	
 		``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
 		
-		.. image:: images/pedestrian/baker/PedestrianBakedAnimatorAuthoring.png
+		.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 
 				
 	#. Create :ref:`Animator Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
@@ -116,21 +116,21 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	#. Enter the name of the trigger in the start node.
 	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
-		.. image:: images/pedestrian/baker/StartSitTransitionExample.png
+		.. image:: images/pedestrian/baker/animator/StartSitTransitionExample.png
 		`Start sit transition example.`
 		
-		.. image:: images/pedestrian/baker/SitoutTransitionExample.png		
+		.. image:: images/pedestrian/baker/animator/SitoutTransitionExample.png		
 
 		`Sitout transition example.`
 	
 	#. Copy & paste acquired hash from `AnimatorContainer` to code (:ref:`usage example <pedestrianBakedFactoryTransitionExample>`).
 		
-		.. image:: images/pedestrian/baker/AnimatorContainerExample.png		
+		.. image:: images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
 How To Use
 """"""""""""""
 
-**Simple switch animation example:**
+**Simple switch animation code example:**
 	
 ..  code-block:: r
     
@@ -149,7 +149,7 @@ How To Use
 
 .. _pedestrianBakedFactoryTransitionExample:
 
-**Complex animation transition example:**
+**Complex animation transition code example:**
 
 ..  code-block:: r
 	
@@ -231,23 +231,23 @@ Authoring components
 States
 ----------------
 
-**Movement States:**
-	* Default
-	* Idle
-	* Walking
-	* Running
+**Movement State:**
+	* **Default**
+	* **Idle**
+	* **Walking**
+	* **Running**
 
 .. _pedestrianActionState:
 
-**Pedestrian Action States:**
-	* Default : no state.
-	* Idle : when a pedestrian is waiting.
-	* MovingToNextTargetPoint : when going from `PedestrianNode <pedestrianNode>` to `PedestrianNode <pedestrianNode>` (excluding crosswalk).
-	* WaitForGreenLight : when a pedestrian is waiting for a green traffic light.
-	* CrossingTheRoad : when a pedestrian goes crossing a crosswalk.
-	* ScaryRunning : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
-	* Sitting : when a pedestrian sits.
-	* Talking : when a pedestrian talks.
+**Pedestrian Action State:**
+	* **Default** : no state.
+	* **Idle** : when a pedestrian is waiting.
+	* **MovingToNextTargetPoint** : when going from `PedestrianNode <pedestrianNode>` to `PedestrianNode <pedestrianNode>` (excluding crosswalk).
+	* **WaitForGreenLight** : when a pedestrian is waiting for a green traffic light.
+	* **CrossingTheRoad** : when a pedestrian goes crossing a crosswalk.
+	* **ScaryRunning** : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
+	* **Sitting** : when a pedestrian sits.
+	* **Talking** : when a pedestrian talks.
 
 Configs
 ----------------

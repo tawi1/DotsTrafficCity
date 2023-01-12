@@ -35,8 +35,8 @@ How To Use
 """"""""""""""
 
 | **Code example:**
-..  highlight:: r
-	:linenothreshold: 8
+
+..  code-block:: r
 	
 	Entities
 	.WithoutBurst()

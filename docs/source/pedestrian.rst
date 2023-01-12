@@ -132,19 +132,19 @@ How To Use
 
 **Simple switch animation example:**
 	
-	.. highlight:: r
-	
-		Entities
-		.WithoutBurst()
-		.WithNone<UpdateSkinTag>()
-		.WithAll<HasSkinTag, BakedSkinTag>()
-		.ForEach((
-			Entity entity,
-			ref BakedUpdateSkinComponent bakedUpdateSkinComponent) =>
-		{
-			bakedUpdateSkinComponent.NewAnimationHash = PedestrianBakedAnimationsConstans.SittingIdle_Anim_Hash; //int animation hash
-			commandBuffer.SetComponentEnabled<UpdateSkinTag>(entity, true);
-		}).Schedule();
+..  code-block:: r
+    
+	Entities
+	.WithoutBurst()
+	.WithNone<UpdateSkinTag>()
+	.WithAll<HasSkinTag, BakedSkinTag>()
+	.ForEach((
+		Entity entity,
+		ref BakedUpdateSkinComponent bakedUpdateSkinComponent) =>
+	{
+		bakedUpdateSkinComponent.NewAnimationHash = PedestrianBakedAnimationsConstans.SittingIdle_Anim_Hash; //int animation hash
+		commandBuffer.SetComponentEnabled<UpdateSkinTag>(entity, true);
+	}).Schedule();
 	
 
 .. _pedestrianBakedFactoryTransitionExample:

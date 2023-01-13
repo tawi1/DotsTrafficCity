@@ -10,10 +10,11 @@ How To Create
 	#. Create it yourself in the unity toolbar: 
 	
 		`Spirit604/Create/PedestrianNode`
+		
 		.. image:: images/road/pedestrianNode/PedestrianNodeToolbarExample.png
 
 		
-	#. To create with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
+	#. Create with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
 
 Pedestrian Node
 ----------------
@@ -153,6 +154,7 @@ How To Create
 Select in the unity toolbar:
 	
 	`Spirit604/Create/PedestrianNodeCreator`
+	
 	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorToolbarExample.png
 
 How To
@@ -175,19 +177,19 @@ Select Node
 """"""""""""""
 
 #. Choose :ref:`Selection mode <pedestrianNodeCreatorSelectionMode>`.
-#. Click `W` over the node to select `PedestrianNode <pedestrianNode>`.
+#. Click `W` over the node to select :ref:`PedestrianNode <pedestrianNode>`.
 
 Connect Node
 """"""""""""""
 
-#. :ref:`Select node <pedestrianNodeCreatorSelect>`.
+#. :ref:`Select desired node <pedestrianNodeCreatorSelect>`.
 #.  Click `E` over the target :ref:`PedestrianNode <pedestrianNode>` to connect (:ref:`Selection mode <pedestrianNodeCreatorSelectionMode>` only).
 
 Locate Node
 """"""""""""""
 
 #. Choose :ref:`Selection mode <pedestrianNodeCreatorSelectionMode>`.
-#. :ref:`Select source nodes <pedestrianNodeCreatorSelect>`.
+#. :ref:`Select desired nodes <pedestrianNodeCreatorSelect>`.
 #. Move the position handle where you want it.
 
 .. _pedestrianNodeCreatorSettings:
@@ -249,7 +251,7 @@ Scene Settings
 
 **Show border routes** :
 	* **Current** : route will be displayed with the assigned width of the nodes.
-	* **Selected** : route will be displayed with the selected route width in the `creator settings :ref:<creatorSaveGlobalWidth>`.
+	* **Selected** : route will be displayed with the selected route width in the :ref:`creator settings <creatorSaveGlobalWidth>`.
 | **Show traffic node connection** : on/off display the connection to the :ref:`TrafficNode <trafficNode>`.
 | **Show selected node settings** : shows :ref:`node settings <pedestrianNodeSettings>` in the inspector.
 
@@ -265,9 +267,9 @@ Buttons
 | **Save global path width** : сhange the width of the route for all nodes.
 | **Reset all custom path width** : for all nodes with custom widths will be assigned the default value.
 | **Clear created nodes info** : clear the list of nodes created by the creator.
-| **Clear selection** : clear selected nodes [multiple selection mode only].
-| **Snap to grid** : snap selected node position [for :ref:`selected node <pedestrianNodeCreatorSelect>` only, :ref:`auto snap <pedestrianNodeCreatorSettings>` should be enabled].
-| **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>` [for :ref:`selected node <pedestrianNodeCreatorSelect>` only].
+| **Clear selection** : clear selected nodes **[multiple selection mode only]**.
+| **Snap to grid** : snap selected node position **[for :ref:`selected node <pedestrianNodeCreatorSelect>` only, :ref:`auto snap <pedestrianNodeCreatorSettings>` should be enabled]**.
+| **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>` **[for :ref:`selected node <pedestrianNodeCreatorSelect>` only]**.
 
 .. _pedestrianNodeCreatorHotkeys:
 

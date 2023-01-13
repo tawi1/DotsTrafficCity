@@ -37,6 +37,9 @@ Directions of auto-connections
 
 Direction of raycasts to connect with other nodes (can be useful for generating squared scenes).
 
+	.. image:: images/road/pedestrianNode/PedestrianNodeDirectionsExample.png
+	`All connection directions enabled example.`
+	
 Custom Node Settings
 ~~~~~~~~~~~~
 
@@ -113,7 +116,7 @@ Traffic public entry
 Node for entering public transport.
 
 	.. image:: images/road/pedestrianNode/PedestrianNodePublicEntryExample.png
-	`Talk area example.`
+	`Public entry example (white box).`
 	
 	.. warning:: Entry node should be any `GameObject` with the component `TrafficPublicEntryAuthoring` which adds a node with `Traffic public entry` type.
 	

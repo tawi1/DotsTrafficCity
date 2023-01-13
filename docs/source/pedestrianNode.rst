@@ -139,7 +139,7 @@ Buttons
 ~~~~~~~~~~~~
 
 | **Connect** : node will make raycasts to the :ref:`selected directions <pedestrianNodeConnections>` to connect other nodes.
-| **Attach to closest traffic node** : try to connect close :ref:`TrafficNode <trafficNode>`.
+| **Attach to closest traffic node** : trying to connect to a nearby :ref:`TrafficNode <trafficNode>`.
 | **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>`.
 
 Hotkeys

@@ -10,6 +10,7 @@ How To Create
 	#. Create it yourself in the unity toolbar: 
 	
 		.. image:: images/road/pedestrianNode/PedestrianNodeToolbarExample.png
+
 		`Spirit604/Create/PedestrianNode`
 		
 	#. To create with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
@@ -42,6 +43,8 @@ Sit
 """"""""""""""
 
 Node for benches, seats, etc.
+
+	.. image:: images/road/pedestrianNode/PedestrianNodeSeatSettings.png
 
 | **Show seats** : enable editor display of seats.
 | **Base offset** : offset between the center of the seats and the center of the node.

@@ -95,9 +95,16 @@ Buttons
 | **Add custom light** : custom :ref:`TrafficLightHandler<trafficLightHandler>` will be added to the path.
 | **Reset speed limit** : each waypoint will be assigned a common speed limit of path.
 	
+	
+.. _trafficNodeConnection:
+	
+Traffic Node connection
+~~~~~~~~~~~~
+	
+	
 .. _pathPointConnection:
 	
-Path point connection
+Path Point connection
 ~~~~~~~~~~~~
 
 

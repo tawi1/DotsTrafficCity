@@ -1,13 +1,22 @@
-Road
-=====
-
 .. _road:
 
-Installation
-------------
+*******
+Road
+*******
 
-	.. image:: images/configs/road/installation/CityBase.png
+	.. toctree::
+   :maxdepth: 2
+   
+	roadSegment.rst
+	trafficNode.rst
+	path.rst
+	pedestrianNode.rst
+	trafficArea.rst
+	publicRoute.rst
 	
+Installation
+------------	
+
 
 How To Create Traffic Road
 ------------
@@ -25,15 +34,11 @@ How To Create Traffic Road
 
 .. _roadParent:
 	
+	.. image:: images/configs/road/installation/CityBase.png
 	.. image:: images/configs/road/installation/roadParent.png
 	.. image:: images/configs/road/installation/Hub.png
 
-	.. include:: roadSegment.rst
-	.. include:: trafficNode.rst
-	.. include:: path.rst
-	.. include:: pedestrianNode.rst
-	.. include:: trafficArea.rst
-	.. include:: publicRoute.rst
+
 	
 	
 	

@@ -5,14 +5,14 @@ Road
 *******
 
 	.. toctree::
-   :maxdepth: 2
-   
-	roadSegment.rst
-	trafficNode.rst
-	path.rst
-	pedestrianNode.rst
-	trafficArea.rst
-	publicRoute.rst
+		:maxdepth: 2
+
+		roadSegment.rst
+		trafficNode.rst
+		path.rst
+		pedestrianNode.rst
+		trafficArea.rst
+		publicRoute.rst
 	
 Installation
 ------------	

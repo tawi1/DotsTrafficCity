@@ -221,7 +221,6 @@ Settings
 			* **All** : all nodes have the same position handle.
 		* **Unselect selected** : if you try to select an already selected node, it will be unselected.
 | **Max path width** : global width of routes for all nodes (enable preview :ref:`here <creatorShowBorders>`, save global width :ref:`here <creatorSaveGlobalWidth>`).
-| **Max path width** : global width of routes for all nodes (enable preview :ref:`here <creatorShowBorders>`, save global width (label_)).
 | **Connect with previous node** : currently created node will be connected to the previously created node.
 | **Auto select connected node** : node will be selected after it is connected to the source node.
 | **Allow connect traffic node** : on/of feature to connect to the :ref:`TrafficNode <trafficNode>`.
@@ -271,7 +270,7 @@ Buttons
 
 .. _creatorSaveGlobalWidth: 
 
-| [#label] **Save global path width** : сhange the width of the route for all nodes.
+| **Save global path width** : сhange the width of the route for all nodes.
 | **Reset all custom path width** : for all nodes with custom widths will be assigned the default value.
 | **Clear created nodes info** : clear the list of nodes created by the creator.
 | **Clear selection** : clear selected nodes [multiple selection mode only].

@@ -100,6 +100,11 @@ Buttons
 Path point connection
 ~~~~~~~~~~~~
 
+
+
+
+
+
 .. _pathSettingsWindow:
 
 Path advanced settings window

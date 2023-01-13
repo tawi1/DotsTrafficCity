@@ -7,14 +7,14 @@ How To Create
 ----------------
 
 **Ways:**
-	#. Create it yourself in the unity toolbar: 
+	#. Create node by yourself in the `Unity` toolbar: 
 	
 		`Spirit604/Create/PedestrianNode`
 		
 		.. image:: images/road/pedestrianNode/PedestrianNodeToolbarExample.png
 
 		
-	#. Create with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
+	#. Create node with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
 
 Pedestrian Node
 ----------------
@@ -56,7 +56,6 @@ Node for benches, seats, etc.
 
 	.. image:: images/road/pedestrianNode/PedestrianNodeSeatSettings.png
 
-
 | **Show seats** : enable editor display of seats.
 | **Base offset** : offset between the center of the seats and the center of the node.
 | **Seat offset** : offset between the seats.
@@ -73,6 +72,8 @@ House
 """"""""""""""
 
 Node for entry/exit to the house.
+
+	.. tip:: Pedestrians who have entered the house node are will be destroyed.
 
 Idle
 """"""""""""""
@@ -119,7 +120,7 @@ Node for entering public transport.
 	.. image:: images/road/pedestrianNode/PedestrianNodePublicEntryExample.png
 	`Public entry example (white box).`
 	
-	.. warning:: Entry node should be any `GameObject` with the component `TrafficPublicEntryAuthoring` which adds a node with `Traffic public entry` type.
+	.. warning:: Entry node should be any `GameObject` with the component :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` which adds a node with `Traffic public entry` type.
 	
 .. _pedestrianNodeSettings:
 
@@ -141,6 +142,11 @@ Buttons
 | **Attach to closest traffic node** : try to connect close :ref:`TrafficNode <trafficNode>`.
 | **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>`.
 
+Hotkeys
+~~~~~~~~~~~~
+
+	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
+
 .. _pedestrianNodeCreator:
 		
 Pedestrian Node Creator
@@ -151,7 +157,7 @@ Pedestrian Node Creator
 How To Create
 ~~~~~~~~~~~~
 
-Select in the unity toolbar:
+Select in the `Unity` toolbar:
 	
 	`Spirit604/Create/PedestrianNodeCreator`
 	
@@ -169,7 +175,7 @@ Create Node
 #. Place preview :ref:`PedestrianNode <pedestrianNode>` where you want to be.
 #. Press `E` button on keyboard for the final creation of the :ref:`PedestrianNode <pedestrianNode>`.
 
-	.. note:: You can change the :ref:`hotkeys <pedestrianNodeCreatorHotkeys>` to your taste.
+	.. tip:: You can change the :ref:`hotkeys <pedestrianNodeCreatorHotkeys>` to your taste.
 
 .. _pedestrianNodeCreatorSelect:
 
@@ -183,7 +189,7 @@ Connect Node
 """"""""""""""
 
 #. :ref:`Select desired node <pedestrianNodeCreatorSelect>`.
-#.  Click `E` over the target :ref:`PedestrianNode <pedestrianNode>` to connect (:ref:`Selection mode <pedestrianNodeCreatorSelectionMode>` only).
+#. Click `E` over the target :ref:`PedestrianNode <pedestrianNode>` to connect (:ref:`Single selection mode <pedestrianNodeCreatorSelectionMode>` only).
 
 Locate Node
 """"""""""""""
@@ -215,6 +221,7 @@ Settings
 			* **All** : all nodes have the same position handle.
 		* **Unselect selected** : if you try to select an already selected node, it will be unselected.
 | **Max path width** : global width of routes for all nodes (enable preview :ref:`here <creatorShowBorders>`, save global width :ref:`here <creatorSaveGlobalWidth>`).
+| **Max path width** : global width of routes for all nodes (enable preview :ref:`here <creatorShowBorders>`, save global width (label_)).
 | **Connect with previous node** : currently created node will be connected to the previously created node.
 | **Auto select connected node** : node will be selected after it is connected to the source node.
 | **Allow connect traffic node** : on/of feature to connect to the :ref:`TrafficNode <trafficNode>`.
@@ -264,12 +271,12 @@ Buttons
 
 .. _creatorSaveGlobalWidth: 
 
-| **Save global path width** : сhange the width of the route for all nodes.
+| [#label] **Save global path width** : сhange the width of the route for all nodes.
 | **Reset all custom path width** : for all nodes with custom widths will be assigned the default value.
 | **Clear created nodes info** : clear the list of nodes created by the creator.
-| **Clear selection** : clear selected nodes **[multiple selection mode only]**.
-| **Snap to grid** : snap selected node position **[for :ref:`selected node <pedestrianNodeCreatorSelect>` only, :ref:`auto snap <pedestrianNodeCreatorSettings>` should be enabled]**.
-| **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>` **[for :ref:`selected node <pedestrianNodeCreatorSelect>` only]**.
+| **Clear selection** : clear selected nodes [multiple selection mode only].
+| **Snap to grid** : snap selected node position [for :ref:`selected node <pedestrianNodeCreatorSelect>` only, :ref:`auto snap <pedestrianNodeCreatorSettings>` should be enabled].
+| **Open advanced connection window** : open  :ref:`Advanced connection window <pedestrianNodeAdvancedConnection>` [for :ref:`selected node <pedestrianNodeCreatorSelect>` only].
 
 .. _pedestrianNodeCreatorHotkeys:
 
@@ -299,7 +306,7 @@ Split the existing connection into several nodes.
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnectionExample2.png
 	`Split connection example.`
 
-	.. note:: Can split already connected nodes only.
+	.. note:: Split is available for already connected nodes only.
 
 Join To Connection
 ~~~~~~~~~~~~
@@ -327,6 +334,10 @@ Create a custom route with custom width between two nodes.
 	
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidth.png
 	
+| **Target pedestrian node 1** : target connected node of selected connection.
+| **Custom route width** : new width of custom route.
+| **Offset from nodes** : new created nodes offset from existing nodes.
+	
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample1.png
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample2.png
 	`Create custom route width example.`
@@ -338,6 +349,9 @@ Set the custom width to the two selected nodes.
 	
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidth.png
 	
+| **Target pedestrian node 1** : target connected node of selected connection.
+| **Custom route width** : new width of custom route.
+
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample1.png
 	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample2.png
 	`Change current route width example.`

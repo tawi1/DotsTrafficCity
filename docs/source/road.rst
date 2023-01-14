@@ -7,39 +7,10 @@ Road
 	.. toctree::
 		:maxdepth: 2
 
-		roadSegment.rst
-		trafficNode.rst
-		path.rst
-		pedestrianNode.rst
-		trafficArea.rst
-		publicRoute.rst
-	
-Installation
-------------	
-
-
-How To Create Traffic Road
-------------
-
-#. Create RoadSegments.
-#. Configure paths.
-#. Create required PedestrianNode by PedestrianNodeCreator.
-#. Configure semaphores.
-#. Create TrafficAreas (optional).
-#. Create PublicRoutes (optional).
-#. Open RoadParent.
-#. Press Reset.
-#. Press Connect.
-#. Press Bake.
-
-.. _roadParent:
-	
-	.. image:: images/configs/road/installation/CityBase.png
-	.. image:: images/configs/road/installation/roadParent.png
-	.. image:: images/configs/road/installation/Hub.png
-
-
-	
-	
-	
-		
+		road/installation.rst
+		road/roadSegment.rst
+		road/trafficNode.rst
+		road/path.rst
+		road/pedestrianNode.rst
+		road/trafficArea.rst
+		road/publicRoute.rst	

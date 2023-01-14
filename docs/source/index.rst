@@ -12,12 +12,14 @@ Contents
 --------
 
 .. toctree::
-
+	:maxdepth: 2
+	
    gettingstarted
    road.rst
    traffic.rst
    pedestrian.rst
    npc.rst
    common.rst
-   debuggers.rst
+   sound.rst
+   debug.rst
    glossary.rst

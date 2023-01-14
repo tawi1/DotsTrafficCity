@@ -1,8 +1,8 @@
 ************
-Debuggers
+Debug
 ************
 
-.. _debuggers:
+.. _debug:
 
 .. contents::
    :local:

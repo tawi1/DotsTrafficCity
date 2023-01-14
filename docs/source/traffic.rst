@@ -7,9 +7,9 @@ Traffic
 	.. toctree::
 		:maxdepth: 2
 
-		traffic/trafficCar.rst
-		traffic/trafficPublic.rst
-		traffic/carPrefabCreator.rst
-		traffic/trafficCarConfigs.rst
-		traffic/carCommonConfigs.rst
-		traffic/testScenes.rst
+		trafficCar.rst
+		trafficPublic.rst
+		carPrefabCreator.rst
+		trafficCarConfigs.rst
+		carCommonConfigs.rst
+		testScenes.rst

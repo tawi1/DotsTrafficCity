@@ -8,11 +8,8 @@ You can buy it from unity asset store: `DOTS Traffic System <https://assetstore.
 Check out the :doc:`gettingstarted` section for further information, including
 how to :ref:`installation` the project.
 
-Contents
---------
-
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	
    gettingstarted
    road.rst

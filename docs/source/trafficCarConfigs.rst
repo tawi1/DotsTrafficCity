@@ -8,7 +8,7 @@ Traffic Car Spawner Config
 
 ``Single mode is used to position single objects.``
 
-	.. image:: images/configs/traffic/TrafficCarSpawnerConfig.png
+	.. image:: /images/configs/traffic/TrafficCarSpawnerConfig.png
 	
 | **Preferable count** : maximum number of cars in the city.
 | **HashMap capacity** : initial capacity of the hashmap that contains the data of the traffic cars.
@@ -24,7 +24,7 @@ Traffic Car Settings
 
 ``Single mode is used to position single objects.``
 
-	.. image:: images/configs/traffic/TrafficCarSettingsConfig.png
+	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
 	
 
 	
@@ -80,7 +80,7 @@ Traffic Car Nav Config
 
 Config distance to target nodes and traffic light handlers.
 
-	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
+	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
 	
 | **Min distance to target** : min distance to target :ref:`TrafficNode<trafficNode>`.
 | **Min distance to path point target** : min distance to connected :ref:`path point<pathPointConnection>`.
@@ -95,7 +95,7 @@ Config distance to target nodes and traffic light handlers.
 	* **Cull** : car will be culled.
 | **Continious local node calculation** :
 
-	.. image:: images/configs/traffic/TrafficCarNavOutOfPathConfig.png
+	.. image:: /images/configs/traffic/TrafficCarNavOutOfPathConfig.png
 	
 **Out of path resolve method [enabled]:**
 	* **Min distance to out of path** : minimum distance from the missed waypoint to the car.
@@ -106,7 +106,7 @@ Traffic Car Obstacle Config
 
 Config to calculate obstacles on the path.
 
-	.. image:: images/configs/traffic/TrafficCarNavConfigConfig.png
+	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
 	
 | **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`).
 | **Min distance to start approach** : minimum distance to the last car in the current lane to start approaching (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`).
@@ -136,53 +136,53 @@ Config to calculate obstacles on the path.
 
 .. _trafficCarObstacleConfig1:
 
-	.. image:: images/configs/traffic/obstacleExamples/ObstacleDistanceExample1.png
+	.. image:: /images/configs/traffic/obstacleExamples/ObstacleDistanceExample1.png
 	`Obstacle distance example.`
 	
 .. _trafficCarObstacleConfig2:
 
-	.. image:: images/configs/traffic/obstacleExamples/ApproachDistanceExample1.png
+	.. image:: /images/configs/traffic/obstacleExamples/ApproachDistanceExample1.png
 	`Approach distance example.`
 	
 .. _trafficCarObstacleConfig3:
 
-	.. image:: images/configs/traffic/obstacleExamples/MinDistanceToCheckNextConnectedPathExample.png
+	.. image:: /images/configs/traffic/obstacleExamples/MinDistanceToCheckNextConnectedPathExample.png
 	`Min distance to check next ConnectedPath example.`
 	
 .. _trafficCarObstacleConfig4:
 
-	.. image:: images/configs/traffic/obstacleExamples/CheckShortPathExample.png
+	.. image:: /images/configs/traffic/obstacleExamples/CheckShortPathExample.png
 	`Short path example.`
 	
 .. _trafficCarObstacleConfig5:
 
-	.. image:: images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectExample1.png
+	.. image:: /images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectExample1.png
 	`Calculate distance to intersect example.`
 	
 .. _trafficCarObstacleConfig6:
 
-	.. image:: images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectSameTargetExample1.png
+	.. image:: /images/configs/traffic/obstacleExamples/CalculateDistanceToIntersectSameTargetExample1.png
 	`Calculate distance to intersect same target example.`
 	
 .. _trafficCarObstacleConfig7:
 
-	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneCloseDistanceExample.png
+	.. image:: /images/configs/traffic/obstacleExamples/ChangeLaneCloseDistanceExample.png
 	`Change lane close distance to point example.`
 	
 .. _trafficCarObstacleConfig8:
-	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneExample1.png
+	.. image:: /images/configs/traffic/obstacleExamples/ChangeLaneExample1.png
 	
-	.. image:: images/configs/traffic/obstacleExamples/ChangeLaneExample3.png
+	.. image:: /images/configs/traffic/obstacleExamples/ChangeLaneExample3.png
 	`Short path example.`
 	
 .. _trafficCarObstacleConfig9:
 
-	.. image:: images/configs/traffic/obstacleExamples/SameDirectionExample.png
+	.. image:: /images/configs/traffic/obstacleExamples/SameDirectionExample.png
 	`Same direction example.`
 	
 .. _trafficCarObstacleConfig10:
 
-	.. image:: images/configs/traffic/obstacleExamples/AvoidCrossroadJamExample.png
+	.. image:: /images/configs/traffic/obstacleExamples/AvoidCrossroadJamExample.png
 	`Avoid crossroad jam example.`
 
 			
@@ -191,7 +191,7 @@ Traffic Car Approach Config
 
 Config of approaching obstacles and lights.
 
-	.. image:: images/configs/traffic/TrafficCarApproachConfig.png
+	.. image:: /images/configs/traffic/TrafficCarApproachConfig.png
 	
 | **Min approach speed** : min approach speed.
 | **On coming to the red light speed** : slowing down the speed of the car when approaching a red light (if the segment speed limit is lower or the speed of the obstacles is lower, the lowest speed of all the conditions will be selected).
@@ -202,7 +202,7 @@ Traffic Car Raycast Config
 
 Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`).
 
-	.. image:: images/configs/traffic/TrafficCarRaycastConfig.png
+	.. image:: /images/configs/traffic/TrafficCarRaycastConfig.png
 	
 | **Side offset** : width of raycast box.
 | **Min/Max ray length** : lenght of raycast box.
@@ -216,7 +216,7 @@ Traffic Car Change Lane Config
 
 Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only).
 
-	.. image:: images/configs/traffic/TrafficCarChangeLaneConfig.png
+	.. image:: /images/configs/traffic/TrafficCarChangeLaneConfig.png
 	
 | **Can change lane** : on/off ability to change lanes.
 | **Min max change lane offset** : min/max offset in the target lane depending on the speed of the car. (:ref:`example<trafficCarChangeLaneConfig1>`)
@@ -236,22 +236,22 @@ Config for automatic calculation of lane change by traffic (works for :ref:`path
 
 .. _trafficCarChangeLaneConfig1:
 	
-	.. image:: images/configs/traffic/changeLaneExamples/MinMaxChangeLaneOffsetExample.png
+	.. image:: /images/configs/traffic/changeLaneExamples/MinMaxChangeLaneOffsetExample.png
 	`Min/max change lane offset example.`
 	
 .. _trafficCarChangeLaneConfig2:
 
-	.. image:: images/configs/traffic/changeLaneExamples/MinDistanceToLastCarExample.png
+	.. image:: /images/configs/traffic/changeLaneExamples/MinDistanceToLastCarExample.png
 	`Min distance to last car in current lane example.`
 	
 .. _trafficCarChangeLaneConfig3:
 		
-	.. image:: images/configs/traffic/changeLaneExamples/MinDistanceToOtherCarsInOtherLaneExample.png
+	.. image:: /images/configs/traffic/changeLaneExamples/MinDistanceToOtherCarsInOtherLaneExample.png
 	`Min distance to other cars in other lane example.`
 	
 .. _trafficCarChangeLaneConfig4:
 	
-	.. image:: images/configs/traffic/changeLaneExamples/MinDistanceToIntersectedPathExample.png
+	.. image:: /images/configs/traffic/changeLaneExamples/MinDistanceToIntersectedPathExample.png
 	`Min distance to intersected path example.`
 	
 Traffic Car Npc Obstacle Config
@@ -259,7 +259,7 @@ Traffic Car Npc Obstacle Config
 
 Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`).
 
-	.. image:: images/configs/traffic/TrafficCarNpcObstacleConfig.png
+	.. image:: /images/configs/traffic/TrafficCarNpcObstacleConfig.png
 	
 | **Obstacle pedestrian action state** : will only react to pedestrians with the selected :ref:`PedestrianActionState<pedestrianActionState>`.
 | **Check distance** : obstacle calculation length.
@@ -270,7 +270,7 @@ Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`
 Traffic Car Parking Config
 ------------
 
-	.. image:: images/configs/traffic/TrafficCarParkingConfig.png
+	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
 
 **Rotation aligment at node support** : on/off car automatically turns in alignment with the parking node.
 	**Rotation speed** : rotation speed.
@@ -283,7 +283,7 @@ Traffic Car Antistuck Config
 
 Config to culling car in case of stuckness.
 
-	.. image:: images/configs/traffic/TrafficCarAntistuckConfig.png
+	.. image:: /images/configs/traffic/TrafficCarAntistuckConfig.png
 
 | **Obstacle stuck time** : duration of sighting of the obstacle after which the car will be culled.
 | **Stuck distance difference** : if the car moved more than the parameter distance the `Obstacle stuck time` is reset.
@@ -294,7 +294,7 @@ Traffic Car Horn Config
 
 Config to sound random horns when an obstacle is detected. It can be disabled (:ref:`here<soundConfig>`).
 
-	.. image:: images/configs/traffic/TrafficCarHornConfig.png
+	.. image:: /images/configs/traffic/TrafficCarHornConfig.png
 
 | **Chance to start** : chance to start the horn.
 | **Idle time to start** : idle time to start the horn.
@@ -307,7 +307,7 @@ Public Traffic Configs
 Traffic Public Spawner Settings
 ------------
 
-	.. image:: images/configs/traffic/TrafficPublicSpawnerSettings.png
+	.. image:: /images/configs/traffic/TrafficPublicSpawnerSettings.png
 	
 | **Spawn frequency** : spawning frequency.
 | **Traffic public to car model dictionary** : contains data on which :ref:`CarModel<carModel>` belong to :ref:`TrafficPublicType<trafficPublicType>`.

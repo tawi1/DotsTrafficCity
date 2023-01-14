@@ -20,17 +20,17 @@ How To Bake
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians to `skins` :ref:`field <animationBakedSourceData>`.
 	#. Drag & drop selected animations of pedestrians to `clips` :ref:`field <animationBakedSourceData>`.
 	
-		.. image:: images/pedestrian/baker/window/BakedSourceDataExample.png
+		.. image:: /images/pedestrian/baker/window/BakedSourceDataExample.png
 		`Drag & drop example.`
 		
 	#. Press `Create new` button.
 	
-		.. image:: images/pedestrian/baker/window/BakedSourceDataResult.png
+		.. image:: /images/pedestrian/baker/window/BakedSourceDataResult.png
 		`Multiple animation result example.`
 		
 	#. Check the created `BakedAnimationData` result in the tab :ref:`BakedAnimationData <animationBakedAnimationData>`.
 	
-		.. image:: images/pedestrian/baker/window/BakedAnimationDataExample.png
+		.. image:: /images/pedestrian/baker/window/BakedAnimationDataExample.png
 		`AnimationData result example.`
 		
 Baker Window
@@ -41,7 +41,7 @@ Baker Window
 Settings
 ~~~~~~~~~~~~
 
-	.. image:: images/pedestrian/baker/window/Settings.png
+	.. image:: /images/pedestrian/baker/window/Settings.png
 	
 | **Frame rate** : frame rate of baked animation.
 **Round to size ratio:** rounding texture size.
@@ -57,8 +57,8 @@ Settings
 Baked Source Data
 ~~~~~~~~~~~~
 
-	.. image:: images/pedestrian/baker/window/BakedSourceDataExample.png
-	.. image:: images/pedestrian/baker/window/BakedSourceDataResult.png
+	.. image:: /images/pedestrian/baker/window/BakedSourceDataExample.png
+	.. image:: /images/pedestrian/baker/window/BakedSourceDataResult.png
 	
 Source Data
 """"""""""""""
@@ -94,7 +94,7 @@ Buttons
 Baked Animation Data
 ~~~~~~~~~~~~
 
-	.. image:: images/pedestrian/baker/window/BakedAnimationDataExample.png
+	.. image:: /images/pedestrian/baker/window/BakedAnimationDataExample.png
 		
 | **Sampling skin** : skin on the basis of a playback animation (for :ref:`replace <animationBakedAnimationDataReplace>` purposes only).
 **Animation data:**
@@ -116,7 +116,7 @@ How To Replace
 	#. Drag & drop new animation clip to `New anim` field.
 	#. Press `Replace` button.
 	
-	.. image:: images/pedestrian/baker/window/BakedAnimationDataReplaceExample.png
+	.. image:: /images/pedestrian/baker/window/BakedAnimationDataReplaceExample.png
 	`Replace example.`
 	
 	
@@ -135,7 +135,7 @@ Open on the scene `PedestrianBakedAnimatorAuthoring`.
 
 	``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
 		
-	.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+	.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 	
 Initial Set Up
 """"""""""""""
@@ -144,7 +144,7 @@ Initial Set Up
 	#. Create :ref:`Animator Data Container <animationBakerAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
 	#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
 
-	.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+	.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 	
 Create Node
 """"""""""""""
@@ -180,7 +180,7 @@ Start Node
 
 Node where the transition begins by trigger.
 
-	.. image:: images/pedestrian/baker/animator/StartNodeExample.png	
+	.. image:: /images/pedestrian/baker/animator/StartNodeExample.png	
 		
 | **Trigger name** : name of the trigger on which the transition starts.
 | **Hash** : hash of the trigger on which the transition starts.
@@ -196,7 +196,7 @@ Animation Node
 
 Animation playback node.
 
-	.. image:: images/pedestrian/baker/animator/AnimationNodeExample.png
+	.. image:: /images/pedestrian/baker/animator/AnimationNodeExample.png
 
 | **Asset name** : asset data name.
 | **Anim name** : animation name (by default is taken from `Anim enum`).
@@ -213,13 +213,13 @@ Node with settings for switching between animations.
 **Node Type:**
 
 	* **Default** : animations play sequentially one by one without interpolation.
-		.. image:: images/pedestrian/baker/animator/TransitionNodeDefaultExample.png	
+		.. image:: /images/pedestrian/baker/animator/TransitionNodeDefaultExample.png	
 		
 	* **To Start** : previous animation is interpolated to the beginning of the next animation with the set duration.
-		.. image:: images/pedestrian/baker/animator/TransitionNodeToStartExample.png
+		.. image:: /images/pedestrian/baker/animator/TransitionNodeToStartExample.png
 		
 	* **To Global Sync** : previous animation is interpolated to the global playback time of the next animation with the set duration.
-		.. image:: images/pedestrian/baker/animator/TransitionNodeToGlobalSyncExample.png
+		.. image:: /images/pedestrian/baker/animator/TransitionNodeToGlobalSyncExample.png
 
 
 .. _animationBakerAnimatorTransitionExample:
@@ -227,10 +227,10 @@ Node with settings for switching between animations.
 Transition example
 """"""""""""""
 
-	.. image:: images/pedestrian/baker/animator/StartSitTransitionExample.png
+	.. image:: /images/pedestrian/baker/animator/StartSitTransitionExample.png
 	`Start sit transition example.`
 		
-	.. image:: images/pedestrian/baker/animator/SitoutTransitionExample.png		
+	.. image:: /images/pedestrian/baker/animator/SitoutTransitionExample.png		
 	`Sitout transition example.`
 
 .. _animationBakerAnimationCollection:
@@ -250,7 +250,7 @@ In the project context menu:
 Settings
 ~~~~~~~~~~~~
 	
-	.. image:: images/pedestrian/baker/animator/AnimationCollectionExample.png
+	.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 
 
 | **Name** : animation name.
@@ -265,7 +265,7 @@ Animator Data Container
 
 Contains data about animation transitions.
 
-	.. image:: images/pedestrian/baker/animator/AnimatorContainerExampleSource.png
+	.. image:: /images/pedestrian/baker/animator/AnimatorContainerExampleSource.png
 	
 **Layer Data** : contains data about transition.
 	* **Entry node** : asset node where the transition begins.

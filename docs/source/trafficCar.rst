@@ -14,27 +14,27 @@ How to create
 
 	``Spirit604/CityEditor/Car Prefab Creator``
 	
-	.. image:: images/entities/trafficCar/carPrefabCreator/CarPrefabCreatorToolbar.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/CarPrefabCreatorToolbar.png
 	
 #. Drag & drop source cars from scene or project to `Prefabs` field depends on `Prefab Source Type` parameter.
 
-	.. image:: images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
 	
 #. Configure the :ref:`common settings <carPrefabCreatorCommonSettings>` for creating a car.
 
-	.. image:: images/entities/trafficCar/carPrefabCreator/CommonSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
 	
 #. Configure the :ref:`save settings <carPrefabCreatorSaveSettings>` for creating a car.
 
-	.. image:: images/entities/trafficCar/carPrefabCreator/SaveSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
 #. Change the :ref:`template settings <carPrefabCreatorTemplateSettings>` depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
 
-	.. image:: images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
 	
 #. Click `Scan` button.
 
-	.. image:: images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
 #. In the `Prefab Info` tab, change the name of the enum of the cars if you needed.
 #. To create new enums, click the button `Add Enum Types`.
@@ -46,7 +46,7 @@ Authoring components
 TrafficCarEntityAuthoring
 ~~~~~~~~~~~~
 	
-	.. image:: images/entities/trafficCar/TrafficCarEntityAuthoring.png
+	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
 	
 | **Hull mesh renderer** : vehicle hull mesh renderer reference.
 | **Physics shape** : vehicle entity `PhysicsShape` reference.
@@ -60,7 +60,7 @@ TrafficCarEntityAuthoring
 CarWheelAuthoring
 ~~~~~~~~~~~~
 
-	.. image:: images/entities/trafficCar/CarWheelAuthoring.png
+	.. image:: /images/entities/trafficCar/CarWheelAuthoring.png
 	
 | **Wheel base** : wheel radius.
 | **All wheels** : all wheels of the vehicle.
@@ -69,7 +69,7 @@ CarWheelAuthoring
 CarSoundAuthoring
 ~~~~~~~~~~~~
 	
-	.. image:: images/entities/trafficCar/CarSoundAuthoring.png
+	.. image:: /images/entities/trafficCar/CarSoundAuthoring.png
 	
 	|
 	

@@ -12,7 +12,7 @@ Common Car
 Car Engine Damage System Settings
 ------------
 
-	.. image:: images/configs/cars/CarEngineDamageSystemSettings.png
+	.. image:: /images/configs/cars/CarEngineDamageSystemSettings.png
 	
 **Damage states:**
 	* **Min hp** :
@@ -22,7 +22,7 @@ Car Engine Damage System Settings
 Car Ignition Config
 ------------
 
-	.. image:: images/configs/cars/CarIgnitionConfig.png
+	.. image:: /images/configs/cars/CarIgnitionConfig.png
 	
 | **Has ignition** :
 | **Idle before start** :
@@ -37,7 +37,7 @@ Car Ignition Config
 Car Stopping Engine Config
 ------------
 
-	.. image:: images/configs/cars/CarStoppingEngineConfig.png
+	.. image:: /images/configs/cars/CarStoppingEngineConfig.png
 	
 | **Has stop engine** :
 | **Stopping duration** :
@@ -48,7 +48,7 @@ Car Stopping Engine Config
 Car Common Sound Config
 ------------
 
-	.. image:: images/configs/cars/CarCommonSoundConfig.png
+	.. image:: /images/configs/cars/CarCommonSoundConfig.png
 
 | **Collision sound** :
 | **Car explode sound** :

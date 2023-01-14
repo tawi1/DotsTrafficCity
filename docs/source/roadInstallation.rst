@@ -17,7 +17,7 @@ Installation
 
 .. _roadParent:
 	
-	.. image:: images/configs/road/installation/CityBase.png
-	.. image:: images/configs/road/installation/roadParent.png
-	.. image:: images/configs/road/installation/Hub.png
+	.. image:: /images/configs/road/installation/CityBase.png
+	.. image:: /images/configs/road/installation/roadParent.png
+	.. image:: /images/configs/road/installation/Hub.png
 

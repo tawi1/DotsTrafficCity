@@ -12,7 +12,7 @@ Common Configs
 General Settings Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/common/GeneralSettingsConfig.png
+	.. image:: /images/configs/common/GeneralSettingsConfig.png
 	
 	**Player agent type:**
 		* **Player** : player will be spawned.
@@ -51,7 +51,7 @@ General Settings Config
 Cull Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/common/CullConfig.png
+	.. image:: /images/configs/common/CullConfig.png
 	
 	**Has cull:**
 		**Max distance** : maximum distance to activate entities.
@@ -63,7 +63,7 @@ Streaming Level Config
 
 Config for loading/unloading subscenes.
 
-	.. image:: images/configs/common/StreamingLevelConfig.png
+	.. image:: /images/configs/common/StreamingLevelConfig.png
 	
 	**Streaming is enabled:**
 		**Distance for streaming in** : distance at what the subscene is loaded.
@@ -75,7 +75,7 @@ Player Configs
 Player Npc Sound Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/common/PlayerNpcSoundConfig.png
+	.. image:: /images/configs/common/PlayerNpcSoundConfig.png
 	
 	**Footstep frequency** : sound frequency of the player's footsteps.
 	
@@ -87,7 +87,7 @@ Sound Configs
 Common Sound Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/common/CommonSoundConfig.png
+	.. image:: /images/configs/common/CommonSoundConfig.png
 	
 	**Has sounds** : on/off dots sound systems.
 	**Crowd sound** : on/off crowd sound system for pedestrians.
@@ -96,7 +96,7 @@ Common Sound Config
 Crowd Sound Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/common/CrowdSoundConfig.png
+	.. image:: /images/configs/common/CrowdSoundConfig.png
 	
 	**Crowd sound data** : crowd sound data.
 	**Inner crowd sound count** :

@@ -8,7 +8,7 @@ Traffic Light Handler settings
 
 `Traffic Light Handler` is an entity for handling the state of a traffic light.
 
-	.. image:: images/road/TrafficLightHandler.png
+	.. image:: /images/road/TrafficLightHandler.png
 	
 | **Traffic light crossroad** :
 | **Triggers** :

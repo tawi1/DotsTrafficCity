@@ -16,7 +16,7 @@ Path Settings
 Cached values
 ~~~~~~~~~~~~
 	
-	.. image:: images/road/path/PathCachedValues.png
+	.. image:: /images/road/path/PathCachedValues.png
 	
 | **Source traffic node** : source node traffic from which the path starts.
 **Path connection type:**
@@ -35,7 +35,7 @@ Cached values
 Settings
 ~~~~~~~~~~~~
 
-	.. image:: images/road/path/PathSettings.png
+	.. image:: /images/road/path/PathSettings.png
 		
 .. _pathLength:
 		
@@ -76,7 +76,7 @@ Settings
 Visual Settings
 ~~~~~~~~~~~~
 
-	.. image:: images/road/path/PathVisualSettings.png
+	.. image:: /images/road/path/PathVisualSettings.png
 
 | **Show info on select** : shared parameter between paths instances that automatically enables `Show info waypoints` on selecting new path.
 | **Show info waypoints** : show info of waypoints on the scene.
@@ -117,7 +117,7 @@ Path Point connection
 Path advanced settings window
 ----------------
 
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow1.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindow1.png
 	
 Common settings
 ~~~~~~~~~~~~
@@ -138,11 +138,11 @@ Single
 
 `Single` - change each waypoint one by one.
 
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow1.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindow1.png
 	
 .. _pathDrawAdditionalSettingsExample:
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindow2.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindow2.png
 	`Draw additional settings enabled.`
 
 Multiple
@@ -150,7 +150,7 @@ Multiple
 
 `Multiple` - speed limit will be changed on the selected section.
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple1.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple1.png
 
 **Multiple node change type:**
  	* **Fixed** : all waypoints change speed limit.
@@ -164,24 +164,24 @@ Multiple
 **How to use:**
 	* Select the start and end of the section in the window or turn on `Draw Select Buttons` and select start (`S`) and end (`E`) on the scene.
 	* Set the parameter `Selected Path Speed Limit` to the value you need.
-		.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple5.png
+		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple5.png
 	* Click `Set Speed Limit`.
-		.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple6.png
+		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple6.png
 		`Result.`
 				
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple2.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple2.png
 	`Source path example.`
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple3.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple3.png
 	`Draw Select Buttons enabled "S" (start) "E" (End) example.`
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple4.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple4.png
 	`Path section selected (green circles start & end of section) example.`
 
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple7.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple7.png
 	`Interpolating settings example.`
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowMultiple8.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple8.png
 	`Interpolating result.`
 
 All way
@@ -189,7 +189,7 @@ All way
 
 `All way` - all path waypoints will change the speed limit according to the set options.
 
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowAllway1.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowAllway1.png
 
 **Multiple node change type:**
  	* **Fixed** : all waypoints change speed limit.
@@ -202,9 +202,9 @@ All way
 
 **How to use:**
 	* Set the parameter `Selected Path Speed Limit` to the value you need.
-		.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowAllway1.png
+		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowAllway1.png
 	* Click `Set Speed Limit`.
-		.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowAllway2.png
+		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowAllway2.png
 		`Result.`
 
 Custom section
@@ -212,7 +212,7 @@ Custom section
 
 `Custom section` - section with the custom speed will be automatically generated depending on the parameters.
 
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection1.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowSection1.png
 	
 **Path section type:**
 	* **Start of path** : section will be created at the beginning of the path.
@@ -230,10 +230,10 @@ Custom section
 	* Set all parameters.
 	* Click `Create SpeedLimit Segment`.
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection2.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowSection2.png
 	`Source path.`
 	
-	.. image:: images/road/path/pathSettingsWindow/PathSettingsWindowSection3.png
+	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowSection3.png
 	`Result.`
 	
 .. _pathBakingInfo:

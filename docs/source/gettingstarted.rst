@@ -17,13 +17,13 @@ Installation
 
 #. First time initialization window will appear automatically or you can open it manually in toolbar ``604Spirit/MapEditor/Window/Map Creator Initialization.``
 
-	.. image:: images/gettingstarted/InitilizationWindow.png
+	.. image:: /images/gettingstarted/InitilizationWindow.png
 
 #. Set the root path of the tool, it is automatically detected (or manually press the `Detect Root` button if you changed the root of the tool prefab path).
 
 #. Click `Load Packages` to start download packages required for this tool.
 
-	.. image:: images/gettingstarted/PackageSetupWindow.png
+	.. image:: /images/gettingstarted/PackageSetupWindow.png
 	
 	.. note::
 		**Required custom packages:**

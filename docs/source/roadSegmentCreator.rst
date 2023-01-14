@@ -15,7 +15,7 @@ How To Use
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
 #. Select :ref:`road segment type<roadSegmentCreatorGeneralSettings>`.
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 	
 #. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
 #. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
@@ -31,78 +31,78 @@ Custom Settings
 Default crossroad
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/examples/RoadSegmentDefault.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentDefault.png
 	`Example`.
 	
 Turn road
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentTurnRoad.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentTurnRoad.png
 	`Example`.
 
 	
 Straight road
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentStraightSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentStraight.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentStraightSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentStraight.png
 	`Example`.
 	
 Transition crossroad	
 ~~~~~~~~~~~~
  
-	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
 	`Example`.
 	
 Transition straight road
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
 	`Example`.
 	
 Transition crossroad to oneway road
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
 	`Example`.
 	
 Oneway straight
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentOneWayStraight.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayStraight.png
 	`Example`.
 	
 Oneway turn
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
 	`Example`.
 	
 Custom straight road
 ~~~~~~~~~~~~ 
 	
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomStraightPathSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightPathSettings.png
 	
-	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraight.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraight2.png
-	.. image:: images/road/roadSegment/examples/RoadSegmentCustomStraightSnapExample.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight2.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraightSnapExample.png
 	`Example`.
 		
 Custom segment 
 ~~~~~~~~~~~~ 
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomCustomSettings.png
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomSnapNodeSettings.png
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomTrafficNodeEditorWindow.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomCustomSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomSnapNodeSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomTrafficNodeEditorWindow.png
 	
-	.. image:: images/road/roadSegment/creator/RoadSegmentCustomExample.png
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomExample.png
 	`Example`.
 
 Components
@@ -113,7 +113,7 @@ Components
 General settings
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
 
 .. _roadSegmentCreatorPedestrianSettings:
@@ -121,21 +121,21 @@ General settings
 Pedestrian node settings
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
 .. _roadSegmentCreatorLightSettings:
 
 Light settings
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
 	
 .. _roadSegmentCreatorPathSettings:
 
 Path settings
 ~~~~~~~~~~~~ 
 	
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
 	
 	:ref:`Path settings window<pathSettingsWindow>`.
 
@@ -145,12 +145,12 @@ Path settings
 Segment handler settings
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
 	
 Other settings
 ~~~~~~~~~~~~ 
 
-	.. image:: images/road/roadSegment/creator/RoadsegmentCreatorOtherSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorOtherSettings.png
 
 
 

@@ -10,7 +10,7 @@ How To Create
 
 Select in the unity toolbar:
 
-	.. image:: images/road/installation/RoadSegmentCreation.png
+	.. image:: /images/road/installation/RoadSegmentCreation.png
 	
 	
 Main Components
@@ -21,7 +21,7 @@ Road Segment
 
 Component to connect with other road segments.
 
-	.. image:: images/road/roadSegment/RoadSegment.png
+	.. image:: /images/road/roadSegment/RoadSegment.png
 	
 Variables
 """"""""""""""
@@ -45,7 +45,7 @@ Component for handling traffic lights at crossroad.
 Cached
 """"""""""""""
 
-	.. image:: images/road/roadSegment/TrafficLightCrossroadCached.png
+	.. image:: /images/road/roadSegment/TrafficLightCrossroadCached.png
 	
 | **Traffic crossroad settings** : settings that contain general traffic light timings.
 | **Traffic nodes** : all nodes of `RoadSegment`.
@@ -56,7 +56,7 @@ Timeline common
 	
 Timeline common uses the timeline from the `TrafficCrossroadSettings`.
 	
-	.. image:: images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
+	.. image:: /images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
 	
 	.. note:: You can change the common timeline for the current segment by adding new settings `TrafficCrossroadSettings`.
 
@@ -65,7 +65,7 @@ Timeline custom
 
 ``Custom timeline is designed for custom timings of the traffic light segment``
 
-	.. image:: images/road/roadSegment/TrafficLightCrossroadCustomTimeline.png
+	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimeline.png
 	
 After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd `TrafficLightHandler`.
 	
@@ -73,14 +73,14 @@ After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd `Traf
 	#. Select the `TrafficLightHandler` that should be looped.
 	#. Enter `Source Data Handler Index` parameter based on which to loop.
 	
-		.. image:: images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png
+		.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png
 		`Settings example`
 		
 	#. Click `Loop Time`.
 	
 **Loop result:**
 
-	.. image:: images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample2.png
+	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample2.png
 
 Custom arrow lights
 """"""""""""""
@@ -92,11 +92,11 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 	#. Select `Custom Related Light Index`.
 	#. Select related :ref:`TrafficNode <trafficNode>` in the toolbar.
 	
-		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
+		.. image:: /images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
 			
 	#. Select related :ref:`path <path>` in the toolbar.
 	
-		.. image:: images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
+		.. image:: /images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
 		`Selected path example`
 		
 	#. Click `Add Custom Light` button.

@@ -11,7 +11,7 @@ How To Create
 	
 		`Spirit604/Create/PedestrianNode`
 		
-		.. image:: images/road/pedestrianNode/PedestrianNodeToolbarExample.png
+		.. image:: /images/road/pedestrianNode/PedestrianNodeToolbarExample.png
 
 		
 	#. Create node with :ref:`PedestrianNodeCreator tool <pedestrianNodeCreatorCreate>`.
@@ -21,7 +21,7 @@ Pedestrian Node
 
 ``Pedestrian node is a node for creating pedestrian routes``
 
-	.. image:: images/road/pedestrianNode/PedestrianNode.png
+	.. image:: /images/road/pedestrianNode/PedestrianNode.png
 	
 Connected data
 ~~~~~~~~~~~~
@@ -38,7 +38,7 @@ Directions of auto-connections
 
 Direction of raycasts to connect with other nodes (can be useful for generating squared scenes).
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeDirectionsExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeDirectionsExample.png
 	`All connection directions enabled example.`
 	
 Custom Node Settings
@@ -54,7 +54,7 @@ Sit
 
 Node for benches, seats, etc.
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeSeatSettings.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeSeatSettings.png
 
 | **Show seats** : enable editor display of seats.
 | **Base offset** : offset between the center of the seats and the center of the node.
@@ -65,7 +65,7 @@ Node for benches, seats, etc.
 
 	.. note:: Required `PedestrianNodeSeatSettings` component.
 	
-	.. image:: images/road/pedestrianNode/PedestrianNodeBenchExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeBenchExample.png
 	`Bench example.`
 
 House
@@ -85,7 +85,7 @@ Car parking
 
 Node to enter/exit a parked car.
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeParkingExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeParkingExample.png
 	`Parking node example.`
 
 Talk area
@@ -101,7 +101,7 @@ Node for crowd conversations of pedestrians.
 | **Unlimited talk time** : on/off infinite conversation for pedestrians in the talk area.
 | **Show bounds** : show bounds of area.
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeTalkAreaExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeTalkAreaExample.png
 	`Talk area example.`
 
 Traffic public stop station
@@ -109,7 +109,7 @@ Traffic public stop station
 
 Node for waiting for public transport.
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeStopStationExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeStopStationExample.png
 	`Stop station example.`
 
 Traffic public entry
@@ -117,7 +117,7 @@ Traffic public entry
 
 Node for entering public transport.
 
-	.. image:: images/road/pedestrianNode/PedestrianNodePublicEntryExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodePublicEntryExample.png
 	`Public entry example (white box).`
 	
 	.. warning:: Entry node should be any `GameObject` with the component :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` which adds a node with `Traffic public entry` type.
@@ -145,7 +145,7 @@ Buttons
 Hotkeys
 ~~~~~~~~~~~~
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
 
 .. _pedestrianNodeCreator:
 		
@@ -161,7 +161,7 @@ Select in the `Unity` toolbar:
 	
 	`Spirit604/Create/PedestrianNodeCreator`
 	
-	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorToolbarExample.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorToolbarExample.png
 
 How To
 ~~~~~~~~~~~~
@@ -203,7 +203,7 @@ Locate Node
 Settings
 ~~~~~~~~~~~~
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorSettings.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorSettings.png
 	
 | **Show handlers** : on/off position handles for nodes.
 **Show handle type:**
@@ -240,7 +240,7 @@ Settings
 Scene Settings
 ~~~~~~~~~~~~
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorSceneSettings.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorSceneSettings.png
 		
 | **Show path** : show pedestrian node routes.
 **Show path type:**
@@ -282,7 +282,7 @@ Buttons
 Hotkeys
 ~~~~~~~~~~~~
 
-	.. image:: images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
+	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
 
 .. _pedestrianNodeAdvancedConnection: 
 
@@ -296,13 +296,13 @@ Split Connection
 
 Split the existing connection into several nodes.
 
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnection.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnection.png
 	
 | **Target pedestrian node** : selected node where the split connections will be.
 | **Split count** : number of new nodes created between the selected two.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnectionExample1.png
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnectionExample2.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnectionExample1.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/SplitConnectionExample2.png
 	`Split connection example.`
 
 	.. note:: Split is available for already connected nodes only.
@@ -312,18 +312,18 @@ Join To Connection
 	
 Connect the selected node to an existing connection.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnection.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnection.png
 	
 | **Target pedestrian node 1** : target node 1 of selected connection.
 | **Target pedestrian node 2** : target node 2 of selected connection.
 | **Attach to line** : source node will be moved to the line connecting target nodes.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample1.png
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample2.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample1.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample2.png
 	`Join to connection example 1.`
 
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample3.png
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample4.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample3.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/JoinToConnectionExample4.png
 	`Join to connection example 2 (attach to line enabled).`
 
 Create Custom Route Width
@@ -331,14 +331,14 @@ Create Custom Route Width
 	
 Create a custom route with custom width between two nodes.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidth.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidth.png
 	
 | **Target pedestrian node 1** : target connected node of selected connection.
 | **Custom route width** : new width of custom route.
 | **Offset from nodes** : new created nodes offset from existing nodes.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample1.png
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample2.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample1.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/CreateCustomRouteWidthExample2.png
 	`Create custom route width example.`
 
 Change Current Route Width
@@ -346,11 +346,11 @@ Change Current Route Width
 	
 Set the custom width to the two selected nodes.
 	
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidth.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidth.png
 	
 | **Target pedestrian node 1** : target connected node of selected connection.
 | **Custom route width** : new width of custom route.
 
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample1.png
-	.. image:: images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample2.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample1.png
+	.. image:: /images/road/pedestrianNode/AdvancedConnectionWindow/ChangeCurrentRouteWidthExample2.png
 	`Change current route width example.`

@@ -72,7 +72,7 @@ Factory
 	
 		``Spirit604/Animation Baker/Animation Collection``
 	
-		.. image:: images/pedestrian/baker/animator/AnimationCollectionExample.png
+		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
 	#. Open on the scene `PedestrianBakedSkinFactory`.
@@ -81,22 +81,22 @@ Factory
 
 	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` to `PedestrianBakedSkinFactory`.
 	
-		.. image:: images/pedestrian/baker/AddNewEntryPanelExample.png
+		.. image:: /images/pedestrian/baker/AddNewEntryPanelExample.png
 			
 	#. Click `+` to show `New Entry` panel.
 	
-		.. image:: images/pedestrian/baker/NewEntry.png
+		.. image:: /images/pedestrian/baker/NewEntry.png
 	
 	#. Enter pedestrian entry name & assign `Skinned Mesh Renderer` or `Mesh` of the target pedestrian.
 	#. Click `Add Entry`.	
 	
 	#. Select created :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
 	
-		.. image:: images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
+		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
 		
 	#. Select the animation in the inspector that you want to assign to the selected character.
 	
-		.. image:: images/pedestrian/baker/PedestrianAnimationsAssignExample.png
+		.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
 			
 	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
 	#. Assign values for each animation in the same way.
@@ -108,7 +108,7 @@ Baked Animation Sheet Data
 
 Data about baked animations in texture (:ref:`How to create <animationBakerHowTo>`). 
 	
-	.. image:: images/pedestrian/baker/PedestrianAnimationSheetDataExample.png	
+	.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png	
 	
 Baked Custom Animator
 """"""""""""""
@@ -122,7 +122,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	
 		``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
 		
-		.. image:: images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+		.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 
 				
 	#. Create :ref:`Animator Data Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
@@ -132,16 +132,16 @@ Baked Custom animator is used for transitions between baked animations (implemen
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
 	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
-		.. image:: images/pedestrian/baker/animator/StartSitTransitionExample.png
+		.. image:: /images/pedestrian/baker/animator/StartSitTransitionExample.png
 		`Start sit transition example.`
 		
-		.. image:: images/pedestrian/baker/animator/SitoutTransitionExample.png		
+		.. image:: /images/pedestrian/baker/animator/SitoutTransitionExample.png		
 
 		`Sitout transition example.`
 	
 	#. Copy & paste :ref:`generated hash <animationBakerAnimatorTriggerHash>` from `AnimatorContainer` to code (:ref:`usage example <pedestrianBakedFactoryTransitionExample>`).
 		
-		.. image:: images/pedestrian/baker/animator/AnimatorContainerExample.png		
+		.. image:: /images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
 How To Use
 """"""""""""""
@@ -283,7 +283,7 @@ Configs
 Pedestrian Spawner Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianSpawnerConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianSpawnerConfig.png
 	
 | **Min pedestrian count** : number of pedestrians in the city.
 | **Pool size** : pool size of `HybridLegacy <pedestrianHybridLegacy>` skins.
@@ -295,7 +295,7 @@ Pedestrian Spawner Config
 Pedestrian Settings Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianSettingsConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
 
 **Pedestrian skin type:**
 	* **Rig show only in view** : rig skin will be loaded in the camera's view area.
@@ -336,7 +336,7 @@ Pedestrian Settings Config
 Pedestrian Obstacle Local Avoidance Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianObstacleLocalAvoidanceSettings.png
+	.. image:: /images/configs/pedestrian/PedestrianObstacleLocalAvoidanceSettings.png
 	
 **Obstacle avoidance method:**
 	* **Simple** : is able to avoid only 1 object.
@@ -348,7 +348,7 @@ Pedestrian Obstacle Local Avoidance Config
 Pedestrian Trigger Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianTriggerConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianTriggerConfig.png
 	
 | **Trigger HashMap capacity** : initial hashmap capacity  that contains data of triggers.
 | **Trigger HashMap cell size** : hashmap cell size.
@@ -361,7 +361,7 @@ Pedestrian Trigger Config
 Pedestrian Scary Trigger Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianScaryTriggerConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
 	
 **Trigger settings:** 
 	* **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
@@ -377,7 +377,7 @@ Pedestrian Scary Trigger Config
 Pedestrian Bench Config
 ~~~~~~~~~~~~
 
-	.. image:: images/configs/pedestrian/PedestrianBenchConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianBenchConfig.png
 	
 | **Min/Max idle time** : min/max idle duration on the bench.
 | **Custom achieve enter point distance** : distance to achieve the entry point on the bench.
@@ -391,7 +391,7 @@ Pedestrian Common Sound Config
 
 Common pedestrian sound settings
 
-	.. image:: images/configs/pedestrian/PedestrianCommonSoundConfig.png
+	.. image:: /images/configs/pedestrian/PedestrianCommonSoundConfig.png
 	
 | **Sound death** : :ref:`sound<soundData>` when a pedestrian died.
 | **Enter tram sound** : :ref:`sound<soundData>` when entering a tram.

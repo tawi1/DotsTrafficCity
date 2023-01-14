@@ -8,4 +8,4 @@ Traffic Area
 Settings
 ------------
 
-	.. image:: images/road/TrafficArea.png
+	.. image:: /images/road/TrafficArea.png

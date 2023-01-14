@@ -1,6 +1,6 @@
 .. _trafficCar:
    
-Traffic car
+Traffic Car
 =====
 
 .. contents::

@@ -7,5 +7,5 @@ Pedestrian
 	.. toctree::
 		:maxdepth: 2
 
-		pedestrianInit.rst
-		animationbaker.rst
+		/pedestrianInit.rst
+		/animationbaker.rst

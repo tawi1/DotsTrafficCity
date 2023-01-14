@@ -24,7 +24,7 @@ Factory
 	
 		``Hub/Pools/Npc/Pedestrian/PedestrianSkinFactory``
 
-		.. image:: images/configs/pedestrian/PedestrianSkinFactory.png
+		.. image:: /images/configs/pedestrian/PedestrianSkinFactory.png
 	
 	#. Enable `Show Add New Prefab Settings`.
 	#. Drag & drop source prefabs to the `New Prefabs` field.

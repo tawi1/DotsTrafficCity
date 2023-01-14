@@ -14,10 +14,10 @@ Contents
 .. toctree::
 
    gettingstarted
-   road
-   commonConfigs
-   trafficCarConfigs
-   pedestrian
-   animationBaker
-   npcData
-   glossary
+   road.rst
+   traffic.rst
+   pedestrian.rst
+   npc.rst
+   common.rst
+   debuggers.rst
+   glossary.rst

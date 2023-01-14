@@ -1,13 +1,10 @@
+.. _commonCarConfigs:
+
 Common Car Configs
 =====
 
-.. _commonCarConfigs:
-
 .. contents::
    :local:
-
-Common Car
-============
 
 Car Engine Damage System Settings
 ------------

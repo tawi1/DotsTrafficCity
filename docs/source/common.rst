@@ -8,3 +8,4 @@ Common Info
 		:maxdepth: 2
 
 		/commonConfigs.rst
+		/commonTestScenes.rst

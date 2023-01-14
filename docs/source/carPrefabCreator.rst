@@ -6,7 +6,7 @@ Car Prefab Creator
 Prefab Settings
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/PrefabSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
 
 	**Prefab source type:**
 		* **Scene**
@@ -26,7 +26,7 @@ Prefab Settings
 Common Settings
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/CommonSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
 	
 	**Assign hull mesh:** should find the hull of the car.
 		* **Parent is hull mesh** : car root contains a car mesh.
@@ -44,7 +44,7 @@ Common Settings
 Save Settings
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/SaveSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
 	**Save to exist preset** : add the created prefabs to an existing preset on the scene.
 	**New preset settings:**
@@ -67,7 +67,7 @@ Save Settings
 Template Settings
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/TemplateSettings.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
 	
 	**Hull name templates** : keyword phrases for automatic hull searches.
 	
@@ -80,7 +80,7 @@ Template Settings
 Prefab Info
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/PrefabInfo.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
 	
 	**Prefab car info:**
@@ -90,7 +90,7 @@ Prefab Info
 Buttons
 ----------------
 
-	.. image:: /images/trafficCar/carPrefabCreator/Buttons.png
+	.. image:: /images/entities/trafficCar/carPrefabCreator/Buttons.png
 	
 	**Scan** : scan the added prefabs and add information about new ones to the `Prefab Info` tab.
 	**Add enum types** : add new :ref:`CarModel<carModel>` enums from the `Prefab Info` tab.

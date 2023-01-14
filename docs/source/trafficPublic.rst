@@ -26,12 +26,3 @@ TrafficPublicEntryAuthoring
 
 TrafficPublicType
 ------------
-
-
-
-Traffic Public route
-=====
-
-Installation
-------------
-

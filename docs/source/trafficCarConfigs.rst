@@ -300,18 +300,3 @@ Config to sound random horns when an obstacle is detected. It can be disabled (:
 | **Idle time to start** : idle time to start the horn.
 | **Delay** : delay between horns.
 | **Horn duration** : horn duration.
-	
-Public Traffic Configs
-============
-
-Traffic Public Spawner Settings
-------------
-
-	.. image:: /images/configs/traffic/TrafficPublicSpawnerSettings.png
-	
-| **Spawn frequency** : spawning frequency.
-| **Traffic public to car model dictionary** : contains data on which :ref:`CarModel<carModel>` belong to :ref:`TrafficPublicType<trafficPublicType>`.
-
-
-
-		

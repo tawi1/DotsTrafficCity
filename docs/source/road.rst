@@ -13,4 +13,4 @@ Road
 		/path.rst
 		/pedestrianNode.rst
 		/trafficArea.rst
-		/publicRoute.rst	
+		/trafficPublicRoute.rst	

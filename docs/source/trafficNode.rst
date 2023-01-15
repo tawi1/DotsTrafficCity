@@ -99,7 +99,7 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 **Example description:**
 	* Arrow represents the forward rotation of the :ref:`node <trafficNode>`.
 	* Purple arrows the direction of the outer nodes of the :ref:`segment <roadSegment>`.
-	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`nodes <trafficNode>`.
+	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`oneway nodes <trafficNodeOneWay>`.
 
 .. _trafficNodeAutoPathConnection:
 
@@ -114,14 +114,13 @@ How To Use
 ~~~~~~~~~~~~ 
 
 * To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParent>` by pressing `Connect` button. 
-* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParent>`, 
-then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
+* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParent>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
 
 .. _trafficNodeCollider:
 
 	.. note:: 
-		* To prevent auto-path connection for the selected :ref:`TrafficNodes <trafficNode> enable **Lock path auto creation** in the settings of the node.
-		* Every :ref:`TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (oneway or not).
+		* To prevent auto-path connection for the selected :ref:`TrafficNode <trafficNode>` enable **Lock path auto creation** in the settings of the node.
+		* Every :ref:`TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (:ref:`oneway <trafficNodeOneWay>` or not).
 		* Make sure that the :ref:`direction of the node <trafficNodeRotation>` is set correctly.
 		
 .. _trafficNodeConnectionExample:

@@ -1,6 +1,6 @@
 .. _trafficCarConfigs:
 
-Traffic Configs
+Traffic Car Configs
 =====
 
 Traffic Car Spawner Config

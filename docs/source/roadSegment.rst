@@ -109,6 +109,13 @@ How To Customize
 
 By default `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component which can be used to customize a segment.
 
+.. _roadSegmentBakingInfo:
+
+Baking info
+------------
+
+The intersection of :ref:`paths <pathBakingInfo>` is baked only in those :ref:`paths <pathBakingInfo>` that are in the segment.
+
 
 
 	

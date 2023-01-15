@@ -84,6 +84,8 @@ Oneway turn
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
 	`Example`.
 	
+.. _roadSegmentCreatorCustomStraight:
+
 Custom straight road
 ~~~~~~~~~~~~ 
 	
@@ -95,6 +97,8 @@ Custom straight road
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraightSnapExample.png
 	`Example`.
 		
+.. _roadSegmentCreatorCustomSegment:
+
 Custom segment 
 ~~~~~~~~~~~~ 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png

@@ -12,7 +12,7 @@ Settings
 	
 | **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
 | **Lanes** : :ref:`rightside lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
-| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in external :ref:`RoadSegments <roadSegment>`).
+| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in external :ref:`RoadSegments <roadSegment>`) ( :ref:`additonal info <trafficNodeLeftDirectionInfo>`).
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
 | **Chance to spawn** : chance of the vehicle spawning in the node.
@@ -78,31 +78,56 @@ Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSeg
 Leftside lanes
 ~~~~~~~~~~~~ 
 
-Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>`)
+Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>`.
 
 	.. image:: /images/road/trafficNode/ConnectionInfoExampleLeftSide.png
 	`Leftside lanes example.`
+	
+.. _trafficNodeLeftDirectionInfo:
+
+	.. warning:: Intersected `External paths` should be replaced by a separate :ref:`segment <roadSegment>` to :ref:`bake the intersection of the paths <roadSegmentBakingInfo>`.
+	
+.. _trafficNodeRotation:
+
+Node Rotation
+~~~~~~~~~~~~ 
+	
+Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the center of the segment
+
+	.. image:: /images/road/trafficNode/TrafficNodeDirectionExample.png
+
+**Example description:**
+	* Arrow represents the forward rotation of the :ref:`node <trafficNode>`.
+	* Purple arrows the direction of the outer nodes of the :ref:`segment <roadSegment>`.
+	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`nodes <trafficNode>`.
 
 .. _trafficNodeAutoPathConnection:
 
 Auto-path Connection
 ----------------
 
-To quickly generate connections between :ref:`RoadSegments <roadSegment>` on the same line is used auto-path connection. 
+* To quickly generate connections between :ref:`RoadSegments <roadSegment>` on the same line is used auto-path connection. 
+* If the :ref:`segments <roadSegment>` are not on the same line you should to create another :ref:`Custom straight road segment <roadSegmentCreatorCustomStraight>` or :ref:`Custom segment <roadSegmentCreatorCustomSegment>` between them and do the same connection.
+* Also you can manually create paths between :ref:`segments <roadSegment>` with :ref:`TrafficNodePathCreator tool <trafficNodePathCreator>`.
 
 How To Use
 ~~~~~~~~~~~~ 
 
-* To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParent>`. 
-* Every time you create a new `RoadSegment <roadSegment>` or move an existing `RoadSegment <roadSegment>`, press reset and press connect in `RoadParent <roadParent>`.
+* To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParent>` by pressing `Connect` button. 
+* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParent>`, 
+then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
 
 .. _trafficNodeCollider:
 
-	.. note.. 
+	.. note:: 
 		* To prevent auto-path connection for the selected :ref:`TrafficNodes <trafficNode> enable **Lock path auto creation** in the settings of the node.
-		* Every `TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (oneway or not).
+		* Every :ref:`TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (oneway or not).
+		* Make sure that the :ref:`direction of the node <trafficNodeRotation>` is set correctly.
 		
+.. _trafficNodeConnectionExample:
+
 	.. image:: /images/road/trafficNode/AutopathConnectionExample2.png
+
 	`Auto path connection example.`
 
 

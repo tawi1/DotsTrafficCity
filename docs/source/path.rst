@@ -246,4 +246,4 @@ Baking is activated in the :ref:`road parent<roadParent>`.
 
 **Baked Data:**
 	* :ref:`Path Length<pathLength>`.
-	* :ref:`Intersects<pathIntersects>`.
+	* :ref:`Intersects data <pathIntersects> (:ref:`info<roadSegmentBakingInfo>`)`.

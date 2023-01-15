@@ -30,7 +30,7 @@ Cached values
 
 .. _pathIntersects:
 
-| **Intersects** : intersection points with other paths (:ref:`baked data<pathBakingInfo>`).
+| **Intersects** : intersection points with other paths (:ref:`baked data<pathBakingInfo>`) (:ref:`example <roadSegmentIntersectionExample>`).
 	
 Settings
 ~~~~~~~~~~~~

@@ -31,11 +31,11 @@ Settings
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
 | **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegments <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
 | **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <trafficNodeAutoPathConnection>`).
-| **Auto path is created** : (:ref:`more info <trafficNodeAutoPathConnection>`)
+| **Auto path is created** : auto path is created (:ref:`more info <trafficNodeAutoPathConnection>`).
 	
 **Buttons:**
 	* **Connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes if no external paths are created yet.
-	* **Force connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes whether it is :ref:`connected <trafficNodeAutoPathConnection>` now or not (except `Lock path auto creation` enabled).
+	* **Force connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes whether it is :ref:`connected <trafficNodeAutoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
 	* **Resize** : resize :ref:`collider <trafficNodeCollider>` of node.
 	
 .. _trafficNodeOneWay:
@@ -47,7 +47,7 @@ Oneway node description example:
 
 	.. image:: /images/road/trafficNode/OnewayExample.png
 	
-Key node example features:
+Node example key features:
 	* **Node 1:**
 		* Is one way **[enabled]**
 		* Source path is in the : **[Lanes]**
@@ -78,7 +78,7 @@ Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSeg
 Leftside Lanes
 ~~~~~~~~~~~~ 
 
-Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>`.
+Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>` (:ref:`external connection example <trafficNodeConnectionExample>`).
 
 	.. image:: /images/road/trafficNode/ConnectionInfoExampleLeftSide.png
 	`Leftside lanes example.`
@@ -126,13 +126,4 @@ How To Use
 .. _trafficNodeConnectionExample:
 
 	.. image:: /images/road/trafficNode/AutopathConnectionExample2.png
-
 	`Auto path connection example.`
-
-
-.. _trafficNodePathCreator:
-
-TrafficNode Path Creator
-=====
-
-	

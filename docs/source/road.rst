@@ -10,6 +10,7 @@ Road
 		/roadInstallation.rst
 		/roadSegment.rst
 		/trafficNode.rst
+		/trafficNodePathCreator.rst
 		/path.rst
 		/pedestrianNode.rst
 		/trafficArea.rst

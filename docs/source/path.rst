@@ -245,5 +245,5 @@ Each `path` bakes the data to speed up the entity conversion.
 Baking is activated in the :ref:`road parent<roadParent>`.
 
 **Baked Data:**
-	* :ref:`Path Length<pathLength>`.
-	* :ref:`Intersects data <pathIntersects> (:ref:`info<roadSegmentBakingInfo>`)`.
+	* :ref:`Path Length<pathLength>` (is used to calculate obstacles on the path by `TrafficCarObstacleSystem`).
+	* :ref:`Intersects data <pathIntersects>` (:ref:`segment info<roadSegmentBakingInfo>`) (is used to order the crossing of intersecting paths by `TrafficCarObstacleSystem`).

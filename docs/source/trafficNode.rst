@@ -12,7 +12,7 @@ Settings
 	
 | **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
 | **Lanes** : :ref:`rightside lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
-| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in external :ref:`RoadSegments <roadSegment>`) ( :ref:`additonal info <trafficNodeLeftDirectionInfo>`).
+| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in external :ref:`RoadSegments <roadSegment>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
 | **Chance to spawn** : chance of the vehicle spawning in the node.

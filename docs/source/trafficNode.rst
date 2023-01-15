@@ -12,7 +12,7 @@ Settings
 	
 | **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
 | **Lanes** : :ref:`rightside lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
-| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in external :ref:`RoadSegments <roadSegment>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
+| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
 | **Chance to spawn** : chance of the vehicle spawning in the node.
@@ -35,19 +35,19 @@ Settings
 	
 **Buttons:**
 	* **Connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes if no external paths are created yet.
-	* **Force connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes whether it is :ref:`connected <trafficNodeAutoPathConnection>` now or not.
-	* **Resize** : resize (:ref:`collider <trafficNodeCollider>`) of node.
+	* **Force connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes whether it is :ref:`connected <trafficNodeAutoPathConnection>` now or not (except `Lock path auto creation` enabled).
+	* **Resize** : resize :ref:`collider <trafficNodeCollider>` of node.
 	
 .. _trafficNodeOneWay:
 
-OneWay Info
+OneWay Node Info
 ----------------
 
 Oneway node description example:
 
 	.. image:: /images/road/trafficNode/OnewayExample.png
 	
-Key features:
+Key node example features:
 	* **Node 1:**
 		* Is one way **[enabled]**
 		* Source path is in the : **[Lanes]**
@@ -65,7 +65,7 @@ Direction Connection Info
 
 .. _trafficNodeRightDirection:
 
-Rightside lanes
+Rightside Lanes
 ~~~~~~~~~~~~ 
 
 Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSegment <roadSegment>`.
@@ -75,7 +75,7 @@ Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSeg
 
 .. _trafficNodeLeftDirection:
 
-Leftside lanes
+Leftside Lanes
 ~~~~~~~~~~~~ 
 
 Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>`.
@@ -98,7 +98,7 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 
 **Example description:**
 	* Arrow represents the forward rotation of the :ref:`node <trafficNode>`.
-	* Purple arrows the direction of the outer nodes of the :ref:`segment <roadSegment>`.
+	* Purple arrows the direction of the outer :ref:`nodes <trafficNode>` of the :ref:`segment <roadSegment>`.
 	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`oneway nodes <trafficNodeOneWay>`.
 
 .. _trafficNodeAutoPathConnection:

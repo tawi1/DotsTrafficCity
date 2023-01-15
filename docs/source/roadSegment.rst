@@ -28,7 +28,7 @@ Variables
 
 | **Road segment placer** : reference to :ref:`RoadSegmentPlacer<roadSegmentPlacer>`.
 | **Short title name** : short name for `RoadSegmentPlacer`.
-| **Show intersected paths** :
+| **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExampleon>` on the scene.
 	
 Buttons
 """"""""""""""
@@ -74,7 +74,7 @@ After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd `Traf
 	#. Enter `Source Data Handler Index` parameter based on which to loop.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png
-		`Settings example`
+		`Settings example.`
 		
 	#. Click `Loop Time`.
 	
@@ -97,7 +97,7 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 	#. Select related :ref:`path <path>` in the toolbar.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
-		`Selected path example`
+		`Selected path example.`
 		
 	#. Click `Add Custom Light` button.
 	
@@ -116,6 +116,10 @@ Baking info
 
 The intersection of :ref:`paths <pathBakingInfo>` is baked only in those :ref:`paths <pathBakingInfo>` that are in the segment.
 
+.. _roadSegmentIntersectionExample:
+
+	.. image:: /images/road/roadSegment/RoadSegmentIntersectionExample.png
+	`Intersection points example.`
 
 
 	

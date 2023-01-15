@@ -24,7 +24,7 @@ Settings
 	* **Parking** : node where cars are parked.
 	* **Traffic public stop** : node where public traffic stops to pick up passengers. 
 	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
-	* **Traffic area** : (:ref:`TrafficArea node <trafficArea>`).
+	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.
 	* **Idle** : node where the vehicle is idling.
 | **Has crollwalk** : quick on/off crosswalk option for pedestrians.
 | **Allow light for left lanes** : enable traffic light for leftside entities (by default, traffic light is enabled only for rightside lane entities).
@@ -48,33 +48,62 @@ Oneway node description example:
 	.. image:: /images/road/trafficNode/OnewayExample.png
 	
 Key features:
-* **Node 1:**
-	* Is one way **[enabled]**
-	* Source path is in the : **[Lanes]**
-	* External Lanes **[Empty]**
-* **Node 2:**
-	* Is one way **[enabled]**
-	* Is end one way **[enabled]**
-	* Source path is in the : **[External Lanes]**
-	* Lanes **[Empty]**
+	* **Node 1:**
+		* Is one way **[enabled]**
+		* Source path is in the : **[Lanes]**
+		* External Lanes **[Always empty]**
+	* **Node 2:**
+		* Is one way **[enabled]**
+		* Is end one way **[enabled]**
+		* Source path is in the : **[External Lanes]**
+		* Lanes **[Always empty]**
 	
 .. _trafficNodeConnectionInfo:
 
 Direction Connection Info
 ----------------
 
-
 .. _trafficNodeRightDirection:
+
+Rightside lanes
+~~~~~~~~~~~~ 
+
+Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSegment <roadSegment>`.
+
+	.. image:: /images/road/trafficNode/ConnectionInfoExampleRightSide.png
+	`Rightside lanes example.`
+
 .. _trafficNodeLeftDirection:
 
+Leftside lanes
+~~~~~~~~~~~~ 
+
+Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>`)
+
+	.. image:: /images/road/trafficNode/ConnectionInfoExampleLeftSide.png
+	`Leftside lanes example.`
 
 .. _trafficNodeAutoPathConnection:
 
 Auto-path Connection
 ----------------
 
+To quickly generate connections between :ref:`RoadSegments <roadSegment>` on the same line is used auto-path connection. 
 
-.. _trafficNodeCollider: collider
+How To Use
+~~~~~~~~~~~~ 
+
+* To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParent>`. 
+* Every time you create a new `RoadSegment <roadSegment>` or move an existing `RoadSegment <roadSegment>`, press reset and press connect in `RoadParent <roadParent>`.
+
+.. _trafficNodeCollider:
+
+	.. note.. 
+		* To prevent auto-path connection for the selected :ref:`TrafficNodes <trafficNode> enable **Lock path auto creation** in the settings of the node.
+		* Every `TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (oneway or not).
+		
+	.. image:: /images/road/trafficNode/AutopathConnectionExample2.png
+	`Auto path connection example.`
 
 
 .. _trafficNodePathCreator:

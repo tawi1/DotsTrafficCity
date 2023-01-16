@@ -8,7 +8,14 @@ Path
 How To Create
 ----------------
 
-`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator<roadSegmentCreator>` or you can add them to existing :ref:`road segments<roadSegment>` with :ref:`TrafficNodePathCreator<trafficNodePathCreator>`
+`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator<roadSegmentCreator>` or you can add them to existing :ref:`road segments<roadSegment>` with :ref:`TrafficNodePathCreator tool<trafficNodePathCreator>`
+
+
+.. _pathCustomize:
+
+How To Customize
+----------------
+
 
 Path Settings
 ----------------

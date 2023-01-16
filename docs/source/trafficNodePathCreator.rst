@@ -14,11 +14,12 @@ How To Use
 	
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/OpenExample.png
 	
-#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene.
-#. Customize :ref:`path settings <trafficNodePathCreatorPathSettings>`.
+#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene (:ref:`example <trafficNodePathCreatorExamples>`).
+#. Customize new :ref:`path settings <trafficNodePathCreatorPathSettings>`.
 #. Select desired `Connection Mode Type` (:ref:`connection settings <trafficNodePathCreatorConnectionSettings>`).
 #. Customize `source` & `target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <trafficNodePathCreatorExamples>`) (:ref:`connection settings <trafficNodePathCreatorConnectionSettings>`).
 #. Click `Create` button.
+#. :ref:`Customize <pathCustomize>` created :ref:`paths <path>`.
 
 Settings
 ------------
@@ -46,7 +47,7 @@ Visual Settings
 
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/VisualSettings.png
 	
-**Show preview dotted line:** on/off connetion line on the scene.
+**Show preview dotted line:** on/off connection line on the scene.
 	* **Show path direction** : on/off arrows of the connection line.
 	* **Arrow spacing** : arrow spacing.
 | **Show forbidden path** : on/off display of forbidden connection line.
@@ -99,10 +100,10 @@ Examples
 ------------ 
 
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example1.png
-	`Connection available example (override path enabled, show overriden path disabled).`
+	`Connection available example (allow override path enabled, show overriden path disabled).`
 	
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example2.png	
-	`Connection available example (override path enabled, show overriden path enabled).`
+	`Connection available example (allow override path enabled, show overriden path enabled).`
 	
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example3.png
 	`Connection forbidden example.`

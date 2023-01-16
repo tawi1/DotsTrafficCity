@@ -68,7 +68,7 @@ Direction Connection Info
 Rightside Lanes
 ~~~~~~~~~~~~ 
 
-Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSegment <roadSegment>`.
+Rightside lanes (default lanes) connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSegment <roadSegment>`.
 
 	.. image:: /images/road/trafficNode/ConnectionInfoExampleRightSide.png
 	`Rightside lanes example.`
@@ -78,7 +78,7 @@ Rightside lanes connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSeg
 Leftside Lanes
 ~~~~~~~~~~~~ 
 
-Leftside lanes connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>` (:ref:`external connection example <trafficNodeConnectionExample>`).
+Leftside lanes (external lanes) connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>` (:ref:`external connection example <trafficNodeConnectionExample>`).
 
 	.. image:: /images/road/trafficNode/ConnectionInfoExampleLeftSide.png
 	`Leftside lanes example.`

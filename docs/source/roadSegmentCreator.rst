@@ -188,9 +188,10 @@ Creator for creating segments of any shape and complexity.
 How To Use
 """"""""""""""
 
-#. Place the segment where you want it.
-#. Toggle on :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>`. parameter.
-#. Create new `TrafficNode` (if needed) and place all of them where you desired.
+#. Place the custom segment where you want it.
+#. Toggle on :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
+#. Select `New node settings type` & create new :ref:`TrafficNode <trafficNode>` by pressing `Add Traffic Node` button [optional step].
+#. :ref:`Place <roadSegmentCreatorCustomSnapNodeSettings>` & rotate all created `TrafficNode according to your needs (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
 #. Open :ref:`TrafficNodePathCreator tool <trafficNodePathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
@@ -212,7 +213,7 @@ New Node Settings
 Parking Builder
 """"""""""""""
 
-:ref:`Parking builder info <roadSegmentCreatorParkingBuilder>`.
+:ref:`Parking Builder info <roadSegmentCreatorParkingBuilder>`.
 	
 Custom Settings
 """"""""""""""
@@ -222,6 +223,8 @@ Custom Settings
 | **Lock Y axis move** : lock the Y axis to move the nodes.
 | **Show Y position** : show Y position of the nodes.
 	
+.. _roadSegmentCreatorCustomSnapNodeSettings:
+
 Snap Node Settings
 """"""""""""""
 
@@ -273,11 +276,10 @@ Common
 .. _roadSegmentCreatorId8:
 | **Additional local angle 1** : additional node 1 rotation angle.
 
-.. _roadSegmentCreatorId9:
-| **Additional local angle 2** : additional node 2 rotation angle.
+.. _roadSegmentCreatorId9: **Additional local angle 2** : additional node 2 rotation angle.
 
 .. _roadSegmentCreatorId10:
-| **Should revert direction** : direction of the crossroad lanes will be reversed
+	**Should revert direction** : direction of the crossroad lanes will be reversed
 
 .. _roadSegmentCreatorId11:
 

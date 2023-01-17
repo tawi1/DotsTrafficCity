@@ -5,6 +5,8 @@ Traffic Node
 
 ``Traffic node is a node for creating pedestrian routes``
 
+.. _trafficNodeSettings:
+
 Settings
 ----------------
 

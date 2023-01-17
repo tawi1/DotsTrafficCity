@@ -5,10 +5,10 @@ Road Segment Creator
 
 `Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
+.. _roadSegmentCreatorHowToUse:
+
 How To Use
 ------------
-
-.. _roadSegment:
 
 #. Create :ref:`RoadSegment<roadSegment>`.
 #. Set the segment to the desired position.
@@ -28,69 +28,143 @@ How To Use
 Custom Settings
 ------------
 
-Default crossroad
+Default Crossroad
 ~~~~~~~~~~~~ 
+
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorDefaultCrossroadSettings.png
+	
+| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentDefault.png
 	`Example`.
 	
-Turn road
+Turn Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
+	
+| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
+| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
+| **Additional local angle 1** : :ref:`info <roadSegmentCreatorId8>`.
+| **Additional local angle 2** : :ref:`info <roadSegmentCreatorId9>`.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTurnRoad.png
 	`Example`.
 
 	
-Straight road
+Straight Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentStraightSettings.png
+	
+| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
+| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
+| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
+| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentStraight.png
 	`Example`.
 	
-Transition crossroad	
+Transition Crossroad	
 ~~~~~~~~~~~~
  
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
+	
+| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
+| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
+| **SubTrafficNode distance from center** : :ref:`info <roadSegmentCreatorId3>`.
+	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
 	`Example`.
 	
-Transition straight road
+Transition Straight Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
+	
+| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
+| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
+| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
+| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
+| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
 	`Example`.
 	
-Transition crossroad to oneway road
+Transition Crossroad To Oneway Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
+	
+| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
+| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
+| **SubTrafficNode distance from center** : :ref:`info <roadSegmentCreatorId3>`.
+| **Is enter of oneway** : if it is on, it is the beginning of one-way traffic, if it is off, it is the end of one-way traffic.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
 	`Example`.
 	
-Oneway straight
+Oneway Straight
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
+	
+| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
+| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
+| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
+| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
+| **Should revert direction** : :ref:`info <roadSegmentCreatorId10>`.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayStraight.png
 	`Example`.
 	
-Oneway turn
+Oneway Turn
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
+	
+| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
+| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
+| **Additional local angle 1** : :ref:`info <roadSegmentCreatorId8>`.
+| **Additional local angle 2** : :ref:`info <roadSegmentCreatorId9>`.
+| **Should revert direction** : :ref:`info <roadSegmentCreatorId10>`.
+
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
 	`Example`.
 	
 .. _roadSegmentCreatorCustomStraight:
 
-Custom straight road
+Custom Straight Road
 ~~~~~~~~~~~~ 
-	
+
+Type for creating straight roads of any shape.
+
+Custom Settings
+""""""""""""""
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
+	
+| **One way** :
+| **Lock Y axis move** : lock the Y axis to move the nodes.
+| **Show Y position** : show Y position of the nodes.
+
+Snap Node Settings
+""""""""""""""
+
+:ref:`Info <roadSegmentCreatorId11>`.
+
+Path Settings
+""""""""""""""
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightPathSettings.png
+	
+| **Show edit buttons path nodes** : on/off edit (add & remove) button paths of node.
+| **Show traffic node handles** : on/off traffic node position handles.
+| **Show traffic node forward** : on/off display of node's forward direction.
+| **Speedlimit** : speed limit for all paths of the segment.
+
+Examples
+""""""""""""""
 	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight.png
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight2.png
@@ -99,15 +173,253 @@ Custom straight road
 		
 .. _roadSegmentCreatorCustomSegment:
 
-Custom segment 
+Custom Segment 
 ~~~~~~~~~~~~ 
+
+Type for creating segments of any shape and complexity.
+
+How To Use
+""""""""""""""
+
+#. Place the segment where you want it.
+#. Toggle on :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>`. parameter.
+#. Create new `TrafficNode` (if needed) and place all of them where you desired.
+#. Open :ref:`TrafficNodePathCreator tool <trafficNodePathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
+#. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
+
+New Node Settings
+""""""""""""""
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png
+	
+.. _roadSegmentCreatorCustomCustomSettingsOption:
+	
+| **Custom settings** : on/off custom settings for advanced node customization.
+**New node settings type [custom settings enabled] ** new :ref:`TrafficNode <trafficNode>` will be created like:
+	* **Prefab** : new prefab.
+	* **Unique** : created with unique defined :ref:`settings <trafficNodeSettings>`.
+	* **Copy last** : will be created with the settings of the last created node.
+	* **Copy selected** : will be created with the settings of the selected node.
+		* **Copy node index**
+	
+Parking Builder
+""""""""""""""
+
+:ref:`Parking builder info <roadSegmentCreatorParkingBuilder>`.
+	
+Custom Settings
+""""""""""""""
+	
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomCustomSettings.png
+	
+| **Lock Y axis move** : lock the Y axis to move the nodes.
+| **Show Y position** : show Y position of the nodes.
+	
+Snap Node Settings
+""""""""""""""
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomSnapNodeSettings.png
+	
+:ref:`Info <roadSegmentCreatorId11>`.
+	
+Custom TrafficNode Editor Window
+""""""""""""""
+		
+Window that you can configure each :ref:`TrafficNode settings <trafficNodeSettings>`. :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` should be enabled.
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomTrafficNodeEditorWindow.png
 	
+	
+Examples
+""""""""""""""
+
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomExample.png
 	`Example`.
+	
+Settings Description
+~~~~~~~~~~~~ 
+
+Common
+""""""""""""""
+
+.. _roadSegmentCreatorId1:
+| **Direction count** : number of sides of the crossroad.
+
+.. _roadSegmentCreatorId2:
+| **Sub-lane count** : number of sub-lanes (sub-lane is a lane with a different number of bands from the main lane count).
+
+.. _roadSegmentCreatorId3:
+| **SubTrafficNode distance from center** : distance between the `SubTrafficNode` (node that contains a sub-lane) and the center of the segment.
+
+.. _roadSegmentCreatorId4:
+| **Node 1 offset** : node 1 offset on the X-axis.
+
+.. _roadSegmentCreatorId5:
+| **Node 2 offset** : node 2 offset on the X-axis.
+
+.. _roadSegmentCreatorId6:
+| **Traffic node height 1** :  node 1 offset on the Y-axis.
+
+.. _roadSegmentCreatorId7:
+| **Traffic node height 2** : node 2 offset on the Y-axis.
+
+.. _roadSegmentCreatorId8:
+| **Additional local angle 1** : additional node 1 rotation angle.
+
+.. _roadSegmentCreatorId9:
+| **Additional local angle 2** : additional node 2 rotation angle.
+
+.. _roadSegmentCreatorId10:
+| **Should revert direction** : direction of the crossroad lanes will be reversed
+
+.. _roadSegmentCreatorId11:
+
+Snap Node Settings
+""""""""""""""
+
+**Snap object type:**
+	* **All** : snap `TrafficNode` & `Path node`.
+	* **Traffic node** : only `TrafficNode`.
+	* **Path node** : only `Path node`.
+**Auto-snap position** on/off position snapping.
+	* **Reverse snapping** : snapping object will be shifted to the edge of the default snap.
+| **Auto snap custom size** : snapping value.
+**Auto round rotation:** : on/off rotation snapping.
+	* **Round angle** : snapping angle value.
+	
+.. _roadSegmentCreatorParkingBuilder:
+
+Parking Builder
+------------
+
+A tool to quickly create a parking space. Is part of the ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
+
+How To Use
+~~~~~~~~~~~~ 
+	
+#. Position a :ref:`custom segment <roadSegmentCreatorCustomSegment>` on the road where the parking spaces will be.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment.png
+	
+#. Set the size of the parking slot, the direction of the parking line and the direction of the node (:ref:`settings <roadSegmentCreatorParkingBuilderCommonSettings>`).
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings1.png
+	
+#. Position parking pointer where the line will start.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment2.png
+
+#. Enter the :ref:`number of parking slots <roadSegmentCreatorParkingBuilderCommonSettings>`.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment3.png
+	
+#. Open :ref:`Path <roadSegmentCreatorParkingBuilderPath>` tab.
+#. Toggle on `Show select path buttons` option.
+#. Select the source path on the scene.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment4.png
+
+#. Select `Enter` tab and press `Create` button.
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings2.png
+	
+#. In the created path create additional waypoint nodes by pressing `+` on the scene.
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png
+	
+#. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node clone count <roadSegmentCreatorParkingBuilderPath>` parameters.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
+	
+#. Then repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment10.png
+	
+#. Open :ref:`Pedestrian <roadSegmentCreatorParkingBuilderPedestrian>` tab.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings5.png
+	
+#. Customize `Parking node offset` and `Parking enter node offset`
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment11.png
+	`Blue circle - enter parking car node. Green circle - default node linked to the parking node.` 
+		
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment12.png
+	
+#. Press `Create Line` button.
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment13.png
+	`Create line result.`
+	
+#. :ref:`Connect the pedestrian nodes <pedestrianNodeCreator>` to the :ref:`pedestrian nodes <pedestrianNode>` of the city.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment14.png
+	
+	.. note::
+		Created lines can be deleted in the `Created lines` tab.
+		.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
+
+Settings
+~~~~~~~~~~~~ 
+
+.. _roadSegmentCreatorParkingBuilderCommonSettings:
+
+Common
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderCommon.png
+	
+| **Place TrafficNode type** :
+| **Parking TrafficNode weight** :
+| **Node custom achieve distance** :
+| **Place count** :
+| **Parking place spacing offset** :
+| **Line start point local** :
+| **Place size** :
+| **Node direction** :
+| **Line direction** :
+	
+.. _roadSegmentCreatorParkingBuilderPath:
+
+Path
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPath.png
+
+**Parking connection source type** :
+	* **Path** :
+		* **Parking source path** :
+		* **Show select path buttons** :
+	* **Node** :
+		* **Source TrafficNode** :
+		* **Target TrafficNode** :
+
+| **Auto recalculate parking paths** :
+| **Show path parking handles** :
+| **Show edit path parking buttons** :
+
+**Path Selection Panel:**
+	* **None** : displayed `enter` & `exit` paths.
+	* **Enter** : displayed only `enter` paths.
+		* **Initial path speed limit** : initial speed limit of enter paths.
+		* **Node clone count** : number of nodes in the next paths that are will clone position from source path.
+	* **Exit** : displayed only `exit` paths
+		* **Initial path speed limit** : initial speed limit of exit paths.
+		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
+	
+.. _roadSegmentCreatorParkingBuilderPedestrian:
+	
+Pedestrian
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPedestrian.png
+
+| **Add parking pedestrian nodes** :
+| **Parking pedestrian node type** :
+| **Auto connect nodes** :
+| **Parking pedestrian node weight** :
+| **Parking node offset** :
+| **Parking enter node offset** :
 
 Components
 ------------
@@ -125,7 +437,7 @@ General settings
 Pedestrian node settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png	
 
 .. _roadSegmentCreatorLightSettings:
 

@@ -9,6 +9,7 @@ Road
 
 		/roadInstallation.rst
 		/roadSegment.rst
+		/roadSegmentCreator.rst
 		/trafficNode.rst
 		/trafficNodePathCreator.rst
 		/path.rst

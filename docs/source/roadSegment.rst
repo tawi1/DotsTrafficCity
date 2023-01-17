@@ -13,6 +13,12 @@ Select in the unity toolbar:
 	.. image:: /images/road/installation/RoadSegmentCreation.png
 	
 	
+How To Customize
+------------
+
+By default `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component which can be used to customize a segment.
+	
+	
 Main Components
 ------------
 
@@ -102,12 +108,6 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 	#. Click `Add Custom Light` button.
 	
 	.. note:: To remove the light arrow, select appropriate `TrafficNode` and `path` and press `Remove Selected Path` button.
-		
-
-How To Customize
-------------
-
-By default `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component which can be used to customize a segment.
 
 .. _roadSegmentBakingInfo:
 

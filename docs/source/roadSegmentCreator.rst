@@ -167,9 +167,13 @@ Examples
 """"""""""""""
 	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight.png
+	`Source segment example.`
+	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight2.png
+	`Complex shape example.`
+	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraightSnapExample.png
-	`Example`.
+	`Surface snapping example.`
 		
 .. _roadSegmentCreatorCustomSegment:
 
@@ -233,7 +237,7 @@ Window that you can configure each :ref:`TrafficNode settings <trafficNodeSettin
 Examples
 """"""""""""""
 
-	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomExample.png
+	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomExample.png
 	`Example`.
 	
 Settings Description
@@ -292,7 +296,7 @@ Snap Node Settings
 Parking Builder
 ------------
 
-A tool to quickly create a parking space. Is part of the ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
+A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
 
 How To Use
 ~~~~~~~~~~~~ 
@@ -314,6 +318,9 @@ How To Use
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment3.png
 	
 #. Open :ref:`Path <roadSegmentCreatorParkingBuilderPath>` tab.
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentPathTab.png
+	
 #. Toggle on `Show select path buttons` option.
 #. Select the source path on the scene.
 
@@ -331,7 +338,7 @@ How To Use
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
 	
-#. Then repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
+#. Repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment10.png
 	
@@ -342,9 +349,10 @@ How To Use
 #. Customize `Parking node offset` and `Parking enter node offset`
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment11.png
-	`Blue circle - enter parking car node. Green circle - default node linked to the parking node.` 
+	`Blue circle - enter parking car PedestrianNode. Green circle - default PedestrianNode linked to the parking PedestrianNode.` 
 		
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment12.png
+	`PedestrianNode preview offset result.`
 	
 #. Press `Create Line` button.
 	
@@ -357,7 +365,7 @@ How To Use
 	
 	.. note::
 		Created lines can be deleted in the `Created lines` tab.
-		.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
+			.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
 
 Settings
 ~~~~~~~~~~~~ 

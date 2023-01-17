@@ -5,6 +5,9 @@ Road Segment Creator
 
 `Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
+.. contents::
+   :local:
+
 .. _roadSegmentCreatorHowToUse:
 
 How To Use
@@ -137,7 +140,7 @@ Oneway Turn
 Custom Straight Road
 ~~~~~~~~~~~~ 
 
-Type for creating straight roads of any shape.
+Creator for creating straight roads of any shape.
 
 Custom Settings
 """"""""""""""
@@ -180,7 +183,7 @@ Examples
 Custom Segment 
 ~~~~~~~~~~~~ 
 
-Type for creating segments of any shape and complexity.
+Creator for creating segments of any shape and complexity.
 
 How To Use
 """"""""""""""
@@ -336,6 +339,7 @@ How To Use
 	
 #. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node clone count <roadSegmentCreatorParkingBuilderPath>` parameters.
 
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
 	
 #. Repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
@@ -352,7 +356,7 @@ How To Use
 	`Blue circle - enter parking car PedestrianNode. Green circle - default PedestrianNode linked to the parking PedestrianNode.` 
 		
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment12.png
-	`PedestrianNode preview offset result.`
+	`Preview parking line result.`
 	
 #. Press `Create Line` button.
 	

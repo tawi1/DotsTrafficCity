@@ -142,12 +142,24 @@ Custom Straight Road
 
 Creator for creating straight roads of any shape.
 
+How To Use
+""""""""""""""
+
+#. Place the custom segment where you want it.
+#. Place the :ref:`traffic nodes <trafficNode>` where the beginning and the end of the path.
+#. Rotate all :ref:`TrafficNode <trafficNode>` according to your needs (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
+#. Customize the number of lanes and speed limit of segment.
+#. Add additional nodes to the paths if necessary **[optional step]**.
+#. Rotate the nodes of paths according to the direction of the path **[optional step]**.
+#. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to surface by pressing `Snap To Surface` button if required **[optional step]**.
+#. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
+
 Custom Settings
 """"""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
 	
-| **One way** :
+| **One way** : segment contains only one-way paths.
 | **Lock Y axis move** : lock the Y axis to move the nodes.
 | **Show Y position** : show Y position of the nodes.
 
@@ -155,6 +167,8 @@ Snap Node Settings
 """"""""""""""
 
 :ref:`Info <roadSegmentCreatorId11>`.
+
+.. _roadSegmentCreatorCustomStraightPathSettings:
 
 Path Settings
 """"""""""""""
@@ -204,7 +218,7 @@ New Node Settings
 .. _roadSegmentCreatorCustomCustomSettingsOption:
 	
 | **Custom settings** : on/off custom settings for advanced node customization.
-**New node settings type [custom settings enabled] ** new :ref:`TrafficNode <trafficNode>` will be created like:
+New node settings type [custom settings enabled] new :ref:`TrafficNode <trafficNode>` will be created like:
 	* **Prefab** : new prefab.
 	* **Unique** : created with unique defined :ref:`settings <trafficNodeSettings>`.
 	* **Copy last** : will be created with the settings of the last created node.
@@ -254,33 +268,44 @@ Common
 """"""""""""""
 
 .. _roadSegmentCreatorId1:
+
 | **Direction count** : number of sides of the crossroad.
 
 .. _roadSegmentCreatorId2:
+
 | **Sub-lane count** : number of sub-lanes (sub-lane is a lane with a different number of bands from the main lane count).
 
 .. _roadSegmentCreatorId3:
+
 | **SubTrafficNode distance from center** : distance between the `SubTrafficNode` (node that contains a sub-lane) and the center of the segment.
 
 .. _roadSegmentCreatorId4:
+
 | **Node 1 offset** : node 1 offset on the X-axis.
 
 .. _roadSegmentCreatorId5:
+
 | **Node 2 offset** : node 2 offset on the X-axis.
 
 .. _roadSegmentCreatorId6:
+
 | **Traffic node height 1** :  node 1 offset on the Y-axis.
 
 .. _roadSegmentCreatorId7:
+
 | **Traffic node height 2** : node 2 offset on the Y-axis.
 
 .. _roadSegmentCreatorId8:
+
 | **Additional local angle 1** : additional node 1 rotation angle.
 
-.. _roadSegmentCreatorId9: **Additional local angle 2** : additional node 2 rotation angle.
+.. _roadSegmentCreatorId9: 
+
+**Additional local angle 2** : additional node 2 rotation angle.
 
 .. _roadSegmentCreatorId10:
-	**Should revert direction** : direction of the crossroad lanes will be reversed
+
+**Should revert direction** : direction of the crossroad lanes will be reversed
 
 .. _roadSegmentCreatorId11:
 
@@ -353,7 +378,7 @@ How To Use
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings5.png
 	
-#. Customize `Parking node offset` and `Parking enter node offset`
+#. Customize `Weight`, `Parking node offset` and `Parking enter node offset`
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment11.png
 	`Blue circle - enter parking car PedestrianNode. Green circle - default PedestrianNode linked to the parking PedestrianNode.` 
@@ -384,15 +409,15 @@ Common
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderCommon.png
 	
-| **Place TrafficNode type** :
-| **Parking TrafficNode weight** :
-| **Node custom achieve distance** :
-| **Place count** :
-| **Parking place spacing offset** :
-| **Line start point local** :
-| **Place size** :
-| **Node direction** :
-| **Line direction** :
+| **Place TrafficNode type** : :ref:`TrafficNode type <trafficNodeSettings>`.
+| **Parking TrafficNode weight** : :ref:`TrafficNode weight <trafficNodeSettings>`.
+| **Node custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
+| **Place count** : number of parking slots.
+| **Parking place spacing offset** : distance between parking slots.
+| **Line start point local** : local parking line start position.
+| **Place size** : parking lot size.
+| **Node direction** : local direction of :ref:`TrafficNode <trafficNode>` in the parking place.
+| **Line direction** : local direction of parking line.
 	
 .. _roadSegmentCreatorParkingBuilderPath:
 
@@ -402,23 +427,23 @@ Path
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPath.png
 
 **Parking connection source type** :
-	* **Path** :
-		* **Parking source path** :
-		* **Show select path buttons** :
-	* **Node** :
-		* **Source TrafficNode** :
-		* **Target TrafficNode** :
+	* **Path** [paths will be connected to the `Parking source path` (:ref:`PathPoint connection <pathPointConnection>`)]
+		* **Parking source path** : path from which the created parking slot paths will start and end.
+		* **Show select path buttons** : on/off display exist paths of the segment to add a parking source path.
+	* **Node** [paths will be connected to the target `TrafficNode` (:ref:`TrafficNode connection <trafficNodeConnection>`)]
+		* **Source TrafficNode** : node from which the created parking slot paths will start.
+		* **Target TrafficNode** : node to which the paths connected from the parking place.
 
-| **Auto recalculate parking paths** :
-| **Show path parking handles** :
-| **Show edit path parking buttons** :
+| **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.
+| **Show path parking handles** : on/off position handles of the path.
+| **Show edit path parking buttons** : on/off edit (add & remove) buttons of the path.
 
 **Path Selection Panel:**
-	* **None** : displayed `enter` & `exit` paths.
-	* **Enter** : displayed only `enter` paths.
-		* **Initial path speed limit** : initial speed limit of enter paths.
+	* **None** : displayed `Enter` & `Exit` paths.
+	* **Enter** : displayed only `Enter` paths.
+		* **Initial path speed limit** : initial speed limit of `Enter` paths.
 		* **Node clone count** : number of nodes in the next paths that are will clone position from source path.
-	* **Exit** : displayed only `exit` paths
+	* **Exit** : displayed only `Exit` paths
 		* **Initial path speed limit** : initial speed limit of exit paths.
 		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
 	
@@ -446,6 +471,10 @@ General settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
+| **Lane count** :
+| **Lane width** :
+| **Crossroad width** :
+| **Path corner offset** :
 
 .. _roadSegmentCreatorPedestrianSettings:
 
@@ -454,12 +483,43 @@ Pedestrian node settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png	
 
+| **Add pedestrian nodes** :
+| **Unique crosswalk offset** :
+| **Crosswalk offset** :
+| **Pedestrian route width** :
+| **Custom crosswalk** :
+| **Has crosswalk** :
+**Pedestrian corner connection type:**
+	* **Disabled**
+	* **Corner**
+	* **Straight**
+
 .. _roadSegmentCreatorLightSettings:
 
 Light settings
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
+	
+Traffic lights
+""""""""""""""
+
+| **Show semaphore indexes** :
+| **Min TrafficNodes count for add light** :
+| **Add traffic light** :
+| **Selected light prefab type** :
+| **Light location** :
+| **Traffic lights offset** :
+**Light angle offset settings** :
+	* **Angle index** :
+	* **Revert** :
+	
+Pedestrian lights
+""""""""""""""
+
+| **Add pedestrian lights** :
+| **Pedestrian light offset** :
+| **Pedestrian angle offset** :
 	
 .. _roadSegmentCreatorPathSettings:
 
@@ -468,8 +528,37 @@ Path settings
 	
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
 	
-	:ref:`Path settings window<pathSettingsWindow>`.
+	
+Node selection panel
+""""""""""""""
 
+**How to customize path:**
+	#. Select `TrafficNode` on the inspector panel.
+	#. Select desired :ref:`path <path>` on the inspector panel (it will be highlighted on the scene).
+	#. Adjust the position of the path nodes (make sure :ref:`path handles <roadSegmentCreatorPathSceneSettings>` is enabled).
+	#. Press `Open Path Settings` button to customize :ref:`Path settings window<pathSettingsWindow>`.
+	
+Road settings
+""""""""""""""
+
+.. _roadSegmentCreatorPathSceneSettings:
+
+Scene settings
+""""""""""""""
+
+**Show path handles** :
+	* **Show edit buttons path nodes** :
+**Show waypoints** :
+	* **Show waypoints info** :
+
+Turn connection settings
+""""""""""""""
+
+| **Custom node turn settings** :
+| **Left turn count** :
+| **Right turn count** :
+| **Lane left turn connection count** :
+| **Lane right turn connection count** :
 
 .. _roadSegmentCreatorSegmentSettings:
 
@@ -478,10 +567,33 @@ Segment handler settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
 	
+| **Show segment position handle** :
+| **Snap segment position** :
+| **Even size snapping** :
+| **Custom snap size** :
+| **Snap surface offset** :
+| **Snap layer mask** :
+| **Snap segment to surface** :
+	
 Other settings
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorOtherSettings.png
+		
+| **Save prefab paths** : segment save prefab path.
+
+Buttons
+""""""""""""""
+
+| **Rotate -90°/90°** : rotate segment by 90° degree.
+| **Recreate** : recreate segment.
+| **Clear** : clear segment.
+| **Save to prefab** : save segment to prefab
+
+Hotkeys
+~~~~~~~~~~~~ 
+
+| **Capslock** : rotate segment by 90° degree.
 
 
 

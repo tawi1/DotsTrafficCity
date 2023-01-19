@@ -3,23 +3,25 @@
 Traffic Public
 =====
 
-Installation
+How To Create
 ------------
+
+#. :ref:`trafficCar <trafficCar>`.
+#. :ref:`trafficPublicAuthoring <trafficPublicAuthoring>`.
+#. :ref:`trafficPublicEntryAuthoring <trafficPublicEntryAuthoring>`.
+#. :ref:`trafficPublicRoute <trafficPublicRoute>`.
 
 
 .. _trafficPublicAuthoring:
 
-TrafficPublicAuthoring
+TrafficPublicAuthoring component
 ------------
 
 
 .. _trafficPublicEntryAuthoring:
 
-TrafficPublicEntryAuthoring
-
+TrafficPublicEntryAuthoring component
 ------------
-
-
 
 
 .. _trafficPublicType:

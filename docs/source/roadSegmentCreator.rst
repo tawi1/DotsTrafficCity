@@ -456,10 +456,10 @@ Pedestrian
 
 | **Add parking pedestrian nodes** : add an :ref:`entry parking node <pedestrianNode>` and a :ref:`node <pedestrianNode>` linking it. 
 | **Parking pedestrian node type** : :ref:`parking node type <pedestrianNodeSettings>`.
-| **Auto connect nodes** : auto connect created entry parking node and nearby node.
+| **Auto connect nodes** : auto connect created entry parking node and nearby created node.
 | **Parking pedestrian node weight** : :ref:`weight <pedestrianNodeSettings>` entry parking node.
 | **Parking node offset** : :ref:`entry parking node <pedestrianNode>` offset relative to :ref:`traffic nodes <trafficNode>`.
-| **Parking enter node offset** : :ref:`node <pedestrianNode>` that connectet to :ref:`entry parking node <pedestrianNode>` relative to :ref:`traffic nodes <trafficNode>`.
+| **Parking enter node offset** : :ref:`node <pedestrianNode>` that connected to :ref:`entry parking node <pedestrianNode>` relative to :ref:`traffic nodes <trafficNode>`.
 
 Components
 ------------
@@ -491,7 +491,7 @@ Pedestrian node settings
 | **Has crosswalk** : on/off :ref:`crosswalk <trafficNodeSettings>` for pedestrians.
 **Pedestrian corner connection type:**
 	* **Disabled**
-	* **Corner** : will be created corner :ref:`pedestrian node <pedestrianNode> to connect crosswalks.
+	* **Corner** : will be created corner :ref:`pedestrian node <pedestrianNode>` to connect crosswalks.
 	* **Straight** : crosswalks will be connected directly.
 
 .. _roadSegmentCreatorLightSettings:
@@ -512,9 +512,9 @@ Traffic lights
 	* **Two way**
 	* **Four way**
 **Light location** :
-	* **Right** : will be added to the right of the :ref:`traffi nodes <trafficNode>`.
-	* **Left** : will be added to the left of the :ref:`traffi nodes <trafficNode>`.
-	* **Right left** : will be added on both sides of the node.
+	* **Right** : will be added to the right of the :ref:`traffic nodes <trafficNode>`.
+	* **Left** : will be added to the left of the :ref:`traffic nodes <trafficNode>`.
+	* **Right left** : will be added on both sides of the :ref:`traffic node <trafficNode>`.
 | **Traffic lights offset** : local traffic light offset relative to :ref:`traffic node <trafficNode>`.
 **Light angle offset settings** :
 	* **Angle index** : rotation angle index (0 - 0°, 1 - 90°, 2 - 180°, 3 - 270°).
@@ -534,7 +534,6 @@ Path settings
 	
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
 	
-	
 Node selection panel
 """"""""""""""
 
@@ -547,15 +546,26 @@ Node selection panel
 Road settings
 """"""""""""""
 
+**StraightRoad settings:** [:ref:`settings <pathSettings>` for straight paths of the segment]
+	* **Waypoint Straightroad count** 
+	* **Straight road path speed limit** 
+	* **Straight road priority** 
+
+**TurnRoad settings:** [:ref:`settings <pathSettings>` for turn paths of the segment]
+	* **Turn curve type** 
+	* **Waypoint turn curve count** 
+	* **Turnroad path speed limit** 
+	* **Turnroad priority** 
+
 .. _roadSegmentCreatorPathSceneSettings:
 
 Scene settings
 """"""""""""""
 
 **Show path handles** : on/off position handles on the scene.
-	* **Show edit buttons path nodes** : on/off add & remove buttons nodes on the scene.
+	* **Show edit buttons path nodes** : on/off `add` & `remove` buttons nodes on the scene.
 **Show waypoints** : on/off visual circle position of the waypoint on the scene.
-	* **Show waypoints info** : on/off info of waypoints (index, speedlimit).
+	* **Show waypoints info** : on/off info of waypoints (local index, speedlimit).
 
 Turn connection settings
 """"""""""""""

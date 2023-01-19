@@ -32,7 +32,7 @@ Common Settings
 		* **Parent is hull mesh** : car root contains a car mesh.
 	**Fit physics shape to mesh** : physical shape will be resized to the mesh size.
 	**Has wheels** : should search for wheels on a :ref:`template <carPrefabCreatorTemplateSettings>`.
-	**Has navmesh obstacle:** does the car contain `NavMeshObstacle<https://docs.unity3d.com/Manual/class-NavMeshObstacle.html>`_ component. 
+	**Has navmesh obstacle:** does the car contain `NavMeshObstacle <https://docs.unity3d.com/Manual/class-NavMeshObstacle.html>`_ component. 
 		* **Move threshold**
 		* **Carve stationary**
 		* **Carve time to stationary**

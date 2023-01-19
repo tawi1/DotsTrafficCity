@@ -20,6 +20,29 @@ How To Create
 #. Customize :ref:`Route settings <trafficPublicRouteSettings>`.
 #. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
 
+Transition Info
+------------
+
+Transition paths are used for transition between lanes of public transport.
+
+.. _trafficPublicRouteHowToCreateTransition:
+
+How To Create
+~~~~~~~~~~~~
+
+#. Select source path.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample1.png
+	
+#. Select a neighbouring path.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample2.png
+	
+#. Customize :ref:`Transition settings <trafficPublicRouteTransitionSettings>`.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample4.png
+	`Transition result example.`
+
 .. _trafficPublicRouteComponent:
 
 Component
@@ -36,31 +59,10 @@ Route settings
 | **Preferred interval distance** : preferred distance between public transport vehicles.
 | **Traffic public type** : :ref:`traffic public type <trafficPublicType>` of vehicles on the route.
 
-Transition settings
-~~~~~~~~~~~~ 
-
-.. _trafficPublicRouteHowToCreateTransition:
-
-How To Create Transition
-""""""""""""""
-
-#. Select source path.
-
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample1.png
-	
-#. Select a neighbouring path.
-
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample2.png
-	
-#. Customize :ref:`Transition settings <trafficPublicRouteTransitionSettings>`.
-
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample4.png
-	`Transition result example.`
-
 .. _trafficPublicRouteTransitionSettings:
 
-Settings
-""""""""""""""
+Transition settings
+~~~~~~~~~~~~ 
 
 | **Source offset** : offset start point of transition in source path.
 | **Target offset** : offset end point of transition in target path.
@@ -79,7 +81,7 @@ Scene settings
 Route data
 ~~~~~~~~~~~~ 
 
-| **Traffic node route data** : internal route data.
+| **Traffic node route data** : internal related traffic nodes route data.
 | **Route change lane transitions** : :ref:`transition <trafficPublicRouteHowToCreateTransition>` data.
 | **Routes** : sequence of paths on the route.
 

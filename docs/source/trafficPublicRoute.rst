@@ -1,60 +1,94 @@
 .. _trafficPublicRoute:
 
-Traffic Public route
+Traffic Public Route
 =====
+
+Defined public route for :ref:`public transport <trafficPublic>`.
 
 How To Create
 ------------
 
+#. Create needed :ref:`road segments <trafficCarNpcObstacleDebugger>`.
+#. Connect created segments by :ref:`paths <path>`.
+#. Create empty `GameObject` and add :ref:`TrafficPublicRoute <trafficPublicRouteComponent>` component.
+#. Enable :ref:`Show path selection buttons <trafficPublicRouteSceneSettings>` option.
+#. Sequentially select each :ref:`path <path>` of the route (how to make a :ref:`lane change <trafficPublicRouteHowToCreateTransition>`).
 
-Settings
+	.. image:: /images/road/PublicRoute/PublicRouteExample2.png
+	`Selection route example.`
+	
+#. Customize :ref:`Route settings <trafficPublicRouteSettings>`.
+#. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
+
+.. _trafficPublicRouteComponent:
+
+Component
 ------------
 
 	.. image:: /images/road/PublicRoute/PublicRouteSettings.png
 	
-	
+.. _trafficPublicRouteSettings:
+
 Route settings
 ~~~~~~~~~~~~ 
 
-| **Max vehicle count** :
-| **Prefered interval distance** :
-| **Traffic public type** :
+| **Max vehicle count** : maximum number of vehicles on the route.
+| **Preferred interval distance** : preferred distance between public transport vehicles.
+| **Traffic public type** : :ref:`traffic public type <trafficPublicType>` of vehicles on the route.
 
 Transition settings
 ~~~~~~~~~~~~ 
 
-| **Source offset** :
-| **Target offset** :
-| **Distance between parallel nodes** :
+.. _trafficPublicRouteHowToCreateTransition:
+
+How To Create Transition
+""""""""""""""
+
+#. Select source path.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample1.png
+	
+#. Select a neighbouring path.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample2.png
+	
+#. Customize :ref:`Transition settings <trafficPublicRouteTransitionSettings>`.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample4.png
+	`Transition result example.`
+
+.. _trafficPublicRouteTransitionSettings:
+
+Settings
+""""""""""""""
+
+| **Source offset** : offset start point of transition in source path.
+| **Target offset** : offset end point of transition in target path.
+| **Distance between parallel nodes** : max distance between :ref:`traffic nodes <trafficNode>` to find a transition path.
+
+.. _trafficPublicRouteSceneSettings:
 
 Scene settings
 ~~~~~~~~~~~~ 
 
-| **Highlight route** :
-| **Show path selection buttons** :
-| **Show swap buttons** :
-| **Show only related nodes** :
+| **Highlight route** : highlight added paths of route.
+| **Show path selection buttons** : on/off display add buttons paths to route.
+| **Show swap buttons** : show swap buttons for :ref:`transitions <trafficPublicRouteHowToCreateTransition>`.
+| **Show only related nodes** : only nodes that are neighbours of nodes that have already been added will be displayed.
 
 Route data
 ~~~~~~~~~~~~ 
 
-| **Traffic node route data** :
-| **Route change lane transitions** :
-| **Routes** :
+| **Traffic node route data** : internal route data.
+| **Route change lane transitions** : :ref:`transition <trafficPublicRouteHowToCreateTransition>` data.
+| **Routes** : sequence of paths on the route.
+
+	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample3.png
+	`Transition data example.`
 
 Buttons
 ~~~~~~~~~~~~ 
 
-| **Update transitions** :
-| **Clear route** :
-| **Refresh related nodes** :
-	
-Examples
-------------
-
-	.. image:: /images/road/PublicRoute/PublicRouteExample.png
-	.. image:: /images/road/PublicRoute/PublicRouteExample2.png
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample1.png
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample2.png
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample3.png
-	.. image:: /images/road/PublicRoute/PublicRouteTransitionExample4.png
+| **Update transitions** 
+| **Clear route** 
+| **Refresh related nodes** 

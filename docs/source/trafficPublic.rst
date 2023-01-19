@@ -3,14 +3,16 @@
 Traffic Public
 =====
 
+Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>`.
+
 How To Create
 ------------
 
 #. Create a vehicle by following these :ref:`steps <trafficCar>`.
 #. Add :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` and :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` to the created vehicle.
-#. Select `Traffic public type` in the :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` component.
-#. Create child `gameobject`, add :ref:`trafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component and assign to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>`.
-#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` for the public transport route.
+#. Select :ref:`Traffic public type <trafficPublicType>` in the :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` component.
+#. Create empty child `GameObject`, add :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
+#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity for the public transport route.
 
 .. _trafficPublicAuthoring:
 
@@ -45,11 +47,11 @@ Authoring component that contains capacity settings of the vehicle.
 	.. image:: /images/entities/trafficCar/CarCapacityComponent.png
 	
 | **Max capacity** : max capacity of the vehicle.
-| **Entry point** : any `gameobject` that contain :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component.
+| **Entry point** : any `GameObject` that contain :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component.
 | **Show entry point** : on/off display entry point.
 
 	.. image:: /images/entities/trafficCar/TrafficPublicTramExample.png
-	`Tram example (white box - entry point).`
+	`Public tram example (white box - entry point).`
 
 .. _trafficPublicEntryAuthoring:
 

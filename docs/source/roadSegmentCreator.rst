@@ -145,9 +145,9 @@ Creator for creating straight roads of any shape.
 How To Use
 """"""""""""""
 
-#. Place the custom segment where you want it.
+#. Place the custom  straight segment where you want it.
 #. Place the :ref:`traffic nodes <trafficNode>` where the beginning and the end of the path.
-#. Rotate all :ref:`TrafficNode <trafficNode>` according to your needs (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
+#. Rotate the :ref:`TrafficNodes <trafficNode>` in the direction of the route (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
 #. Customize the number of lanes and speed limit of segment.
 #. Add additional nodes to the paths if necessary **[optional step]**.
 #. Rotate the nodes of paths according to the direction of the path **[optional step]**.
@@ -454,12 +454,12 @@ Pedestrian
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPedestrian.png
 
-| **Add parking pedestrian nodes** :
-| **Parking pedestrian node type** :
-| **Auto connect nodes** :
-| **Parking pedestrian node weight** :
-| **Parking node offset** :
-| **Parking enter node offset** :
+| **Add parking pedestrian nodes** : add an :ref:`entry parking node <pedestrianNode>` and a :ref:`node <pedestrianNode>` linking it. 
+| **Parking pedestrian node type** : :ref:`parking node type <pedestrianNodeSettings>`.
+| **Auto connect nodes** : auto connect created entry parking node and nearby node.
+| **Parking pedestrian node weight** : :ref:`weight <pedestrianNodeSettings>` entry parking node.
+| **Parking node offset** : :ref:`entry parking node <pedestrianNode>` offset relative to :ref:`traffic nodes <trafficNode>`.
+| **Parking enter node offset** : :ref:`node <pedestrianNode>` that connectet to :ref:`entry parking node <pedestrianNode>` relative to :ref:`traffic nodes <trafficNode>`.
 
 Components
 ------------
@@ -471,10 +471,10 @@ General settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
-| **Lane count** :
-| **Lane width** :
-| **Crossroad width** :
-| **Path corner offset** :
+| **Lane count** : number of lanes.
+| **Lane width** : lane width.
+| **Crossroad width** : distance between :ref:`traffic nodes <trafficNode>`.
+| **Path corner offset** : offset to change the rotation angle of curved paths.
 
 .. _roadSegmentCreatorPedestrianSettings:
 
@@ -483,16 +483,16 @@ Pedestrian node settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png	
 
-| **Add pedestrian nodes** :
-| **Unique crosswalk offset** :
-| **Crosswalk offset** :
-| **Pedestrian route width** :
-| **Custom crosswalk** :
-| **Has crosswalk** :
+| **Add pedestrian nodes** : add a :ref:`pedestrian nodes <pedestrianNode>` to the segment.
+| **Unique crosswalk offset** : set up a unique offset for the selected crosswalk.
+| **Crosswalk offset** : set up a common offset for the crosswalks.
+| **Pedestrian route width** : :ref:`pedestrian route width <pedestrianNodeSettings>`.
+| **Custom crosswalk** : on/off selected crosswalk.
+| **Has crosswalk** : on/off :ref:`crosswalk <trafficNodeSettings>` for pedestrians.
 **Pedestrian corner connection type:**
 	* **Disabled**
-	* **Corner**
-	* **Straight**
+	* **Corner** : will be created corner :ref:`pedestrian node <pedestrianNode> to connect crosswalks.
+	* **Straight** : crosswalks will be connected directly.
 
 .. _roadSegmentCreatorLightSettings:
 
@@ -504,22 +504,28 @@ Light settings
 Traffic lights
 """"""""""""""
 
-| **Show semaphore indexes** :
-| **Min TrafficNodes count for add light** :
-| **Add traffic light** :
-| **Selected light prefab type** :
-| **Light location** :
-| **Traffic lights offset** :
+| **Show semaphore indexes** : on/off display semaphore :ref:`TrafficLightHandler <trafficLightHandler>` index around :ref:`traffic nodes <trafficNode>` and traffic lights on the scene.
+| **Min TrafficNodes count for add light** : minimum number of :ref:`traffic nodes <trafficNode>` in the segment to add traffic light.
+| **Add traffic light** : add traffic light to the segment.
+**Selected light prefab type** : prefab of the traffic light to be added [can be changed in creator settings].
+	* **Oneway**
+	* **Two way**
+	* **Four way**
+**Light location** :
+	* **Right** : will be added to the right of the :ref:`traffi nodes <trafficNode>`.
+	* **Left** : will be added to the left of the :ref:`traffi nodes <trafficNode>`.
+	* **Right left** : will be added on both sides of the node.
+| **Traffic lights offset** : local traffic light offset relative to :ref:`traffic node <trafficNode>`.
 **Light angle offset settings** :
-	* **Angle index** :
+	* **Angle index** : rotation angle index (0 - 0°, 1 - 90°, 2 - 180°, 3 - 270°).
 	* **Revert** :
 	
 Pedestrian lights
 """"""""""""""
 
-| **Add pedestrian lights** :
-| **Pedestrian light offset** :
-| **Pedestrian angle offset** :
+| **Add pedestrian lights** : add pedestrian light to the segment.
+| **Pedestrian light offset** : local pedestrian light offset relative to :ref:`traffic node <trafficNode>`
+| **Pedestrian angle offset** : pedestrian light rotation angle offset.
 	
 .. _roadSegmentCreatorPathSettings:
 
@@ -546,19 +552,19 @@ Road settings
 Scene settings
 """"""""""""""
 
-**Show path handles** :
-	* **Show edit buttons path nodes** :
-**Show waypoints** :
-	* **Show waypoints info** :
+**Show path handles** : on/off position handles on the scene.
+	* **Show edit buttons path nodes** : on/off add & remove buttons nodes on the scene.
+**Show waypoints** : on/off visual circle position of the waypoint on the scene.
+	* **Show waypoints info** : on/off info of waypoints (index, speedlimit).
 
 Turn connection settings
 """"""""""""""
 
-| **Custom node turn settings** :
-| **Left turn count** :
-| **Right turn count** :
-| **Lane left turn connection count** :
-| **Lane right turn connection count** :
+| **Custom node turn settings** : on/off the turn settings for each :ref:`traffic node <trafficNode>`.
+| **Left turn count** : number of left turns from the :ref:`traffic node <trafficNode>`.
+| **Right turn count** : number of right turns from the :ref:`traffic node <trafficNode>`.
+| **Lane left turn connection count** : number of connections to the left from the lane traffic lane.
+| **Lane right turn connection count** : number of connections to the right from the lane traffic lane.
 
 .. _roadSegmentCreatorSegmentSettings:
 
@@ -567,13 +573,13 @@ Segment handler settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
 	
-| **Show segment position handle** :
-| **Snap segment position** :
-| **Even size snapping** :
-| **Custom snap size** :
-| **Snap surface offset** :
-| **Snap layer mask** :
-| **Snap segment to surface** :
+| **Show segment position handle** : on/off position handle for segment.
+| **Snap segment position** : on/off snap segmant position.
+| **Even size snapping** : snapping object will be shifted to the edge of the default snap.
+| **Custom snap size** : snapping value.
+| **Snap surface offset** : snap surface offset.
+| **Snap layer mask** : snap layermask.
+| **Snap segment to surface** : snap the segment to the surface.
 	
 Other settings
 ~~~~~~~~~~~~ 

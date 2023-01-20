@@ -528,7 +528,7 @@ How To Use
 	
 #. Repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
 
-.. _roadSegmentCreatorParkingBuilderPathExample:
+	.. _roadSegmentCreatorParkingBuilderPathExample:
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment10.png
 	

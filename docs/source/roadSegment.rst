@@ -16,7 +16,7 @@ Select in the unity toolbar:
 How To Customize
 ------------
 
-By default `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component which can be used to customize a segment.
+By default, `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component that can be used to customize a segment.
 	
 	
 Main Components
@@ -25,7 +25,7 @@ Main Components
 Road Segment
 ~~~~~~~~~~~~
 
-Component to connect with other road segments.
+Component for connection to other road segments.
 
 	.. image:: /images/road/roadSegment/RoadSegment.png
 	

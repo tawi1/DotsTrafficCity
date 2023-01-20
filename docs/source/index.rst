@@ -1,9 +1,9 @@
-Welcome to DOTS Traffic System documentation!
+Welcome to DOTS Traffic City documentation!
 ===================================
 
-**DOTS Traffic System** is a tool for quickly creating performant city traffic.
+**DOTS Traffic City** is a tool for quickly creating performant city traffic.
 
-You can buy it from unity asset store: `DOTS Traffic System <https://assetstore.unity.com/>`_
+You can buy it from unity asset store: `DOTS Traffic City <https://assetstore.unity.com/>`_
 
 Check out the :doc:`gettingstarted` section for further information, including
 how to :ref:`installation` the project.

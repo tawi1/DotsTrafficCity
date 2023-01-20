@@ -23,7 +23,7 @@ How To Create
 	.. image:: /images/road/trafficArea/TrafficAreaExample2.png
 	`Selected Default nodes example`.
 	
-#. Select `Queue` node on the scene.
+#. In the same way, select `Queue` node on the scene.
 
 	.. image:: /images/road/trafficArea/TrafficAreaExample5.png
 	`Selected Queue node example`.
@@ -48,7 +48,6 @@ How To Create
 Settings
 ------------
 
-
 	.. image:: /images/road/TrafficArea.png
 	
 Settings
@@ -69,7 +68,7 @@ Scene visual
 	* **Disabled**
 	* **Remove node** : selected node will be removed from `TrafficArea`.
 	* **Select node** : selected node will be added to `TrafficArea` with the select `New node type`.
-**Show traffic area node type** : :ref:`nodes <trafficNode>` with the selected :ref:`node type <trafficAreaNodeType>` will be displayed on the scene.
+| **Show traffic area node type** : :ref:`nodes <trafficNode>` with the selected :ref:`node type <trafficAreaNodeType>` will be displayed on the scene.
 | **Show scene nodes** : on/off display add buttons paths to `TrafficArea`.
 | **New node type** : :ref:`TrafficNode <trafficNode>` with the selected :ref:`node type <trafficAreaNodeType>` will be added to the `TrafficArea`.
 

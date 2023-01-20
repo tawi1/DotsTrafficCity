@@ -7,7 +7,7 @@ Traffic Car
    :local:
    
 
-How to create
+How To Create
 ----------------
 
 #. In the Unity toolbar, open `Car Prefab Creator`. More info about :ref:`Car Prefab Creator<carPrefabCreator>`.

@@ -16,7 +16,6 @@ How To Create
 How To Customize
 ----------------
 
-
 Path Settings
 ----------------
 	
@@ -30,9 +29,9 @@ Cached values
 | **Source traffic node** : source node traffic from which the path starts.
 **Path connection type:**
 	* **Traffic node** :
-		* **Connected traffic node** : connected traffic node.
+		* **Connected traffic node** : :ref:`connected traffic node <trafficNodeConnection>`.
 	* **Path point** :
-		* **Connected path** : connected path in the :ref:`custom point<pathPointConnection>`.
+		* **Connected path** : connected path in the :ref:`custom point <pathPointConnection>`.
 | **Nodes** : node point to create curves (bezier).
 | **Waypoints** : point of path.
 

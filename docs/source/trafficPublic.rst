@@ -12,7 +12,7 @@ How To Create
 #. Add :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` and :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` to the created vehicle.
 #. Select :ref:`Traffic public type <trafficPublicType>` in the :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` component.
 #. Create empty child `GameObject`, add :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
-#. Position the created `GameObject` where the pedestrian entrances/exits will be.
+#. Position the created entry `GameObject` where the pedestrian entrances/exits will be.
 #. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity for the public transport route.
 
 .. _trafficPublicAuthoring:

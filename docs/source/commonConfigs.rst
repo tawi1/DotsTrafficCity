@@ -12,6 +12,8 @@ Common Configs
 General Settings Config
 ~~~~~~~~~~~~
 
+Config to quickly on/off optional features.
+
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
 	
 **Player agent type:**

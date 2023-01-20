@@ -8,7 +8,7 @@ Defined public route for :ref:`public transport <trafficPublic>`.
 How To Create
 ------------
 
-#. Create needed :ref:`road segments <trafficCarNpcObstacleDebugger>`.
+#. Create needed :ref:`road segments <roadSegmentCreator>`.
 #. Connect created segments by :ref:`paths <path>`.
 #. Create empty `GameObject` and add :ref:`TrafficPublicRoute <trafficPublicRouteComponent>` component.
 #. Enable :ref:`Show path selection buttons <trafficPublicRouteSceneSettings>` option.

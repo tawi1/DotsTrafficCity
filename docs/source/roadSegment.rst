@@ -41,7 +41,7 @@ Buttons
 
 | **Connect nodes** : auto-connect :ref:`Traffic Nodes<trafficNode>`.
 | **Reset nodes** : reset already auto-connected paths of :ref:`Traffic Nodes<trafficNode>`.
-| **Bake data** : bake all :ref:`paths<path>` data (path's length, intersections).
+| **Bake data** : :ref:`bake <roadSegmentBakingInfo>` all :ref:`paths <path>` data (path's length, intersections).
 	
 TrafficLightCrossroad
 ~~~~~~~~~~~~

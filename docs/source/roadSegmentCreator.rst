@@ -16,7 +16,7 @@ How To Use
 #. Create :ref:`RoadSegment<roadSegment>`.
 #. Set the segment to the desired position.
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
-#. Select :ref:`road segment type<roadSegmentCreatorGeneralSettings>`.
+#. Select :ref:`road segment type <roadSegmentCreatorGeneralSettings>`.
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 	

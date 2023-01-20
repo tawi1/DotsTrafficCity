@@ -7,7 +7,7 @@ Traffic Area
 
 Use-case examples: 
 	* To enter a petrol station. 
-	* Used for :ref:`large parking areas <roadSegmentCreatorParkingBuilder>.
+	* Used for :ref:`large parking areas <roadSegmentCreatorParkingBuilder>`.
 
 `Youtube tutorial <https://www.youtube.com/watch?v=6PAEOAGCBU0>`_
 
@@ -41,7 +41,7 @@ How To Create
 #. Customize :ref:`Max queue amount <trafficAreaSettings>` depending on how many cars can fit in the queue without blocking other cars.
 	
 	.. image:: /images/road/trafficArea/TrafficAreaExample7.png
-	`TrafficArea result example (parking created by` :ref:`ParkingBuilder <roadSegmentCreatorParkingBuilder>``).`
+	`TrafficArea result example (parking created by` :ref:`ParkingBuilder <roadSegmentCreatorParkingBuilder>` `).`
 
 .. _trafficAreaSettings:
 

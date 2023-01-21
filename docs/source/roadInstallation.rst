@@ -8,6 +8,7 @@ Traffic Road Installation
 
 #. Initialize :ref:`scene <sceneInitialization>`.
 #. Create :ref:`RoadSegments <roadSegment>`.
+#. Create the :ref:`necessary paths <trafficNodePathCreator>`. 
 #. Configure :ref:`paths <path>`. 
 #. Create required :ref:`PedestrianNode <pedestrianNode>` by :ref:`PedestrianNodeCreator <pedestrianNodeCreator>`.
 #. Configure semaphores.
@@ -38,8 +39,3 @@ Steps:
 	#. On/off autosync configs (before migrating the configs to the `subscene`, they will be synchronized with the configs that are in the `Hub`).
 	#. Press `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the `subscene`.
-	
-
-	
-
-

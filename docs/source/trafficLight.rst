@@ -19,30 +19,30 @@ How To Customize City Crossroads
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample1.png
 	
-#. You can now quickly see and adjust the timelines of all the intersections.
+#. You can now quickly see and adjust the timelines of all the crossroads.
 #. Enable :ref:`Show disabled lights <trafficLightGlobalSemaphoreCommonSettings>` to see crossroads with traffic lights off.
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample2.png
 	
 #. Select the desired crossroad and press `Select`.
-#. Now in the `TrafficLightCrossroad <trafficLightCrossroad>` component you can adjust timings.
+#. Now in the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component you can adjust timings.
 
 How To Assign Light
 ------------
 
-#. Open `Global Semaphore Settings <trafficLightGlobalSemaphoreHowToUse>`.
-#. Enable `Show light connections <trafficLightGlobalSemaphoreConnectionSettings>`.
+#. Open :ref:`Global Semaphore Settings <trafficLightGlobalSemaphoreHowToUse>`.
+#. Enable :ref:`Show light connections <trafficLightGlobalSemaphoreConnectionSettings>`.
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreConnectionSettings.png
 	
-#. Select `Light connection type <trafficLightGlobalSemaphoreConnectionSettings>` for example :ref:`traffic node <trafficNode>`.
+#. Select :ref:`Light connection type <trafficLightGlobalSemaphoreConnectionSettings>` for example :ref:`traffic node <trafficNode>`.
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreViewTrafficNodeConnection.png
 	
 #. Select :ref:`H0 <trafficLightGlobalSemaphoreObjectDescription>` or :ref:`H1 <trafficLightGlobalSemaphoreObjectDescription>` depends on desired semaphore index.
 #. Next desired :ref:`T <trafficLightGlobalSemaphoreObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
 #. Now, the selected :ref:`TrafficNode <trafficNode>` will have the selected  :ref:`TrafficLightHandler <trafficLightHandler>`.
-#. In the same, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing `Light connection type <trafficLightGlobalSemaphoreConnectionSettings>`.
+#. In the same, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing :ref:`Light connection type <trafficLightGlobalSemaphoreConnectionSettings>`.
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreViewPedestrianConnection.png
 	`Pedestrian node connection example.`
@@ -75,7 +75,7 @@ Common Settings
 	
 .. _trafficLightSceneInfo2:
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample1.png
+	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample2.png
 	`Scene light info (include disabled) example.`
 
 .. _trafficLightGlobalSemaphoreConnectionSettings:
@@ -97,7 +97,7 @@ Connection Settings
 | **Show connection buttons** : show connection buttons for selected `Light connection type`.
 | **Semaphore index** : objects with a semaphore selected index are displayed (-1 value - all indexes are displayed).
 	
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewLightConnection2.png
+	.. image:: /images/road/trafficLight/GlobalSemaphoreViewTrafficNodeConnection2.png
 	`Selected Light connection type : [TrafficNode] and Semaphore index : [0] example.`
 		
 World Semaphores
@@ -105,8 +105,8 @@ World Semaphores
 
 | **Custom settings** : on/off custom timeline settings for selected crossroad.
 **Timeline:** shows :ref:`light states <trafficLightState> of crossroad and total duration.
-	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler> with semaphore index 0.
-	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler> with semaphore index 1.
+	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler>` with semaphore index 0.
+	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler>` with semaphore index 1.
 	
 .. _trafficLightGlobalSemaphoreObjectDescription:
 	
@@ -163,7 +163,7 @@ Settings
 | **Semaphore states** : :ref:`light state of handler <trafficLightState>`.
 
 Components
-----------------
+~~~~~~~~~~~~
 
 Authoring
 ~~~~~~~~~~~~ 

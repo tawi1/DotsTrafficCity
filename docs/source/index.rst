@@ -20,3 +20,4 @@ how to :ref:`installation` the project.
    sound.rst
    debug.rst
    glossary.rst
+   changelog.rst

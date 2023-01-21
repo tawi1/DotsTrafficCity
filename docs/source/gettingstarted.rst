@@ -8,4 +8,3 @@ Getting Started
 	
    packageInstallation
    sceneInitilization.rst
-   changelog.rst

@@ -25,6 +25,7 @@ How To Use
 #. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
 #. Customize :ref:`light settings<roadSegmentCreatorLightSettings>`.
 #. Customize :ref:`path settings<roadSegmentCreatorPathSettings>`.
+#. Add :ref:`RoadSegment<roadSegment>` to the :ref:`RoadParent <roadParent>` as children.
 	
 .. _roadSegmentCreatorCustomSettings:
 

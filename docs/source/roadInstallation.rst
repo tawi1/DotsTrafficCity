@@ -7,7 +7,7 @@ Traffic Road Installation
 ----------------
 
 #. Initialize :ref:`scene <sceneInitialization>`.
-#. Create :ref:`RoadSegments <roadSegment>`.
+#. Create :ref:`RoadSegments <roadSegment>`. And add them to the :ref:`RoadParent <roadParent>` as children.
 #. Create the :ref:`necessary paths <trafficNodePathCreator>`. 
 #. Configure :ref:`paths <path>`. 
 #. Create required :ref:`PedestrianNode <pedestrianNode>` by :ref:`PedestrianNodeCreator <pedestrianNodeCreator>`.
@@ -23,6 +23,9 @@ Traffic Road Installation
 #. Press `Reset` button to reset the :ref:`automatically created paths <trafficNodeAutoPathConnection>`.
 #. Press `Connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
 #. Press `Bake` button (:ref:`bake info <roadSegmentBakingInfo>`).
+#. Create :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
+
+.. _roadEntitySubscene:
 
 Entity Subscene Creation
 ----------------

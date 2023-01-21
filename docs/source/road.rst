@@ -13,6 +13,7 @@ Road
 		/trafficNode.rst
 		/trafficNodePathCreator.rst
 		/path.rst
+		/trafficLight.rst
 		/pedestrianNode.rst
 		/trafficArea.rst
 		/trafficPublicRoute.rst	

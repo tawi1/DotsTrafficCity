@@ -32,6 +32,7 @@ From version DOTS 1.0, all entity conversions must be done via subscenes. It's n
 	.. image:: /images/road/installation/Hub.png
 	
 Steps:
+	#. Select `Hub` on the scene.
 	#. Enter `Root name` or use default name.
 	#. Enter `Pedestrian nodes root name` or use default name.
 	#. Select `Entity sub scene path` the path to create a `subscene`.

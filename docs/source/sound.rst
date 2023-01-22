@@ -82,6 +82,8 @@ How To Use
 Sound Data
 ------------
 
+Contains data about the `FMOD` sound.
+
 How To Create
 ~~~~~~~~~~~~
 
@@ -109,7 +111,7 @@ Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
 
 	.. image:: /images/sound/FMOD-SoundServiceExample.png
 	
-	.. note:: If you do not add :ref:`sound <soundData>` to the service, it cannot be activated from the code.
+	.. warning:: If you do not add :ref:`sound <soundData>` to the service, it cannot be activated from the code.
 	
 .. _soundCodeExample:
 

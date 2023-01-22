@@ -10,7 +10,7 @@ Installation
 ------------
 
 #. Download `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin from the `Asset Store`.
-#. Sign up & download `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_ ).
+#. Sign up & download `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_).
 
 	.. image:: /images/sound/FMODstudio-download.png
 		
@@ -18,9 +18,10 @@ Installation
 #. Open `FMOD` settings.
 
 	.. image:: /images/sound/FMOD-toolbar-settings.png
-
 	
 #. By default, project path: `FMOD` project path `DotsCity/FMOD/fmodproject/fmodproject.fspro`, make sure that the `FMOD` project path is set correctly.
+
+	.. image:: /images/sound/FMOD-settings.png
 
 How To Use
 ------------
@@ -33,7 +34,7 @@ How To Use
 
 	.. image:: /images/sound/FMOD-Studio-bankwindow.png
 	
-#. If you do not have an existing bank or need to set up a new one, right-click in the window and select `New Bank`.
+#. If you do not have an existing bank or need to set up a new one, right-click in the window and press `New Bank`.
 #. In the bookmark `Events` - create or open exist folder.
 
 	.. image:: /images/sound/FMOD-Studio-eventswindow.png
@@ -54,7 +55,7 @@ How To Use
 #. `Customize <https://www.fmod.com/docs/2.02/studio/authoring-events.html>`_  your sound.
 #. Assign selected `FMOD event` to the `Bank`.
 
-	.. image:: /images/sound/FMOD-Studio-FMOD-Studio-AssignToBankExample.png
+	.. image:: /images/sound/FMOD-Studio-AssignToBankExample.png
 	
 #. Build `FMOD` project.
 
@@ -70,7 +71,7 @@ How To Use
 	
 	.. note:: Sound ID is created automatically.
 	
-#. Press `Add To Service` to add sound to the :ref:`FMOD sound service <fmodSoundService>` button.	
+#. Press `Add To Service` button to add sound to the :ref:`FMOD sound service <fmodSoundService>`.	
 
 	.. image:: /images/sound/FMOD-SoundServiceAddedExample.png
 	
@@ -119,41 +120,54 @@ Code Examples
 
 How To Create
 ~~~~~~~~~~~~
-// some sound id taken from :ref:`Sound Data <soundData>`
 
 EntityManager methods
 """"""""""""""
 
-#. SoundExtension.CreateSoundEntity(ref this EntityManager entityManager, int soundId, float volume = 1f, bool oneShot = false);
-	* Creating a default sound entity.
+..  code-block:: r
+
+	SoundExtension.CreateSoundEntity(ref this EntityManager entityManager, int soundId, float volume = 1f, bool oneShot = false)
+	// Creating a default sound entity.
 	
-#. SoundExtension.CreateTrackedSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false);
-	* Creation of a sound entity that follows a given entity.
+..  code-block:: r
+
+	SoundExtension.CreateTrackedSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false)
+	// Creation of a sound entity that follows a given entity.
 	
-#. SoundExtension.CreateChildSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false);
-	* Creation of a sound entity that will be a child of a given entity.
+..  code-block:: r
+
+	SoundExtension.CreateChildSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false)
+	// Creation of a sound entity that will be a child of a given entity.
 	
 CommandBuffer methods
 """"""""""""""
 
 Burst compatible methods.
 
-#. SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float volume = 1f, bool oneShot = false);
-	* Creating a default sound entity.
+..  code-block:: r
+
+	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float volume = 1f, bool oneShot = false)
+	// Creating a default sound entity.
 	
-#. SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float3 position, float volume = 1f, bool oneShot = false);
-	* Create a sound entity at a specific position.
+..  code-block:: r
+
+	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float3 position, float volume = 1f, bool oneShot = false)
+	// Create a sound entity at a specific position.
 	
 .. _soundArchetypeExample:
 
 Create Archetype methods
 """"""""""""""
 	
-#. SoundExtension.GetSoundArchetype(EntityManager entityManager, bool force = false);
-	* Default sound archetype.
-	
-#. SoundExtension.GetSoundOneShotArchetype(EntityManager entityManager);
-	* OneShot sound archetype.
+..  code-block:: r
+
+	SoundExtension.GetSoundArchetype(EntityManager entityManager, bool force = false)
+	// Default sound archetype.
+
+..  code-block:: r	
+
+	SoundExtension.GetSoundOneShotArchetype(EntityManager entityManager)
+	// OneShot sound archetype.
 	
 Params
 """"""""""""""
@@ -210,4 +224,4 @@ How To Loop
 ~~~~~~~~~~~~
 
 #. Create :ref:`Sound entity <soundCodeHowToCreate>`.
-#. Add `LoopSoundData` component (assign `Duration`).
+#. Add `LoopSoundData` component (assign `Duration` value).

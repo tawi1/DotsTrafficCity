@@ -126,7 +126,7 @@ Unselect:
 	* L- : unselect :ref:`Light object <trafficLightObject>`.
 
 	.. image:: /images/road/trafficLight/GlobalSemaphoreAllConnections.png
-	`All connection types and -1 :ref:`semaphore index <trafficLightSemaphoreIndex>` are enabled example.`
+	`All connection types and -1` :ref:`semaphore index <trafficLightSemaphoreIndex>` `are enabled example.`
 
 .. _trafficLightState:
 

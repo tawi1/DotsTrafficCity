@@ -48,7 +48,7 @@ Buttons
 TrafficLightCrossroad
 ~~~~~~~~~~~~
 
-Component for handling traffic lights at crossroad.
+Component for handling traffic lights at crossroad. For a quick look at timelines of city crossroads and traffic light connections, :ref:`see here <trafficLight>`.
 
 Cached
 """"""""""""""

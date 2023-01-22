@@ -63,7 +63,7 @@ How To Use
 	
 #. Create :ref:`Sound Data <soundData>` in the `Unity` project.
 
-	.. image:: /images/sound/SoundDataExample.png
+	.. image:: /images/sound/SoundDataCreation.png
 	
 #. Enter trigger name `event:/Vehicle/TestExample`.
 

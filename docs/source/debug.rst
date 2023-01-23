@@ -1,17 +1,15 @@
+.. _debug:
+
 ************
 Debug
 ************
 
-.. _debug:
+	.. toctree::
+		:maxdepth: 2
 
-.. contents::
-   :local:
-
-Installation
-============
-
-
-.. _trafficCarNpcObstacleDebugger:
-
-TrafficCarNpcObstacleDebugger
-------------
+		/trafficDebug.rst
+		/trafficNodeDebug.rst
+		/pedestrianDebug.rst
+		/pedestrianNodeDebug.rst
+		/pathDebug.rst
+		/commonDebug.rst

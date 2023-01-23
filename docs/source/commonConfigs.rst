@@ -50,8 +50,12 @@ Config to quickly on/off optional features.
 | **Chasing cars support** :		
 | **Show fps** : on/off fps ui panel.
 	
+.. cullConfig:
+
 Cull Config
 ~~~~~~~~~~~~
+
+Config of the :ref:`cull point <cullPointInfo>`.
 
 	.. image:: /images/configs/common/CullConfig.png
 	
@@ -60,6 +64,8 @@ Cull Config
 	* **Visible distance** : distance to activate visual features of entities.
 | **Show debug** : on/off visual culling circle on the scene.
 	
+.. streamingLevelConfig:
+
 Streaming Level Config
 ~~~~~~~~~~~~
 

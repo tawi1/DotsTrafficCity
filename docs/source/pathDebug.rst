@@ -103,7 +103,7 @@ In the scene, select:
 Settings
 ~~~~~~~~~~~~
 
-	.. image:: /images/debuggers/path/RunTime/PathIndexDebugger.png		
+	.. image:: /images/debuggers/path/Runtime/PathIndexDebugger.png		
 	
 | **Should debug** : on/off debugger.
 | **Select path** : on/off path selection settings.
@@ -111,7 +111,7 @@ Settings
 **Path debug mode** :
 	* **Default** : only the current path index is shown.
 	* **Parallel** : parallel path indexes.
-	* **Neighbor paths** : neighbor path indexes.
+	* **Neighbor paths** : neighbor path indexes (paths that start from the same point).
 	* **Next connected paths** : indexes to which the current path is connected.
 	* **Intersected paths** : intersection paths indexes.
 	* **Car count** : number of cars with the current path index.
@@ -122,8 +122,8 @@ Index example:
 Examples
 ~~~~~~~~~~~~
 
-	.. image:: /images/debuggers/path/RunTime/PathIndexDebuggerExample1.png	
+	.. image:: /images/debuggers/path/Runtime/PathIndexDebuggerExample1.png	
 	`Default "Path debug mode" example`.
 	
-	.. image:: /images/debuggers/path/RunTime/PathIndexDebuggerExample2.png		
+	.. image:: /images/debuggers/path/Runtime/PathIndexDebuggerExample2.png		
 	`Parallel paths "Path debug mode" example`.

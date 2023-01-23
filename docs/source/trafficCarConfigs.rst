@@ -123,7 +123,7 @@ Config to calculate obstacles on the path.
 | **Close enough distance to stop before intersect same target node** : current car is close enough to stop in front if another car approaches the same target node but with a higher priority (:ref:`example<trafficCarObstacleConfig6>`).
 | **Close distance to change lane point** : car that is too close to the lane change point is always an obstacle (:ref:`example<trafficCarObstacleConfig7>`).
 | **Max distance to obstacle change lane** : (:ref:`example<trafficCarObstacleConfig8>`).
-| **Same direction value** : direction of the vehicle to check for obstacles in neighboring paths (:ref:`example<trafficCarObstacleConfig9>`).
+| **Same direction value** : direction of the vehicle to check for obstacles in neighboring paths (paths that start from the same point)(:ref:`example<trafficCarObstacleConfig9>`).
 | **Avoid crossroad jam** : car doesn't enter an crossroad if it cannot pass it without jamming (:ref:`example<trafficCarObstacleConfig10>`).
 	
 	.. note:: 

@@ -28,7 +28,7 @@ Examples
 ~~~~~~~~~~~~
 	
 	.. image:: /images/debuggers/other/CullStateObjectDebuggerExample.png		
-	`Cull point debug and cull state object debugger are enabled example.`
+	`Cull point debug and cull state object debugger are enabled example (red - culled, blue - close to camera, green - in view of camera).`
 	
 Hashmap Grid Debugger
 ------------

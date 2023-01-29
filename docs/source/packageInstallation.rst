@@ -18,8 +18,6 @@ Steps
 
 #. Click `Load Packages` to start download packages required for this tool.
 
-	.. image:: /images/gettingstarted/PackageSetupWindow.png
-	
 	.. note::
 		**Required custom packages:**
 			* **Naughty Attributes** (`com.dbrizov.naughtyattributes`) - extension for unity inspector made by Denis Rizov, also you can manually download it from unity asset store `Naughty Attributes <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_

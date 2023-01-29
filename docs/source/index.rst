@@ -17,6 +17,7 @@ how to :ref:`installation` the project.
    pedestrian.rst
    npc.rst
    common.rst
+   testScenes.rst
    sound.rst
    debug.rst
    glossary.rst

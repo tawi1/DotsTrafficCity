@@ -29,6 +29,16 @@ Steps
 		**Script define symbols required for the project:**
 			* **DOTSCITY**
 			
+#. Click `Load Optional Packages` to start download optional packages.
+
+	.. note::
+		**Optional packages:**
+			* **Reese's DOTS Navigation** - Reese's DOTS navigation package for :ref:`navigating <pedestrianNavigation> on the NavMesh (`original git <https://github.com/reeseschultz/ReeseUnityDemos>`_) (`604spirit's fork version <https://github.com/tawi1/ReeseUnityDemos>`_).
+		
+	.. note::
+		**Script define symbols required for the project:**
+			* **REESE_PATH**	
+			
 #. Download the required assets from the `Asset Store`:
 
 	.. note::

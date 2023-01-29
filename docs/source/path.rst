@@ -80,7 +80,7 @@ Settings
 | **Path speed limit** : speed limit for the entire route
 | **Connected lane index** : connected lane index.
 | **Hightlight normalized length** : normalized length of the highlighted path (for editor only).
-| **Reversed connection side** : path will be connected to the :ref:`opposite side of the node<trafficNodeConnectionInfo>`.
+| **Reversed connection side** : path will be connected to the :ref:`opposite side of the node <trafficNodeConnectionInfo>`.
 	
 .. _pathVisualSettings:
 	

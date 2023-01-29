@@ -101,6 +101,8 @@ Config distance to target nodes and traffic light handlers.
 	* **Min distance to out of path** : minimum distance from the missed waypoint to the car.
 	* **Max distance to out of path** : maximum distance from the missed waypoint to the car.
 	
+.. _trafficCarObstacleConfig:
+	
 Traffic Car Obstacle Config
 ------------
 
@@ -108,23 +110,23 @@ Config to calculate obstacles on the path.
 
 	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
 	
-| **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`).
-| **Min distance to start approach** : minimum distance to the last car in the current lane to start approaching (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`).
-| **Min distance to check next connected path** : minimum distance to check the next path for obstacles (:ref:`example<trafficCarObstacleConfig3>`).
+| **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`) (:ref:`test scene <trafficTestSceneObstacle>`).
+| **Min distance to start approach** : minimum distance to the last car in the current lane to start approaching (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`) (:ref:`test scene <trafficTestSceneObstacle>`).
+| **Min distance to check next connected path** : minimum distance to check the next path for obstacles (:ref:`example<trafficCarObstacleConfig3>`) (:ref:`test scene <trafficTestSceneNextConnectedPath>`).
 | **Short path length** : if the next path is too short, start checking the next connected paths for obstacles (:ref:`example<trafficCarObstacleConfig4>`).
-| **Calculate distance to intersect point** : distance to intersected paths when they are checked for obstacles (:ref:`example<trafficCarObstacleConfig5>`).
+| **Calculate distance to intersect point** : distance to intersected paths when they are checked for obstacles (:ref:`example<trafficCarObstacleConfig5>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
 
 **Obstacle intersect calculation method:** method of calculating the intersection of the vehicle and the intersect point.
 	* **Distance** : distance between car and intersect point.
 	* **Bounds** : calculate intersect point that inside the car bounds.
 	
-| **Size offset to intersect point** : additional offset to the length of the car bounds to check the closeness to the intersect point.
-| **Close enough distance to stop before intersect point** : car is close enough to stop in front of the intersect point if necessary (:ref:`example<trafficCarObstacleConfig5>`).
-| **Close enough distance to stop before intersect same target node** : current car is close enough to stop in front if another car approaches the same target node but with a higher priority (:ref:`example<trafficCarObstacleConfig6>`).
-| **Close distance to change lane point** : car that is too close to the lane change point is always an obstacle (:ref:`example<trafficCarObstacleConfig7>`).
+| **Size offset to intersect point** : additional offset to the length of the car bounds to check the closeness to the intersect point (:ref:`test scene <trafficTestSceneIntersectedPath>`).
+| **Close enough distance to stop before intersect point** : car is close enough to stop in front of the intersect point if necessary (:ref:`example<trafficCarObstacleConfig5>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
+| **Close enough distance to stop before intersect same target node** : current car is close enough to stop in front if another car approaches the same target node but with a higher priority (:ref:`example<trafficCarObstacleConfig6>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
+| **Close distance to change lane point** : car that is too close to the lane change point is always an obstacle (:ref:`example<trafficCarObstacleConfig7>`) (:ref:`test scene <trafficTestSceneChangeLane4>`).
 | **Max distance to obstacle change lane** : (:ref:`example<trafficCarObstacleConfig8>`).
 | **Same direction value** : direction of the vehicle to check for obstacles in neighboring paths (paths that start from the same point)(:ref:`example<trafficCarObstacleConfig9>`).
-| **Avoid crossroad jam** : car doesn't enter an crossroad if it cannot pass it without jamming (:ref:`example<trafficCarObstacleConfig10>`).
+| **Avoid crossroad jam** : car doesn't enter an crossroad if it cannot pass it without jamming (:ref:`example<trafficCarObstacleConfig10>`) (:ref:`test scene <trafficTestSceneCrossroadJam>`).
 	
 	.. note:: 
 		**How to calculate the parameters regarding the size of the vehicle hull:**
@@ -189,7 +191,7 @@ Config to calculate obstacles on the path.
 Traffic Car Approach Config
 ------------
 
-Config of approaching obstacles and lights.
+Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneObstacle>`).
 
 	.. image:: /images/configs/traffic/TrafficCarApproachConfig.png
 	
@@ -211,10 +213,12 @@ Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacl
 | **Dot direction** : if the raycast is set to :ref:`Hybrid mode<trafficDetectObstacleMode>` than only those targets that are in front of the car with the set dot parameter will be raycasted.
 | **Bounds multiplier** : value by which the bounds is multiplied.
 	
+.. _trafficCarChangeLaneConfig:
+	
 Traffic Car Change Lane Config
 ------------
 
-Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only).
+Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only) (:ref:`test scene <trafficTestSceneChangeLane>`).
 
 	.. image:: /images/configs/traffic/TrafficCarChangeLaneConfig.png
 	

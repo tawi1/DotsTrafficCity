@@ -236,7 +236,22 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 	
 	.. note:: Implemented by `PedestrianRagdollSystem`.
 
-Authoring components
+
+.. _pedestrianNavigation:
+
+Navigation
+----------------
+
+
+
+
+
+
+
+
+
+
+Authoring Components
 ----------------
 
 PedestrianAuthoring
@@ -286,7 +301,7 @@ Pedestrian Spawner Config
 	.. image:: /images/configs/pedestrian/PedestrianSpawnerConfig.png
 	
 | **Min pedestrian count** : number of pedestrians in the city.
-| **Pool size** : pool size of `HybridLegacy <pedestrianHybridLegacy>` skins.
+| **Pool size** : pool size of :ref:`HybridLegacy <pedestrianHybridLegacy>` skins.
 | **Ragdoll pool size** : :ref:`pedestrian ragdoll pool size<pedestrianRagdoll>`.
 | **Min/Max spawn delay** : minimum and maximum delay between spawn iterations.
 	

@@ -33,7 +33,7 @@ Steps
 
 	.. note::
 		**Optional packages:**
-			* **Reese's DOTS Navigation** - Reese's DOTS navigation package for :ref:`navigating <pedestrianNavigation> on the NavMesh (`original git <https://github.com/reeseschultz/ReeseUnityDemos>`_) (`604spirit's fork version <https://github.com/tawi1/ReeseUnityDemos>`_).
+			* **Reese's DOTS Navigation** - Reese's DOTS navigation package for :ref:`navigating <pedestrianNavigation>` on the NavMesh (`original git <https://github.com/reeseschultz/ReeseUnityDemos>`_) (`604spirit's fork version <https://github.com/tawi1/ReeseUnityDemos>`_).
 		
 	.. note::
 		**Script define symbols required for the project:**

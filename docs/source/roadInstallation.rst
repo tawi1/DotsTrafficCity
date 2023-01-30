@@ -36,8 +36,6 @@ From version `DOTS 1.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.0
 	
 Steps:
 	#. Select `Hub` on the scene.
-	#. Enter `Root name` or use default name.
-	#. Enter `Pedestrian nodes root name` or use default name.
 	#. Select `Entity sub scene path` the path to create a `subscene`.
 	#. Enter `Entity subscene name` or use default name.
 	#. On/off autosync configs (before migrating the configs to the `subscene`, they will be synchronized with the configs that are in the `Hub`).

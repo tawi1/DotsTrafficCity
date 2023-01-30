@@ -9,7 +9,7 @@ How To Use
 #. Create :ref:`pedestrian nodes <pedestrianNodeCreator>` & connect them.
 #. Create parent `GameObject` and add :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` component.
 #. In the created component, press :ref:`Show scene buttons <pedestrianLocalSpawnerCommonSettings>`.
-#. Select the `pedestrian nodes <pedestrianNode>` on the scene where you want the pedestrians to spawn.
+#. Select the :ref:`pedestrian nodes <pedestrianNode>` on the scene where you want the pedestrians to spawn.
 
 	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawner.png
 	`Selection example.`
@@ -50,25 +50,37 @@ Walking Test
 ~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/WalkingTest.png
+	`Source nodes.`
+	
 	.. image:: /images/testscenes/pedestrian/WalkingTest2.png
+	`Result.`
 	
 TalkArea Test
 ~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/TalkAreaTest.png
+	`Source node.`
+		
 	.. image:: /images/testscenes/pedestrian/TalkAreaTest2.png
+	`Result.`
 	
 Bench Test
 ~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/BenchTest.png
+	`Source nodes.`
+	
 	.. image:: /images/testscenes/pedestrian/BenchTest2.png
+	`Result.`
 	
 House Test
 ~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/HouseTest.png
+	`Source nodes.`
+	
 	.. image:: /images/testscenes/pedestrian/HouseTest2.png
+	`Result.`
 	
 .. _pedestrianNavigationTest:
 
@@ -76,3 +88,4 @@ Navigation Test
 ~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/NavigationTest.png
+	`Source nodes.`

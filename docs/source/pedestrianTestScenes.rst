@@ -57,6 +57,8 @@ Test case to test the :ref:`walking parameters <pedestrianSettingsConfig>`.
 	.. image:: /images/testscenes/pedestrian/WalkingTest2.png
 	`Result.`
 	
+.. _pedestrianTalkAreaTest:
+	
 TalkArea Test
 ~~~~~~~~~~~~
 
@@ -80,6 +82,8 @@ Test case how pedestrians wait at traffic lights and cross the crossroad.
 	.. image:: /images/testscenes/pedestrian/CrossroadTest3.png
 	`Crossing the road.`
 	
+.. _pedestrianBenchTest:
+	
 Bench Test
 ~~~~~~~~~~~~
 
@@ -90,6 +94,8 @@ Test case to test bench :ref:`seating <pedestrianNodeSit>`.
 	
 	.. image:: /images/testscenes/pedestrian/BenchTest2.png
 	`Result.`
+	
+.. _pedestrianHouseTest:
 	
 House & Idle Test
 ~~~~~~~~~~~~

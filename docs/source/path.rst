@@ -3,7 +3,7 @@
 Path
 =====
 
-`Path` is a set of points along which :ref:`vehicles <trafficCar>` travel and is a connection between :ref:`traffic nodes <trafficNode>`.
+`Path` is a set of :ref:`waypoints <pathWaypointInfo>` along which :ref:`vehicles <trafficCar>` travel and is a connection between :ref:`traffic nodes <trafficNode>`.
 
 How To Create
 ----------------

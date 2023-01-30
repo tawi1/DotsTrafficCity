@@ -88,7 +88,7 @@ Node for temporary idling pedestrians (:ref:`test scene <pedestrianHouseTest>`).
 
 	.. note:: 
 		| To set a custom idle time at the node, add the `PedestrianNodeIdleAuthoring` component.
-		| .. image:: /images/road/pedestrianNode/PedestrianNodeIdleAuthoring.png
+			.. image:: /images/road/pedestrianNode/PedestrianNodeIdleAuthoring.png
 
 Car parking
 """"""""""""""

@@ -3,7 +3,7 @@
 Traffic Public
 =====
 
-Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>`.
+Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>` and picks up passengers at :ref:`stop station nodes <pedestrianNodeStopStation>`.
 
 How To Create
 ------------

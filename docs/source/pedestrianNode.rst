@@ -116,10 +116,14 @@ Node for crowd conversations of pedestrians (:ref:`test scene <pedestrianTalkAre
 	.. image:: /images/road/pedestrianNode/PedestrianNodeTalkAreaExample.png
 	`Talk area example.`
 
+.. _pedestrianNodeStopStation:
+
 Traffic public stop station
 """"""""""""""
 
 Node for waiting for :ref:`public transport <trafficPublic>`.
+
+	.. note:: To set the maximum number of waiting vehicle passengers, adjust the :ref:`capacity <pedestrianNodeSettings>` parameter.
 
 	.. image:: /images/road/pedestrianNode/PedestrianNodeStopStationExample.png
 	`Stop station example.`
@@ -140,7 +144,7 @@ Common Settings
 ~~~~~~~~~~~~
 
 | **Can spawn in view** : can spawn in view of camera or not.
-| **Capacity** : -1 value is unlimited; Capacity for objects like benchs, houses etc...
+| **Capacity** : -1 value is unlimited; Capacity for objects like benchs, houses, public stop stations etc...
 | **Priority weight** : weight for choosing random node by pedestrian.
 | **Custom achieve distance** : custom achieve distance for pedestrian. If 0 then default value is taken.
 | **Chance to spawn** : chance to spawn pedestrian at node [0 = 0%, 1 = 100%].

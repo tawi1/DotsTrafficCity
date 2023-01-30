@@ -27,6 +27,8 @@ Steps
 		**Script define symbols required for the project:**
 			* **DOTSCITY**
 			
+.. _packageInstallationOptional:
+
 #. Click `Load Optional Packages` to start download optional packages.
 
 	.. note::

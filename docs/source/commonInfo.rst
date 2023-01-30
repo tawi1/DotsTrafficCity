@@ -28,3 +28,10 @@ Scene Streaming
 
 How To Use
 ~~~~~~~~~~~~
+
+
+Hybrid Entities
+-------------------
+
+How To Create
+~~~~~~~~~~~~

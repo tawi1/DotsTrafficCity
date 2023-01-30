@@ -9,6 +9,9 @@ Common Configs
 Common Configs
 -------------------
 
+.. _generalSettingsConfig:
+
+
 General Settings Config
 ~~~~~~~~~~~~
 

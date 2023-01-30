@@ -70,6 +70,8 @@ House Test
 	.. image:: /images/testscenes/pedestrian/HouseTest.png
 	.. image:: /images/testscenes/pedestrian/HouseTest2.png
 	
+.. _pedestrianNavigationTest:
+
 Navigation Test
 ~~~~~~~~~~~~
 

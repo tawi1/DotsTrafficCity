@@ -242,14 +242,66 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 Navigation
 ----------------
 
+| Navigation is used for pedestrian obstacle avoidance.
+| There are 2 types of navigation:
 
+.. _pedestrianNavmeshNavigation:
 
+NavMesh Navigating
+~~~~~~~~~~~~
 
+DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ (:ref:`test scene <pedestrianNavigationTest>`).
 
+Installation
+""""""""""""""
 
+* Check that the :ref:`navigation package <packageInstallationOptional>` is installed.
+* Make sure that navigation is enabled in the :ref:`general config <generalSettingsConfig>`.
+* Make sure :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
+* Each dynamic object on the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
 
+How To Enable
+""""""""""""""
 
+* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` Or `Persist` mode.
+* Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Calc nav path`.
+		
+Pros And Cons
+""""""""""""""
+	
+Pros:
+	* High precision.
+	* Can avoid any obstacle.
+	
+Cons:
+	* High CPU load.
 
+.. _pedestrianLocalAvoidance:
+
+Local Avoidance 
+~~~~~~~~~~~~
+
+DOTS system for avoiding local obstacles (vehicles).
+
+Useful links:
+	* :ref:`config <pedestrianLocalAvoidanceConfig>`
+	* :ref:`test scene <pedestrianNavigationTest>`.
+
+How To Enable
+""""""""""""""
+
+* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` mode.
+* Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Local avoidance`.
+
+Pros And Cons
+""""""""""""""
+
+Pros:
+	* Low CPU load.
+	
+Cons:
+	* Can avoid vehicles only.
+	* Works on flat surfaces only.
 
 Authoring Components
 ----------------
@@ -319,6 +371,7 @@ Pedestrian Settings Config
 	* **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
 	* **Dummy show always** : dummy skin will be loaded when the entity is created and will exist until it is destroyed..
 	* **No skin** : entities without a skin will be created.
+	
 **Pedestrian rig type:**
 	* **Hybrid legacy** : :ref:`hybrid entity with animator component<pedestrianHybridLegacy>`.
 	* **Texture baked** : :ref:`pure entity with gpu animations<pedestrianBaked>`.
@@ -328,6 +381,7 @@ Pedestrian Settings Config
 **Pedestrian entity type:**
 	* **No physics** : pedestrian not contains `PhysicsShape` component.
 	* **Physics** : pedestrian contains `PhysicsShape` component.
+	
 | **Pedestrian collider radius** : pedestrian collider radius for `No physics` type.
 | **Walking speed** : walking speed.
 | **Running speed** : running speed.
@@ -335,18 +389,28 @@ Pedestrian Settings Config
 | **Health** : number of hit points for pedestrians.
 | **Talking pedestrian spawn chance** : chance of spawning talking pedestrians
 | **Min/Max talk time** : min/max talk time.
+
+.. _pedestrianNavigationType:
+
 **Pedestrian navigation type:**
-	* **Temp** : navigation will be enabled if necessary.
-	* **Persist** : navigation is always on (for `NavMesh` calculation only).
+	* **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
+	* **Persist** : navigation is always on (for :ref:`NavMesh <pedestrianNavmeshNavigation>` calculation only).
 	* **Disabled**
+	
+.. _pedestrianObstacleAvoidanceType:
+	
 **Obstacle avoidance type:**
-	* **Calc nav path** : navigating based on `NavMesh`.
-	* **Local avoidance** : simple obstacle avoidance navigation.
+	* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>`.
+	* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation .
+	
 **Pedestrian collision type:**
 	* **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
 	* **Physics** : collision is calculated with `Unity.Physics` (:ref:`for Physics type<pedestrianEntityType>`).
 	* **Disabled**
+	
 | **Has ragdoll** : on/off :ref:`ragdoll<pedestrianRagdoll>` for pedestrian.
+
+.. _pedestrianLocalAvoidanceConfig:
 
 Pedestrian Obstacle Local Avoidance Config
 ~~~~~~~~~~~~

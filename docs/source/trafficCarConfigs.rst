@@ -73,6 +73,9 @@ Traffic Car Settings
 	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
 | **Cull wheels** : on/off wheel handling if they are outside the camera.
+
+.. _trafficNavMeshObstacle:
+
 | **Has nav obstacle** :
 	
 Traffic Car Nav Config

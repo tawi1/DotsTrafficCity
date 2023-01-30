@@ -80,6 +80,10 @@ Idle
 
 Node for temporary idling pedestrians.
 
+	.. note:: 
+		To set a custom idle time at the node, add the `PedestrianNodeIdleAuthoring`component.
+			.. image:: /images/road/pedestrianNode/PedestrianNodeIdleAuthoring.png.png
+
 Car parking
 """"""""""""""
 

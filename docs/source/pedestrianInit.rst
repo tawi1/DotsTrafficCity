@@ -284,8 +284,8 @@ Local Avoidance
 DOTS system for avoiding local obstacles (vehicles).
 
 Useful links:
-	* :ref:`config <pedestrianLocalAvoidanceConfig>`
-	* :ref:`test scene <pedestrianNavigationTest>`.
+	* :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`
+	* :ref:`Test scene <pedestrianNavigationTest>`.
 
 How To Enable
 """"""""""""""
@@ -414,6 +414,8 @@ Pedestrian Settings Config
 
 Pedestrian Obstacle Local Avoidance Config
 ~~~~~~~~~~~~
+
+Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 
 	.. image:: /images/configs/pedestrian/PedestrianObstacleLocalAvoidanceSettings.png
 	

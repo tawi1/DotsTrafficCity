@@ -49,6 +49,8 @@ Default
 
 Default node for the route.
  
+.. _pedestrianNodeSit:
+ 
 Sit
 """"""""""""""
 
@@ -68,12 +70,16 @@ Node for benches, seats, etc.
 	.. image:: /images/road/pedestrianNode/PedestrianNodeBenchExample.png
 	`Bench example.`
 
+.. _pedestrianNodeHouse:
+
 House
 """"""""""""""
 
 Node for entry/exit to the house.
 
 	.. tip:: Pedestrians who have entered the house node are will be destroyed.
+
+.. _pedestrianNodeIdle:
 
 Idle
 """"""""""""""
@@ -91,6 +97,8 @@ Node to enter/exit a parked car.
 
 	.. image:: /images/road/pedestrianNode/PedestrianNodeParkingExample.png
 	`Parking node example.`
+
+.. _pedestrianNodeTalkArea:
 
 Talk area
 """"""""""""""

@@ -32,8 +32,8 @@ Cached values
 		* **Connected traffic node** : :ref:`connected traffic node <trafficNodeConnection>`.
 	* **Path point** :
 		* **Connected path** : connected path in the :ref:`custom point <pathPointConnection>`.
-| **Nodes** : node point to create curves (bezier).
-| **Waypoints** : point of path.
+| **Nodes** : key node point to create curves (bezier).
+| **Waypoints** : :ref:`waypoints <pathWaypointInfo>` of path.
 
 .. _pathIntersects:
 
@@ -150,6 +150,18 @@ How To Use
 #. Enable :ref:`Show attach path buttons <pathPathPointVisualSettings>`.
 #. Select desired path.
 #. Customize position handles of source path nodes.
+
+.. _pathWaypointInfo:
+
+Waypoint Info
+----------------
+
+The path is made up of these waypoints, which direct each :ref:`vehicle <trafficCar>`.
+
+	.. image:: /images/road/path/PathNode.png
+	
+| **Speed limit** : the maximum speed of the vehicle when it reaches this waypoint.
+| **Backward direction** : when this option is activated, the vehicle will reverse (:ref:`test scene <trafficTestSceneTrafficReverse>`).
 
 .. _pathSettingsWindow:
 

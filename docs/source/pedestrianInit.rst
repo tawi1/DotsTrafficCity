@@ -263,6 +263,7 @@ Installation
 How To Enable
 """"""""""""""
 
+* Create & customize `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
 * Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` Or `Persist` mode.
 * Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Calc nav path`.
 		

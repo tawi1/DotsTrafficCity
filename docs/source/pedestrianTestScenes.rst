@@ -49,6 +49,8 @@ Test Cases
 Walking Test
 ~~~~~~~~~~~~
 
+Test case to test the :ref:`walking parameters <pedestrianSettingsConfig>`.
+
 	.. image:: /images/testscenes/pedestrian/WalkingTest.png
 	`Source nodes.`
 	
@@ -64,8 +66,24 @@ TalkArea Test
 	.. image:: /images/testscenes/pedestrian/TalkAreaTest2.png
 	`Result.`
 	
+Crossroad Test
+~~~~~~~~~~~~
+
+Test case how pedestrians wait at traffic lights and cross the crossroad.
+
+	.. image:: /images/testscenes/pedestrian/CrossroadTest.png
+	`Source nodes.`
+		
+	.. image:: /images/testscenes/pedestrian/CrossroadTest2.png
+	`Traffic waiting.`
+		
+	.. image:: /images/testscenes/pedestrian/CrossroadTest3.png
+	`Crossing the road.`
+	
 Bench Test
 ~~~~~~~~~~~~
+
+Test case to test bench :ref:`seating <pedestrianNodeSit>`.
 
 	.. image:: /images/testscenes/pedestrian/BenchTest.png
 	`Source nodes.`
@@ -73,8 +91,10 @@ Bench Test
 	.. image:: /images/testscenes/pedestrian/BenchTest2.png
 	`Result.`
 	
-House Test
+House & Idle Test
 ~~~~~~~~~~~~
+
+Test case for :ref:`idling <pedestrianNodeIdle>` and entering :ref:`house <pedestrianNodeHouse>`.
 
 	.. image:: /images/testscenes/pedestrian/HouseTest.png
 	`Source nodes.`
@@ -86,6 +106,8 @@ House Test
 
 Navigation Test
 ~~~~~~~~~~~~
+
+Test case for navigating :ref:`navigating <pedestrianNavmeshNavigation>`.
 
 	.. image:: /images/testscenes/pedestrian/NavigationTest.png
 	`Source nodes.`

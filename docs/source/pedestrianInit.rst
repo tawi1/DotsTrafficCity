@@ -260,7 +260,7 @@ Installation
 * Make sure :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
 * Each dynamic object on the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
 
-How To Enable
+How To Setup
 """"""""""""""
 
 * Create & customize `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
@@ -288,11 +288,12 @@ Useful links:
 	* :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`
 	* :ref:`Test scene <pedestrianNavigationTest>`.
 
-How To Enable
+How To Setup
 """"""""""""""
 
 * Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` mode.
 * Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Local avoidance`.
+* Configure :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`.
 
 Pros And Cons
 """"""""""""""

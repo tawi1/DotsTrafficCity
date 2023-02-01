@@ -15,7 +15,7 @@ How To Create
 Hybrid legacy skin
 ~~~~~~~~~~~~
 
-`Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with animator) and the DOTS entity.
+`Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with `animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_) and the DOTS entity.
 
 Factory
 """"""""""""""

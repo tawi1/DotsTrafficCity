@@ -24,7 +24,7 @@ Settings
 **Traffic node type:** 
 	* **Default**
 	* **Parking** : node where cars are parked.
-	* **Traffic public stop** : node where public traffic stops to pick up passengers. 
+	* **Traffic public stop** : node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
 	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
 	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.
 	* **Idle** : node where the vehicle is idling.
@@ -121,7 +121,7 @@ How To Use
 .. _trafficNodeCollider:
 
 	.. note:: 
-		* To prevent auto-path connection for the selected :ref:`TrafficNode <trafficNode>` enable **Lock path auto creation** in the settings of the node.
+		* To prevent auto-path connection for the selected :ref:`TrafficNode <trafficNode>` enable **Lock path auto creation** in the :ref:`settings <trafficNodeSettings>` of the node.
 		* Every :ref:`TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (:ref:`oneway <trafficNodeOneWay>` or not).
 		* Make sure that the :ref:`direction of the node <trafficNodeRotation>` is set correctly.
 		

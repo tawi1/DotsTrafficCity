@@ -26,7 +26,7 @@ Pedestrian Node
 Connection Data
 ~~~~~~~~~~~~
 
-| **Connected traffic node** : connect traffic node (for parking).
+| **Connected traffic node** : connected :ref:`traffic node <trafficNode>` (for parking).
 | **Related traffic light handler** : connected traffic light.
 | **Auto connected pedestrian nodes** : connected other nodes along :ref:`selected direction <pedestrianNodeConnections>` raycasts.
 | **Default connected pedestrian nodes** : connected other nodes by the user.

@@ -114,6 +114,13 @@ Navigation Test
 ~~~~~~~~~~~~
 
 Test case for navigating :ref:`navigating <pedestrianNavmeshNavigation>`.
+Red circle navigation is disabled. Green is enabled.
 
 	.. image:: /images/testscenes/pedestrian/NavigationTest.png
 	`Source nodes.`
+	
+	.. image:: /images/testscenes/pedestrian/NavigationLocalAvoidanceTest.png
+	`Local avoidance example.`
+	
+	.. image:: /images/testscenes/pedestrian/NavigationNavAgentTest.png
+	`NavMesh navigating example.`

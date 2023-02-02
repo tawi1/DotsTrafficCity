@@ -12,7 +12,7 @@ How To Create
 #. Connect created segments by :ref:`paths <path>`.
 #. Create empty `GameObject` and add :ref:`TrafficPublicRoute <trafficPublicRouteComponent>` component.
 #. Enable :ref:`Show path selection buttons <trafficPublicRouteSceneSettings>` option.
-#. Sequentially select each :ref:`path <path>` of the route (how to make a :ref:`lane change <trafficPublicRouteHowToCreateTransition>`).
+#. Sequentially select each :ref:`path <path>` of the route (also you make a :ref:`lane change <trafficPublicRouteHowToCreateTransition>`).
 
 	.. image:: /images/road/PublicRoute/PublicRouteExample2.png
 	`Selection route example.`

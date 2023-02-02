@@ -19,11 +19,11 @@ How To Create
 Pedestrian Node
 ----------------
 
-``Pedestrian node is a node for creating pedestrian routes``
+`Pedestrian node` is a node for creating :ref:`pedestrian <pedestrianEntity>` route.
 
 	.. image:: /images/road/pedestrianNode/PedestrianNode.png
 	
-Connected data
+Connection Data
 ~~~~~~~~~~~~
 
 | **Connected traffic node** : connect traffic node (for parking).
@@ -87,7 +87,7 @@ Idle
 Node for temporary idling pedestrians (:ref:`test scene <pedestrianHouseTest>`).
 
 	.. note:: 
-		* To set a custom idle time at the node, add the `PedestrianNodeIdleAuthoring` component.
+		* To set a custom idle time at the node, add the `PedestrianNodeIdleSettings` component.
 		* .. image:: /images/road/pedestrianNode/PedestrianNodeIdleAuthoring.png
 
 Car parking
@@ -143,12 +143,18 @@ Node for entering :ref:`public transport <trafficPublic>`.
 Common Settings
 ~~~~~~~~~~~~
 
+**Shape type** : shape of the area for randomization of :ref:`pedestrian <pedestrianEntity>` targets.
+	* **Circle**
+	* **Square** 
+	* **Rectangle**
+
 | **Can spawn in view** : can spawn in view of camera or not.
 | **Capacity** : -1 value is unlimited; Capacity for objects like benchs, houses, public stop stations etc...
-| **Priority weight** : weight for choosing random node by pedestrian.
-| **Custom achieve distance** : custom achieve distance for pedestrian. If 0 then default value is taken.
-| **Chance to spawn** : chance to spawn pedestrian at node [0 = 0%, 1 = 100%].
+| **Priority weight** : weight for choosing random node by :ref:`pedestrian <pedestrianEntity>`.
+| **Custom achieve distance** : custom achieve distance for :ref:`pedestrian <pedestrianEntity>`. If 0 then default value is taken.
+| **Chance to spawn** : chance to spawn :ref:`pedestrian <pedestrianEntity>` at node [0 = 0%, 1 = 100%].
 | **Max path width** : maximum width of the route around the node.
+| **Height** : maximum height size of the node area (square and rectangle shapes only).
 | **Has movement random offset** : are supposed to randomize the position around a node.
 		
 Buttons

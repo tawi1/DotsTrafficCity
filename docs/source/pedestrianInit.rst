@@ -337,7 +337,7 @@ States
 **Pedestrian Action State:**
 	* **Default** : no state.
 	* **Idle** : when a pedestrian is waiting.
-	* **MovingToNextTargetPoint** : when going from `PedestrianNode <pedestrianNode>` to `PedestrianNode <pedestrianNode>` (excluding crosswalk).
+	* **MovingToNextTargetPoint** : when going from :ref:`PedestrianNode <pedestrianNode>` to :ref:`PedestrianNode <pedestrianNode>` (excluding crosswalk).
 	* **WaitForGreenLight** : when a pedestrian is waiting for a green traffic light.
 	* **CrossingTheRoad** : when a pedestrian goes crossing a crosswalk.
 	* **ScaryRunning** : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).

@@ -11,7 +11,7 @@ How To Use
 #. In the created component, press :ref:`Show scene buttons <pedestrianLocalSpawnerCommonSettings>`.
 #. Select the :ref:`pedestrian nodes <pedestrianNode>` on the scene where you want the pedestrians to spawn.
 
-	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawner.png
+	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawnerExample.png
 	`Selection example.`
 	
 #. Adjust the :ref:`Spawn amount <pedestrianLocalSpawnerCommonSettings>`.
@@ -114,7 +114,7 @@ Navigation Test
 ~~~~~~~~~~~~
 
 Test case for navigating :ref:`navigating <pedestrianNavmeshNavigation>`.
-Red circle navigation is disabled. Green is enabled.
+Red circle navigation is disabled. Green circle navigation is enabled.
 
 	.. image:: /images/testscenes/pedestrian/NavigationTest.png
 	`Source nodes.`

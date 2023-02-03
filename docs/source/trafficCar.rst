@@ -51,6 +51,8 @@ Obstacle Info
 Raycast
 """"""""""""""
 
+:ref:`Config. <trafficCarRaycastConfig>`
+
 Modes:
 	* `Hybrid mode` : raycast is activated only when the selected targets are close to the car.
 	* `Raycast only` : raycasts are sent constantly.
@@ -66,10 +68,10 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 			   out CollisionFilter tempRaycastCollisionFilter,
 			   out CollisionFilter raycastAlwaysCollisionFilter);
 		
-| :ref:`TrafficCarDetectObstacleMode. <trafficDetectObstacleMode>`
-| :ref:`TrafficCarDetectNpcMode. <trafficDetectObstacleMode>`
-| **Temp raycast CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of hybrid raycast mode.
-| **Raycast always CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
+* :ref:`TrafficCarDetectObstacleMode. <trafficDetectObstacleMode>`
+* :ref:`TrafficCarDetectNpcMode. <trafficDetectObstacleMode>`
+* **Temp raycast CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of hybrid raycast mode.
+* **Raycast always CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
 		
 	.. note:: You can also dynamically change the raycast target by adding or removing the `TrafficCustomRaycastTargetTag` component.
 

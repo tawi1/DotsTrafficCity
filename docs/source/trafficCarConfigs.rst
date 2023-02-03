@@ -200,10 +200,12 @@ Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneOb
 | **On coming to the red light speed** : slowing down the speed of the car when approaching a red light (if the segment speed limit is lower or the speed of the obstacles is lower, the lowest speed of all the conditions will be selected).
 | **Stopping distance to light** : distance at which the car slows down.
 	
+.. _trafficCarRaycastConfig:
+	
 Traffic Car Raycast Config
 ------------
 
-Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`).
+Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
 
 	.. image:: /images/configs/traffic/TrafficCarRaycastConfig.png
 	

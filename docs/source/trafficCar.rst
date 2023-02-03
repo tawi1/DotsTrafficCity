@@ -51,7 +51,10 @@ Obstacle Info
 Raycast
 """"""""""""""
 
-In `Hybrid mode` raycast is activated only when the selected targets are close to the car.
+Modes:
+	* `Hybrid mode` : raycast is activated only when the selected targets are close to the car.
+	* `Raycast only` : raycasts are sent constantly.
+	
 To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `GetTargetQuery` method in the ``TrafficCarRaycastObstacleTargetQueryProvider`` class, which returns the `EntityQuery <https://docs.unity.cn/Packages/com.unity.entities@1.0/api/Unity.Entities.EntityQuery.html>`_ of the targets.
 
 ..  code-block:: r

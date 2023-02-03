@@ -40,6 +40,36 @@ How To Create
 #. To create new enums, click the button `Add Enum Types`.
 #. After the enums are created, click `Create` to create the prefabs.
 
+Common Info
+----------------
+
+Obstacle Info
+~~~~~~~~~~~~
+
+.. _trafficCarRaycastInfo:
+
+Raycast
+""""""""""""""
+
+In `Hybrid mode` raycast is activated only when the selected targets are close to the car.
+To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `GetTargetQuery` method in the ``TrafficCarRaycastObstacleTargetQueryProvider`` class, which returns the `EntityQuery <https://docs.unity.cn/Packages/com.unity.entities@1.0/api/Unity.Entities.EntityQuery.html>`_ of the targets.
+
+..  code-block:: r
+
+	public static EntityQuery GetTargetQuery(
+			   SystemBase sourceSystem,
+			   TrafficCarDetectObstacleMode trafficCarDetectObstacleMode,
+			   TrafficCarDetectNpcMode trafficCarDetectNpcMode,
+			   out CollisionFilter tempRaycastCollisionFilter,
+			   out CollisionFilter raycastAlwaysCollisionFilter);
+		
+| :ref:`TrafficCarDetectObstacleMode. <trafficDetectObstacleMode>`
+| :ref:`TrafficCarDetectNpcMode. <trafficDetectObstacleMode>`
+| **Temp raycast CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of hybrid raycast mode.
+| **Raycast always CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
+		
+	.. note:: You can also dynamically change the raycast target by adding or removing the `TrafficCustomRaycastTargetTag` component.
+
 Authoring components
 ----------------
 

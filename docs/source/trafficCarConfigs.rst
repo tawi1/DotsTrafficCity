@@ -26,8 +26,6 @@ Traffic Car Settings
 
 	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
 	
-
-	
 **Entity type:**
 	* **Hybrid cube entity simple physics**
 	* **Hybrid entity full physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
@@ -46,10 +44,10 @@ Traffic Car Settings
 **Traffic car detect obstacle mode:**
 	* **Hybrid** : combine types `Calculate` and `Raycast`.
 	* **Calculate only** : mathematically calculates the obstacle.
-	* **Raycast only** : detect obstacle by raycast.
+	* **Raycast only** : detect obstacle by raycast (:ref:`more info <trafficCarRaycastInfo>`).
 	
 	.. note::
-		In `Hybrid mode`, raycast is activated only when the selected targets are close to the car.
+		In `Hybrid mode`, raycast is activated only when the selected targets are close to the car (:ref:`more info <trafficCarRaycastInfo>`).
 	
 **Traffic car detect npc mode:**
 	* **Disabled**

@@ -280,8 +280,8 @@ Traffic Car Parking Config
 	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
 
 **Rotation aligment at node support** : on/off car automatically turns in alignment with the parking node.
-	**Rotation speed** : rotation speed.
-	**Complete angle** : angle at which the rotation is complete.
+	* **Rotation speed** : rotation speed.
+	* **Complete angle** : angle at which the rotation is complete.
 		
 .. _trafficCarAntistuckConfig:
 		

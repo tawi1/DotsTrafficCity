@@ -250,8 +250,12 @@ Navigation
 NavMesh Navigating
 ~~~~~~~~~~~~
 
-DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ (:ref:`test scene <pedestrianNavigationTest>`).
+DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ .
 
+Useful links:
+	* :ref:`NavAgent Config <pedestrianNavAgentConfig>`
+	* :ref:`Test scene <pedestrianNavigationTest>`.
+	
 Installation
 """"""""""""""
 
@@ -305,8 +309,18 @@ Cons:
 	* Can avoid vehicles only.
 	* Works on flat surfaces only.
 
+Common Info
+----------------
+
+Collision
+~~~~~~~~~~~~
+
+In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust :ref:`Antistuck config <pedestrianAntistuckConfig>`.
+
 Authoring Components
 ----------------
+
+Authoring components that make up the pedestrian entity.
 
 PedestrianAuthoring
 ~~~~~~~~~~~~
@@ -402,8 +416,8 @@ Pedestrian Settings Config
 .. _pedestrianObstacleAvoidanceType:
 	
 **Obstacle avoidance type:**
-	* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>`.
-	* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation .
+	* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
+	* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
 	
 **Pedestrian collision type:**
 	* **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
@@ -411,6 +425,22 @@ Pedestrian Settings Config
 	* **Disabled**
 	
 | **Has ragdoll** : on/off :ref:`ragdoll<pedestrianRagdoll>` for pedestrian.
+
+.. _pedestrianNavAgentConfig:
+
+Pedestrian NavAgent Config
+~~~~~~~~~~~~
+
+Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
+
+	.. image:: /images/configs/pedestrian/NavAgentConfig.png
+
+| **Update frequency** : how often the nav target can be updated.
+| **Max distance to target node** : distance to nav path node.
+| **Max collision time** : if the pedestrian is stuck for more than the collision time, the anti-stuck will be activated.
+**Revert target support** : if steering target is much further than final target with a given value the target will be reverted.
+	* **Revert steering target distance** : distance to steering target logic for target return.
+	* **Revert end target remaining distance** : distance to final target logic for target return.
 
 .. _pedestrianLocalAvoidanceConfig:
 
@@ -427,6 +457,20 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 | **Max surface angle** : maximum surface tilt angle at which the avoidance is calculated.
 | **Target point offset** : offset between an obstacle and avoidance waypoints.
 | **Achieve distance** : distance to achieve the avoidance waypoint.
+
+.. _pedestrianAntistuckConfig:
+
+Pedestrian Antistuck Config
+~~~~~~~~~~~~
+
+Anti-stuck config for pedestrians stucked in a collision.
+
+	.. image:: /images/configs/pedestrian/PedestrianAntistuckConfig.png
+	
+| **Antistuck enabled** : on/off anti-stuck feature (if disabled previous target will be selected).
+| **Target direction dot** : direction between the pedestrian's forward and the anti-stuck point.
+| **Achieve distance** : achieve distance to the antistuck target point.
+| **Target point offset** : distance between collision and anti-stuck point.
 	
 Pedestrian Trigger Config
 ~~~~~~~~~~~~

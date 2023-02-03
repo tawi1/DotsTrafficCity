@@ -22,14 +22,18 @@ Config to quickly on/off optional features.
 **Player agent type:**
 	* **Player** : player will be spawned.
 	* **Free fly camera** :	flying camera will be spawned.
+	
 | **Player support** : on/off systems related to the player.
 | **Bullet support** : on/off systems related to the bullets.	
+
 **Bullet collision type:** method of calculating collisions for a bullet.
 	* **Calculate collision** : manual calculating.
 	* **Raycast** : by raycast.
+	
 **Shoot direction source:**
 	* **Joystick** : target of the firing in the direction of the joystick.
 	* **Crosshair** : target of the shooting in the direction of the crosshair position.
+	
 | **Max target distance** : maximum distance for crosshair target capture.
 | **Max capture angle** :	maximum angle for crosshair target capture.
 | **Default aim point distance** : distance between the player and the crosshair if there is no target.	
@@ -44,13 +48,18 @@ Config to quickly on/off optional features.
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 | **Has pedestrian** : on/off pedestrians in the city.	
 | **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due bullets etc...).
+
 **Physics simulation type:**
 	* **No physics** : dots physics off.
 	* **Unity physics** : unity dots physics on.
 	* **Havok physics** : havok dots physics on (havok physical package is required).
+	
 | **Health system support** :	on/off health systems for all entities (vehicles, pedestrians, etc...).
 | **Navigation support** : on/off navigation systems for pedestrians.
-| **Chasing cars support** :		
+
+.. _propsDamageOption:
+
+| **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
 | **Show fps** : on/off fps ui panel.
 	
 .. cullConfig:

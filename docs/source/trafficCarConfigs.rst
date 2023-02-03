@@ -274,8 +274,12 @@ Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`
 | **Side offset X** : width of the obstacle calculation square.
 | **Max Y diff** : maximum difference in Y-axis position between the car and the npc.
 	
+.. _trafficCarParkingConfig:
+	
 Traffic Car Parking Config
 ------------
+
+Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
 
 	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
 

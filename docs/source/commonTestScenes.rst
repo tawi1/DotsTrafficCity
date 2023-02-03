@@ -6,7 +6,7 @@ Common Test Scenes
 Props Test Scene
 ------------
 
-The scene is designed to test the reaction of the :ref:`props <propsInfo> to damage.
+The scene is designed to test the reaction of the :ref:`props <propsInfo>` to damage.
 
 #. Source scene:
 

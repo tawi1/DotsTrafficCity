@@ -158,9 +158,11 @@ How To Create
 				{
 					var exampleObject = exampleFactory.Get();
 					
-					EntityManager.AddComponentObject(entity, exampleObject.transform); //bind transform to entity
+					//bind transform to entity
+					EntityManager.AddComponentObject(entity, exampleObject.transform); 
 					
-					commandBuffer.SetComponentEnabled<InitComponentExample>(entity, false); //disable init component
+					//disable init component
+					commandBuffer.SetComponentEnabled<InitComponentExample>(entity, false); 
 				
 				}).Run();
 				

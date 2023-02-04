@@ -97,7 +97,7 @@ Player Npc Sound Config
 
 	.. image:: /images/configs/common/PlayerNpcSoundConfig.png
 	
-| **Footstep frequency** : sound frequency of the player's footsteps.
+| **Footstep frequency** : :ref:`sound <soundData>` frequency of the player's footsteps.
 	
 Sound Configs
 -------------------	
@@ -110,21 +110,23 @@ Common Sound Config
 	.. image:: /images/configs/common/CommonSoundConfig.png
 	
 | **Has sounds** : on/off dots sound systems.
-| **Crowd sound** : on/off crowd sound system for pedestrians.
-| **Random hornes sound** : on/off horne sound system for traffic.
+| **Crowd sound** : on/off crowd :ref:`sound <soundData>` system for pedestrians.
+| **Random horns sound** : on/off horn :ref:`sound <soundData>` system for traffic.
 	
 Crowd Sound Config
 ~~~~~~~~~~~~
 
+Сonfig for crowd background sound. The sound of the crowd is calculated on the basis of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
+
 	.. image:: /images/configs/common/CrowdSoundConfig.png
 	
-| **Crowd sound data** : crowd sound data.
-| **Inner crowd sound count** :
-| **Outer crowd sound count** :
-| **Min crowd sound count** :
+| **Crowd sound data** : crowd :ref:`sound <soundData>` data.
+| **Inner crowd sound count** : maximum volume for a given number of pedestrians in the inner circle.
+| **Outer crowd sound count** : maximum volume for a given number of pedestrians in the outer circle.
+| **Min crowd sound count** : minimum number of pedestrians to play the crowd sound.
 | **Max volume** : maximum volume level for the crowd sound.
-| **Outer max volume** :
+| **Outer max volume** : maximum volume in the outer circle.
 | **Min volume** : minimum volume level for the crowd sound.
-| **Inner cell offset** :
-| **Outer cell offset** :
-| **Lerp volume speed** :
+| **Inner cell offset** : offset of neighbouring cells relative to current cell in hashmap in the inner circle.
+| **Outer cell offset** : offset of neighbouring cells relative to current cell in hashmap in the outer circle.
+| **Lerp volume speed** : speed of sound volume change between current value and target value.

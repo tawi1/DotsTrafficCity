@@ -193,7 +193,7 @@ How To Use
 #. Create props prefab.
 #. Add :ref:`Props Authoring <propsAuthoring>` component.
 #. Tick if necessary `Has Custom Prop Reset`.
-#. Make sure that :ref:`Props damage systems <propsDamageOption>` is enabled.
+#. Make sure that :ref:`Props damage system support <propsDamageOption>` option is enabled.
 #. Use :ref:`test scene <propsTestScene>` to check that the props are working.
 
 .. _propsAuthoring:

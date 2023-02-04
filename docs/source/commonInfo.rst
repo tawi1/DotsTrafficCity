@@ -43,7 +43,7 @@ How To Create
 #. Customize :ref:`chunk settings <subSceneCreatorChunkSettings>`.
 #. If necessary enable :ref:`post process settings <subSceneCreatorPostProcess>` **[optional step]**.
 #. Press `Create` button.
-#. Adjust :ref:`Streaming Level Config <streamingLevelConfig>` to load/unload subscenes in the runtime.
+#. Adjust :ref:`Streaming Level Config <streamingLevelConfig>` to load/unload subscenes at the runtime.
 
 .. _subSceneCreator:
 
@@ -120,7 +120,7 @@ Entities that combine `DOTS` entities and default `GameObjects` (game objects ar
 How To Create
 ~~~~~~~~~~~~
 
-#. Create an entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ .
+#. Create prefab entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_.
 #. Add ``CopyTransformToGameObject`` component and add your custom init component to the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ process for initialization, pseudo code example:
 
 	..  code-block:: r
@@ -129,6 +129,7 @@ How To Create
 		{		  
 		}
 		
+#. Spawn prefab entity at runtime.
 #. Create your own init system to initialize your hybrid entity, pseudo code example:
 
 	..  code-block:: r
@@ -192,7 +193,7 @@ How To Use
 #. Create props prefab.
 #. Add :ref:`Props Authoring <propsAuthoring>` component.
 #. Tick if necessary `Has Custom Prop Reset`.
-#. Make sure that :ref:`test scene example <propsDamageOption>` is enabled.
+#. Make sure that :ref:`Props damage systems <propsDamageOption>` is enabled.
 #. Use :ref:`test scene <propsTestScene>` to check that the props are working.
 
 .. _propsAuthoring:

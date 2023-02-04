@@ -11,7 +11,6 @@ Common Configs
 
 .. _generalSettingsConfig:
 
-
 General Settings Config
 ~~~~~~~~~~~~
 
@@ -109,9 +108,11 @@ Common Sound Config
 
 	.. image:: /images/configs/common/CommonSoundConfig.png
 	
-| **Has sounds** : on/off dots sound systems.
-| **Crowd sound** : on/off crowd :ref:`sound <soundData>` system for pedestrians.
+| **Has sounds** : on/off `DOTS` sound systems.
+| **Crowd sound** : on/off :ref:`crowd sound <soundCrowdConfig>` system for pedestrians.
 | **Random horns sound** : on/off horn :ref:`sound <soundData>` system for traffic.
+	
+.. _soundCrowdConfig:
 	
 Crowd Sound Config
 ~~~~~~~~~~~~

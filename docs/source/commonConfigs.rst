@@ -62,7 +62,7 @@ Config to quickly on/off optional features.
 | **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
 | **Show fps** : on/off fps ui panel.
 	
-.. cullConfig:
+.. _cullConfig:
 
 Cull Config
 ~~~~~~~~~~~~
@@ -76,7 +76,7 @@ Config of the :ref:`cull point <cullPointInfo>`.
 	* **Visible distance** : distance to activate visual features of entities.
 | **Show debug** : on/off visual culling circle on the scene.
 	
-.. streamingLevelConfig:
+.. _streamingLevelConfig:
 
 Streaming Level Config
 ~~~~~~~~~~~~

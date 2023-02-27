@@ -34,7 +34,7 @@ Variables
 
 | **Road segment placer** : reference to :ref:`RoadSegmentPlacer<roadSegmentPlacer>`.
 | **Short title name** : short name for `RoadSegmentPlacer`.
-| **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExampleon>` on the scene.
+| **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExample>` on the scene.
 	
 Buttons
 """"""""""""""

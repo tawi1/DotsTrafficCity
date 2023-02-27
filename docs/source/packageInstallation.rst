@@ -3,7 +3,7 @@
 Package Installation
 ============
 
-`Getting started tutorial <https://youtu.be/Y_LklnjDQ2U>`_
+`Getting started tutorial <https://youtu.be/MAAausK_cSM>`_
 
 Steps
 ------------

@@ -4,25 +4,25 @@
 Traffic Light
 ************
 
-.. _trafficLightGlobalSemaphoreHowToUse:
+.. _trafficLightGlobalLightHowToUse:
 
 How To Customize City Crossroads
 ------------
 	
-#. Open :ref:`Global Semaphore Settings <trafficLightGlobalSemaphore>`.
+#. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
 
-	`Spirit604/CityEditor/Window/Global Semaphore Settings`
+	`Spirit604/CityEditor/Window/Global Traffic Light Settings`
 	
-	.. image:: /images/road/trafficLight/GlobalSemaphoreConnectionSettingsOpen.png
+	.. image:: /images/road/trafficLight/GlobalLightConnectionSettingsOpen.png
 	
-#. Enable :ref:`Show world info <trafficLightGlobalSemaphoreCommonSettings>`.
+#. Enable :ref:`Show world info <trafficLightGlobalLightCommonSettings>`.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample1.png
+	.. image:: /images/road/trafficLight/GlobalLightViewExample1.png
 	
 #. You can now quickly see and adjust the timelines of all the crossroads.
-#. Enable :ref:`Show disabled lights <trafficLightGlobalSemaphoreCommonSettings>` to see crossroads with traffic lights off.
+#. Enable :ref:`Show disabled lights <trafficLightGlobalLightCommonSettings>` to see crossroads with traffic lights off.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample2.png
+	.. image:: /images/road/trafficLight/GlobalLightViewExample2.png
 	
 #. Select the desired crossroad and press `Select`.
 #. Now in the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component you can adjust timings.
@@ -30,36 +30,36 @@ How To Customize City Crossroads
 How To Assign Light
 ------------
 
-#. Open :ref:`Global Semaphore Settings <trafficLightGlobalSemaphoreHowToUse>`.
-#. Enable :ref:`Show light connections <trafficLightGlobalSemaphoreConnectionSettings>`.
+#. Open :ref:`Global Light Settings <trafficLightGlobalLightHowToUse>`.
+#. Enable :ref:`Show light connections <trafficLightGlobalLightConnectionSettings>`.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreConnectionSettings.png
+	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
-#. Select :ref:`Light connection type <trafficLightGlobalSemaphoreConnectionSettings>` for example :ref:`traffic node <trafficNode>`.
+#. Select :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>` for example :ref:`traffic node <trafficNode>`.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewTrafficNodeConnection.png
+	.. image:: /images/road/trafficLight/GlobalLightViewTrafficNodeConnection.png
 	
-#. Select :ref:`H0 <trafficLightGlobalSemaphoreObjectDescription>` or :ref:`H1 <trafficLightGlobalSemaphoreObjectDescription>` depending on the desired semaphore index.
-#. Next, select desired :ref:`T <trafficLightGlobalSemaphoreObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
+#. Select :ref:`H0 <trafficLightGlobalLightObjectDescription>` or :ref:`H1 <trafficLightGlobalLightObjectDescription>` depending on the desired light index.
+#. Next, select desired :ref:`T <trafficLightGlobalLightObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
 #. Now, the selected :ref:`TrafficNode <trafficNode>` will have the selected  :ref:`TrafficLightHandler <trafficLightHandler>`.
-#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing :ref:`Light connection type <trafficLightGlobalSemaphoreConnectionSettings>`.
+#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewPedestrianConnection.png
+	.. image:: /images/road/trafficLight/GlobalLightViewPedestrianConnection.png
 	`Pedestrian node connection example.`
 	
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewLightConnection2.png
+	.. image:: /images/road/trafficLight/GlobalLightViewLightConnection2.png
 	`Light object connection example.`
 
-.. _trafficLightGlobalSemaphore:
+.. _trafficLightGlobalLight:
 
-Global Semaphore Settings 
+Global Lights Settings 
 ------------
 
 Window for quick display of crossroad timings and for connecting the traffic lights to different entities.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreSettings.png
+	.. image:: /images/road/trafficLight/GlobalLightSettings.png
 
-.. _trafficLightGlobalSemaphoreCommonSettings:
+.. _trafficLightGlobalLightCommonSettings:
 
 Common Settings
 ~~~~~~~~~~~~
@@ -70,20 +70,20 @@ Common Settings
 
 .. _trafficLightSceneInfo:
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample1.png
+	.. image:: /images/road/trafficLight/GlobalLightViewExample1.png
 	`Scene light info example.`
 	
 .. _trafficLightSceneInfo2:
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewExample2.png
+	.. image:: /images/road/trafficLight/GlobalLightViewExample2.png
 	`Scene light info (include disabled) example.`
 
-.. _trafficLightGlobalSemaphoreConnectionSettings:
+.. _trafficLightGlobalLightObjectDescription:
 
 Connection Settings
 ~~~~~~~~~~~~
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreConnectionSettings.png
+	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
 | **Show light connections** : on/off light connections on the scene.
 | **Auto unselect handler** : auto unselect :ref:`TrafficLightHandler <trafficLightHandler>` when connecting :ref:`TrafficLightHandler <trafficLightHandler>` traffic lights to any object.
@@ -95,20 +95,20 @@ Connection Settings
 	* **Pedestrian node** : show :ref:`pedestrian node <pedestrianNode>` connection only.
 	* **Light** : show light object connection only.
 | **Show connection buttons** : show connection buttons for selected `Light connection type`.
-| **Semaphore index** : objects with a selected :ref:`semaphore index <trafficLightSemaphoreIndex>` are displayed (-1 value - all indexes are displayed).
+| **Lights index** : objects with a selected :ref:`light index <trafficLightIndex>` are displayed (-1 value - all indexes are displayed).
 	
-	.. image:: /images/road/trafficLight/GlobalSemaphoreViewTrafficNodeConnection2.png
-	`Selected Light connection type : [TrafficNode] and Semaphore index : [0] example.`
+	.. image:: /images/road/trafficLight/GlobalLightViewTrafficNodeConnection2.png
+	`Selected Light connection type : [TrafficNode] and Lights index : [0] example.`
 		
-World Semaphores
+World Lights
 ~~~~~~~~~~~~
 
 | **Custom settings** : on/off custom timeline settings for selected crossroad.
 **Timeline:** shows :ref:`light states <trafficLightState>` of crossroad and total duration.
-	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`semaphore index <trafficLightSemaphoreIndex>` 0.
-	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`semaphore index <trafficLightSemaphoreIndex>` 1.
+	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`light index <trafficLightIndex>` 0.
+	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`light index <trafficLightIndex>` 1.
 	
-.. _trafficLightGlobalSemaphoreObjectDescription:
+.. _trafficLightGlobalLightObjectDescription:
 	
 SceneView Light Objects Description
 ~~~~~~~~~~~~
@@ -125,8 +125,8 @@ Unselect:
 	* P- : unselect :ref:`PedestrianNode <pedestrianNode>`.
 	* L- : unselect :ref:`Light object <trafficLightObject>`.
 
-	.. image:: /images/road/trafficLight/GlobalSemaphoreAllConnections.png
-	`All connection types and -1` :ref:`semaphore index <trafficLightSemaphoreIndex>` `are enabled example.`
+	.. image:: /images/road/trafficLight/GlobalLightAllConnections.png
+	`All connection types and -1` :ref:`light index <trafficLightIndex>` `are enabled example.`
 
 .. _trafficLightState:
 
@@ -155,15 +155,15 @@ Settings
 | **Traffic light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
 | **Pedestrian light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
 
-.. _trafficLightSemaphoreIndex:
+.. _trafficLightIndex:
 
-| **Related semaphore index** : linked traffic light traffic index.
+| **Related light index** : linked traffic light traffic index.
 | **Child lights** : list of attached child :ref:`light objects <trafficLightObject>`.
 | **Custom lights** : list of attached custom :ref:`light objects <trafficLightObject>`.
 | **Show world traffic lights** :
 | **Show light connection** :
 | **Visible light connection** :
-| **Semaphore states** : :ref:`light state of handler <trafficLightState>`.
+| **Light states** : :ref:`light state of handler <trafficLightState>`.
 
 Components
 ~~~~~~~~~~~~
@@ -181,7 +181,7 @@ Main Component
 
 Traffic light object on the scene.
 
-Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`semaphore light indexes <trafficLightSemaphoreIndex>`.
+Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light light indexes <trafficLightIndex>`.
 
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectComponents.png
 	
@@ -201,5 +201,5 @@ Contains data on traffic light indicators.
 | **Red light** : red light :ref:`state <trafficLightState>` entity.
 | **Yellow light** : yellow light :ref:`state <trafficLightState>` entity.
 | **Green light** : green light :ref:`state <trafficLightState>` entity.
-| **Initial semaphore index** : initial :ref:`semaphore index <trafficLightSemaphoreIndex>`.
-| **Index direction** : direction in which the :ref:`semaphore index <trafficLightSemaphoreIndex>` is displayed on the scene.
+| **Initial light index** : initial :ref:`light index <trafficLightIndex>`.
+| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed on the scene.

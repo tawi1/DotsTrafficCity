@@ -7,4 +7,4 @@ Getting Started
 	:maxdepth: 2
 	
    packageInstallation
-   sceneInitilization.rst
+   cityCreation.rst

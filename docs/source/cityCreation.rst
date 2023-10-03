@@ -1,6 +1,6 @@
-.. _sceneInitialization:
+.. _cityCreation:
 
-Scene Initialization
+City creation
 ============
 
 Steps
@@ -19,4 +19,5 @@ Steps
 	
 #. Create a :ref:`road for traffic <roadInstallation>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.
+#. Create :ref:`pedestrians <pedestrian>`.
 #. Add & customize :ref:`game sounds <sound>`.

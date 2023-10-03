@@ -452,7 +452,7 @@ Segment handler settings
 	
 | **Show segment position handle** : on/off position handle for segment.
 | **Snap segment position** : on/off snap segmant position.
-| **Even size snapping** : snapping object will be shifted to the edge of the default snap.
+| **Add half offset** : the snapped object is shifted by half of the set snapping size.
 | **Custom snap size** : snapping value.
 | **Snap surface offset** : snap surface offset.
 | **Snap layer mask** : snap layermask.

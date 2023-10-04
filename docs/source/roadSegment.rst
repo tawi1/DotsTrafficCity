@@ -73,12 +73,21 @@ Timeline custom
 
 ``Custom timeline is designed for custom timings of the traffic light segment``
 
+	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineExample1.png
+		
+**How to add states:**
+	#. Enable `custom settings`.
+	#. Select desired :ref:`TrafficLightHandler <trafficLightHandler>`.
+	#. Press `+` button.
+	#. Select desired :ref:`state <trafficLightState>`.
+	#. Enter duration of the :ref:`state <trafficLightState>`.
+		
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimeline.png
 	
-After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd `TrafficLightHandler`.
+After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd :ref:`TrafficLightHandler <trafficLightHandler>`.
 	
 **How to loop timeline:**
-	#. Select the `TrafficLightHandler` that should be looped.
+	#. Select the :ref:`TrafficLightHandler <trafficLightHandler>` that should be looped.
 	#. Enter `Source Data Handler Index` parameter based on which to loop.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png

@@ -69,7 +69,7 @@ Straight Road
 	.. image:: /images/road/roadSegment/examples/RoadSegmentStraight.png
 	`Example`.
 	
-Transition Crossroad	
+Merge Crossroad	
 ~~~~~~~~~~~~
  
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
@@ -81,7 +81,7 @@ Transition Crossroad
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
 	`Example`.
 	
-Transition Straight Road
+Merge Straight Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
@@ -95,7 +95,7 @@ Transition Straight Road
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
 	`Example`.
 	
-Transition Crossroad To Oneway Road
+Merge Crossroad To Oneway Road
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
@@ -147,10 +147,10 @@ How To Use
 """"""""""""""
 
 #. Place the custom  straight segment where you want it.
-#. Place the :ref:`traffic nodes <trafficNode>` where the beginning and the end of the path.
+#. Place the :ref:`traffic nodes <trafficNode>` where the beginning and the end of the path (or expand the road by holding `left-shift` key and pressing `left-mouse` button).
 #. Rotate the :ref:`TrafficNodes <trafficNode>` in the direction of the route (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
 #. Customize the number of lanes and speed limit of segment.
-#. Add additional nodes to the paths if necessary **[optional step]**.
+#. Add additional nodes to the paths if necessary (by pressing `+` on the scene) **[optional step]**.
 #. Rotate the nodes of paths according to the direction of the path **[optional step]**.
 #. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to surface by pressing `Snap To Surface` button if required **[optional step]**.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
@@ -167,7 +167,24 @@ Custom Settings
 Snap Node Settings
 """"""""""""""
 
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapNodeSettings.png
+	
 :ref:`Info <roadSegmentCreatorId11>`.
+	
+Snap Surface Settings
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapSurfaceSettings.png
+
+| **Snap surface offset** : offset between snap point and the node (Y axis).
+
+**Node Buttons** : which node you want to snap to.
+	* All
+	* Node1
+	* Node2
+	
+**Buttons:** 
+	* Snap to surface: snap selected nodes to the surface.
 
 .. _roadSegmentCreatorCustomStraightPathSettings:
 
@@ -318,7 +335,7 @@ Snap Node Settings
 	* **Traffic node** : only `TrafficNode`.
 	* **Path node** : only `Path node`.
 **Auto-snap position** on/off position snapping.
-	* **Reverse snapping** : snapping object will be shifted to the edge of the default snap.
+	* **Add half offset** : the snapped object is shifted by half of the set snapping size.
 | **Auto snap custom size** : snapping value.
 **Auto round rotation:** : on/off rotation snapping.
 	* **Round angle** : snapping angle value.
@@ -488,18 +505,30 @@ A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreato
 
 How To Use
 ~~~~~~~~~~~~ 
-	
+		
 #. Position a :ref:`custom segment <roadSegmentCreatorCustomSegment>` on the road where the parking spaces will be.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment.png
-	
-#. Set the size of the parking slot, the direction of the parking line and the direction of the node (:ref:`settings <roadSegmentCreatorParkingBuilderCommonSettings>`).
+		
+#. Set the size of the parking slot (:ref:`settings <roadSegmentCreatorParkingBuilderCommonSettings>`).
 
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings1.png
-	
+#. Enable position handle
+
+	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample1.png
+		
 #. Position parking pointer where the line will start.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment2.png
+	
+#. Enable rotation handle and set the rotation of parking slot by dragging circle on the scene.
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample2.png
+	
+#. Set the object parking line to `parking line` and rotate the direction of parking line by dragging circle on the scene.
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample3.png
+	
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings1.png
 
 #. Enter the :ref:`number of parking slots <roadSegmentCreatorParkingBuilderCommonSettings>`.
 
@@ -555,7 +584,7 @@ How To Use
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment14.png
 	
 	.. note::
-		Created lines can be deleted in the `Created lines` tab.
+		Created lines can be edited or deleted in the `Created lines` tab.
 			.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
 
 Settings
@@ -567,12 +596,19 @@ Common
 """"""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderCommon.png
-	
-| **Place TrafficNode type** : :ref:`TrafficNode type <trafficNodeSettings>`.
-| **Parking TrafficNode weight** : :ref:`TrafficNode weight <trafficNodeSettings>`.
-| **Node custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
+
 | **Place count** : number of parking slots.
 | **Parking place spacing offset** : distance between parking slots.
+
+| **Line object type** : distance between parking slots.
+	* **Parking place** : distance between parking slots.
+	* **Parking line** : distance between parking slots.
+	
+| **Handles** : distance between parking slots.
+	* **None** : distance between parking slots.
+	* **Position** : distance between parking slots.
+	* **Rotation** : distance between parking slots.
+	
 | **Line start point local** : local parking line start position.
 | **Place size** : parking lot size.
 | **Node direction** : local direction of :ref:`TrafficNode <trafficNode>` in the parking place.
@@ -594,9 +630,14 @@ Path
 		* **Target TrafficNode** : node to which the paths connected from the parking place.
 
 | **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.
-| **Show path parking handles** : on/off position handles of the path.
+| **Traffic mask group** : :ref:`group <pathTrafficGroup>` of the vehicles that allowed on the parking.
 | **Show edit path parking buttons** : on/off edit (add & remove) buttons of the path.
 
+**Handles Panel:**
+	* **None** : handles disabled.
+	* **Handles** : position handles of the path enabled for first parking place.
+	* **Offsets** : position handles for all parking places.
+	
 **Path Selection Panel:**
 	* **None** : displayed `Enter` & `Exit` paths.
 	* **Enter** : displayed only `Enter` paths.
@@ -605,6 +646,15 @@ Path
 	* **Exit** : displayed only `Exit` paths
 		* **Initial path speed limit** : initial speed limit of exit paths.
 		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
+		
+Node
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderNode.png
+
+| **Place TrafficNode type** : :ref:`TrafficNode type <trafficNodeSettings>`.
+| **Parking TrafficNode weight** : :ref:`TrafficNode weight <trafficNodeSettings>`.
+| **Node custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
 	
 .. _roadSegmentCreatorParkingBuilderPedestrian:
 	

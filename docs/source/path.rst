@@ -163,6 +163,11 @@ The path is made up of these waypoints, which direct each :ref:`vehicle <traffic
 | **Speed limit** : the maximum speed of the vehicle when it reaches this waypoint.
 | **Backward direction** : when this option is activated, the vehicle will reverse (:ref:`test scene <trafficTestSceneTrafficReverse>`).
 
+.. _pathTrafficGroup:
+
+Traffic Group Info
+----------------
+
 .. _pathSettingsWindow:
 
 Path Advanced Settings Window

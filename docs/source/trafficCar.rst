@@ -6,43 +6,10 @@ Traffic Car
 .. contents::
    :local:
    
-.. _trafficCarHowTo:
-
 How To Create
 ----------------
 
-#. In the Unity toolbar, open `Car Prefab Creator`. More info about :ref:`Car Prefab Creator<carPrefabCreator>`.
-
-	``Spirit604/CityEditor/Car Prefab Creator``
-	
-	.. image:: /images/entities/trafficCar/carPrefabCreator/CarPrefabCreatorToolbar.png
-	
-#. Drag & drop source cars from scene or project to `Prefabs` field depends on `Prefab Source Type` parameter.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
-	
-#. Configure the :ref:`common settings <carPrefabCreatorCommonSettings>` for creating a car.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
-	
-#. Configure the :ref:`save settings <carPrefabCreatorSaveSettings>` for creating a car.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
-	
-#. Change the :ref:`template settings <carPrefabCreatorTemplateSettings>` depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
-	
-#. Click `Scan` button.
-#. Open :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>` tab, adjust common settings for all vehicles.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings.png
-
-#. After, open :ref:`Prefab Info <carPrefabCreatorPrefabSettings>` tab, adjust unique settings for each vehicle.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
-	
-#. Once all the settings have been customised, click `Create` to create the prefabs.
+All vehicles are created using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
 
 Common Info
 ----------------

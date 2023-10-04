@@ -1,9 +1,9 @@
 .. _trafficCarConfigs:
 
-Traffic Car Configs
+Traffic Configs
 =====
 
-Traffic Spawner Config
+Traffic Car Spawner Config
 ------------
 
 ``Single mode is used to position single objects.``
@@ -19,7 +19,7 @@ Traffic Spawner Config
 	
 .. _trafficCarSettings:
 	
-Traffic Settings
+Traffic Car Settings
 ------------
 
 ``Single mode is used to position single objects.``
@@ -31,7 +31,7 @@ Traffic Settings
 	* **Hybrid entity custom physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
 	* **Pure entity custom physics** : :ref:`pure entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
 	* **Pure entity simple physics** : :ref:`pure entities<entityType>` moved by the simple physical system (simply adding physics velocity to the physics body).
-	* **Pure entity no physics** : :ref:`pure entities<entityType>` that moved by tranform system without physics.
+	* **Pure entity no physics** : :ref:`pure entities<entityType>` that moved by transform system without physics.
 	
 .. _entityType:
 

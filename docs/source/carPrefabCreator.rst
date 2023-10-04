@@ -25,9 +25,6 @@ How To Use
 	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
 #. Change the :ref:`template settings <carPrefabCreatorTemplateSettings>` depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
-
-	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
-	
 #. Click `Scan` button.
 #. Open :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>` tab, adjust common settings for all vehicles.
 
@@ -171,7 +168,7 @@ Car Info
 * **Name** : user's name of the vehicle.
 * **ID** : new `ID` entry for :ref:`vehicle collection <vehicleCollection>`.
 * **Traffic group** : :ref:`traffic group <pathTrafficGroup>` of the vehicle.
-* **Override entity type** : new entity type for selected vehicle (might be useful for specific vehicles such as `tram`).
+* **Override entity type** : new :ref:`entity type <trafficCarSettings>` for selected vehicle (might be useful for specific vehicles such as `tram`).
 	* **Entity type**
 * **Public transport** : on/off :ref:`public transport <trafficPublic>` feature. (:ref:`Settings <trafficPublicAuthoring>`)
 	* **Predefined road** 

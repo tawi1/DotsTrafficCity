@@ -167,9 +167,9 @@ The path is made up of these waypoints, which direct each :ref:`vehicle <traffic
 Traffic Group Info
 ----------------
 
-Each path contains a mask that contains a group of the selected `TrafficGroupType`, depending on the selected :ref:`mask type <groupMaskType>`. 
-A vehicle that has the correct :ref:`TrafficGroupType <trafficCarEntityAuthoring>` can be driven or spawned on this path.
-If the vehicle enters the forbidden :ref:`path <pathWaypointInfo>` or :ref:`path node <pathWaypointInfo>`, the vehicle will automatically attempt to change the current lane (:ref:`test scene <trafficTestSceneTrafficGroup>`).
+* Each path contains a mask that contains a group of the selected `TrafficGroupType`, depending on the selected :ref:`mask type <groupMaskType>`. 
+* A vehicle that has the correct :ref:`TrafficGroupType <trafficCarEntityAuthoring>` can be driven or spawned on this path.
+* If the vehicle enters the forbidden :ref:`path <pathWaypointInfo>` or :ref:`path node <pathWaypointInfo>`, the vehicle will automatically attempt to change the current lane (:ref:`test scene <trafficTestSceneTrafficGroup>`).
 
 	.. note::
 		**You can change the available types in the enum file:**

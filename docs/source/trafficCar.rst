@@ -61,7 +61,7 @@ TrafficCarEntityAuthoring
 | **Faction type** : selected :ref:`faction type <factions>` of vehicle.
 | **Car type** : selected :ref:`car type <carType>` of vehicle.
 | **Bounds source type** : selected bounds source for the entity bounds.
-| **Traffic group** : Selected :ref:`traffic group <pathTrafficGroup>`.
+| **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
 
 Shared Settings
 ~~~~~~~~~~~~
@@ -82,5 +82,7 @@ CarWheelAuthoring
 		
 PhysicsShape & PhysicsBody
 ~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/PhysicsBody.png
 
 Optional components if the car moves with physics.

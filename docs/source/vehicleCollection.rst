@@ -3,12 +3,11 @@
 Vehicle Collection
 =====
 
-Vehicle collection contains data on all vehicles in the city and their shared settings.
+Vehicle collection contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
 	
-	
-		.. note::
+	.. note::
 		:ref:`Fmod plugin <sound>` for sounds should be installed.
 	
 How To
@@ -70,12 +69,9 @@ Sounds
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/SharedSounds.png
 
-* **Ignition**
-* **Idle**
-* **Driving**
-* **Horn**
-* **Enter car**
-* **Exit car**		
-
-	.. note::
-		:ref:`Fmod plugin <sound>` for sounds should be installed.
+* **Ignition** : playback during engine start of the vehicle.
+* **Idle** : idle sound of the vehicle.
+* **Driving** : plays when pedestrian or player driving the vehicle.
+* **Horn** : plays when the horn of the vehicle is active.
+* **Enter car** : plays when pedestrian or player enters vehicle.
+* **Exit car** : plays when pedestrian or player exits vehicle.		

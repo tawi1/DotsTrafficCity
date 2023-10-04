@@ -57,10 +57,10 @@ How To Use
 
 .. _pedestrianBaked:
 
-Baked skin
+Pure GPU skin
 ~~~~~~~~~~~~
 
-`Baked skin` is a :ref:`pure entity <pureEntity>` that combines the GPU baked animations and the DOTS entity.
+`Pure GPU skin` is a :ref:`pure entity <pureEntity>` that combines the GPU texture animations and the DOTS entity.
 
 .. _pedestrianBakedFactory:
 
@@ -75,9 +75,9 @@ Factory
 		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
-	#. Open on the scene `PedestrianBakedSkinFactory`.
+	#. Open on the scene `PedestrianGPUSkinFactory`.
 	
-		``Hub/Pools/Npc/Pedestrian/PedestrianBakedSkinFactory``
+		``Hub/Pools/Npc/Pedestrian/PedestrianGPUSkinFactory``
 
 	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` to `PedestrianBakedSkinFactory`.
 	
@@ -389,8 +389,8 @@ Pedestrian Settings Config
 	* **No skin** : entities without a skin will be created.
 	
 **Pedestrian rig type:**
-	* **Hybrid legacy** : :ref:`hybrid entity with animator component<pedestrianHybridLegacy>`.
-	* **Texture baked** : :ref:`pure entity with gpu animations<pedestrianBaked>`.
+	* **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
+	* **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianBaked>`.
 	
 .. _pedestrianEntityType:
 

@@ -1,4 +1,6 @@
-pip install sphinx_rtd_theme
+import os
+import sys
+import sphinx_rtd_theme
 
 # Configuration file for the Sphinx documentation builder.
 

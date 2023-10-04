@@ -65,10 +65,7 @@ Settings
 	
 .. _pathTrafficType:
 
-**Traffic type:** the type of traffic vehicle that can go on this path.
-	* **Default**
-	* **Tram**
-	* **Traffic public**
+**Traffic mask group:** :ref:`group types <pathTrafficGroup>` of traffic vehicles that can go on this path.
 	
 .. _pathPriority:
 
@@ -159,14 +156,68 @@ Waypoint Info
 The path is made up of these waypoints, which direct each :ref:`vehicle <trafficCar>`.
 
 	.. image:: /images/road/path/PathNode.png
+
 	
 | **Speed limit** : the maximum speed of the vehicle when it reaches this waypoint.
 | **Backward direction** : when this option is activated, the vehicle will reverse (:ref:`test scene <trafficTestSceneTrafficReverse>`).
+| **Custom group** : override :ref:`traffic group <pathTrafficGroup>` for the current path node.
 
 .. _pathTrafficGroup:
 
 Traffic Group Info
 ----------------
+
+Each path contains a mask that contains a group of the selected `TrafficGroupType`, depending on the selected :ref:`mask type <groupMaskType>`. 
+A vehicle that has the correct :ref:`TrafficGroupType <trafficCarEntityAuthoring>` can be driven or spawned on this path.
+If the vehicle enters the forbidden :ref:`path <pathWaypointInfo>` or :ref:`path node <pathWaypointInfo>`, the vehicle will automatically attempt to change the current lane (:ref:`test scene <trafficTestSceneTrafficGroup>`).
+
+	.. note::
+		**You can change the available types in the enum file:**
+			* **TrafficGroupType.cs**
+			
+Traffic Group Settings
+~~~~~~~~~~~~
+
+How To Create
+""""""""""""""
+
+Settings automatically created if missing in project path `Assets/Resources/Spirit604/TrafficGroupMaskSettings.asset`.
+
+	.. image:: /images/road/path/TrafficGroupSettingsProjectPath.png
+	
+.. _trafficGroupSettings:
+
+Settings
+""""""""""""""	
+
+Contains the types of default group and user-created groups.
+
+	.. image:: /images/road/path/TrafficGroupSettings.png
+
+.. _groupMaskType:
+
+Mask Types
+~~~~~~~~~~~~
+
+Default
+""""""""""""""
+
+Default group of :ref:`TrafficGroupType <pathTrafficGroup>` that defined in the :ref:`settings <trafficGroupSettings>`.
+
+Allowed
+""""""""""""""
+
+User selected :ref:`TrafficGroupType <pathTrafficGroup>` types that can go through the path.
+
+Forbidden
+""""""""""""""
+
+User selected :ref:`TrafficGroupType <pathTrafficGroup>` types that forbidden the path (not selected in the list is allowed).
+
+Custom Group
+""""""""""""""
+
+Custom group of :ref:`TrafficGroupType <pathTrafficGroup>` that defined in the :ref:`settings <trafficGroupSettings>`.
 
 .. _pathSettingsWindow:
 
@@ -179,7 +230,7 @@ Common settings
 ~~~~~~~~~~~~
 
 | :ref:`Path curve type<pathCurveType>`.
-| :ref:`Path traffic type<pathTrafficType>`.
+| :ref:`Traffic mask group <pathTrafficGroup>`.
 | :ref:`Waypoints count per curve<pathWaypointsPerCurve>`.
 | :ref:`Priority<pathPriority>`.
 | :ref:`Draw additional settings<pathDrawAdditionalSettingsExample>` : displays additional settings for each waypoint (`Backward Movement`).

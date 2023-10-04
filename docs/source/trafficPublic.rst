@@ -9,13 +9,12 @@ How To Create
 ------------
 
 #. Create a vehicle by following these :ref:`steps <trafficCar>`.
+#. Set :ref:`traffic group <pathTrafficGroup>` to `Public Transport` in the :ref:`TrafficCarEntityAuthoring <trafficCarEntityAuthoring>` component.
 #. Add :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` and :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` to the created vehicle.
-#. Select :ref:`Traffic public type <trafficPublicType>` in the :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` component.
+#. Tick on :ref:`Predefined Road <trafficPublicAuthoring>` if public transport will be routed via :ref:`TrafficPublicRoute <trafficPublicRoute>`. **[Optional step]**
 #. Create empty child `GameObject`, add :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
 #. Position the created entry `GameObject` where the pedestrian entrances/exits will be.
-#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity for the public transport route.
-
-.. _trafficPublicAuthoring:
+#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set :ref:`carModel <carModel>` according to created public transport vehicle. **[Optional step]**
 
 TrafficPublic Components
 ------------
@@ -29,11 +28,7 @@ Authoring component that contains settings for public transport.
 
 	.. image:: /images/entities/trafficCar/TrafficPublicAuthoring.png
 
-.. _trafficPublicType:
-
-**Traffic public type** :
-	* **Bus** : for the default path.
-	* **Tram** : for the rail path.
+| **Predefined Road** : the vehicle will only be spawned on :ref:`TrafficPublicRoute <trafficPublicRoute>` paths.
 | **Min/Max idle time** : min/max idle time at the public stop station.
 | **Min/Max pedestrian exit count** : min/max number of pedestrians that can exit the station at a time
 | **Enter/exit delay duration** : min/max delay between entrances to public transport.

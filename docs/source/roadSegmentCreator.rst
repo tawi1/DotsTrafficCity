@@ -480,7 +480,11 @@ Other settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorOtherSettings.png
 		
+| **Merge segment** : opens the merge segment tool.
+| **Convert to custom** : converts the current segment to :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
+
 | **Save prefab paths** : segment save prefab path.
+| **Save to prefab** : save segment to prefab.
 
 Buttons
 """"""""""""""
@@ -488,7 +492,6 @@ Buttons
 | **Rotate -90°/90°** : rotate segment by 90° degree.
 | **Recreate** : recreate segment.
 | **Clear** : clear segment.
-| **Save to prefab** : save segment to prefab
 
 Hotkeys
 ~~~~~~~~~~~~ 

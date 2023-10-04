@@ -6,6 +6,7 @@ Traffic Car
 .. contents::
    :local:
    
+.. _trafficCarHowTo:
 
 How To Create
 ----------------
@@ -33,12 +34,15 @@ How To Create
 	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
 	
 #. Click `Scan` button.
+#. Open :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>` tab, adjust common settings for all vehicles.
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings.png
+
+#. After, open :ref:`Prefab Info <carPrefabCreatorPrefabSettings>` tab, adjust unique settings for each vehicle.
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
-#. In the `Prefab Info` tab, change the name of the enum of the cars if you needed.
-#. To create new enums, click the button `Add Enum Types`.
-#. After the enums are created, click `Create` to create the prefabs.
+#. Once all the settings have been customised, click `Create` to create the prefabs.
 
 Common Info
 ----------------
@@ -78,6 +82,8 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 Authoring components
 ----------------
 
+.. _trafficCarEntityAuthoring:
+
 TrafficCarEntityAuthoring
 ~~~~~~~~~~~~
 	
@@ -85,12 +91,15 @@ TrafficCarEntityAuthoring
 	
 | **Hull mesh renderer** : vehicle hull mesh renderer reference.
 | **Physics shape** : vehicle entity `PhysicsShape` reference.
-| **Nav mesh obstacle** : vehicle `NavMeshObstcale` reference.
-| **Car model** : selected enum of vehicle.	
 | **Faction type** : selected :ref:`faction type <factions>` of vehicle.
 | **Car type** : selected :ref:`car type <carType>` of vehicle.
 | **Bounds source type** : selected bounds source for the entity bounds.
-| **Traffic type** : Selected traffic type (Default, :ref:`Tram, Traffic public<trafficPublic>`).
+| **Traffic group** : Selected :ref:`traffic group <pathTrafficGroup>`.
+
+Shared Settings
+~~~~~~~~~~~~
+
+Each vehicle has a common set of settings that are described :ref:`here <vehicleCollection>`
 		
 CarWheelAuthoring
 ~~~~~~~~~~~~
@@ -100,29 +109,9 @@ CarWheelAuthoring
 | **Wheel base** : wheel radius.
 | **All wheels** : all wheels of the vehicle.
 | **Steering wheels** : wheels that can turn.
-	
-CarSoundAuthoring
-~~~~~~~~~~~~
-	
-	.. image:: /images/entities/trafficCar/CarSoundAuthoring.png
-	
-	|
-	
-| **Min pitch** : minimum pitch of the car engine.
-| **Max pitch** : maximum pitch of the car engine.
-| **Max load speed** : speed at which the engine has the maximum pitch.
-| **Max volume speed** : speed at which the engine has the maximum volume.
-| **Min volume** : minimum engine volume.
-**Sounds:**
-	* **Ignition**
-	* **Idle**
-	* **Driving**
-	* **Horn**
-	* **Enter car**
-	* **Exit car**		
 
-	.. note::
-		:ref:`Fmod plugin<sound>` for sounds should be installed.
+	.. note:: Simple vehicles only.
+
 		
 PhysicsShape & PhysicsBody
 ~~~~~~~~~~~~

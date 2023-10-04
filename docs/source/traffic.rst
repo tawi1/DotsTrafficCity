@@ -10,5 +10,6 @@ Traffic
 		/trafficCar.rst
 		/trafficPublic.rst
 		/carPrefabCreator.rst
+		/vehicleCollection.rst
 		/trafficConfigs.rst
 		/trafficTestScenesRedirect.rst

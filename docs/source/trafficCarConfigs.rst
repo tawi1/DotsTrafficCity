@@ -3,7 +3,7 @@
 Traffic Car Configs
 =====
 
-Traffic Car Spawner Config
+Traffic Spawner Config
 ------------
 
 ``Single mode is used to position single objects.``
@@ -19,7 +19,7 @@ Traffic Car Spawner Config
 	
 .. _trafficCarSettings:
 	
-Traffic Car Settings
+Traffic Settings
 ------------
 
 ``Single mode is used to position single objects.``
@@ -27,9 +27,9 @@ Traffic Car Settings
 	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
 	
 **Entity type:**
-	* **Hybrid cube entity simple physics**
-	* **Hybrid entity full physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
-	* **Pure entity full physics** : :ref:`pure entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+	* **Hybrid entity simple physics**
+	* **Hybrid entity custom physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+	* **Pure entity custom physics** : :ref:`pure entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
 	* **Pure entity simple physics** : :ref:`pure entities<entityType>` moved by the simple physical system (simply adding physics velocity to the physics body).
 	* **Pure entity no physics** : :ref:`pure entities<entityType>` that moved by tranform system without physics.
 	
@@ -41,7 +41,7 @@ Traffic Car Settings
 	
 .. _trafficDetectObstacleMode:
 
-**Traffic car detect obstacle mode:**
+**Detect obstacle mode:**
 	* **Hybrid** : combine types `Calculate` and `Raycast`.
 	* **Calculate only** : mathematically calculates the obstacle.
 	* **Raycast only** : detect obstacle by raycast (:ref:`more info <trafficCarRaycastInfo>`).
@@ -49,12 +49,12 @@ Traffic Car Settings
 	.. note::
 		In `Hybrid mode`, raycast is activated only when the selected targets are close to the car (:ref:`more info <trafficCarRaycastInfo>`).
 	
-**Traffic car detect npc mode:**
+**Detect npc mode:**
 	* **Disabled**
 	* **Calculate** : mathematically calculates the npc.
 	* **Raycast** : detect obstacle by raycast (npc should have `PhysicsShape` component).
 	
-**Traffic car simple physics type:**
+**Simple physics movement type:**
 	* **Car input** :
 	* **Follow target** :
 	
@@ -74,9 +74,9 @@ Traffic Car Settings
 
 .. _trafficNavMeshObstacle:
 
-| **Has nav obstacle** :
+| **Has nav obstacle** : on/off navmesh obstacles for traffic.
 	
-Traffic Car Nav Config
+Traffic Nav Config
 ------------
 
 Config distance to target nodes and traffic light handlers.
@@ -104,7 +104,7 @@ Config distance to target nodes and traffic light handlers.
 	
 .. _trafficCarObstacleConfig:
 	
-Traffic Car Obstacle Config
+Traffic Obstacle Config
 ------------
 
 Config to calculate obstacles on the path.
@@ -189,7 +189,7 @@ Config to calculate obstacles on the path.
 	`Avoid crossroad jam example.`
 
 			
-Traffic Car Approach Config
+Traffic Approach Config
 ------------
 
 Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneObstacle>`).
@@ -202,10 +202,10 @@ Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneOb
 	
 .. _trafficCarRaycastConfig:
 	
-Traffic Car Raycast Config
+Traffic Raycast Config
 ------------
 
-Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
+Traffic raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
 
 	.. image:: /images/configs/traffic/TrafficCarRaycastConfig.png
 	
@@ -218,7 +218,7 @@ Traffic car raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacl
 	
 .. _trafficCarChangeLaneConfig:
 	
-Traffic Car Change Lane Config
+Traffic Change Lane Config
 ------------
 
 Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only) (:ref:`test scene <trafficTestSceneChangeLane>`).
@@ -261,7 +261,7 @@ Config for automatic calculation of lane change by traffic (works for :ref:`path
 	.. image:: /images/configs/traffic/changeLaneExamples/MinDistanceToIntersectedPathExample.png
 	`Min distance to intersected path example.`
 	
-Traffic Car Npc Obstacle Config
+Traffic Npc Obstacle Config
 ------------
 
 Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`).
@@ -276,7 +276,7 @@ Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`
 	
 .. _trafficCarParkingConfig:
 	
-Traffic Car Parking Config
+Traffic Parking Config
 ------------
 
 Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
@@ -289,7 +289,7 @@ Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
 		
 .. _trafficCarAntistuckConfig:
 		
-Traffic Car Antistuck Config
+Traffic Antistuck Config
 ------------
 
 Config to culling car in case of stuckness.
@@ -300,7 +300,7 @@ Config to culling car in case of stuckness.
 | **Stuck distance difference** : if the car moved more than the parameter distance the `Obstacle stuck time` is reset.
 | **Cull of out the camera only** : car will be culled only if it is out of the camera's range of vision.
 	
-Traffic Car Horn Config
+Traffic Horn Config
 ------------
 
 Config to sound random horns when an obstacle is detected. It can be disabled (:ref:`here<soundConfig>`).

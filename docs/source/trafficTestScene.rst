@@ -27,6 +27,7 @@ TrafficCar Road Debugger
 Scene settings
 """"""""""""""
 	
+| **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
 | **Enable visual debug** : on/off visual debug on the scene.
 | **Show buttons** : show add :ref:`path <path>` button to the component on the scene.
 | **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.
@@ -139,6 +140,16 @@ Traffic jam in the lane
 	.. image:: /images/testscenes/traffic/ChangeLaneTest2.png
 	`Test case result.`
 	
+.. _trafficTestSceneTrafficGroup:
+	
+Traffic fobbidden node test
+""""""""""""""
+
+	.. image:: /images/testscenes/traffic/ChangeLaneNodeTest1.png
+	`Source settings.`
+	
+	.. image:: /images/testscenes/traffic/ChangeLaneNodeTest2.png
+	`Test case result.`
 	
 Multiple lanes test 1
 """"""""""""""

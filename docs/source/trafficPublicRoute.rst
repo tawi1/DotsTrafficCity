@@ -18,7 +18,7 @@ How To Create
 	`Selection route example.`
 	
 #. Customize :ref:`Route settings <trafficPublicRouteSettings>`.
-#. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
+#. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>` and :ref:`car model <carModel>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
 
 Transition Info
 ------------
@@ -55,9 +55,18 @@ Component
 Route settings
 ~~~~~~~~~~~~ 
 
+| **Vehicle data collection** : reference to :ref:`vehicle collection <vehicleCollection>`.
 | **Max vehicle count** : maximum number of vehicles on the route.
 | **Preferred interval distance** : preferred distance between public transport vehicles.
-| **Traffic public type** : :ref:`traffic public type <trafficPublicType>` of vehicles on the route.
+| **Ignore camera** : if the camera is ignored, public transport can be spawned in view of the camera.
+
+.. _trafficPublicType:
+
+**Traffic public type** :
+	* **Bus** : for the default path.
+	* **Tram** : for the rail path.	
+	
+| **Car model** : :ref:`car model <carModel>`of the public transport vehicle that will be spawned on the route.
 
 .. _trafficPublicRouteTransitionSettings:
 

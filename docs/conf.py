@@ -1,7 +1,3 @@
-import os
-import sys
-import sphinx_rtd_theme
-
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
@@ -21,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_rtd_theme'
 ]
 
 intersphinx_mapping = {

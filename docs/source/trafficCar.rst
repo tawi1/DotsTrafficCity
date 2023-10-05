@@ -178,7 +178,7 @@ PhysicsBody
 PhysicsShape 
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/custom/PhysicsShape.png
+	.. image:: /images/entities/trafficCar/custom/physicsShape.png
 	`Example`
 
 .. _simplePhysicsVehicle:
@@ -210,7 +210,7 @@ PhysicsBody
 PhysicsShape 
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/PhysicsShape.png
+	.. image:: /images/entities/trafficCar/physicsShape.png
 	`Example`
 
 Optional components if the car moves with physics.

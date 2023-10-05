@@ -22,10 +22,10 @@ How To Use
 	
 #. If the vehicle is the :ref:`Simple vehicle <simplePhysicsVehicle>` type, enable `Add wheel offset` in the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab.
 
-	.. image:: /images/entities/trafficCar/custom/PhysicsShape.png
+	.. image:: /images/entities/trafficCar/custom/physicsShape.png
 	:ref:`Custom physics entity <customPhysicsVehicle>` `shape result example`
 	
-	.. image:: /images/entities/trafficCar/PhysicsShape.png
+	.. image:: /images/entities/trafficCar/physicsShape.png
 	:ref:`Simple physics entity <simplePhysicsVehicle>` `shape result example`
 	
 #. Configure the :ref:`Save settings <carPrefabCreatorSaveSettings>` for creating a car.

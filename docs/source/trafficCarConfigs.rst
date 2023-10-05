@@ -31,11 +31,11 @@ Traffic Car Settings
 Entity Type
 ~~~~~~~~~~~~ 
 
-* **Hybrid entity simple physics**
-* **Hybrid entity custom physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
-* **Pure entity custom physics** : :ref:`pure entities <pureEntity>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
-* **Pure entity simple physics** : :ref:`pure entities <pureEntity>` moved by the simple physical system (simply adding physics velocity to the physics body).
-* **Pure entity no physics** : :ref:`pure entities <pureEntity>` that moved by transform system without physics.
+* **Hybrid entity simple physics** : :ref:`pure entities <hybridEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
+* **Hybrid entity custom physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
+* **Pure entity custom physics** : :ref:`pure entities <pureEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
+* **Pure entity simple physics** : :ref:`pure entities <pureEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
+* **Pure entity no physics** : :ref:`pure entities <pureEntity>` that moved by transform system without physics (:ref:`description <noPhysicsVehicle>`).
 
 	.. note::
 		Depending on which :ref:`entity type <entityType>` such a :ref:`preset <trafficPreset>` is converted.

@@ -34,9 +34,220 @@ How To Create
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 	
-#. Adjust traffic settings.
+#. Adjust traffic settings of the created vehicles.
 	* For :ref:`simple physics <trafficCarSettings>`.
-	* For :ref:`custom physics <trafficCarSettings>`. 
+	* For :ref:`custom physics <customPhysicsVehicle>`. 
+
+.. _vehicleType:
+
+Vehicle Physics Types
+----------------
+
+.. _customPhysicsVehicle:
+
+Custom Physics
+~~~~~~~~~~~~
+
+* Entities moved by the custom physical system.
+* :ref:`Hybrid entity custom physics <entityType>` & :ref:`Pure entity custom physics <entityType>` types refer to this.
+
+(test scene)
+
+Authoring components
+^^^^^^^^^^^^^^^^^^^^^^
+
+Vehicle Authoring
+""""""""""""""""""
+
+Wheel
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/wheel.png
+	
+| **Wheel mass** : 
+| **Max steering angle** : 
+| **Power steering** : 
+| **Custom steering limit** : 
+| **Radius** : 
+| **Width** : 
+| **Apply impulse offset** : 
+| **Cast type** : 
+| **Cast layer** : 
+
+Suspension
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/suspension.png
+	
+| **Suspension length** : 
+| **Stiffness** : 
+| **Damping** : 
+
+Friction
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/friction.png
+	
+| **Longitudinal** : 
+| **Lateral** : 
+| **Forward friction** : 
+| **Lateral friction** : 
+| **Brake friction** : 
+
+Transient Forces
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/transientForce.png
+	
+| **Use forward transient force** : 
+| **Min transient forward speed** : 
+| **Max forward friction rate** : 
+| **Forward relax multiplier** : 
+
+| **Use lateral transient force** : 
+| **Min transient lateral speed** : 
+| **Max lateral friction rate** : 
+| **Lateral relax multiplier** : 
+
+Brakes
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/brakes.png
+
+| **Brake torque** : 
+| **Handbrake torque** : 
+
+Engine
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/engine.png
+
+| **Torque** : 
+| **Transimission rate** : 
+| **Drag** : 
+
+Scene Settings
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/sceneSettings.png
+	
+| **Show debug** : 
+| **Show suspension origin** : 
+| **Show suspension** : 
+
+**Origin move:**
+	* **Disabled** :
+	* **Wheel** :
+	* **Suspension origin** :
+	* **Suspension** :
+
+Template Settings
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/templateSettings.png
+
+**Tabs:**
+	* **Create new** : 
+	* **Copy from template** : 
+	* **Save to template** : 
+	
+**Copy settings type:**
+	* **Physics settings** : 
+	* **Center of mass** : 
+	* **Offsets** : 
+	* **Settings** : 
+
+Wheel Refs
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/wheelRefs.png
+
+| **Wheel** : 
+| **Driving** : 
+| **Brake** : 
+| **Brake rate** : 
+| **Handbrake rate** : 
+
+.. _simplePhysicsVehicle:
+
+Simple Physics
+~~~~~~~~~~~~
+
+* Entities moved by the simple physical system (simply adding physics velocity to the physics body).
+* :ref:`Settings <trafficCarSettings>`.
+* :ref:`Hybrid entity simple physics <entityType>` & :ref:`Pure entity simple physics <entityType>` types refer to this.
+
+Authoring components
+^^^^^^^^^^^^^^^^^^^^^^
+
+CarWheelAuthoring
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/CarWheelAuthoring.png
+	
+| **Wheel base** : wheel radius.
+| **All wheels** : all wheels of the vehicle.
+| **Steering wheels** : wheels that can turn.
+
+	.. note:: Simple vehicles only.
+		
+PhysicsShape & PhysicsBody
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/PhysicsBody.png
+
+Optional components if the car moves with physics.
+
+.. _noPhysicsVehicle:
+
+No Physics
+~~~~~~~~~~~~
+
+* :ref:`Pure entities <pureEntity>` that moved by transform system without physics.
+* Contains the same components as `Simple Physics <simplePhysicsVehicle>`.
+* :ref:`Settings <trafficCarSettings>`.
+* :ref:`Pure entity no physics <entityType>` type refer to this.
+
+Common authoring components
+----------------
+
+.. _trafficCarEntityAuthoring:
+
+TrafficCarEntityAuthoring
+~~~~~~~~~~~~
+	
+	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
+	
+| **Hull mesh renderer** : vehicle hull mesh renderer reference.
+| **Physics shape** : vehicle entity `PhysicsShape` reference.
+| **Faction type** : selected :ref:`faction type <factions>` of vehicle.
+| **Car type** : selected :ref:`car type <carType>` of vehicle.
+| **Bounds source type** : selected bounds source for the entity bounds.
+| **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
+
+Shared Settings
+~~~~~~~~~~~~
+
+Each vehicle has a common set of settings that are described :ref:`here <vehicleCollection>`
+
+NavMeshObstacleAuthoring
+~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/NavMeshObstacleAuthoring.png
+	
+CarSoundAuthoring
+~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/CarSoundAuthoring.png
+	
+HealthAuthoring
+~~~~~~~~~~~~
+
+CarDamageEngineAuthoring
+~~~~~~~~~~~~
+
+PlayerTargetAuthoring
+~~~~~~~~~~~~
 
 Common Info
 ----------------
@@ -72,44 +283,3 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 * **Raycast always CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
 		
 	.. note:: You can also dynamically change the raycast target by adding or removing the `TrafficCustomRaycastTargetTag` component.
-
-Authoring components
-----------------
-
-.. _trafficCarEntityAuthoring:
-
-TrafficCarEntityAuthoring
-~~~~~~~~~~~~
-	
-	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
-	
-| **Hull mesh renderer** : vehicle hull mesh renderer reference.
-| **Physics shape** : vehicle entity `PhysicsShape` reference.
-| **Faction type** : selected :ref:`faction type <factions>` of vehicle.
-| **Car type** : selected :ref:`car type <carType>` of vehicle.
-| **Bounds source type** : selected bounds source for the entity bounds.
-| **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
-
-Shared Settings
-~~~~~~~~~~~~
-
-Each vehicle has a common set of settings that are described :ref:`here <vehicleCollection>`
-		
-CarWheelAuthoring
-~~~~~~~~~~~~
-
-	.. image:: /images/entities/trafficCar/CarWheelAuthoring.png
-	
-| **Wheel base** : wheel radius.
-| **All wheels** : all wheels of the vehicle.
-| **Steering wheels** : wheels that can turn.
-
-	.. note:: Simple vehicles only.
-
-		
-PhysicsShape & PhysicsBody
-~~~~~~~~~~~~
-
-	.. image:: /images/entities/trafficCar/PhysicsBody.png
-
-Optional components if the car moves with physics.

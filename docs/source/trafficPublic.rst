@@ -12,7 +12,7 @@ How To Create
 #. Set :ref:`traffic group <pathTrafficGroup>` to `Public Transport` in the :ref:`TrafficCarEntityAuthoring <trafficCarEntityAuthoring>` component.
 #. Add :ref:`TrafficPublicAuthoring <trafficPublicAuthoring>` and :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` to the created vehicle.
 #. Tick on :ref:`Predefined Road <trafficPublicAuthoring>` if public transport will be routed via :ref:`TrafficPublicRoute <trafficPublicRoute>`. **[Optional step]**
-#. Create empty child `GameObject`, add :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
+#. Create empty child `GameObject`, add :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
 #. Position the created entry `GameObject` where the pedestrian entrances/exits will be.
 #. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set :ref:`carModel <carModel>` according to created public transport vehicle. **[Optional step]**
 
@@ -43,7 +43,7 @@ Authoring component that contains capacity settings of the vehicle.
 	.. image:: /images/entities/trafficCar/CarCapacityComponent.png
 	
 | **Max capacity** : max capacity of the vehicle.
-| **Entry point** : any `GameObject` that contain :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` component.
+| **Entry point** : any `GameObject` that contain :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` component.
 | **Show entry point** : on/off display entry point.
 
 	.. image:: /images/entities/trafficCar/TrafficPublicTramExample.png
@@ -51,9 +51,11 @@ Authoring component that contains capacity settings of the vehicle.
 
 	.. note:: At the moment the component is only used for :ref:`TrafficPublic <trafficPublic>` vehicles.
 	
-.. _trafficPublicEntryAuthoring:
+.. _vehicleEntryAuthoring:
 
-TrafficPublicEntryAuthoring component
+VehicleEntryAuthoring component
 ~~~~~~~~~~~~ 
+
+	.. image:: /images/entities/trafficCar/VehicleEntryAuthoring.png
 
 Entrance point for pedestrians to public transport.

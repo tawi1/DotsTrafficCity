@@ -9,7 +9,34 @@ Traffic Car
 How To Create
 ----------------
 
-All vehicles are created using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
+#. Create vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type).
+
+	.. image:: /images/entities/trafficCar/howTo/Step1.png
+	:ref:`Car Prefab Creator <carPrefabCreator>` tool example.
+	
+#. Make sure, that the :ref:`vehicle collection <vehicleCollection>` contains the created vehicle.
+
+	.. image:: /images/entities/trafficCar/howTo/Step2.png
+	
+#. Make sure, that the :ref:`preset <trafficPreset>` contains the vehicle.
+
+	.. image:: /images/entities/trafficCar/howTo/Step3.png
+
+#. Open :ref:`Traffic settings <trafficCarSettings>` and select :ref:`Simple physics entity <entityType>` type.
+
+	.. image:: /images/entities/trafficCar/howTo/Step4.png
+	
+#. Open :ref:`Hub <roadEntitySubscene>` object on the scene and press `Copy To Subscene` button.
+
+	.. image:: /images/entities/trafficCar/howTo/Step5.png
+	
+#. Open `EntitySubScene`, find `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+
+	.. image:: /images/entities/trafficCar/howTo/Step6.png
+	
+#. Adjust traffic settings.
+	* For :ref:`simple physics <trafficCarSettings>`.
+	* For :ref:`custom physics <trafficCarSettings>`. 
 
 Common Info
 ----------------

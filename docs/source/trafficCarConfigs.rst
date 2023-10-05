@@ -26,38 +26,48 @@ Traffic Car Settings
 
 	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
 	
-**Entity type:**
-	* **Hybrid entity simple physics**
-	* **Hybrid entity custom physics** : :ref:`hybrid entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
-	* **Pure entity custom physics** : :ref:`pure entities<entityType>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
-	* **Pure entity simple physics** : :ref:`pure entities<entityType>` moved by the simple physical system (simply adding physics velocity to the physics body).
-	* **Pure entity no physics** : :ref:`pure entities<entityType>` that moved by transform system without physics.
-	
 .. _entityType:
 
+Entity Type
+~~~~~~~~~~~~ 
+
+* **Hybrid entity simple physics**
+* **Hybrid entity custom physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+* **Pure entity custom physics** : :ref:`pure entities <pureEntity>` moved by the custom physical system (for example `VehicleMechanics <https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/PhysicsSamples/Assets/Demos/6.%20Use%20Cases/6d.%20Raycast%20Car/Scripts/VehicleMechanics.cs>`_)  
+* **Pure entity simple physics** : :ref:`pure entities <pureEntity>` moved by the simple physical system (simply adding physics velocity to the physics body).
+* **Pure entity no physics** : :ref:`pure entities <pureEntity>` that moved by transform system without physics.
+
 	.. note::
-		| **Hybrid entity** : entities that combine `DOTS` entities and default `GameObjects` (game objects are tied by position to an entity).
-		| **Pure entity** : entities work entirely in the `DOTS` space.
+		Depending on which :ref:`entity type <entityType>` such a :ref:`preset <trafficPreset>` is converted.
 	
 .. _trafficDetectObstacleMode:
 
-**Detect obstacle mode:**
-	* **Hybrid** : combine types `Calculate` and `Raycast`.
-	* **Calculate only** : mathematically calculates the obstacle.
-	* **Raycast only** : detect obstacle by raycast (:ref:`more info <trafficCarRaycastInfo>`).
+Detect Obstacle Mode
+~~~~~~~~~~~~ 
+
+* **Hybrid** : combine types `Calculate` and `Raycast`.
+* **Calculate only** : mathematically calculates the obstacle.
+* **Raycast only** : detect obstacle by raycast (:ref:`more info <trafficCarRaycastInfo>`).
 	
 	.. note::
 		In `Hybrid mode`, raycast is activated only when the selected targets are close to the car (:ref:`more info <trafficCarRaycastInfo>`).
 	
-**Detect npc mode:**
-	* **Disabled**
-	* **Calculate** : mathematically calculates the npc.
-	* **Raycast** : detect obstacle by raycast (npc should have `PhysicsShape` component).
+Detect Npc Mode
+~~~~~~~~~~~~ 
+
+* **Disabled**
+* **Calculate** : mathematically calculates the npc.
+* **Raycast** : detect obstacle by raycast (npc should have `PhysicsShape` component).
 	
-**Simple physics movement type:**
-	* **Car input** :
-	* **Follow target** :
+Simple Physics Movement Type
+~~~~~~~~~~~~ 
+
+* **Car input** :
+* **Follow target** :
 	
+Common Settings
+~~~~~~~~~~~~ 
+
 | **Default lane speed km/h** : default lane speed (if the lane speed limit is set to 0 the default speed will be selected).
 | **Max car speed km/h** : maximum speed of the car.
 | **Acceleration magnitude** : vehicle acceleration speed.
@@ -66,6 +76,7 @@ Traffic Car Settings
 | **Max steer angle** : max steer angle of the wheels.
 | **Steering damping** : wheel turn speed.
 | **Health amount** : amount of hit points of the car (health systems should be enabled).
+
 **Has rotation lerp** : [for `Simple physics` and `No physics` only]
 	* **Rotation speed** : vehicle rotation speed.
 	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.

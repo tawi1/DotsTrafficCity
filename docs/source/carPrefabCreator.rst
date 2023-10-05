@@ -84,13 +84,13 @@ Save Settings
 	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
 **Save to exist preset:** 
-	* **Scene**: add the created prefabs to an existing preset on the scene.
-	* **Selected**: add the created prefabs to selected preset.
+	* **Scene**: add the created prefabs to an existing :ref:`preset <trafficPreset>` on the scene.
+	* **Selected**: add the created prefabs to selected :ref:`preset <trafficPreset>`.
 
 **New preset settings:**
-	* **Assign new preset to scene** : preset will replace an existing preset on scene.
-	* **New preset path** : project path where to create a new preset.
-	* **New preset name** : new preset name.
+	* **Assign new preset to scene** : :ref:`preset <trafficPreset>` will replace an existing :ref:`preset <trafficPreset>` on scene.
+	* **New preset path** : project path where to create a new :ref:`preset <trafficPreset>`.
+	* **New preset name** : new :ref:`preset <trafficPreset>` name.
 	
 | **Entity type** : :ref:`entity type of the vehicle <trafficCarSettings>`.
 

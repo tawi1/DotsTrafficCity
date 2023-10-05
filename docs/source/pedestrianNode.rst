@@ -136,7 +136,7 @@ Node for entering :ref:`public transport <trafficPublic>`.
 	.. image:: /images/road/pedestrianNode/PedestrianNodePublicEntryExample.png
 	`Public entry example (white box).`
 	
-	.. warning:: Entry node should be any `GameObject` with the component :ref:`TrafficPublicEntryAuthoring <trafficPublicEntryAuthoring>` which adds a node with `Traffic public entry` type.
+	.. warning:: Entry node should be any `GameObject` with the component :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` which adds a node with `Traffic public entry` type.
 	
 .. _pedestrianNodeSettings:
 

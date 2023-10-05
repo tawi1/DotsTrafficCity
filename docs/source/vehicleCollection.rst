@@ -49,6 +49,13 @@ Steps
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep4-0.png
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep5.png
 		
+Entity Conversion
+~~~~~~~~~~~~
+
+Vehicle collection assigned to `VehicleDataHolder` and converted on the `EntitySubScene` subscene.
+
+	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
+
 .. _sharedSoundSettings:
 
 Sound Settings

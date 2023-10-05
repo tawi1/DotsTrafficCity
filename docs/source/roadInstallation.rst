@@ -41,3 +41,37 @@ Steps:
 	#. On/off autosync configs (before migrating the configs to the `subscene`, they will be synchronized with the configs that are in the `Hub`).
 	#. Press `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the `subscene`.
+	
+	
+.. _configSync:
+
+Config Synchronization
+----------------
+
+There are 2 variants to edit configs:
+
+Main Scene Editing
+~~~~~~~~~~~~
+
+	.. image:: /images/road/installation/MainSceneExample.png
+
+Steps:
+	#. Select `Hub` on the scene.
+	#. After editing any config in the main scene press `Copy To Subscene` button.
+	
+		.. image:: /images/road/installation/Hub.png
+	
+Directional Editing:
+~~~~~~~~~~~~
+
+	.. image:: /images/road/installation/EntitySubSceneExample.png
+	
+Steps:
+	#. Open the `EntitySubScene` subscene.
+	#. Edit any config.
+	#. Save & close subscene.
+
+
+	
+
+	

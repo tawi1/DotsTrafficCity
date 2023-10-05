@@ -59,6 +59,8 @@ Authoring components
 Vehicle Authoring
 """"""""""""""""""
 
+	.. image:: /images/entities/trafficCar/vehicleAuthoring.png
+	
 Wheel
 """"""""""""""""""
 
@@ -168,6 +170,17 @@ Wheel Refs
 | **Brake rate** : 
 | **Handbrake rate** : 
 
+PhysicsBody
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/PhysicsBody.png
+	
+PhysicsShape 
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/custom/PhysicsShape.png
+	`Example`
+
 .. _simplePhysicsVehicle:
 
 Simple Physics
@@ -189,12 +202,16 @@ CarWheelAuthoring
 | **All wheels** : all wheels of the vehicle.
 | **Steering wheels** : wheels that can turn.
 
-	.. note:: Simple vehicles only.
-		
-PhysicsShape & PhysicsBody
+PhysicsBody
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/PhysicsBody.png
+	
+PhysicsShape 
+""""""""""""""""""
+
+	.. image:: /images/entities/trafficCar/PhysicsShape.png
+	`Example`
 
 Optional components if the car moves with physics.
 
@@ -204,11 +221,11 @@ No Physics
 ~~~~~~~~~~~~
 
 * :ref:`Pure entities <pureEntity>` that moved by transform system without physics.
-* Contains the same components as `Simple Physics <simplePhysicsVehicle>`.
+* Contains the same components as :ref:`Simple Physics <simplePhysicsVehicle>`.
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Pure entity no physics <entityType>` type refer to this.
 
-Common authoring components
+Common Authoring Components
 ----------------
 
 .. _trafficCarEntityAuthoring:

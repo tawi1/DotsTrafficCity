@@ -22,6 +22,16 @@ You can find on the scene here:
 
 	.. image:: /images/entities/trafficCar/preset/PresetHolderExample.png
 	
+Entity Conversion
+----------------
+
+Make sure, that `TrafficCarEntityPoolBakerRef` on the subscene has the correct preset. Read more about :ref:`config syncronization <configSync>`.
+
+	.. image:: /images/entities/trafficCar/howTo/Step6.png
+
+Examples
+----------------
+	
 	.. image:: /images/entities/trafficCar/preset/PresetHolderExample3.png
 	`Hybrid custom entity player preset example`
 	

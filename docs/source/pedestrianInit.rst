@@ -403,7 +403,7 @@ States
 .. _pedestrianMovementState:
 
 Movement State
-""""""""""""""""""
+~~~~~~~~~~~~
 
 * Default
 * Idle
@@ -413,7 +413,7 @@ Movement State
 .. _pedestrianActionState:
 
 Pedestrian Action State
-""""""""""""""""""
+~~~~~~~~~~~~
 
 * Default : no state.
 * Idle : when a pedestrian is waiting.
@@ -484,15 +484,6 @@ Common Settings
 | **Talking pedestrian spawn chance** : chance of spawning talking pedestrians
 | **Min/Max talk time** : min/max talk time.
 
-.. _pedestrianNavigationType:
-
-Pedestrian Navigation Type **[NavMesh navigation only]**
-""""""""""""""""""
-
-* **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
-* **Persist** : navigation is always on (for :ref:`NavMesh <pedestrianNavmeshNavigation>` calculation only).
-* **Disabled**
-	
 .. _pedestrianObstacleAvoidanceType:
 	
 Obstacle Avoidance Type
@@ -500,6 +491,15 @@ Obstacle Avoidance Type
 
 | **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
 | **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
+	
+.. _pedestrianNavigationType:
+
+Pedestrian Navigation Type **[** :ref:`NavMesh <pedestrianNavmeshNavigation>` **navigation only]**
+""""""""""""""""""
+
+* **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
+* **Persist** : navigation is always on.
+* **Disabled**	
 	
 Collision type
 """"""""""""""""""

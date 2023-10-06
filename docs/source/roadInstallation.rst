@@ -61,7 +61,7 @@ Steps:
 	
 		.. image:: /images/road/installation/Hub.png
 	
-Directional Editing:
+Directional Editing
 ~~~~~~~~~~~~
 
 	.. image:: /images/road/installation/EntitySubSceneExample.png

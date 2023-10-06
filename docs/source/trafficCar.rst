@@ -130,8 +130,8 @@ Engine
 
 	.. image:: /images/entities/trafficCar/custom/engine.png
 
-| **Torque** : wheel torque.
-| **Transimission rate** : torque to wheel speed ratio.
+| **Torque** : engine torque.
+| **Transimission rate** : engine torque to wheel speed ratio.
 | **Drag** : drag value of the vehicle.
 
 Scene Settings
@@ -156,13 +156,13 @@ Template Settings
 
 **Tabs:**
 	* **Create new** : create new template settings.
-	* **Copy from template** : copy selected template settings.
-	* **Save to template** : save to selected template settings.
+	* **Copy from template** : copy settings from the selected template.
+	* **Save to template** : save settings to the selected template.
 	
 **Copy settings type:**
 	* **Physics settings** : copy the physics settings (mass, damping, gravity) of the `PhysicsBody` component.
-	* **Center of mass** : copy the center of mass position of the `PhysicsBody` component.
-	* **Offsets** : copy the offset of the wheels.
+	* **Center of mass** : copy the center of mass local position of the `PhysicsBody` component.
+	* **Offsets** : copy the local offset of the wheels.
 	* **Settings** : copy the settings of `the VehicleAuthoring` component.
 
 Wheel Refs
@@ -179,7 +179,7 @@ Wheel Refs
 PhysicsBody
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/custom/PhysicsBody.png
+	.. image:: /images/entities/trafficCar/custom/physicsBody.png
 	
 PhysicsShape 
 """"""""""""""""""
@@ -211,7 +211,7 @@ CarWheelAuthoring
 PhysicsBody
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/physicsBody.png
+	.. image:: /images/entities/trafficCar/PhysicsBody.png
 	
 PhysicsShape 
 """"""""""""""""""

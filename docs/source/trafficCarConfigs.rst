@@ -69,6 +69,10 @@ Common Settings
 ~~~~~~~~~~~~ 
 
 | **Default lane speed km/h** : default lane speed (if the lane speed limit is set to 0 the default speed will be selected).
+
+:ref:`Simple Vehicle <simplePhysicsVehicle>` Settings
+~~~~~~~~~~~~ 
+
 | **Max car speed km/h** : maximum speed of the car.
 | **Acceleration magnitude** : vehicle acceleration speed.
 | **Backward acceleration magnitude** : backward vehicle acceleration speed.
@@ -77,10 +81,13 @@ Common Settings
 | **Steering damping** : wheel turn speed.
 | **Health amount** : amount of hit points of the car (health systems should be enabled).
 
-**Has rotation lerp** : [for `Simple physics` and `No physics` only]
+**Has rotation lerp** :
 	* **Rotation speed** : vehicle rotation speed.
 	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
+Other Settings
+~~~~~~~~~~~~ 
+
 | **Cull wheels** : on/off wheel handling if they are outside the camera.
 
 .. _trafficNavMeshObstacle:

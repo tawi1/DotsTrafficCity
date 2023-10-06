@@ -31,7 +31,7 @@ Scene Streaming
 Road Streaming
 ~~~~~~~~~~~~
 
-Road Streaming is needed to split the map into chunks to create huge maps, so that road entities: :ref:`TrafficNodes <trafficNode>, :ref:`PedestrianNodes <pedestrianNode>, etc. are only loaded where the player is.
+Road Streaming is needed to split the map into chunks to create huge maps, so that road entities: :ref:`TrafficNodes <trafficNode>`, :ref:`PedestrianNodes <pedestrianNode>`, etc. are only loaded where the player is.
 
 How To Adjust
 """"""""""""""

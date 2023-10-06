@@ -1,11 +1,5 @@
 .. _streamingConfigs:
 
-Streaming Configs
-=====
-
-.. contents::
-   :local:
-
 Configs
 -------------------
 	

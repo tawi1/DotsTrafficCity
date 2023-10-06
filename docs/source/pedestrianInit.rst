@@ -413,7 +413,7 @@ Movement State
 .. _pedestrianActionState:
 
 Pedestrian Action State
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * Default : no state.
 * Idle : when a pedestrian is waiting.
@@ -450,7 +450,7 @@ Pedestrian Settings Config
 	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
 
 Pedestrian Skin Type
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **Rig show only in view** : rig skin will be loaded in the camera's view area.
 * **Rig and dummy** : rig will be in the camera's view, and the dummy skin will be out of the camera's view.
@@ -460,7 +460,7 @@ Pedestrian Skin Type
 * **No skin** : entities without a skin will be created.
 	
 Pedestrian Rig Type
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
 * **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianGPU>`.
@@ -468,13 +468,13 @@ Pedestrian Rig Type
 .. _pedestrianEntityType:
 
 Pedestrian Entity Type
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **No physics** : pedestrian not contains `PhysicsShape` component.
 * **Physics** : pedestrian contains `PhysicsShape` component.
 	
 Common Settings
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 | **Pedestrian collider radius** : pedestrian collider radius for `No physics` type.
 | **Walking speed** : walking speed.
@@ -487,7 +487,7 @@ Common Settings
 .. _pedestrianNavigationType:
 
 Pedestrian Navigation Type **[NavMesh navigation only]**
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
 * **Persist** : navigation is always on (for :ref:`NavMesh <pedestrianNavmeshNavigation>` calculation only).
@@ -496,13 +496,13 @@ Pedestrian Navigation Type **[NavMesh navigation only]**
 .. _pedestrianObstacleAvoidanceType:
 	
 Obstacle Avoidance Type
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
-* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
-* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
+| **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
+| **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
 	
 Collision type
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
 * **Physics** : collision is calculated with `Unity.Physics` (:ref:`for Physics type<pedestrianEntityType>`).
@@ -578,13 +578,13 @@ Pedestrian Scary Trigger Config
 	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
 	
 Trigger settings
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 | **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
 | **Death trigger duration** : death trigger duration.
 		
 Sound settings
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 | **Has scream sound** : on/off scream sound.
 | **Scream entity limit** : maximum number of screaming pedestrians at the same time.
@@ -622,7 +622,7 @@ Pedestrian State Authoring
 ~~~~~~~~~~~~
 	
 State Dictionary
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring1.png
 
@@ -635,7 +635,7 @@ State Dictionary
 
 
 Movement State Binding Dictionary
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring2.png
 

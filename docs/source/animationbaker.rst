@@ -141,8 +141,8 @@ Initial Set Up
 """"""""""""""
 
 **Steps:**
-	#. Create :ref:`Animator Data Container <animationBakerAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
-	#. Create (if necessary) and assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
+	#. Create :ref:`Animator Data Container <animationGPUAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
+	#. Create (if necessary) and assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
 
 	.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 	
@@ -200,7 +200,7 @@ Animation playback node.
 
 | **Asset name** : asset data name.
 | **Anim name** : animation name (by default is taken from `Anim enum`).
-| **Anim enum** : list of available animations in the :ref:`Animation Collection <animationBakerAnimationCollection>`
+| **Anim enum** : list of available animations in the :ref:`Animation Collection <animationGPUAnimationCollection>`
 | **Unique animation** : unique animation mesh instance will be created for this animation.
 
 .. _animationBakerAnimatorTransitionNode:
@@ -233,7 +233,7 @@ Transition example
 	.. image:: /images/pedestrian/baker/animator/SitoutTransitionExample.png		
 	`Sitout transition example.`
 
-.. _animationBakerAnimationCollection:
+.. _animationGPUAnimationCollection:
 
 Animation Collection
 ------------
@@ -258,7 +258,7 @@ Settings
 	* **Allow duplicate** : is it allowed to take an animation from the pool if it is already used by another character.
 	* **Instance count** : animation pool size.
 
-.. _animationBakerAnimatorContainer:
+.. _animationGPUAnimatorContainer:
 
 Animator Data Container
 ------------

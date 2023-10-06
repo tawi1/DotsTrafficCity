@@ -12,7 +12,7 @@ How To Create
 
 .. _pedestrianHybridLegacy:
 
-Hybrid legacy skin
+Hybrid Legacy Skin
 ~~~~~~~~~~~~
 
 `Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with `animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_) and the DOTS entity.
@@ -55,20 +55,20 @@ How To Use
 	* PedestrianLegacyAnimatorSystem
 	* PedestrianSittingLegacyAnimatorSystem
 
-.. _pedestrianBaked:
+.. _pedestrianGPU:
 
-Pure GPU skin
+Pure GPU Skin
 ~~~~~~~~~~~~
 
 `Pure GPU skin` is a :ref:`pure entity <pureEntity>` that combines the GPU texture animations and the DOTS entity.
 
-.. _pedestrianBakedFactory:
+.. _pedestrianCrowdSkinFactory:
 
 Factory
 """"""""""""""
 
 	#. :ref:`Create textures and animation sheets <animationBaker>`.
-	#. Create :ref:`Animation Collection <animationBakerAnimationCollection>` in the project context menu.
+	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` in the project context menu.
 	
 		``Spirit604/Animation Baker/Animation Collection``
 	
@@ -79,7 +79,7 @@ Factory
 	
 		``Hub/Pools/Npc/Pedestrian/PedestrianCrowdSkinFactory``
 
-	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` to `PedestrianCrowdSkinFactory`.
+	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` to `PedestrianCrowdSkinFactory`.
 	
 		.. image:: /images/pedestrian/baker/AddNewEntryPanelExample.png
 		
@@ -87,7 +87,7 @@ Factory
 	
 		.. image:: /images/pedestrian/baker/NewEntry.png
 			
-	#. Select created :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
+	#. Select created :ref:`Baked Animation Sheet Data <animationTextureData>`.
 	
 		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
 			
@@ -120,51 +120,51 @@ Factory
 		
 	#. Select entry & assign animations:
 	
-		**Manual way:**
-		#. Select the animation in the inspector that you want to assign to the selected character.
-	
-			.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
+		#. **Manual way:**
+			#. Select the animation in the inspector that you want to assign to the selected character.
+		
+				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
+				
+			#. Press the `Assign` button according to the selected animation in :ref:`Animation Texture Data <animationTextureData>`.
+		
+		#. **Automated way:**
+			#. Automatic assignment works if the animation in the list matches (or partially matches) the animation name in the selected container.
+			#. Press `Auto Bind Animations` button.
+			#. Make sure, that all animations are assigned.
 			
-		#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
-		
-		**Automated way:**
-		#. Automatic assignment works if the animation in the list matches (or partially matches) the animation name in the selected container.
-		#. Press `Auto Bind Animations` button.
-		#. Make sure, that all animations assigned.
-		
-			.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
+				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
 
 	#. Assign animations for each entry in the same way.
 	#. Assign :ref:`ragdolls <pedestrianRagdoll>`. **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
 	
-.. _animationBakerAnimationSheetData:
+.. _animationTextureData:
 
-Baked Animation Sheet Data
+Animation Texture Data
 """"""""""""""
 
 Data about baked animations in texture (:ref:`How to create <animationBakerHowTo>`). 
 	
-	.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png	
+	.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample3.png	
 	
-Baked Custom Animator
+Crowd GPU Custom Animator
 """"""""""""""
 
-Baked Custom animator is used for transitions between baked animations (implemented by `PedestrianBakedTransitionAnimatorSystem` system).
+Crowd GPU Custom animator is used for transitions between baked animations (implemented by `CrowdAnimatorTransitionSystem` system).
 
 .. _animationBakerHowToCreateTransition:
 
 **How To Create Transition:**
-	#. Open on the scene `PedestrianBakedAnimatorAuthoring`.
+	#. Open on the scene `CrowdGPUAnimatorAuthoring`.
 	
-		``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
+		``Hub/Configs/BakerRefs/Settings/CrowdGPUAnimatorAuthoring``
 		
 		.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
 
 				
-	#. Create :ref:`Animator Data Container <animationBakerAnimatorContainer>` in the project context menu and assign to animator (if necessary).
-	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` the same as in the :ref:`PedestrianBakedFactory<pedestrianBakedFactory>`.
+	#. Create :ref:`Animator Data Container <animationGPUAnimatorContainer>` in the project context menu and assign to animator (if necessary).
+	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
 	#. Press `Open Animator` button.
 	#. Create :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
@@ -177,7 +177,7 @@ Baked Custom animator is used for transitions between baked animations (implemen
 
 		`Sitout transition example.`
 	
-	#. Copy & paste :ref:`generated hash <animationBakerAnimatorTriggerHash>` from `AnimatorContainer` to code (:ref:`usage example <pedestrianBakedFactoryTransitionExample>`).
+	#. Copy & paste :ref:`generated hash <animationBakerAnimatorTriggerHash>` from `AnimatorContainer` to code (:ref:`usage example <pedestrianGPUFactoryTransitionExample>`).
 		
 		.. image:: /images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
@@ -191,39 +191,39 @@ How To Use
 	Entities
 	.WithoutBurst()
 	.WithNone<UpdateSkinTag>()
-	.WithAll<HasSkinTag, BakedSkinTag>()
+	.WithAll<HasSkinTag, GPUSkinTag>()
 	.ForEach((
 		Entity entity,
-		ref BakedUpdateSkinComponent bakedUpdateSkinComponent) =>
+		ref GPUSkinUpdateComponent gpuSkinUpdateComponent) =>
 	{
-		bakedUpdateSkinComponent.NewAnimationHash = PedestrianBakedAnimationsConstans.SittingIdle_Anim_Hash; //int animation hash
+		gpuSkinUpdateComponent.NewAnimationHash = PedestrianGPUAnimationsConstans.SittingIdle_Anim_Hash; //int animation hash
 		commandBuffer.SetComponentEnabled<UpdateSkinTag>(entity, true);
 	}).Schedule();
 	
 
-.. _pedestrianBakedFactoryTransitionExample:
+.. _pedestrianGPUFactoryTransitionExample:
 
 **Complex animation transition code example:**
 
 ..  code-block:: r
 	
-	public partial class PedestrianSittingBakedAnimatorExampleSystem : SystemBase
+	public partial class PedestrianSittingGPUAnimatorExampleSystem : SystemBase
 	{
 		private const int StartSitAnimHash = -1880722739; //StartSit hash trigger
 
 		private BeginPresentationEntityCommandBufferSystem entityCommandBufferSystem;
-		private PedestrianBakedTransitionProviderSystem pedestrianBakedTransitionProviderSystem;
+		private CrowdTransitionProviderSystem crowdTransitionProviderSystem;
 
 		protected override void OnCreate()
 		{
 			base.OnCreate();
 			entityCommandBufferSystem = World.GetOrCreateSystemManaged<BeginPresentationEntityCommandBufferSystem>();
-			pedestrianBakedTransitionProviderSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<PedestrianBakedTransitionProviderSystem>();
+			crowdTransitionProviderSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<CrowdTransitionProviderSystem>();
 		}
 
 		protected override void OnUpdate()
 		{
-			var transitions = pedestrianBakedTransitionProviderSystem.Transitions;
+			var transitions = crowdTransitionProviderSystem.Transitions;
 
 			if (!transitions.IsCreated)
 			{
@@ -235,7 +235,7 @@ How To Use
 			Entities
 			.WithoutBurst()
 			.WithReadOnly(transitions)
-			.WithAll<HasSkinTag, BakedSkinTag>()
+			.WithAll<HasSkinTag, GPUSkinTag>()
 			.ForEach((
 				Entity entity,
 				ref AnimationTransitionData animationTransitionData) =>
@@ -256,9 +256,9 @@ How To Use
 	}
 
 **Used in systems:**
-	* PedestrianLoadBakedSkinSystem
-	* PedestrianBakedTransitionAnimatorSystem
-	* PedestrianSittingBakedAnimatorSystem
+	* LoadGPUSkinSystem
+	* CrowdAnimatorTransitionSystem
+	* GPUSittingAnimatorSystem
 
 .. _pedestrianRagdoll:
 
@@ -269,11 +269,15 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 
 **How To Create:**
 	* Add all colliders and rigidbodies according to the tutorial `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ to character.
-	* Add `PedestrianRagdoll` component.
-	* Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianBakedFactory <pedestrianBaked>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
 	
-	.. note:: Implemented by `PedestrianRagdollSystem`.
-
+		.. image:: /images/pedestrian/RagdollAssignExample.png	
+			
+	* Add `PedestrianRagdoll` component.
+	* Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
+	
+	.. note:: 
+		* Implemented by `PedestrianRagdollSystem`.
+		* Currently collides only with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_
 
 .. _pedestrianNavigation:
 
@@ -375,26 +379,70 @@ Physics
 
 `PhysicsBody` and `PhysicsShape` components for physics related systems **[optional]**.
 
+.. _pedestrianStates:
+
 States
 ----------------
 
-**Movement State:**
-	* **Default**
-	* **Idle**
-	* **Walking**
-	* **Running**
+How To Change
+^^^^^^^^^^^^^^^^^^^^^^
+
+..  code-block:: r
+
+	//Switch state example
+	
+    [WithAll(typeof(CheckTrafficLightStateTag))]
+    [BurstCompile]
+    public partial struct CheckTrafficLightJob : IJobEntity
+    {
+        public EntityCommandBuffer.ParallelWriter CommandBuffer;
+
+        void Execute(
+            Entity entity,
+            [ChunkIndexInQuery] int entityInQueryIndex,
+            ref DestinationComponent destinationComponent,
+            ref NextStateComponent nextStateComponent)
+		{
+			//Example red traffic light flag logic
+			bool redLight = true;
+			
+			if (redLight)
+			{
+				if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
+				{
+					 CommandBuffer.SetComponentEnabled<WaitForGreenLightTag>(entityInQueryIndex, entity, true);
+					 //Logic
+				}
+			}
+		}
+	}
+
+.. _pedestrianMovementState:
+
+Movement State
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Default**
+* **Idle**
+* **Walking**
+* **Running**
 
 .. _pedestrianActionState:
 
-**Pedestrian Action State:**
-	* **Default** : no state.
-	* **Idle** : when a pedestrian is waiting.
-	* **MovingToNextTargetPoint** : when going from :ref:`PedestrianNode <pedestrianNode>` to :ref:`PedestrianNode <pedestrianNode>` (excluding crosswalk).
-	* **WaitForGreenLight** : when a pedestrian is waiting for a green traffic light.
-	* **CrossingTheRoad** : when a pedestrian goes crossing a crosswalk.
-	* **ScaryRunning** : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
-	* **Sitting** : when a pedestrian sits.
-	* **Talking** : when a pedestrian talks.
+Pedestrian Action State
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Default** : no state.
+* **Idle** : when a pedestrian is waiting.
+* **MovingToNextTargetPoint** : when going from :ref:`PedestrianNode <pedestrianNode>` to :ref:`PedestrianNode <pedestrianNode>` (excluding crosswalk).
+* **WaitForGreenLight** : when a pedestrian is waiting for a green traffic light.
+* **CrossingTheRoad** : when a pedestrian goes crossing a crosswalk.
+* **ScaryRunning** : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
+* **Sitting** : when a pedestrian sits.
+* **Talking** : when a pedestrian talks.	
+
+	.. note:: 
+		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 
 .. _pedestrianConfigs:
 
@@ -418,24 +466,33 @@ Pedestrian Settings Config
 
 	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
 
-**Pedestrian skin type:**
-	* **Rig show only in view** : rig skin will be loaded in the camera's view area.
-	* **Rig and dummy** : rig will be in the camera's view, and the dummy skin will be out of the camera's view.
-	* **Dummy show only in view** : dummy skin will be loaded in the camera's view area.
-	* **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
-	* **Dummy show always** : dummy skin will be loaded when the entity is created and will exist until it is destroyed..
-	* **No skin** : entities without a skin will be created.
+Pedestrian Skin Type
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Rig show only in view** : rig skin will be loaded in the camera's view area.
+* **Rig and dummy** : rig will be in the camera's view, and the dummy skin will be out of the camera's view.
+* **Dummy show only in view** : dummy skin will be loaded in the camera's view area.
+* **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
+* **Dummy show always** : dummy skin will be loaded when the entity is created and will exist until it is destroyed..
+* **No skin** : entities without a skin will be created.
 	
-**Pedestrian rig type:**
-	* **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
-	* **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianBaked>`.
-	
+Pedestrian Rig Type
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
+* **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianGPU>`.
+
 .. _pedestrianEntityType:
 
-**Pedestrian entity type:**
-	* **No physics** : pedestrian not contains `PhysicsShape` component.
-	* **Physics** : pedestrian contains `PhysicsShape` component.
+Pedestrian Entity Type
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **No physics** : pedestrian not contains `PhysicsShape` component.
+* **Physics** : pedestrian contains `PhysicsShape` component.
 	
+Common Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
 | **Pedestrian collider radius** : pedestrian collider radius for `No physics` type.
 | **Walking speed** : walking speed.
 | **Running speed** : running speed.
@@ -446,21 +503,27 @@ Pedestrian Settings Config
 
 .. _pedestrianNavigationType:
 
-**Pedestrian navigation type:**
-	* **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
-	* **Persist** : navigation is always on (for :ref:`NavMesh <pedestrianNavmeshNavigation>` calculation only).
-	* **Disabled**
+Pedestrian Navigation Type **[NavMesh navigation only]**
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
+* **Persist** : navigation is always on (for :ref:`NavMesh <pedestrianNavmeshNavigation>` calculation only).
+* **Disabled**
 	
 .. _pedestrianObstacleAvoidanceType:
 	
-**Obstacle avoidance type:**
-	* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
-	* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
+Obstacle Avoidance Type
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
+* **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
 	
-**Pedestrian collision type:**
-	* **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
-	* **Physics** : collision is calculated with `Unity.Physics` (:ref:`for Physics type<pedestrianEntityType>`).
-	* **Disabled**
+Collision type
+^^^^^^^^^^^^^^^^^^^^^^
+
+* **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
+* **Physics** : collision is calculated with `Unity.Physics` (:ref:`for Physics type<pedestrianEntityType>`).
+* **Disabled**
 	
 | **Has ragdoll** : on/off :ref:`ragdoll<pedestrianRagdoll>` for pedestrian.
 
@@ -476,6 +539,7 @@ Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
 | **Update frequency** : how often the nav target can be updated.
 | **Max distance to target node** : distance to nav path node.
 | **Max collision time** : if the pedestrian is stuck for more than the collision time, the anti-stuck will be activated.
+
 **Revert target support** : if steering target is much further than final target with a given value the target will be reverted.
 	* **Revert steering target distance** : distance to steering target logic for target return.
 	* **Revert end target remaining distance** : distance to final target logic for target return.
@@ -492,9 +556,11 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 **Obstacle avoidance method:**
 	* **Simple** : is able to avoid only 1 object.
 	* **Find neighbors** : multiple objects close to each other are grouped as one (more costly in performance).
+	
 | **Max surface angle** : maximum surface tilt angle at which the avoidance is calculated.
 | **Target point offset** : offset between an obstacle and avoidance waypoints.
 | **Achieve distance** : distance to achieve the avoidance waypoint.
+| **Check target availability** : check if destination can be reached, if not and can't be found new, destination returns.
 
 .. _pedestrianAntistuckConfig:
 
@@ -528,16 +594,20 @@ Pedestrian Scary Trigger Config
 
 	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
 	
-**Trigger settings:** 
-	* **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
-	* **Death trigger duration** : death trigger duration.
+Trigger settings
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
+| **Death trigger duration** : death trigger duration.
 		
-**Sound settings:** 
-	* **Has scream sound** : on/off scream sound.
-	* **Scream entity limit** : maximum number of screaming pedestrians at the same time.
-	* **Chance to scream** : chance of a pedestrian screaming.
-	* **Scream delay** : delay between screams.
-	* **Scream sound data** : scream :ref:`sound data<soundData>` source.
+Sound settings
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Has scream sound** : on/off scream sound.
+| **Scream entity limit** : maximum number of screaming pedestrians at the same time.
+| **Chance to scream** : chance of a pedestrian screaming.
+| **Scream delay** : delay between screams.
+| **Scream sound data** : scream :ref:`sound data<soundData>` source.
 		
 Pedestrian Bench Config
 ~~~~~~~~~~~~
@@ -561,3 +631,32 @@ Common pedestrian sound settings
 | **Sound death** : :ref:`sound<soundData>` when a pedestrian died.
 | **Enter tram sound** : :ref:`sound<soundData>` when entering a tram.
 | **Exit tram sound** : :ref:`sound<soundData>` when exiting a tram.
+
+
+.. _pedestrianStateAuthoring:
+
+Pedestrian State Authoring
+~~~~~~~~~~~~
+	
+State Dictionary
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring1.png
+
+| **Next states** : which states can override the current state.
+
+**State type:** 
+	* Default : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there).
+	* External system : the state proccessed by external system (code processing for state should be in the separate system).
+	* Additive : additive state flag adds to the current state and is processed by the `External system`.
+
+
+Movement State Binding Dictionary
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring2.png
+
+Contains data - which :ref:`Movement state <pedestrianMovementState>` is assigned after the :ref:`Action state <pedestrianActionState>` is assigned.
+	
+	.. note:: 
+		You can read about available states :ref:`here <pedestrianStates>`.

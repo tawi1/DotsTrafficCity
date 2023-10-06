@@ -66,7 +66,7 @@ Route settings
 	* **Bus** : for the default path.
 	* **Tram** : for the rail path.	
 	
-| **Car model** : :ref:`car model <carModel>`of the public transport vehicle that will be spawned on the route.
+| **Car model** : :ref:`car model <carModel>` of the public transport vehicle that will be spawned on the route.
 
 .. _trafficPublicRouteTransitionSettings:
 

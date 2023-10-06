@@ -3,7 +3,7 @@
 Traffic Node
 =====
 
-``Traffic node is a node for creating pedestrian routes``
+``Traffic node is a set of traffic node entities that are connected to other traffic node entities by ``:ref:`path <paths>`
 
 .. _trafficNodeSettings:
 
@@ -21,6 +21,7 @@ Settings
 | **Weight** : weight of the node for route selection by traffic.
 | **Custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
 | **Capacity** : capacity of the nodes (used for parking, bus station, etc...).
+
 **Traffic node type:** 
 	* **Default**
 	* **Parking** : node where cars are parked.
@@ -28,6 +29,7 @@ Settings
 	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
 	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.
 	* **Idle** : node where the vehicle is idling.
+	
 | **Has crollwalk** : quick on/off crosswalk option for pedestrians.
 | **Allow light for left lanes** : enable traffic light for leftside entities (by default, traffic light is enabled only for rightside lane entities).
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).

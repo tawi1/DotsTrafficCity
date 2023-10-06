@@ -400,9 +400,6 @@ Physics
 States
 ----------------
 
-How To Change
-^^^^^^^^^^^^^^^^^^^^^^
-
 .. _pedestrianMovementState:
 
 Movement State

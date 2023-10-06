@@ -6,7 +6,7 @@ Pedestrian Node
 How To Create
 ----------------
 
-**Ways:**
+**There are 2 ways:**
 	#. Create node by yourself in the `Unity` toolbar: 
 	
 		`Spirit604/Create/PedestrianNode`

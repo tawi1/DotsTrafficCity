@@ -68,7 +68,7 @@ Unique ID
 Car Model
 ----------------
 
-| **Car model** - name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable `ID <trafficId>`. 
+| **Car model** - name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>`. 
 
 	.. note::
 		You can change the `CarModel` name at any time in the :ref:`Collection <vehicleCollection>` tab.

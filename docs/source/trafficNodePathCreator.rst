@@ -1,9 +1,9 @@
 .. _trafficNodePathCreator:
 
-TrafficNode Path Creator
+Path Creator
 =====
 
-`TrafficNode Path Creator` is a tool for quickly creating :ref:`paths <path>` between :ref:`traffic nodes <trafficNode>`.
+`Path Creator` is a tool for quickly creating :ref:`paths <path>` between :ref:`traffic nodes <trafficNode>`.
 
 How To Use
 ------------

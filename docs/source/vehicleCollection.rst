@@ -8,7 +8,7 @@ Vehicle collection contains data on all vehicles in the city and their :ref:`sha
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
 	
 	.. note::
-		:ref:`Fmod plugin <sound>` for sounds should be installed.
+		:ref:`FMOD plugin <sound>` for sounds should be installed.
 	
 How To
 ----------------

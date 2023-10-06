@@ -17,13 +17,15 @@ General Settings Config
 Config to quickly on/off optional features.
 
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
+
+Player Settings
+^^^^^^^^^^^^^^^^^^^^^^
 	
 **Player agent type:**
 	* **Player** : player will be spawned.
 	* **Free fly camera** :	flying camera will be spawned.
 	
 | **Player support** : on/off systems related to the player.
-| **Bullet support** : on/off systems related to the bullets.	
 
 **Bullet collision type:** method of calculating collisions for a bullet.
 	* **Calculate collision** : manual calculating.
@@ -32,34 +34,63 @@ Config to quickly on/off optional features.
 **Shoot direction source:**
 	* **Joystick** : target of the firing in the direction of the joystick.
 	* **Crosshair** : target of the shooting in the direction of the crosshair position.
-	
+
+Player Target Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
 | **Max target distance** : maximum distance for crosshair target capture.
 | **Max capture angle** :	maximum angle for crosshair target capture.
 | **Default aim point distance** : distance between the player and the crosshair if there is no target.	
 | **Default aim point Y position** : default Y-axis crosshair position.	
-| **Vehicle mechanics** :	on/off vehicle mechanics system.
+
+Common Car Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
 | **Car visual damage system support** : on/off visual hit feature for traffic vehicles by bullets.	
+
+Traffic Car Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
 | **Has traffic** : on/off traffic vehicle in the city.	
+
+**Traffic baking type:**  
+	* **Editor subscene** : all traffic entities are converted at editor subscene time.
+	* **Runtime** : all traffic entities are converted at runtime.
+
 | **Change lane support** : on/off feature to change lanes for traffic.
 | **Traffic public support** : on/off public traffic vehicle in the city.	
 | **Antistuck support** :	on/off :ref:`antistuck <trafficCarAntistuckConfig>` feature for traffic vehicles.	
 | **Car hit collision reaction** : on/off traffic collision reaction to other traffic cars.
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
+
+Pedestrian Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
 | **Has pedestrian** : on/off pedestrians in the city.	
+
+**Pedestrian baking type:**  
+	* **Editor subscene** : all pedestrian entities are converted at editor subscene time.
+	* **Runtime** : all pedestrian entities are converted at runtime.
+	
 | **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due bullets etc...).
+
+Other Settings
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Physics simulation type:**
 	* **No physics** : dots physics off.
 	* **Unity physics** : unity dots physics on.
 	* **Havok physics** : havok dots physics on (havok physical package is required).
 	
-| **Health system support** :	on/off health systems for all entities (vehicles, pedestrians, etc...).
+| **Health system support** : on/off health systems for all entities (vehicles, pedestrians, etc...).
 | **Navigation support** : on/off navigation systems for pedestrians.
 
 .. _propsDamageOption:
 
 | **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
-| **Show fps** : on/off fps ui panel.
+| **Target FPS** : target fps of the device.
+| **Hide UI** : on/off UI.
+| **Show FPS** : on/off fps ui panel.
 	
 .. _cullConfig:
 
@@ -75,12 +106,28 @@ Config of the :ref:`cull point <cullPointInfo>`.
 	* **Visible distance** : distance to activate visual features of entities.
 | **Show debug** : on/off visual culling circle on the scene.
 	
+.. _roadStreamingConfig:
+
+Road Streaming Config
+~~~~~~~~~~~~
+
+Config for load/unload road sections from the main scene.
+
+	.. image:: /images/configs/common/RoadStreamingConfig.png
+	
+| **Streaming is enabled** : on/off streaming.
+| **Ignore Y** : ignore calculation of distance to road section for Y axis.
+| **Distance for streaming in** : distance at what the road section is loaded.
+| **Distance for streaming out** : distance at what the road section is unloaded.
+| **Section cell size** : cell size of the road section.
+| **Node cell size** : node size for :ref:`TrafficNode <trafficNode>` and :ref:`PedestrianNode <pedestrianNode>` in order to compute a unique position hash for them.
+
 .. _streamingLevelConfig:
 
 Streaming Level Config
 ~~~~~~~~~~~~
 
-Config for loading/unloading subscenes.
+Config for load/unload content subscenes.
 
 	.. image:: /images/configs/common/StreamingLevelConfig.png
 	

@@ -26,10 +26,38 @@ States
 Scene Streaming
 -------------------
 
+.. _roadStreaming:
+
 Road Streaming
 ~~~~~~~~~~~~
 
-The current version of the project does not support streaming of road-related entities.
+How To Adjust
+""""""""""""""
+
+#. Enable streaming in the :ref:`Road Streaming Config <roadStreamingConfig>` to load road sections at the runtime.
+#. Adjust load/unload distance and section cell size.
+#. :ref:`TrafficNode <trafficNode>`, :ref:`PedestrianNode <pedestrianNode>`, :ref:`TrafficLightHandler <trafficLightHandler>` automatically attaches to related :ref:`RoadSegment <roadSegment>`.
+#. :ref:`Traffic lights <trafficLightObject>` has :ref:`SectionObjectAuthoring <sectionObject>` component.
+#. If you want to add your own section object, add :ref:`SectionObjectAuthoring <sectionObject>` component and select proper `Section object type`.
+#. :ref:`Debug streaming <sectionDebugger>` distance and section size.
+
+	.. image:: /images/other/RoadStreamingExample.png
+	`Road streaming example.`
+	
+.. _sectionObject:
+
+Section Object Authoring
+""""""""""""""
+
+	.. image:: /images/other/SectionObjectAuthoring.png
+	
+**Section object type:**
+	* **Attach to closest** : attach to closest road section.
+	* **Create new if nessesary** : create new road section if not exist with the current computed section hash.
+	* **Provider object** : object has a component that implements the `IProviderObject` interface, which provides a reference to the associated object section.
+	* **Custom object** : user's custom related object section.
+	
+| **Include childs** :  all child objects are included in the section of the parent object.
 
 Content Streaming
 ~~~~~~~~~~~~

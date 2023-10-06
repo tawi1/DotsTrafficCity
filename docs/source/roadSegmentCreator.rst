@@ -236,6 +236,7 @@ New Node Settings
 .. _roadSegmentCreatorCustomCustomSettingsOption:
 	
 | **Custom settings** : on/off custom settings for advanced node customization.
+
 New node settings type [custom settings enabled] new :ref:`TrafficNode <trafficNode>` will be created like:
 	* **Prefab** : new prefab.
 	* **Unique** : created with unique defined :ref:`settings <trafficNodeSettings>`.
@@ -334,8 +335,10 @@ Snap Node Settings
 	* **All** : snap `TrafficNode` & `Path node`.
 	* **Traffic node** : only `TrafficNode`.
 	* **Path node** : only `Path node`.
+	
 **Auto-snap position** on/off position snapping.
 	* **Add half offset** : the snapped object is shifted by half of the set snapping size.
+	
 | **Auto snap custom size** : snapping value.
 **Auto round rotation:** : on/off rotation snapping.
 	* **Round angle** : snapping angle value.
@@ -373,6 +376,7 @@ Pedestrian node settings
 | **Pedestrian route width** : :ref:`pedestrian route width <pedestrianNodeSettings>`.
 | **Custom crosswalk** : on/off selected crosswalk.
 | **Has crosswalk** : on/off :ref:`crosswalk <trafficNodeSettings>` for pedestrians.
+
 **Pedestrian corner connection type:**
 	* **Disabled**
 	* **Corner** : will be created corner :ref:`pedestrian node <pedestrianNode>` to connect crosswalks.
@@ -388,17 +392,20 @@ Light settings
 Traffic lights
 """"""""""""""
 
-| **Show semaphore indexes** : on/off display semaphore :ref:`TrafficLightHandler <trafficLightHandler>` index around :ref:`traffic nodes <trafficNode>` and traffic lights on the scene.
+| **Show light indexes** : on/off display light :ref:`TrafficLightHandler <trafficLightHandler>` index around :ref:`traffic nodes <trafficNode>` and traffic lights on the scene.
 | **Min TrafficNodes count for add light** : minimum number of :ref:`traffic nodes <trafficNode>` in the segment to add traffic light.
 | **Add traffic light** : add traffic light to the segment.
+
 **Selected light prefab type** : prefab of the traffic light to be added [can be changed in creator settings].
 	* **Oneway**
 	* **Two way**
 	* **Four way**
+	
 **Light location** :
 	* **Right** : will be added to the right of the :ref:`traffic nodes <trafficNode>`.
 	* **Left** : will be added to the left of the :ref:`traffic nodes <trafficNode>`.
 	* **Right left** : will be added on both sides of the :ref:`traffic node <trafficNode>`.
+	
 | **Traffic lights offset** : local traffic light offset relative to :ref:`traffic node <trafficNode>`.
 **Light angle offset settings** :
 	* **Angle index** : rotation angle index (0 - 0°, 1 - 90°, 2 - 180°, 3 - 270°).

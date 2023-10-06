@@ -101,7 +101,7 @@ Baked Animation Data
 	* **Source mesh** : source mesh of character.
 	* **Source anim** : source animation clip.
 	* **New anim** : new animation for :ref:`replace <animationBakedAnimationDataReplace>` source animation.
-	* **Animation name** : the name of the animation that will be displayed in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
+	* **Animation name** : the name of the animation that will be displayed in :ref:`Baked Animation Sheet Data <animationTextureData>`.
 	* **Frame rate** : frame rate of baked animation.
 	* **Texture offset** : texture offset of baked animation.
 	* **Frame count** : frame count of baked animation.

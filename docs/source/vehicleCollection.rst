@@ -61,14 +61,17 @@ Vehicle collection assigned to `VehicleDataHolder` and converted on the `EntityS
 Unique ID
 ----------------
 
-| **Id** - is the unique ID based on the main mesh name of the vehicle.
+| **ID** - is the unique, immutable ID based on the main mesh name of the vehicle.
 
 .. _carModel:
 
 Car Model
 ----------------
 
-| **Car model** - name of the vehicle that is assigned to the :ref:`ID <trafficId>`.
+| **Car model** - name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable `ID <trafficId>`. 
+
+	.. note::
+		You can change the `CarModel` name at any time in the :ref:`Collection <vehicleCollection>` tab.
 
 .. _sharedSoundSettings:
 

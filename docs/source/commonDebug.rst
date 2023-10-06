@@ -44,5 +44,26 @@ Displays the size and position of the hashmap cell (can be useful when choosing 
 | **Y size** : Y grid size.
 
 	.. image:: /images/debuggers/other/HashmapGridDebuggerExample.png		
+	
+.. _sectionDebugger:
+	
+Section Debugger
+------------
+
+Displays the :ref:`load section <roadStreaming>` radius, created road sections, road connections (:ref:`TrafficNodes <trafficNode>` and :ref:`PedestrianNodes <pedestrianNode>`).
+
+	.. image:: /images/debuggers/other/SectionDebugger.png	
+
+| **Enable debug** : on/off debugger.
+| **Show traffic path** : on/off display connection of :ref:`TrafficNodes <trafficNode>`.
+| **Show pedestrian path** : on/off display connection of :ref:`PedestrianNodes <pedestrianNode>`.
+| **Loaded section color** : loaded section color.
+| **Unloaded section color** : unloaded section color.
+| **Load circle color** : load circle color.
+| **Unload circle color** : unload circle color.
+| **Pedestrian path color** :connection color of :ref:`PedestrianNodes <pedestrianNode>`.
+
+	.. image:: /images/other/RoadStreamingExample.png
+	`Road streaming example.`
 
 	

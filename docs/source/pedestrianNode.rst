@@ -308,7 +308,7 @@ Hotkeys
 
 .. _pedestrianNodeAdvancedConnection: 
 
-PedestrianNode Advanced Connection Window
+Advanced Connection Window
 ----------------
 
 Help window for advanced node connection settings.

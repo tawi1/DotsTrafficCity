@@ -173,8 +173,8 @@ Car Info
 ~~~~~~~~~~~~
 
 * **Prefab** : reference to source prefab.
-* **Name** : user's name of the vehicle.
-* **ID** : new `ID` entry for :ref:`vehicle collection <vehicleCollection>`.
+* **Name** : user's :ref:`name <carModel>` of the vehicle.
+* **ID** : new :ref:`ID <trafficId>` entry for :ref:`vehicle collection <vehicleCollection>`.
 * **Traffic group** : :ref:`traffic group <pathTrafficGroup>` of the vehicle.
 * **Override entity type** : new :ref:`entity type <trafficCarSettings>` for selected vehicle (might be useful for specific vehicles such as `tram`).
 	* **Entity type**

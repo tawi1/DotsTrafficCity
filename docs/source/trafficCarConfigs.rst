@@ -6,8 +6,6 @@ Traffic Configs
 Traffic Car Spawner Config
 ------------
 
-``Single mode is used to position single objects.``
-
 	.. image:: /images/configs/traffic/TrafficCarSpawnerConfig.png
 	
 | **Preferable count** : maximum number of cars in the city.
@@ -21,8 +19,6 @@ Traffic Car Spawner Config
 	
 Traffic Car Settings
 ------------
-
-``Single mode is used to position single objects.``
 
 	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
 	
@@ -69,6 +65,7 @@ Common Settings
 ~~~~~~~~~~~~ 
 
 | **Default lane speed km/h** : default lane speed (if the lane speed limit is set to 0 the default speed will be selected).
+| **Health amount** : amount of hit points of the car (health systems should be enabled).
 
 :ref:`Simple Vehicle <simplePhysicsVehicle>` Settings
 ~~~~~~~~~~~~ 
@@ -79,7 +76,6 @@ Common Settings
 | **Brake power** : brake power.
 | **Max steer angle** : max steer angle of the wheels.
 | **Steering damping** : wheel turn speed.
-| **Health amount** : amount of hit points of the car (health systems should be enabled).
 
 **Has rotation lerp** :
 	* **Rotation speed** : vehicle rotation speed.
@@ -150,7 +146,7 @@ Config to calculate obstacles on the path.
 | **Avoid crossroad jam** : car doesn't enter an crossroad if it cannot pass it without jamming (:ref:`example<trafficCarObstacleConfig10>`) (:ref:`test scene <trafficTestSceneCrossroadJam>`).
 	
 	.. note:: 
-		**How to calculate the parameters regarding the size of the vehicle hull:**
+		**How to calculate the parameters relative to the size of the vehicle hull:**
 			* Select the mesh renderer of the vehicle hull and insert to the `Target Car Mesh` field.
 			* Press `Recalculate` button.
 			* On the traffic test scene, calibrate the parameters depending on your needs.

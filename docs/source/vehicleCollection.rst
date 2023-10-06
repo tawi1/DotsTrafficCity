@@ -56,6 +56,20 @@ Vehicle collection assigned to `VehicleDataHolder` and converted on the `EntityS
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
 
+.. _trafficId:
+
+Unique ID
+----------------
+
+| **Id** - is the unique ID based on the main mesh name of the vehicle.
+
+.. _carModel:
+
+Car Model
+----------------
+
+| **Car model** - name of the vehicle that is assigned to the :ref:`ID <trafficId>`.
+
 .. _sharedSoundSettings:
 
 Sound Settings

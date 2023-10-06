@@ -436,7 +436,7 @@ How To Change
 .. _pedestrianMovementState:
 
 Movement State
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 * **Default**
 * **Idle**

@@ -13,7 +13,7 @@ Presets
 How To Create
 ----------------
 	
-Presets can only be created by using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (step №4).
+Presets can only be created by using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (step №5).
 
 Where To Find
 ----------------
@@ -25,7 +25,7 @@ You can find on the scene here:
 Entity Conversion
 ----------------
 
-Make sure, that `TrafficCarEntityPoolBakerRef` on the subscene has the correct preset. Read more about :ref:`config syncronization <configSync>`.
+Make sure, that `TrafficCarEntityPoolBakerRef` in the subscene has the correct preset. Read more about :ref:`config syncronization <configSync>`.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 

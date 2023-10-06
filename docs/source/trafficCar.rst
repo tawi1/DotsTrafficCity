@@ -59,7 +59,7 @@ Authoring components
 Vehicle Authoring
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/vehicleAuthoring.png
+	.. image:: /images/entities/trafficCar/custom/vehicleAuthoring.png
 	
 Wheel
 """"""""""""""""""
@@ -205,7 +205,7 @@ CarWheelAuthoring
 PhysicsBody
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/PhysicsBody.png
+	.. image:: /images/entities/trafficCar/physicsBody.png
 	
 PhysicsShape 
 """"""""""""""""""

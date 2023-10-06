@@ -75,31 +75,69 @@ Factory
 		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
-	#. Open on the scene `PedestrianGPUSkinFactory`.
+	#. Open on the scene `PedestrianCrowdSkinFactory`.
 	
-		``Hub/Pools/Npc/Pedestrian/PedestrianGPUSkinFactory``
+		``Hub/Pools/Npc/Pedestrian/PedestrianCrowdSkinFactory``
 
-	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` to `PedestrianBakedSkinFactory`.
+	#. Assign :ref:`Animation Collection <animationBakerAnimationCollection>` to `PedestrianCrowdSkinFactory`.
 	
 		.. image:: /images/pedestrian/baker/AddNewEntryPanelExample.png
-			
+		
 	#. Click `+` to show `New Entry` panel.
 	
 		.. image:: /images/pedestrian/baker/NewEntry.png
-	
-	#. Enter pedestrian entry name & assign `Skinned Mesh Renderer` or `Mesh` of the target pedestrian.
-	#. Click `Add Entry`.	
-	
+			
 	#. Select created :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
 	
 		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
-		
-	#. Select the animation in the inspector that you want to assign to the selected character.
-	
-		.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
 			
-	#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
-	#. Assign values for each animation in the same way.
+	#. Open factory settings.
+	#. Select `Entry Key Source Type` to `Selected Mesh Name` (or select `Custom` if you want to enter the name manually).
+	
+		.. image:: /images/pedestrian/baker/SettingsExample1.png
+			
+	#. Select `Entry Mesh Source Type` to `Selected Sheet` (or select `Custom` if you want to enter the mesh data manually).
+
+		.. image:: /images/pedestrian/baker/SettingsExample2.png
+		
+	#. Assign `Default Atlas Texture` (if selected pedestrians has the same texture material). **[optional step]**
+
+		.. image:: /images/pedestrian/baker/SettingsExample3.png
+			
+	#. One by one click `Select` and `Add entry` button. Or click `Add all entries` button to add all entries in the container.	
+	
+		.. image:: /images/pedestrian/baker/NewEntry2.png
+			
+	#. Turn on `Find Related Animations` button.
+	
+		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample2.png
+			
+	#. Generate Animation Material.
+		#. Assign main texture of selected model **[if missing]**.
+		#. Press `Generate` button.
+	
+			.. image:: /images/pedestrian/baker/GenerateMaterialExample.png
+		
+	#. Select entry & assign animations:
+	
+		**Manual way:**
+		#. Select the animation in the inspector that you want to assign to the selected character.
+	
+			.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
+			
+		#. Press the `Assign` button according to the selected animation in :ref:`Baked Animation Sheet Data <animationBakerAnimationSheetData>`.
+		
+		**Automated way:**
+		#. Automatic assignment works if the animation in the list matches (or partially matches) the animation name in the selected container.
+		#. Press `Auto Bind Animations` button.
+		#. Make sure, that all animations assigned.
+		
+			.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
+
+	#. Assign animations for each entry in the same way.
+	#. Assign :ref:`ragdolls <pedestrianRagdoll>`. **[optional step]**.
+	
+		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
 	
 .. _animationBakerAnimationSheetData:
 

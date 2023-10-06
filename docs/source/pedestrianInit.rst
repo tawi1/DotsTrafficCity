@@ -267,14 +267,30 @@ Ragdoll
 
 Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is :ref:`enabled <pedestrianSettingsConfig>`.
 
-**How To Create:**
-	* Add all colliders and rigidbodies according to the tutorial `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ to character.
+How To Create
+""""""""""""""
+
+#. Add all colliders and rigidbodies according to the tutorial `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ to character.
+
+	.. image:: /images/pedestrian/RagdollAssignExample.png	
+	`RagdollWizard example.`
+		
+#. Add `PedestrianRagdoll` component.
+
+	.. image:: /images/pedestrian/RagdollComponent.png	
 	
-		.. image:: /images/pedestrian/RagdollAssignExample.png	
-			
-	* Add `PedestrianRagdoll` component.
-	* Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
+#. For remain characters, open `RagdollCloner` tool.
+
+	.. image:: /images/pedestrian/RagdollClonerPath.png	
+	.. image:: /images/pedestrian/RagdollCloner1.png	
 	
+#. Assign source character first created and target characters remain characters.
+
+	.. image:: /images/pedestrian/RagdollCloner2.png	
+
+#. Click `Create` button.
+#. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
+
 	.. note:: 
 		* Implemented by `PedestrianRagdollSystem`.
 		* Currently collides only with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_

@@ -62,7 +62,7 @@ Prefab Settings
 | **Cache container** : cache data of saved vehicles.
 | **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
 | **Traffic car convert template** : template which contains traffic prefab template.
-| **Player car convert template** : template which contains traffic prefab template.
+| **Player car convert template** : template which contains player prefab template.
 		
 .. _carPrefabCreatorCommonSettings:
 

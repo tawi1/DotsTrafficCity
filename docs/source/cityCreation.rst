@@ -1,6 +1,6 @@
 .. _cityCreation:
 
-City creation
+City Creation
 ============
 
 Steps
@@ -18,6 +18,7 @@ Steps
 	.. image:: /images/gettingstarted/ExampleScene.png
 	
 #. Create a :ref:`road for traffic <roadInstallation>`.
+#. Generate a :ref:`subscene <roadEntitySubscene>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
 #. Add & customize :ref:`game sounds <sound>`.

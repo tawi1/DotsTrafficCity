@@ -8,7 +8,7 @@ Presets
 * The preset for conversion is selected from the :ref:`Entity type <entityType>` in the :ref:`Traffic Settings <trafficCarSettings>`.
 
 	.. warning::
-		If the :ref:`Vehicle Collection <vehicleCollection>` does not contain the appropriate `Prefab ID`, the `Prefab` will be ignored in the preset.
+		If the :ref:`Vehicle Collection <vehicleCollection>` does not contain the appropriate :ref:`Prefab ID <trafficId>`, the `Prefab` will be ignored in the preset.
 	
 How To Create
 ----------------

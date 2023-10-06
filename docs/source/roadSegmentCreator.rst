@@ -16,7 +16,7 @@ How To Use
 #. Create :ref:`RoadSegment<roadSegment>`.
 #. Set the segment to the desired position.
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
-#. Select :ref:`road segment type <roadSegmentCreatorGeneralSettings>`.
+#. Select :ref:`Road segment type <roadSegmentCreatorGeneralSettings>`.
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 	
@@ -566,7 +566,7 @@ How To Use
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
 	
-#. Repeat the same steps (8 - 10) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
+#. Repeat the same steps (11 - 13) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
 
 	.. _roadSegmentCreatorParkingBuilderPathExample:
 	
@@ -610,14 +610,14 @@ Common
 | **Place count** : number of parking slots.
 | **Parking place spacing offset** : distance between parking slots.
 
-| **Line object type** : distance between parking slots.
-	* **Parking place** : distance between parking slots.
-	* **Parking line** : distance between parking slots.
+**Line object type:** 
+	* **Parking place** 
+	* **Parking line** 
 	
-| **Handles** : distance between parking slots.
-	* **None** : distance between parking slots.
-	* **Position** : distance between parking slots.
-	* **Rotation** : distance between parking slots.
+**Handles:**
+	* **None** 
+	* **Position** 
+	* **Rotation** 
 	
 | **Line start point local** : local parking line start position.
 | **Place size** : parking lot size.

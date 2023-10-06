@@ -56,8 +56,8 @@ Cached
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCached.png
 	
 | **Traffic crossroad settings** : settings that contain general traffic light timings.
-| **Traffic nodes** : all nodes of `RoadSegment`.
-| **Traffic light handler data** : light handlers that contain `TrafficLightCrossroad`.
+| **Traffic nodes** : all :ref:`Traffic Nodes <trafficNode>` of `RoadSegment`.
+| **Traffic light handler data** : light index and light handlers that are linked to the `TrafficLightCrossroad`.
 
 Timeline common
 """"""""""""""

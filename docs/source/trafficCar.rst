@@ -12,7 +12,7 @@ How To Create
 #. Create vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type).
 
 	.. image:: /images/entities/trafficCar/howTo/Step1.png
-	:ref:`Car Prefab Creator <carPrefabCreator>` tool example.
+	:ref:`Car Prefab Creator <carPrefabCreator>` final step example.
 	
 #. Make sure, that the :ref:`vehicle collection <vehicleCollection>` contains the created vehicle.
 
@@ -22,7 +22,7 @@ How To Create
 
 	.. image:: /images/entities/trafficCar/howTo/Step3.png
 
-#. Open :ref:`Traffic settings <trafficCarSettings>` and select :ref:`Simple physics entity <entityType>` type.
+#. Open :ref:`Traffic settings <trafficCarSettings>` and select :ref:`Simple physics entity <entityType>` type (if you created `Simple physics entity`).
 
 	.. image:: /images/entities/trafficCar/howTo/Step4.png
 	
@@ -50,8 +50,6 @@ Custom Physics
 
 * Entities moved by the custom physical system.
 * :ref:`Hybrid entity custom physics <entityType>` & :ref:`Pure entity custom physics <entityType>` types refer to this.
-
-(test scene)
 
 Authoring components
 ^^^^^^^^^^^^^^^^^^^^^^

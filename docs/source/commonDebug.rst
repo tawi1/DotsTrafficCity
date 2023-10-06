@@ -61,7 +61,7 @@ Displays the :ref:`load section <roadStreaming>` radius, created road sections, 
 | **Unloaded section color** : unloaded section color.
 | **Load circle color** : load circle color.
 | **Unload circle color** : unload circle color.
-| **Pedestrian path color** :connection color of :ref:`PedestrianNodes <pedestrianNode>`.
+| **Pedestrian path color** : connection color of :ref:`PedestrianNodes <pedestrianNode>`.
 
 	.. image:: /images/other/RoadStreamingExample.png
 	`Road streaming example.`

@@ -16,6 +16,7 @@ how to :ref:`installation` the project.
    traffic.rst
    pedestrian.rst
    npc.rst
+   streaming.rst
    common.rst
    testScenes.rst
    sound.rst

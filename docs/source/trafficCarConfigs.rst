@@ -100,11 +100,13 @@ Config distance to target nodes and traffic light handlers.
 | **Min distance from previous light** : minimum distance from the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to unassign it from the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
 | **Min distance to target route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>`.
 | **Min distance to target rail route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>` (rail movement only (tramc etc...)).
+
 **Out of path resolve method:** resolving method in case the car is out of the :ref:`path<path>`.
 	* **Disabled** : no actions.
 	* **Switch node** : switching to the next waypoint.
 	* **Backward** : car will try to reach the missed waypoint by reversing.
 	* **Cull** : car will be culled.
+	
 | **Continious local node calculation** :
 
 	.. image:: /images/configs/traffic/TrafficCarNavOutOfPathConfig.png

@@ -66,82 +66,88 @@ Wheel
 
 	.. image:: /images/entities/trafficCar/custom/wheel.png
 	
-| **Wheel mass** : 
-| **Max steering angle** : 
-| **Power steering** : 
-| **Custom steering limit** : 
-| **Radius** : 
-| **Width** : 
-| **Apply impulse offset** : 
-| **Cast type** : 
-| **Cast layer** : 
+| **Wheel mass** : wheel mass.
+| **Max steering angle** : max steering angle of the steering wheel in degrees.
+| **Power steering** : rate of steering improvement.
+| **Custom steering limit** : limiting steering angle based on vehicle speed (Y-axis rate value (1 - max steering angle), X-axis speed in metres per second).
+| **Radius** : wheel radius.
+| **Width** : wheel width.
+| **Apply impulse offset** : applying force offset relative to lower point of wheel (without offsetting the force applied to the lower point of the wheel).
+
+**Cast type:**  
+	* **Ray** : raycast by ray.
+	* **Collider** : raycast by collider (collider size based on wheel radius and width).
+	
+| **Cast layer** : physical layer that collides with the wheel.
 
 Suspension
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/suspension.png
 	
-| **Suspension length** : 
-| **Stiffness** : 
-| **Damping** : 
+| **Suspension length** : length of suspension.
+| **Stiffness** : spring stiffness of suspension.
+| **Damping** : force to return spring to its original length.
 
 Friction
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/friction.png
 	
-| **Longitudinal** : 
-| **Lateral** : 
-| **Forward friction** : 
-| **Lateral friction** : 
-| **Brake friction** : 
+| **Longitudinal** : forward friction curve (Y-axis - forward slip value, X-axis forward speed in metres per second).
+| **Lateral** : lateral friction curve (Y-axis - lateral slip value, X-axis lateral speed in metres per second).
+| **Forward friction** : forward friction value.
+| **Lateral friction** : laterial friction value.
+| **Brake friction** : brake friction value.
 
 Transient Forces
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/transientForce.png
 	
-| **Use forward transient force** : 
-| **Min transient forward speed** : 
-| **Max forward friction rate** : 
-| **Forward relax multiplier** : 
+Transient force is required to hold the car on an inclined ramp during manual braking.
+	
+| **Use forward transient force** : on/of forward transient force.
+| **Min transient forward speed** : min forward speed when transient force is applied.
+| **Max forward friction rate** : max friction for transient force calculated by multiplying the entered rate by the forward friction.
+| **Forward relax multiplier** : step of forward force increase per frame.
 
-| **Use lateral transient force** : 
-| **Min transient lateral speed** : 
-| **Max lateral friction rate** : 
-| **Lateral relax multiplier** : 
+| **Use lateral transient force** : on/of lateral transient force.
+| **Min transient lateral speed** : min lateral speed when transient force is applied.
+| **Max lateral friction rate** : max friction for transient force calculated by multiplying the entered rate by the lateral friction.
+| **Lateral relax multiplier** : step of lateral force increase per frame.
 
 Brakes
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/brakes.png
 
-| **Brake torque** : 
-| **Handbrake torque** : 
+| **Brake torque** : torque of brake.
+| **Handbrake torque** : torque of handbrake.
 
 Engine
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/engine.png
 
-| **Torque** : 
-| **Transimission rate** : 
-| **Drag** : 
+| **Torque** : wheel torque.
+| **Transimission rate** : torque to wheel speed ratio.
+| **Drag** : drag value of the vehicle.
 
 Scene Settings
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/sceneSettings.png
 	
-| **Show debug** : 
-| **Show suspension origin** : 
-| **Show suspension** : 
+| **Show debug** : on/off debugging for wheel and suspension at runtime (`VehicleCustomDebugger`).
+| **Show suspension origin** : on/off display of suspension origin.
+| **Show suspension** : on/off display of suspension.
 
 **Origin move:**
-	* **Disabled** :
-	* **Wheel** :
-	* **Suspension origin** :
-	* **Suspension** :
+	* **Disabled** : disabled handle.
+	* **Wheel** : on/off handle for wheel origin.
+	* **Suspension origin** : on/off handle for suspenion origin.
+	* **Suspension** : : on/off handle for suspenion and wheel origin.
 
 Template Settings
 """"""""""""""""""
@@ -149,26 +155,26 @@ Template Settings
 	.. image:: /images/entities/trafficCar/custom/templateSettings.png
 
 **Tabs:**
-	* **Create new** : 
-	* **Copy from template** : 
-	* **Save to template** : 
+	* **Create new** : create new template settings.
+	* **Copy from template** : copy selected template settings.
+	* **Save to template** : save to selected template settings.
 	
 **Copy settings type:**
-	* **Physics settings** : 
-	* **Center of mass** : 
-	* **Offsets** : 
-	* **Settings** : 
+	* **Physics settings** : copy the physics settings (mass, damping, gravity) of the `PhysicsBody` component.
+	* **Center of mass** : copy the center of mass position of the `PhysicsBody` component.
+	* **Offsets** : copy the offset of the wheels.
+	* **Settings** : copy the settings of `the VehicleAuthoring` component.
 
 Wheel Refs
 """"""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/wheelRefs.png
 
-| **Wheel** : 
-| **Driving** : 
-| **Brake** : 
-| **Brake rate** : 
-| **Handbrake rate** : 
+| **Wheel** : reference to wheel.
+| **Driving** : on/off driving force for the wheel.
+| **Brake** :  on/off braking force for the wheel.
+| **Brake rate** : brake rate.
+| **Handbrake rate** : handbrake rate.
 
 PhysicsBody
 """"""""""""""""""
@@ -235,6 +241,8 @@ TrafficCarEntityAuthoring
 	
 	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
 	
+Main component of traffic entity **[required]**.
+	
 | **Hull mesh renderer** : vehicle hull mesh renderer reference.
 | **Physics shape** : vehicle entity `PhysicsShape` reference.
 | **Faction type** : selected :ref:`faction type <factions>` of vehicle.
@@ -252,19 +260,29 @@ NavMeshObstacleAuthoring
 
 	.. image:: /images/entities/trafficCar/NavMeshObstacleAuthoring.png
 	
+`NavMeshObstacleData` entity component for runtime loading of `NavMeshObstacle` objects for :ref:`pedestrian navigation <pedestrianNavmeshNavigation>`. Make sure, that option is enabled in the :ref:`traffic settings <trafficNavMeshObstacle>` **[optional]**.
+	
 CarSoundAuthoring
 ~~~~~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/CarSoundAuthoring.png
 	
+Component for vehicle :ref:`sounds <sharedSoundSettings>` **[optional]**.
+	
 HealthAuthoring
 ~~~~~~~~~~~~
+
+Vehicle health component for damage system [optional].
 
 CarDamageEngineAuthoring
 ~~~~~~~~~~~~
 
+Component for visual presentation of damage in the damage systems **[optional]**.
+
 PlayerTargetAuthoring
 ~~~~~~~~~~~~
+
+Component for player targeting systems **[optional]**.
 
 Common Info
 ----------------

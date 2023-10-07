@@ -91,12 +91,20 @@ Other Settings
 | **Target FPS** : target fps of the device.
 | **Hide UI** : on/off UI.
 | **Show FPS** : on/off fps ui panel.
+
+Entity Conversion
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/configs/common/GeneralSettingsConfigConversion.png
+	
+:ref:`General config <generalSettingsConfig>` in the :ref:`subscene <subscene>` is converted to entity by a `GeneralSettingsBakerMonoRef` component, make sure it is assigned the :ref:`desired config <configEdit>`.
 	
 Player Configs
 -------------------	
 
 Player Npc Sound Config
 ~~~~~~~~~~~~
+
 
 	.. image:: /images/configs/common/PlayerNpcSoundConfig.png
 	

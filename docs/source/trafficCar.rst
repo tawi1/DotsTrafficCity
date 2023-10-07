@@ -282,6 +282,20 @@ PlayerTargetAuthoring
 
 Component for player targeting systems **[optional]**.
 
+CullState Info
+----------------
+
+:ref:`States <cullPointInfo>`
+~~~~~~~~~~~~
+
+* **Culled** : entity is destroyed.
+
+* **CloseToCamera:** 
+	* Cull physics (if :ref:`enabled <trafficCarOtherSettings>`) : :ref:`custom physics <customPhysicsVehicle>` & :ref:`simple physics <simplePhysicsVehicle>` temporarily converted to :ref:`no physics <noPhysicsVehicle>` entity.
+	* Cull wheel (if :ref:`enabled <trafficCarOtherSettings>`) : disabling wheel rotating.
+
+* **InVisionOfCamera** : entity fully enabled.
+
 Common Info
 ----------------
 

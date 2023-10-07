@@ -131,3 +131,13 @@ How To Use
 
 	.. image:: /images/road/trafficNode/AutopathConnectionExample2.png
 	`Auto path connection example.`
+	
+CullState Info
+----------------
+
+:ref:`States <cullPointInfo>`
+~~~~~~~~~~~~
+
+* **Culled** : entity not available for spawning.
+* **CloseToCamera** : entity available for spawn.
+* **InVisionOfCamera** : entity available for spawn only during the initial scene start.

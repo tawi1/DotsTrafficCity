@@ -108,6 +108,7 @@ Node for crowd conversations of pedestrians (:ref:`test scene <pedestrianTalkAre
 **Area shape type:** type of area shape.
 	* **Square**
 	* **Circle**
+	
 | **Area size** : area size.
 | **Min/Max spawn count** : min/max number of pedestrians that the area can contain.
 | **Unlimited talk time** : on/off infinite conversation for pedestrians in the talk area.
@@ -168,6 +169,17 @@ Hotkeys
 ~~~~~~~~~~~~
 
 	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
+
+
+CullState Info
+----------------
+
+:ref:`States <cullPointInfo>`
+~~~~~~~~~~~~
+
+* **Culled** : entity not available for spawning.
+* **CloseToCamera** : entity available for spawn.
+* **InVisionOfCamera** : entity available for spawn only during the initial scene start (unless the :ref:`Can spawn in view <pedestrianNodeSettings>` option is enabled).
 
 .. _pedestrianNodeCreator:
 		

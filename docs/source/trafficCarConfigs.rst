@@ -81,9 +81,12 @@ Common Settings
 	* **Rotation speed** : vehicle rotation speed.
 	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
+.. _trafficCarOtherSettings:
+	
 Other Settings
 ~~~~~~~~~~~~ 
 
+| **Cull physics** : off physics for the vehicle if they are outside the camera.
 | **Cull wheels** : on/off wheel handling if they are outside the camera.
 
 .. _trafficNavMeshObstacle:

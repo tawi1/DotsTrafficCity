@@ -25,7 +25,7 @@ You can find on the scene here:
 Entity Conversion
 ----------------
 
-Make sure, that `TrafficCarEntityPoolBakerRef` in the subscene has the correct preset. Read more about :ref:`config syncronization <configSync>`.
+Make sure, that `TrafficCarEntityPoolBakerRef` in the :ref:`subscene <subscene>` has the correct preset. Read more about :ref:`config editing <configEdit>`.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 

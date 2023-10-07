@@ -15,19 +15,20 @@ On the scene select:
 
 .. _trafficDebugSpawnHelper:
 
-Traffic Car Spawn Button Helper
+Traffic Spawn Button Helper
 ------------
 
 For manual spawn of a car by the :ref:`selected index <trafficNodeIndexDebug>`.
 
 	.. image:: /images/debuggers/traffic/TrafficCarSpawnButtonHelper.png		
 	
-Traffic Car Debugger
+Traffic Debugger
 ------------
 
 	.. image:: /images/debuggers/traffic/TrafficCarDebugger.png		
 	
 | **Enable debug** : on/off debugger.
+
 **Debugger type** : 
 	* **Default**
 	
@@ -43,13 +44,14 @@ Traffic Car Debugger
 		.. image:: /images/debuggers/traffic/TrafficCarDebuggerSpeedLimitExample.png		
 	
 	* **Change lane** : 
+	
 | **Text color** : colour of scene text UI.
 | **Show obstacle info** : display obstacles for vehicles (red color vehicle has obstacle).
 | **Show common info** : show the entity index of the vehicles.
 
 .. _trafficCarNpcObstacleDebugger:
 
-TrafficCarNpcObstacleDebugger
+TrafficNpcObstacleDebugger
 ------------
 
 Shows the calculation area and the vehicle's obstacle NPCs.
@@ -78,10 +80,9 @@ Example:
 
 	.. image:: /images/debuggers/traffic/TrafficPublicDebuggerExample.png		
 	
-	
-Traffic Semaphore Debugger
+Traffic Light Debugger
 ------------
 
-Shows the :ref:`state <lightState>` of :ref:`traffic light objects <trafficLightObject>`.
+Shows the :ref:`state <trafficLightState>` of :ref:`traffic light objects <trafficLightObject>`.
 
-	.. image:: /images/debuggers/traffic/TrafficSemaphoreDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficLightDebugger.png		

@@ -42,7 +42,7 @@ Shows the entity index of the node and the spawn index for pedestrians.
 Light info
 """"""""""""""	
 
-:ref:`Light state <lightState>` of the :ref:`pedestrian node <pedestrianNode>`.
+:ref:`Light state <trafficLightState>` of the :ref:`pedestrian node <pedestrianNode>`.
 
 	.. image:: /images/debuggers/pedestrianNode/PedestrianNodeLightInfoExample.png		
 	

@@ -65,7 +65,8 @@ Settings
 	* **Speed limit**
 	* **Priority**
 	* **Path type**
-	* **Traffic type**
+	* :ref:`Traffic path group <pathTrafficGroup>`
+	* :ref:`Traffic path node group <pathWaypointInfo>`
 	* **Node direction**
 	
 | **Draw custom colors** : on/off custom colors of the :ref:`paths <path>` on the scene.
@@ -74,6 +75,7 @@ Settings
 | **Show waypoints** : on/off waypoints of the :ref:`path <path>` on the scene.
 | **Show path handles** : on/off :ref:`path <path>` position handles of the selected path.
 | **Show path edit buttons** : on/off :ref:`path <path>` edit buttons of the selected path.
+| **Multiple selection** : on/off feature to select multiple :ref:`paths <path>` at the same time (useful for setting the same value for multiple :ref:`paths <path>`).
 | **Refresh** : update :ref:`path <path>` data in the viewer.
 
 .. _pathDataViewerExamples:

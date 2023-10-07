@@ -400,6 +400,39 @@ Physics
 States
 ----------------
 
+How To Change
+~~~~~~~~~~~~
+
+..  code-block:: r
+
+	//Switch state example
+	
+    [WithAll(typeof(CheckTrafficLightStateTag))]
+    [BurstCompile]
+    public partial struct CheckTrafficLightJob : IJobEntity
+    {
+        public EntityCommandBuffer.ParallelWriter CommandBuffer;
+
+        void Execute(
+            Entity entity,
+            [ChunkIndexInQuery] int entityInQueryIndex,
+            ref DestinationComponent destinationComponent,
+            ref NextStateComponent nextStateComponent)
+		{
+			//Example red traffic light flag logic
+			bool redLight = true;
+			
+			if (redLight)
+			{
+				if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
+				{
+					 CommandBuffer.SetComponentEnabled<WaitForGreenLightTag>(entityInQueryIndex, entity, true);
+					 //Logic
+				}
+			}
+		}
+	}
+
 .. _pedestrianMovementState:
 
 Movement State

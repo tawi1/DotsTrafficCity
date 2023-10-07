@@ -125,7 +125,7 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 Baking info
 ------------
 
-The intersection of :ref:`paths <pathBakingInfo>` is baked only in those :ref:`paths <pathBakingInfo>` that are in the segment.
+The intersection of :ref:`paths <pathBakingInfo>` is baked only in those :ref:`paths <pathBakingInfo>` that are in the segment. How to :ref:`bake <bakingInfo>`.
 
 .. _roadSegmentIntersectionExample:
 

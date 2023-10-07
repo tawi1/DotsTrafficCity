@@ -10,6 +10,7 @@ Road
 		/roadInstallation.rst
 		/roadSegment.rst
 		/roadSegmentCreator.rst
+		/bakingInfo.rst
 		/trafficNode.rst
 		/trafficNodePathCreator.rst
 		/path.rst

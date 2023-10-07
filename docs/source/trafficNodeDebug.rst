@@ -76,12 +76,12 @@ Shows the availability of a node for spawning.
 
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerAvailableExample.png		
 
-Semaphore Debug
+Light State Debug
 ~~~~~~~~~~~~
 
 Shows :ref:`light state <trafficLightState>` node traffic.
 
-	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerSemaphoreExample.png	
+	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerLightExample.png	
 
 Capacity Debug
 ~~~~~~~~~~~~

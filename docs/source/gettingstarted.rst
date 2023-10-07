@@ -8,3 +8,4 @@ Getting Started
 	
    packageInstallation
    cityCreation.rst
+   workflow.rst

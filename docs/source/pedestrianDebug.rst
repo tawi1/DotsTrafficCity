@@ -33,12 +33,12 @@ Default
 	
 	.. image:: /images/debuggers/pedestrian/PedestrianDebuggerDefaultExample.png		
 	
-Target
+Destination
 """"""""""""""	
 
 	.. image:: /images/debuggers/pedestrian/PedestrianDebuggerTargetExample.png		
 	
-Target Index
+Destination Index
 """"""""""""""
 
 	.. image:: /images/debuggers/pedestrian/PedestrianDebuggerTargetIndexExample.png		

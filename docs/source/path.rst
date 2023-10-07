@@ -157,10 +157,12 @@ The path is made up of these waypoints, which direct each :ref:`vehicle <traffic
 
 	.. image:: /images/road/path/PathNode.png
 
-	
 | **Speed limit** : the maximum speed of the vehicle when it reaches this waypoint.
 | **Backward direction** : when this option is activated, the vehicle will reverse (:ref:`test scene <trafficTestSceneTrafficReverse>`).
 | **Custom group** : override :ref:`traffic group <pathTrafficGroup>` for the current path node.
+
+	.. note::
+		You can debug the group nodes :ref:`here <pathDataViewer>`.
 
 .. _pathTrafficGroup:
 
@@ -172,8 +174,9 @@ Traffic Group Info
 * If the vehicle enters the forbidden :ref:`path <pathWaypointInfo>` or :ref:`path node <pathWaypointInfo>`, the vehicle will automatically attempt to change the current lane (:ref:`test scene <trafficTestSceneTrafficGroup>`).
 
 	.. note::
-		**You can change the available types in the enum file:**
+		* You can change the available types in the enum file:
 			* **TrafficGroupType.cs**
+		* You can debug the path group :ref:`here <pathDataViewer>`.
 			
 Traffic Group Settings
 ~~~~~~~~~~~~
@@ -349,7 +352,7 @@ Baking Info
 ----------------
 
 Each `path` bakes the data to speed up the entity conversion.
-Baking is activated in the :ref:`road parent<roadParent>`.
+How to :ref:`bake <bakingInfo>`.
 
 **Baked Data:**
 	* :ref:`Path Length<pathLength>` (is used to calculate obstacles on the path by `TrafficCarObstacleSystem`).

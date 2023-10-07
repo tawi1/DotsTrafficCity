@@ -8,7 +8,7 @@ Workflow
 Scene Structure
 ----------------
 
-	.. image:: /images/road/installation/sceneStructure.png
+	.. image:: /images/road/sceneStructure.png
 	
 .. _mainScene:
 	

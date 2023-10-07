@@ -50,6 +50,7 @@ Visual Settings
 **Show preview dotted line:** on/off connection line on the scene.
 	* **Show path direction** : on/off arrows of the connection line.
 	* **Arrow spacing** : arrow spacing.
+	
 | **Show forbidden path** : on/off display of forbidden connection line.
 | **Show overriden path** : on/off display of overriden connection line (if disabled preview color will be taken).
 | **Font color** : font color of traffic node index gizmos.
@@ -65,11 +66,13 @@ Connection Settings
 	.. image:: /images/road/trafficNode/trafficNodePathCreator/ConnectionSettings.png
 	
 **Connection mode type:** 
-	* **Single connect** : only 1 path is created.
-	* **Direction connect** : paths of all lanes are created.
+	* **Single connect** : only 1 :ref:`path <path>` is created.
+	* **Direction connect** : :ref:`paths <path>` of all lanes are created.
+	
 **Connection type:** 
-	* **Create only if not exist** : path will be created only if the path has not been created before.
-	* **Allow override** : path will be overwritten if created earlier.
+	* **Create only if not exist** : :ref:`path <path>` will be created only if the :ref:`path <path>` has not been created before.
+	* **Allow override** : :ref:`path <path>` will be overwritten if created earlier.
+	
 | **Auto detect side** : when selecting nodes, the selected :ref:`sides <trafficNodeConnectionInfo>` will be automatically detected
 | **Connect same side** : target :ref:`side <trafficNodeConnectionInfo>` will be the same as source :ref:`side <trafficNodeConnectionInfo>`.
 

@@ -3,7 +3,7 @@
 Road Segment
 =====
 
-`Road Segment` is the main component of the road that contains :ref:`traffic node<trafficNode>`, :ref:`paths<path>`, and :ref:`pedestrian nodes<pedestrianNode>`.
+`Road Segment` is the main component of the road that contains :ref:`traffic nodes <trafficNode>`, :ref:`paths <path>`, and :ref:`pedestrian nodes <pedestrianNode>`.
 
 How To Create
 ------------

@@ -639,7 +639,7 @@ Path
 		* **Source TrafficNode** : node from which the created parking slot paths will start.
 		* **Target TrafficNode** : node to which the paths connected from the parking place.
 	* **Single node:**
-		* **Source TrafficNode** : enter & exit :ref:`TrafficNode <trafficNode>` for parking :ref:`paths <path>` the same.
+		* **Source TrafficNode** : enter & exit :ref:`TrafficNode <trafficNode>` for parking :ref:`paths <path>` are the same.
 
 | **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.
 | **Traffic mask group** : :ref:`group <pathTrafficGroup>` of the vehicles that allowed on the parking.

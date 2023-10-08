@@ -67,7 +67,7 @@ Timeline common uses the timeline from the :ref:`Shared state container <sharedL
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
 	
 	.. note::
-		You can easily replace the `shared state container <sharedLightStates>` for all crossroads using the :ref:`Global Light Settings <trafficLightGlobalLight>` tool.
+		You can easily replace the :ref:`shared state container <sharedLightStates>` for all crossroads using the :ref:`Global Light Settings <trafficLightGlobalLight>` tool.
 
 Timeline custom
 """"""""""""""

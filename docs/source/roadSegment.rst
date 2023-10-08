@@ -55,18 +55,19 @@ Cached
 
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCached.png
 	
-| **Traffic crossroad settings** : settings that contain general traffic light timings.
+| **Shared state container** : :ref:`shared light state container <sharedLightStates>`, that contain common traffic light timings that are shared with other light crossroads.
 | **Traffic nodes** : all :ref:`Traffic Nodes <trafficNode>` of `RoadSegment`.
 | **Traffic light handler data** : light index and light handlers that are linked to the `TrafficLightCrossroad`.
 
 Timeline common
 """"""""""""""
 	
-Timeline common uses the timeline from the `TrafficCrossroadSettings`.
+Timeline common uses the timeline from the :ref:`Shared state container <sharedLightStates>`.
 	
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadLightTimeline.png
 	
-	.. note:: You can change the common timeline for the current segment by adding new settings `TrafficCrossroadSettings`.
+	.. note::
+		You can easily replace the `shared state container <sharedLightStates>` for all crossroads using the :ref:`Global Light Settings <trafficLightGlobalLight>` tool.
 
 Timeline custom
 """"""""""""""
@@ -79,7 +80,7 @@ Timeline custom
 	#. Enable `custom settings`.
 	#. Select desired :ref:`TrafficLightHandler <trafficLightHandler>`.
 	#. Press `+` button.
-	#. Select desired :ref:`state <trafficLightState>`.
+	#. Add desired :ref:`states <trafficLightState>`.
 	#. Enter duration of the :ref:`state <trafficLightState>`.
 		
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimeline.png

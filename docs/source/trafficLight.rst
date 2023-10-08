@@ -57,6 +57,14 @@ Global Lights Settings
 
 Window for quick display of crossroad timings and for connecting the traffic lights to different entities.
 
+How To Open
+~~~~~~~~~~~~
+
+Read more :ref:`here <trafficLightGlobalLightHowToUse>`.
+
+Settings
+~~~~~~~~~~~~
+
 	.. image:: /images/road/trafficLight/GlobalLightSettings.png
 
 .. _trafficLightGlobalLightCommonSettings:
@@ -127,6 +135,54 @@ Unselect:
 
 	.. image:: /images/road/trafficLight/GlobalLightAllConnections.png
 	`All connection types and -1` :ref:`light index <trafficLightIndex>` `are enabled example.`
+
+.. _sharedLightStateReplace:
+
+How To Replace Global Light States
+~~~~~~~~~~~~
+
+#. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
+#. Click the `*` button to expand the `Replace settings`.
+
+	.. image:: /images/road/trafficLight/replaceShared0.png
+	
+#. Select the source :ref:`state container <sharedLightStates>` you want to replace.
+
+
+	.. image:: /images/road/trafficLight/replaceShared1.png
+	
+#. Select your new desided :ref:`state container <sharedLightStates>`.
+	
+	.. image:: /images/road/trafficLight/replaceShared2.png
+	
+#. Click `Replace` button.
+#. As a result, all the source :ref:`state container <sharedLightStates>` are replaced.
+
+	.. image:: /images/road/trafficLight/replaceShared3.png
+
+.. _sharedLightStates:
+
+Shared Light State Container
+------------
+
+Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared containers by :ref:`Global Light Settings <trafficLightGlobalLight>`.
+
+How To Create
+~~~~~~~~~~~~
+
+	.. image:: /images/road/trafficLight/sharedLightStatesPath.png
+	
+Default Container Path
+~~~~~~~~~~~~
+
+	.. image:: /images/road/trafficLight/sharedLightStatesProjectPath.png
+	`Project path example.`
+	
+Settings
+~~~~~~~~~~~~
+
+	.. image:: /images/road/trafficLight/sharedLightStates.png
+	`Example.`
 
 .. _trafficLightState:
 

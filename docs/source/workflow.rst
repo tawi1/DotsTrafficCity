@@ -17,7 +17,7 @@ Scene Structure
 
 	.. _hub:
 
-#. Hub : contains :ref:`Entity Subscene Generator <subsceneGenerator>` (how to create :ref:`read more <configEdit>`).
+#. Hub : contains :ref:`Entity Subscene Generator <subsceneGenerator>` (how to create :ref:`read more <cityCreation>`).
 #. City settings initializer : contains :ref:`general settings <generalSettingsConfig>` of the `DOTS` city.
 #. Main scene configs (read more about :ref:`config editing <configEdit>` workflow).
 #. Pools : contains all the entity presets.
@@ -96,6 +96,3 @@ How To Use
 ~~~~~~~~~~~~
 
 You read more :ref:`here <roadEntitySubscene>`.
-
-Settings
-~~~~~~~~~~~~

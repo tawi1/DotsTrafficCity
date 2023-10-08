@@ -141,7 +141,7 @@ Unselect:
 How To Replace Global Light States
 ~~~~~~~~~~~~
 
-#. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
+#. Open :ref:`Global Light Settings <trafficLightGlobalLight>` window.
 #. Click the `*` button to expand the `Replace settings`.
 
 	.. image:: /images/road/trafficLight/replaceShared0.png
@@ -151,7 +151,7 @@ How To Replace Global Light States
 
 	.. image:: /images/road/trafficLight/replaceShared1.png
 	
-#. Select your new desided :ref:`state container <sharedLightStates>`.
+#. Select your new desired :ref:`state container <sharedLightStates>`.
 	
 	.. image:: /images/road/trafficLight/replaceShared2.png
 	
@@ -165,10 +165,12 @@ How To Replace Global Light States
 Shared Light State Container
 ------------
 
-Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared containers by :ref:`Global Light Settings <trafficLightGlobalLight>`.
+Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared container using the :ref:`Global Light Settings <sharedLightStateReplace>` tool.
 
 How To Create
 ~~~~~~~~~~~~
+
+In the project context menu:
 
 	.. image:: /images/road/trafficLight/sharedLightStatesPath.png
 	

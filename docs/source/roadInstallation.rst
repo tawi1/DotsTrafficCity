@@ -37,9 +37,9 @@ From version `DOTS 1.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.0
 	
 Steps:
 	#. Select :ref:`Hub <hub>` on the scene.
-	#. Select `Entity sub scene path` the path to create a `subscene`.
+	#. Select `Entity sub scene path` the path to create a :ref:`subscene <subscene>`.
 	#. Enter `Entity subscene name` or use default name.
-	#. On/off autosync configs (before migrating the configs to the `subscene`, they will be synchronized with the configs that are in the `Hub`).
+	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the `Hub`).
 	#. Press `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 

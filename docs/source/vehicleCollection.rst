@@ -52,7 +52,7 @@ Steps
 Entity Conversion
 ~~~~~~~~~~~~
 
-Vehicle collection assigned to `VehicleDataHolder` and converted on the `EntitySubScene` subscene.
+Vehicle collection assigned to `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
 

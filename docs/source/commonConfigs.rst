@@ -105,7 +105,6 @@ Player Configs
 Player Npc Sound Config
 ~~~~~~~~~~~~
 
-
 	.. image:: /images/configs/common/PlayerNpcSoundConfig.png
 	
 | **Footstep frequency** : :ref:`sound <soundData>` frequency of the player's footsteps.

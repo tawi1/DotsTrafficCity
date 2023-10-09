@@ -659,7 +659,7 @@ State Dictionary
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring1.png
 
-| **Next states** : which states can override the current :ref:`state <pedestrianActionState>`.
+| **Next states** : which :ref:`states <pedestrianActionState>` can override the current :ref:`state <pedestrianActionState>`.
 
 **State type:** 
 	* Default : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there).

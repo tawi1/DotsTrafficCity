@@ -43,31 +43,43 @@ Settings
 
 	.. image:: /images/pedestrian/baker/window/Settings.png
 	
+| **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
-**Round to size ratio:** rounding texture size.
-	* **X texture size ratio** : by X-axis.
-	* **Y texture size ratio** : by Y-axis.
-**Output type:**
-	* **Baked animation data**
-	* **Texture**
-| **Baked animation data** : :ref:`data <animationBakedAnimationData>` about baked animations in texture.
+| **Make squared texture** : rounding texture size.
+| **Add normal texture** : add normal texture.
+
+**Compression type:**
+	* **Uncompressed** : uncompressed format of baked texture.
+	* **Compressed** : compressed format of baked texture. **[currently not available]**
+
+**Texture bake type:**
+	* **Single texture** : bake all characters to single texture.
+	* **Multiple textures** : bake each character to unique texture.
+	
+| **Clip data template path** : path to clip templates.
+| **Save texture data path** : creating path of :ref:`texture animation data <animationBakedAnimationData>`.
+| **Save texture path** : creating path of baked textures.
+| **Created texture data** : :ref:`data <animationBakedAnimationData>` about baked animations in texture.
 	
 .. _animationBakedSourceData:
 
-Baked Source Data
+Source Data
 ~~~~~~~~~~~~
 
-	.. image:: /images/pedestrian/baker/window/BakedSourceDataExample.png
-	.. image:: /images/pedestrian/baker/window/BakedSourceDataResult.png
+	.. image:: /images/pedestrian/baker/window/SourceDataExample.png
+	.. image:: /images/pedestrian/baker/window/SourceDataResult.png
 	
-Source Data
+Data
 """"""""""""""
 
 | **Skins** : source `SkinnedMeshRenderer` of characters.
+
 **Clips:**
 	* **Clip** : reference to clip.
-	* **Offset** : offset vertices in baked animation.
+	* **Offset** : local offset of vertices in baked animation.
 	* **Custom animation name** : custom animation name (if the field is empty the name from the clip will be taken).
+	* **Preview** : on/off preview playback of baked animation (make sure the texture is created and any character is selected in the toolbar).
+	
 **Texture data** : shows a preview of the created texture.
 	* **x** : animation frame vertex coordinate.
 	* **y** : number of vertexes in the skin.
@@ -91,12 +103,13 @@ Buttons
 	
 .. _animationBakedAnimationData:
 	
-Baked Animation Data
+Animation Texture Data
 ~~~~~~~~~~~~
 
-	.. image:: /images/pedestrian/baker/window/BakedAnimationDataExample.png
+	.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
 		
 | **Sampling skin** : skin on the basis of a playback animation (for :ref:`replace <animationBakedAnimationDataReplace>` purposes only).
+
 **Animation data:**
 	* **Source mesh** : source mesh of character.
 	* **Source anim** : source animation clip.
@@ -116,14 +129,14 @@ How To Replace
 	#. Drag & drop new animation clip to `New anim` field.
 	#. Press `Replace` button.
 	
-	.. image:: /images/pedestrian/baker/window/BakedAnimationDataReplaceExample.png
+	.. image:: /images/pedestrian/baker/window/AnimationDataReplaceExample.png
 	`Replace example.`
 	
 	
-Custom Baked Animator
+Crowd GPU Animator
 ------------
 
-Baked Custom animator is used for transitions between baked animations.
+Crowd GPU Animator is used for transitions between GPU animations.
 	
 How To
 ~~~~~~~~~~~~
@@ -131,11 +144,11 @@ How To
 Open
 """"""""""""""
 
-Open on the scene `PedestrianBakedAnimatorAuthoring`.
+Open on the scene `CrowdGPUAnimatorAuthoring`.
 
-	``Hub/Configs/BakerRefs/Settings/PedestrianBakedAnimatorAuthoring``
+	``Hub/Configs/BakerRefs/Settings/CrowdGPUAnimatorAuthoring``
 		
-	.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+	.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
 	
 Initial Set Up
 """"""""""""""
@@ -144,7 +157,7 @@ Initial Set Up
 	#. Create :ref:`Animator Data Container <animationGPUAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
 	#. Create (if necessary) and assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
 
-	.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+	.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
 	
 Create Node
 """"""""""""""

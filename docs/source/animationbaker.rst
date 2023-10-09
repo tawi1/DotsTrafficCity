@@ -85,9 +85,9 @@ Data
 	* **y** : number of vertexes in the skin.
 	
 	.. note::
-		**Texture [882x1588]:**
-			* Texture has 882 animation frames.
-			* Skin size 1588 vertices.
+		**Texture [2008x1287]:**
+			* Texture has 2008 animation frames.
+			* Max skin size 1287 vertices.
 	
 	.. tip:: Texture rounding to the POT4 format is used for texture compression (256x256, 256х512, 512x512, etc...).
 	

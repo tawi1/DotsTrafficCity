@@ -67,7 +67,7 @@ Source Data
 ~~~~~~~~~~~~
 
 	.. image:: /images/pedestrian/baker/window/SourceDataExample.png
-	.. image:: /images/pedestrian/baker/window/SourceDataResult.png
+	.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 	
 Data
 """"""""""""""

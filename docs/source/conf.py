@@ -36,3 +36,8 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 master_doc = 'index'
+
+# remove blank pages (between the title page and the TOC, etc.)
+latex_elements = {
+  'extraclassoptions': 'openany,oneside'
+}

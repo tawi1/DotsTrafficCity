@@ -7,19 +7,19 @@ Project Requirements
 ------------
 
 Minimum **Unity** version:
-* 2022.3.11+
+	* 2022.3.11+
 
 **Required packages:**
-* `Entities 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities@1.1/manual/index.html>`_
-* `Entities.Graphics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.1/manual/index.html>`_
-* `Unity.Physics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.physics@1.1/manual/index.html>`_
-* `Unity.Collections 2.3.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.collections@2.3/manual/index.html`_ 
-* `Burst 1.8.9 <https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html>`_ 
+	* `Entities 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities@1.1/manual/index.html>`_
+	* `Entities.Graphics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.1/manual/index.html>`_
+	* `Unity.Physics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.physics@1.1/manual/index.html>`_
+	* `Unity.Collections 2.3.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.collections@2.3/manual/index.html`_ 
+	* `Burst 1.8.9 <https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html>`_ 
 
 **Asset store packages:**
-* Naughty attributes.
-* Zenject.
-* FMOD plugin for the sounds [optional].
+	* Naughty attributes.
+	* Zenject.
+	* FMOD plugin for the sounds [optional].
 
 Steps
 ------------

@@ -3,7 +3,23 @@
 Package Installation
 ============
 
-`Getting started tutorial <https://youtu.be/MAAausK_cSM>`_
+Project Requirements
+------------
+
+Minimum **Unity** version:
+* 2022.3.11+
+
+**Required packages:**
+* Entities 1.1.0.pre-3
+* Entities.Graphics 1.1.0.pre-3
+* Unity.Physics 1.1.0.pre-3
+* Unity.Collections 2.3.0.pre-3
+* Burst 1.8.9
+
+**Asset store packages:**
+* Naughty attributes.
+* Zenject.
+* FMOD plugin for the sounds [optional].
 
 Steps
 ------------
@@ -51,4 +67,5 @@ Steps
 			
 #. After that, press `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
+#. Now, add the required `physical layers <https://docs.unity3d.com/Manual/layers-and-layermasks.html>`_ to the project by pressing the `Set Layers` button.
 #. Next step is :ref:`setting up the scene <cityCreation>`.

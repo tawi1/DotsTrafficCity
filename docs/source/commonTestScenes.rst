@@ -16,6 +16,6 @@ The scene is designed to test the reaction of the :ref:`props <propsInfo>` to da
 
 	.. image:: /images/testscenes/common/propstestscene2.png
 	
-#. In the :ref:`culled state <cullPointStates>`, the props return to their original state:
+#. In the :ref:`culling state <cullPointStates>`, the props return to their original state:
 	
 	.. image:: /images/testscenes/common/propstestscene3.png

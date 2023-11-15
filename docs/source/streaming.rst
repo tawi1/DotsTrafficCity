@@ -78,7 +78,7 @@ How To Create
 
 .. _subSceneCreator:
 
-Sub Scene Creator
+SubScene Chunk Creator
 ~~~~~~~~~~~~
 
 Content chunking tool to split the scene into chunks. Old objects remain and disabled in the old scene and are used to create duplicates in the chunk sub-scenes.

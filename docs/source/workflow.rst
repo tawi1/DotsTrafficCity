@@ -18,7 +18,7 @@ Scene Structure
 	.. _hub:
 
 #. Hub : contains :ref:`Entity Subscene Generator <subsceneGenerator>` (how to create :ref:`read more <cityCreation>`).
-#. City settings initializer : contains :ref:`general settings <generalSettingsConfig>` of the `DOTS` city.
+#. City settings initializer : contains :ref:`general settings <generalSettingsConfig>` of the `DOTS` city [moved to the `Config` tab].
 #. Main scene configs (read more about :ref:`config editing <configEdit>` workflow).
 #. Pools : contains all the entity presets.
 #. Spawnpoint : spawnpoint of the player (assigned in the `PlayerSpawner`).

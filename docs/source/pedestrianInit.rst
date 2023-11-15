@@ -445,7 +445,7 @@ Movement State
 
 .. _pedestrianActionState:
 
-Pedestrian Action State
+Action State
 ~~~~~~~~~~~~
 
 * Default : no state.
@@ -482,7 +482,7 @@ Pedestrian Settings Config
 
 	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
 
-Pedestrian Skin Type
+Skin Type
 """"""""""""""""""
 
 * **Rig show only in view** : rig skin will be loaded in the camera's view area.
@@ -492,7 +492,7 @@ Pedestrian Skin Type
 * **Dummy show always** : dummy skin will be loaded when the entity is created and will exist until it is destroyed..
 * **No skin** : entities without a skin will be created.
 	
-Pedestrian Rig Type
+Rig Type
 """"""""""""""""""
 
 * **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
@@ -500,7 +500,7 @@ Pedestrian Rig Type
 
 .. _pedestrianEntityType:
 
-Pedestrian Entity Type
+Entity Type
 """"""""""""""""""
 
 * **No physics** : pedestrian not contains `PhysicsShape` component.
@@ -545,7 +545,7 @@ Collision type
 
 .. _pedestrianNavAgentConfig:
 
-Pedestrian NavAgent Config
+NavAgent Config
 ~~~~~~~~~~~~
 
 Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
@@ -562,7 +562,7 @@ Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
 
 .. _pedestrianLocalAvoidanceConfig:
 
-Pedestrian Obstacle Local Avoidance Config
+Obstacle Local Avoidance Config
 ~~~~~~~~~~~~
 
 Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
@@ -580,7 +580,7 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 
 .. _pedestrianAntistuckConfig:
 
-Pedestrian Antistuck Config
+Antistuck Config
 ~~~~~~~~~~~~
 
 Anti-stuck config for pedestrians stucked in a collision.
@@ -592,7 +592,7 @@ Anti-stuck config for pedestrians stucked in a collision.
 | **Achieve distance** : achieve distance to the antistuck target point.
 | **Target point offset** : distance between collision and anti-stuck point.
 	
-Pedestrian Trigger Config
+Trigger Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianTriggerConfig.png
@@ -605,7 +605,7 @@ Pedestrian Trigger Config
 
 .. _pedestrianScaryTrigger:
 
-Pedestrian Scary Trigger Config
+Scary Trigger Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
@@ -625,7 +625,7 @@ Sound settings
 | **Scream delay** : delay between screams.
 | **Scream sound data** : scream :ref:`sound data<soundData>` source.
 		
-Pedestrian Bench Config
+Bench Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianBenchConfig.png
@@ -637,7 +637,7 @@ Pedestrian Bench Config
 | **Sitting rotation speed** : pedestrian turn speed when sitting on the bench.
 | **Custom achieve sit point distance** :  distance to achieve the sit point on the bench.
 	
-Pedestrian Common Sound Config
+Common Sound Config
 ~~~~~~~~~~~~
 
 Common pedestrian sound settings
@@ -651,7 +651,7 @@ Common pedestrian sound settings
 
 .. _pedestrianStateAuthoring:
 
-Pedestrian State Authoring
+State Authoring
 ~~~~~~~~~~~~
 	
 State Dictionary

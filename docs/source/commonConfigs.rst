@@ -16,6 +16,14 @@ General Settings Config
 
 Config to quickly on/off optional features.
 
+Where To Find
+~~~~~~~~~~~~
+
+	.. image:: /images/configs/common/GeneralSettingsOnScene.png
+	
+Config Example	
+~~~~~~~~~~~~
+
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
 
 Player Settings
@@ -92,13 +100,6 @@ Other Settings
 | **Hide UI** : on/off UI.
 | **Show FPS** : on/off fps ui panel.
 
-Entity Conversion
-^^^^^^^^^^^^^^^^^^^^^^
-
-	.. image:: /images/configs/common/GeneralSettingsConfigConversion.png
-	
-:ref:`General config <generalSettingsConfig>` in the :ref:`subscene <subscene>` is converted to entity by a `GeneralSettingsBakerMonoRef` component, make sure it is assigned the :ref:`desired config <configEdit>`.
-	
 Player Configs
 -------------------	
 

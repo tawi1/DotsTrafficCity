@@ -1,10 +1,7 @@
 .. _packageInstallation:
 
-Package Installation
-============
-
 Project Requirements
-------------
+============
 
 Minimum **Unity** version:
 	* 2022.3.11+
@@ -20,6 +17,9 @@ Minimum **Unity** version:
 	* Naughty attributes.
 	* Zenject.
 	* FMOD plugin for the sounds [optional].
+
+Package Installation
+============
 
 Steps
 ------------

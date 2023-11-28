@@ -4,6 +4,8 @@
 Traffic Light
 ************
 
+`Youtube tutorial. <https://youtu.be/r85kMJ4BL5E&t=49>`_
+
 .. _trafficLightGlobalLightHowToUse:
 
 How To Customize City Crossroads

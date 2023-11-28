@@ -11,6 +11,8 @@ Path Debug
 Path Debugger
 ------------
 
+`Youtube tutorial. <https://youtu.be/YOoxul91Owk>`_
+
 How To Open
 ~~~~~~~~~~~~
 

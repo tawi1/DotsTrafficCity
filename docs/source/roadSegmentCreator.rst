@@ -5,6 +5,8 @@ Road Segment Creator
 
 `Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
+`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
+
 .. contents::
    :local:
 
@@ -31,6 +33,8 @@ How To Use
 
 Custom Settings
 ------------
+
+`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
 Default Crossroad
 ~~~~~~~~~~~~ 
@@ -135,13 +139,15 @@ Oneway Turn
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
 	`Example`.
-	
+		
 .. _roadSegmentCreatorCustomStraight:
 
 Custom Straight Road
 ~~~~~~~~~~~~ 
 
 Creator for creating straight roads of any shape.
+
+`Youtube tutorial. <https://youtu.be/JbhGYxVscew>`_
 
 How To Use
 """"""""""""""
@@ -216,6 +222,8 @@ Custom Segment
 ~~~~~~~~~~~~ 
 
 Creator for creating segments of any shape and complexity.
+
+`Youtube tutorial. <https://youtu.be/AMrGJ7YGBNo>`_
 
 How To Use
 """"""""""""""
@@ -389,6 +397,8 @@ Light settings
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
 	
+`Youtube tutorial. <https://youtu.be/r85kMJ4BL5E>`_
+	
 Traffic lights
 """"""""""""""
 
@@ -512,6 +522,8 @@ Parking Builder
 ------------
 
 A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
+
+`Youtube tutorial. <https://youtu.be/1F-8J0WC83Y>`_
 
 How To Use
 ~~~~~~~~~~~~ 

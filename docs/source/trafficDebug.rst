@@ -9,6 +9,8 @@ Traffic Debug
 How To Open
 ------------
 
+`Youtube tutorial. <https://youtu.be/rj1Rww-9Yq8>`_
+
 On the scene select:
 
 	`CityDebugger/TrafficDebugger/`

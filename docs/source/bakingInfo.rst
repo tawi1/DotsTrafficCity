@@ -5,6 +5,8 @@ Baking Info
 
 Baking data is required to store calculated data to avoid heavy calculations each time. This should be done after each :ref:`road change <roadEdit>` and before the launch of the scene.
 
+`Youtube tutorial. <https://youtu.be/6d7nuWSFSzk>`_
+
 **Baked data:**
 	* :ref:`Road segment data <roadSegmentBakingInfo>`.
 	* :ref:`Path data <pathBakingInfo>`.

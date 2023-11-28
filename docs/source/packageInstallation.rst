@@ -21,6 +21,8 @@ Minimum **Unity** version:
 Package Installation
 ============
 
+`Youtube tutorial. <https://youtu.be/q5S5cErl32g>`_
+
 Steps
 ------------
 
@@ -29,8 +31,6 @@ Steps
 #. First time initialization window will appear automatically or you can open it manually in toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
 	.. image:: /images/gettingstarted/InitilizationWindow.png
-
-#. Set the root path of the tool, it is automatically detected (or manually press the `Detect Root` button if you changed the root of the tool prefab path).
 
 #. Click `Load Packages` to start download packages required for this tool.
 
@@ -67,5 +67,4 @@ Steps
 			
 #. After that, press `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
-#. Now, add the required `physical layers <https://docs.unity3d.com/Manual/layers-and-layermasks.html>`_ to the project by pressing the `Set Layers` button.
 #. Next step is :ref:`setting up the scene <cityCreation>`.

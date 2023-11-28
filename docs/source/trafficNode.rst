@@ -3,7 +3,7 @@
 Traffic Node
 =====
 
-``Traffic node is a set of traffic node entities that are connected to other traffic node entities by ``:ref:`path <paths>`
+`Traffic node is a set of traffic node entities that are connected to other traffic node entities by` `:ref:`path <paths>`
 
 .. _trafficNodeSettings:
 

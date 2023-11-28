@@ -5,6 +5,8 @@ Traffic Public
 
 Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>` and picks up passengers at :ref:`stop station nodes <pedestrianNodeStopStation>`.
 
+`Youtube tutorial. <https://youtu.be/7z9frpVcYpA>`_
+
 How To Create
 ------------
 

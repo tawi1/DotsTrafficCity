@@ -9,6 +9,8 @@ Pedestrian Node Debug
 How To Open
 ------------
 
+`Youtube tutorial. <https://youtu.be/rj1Rww-9Yq8&t=258>`_
+
 On the scene select:
 
 	`CityDebugger/PedestrianDebugger/`

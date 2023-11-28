@@ -4,6 +4,8 @@
 Debug
 ************
 
+`Youtube tutorial. <https://youtu.be/rj1Rww-9Yq8>`_
+
 	.. toctree::
 		:maxdepth: 2
 

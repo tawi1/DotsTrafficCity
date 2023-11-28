@@ -50,6 +50,7 @@ Custom Physics
 
 * Entities moved by the custom physical system.
 * :ref:`Hybrid entity custom physics <entityType>` & :ref:`Pure entity custom physics <entityType>` types refer to this.
+* `Youtube tutorial. <https://youtu.be/uxKg2lklHaw>`_
 
 Authoring components
 ^^^^^^^^^^^^^^^^^^^^^^

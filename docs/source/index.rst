@@ -5,6 +5,8 @@ Welcome to DOTS Traffic City documentation!
 
 You can buy it from unity asset store: `DOTS Traffic City <https://u3d.as/2PCK>`_
 
+`Youtube tutorial playlist. <https://www.youtube.com/playlist?list=PLk8IsonsJZcjhJBk95AVzuW8HVFYbPBME>`_
+
 Check out the :doc:`gettingstarted` section for more information, including
 how to :ref:`install` the project.
 

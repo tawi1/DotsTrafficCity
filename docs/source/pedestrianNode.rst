@@ -21,6 +21,8 @@ Pedestrian Node
 
 `Pedestrian node` is a node for creating :ref:`pedestrian <pedestrianEntity>` route.
 
+`Youtube tutorial. <https://youtu.be/PX2J4gyIe08>`_
+
 	.. image:: /images/road/pedestrianNode/PedestrianNode.png
 	
 Connection Data
@@ -187,6 +189,8 @@ Pedestrian Node Creator
 ----------------
 
 `Pedestrian Node Creator` is a tool to quickly create and connect :ref:`pedestrian nodes <pedestrianNode>`.
+		
+`Youtube tutorial. <https://youtu.be/5yHR7Bvrkeg>`_
 		
 How To Create
 ~~~~~~~~~~~~

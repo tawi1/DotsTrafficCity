@@ -5,6 +5,8 @@ Road Segment
 
 `Road Segment` is the main component of the road that contains :ref:`traffic nodes <trafficNode>`, :ref:`paths <path>`, and :ref:`pedestrian nodes <pedestrianNode>`.
 
+`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
+
 How To Create
 ------------
 

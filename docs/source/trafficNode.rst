@@ -34,12 +34,12 @@ Settings
 | **Allow light for left lanes** : enable traffic light for leftside entities (by default, traffic light is enabled only for rightside lane entities).
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
 | **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegments <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
-| **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <trafficNodeAutoPathConnection>`).
-| **Auto path is created** : auto path is created (:ref:`more info <trafficNodeAutoPathConnection>`).
+| **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <autoPathConnection>`).
+| **Auto path is created** : auto path is created (:ref:`more info <autoPathConnection>`).
 	
 **Buttons:**
-	* **Connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes if no external paths are created yet.
-	* **Force connect** : node will try to :ref:`connect <trafficNodeAutoPathConnection>` to other nodes whether it is :ref:`connected <trafficNodeAutoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
+	* **Connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes if no external paths are created yet.
+	* **Force connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes whether it is :ref:`connected <autoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
 	* **Resize** : resize :ref:`collider <trafficNodeCollider>` of node.
 	
 .. _trafficNodeOneWay:
@@ -105,7 +105,7 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 	* Purple arrows the direction of the outer :ref:`nodes <trafficNode>` of the :ref:`segment <roadSegment>`.
 	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`oneway nodes <trafficNodeOneWay>`.
 
-.. _trafficNodeAutoPathConnection:
+.. _autoPathConnection:
 
 Auto-path Connection
 ----------------

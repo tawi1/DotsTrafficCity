@@ -25,7 +25,7 @@ Limitations
 * :ref:`Roads <road>` can only be modified in the `Editor`.
 * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space currently not available (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
-* NavMesh surface obstacles calculated only with NavMeshObstacle.
+* `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles calculated only with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
 * Currently ragdoll supported only with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
 
 Package Installation
@@ -52,6 +52,7 @@ Steps
 	.. note::
 		**Script define symbols required for the project:**
 			* **DOTSCITY**
+			* **UNITY_PHYSICS_CUSTOM**
 			
 	.. _packageInstallationOptional:
 

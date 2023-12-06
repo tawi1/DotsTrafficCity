@@ -67,7 +67,8 @@ Traffic Car Settings
 
 | **Change lane support** : on/off feature to change lanes for traffic.
 | **Traffic public support** : on/off public traffic vehicle in the city.	
-| **Antistuck support** :	on/off :ref:`antistuck <trafficCarAntistuckConfig>` feature for traffic vehicles.	
+| **Antistuck support** : on/off :ref:`antistuck <trafficCarAntistuckConfig>` feature for traffic vehicles.	
+| **Avoidance support** : on/off avoidance of the vehicles.	
 | **Car hit collision reaction** : on/off traffic collision reaction to other traffic cars.
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 
@@ -90,6 +91,9 @@ Other Settings
 	* **Unity physics** : unity dots physics on.
 	* **Havok physics** : havok dots physics on (havok physical package is required).
 	
+| **Cull physics** : on/off culling of the physics of dynamic objects that are far from the player.
+| **Cull static physics** :on/off culling of the physics of static objects that are far from the player.
+| **Force legacy physics** : force enable `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ , otherwise `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ will be disabled when :ref:`ragdoll <pedestrianRagdoll>` is disabled.
 | **Health system support** : on/off health systems for all entities (vehicles, pedestrians, etc...).
 | **Navigation support** : on/off navigation systems for pedestrians.
 

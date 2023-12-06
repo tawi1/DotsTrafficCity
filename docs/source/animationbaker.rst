@@ -20,17 +20,17 @@ How To Bake
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians to `skins` :ref:`field <animationBakedSourceData>`.
 	#. Drag & drop selected animations of pedestrians to `clips` :ref:`field <animationBakedSourceData>`.
 	
-		.. image:: /images/pedestrian/baker/window/BakedSourceDataExample.png
+		.. image:: /images/pedestrian/baker/window/SourceDataExample.png
 		`Drag & drop example.`
 		
 	#. Press `Create new` button.
 	
-		.. image:: /images/pedestrian/baker/window/BakedSourceDataResult.png
+		.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 		`Multiple animation result example.`
 		
-	#. Check the created `BakedAnimationData` result in the tab :ref:`BakedAnimationData <animationBakedAnimationData>`.
+	#. Check the created `Animation Texture Data` result in the tab :ref:`Animation Texture Data <animationBakedAnimationData>`.
 	
-		.. image:: /images/pedestrian/baker/window/BakedAnimationDataExample.png
+		.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
 		`AnimationData result example.`
 		
 Baker Window
@@ -65,22 +65,37 @@ Settings
 
 Source Data
 ~~~~~~~~~~~~
-
-	.. image:: /images/pedestrian/baker/window/SourceDataExample.png
-	.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 	
-Data
+.. _animationBakerToolbar:
+	
+Toolbar
 """"""""""""""
 
-| **Skins** : source `SkinnedMeshRenderer` of characters.
-
-**Clips:**
-	* **Clip** : reference to clip.
-	* **Offset** : local offset of vertices in baked animation.
-	* **Custom animation name** : custom animation name (if the field is empty the name from the clip will be taken).
-	* **Preview** : on/off preview playback of baked animation (make sure the texture is created and any character is selected in the toolbar).
+	.. image:: /images/pedestrian/baker/window/Toolbar.png
 	
-**Texture data** : shows a preview of the created texture.
+| **Skins** : source `SkinnedMeshRenderer` of characters.
+| **Skin toolbar** : character selection toolbar for selecting preview animation.
+	
+Clip Data
+""""""""""""""
+
+	.. image:: /images/pedestrian/baker/window/ClipData.png
+
+* **Clip** : reference to clip.
+* **Custom frame rate** : custom frame rate of the clip.
+* **Interpolate** : on/off interpolation feature for the clip.
+* **Offset** : local offset of vertices in baked animation.
+* **Custom animation name** : custom animation name (if the field is empty the name from the clip will be taken).
+* **Preview** : on/off preview playback of baked animation (make sure the texture is created and any character is selected in the :ref:`toolbar <animationBakerToolbar>`).
+		
+Texture Data
+""""""""""""""
+
+Shows a preview of the created texture.
+
+	.. image:: /images/pedestrian/baker/window/TextureData.png
+
+**Texture size:** 
 	* **x** : animation frame vertex coordinate.
 	* **y** : number of vertexes in the skin.
 	

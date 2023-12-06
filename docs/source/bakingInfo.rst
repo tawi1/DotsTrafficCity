@@ -14,7 +14,7 @@ Baking data is required to store calculated data to avoid heavy calculations eac
 How To Bake
 -------------------
 
-#. Open `RoadParent` in the main scene or :ref:`subscene <subscene>` (:ref:`recommended <roadEdit>` in the main scene for performance purposes).
+#. Open :ref:`RoadParent <roadParentInfo>` in the main scene or :ref:`subscene <subscene>` (:ref:`recommended <roadEdit>` in the main scene for performance purposes).
 	
 	.. _roadParent:
 

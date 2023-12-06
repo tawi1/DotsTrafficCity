@@ -241,7 +241,7 @@ Main Component
 
 Traffic light object on the scene.
 
-Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light light indexes <trafficLightIndex>`.
+Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light indexes <trafficLightIndex>`.
 
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectComponents.png
 	

@@ -17,7 +17,7 @@ Integration packages contain the following items:
 Polygon City
 ------------
 
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
+	`Synty asset store <https://assetstore.unity.com/publishers/5217>`_
 	
 	.. image:: /images/integration/PolygonCity.png
 	
@@ -29,7 +29,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`Polygon City pack <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
+	`Synty Polygon City pack <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
 
 #. Open the demo scene: `PolygonCity/Scenes/Demo`.
 #. Unpack the `DotsCity/Integrations/PolygonCity/PolygonCity_Integration` package.
@@ -41,7 +41,7 @@ How To Use
 Toon City
 ------------
 
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
+	`SICS Games asset store <https://assetstore.unity.com/publishers/18116>`_
 	
 	.. image:: /images/integration/ToonCity.png
 	
@@ -53,7 +53,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`Toon City pack <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
+	`SICS Games Toon City pack <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
 
 #. Unpack URP package `Toon City/URP_Install_Toon City_202*`.
 #. Open the demo scene: `Toon City/Scenes/Demo_Scene_1`.
@@ -66,7 +66,7 @@ How To Use
 City Pack 1
 ------------
 
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
+	`ithappy asset store <https://assetstore.unity.com/publishers/53539>`_
 
 	.. image:: /images/integration/CityPack1.png
 	
@@ -78,7 +78,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`City pack 1 <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
+	`ithappy City pack 1 <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
 
 #. Open the demo scene: `City_Pack_1/Scenes/City_Demonstration`.
 #. Unpack the `DotsCity/Integrations/City_Pack_1/City_Pack_1_Integration` package.

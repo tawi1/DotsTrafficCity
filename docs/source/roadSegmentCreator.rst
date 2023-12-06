@@ -5,8 +5,6 @@ Road Segment Creator
 
 `Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
-`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
-
 .. contents::
    :local:
 
@@ -14,6 +12,8 @@ Road Segment Creator
 
 How To Use
 ------------
+
+`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
 #. Create :ref:`RoadSegment<roadSegment>`.
 #. Set the segment to the desired position.

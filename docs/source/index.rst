@@ -22,6 +22,7 @@ how to :ref:`install` the project.
    common.rst
    testScenes.rst
    sound.rst
+   integration.rst
    debug.rst
    glossary.rst
    faq.rst

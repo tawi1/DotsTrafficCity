@@ -18,7 +18,7 @@ How To Create
 	`Selection route example.`
 	
 #. Customize :ref:`Route settings <trafficPublicRouteSettings>`.
-#. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>` and :ref:`car model <carModel>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
+#. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>` and :ref:`Car model <carModel>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
 
 Transition Info
 ------------

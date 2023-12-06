@@ -18,6 +18,16 @@ Minimum **Unity** version:
 	* `Zenject. <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_
 	* `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin for the sounds [optional].
 
+Limitations
+============
+
+| * The project overwrites the settings, be sure to make a project backup before using tool.
+| * :ref:`Roads <road>` can only be modified in the `Editor`.
+| * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
+| * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space currently not available (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
+| * NavMesh surface obstacles calculated only with NavMeshObstacle.
+| * Currently ragdoll supported only with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
+
 Package Installation
 ============
 

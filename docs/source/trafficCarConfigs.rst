@@ -107,19 +107,19 @@ Config distance to target nodes and traffic light handlers.
 | **Min distance to target route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>`.
 | **Min distance to target rail route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>` (rail movement only (tramc etc...)).
 
-**Out of path resolve method:** resolving method in case the car is out of the :ref:`path<path>`.
+**Out of path resolve method:** resolving method in case the car is out of the :ref:`path <path>`.
 	* **Disabled** : no actions.
 	* **Switch node** : switching to the next waypoint.
 	* **Backward** : car will try to reach the missed waypoint by reversing.
 	* **Cull** : car will be culled.
 	
-| **Continious local node calculation** :
-
 	.. image:: /images/configs/traffic/TrafficCarNavOutOfPathConfig.png
 	
 **Out of path resolve method [enabled]:**
 	* **Min distance to out of path** : minimum distance from the missed waypoint to the car.
 	* **Max distance to out of path** : maximum distance from the missed waypoint to the car.
+	
+| **No Dst React Type** : the reaction if there is no further destination for the cars (for example, when the road was unloaded by :ref:`road streaming <roadStreaming>`).
 	
 .. _trafficCarObstacleConfig:
 	

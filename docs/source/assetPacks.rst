@@ -1,31 +1,31 @@
 .. _assetPacks:
 
-Asset Packs
+Asset Store Packages
 ============
 
 Integration packages allow you to quickly integrate your favourite cities into the `DOTS <https://unity.com/dots>`_ stack. Buy, download and integrate cities in a few clicks in less than a minute.
 
 Integration packages contain the following items:
-* Routes for traffic are fully configured.
-* Routes for pedestrians are fully configured.
-* Automatic configuration of vehicles and their integration into the city.
-* Automatic configuration of pedestrian and their integration into the city.
+	* Routes for traffic are fully configured.
+	* Routes for pedestrians are fully configured.
+	* Automatic configuration of vehicles and their integration into the city.
+	* Automatic configuration of pedestrian and their integration into the city.
 
 .. contents::
    :local:
 	
 Polygon City
-============
+------------
 
+	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
+	
 	.. image:: /images/integration/PolygonCity.png
 	
 	.. image:: /images/integration/PolygonCity_example.png
 	`Template example.`
-
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
 	
 How To Use
-------------
+~~~~~~~~~~~~
 
 #. Buy & download, import the following asset package:
 
@@ -39,19 +39,19 @@ How To Use
 #. Enjoy.
 
 Toon City
-============
+------------
 
+	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
+	
 	.. image:: /images/integration/ToonCity.png
 	
 	.. image:: /images/integration/ToonCity_example.png	
 	`Template example.`
-
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
 	
 How To Use
-------------
+~~~~~~~~~~~~
 
-#. Buy & download, import the following asset packages:
+#. Buy & download, import the following asset package:
 
 	`https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379 <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
 
@@ -64,17 +64,17 @@ How To Use
 #. Enjoy.
 
 City Pack 1
-============
+------------
+
+	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
 
 	.. image:: /images/integration/CityPack1.png
 	
 	.. image:: /images/integration/CityPack1_example.png	
 	`Template example.`
-	
-	`Asset store <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
 
 How To Use
-------------
+~~~~~~~~~~~~
 
 #. Buy & download, import the following asset package:
 

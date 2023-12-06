@@ -64,6 +64,8 @@ Section Object Authoring
 	
 | **Include childs** :  all child objects are included in the section of the parent object.
 
+.. _contentStreaming:
+
 Content Streaming
 ~~~~~~~~~~~~
 
@@ -128,6 +130,7 @@ Chunk Settings
 Post Process Settings
 """"""""""""""
 
+| **Copy physics shape** : on/off :ref:`PhysicsShape Transfer <physicsShapeTransfer>` tool.
 | **Post process new object** : on/off post processing of the object.
 | **Component type name** : target component name.
 

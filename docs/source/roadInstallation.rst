@@ -14,13 +14,13 @@ Traffic Road Installation
 #. Adjust the :ref:`Traffic lights <trafficLight>`.
 #. Create the :ref:`Traffic Areas <trafficArea>` **[optional step]**.
 #. Create the :ref:`Public Routes <trafficPublicRoute>` **[optional step]**.
-#. Open `RoadParent`.
+#. Open :ref:`Road Parent <roadParentInfo>`.
 	
 	.. _roadParent:
 
 	.. image:: /images/road/installation/RoadParent.png
 
-#. Press `Reset` button to reset the :ref:`automatically created paths <trafficNodeAutoPathConnection>`.
+#. Press `Reset` button to reset the :ref:`automatically created paths <autoPathConnection>`.
 #. Press `Connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
 #. Press `Bake` button (:ref:`bake info <bakingInfo>`).
 #. Create :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
@@ -39,7 +39,7 @@ Steps:
 	#. Select :ref:`Hub <hub>` on the scene.
 	#. Select `Entity sub scene path` the path to create a :ref:`subscene <subscene>`.
 	#. Enter `Entity subscene name` or use default name.
-	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the `Hub`).
+	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the :ref:`Hub <hub>`).
 	#. Press `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 

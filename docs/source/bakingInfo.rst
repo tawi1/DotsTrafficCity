@@ -21,7 +21,7 @@ How To Bake
 	.. image:: /images/road/bakingInfoExample.png
 	`Subscene example.`
 
-#. Press `Reset Segments` button to reset the :ref:`automatically created paths <trafficNodeAutoPathConnection>`.
+#. Press `Reset Segments` button to reset the :ref:`automatically created paths <autoPathConnection>`.
 
 	.. image:: /images/road/installation/RoadParent.png
 	

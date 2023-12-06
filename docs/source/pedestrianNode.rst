@@ -42,6 +42,8 @@ Direction of raycasts to connect with other nodes (can be useful for generating 
 
 	.. image:: /images/road/pedestrianNode/PedestrianNodeDirectionsExample.png
 	`All connection directions enabled example.`
+
+	.. note:: Used by :ref:`road parent <roadParentInfo>`.
 	
 Custom Node Settings
 ~~~~~~~~~~~~

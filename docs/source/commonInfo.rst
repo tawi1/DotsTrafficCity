@@ -47,16 +47,20 @@ How To Create
 				
 				Entities
 				.WithoutBurst()
+				.WithStructuralChanges()
 				.WithAll<InitComponentExample>()
 				.ForEach((
 					Entity entity) =>
 				{
 					var exampleObject = exampleFactory.Get();
 					
-					//bind transform to entity
+					//Bind transform to entity
 					EntityManager.AddComponentObject(entity, exampleObject.transform); 
 					
-					//disable init component
+					//Add required component if missing
+					commandBuffer.AddComponent<CopyTransformToGameObject>(entity); 
+					
+					//Disable init component
 					commandBuffer.SetComponentEnabled<InitComponentExample>(entity, false); 
 				
 				}).Run();
@@ -64,7 +68,7 @@ How To Create
 				entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
 			}
 			
-			//some factory that is assigned from outside
+			//Some factory that is assigned from outside
 			
 			public void Initialize (ExampleFactory exampleFactory)
 			{
@@ -98,7 +102,7 @@ Props Authoring
 
 	.. image:: /images/other/PropsAuthoring.png
 	
-| Has custom prop reset : if enabled, a custom reset system must be implemented for this object that contains `PropsCustomResetTag` component.
+| **Has custom prop reset** : if enabled, a custom reset system must be implemented for this object that contains `PropsCustomResetTag` component.
 
 Custom reset of hydrant, example code:
 

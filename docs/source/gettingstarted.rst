@@ -9,3 +9,4 @@ Getting Started
    packageInstallation
    cityCreation.rst
    workflow.rst
+   structure.rst

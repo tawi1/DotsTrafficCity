@@ -3,7 +3,7 @@
 Traffic Node
 =====
 
-`Traffic node is a set of traffic node entities that are connected to other traffic node entities by` :ref:`path <paths>`
+`Traffic node is a set of traffic node entities that are connected to other traffic node entities by` :ref:`path <path>`
 
 .. _trafficNodeSettings:
 
@@ -24,7 +24,7 @@ Settings
 
 **Traffic node type:** 
 	* **Default**
-	* **Parking** : node where cars are parked.
+	* **Parking** : node where cars are :ref:`parked <trafficArea>`.
 	* **Traffic public stop** : node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
 	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
 	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.

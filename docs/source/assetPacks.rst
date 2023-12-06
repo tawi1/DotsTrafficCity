@@ -1,6 +1,6 @@
 .. _assetPacks:
 
-Asset Store Packages
+Integration Packages
 ============
 
 Integration packages allow you to quickly integrate your favourite cities into the `DOTS <https://unity.com/dots>`_ stack. Buy, download and integrate cities in a few clicks in less than a minute.
@@ -29,7 +29,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214 <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
+	`Polygon City pack <https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214>`_
 
 #. Open the demo scene: `PolygonCity/Scenes/Demo`.
 #. Unpack the `DotsCity/Integrations/PolygonCity/PolygonCity_Integration` package.
@@ -53,7 +53,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379 <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
+	`Toon City pack <https://assetstore.unity.com/packages/3d/environments/urban/toon-city-88379>`_
 
 #. Unpack URP package `Toon City/URP_Install_Toon City_202*`.
 #. Open the demo scene: `Toon City/Scenes/Demo_Scene_1`.
@@ -78,7 +78,7 @@ How To Use
 
 #. Buy & download, import the following asset package:
 
-	`https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978 <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
+	`City pack 1 <https://assetstore.unity.com/packages/3d/environments/urban/city-pack-1-202978>`_
 
 #. Open the demo scene: `City_Pack_1/Scenes/City_Demonstration`.
 #. Unpack the `DotsCity/Integrations/City_Pack_1/City_Pack_1_Integration` package.

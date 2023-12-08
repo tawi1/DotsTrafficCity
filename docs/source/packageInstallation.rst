@@ -54,8 +54,10 @@ Steps
 			* **DOTS_CITY**
 			* **UNITY_PHYSICS_CUSTOM**
 			
+#. Restart the `Unity` project.
+			
 	.. _packageInstallationOptional:
-
+	
 #. Click `Load Optional Packages` to start download optional packages.
 
 	.. note::
@@ -78,5 +80,4 @@ Steps
 			
 #. After that, press `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
-#. Restart the `Unity` project.
 #. Next step is :ref:`setting up the scene <cityCreation>`.

@@ -78,4 +78,5 @@ Steps
 			
 #. After that, press `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
+#. Restart the `Unity` project.
 #. Next step is :ref:`setting up the scene <cityCreation>`.

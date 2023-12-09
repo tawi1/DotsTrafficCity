@@ -54,7 +54,7 @@ Steps
 			* **DOTS_CITY**
 			* **UNITY_PHYSICS_CUSTOM**
 			
-#. Restart the `Unity` project.
+#. Restart the `Unity` project after all the packages have been downloaded.
 			
 	.. _packageInstallationOptional:
 	

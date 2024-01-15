@@ -17,47 +17,6 @@ How To Use
 #. Click `Spawn` button in the component.
 #. Learn more about :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` settings.
 
-.. _testSceneTrafficCarRoadDebugger:
-
-TrafficCar Road Debugger	
-~~~~~~~~~~~~
-
-	.. image:: /images/testscenes/traffic/TrafficCarRoadDebugger.png
-
-.. _testSceneTrafficCarRoadDebuggerSceneSettings:
-
-Scene settings
-""""""""""""""
-	
-| **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
-| **Enable visual debug** : on/off visual debug on the scene.
-| **Show buttons** : show add :ref:`path <path>` button to the component on the scene.
-| **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.
-	
-Spawn settings
-""""""""""""""
-
-| **Spawn on play** : spawn the cars after the start of the scene.
-| **Auto clear on spawn** : previously created cars in the test case will be destroyed on a new spawn.
-| **Spawn car model** : :ref:`car model <carModel>` of spawning cars.
-| **Disable lane changing** : forcibly disabling the ability for vehicles to change lanes.
-
-Other settings
-""""""""""""""
-
-| **Show description** : show description of test case.
-
-Traffic spawn test entry
-""""""""""""""
-
-| **Related trafficlight crossroad** : linked :ref:`trafficlight crossroad <trafficLightCrossroad>`.
-| **Path** : linked :ref:`path <path>` for the spawned cars.
-| **Highlight** : on/off highlight :ref:`path <path>`.
-| **Show info** : on/off visual info of spawned cars on the scene.
-| **Idle car** : on/off vehicle idle of the spawned vehicle.
-| **Normalized path position** : min approach speed.
-| **Spawn delay** : delayed vehicle spawn after test case spawn has started.
-
 Test Cases
 ------------
 
@@ -209,6 +168,47 @@ Check Traffic Reverse
 		
 	.. image:: /images/testscenes/traffic/BackwardTest2.png
 	`Final result result.`
+	
+.. _testSceneTrafficCarRoadDebugger:
+
+TrafficCar Road Debugger	
+------------
+
+	.. image:: /images/testscenes/traffic/TrafficCarRoadDebugger.png
+
+.. _testSceneTrafficCarRoadDebuggerSceneSettings:
+
+Scene settings
+~~~~~~~~~~~~
+	
+| **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
+| **Enable visual debug** : on/off visual debug on the scene.
+| **Show buttons** : show add :ref:`path <path>` button to the component on the scene.
+| **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.
+	
+Spawn settings
+~~~~~~~~~~~~
+
+| **Spawn on play** : spawn the cars after the start of the scene.
+| **Auto clear on spawn** : previously created cars in the test case will be destroyed on a new spawn.
+| **Spawn car model** : :ref:`car model <carModel>` of spawning cars.
+| **Disable lane changing** : forcibly disabling the ability for vehicles to change lanes.
+
+Other settings
+~~~~~~~~~~~~
+
+| **Show description** : show description of test case.
+
+Traffic spawn test entry
+~~~~~~~~~~~~
+
+| **Related trafficlight crossroad** : linked :ref:`trafficlight crossroad <trafficLightCrossroad>`.
+| **Path** : linked :ref:`path <path>` for the spawned cars.
+| **Highlight** : on/off highlight :ref:`path <path>`.
+| **Show info** : on/off visual info of spawned cars on the scene.
+| **Idle car** : on/off vehicle idle of the spawned vehicle.
+| **Normalized path position** : min approach speed.
+| **Spawn delay** : delayed vehicle spawn after test case spawn has started.
 
 
 

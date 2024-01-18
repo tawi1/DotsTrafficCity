@@ -96,7 +96,7 @@ Friction
 | **Longitudinal** : forward friction curve (Y-axis - forward slip value, X-axis forward speed in metres per second).
 | **Lateral** : lateral friction curve (Y-axis - lateral slip value, X-axis lateral speed in metres per second).
 | **Forward friction** : forward friction value.
-| **Lateral friction** : laterial friction value.
+| **Lateral friction** : lateral friction value.
 | **Brake friction** : brake friction value.
 
 Transient Forces
@@ -106,12 +106,12 @@ Transient Forces
 	
 Transient force is required to hold the car on an inclined ramp during manual braking.
 	
-| **Use forward transient force** : on/of forward transient force.
+| **Use forward transient force** : on/off forward transient force.
 | **Min transient forward speed** : min forward speed when transient force is applied.
 | **Max forward friction rate** : max friction for transient force calculated by multiplying the entered rate by the forward friction.
 | **Forward relax multiplier** : step of forward force increase per frame.
 
-| **Use lateral transient force** : on/of lateral transient force.
+| **Use lateral transient force** : on/off lateral transient force.
 | **Min transient lateral speed** : min lateral speed when transient force is applied.
 | **Max lateral friction rate** : max friction for transient force calculated by multiplying the entered rate by the lateral friction.
 | **Lateral relax multiplier** : step of lateral force increase per frame.
@@ -145,8 +145,8 @@ Scene Settings
 **Origin move:**
 	* **Disabled** : disabled handle.
 	* **Wheel** : on/off handle for wheel origin.
-	* **Suspension origin** : on/off handle for suspenion origin.
-	* **Suspension** : : on/off handle for suspenion and wheel origin.
+	* **Suspension origin** : on/off handle for suspension origin.
+	* **Suspension** : on/off handle for suspension and wheel origin.
 
 Template Settings
 """"""""""""""""""

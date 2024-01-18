@@ -22,7 +22,7 @@ Config of the :ref:`cull point <cullPointInfo>`.
 Road Streaming Config
 ~~~~~~~~~~~~
 
-Config for load/unload road sections from the main scene.
+Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref:`subscene <subscene>`.
 
 	.. image:: /images/configs/common/RoadStreamingConfig.png
 	
@@ -38,7 +38,7 @@ Config for load/unload road sections from the main scene.
 Streaming Level Config
 ~~~~~~~~~~~~
 
-Config for load/unload content subscenes.
+Config for :ref:`load/unload <contentStreaming>` content subscenes.
 
 	.. image:: /images/configs/common/StreamingLevelConfig.png
 	

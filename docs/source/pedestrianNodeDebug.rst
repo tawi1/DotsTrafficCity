@@ -25,7 +25,7 @@ Pedestrian Node Debugger
 | **Draw connection line** : on/off visual connection line on the scene.
 | **Line width** : line width of connection line.
 | **Spawn index** : for manual spawn of a pedestrian by the :ref:`selected index <pedestrianNodeDebuggerDefaultType>`.
-| **Spawn amount** : number to spawn pedestrians.
+| **Spawn count** : number to spawn pedestrians.
 	
 .. _pedestrianNodeDebuggerType:
 

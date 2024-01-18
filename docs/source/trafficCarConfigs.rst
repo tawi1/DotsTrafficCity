@@ -27,7 +27,7 @@ Traffic Car Settings
 Entity Type
 ~~~~~~~~~~~~ 
 
-* **Hybrid entity simple physics** : :ref:`pure entities <hybridEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
+* **Hybrid entity simple physics** : :ref:`hybrid entities <hybridEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
 * **Hybrid entity custom physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
 * **Pure entity custom physics** : :ref:`pure entities <pureEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
 * **Pure entity simple physics** : :ref:`pure entities <pureEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
@@ -65,7 +65,7 @@ Common Settings
 ~~~~~~~~~~~~ 
 
 | **Default lane speed km/h** : default lane speed (if the lane speed limit is set to 0 the default speed will be selected).
-| **Health amount** : amount of hit points of the car (health systems should be enabled).
+| **Health count** : number of hit points of the car (health systems should be enabled).
 
 :ref:`Simple Vehicle <simplePhysicsVehicle>` Settings
 ~~~~~~~~~~~~ 
@@ -81,6 +81,11 @@ Common Settings
 	* **Rotation speed** : vehicle rotation speed.
 	* **Rotation speed curve** : curve on the dependence of the speed of the car on its speed.
 	
+:ref:`Custom Vehicle <customPhysicsVehicle>` Settings
+~~~~~~~~~~~~ 
+
+| **Braking input rate** : braking rate if current vehicle speed limit is greater than speed limit.
+
 .. _trafficCarOtherSettings:
 	
 Other Settings
@@ -91,7 +96,7 @@ Other Settings
 
 .. _trafficNavMeshObstacle:
 
-| **Has nav obstacle** : on/off navmesh obstacles for traffic.
+| **Has nav obstacle** : on/off navmesh obstacles for traffic :ref:`config <trafficNavMeshLoaderConfig>`.
 	
 Traffic Nav Config
 ------------
@@ -101,7 +106,7 @@ Config distance to target nodes and traffic light handlers.
 	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
 	
 | **Min distance to target** : min distance to target :ref:`TrafficNode<trafficNode>`.
-| **Min distance to path point target** : min distance to connected :ref:`path point<pathPointConnection>`.
+| **Min distance to path point target** : min distance to connected :ref:`path point <pathPointConnection>`.
 | **Min distance to new light** : minimum distance to the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to assign it to the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
 | **Min distance from previous light** : minimum distance from the :ref:`TrafficNode<trafficNode>` entity that contains the :ref:`traffic light handler<trafficLightHandler>` entity to unassign it from the car entity (if the traffic node entity does not contain a traffic light entity, the index is -1).
 | **Min distance to target route node** : minimum distance to switch to the next waypoint of the :ref:`path<path>`.
@@ -131,7 +136,8 @@ Config to calculate obstacles on the path.
 	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
 	
 | **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`) (:ref:`test scene <trafficTestSceneObstacle>`).
-| **Min distance to start approach** : minimum distance to the last car in the current lane to start approaching (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`) (:ref:`test scene <trafficTestSceneObstacle>`).
+| **Min distance to start approach** : minimum distance to the last car in the current lane to start (:ref:`approaching <trafficCarApproachConfig>`) (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`) (:ref:`test scene <trafficTestSceneObstacle>`).
+| **Min distance to start approach soft** : minimum distance to the last car in the current lane to start (:ref:`approaching <trafficCarApproachConfig>`) (long distance approach at a `soft` speed) (:ref:`test scene <trafficTestSceneObstacle>`).
 | **Min distance to check next connected path** : minimum distance to check the next path for obstacles (:ref:`example<trafficCarObstacleConfig3>`) (:ref:`test scene <trafficTestSceneNextConnectedPath>`).
 | **Short path length** : if the next path is too short, start checking the next connected paths for obstacles (:ref:`example<trafficCarObstacleConfig4>`).
 | **Calculate distance to intersect point** : distance to intersected paths when they are checked for obstacles (:ref:`example<trafficCarObstacleConfig5>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
@@ -144,7 +150,7 @@ Config to calculate obstacles on the path.
 | **Close enough distance to stop before intersect point** : car is close enough to stop in front of the intersect point if necessary (:ref:`example<trafficCarObstacleConfig5>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
 | **Close enough distance to stop before intersect same target node** : current car is close enough to stop in front if another car approaches the same target node but with a higher priority (:ref:`example<trafficCarObstacleConfig6>`) (:ref:`test scene <trafficTestSceneIntersectedPath>`).
 | **Close distance to change lane point** : car that is too close to the lane change point is always an obstacle (:ref:`example<trafficCarObstacleConfig7>`) (:ref:`test scene <trafficTestSceneChangeLane4>`).
-| **Max distance to obstacle change lane** : (:ref:`example<trafficCarObstacleConfig8>`).
+| **Max distance to obstacle change lane** : maximum distance to the obstacle in the target change lane (:ref:`example<trafficCarObstacleConfig8>`).
 | **Same direction value** : direction of the vehicle to check for obstacles in neighboring paths (paths that start from the same point)(:ref:`example<trafficCarObstacleConfig9>`).
 | **Avoid crossroad jam** : car doesn't enter an crossroad if it cannot pass it without jamming (:ref:`example<trafficCarObstacleConfig10>`) (:ref:`test scene <trafficTestSceneCrossroadJam>`).
 	
@@ -192,8 +198,10 @@ Config to calculate obstacles on the path.
 	`Change lane close distance to point example.`
 	
 .. _trafficCarObstacleConfig8:
+
 	.. image:: /images/configs/traffic/obstacleExamples/ChangeLaneExample1.png
-	
+	`Maximum distance to the obstacle in the target change lane example.`
+		
 	.. image:: /images/configs/traffic/obstacleExamples/ChangeLaneExample3.png
 	`Short path example.`
 	
@@ -206,7 +214,8 @@ Config to calculate obstacles on the path.
 
 	.. image:: /images/configs/traffic/obstacleExamples/AvoidCrossroadJamExample.png
 	`Avoid crossroad jam example.`
-
+			
+.. _trafficCarApproachConfig:
 			
 Traffic Approach Config
 ------------
@@ -216,8 +225,21 @@ Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneOb
 	.. image:: /images/configs/traffic/TrafficCarApproachConfig.png
 	
 | **Min approach speed** : min approach speed.
+| **Min approach speed soft** : min approach speed soft at the long distance to obstacle.
 | **On coming to the red light speed** : slowing down the speed of the car when approaching a red light (if the segment speed limit is lower or the speed of the obstacles is lower, the lowest speed of all the conditions will be selected).
 | **Stopping distance to light** : distance at which the car slows down.
+
+Auto brake before speed limit 
+~~~~~~~~~~~~ 
+
+The car automatically brakes to the new speed limit at the selected distance.
+
+| **Soft braking distance** : soft braking distance to new speed limit.
+| **Soft braking rate** : soft braking rate when the car is at a soft distance (if it is closer soft distance than the default :ref:`braking rate <trafficCarSettings>`).
+| **Braking distance** : braking distance to new speed limit.
+| **Skip braking path length distance** : if the next path is too short, the next one is selected.
+	
+	.. note:: Approach distance set in :ref:`Traffic obstacle config <trafficCarObstacleConfig>`.
 	
 .. _trafficCarRaycastConfig:
 	
@@ -287,7 +309,7 @@ Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`
 
 	.. image:: /images/configs/traffic/TrafficCarNpcObstacleConfig.png
 	
-| **Obstacle pedestrian action state** : will only react to pedestrians with the selected :ref:`PedestrianActionState<pedestrianActionState>`.
+| **Obstacle pedestrian action state** : the car only reacts to pedestrians with the selected :ref:`Action State<pedestrianActionState>`.
 | **Check distance** : obstacle calculation length.
 | **Square length** : length of the obstacle calculation square.
 | **Side offset X** : width of the obstacle calculation square.
@@ -302,9 +324,12 @@ Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
 
 	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
 
-**Rotation aligment at node support** : on/off car automatically turns in alignment with the parking node.
-	* **Rotation speed** : rotation speed.
-	* **Complete angle** : angle at which the rotation is complete.
+| **Precise Aligmentn At Node** : on/off precise positioning of the car's parking space.
+| **Rotation speed** : rotation speed.
+| **Complete angle** : angle at which the rotation is complete.
+| **Precise position** : on/off minor driving correction speed to parking point.
+| **Movement speed** : on/off minor driving correction speed to parking point.
+| **Achieve distance** : on/off minor driving correction speed to parking point.
 		
 .. _trafficCarAntistuckConfig:
 		
@@ -330,3 +355,79 @@ Config to sound random horns when an obstacle is detected. It can be disabled (:
 | **Idle time to start** : idle time to start the horn.
 | **Delay** : delay between horns.
 | **Horn duration** : horn duration.
+
+.. _trafficNavMeshLoaderConfig:
+
+Traffic NavMesh Loader Config
+------------
+
+Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for traffic.
+
+	.. image:: /images/configs/traffic/TrafficNavMeshLoaderConfig.png
+
+| **Size offset** : size offset of loaded `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_.
+| **Load only view** : load `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ in view of camera only.
+| **Load frequency** : load frequency of `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for the car.
+
+	.. ::note 
+		* `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ loading is enabling in the :ref:`Traffic Settings <trafficNavMeshObstacle>` config.
+		* Make sure, that pedestrians have :ref:`NavMesh navigation <pedestrianNavmeshNavigation>`.
+		
+.. _trafficAvoidanceConfig:
+
+Traffic Avoidance Config
+------------
+
+Config of traffic :ref:`avoidance <trafficAvoidance>`.
+
+	.. image:: /images/configs/traffic/TrafficAvoidanceConfig.png
+	
+| **Custom achieve distance** : custom achieve distance of avoidance point.
+| **Resolve cyclic obstacle** : overcome the cyclical obstacle of cars getting stuck in each other.
+
+Traffic Custom Destination Config
+------------
+
+Config for custom destination of the vehicles. Also used by :ref:`traffic avoidance <trafficAvoidance>`.
+
+	.. image:: /images/configs/traffic/TrafficCustomDestinationConfig.png
+		
+| **Default speed limit** : default speed limit for custom destination (if user doesn't set custom).
+| **Check side point** : check that the destination is on the side of the car.
+| **Side point speed limit** : custom speed limit when destination is at side point.
+| **Side point distance** : distance to side point.
+| **Default achieve distance** : achieve distance of destination point.
+| **Max duration** : max duration of custom destination state enabled.
+
+.. _trafficRailConfig:
+
+Traffic Rail Config
+------------
+
+Config for :ref:`rail movement <trafficRail>` of the vehicles.
+
+	.. image:: /images/configs/traffic/TrafficRailConfig.png
+	
+| **Max distance to rail line** : maximum distance between the rail and the vehicle.
+| **Lateral speed** : lateral speed of the vehicle to align with the rail.
+| **Rotating lerp speed** : rotation lerp speed.
+| **Lerp rotation tram** : on/off rotating lerp for tram.
+| **Lerp rotation traffic** : on/off rotating lerp for default traffic.
+
+.. _trafficCollisionConfig:
+
+Traffic Collision Config
+------------
+
+The config is used in a two-car collision.
+
+	.. image:: /images/configs/traffic/TrafficCollisionConfig.png
+	
+| **Idle duration** : idling time after collision with other vehicle.
+| **Avoid stucked collision** : attempt to :ref:`avoid <trafficAvoidance>` a stuck collision vehicle.
+| **Collision duration** : collision time with vehicle to start :ref:`avoidance <trafficAvoidance>`.
+| **Ignore collision duration** : duration of collision ignoring since last event.
+| **Calculation collision frequency** : calculation frequency of the :ref:`avoidance <trafficAvoidance>`.
+| **Repeat avoidance frequency** : frequency of collision :ref:`avoidance <trafficAvoidance>` attempts.
+| **Forward direction value** : dot value of the direction of the colliding vehicles along the Z axis.
+| **Side direction value** : dot value of the direction of the colliding vehicles along the X axis.

@@ -16,7 +16,7 @@ How To Use
 	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawnerExample.png
 	`Selection example.`
 	
-#. Adjust the :ref:`Spawn amount <pedestrianLocalSpawnerCommonSettings>`.
+#. Adjust the :ref:`Spawn count <pedestrianLocalSpawnerCommonSettings>`.
 #. Start the scene.
 #. Click `Spawn` button in the component.
 #. Learn more about :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` settings.

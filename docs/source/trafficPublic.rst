@@ -16,7 +16,7 @@ How To Create
 #. Tick on :ref:`Predefined Road <trafficPublicAuthoring>` if public transport will be routed via :ref:`TrafficPublicRoute <trafficPublicRoute>`. **[Optional step]**
 #. Create empty child `GameObject`, add :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` component and assign it to :ref:`TrafficPublicCarCapacity <trafficPublicCarCapacity>` component.
 #. Position the created entry `GameObject` where the pedestrian entrances/exits will be.
-#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set :ref:`carModel <carModel>` according to created public transport vehicle. **[Optional step]**
+#. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set :ref:`CarModel <carModel>` according to created public transport vehicle. **[Optional step]**
 
 TrafficPublic Components
 ------------

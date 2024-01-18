@@ -10,11 +10,27 @@ Traffic Node
 Settings
 ----------------
 
+Cached
+~~~~~~~~~~~~
+
 	.. image:: images/road/trafficNode/TrafficNode.png
 	
+| **Traffic light crossroad** : the :ref:`crossroad <trafficLightCrossroad>` to which the node belongs.
 | **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
-| **Lanes** : :ref:`rightside lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
-| **External lanes** : :ref:`leftside lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
+
+Lane Data
+~~~~~~~~~~~~
+
+	.. image:: images/road/trafficNode/TrafficNode2.png
+	
+| **Lanes** : :ref:`right side lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
+| **External lanes** : :ref:`left side lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
+	
+Settings
+~~~~~~~~~~~~
+
+	.. image:: images/road/trafficNode/TrafficNode3.png
+
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
 | **Chance to spawn** : chance of the vehicle spawning in the node.
@@ -22,6 +38,11 @@ Settings
 | **Custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
 | **Capacity** : capacity of the nodes (used for parking, bus station, etc...).
 
+**Light type:** 
+	* **Right** : right-hand lanes have traffic lights.
+	* **Left** : left-hand lanes have traffic lights.
+	* **Right and left** : right and left lanes have traffic lights.
+	
 **Traffic node type:** 
 	* **Default**
 	* **Parking** : node where cars are :ref:`parked <trafficArea>`.
@@ -31,16 +52,17 @@ Settings
 	* **Idle** : node where the vehicle is idling.
 	
 | **Has crollwalk** : quick on/off crosswalk option for pedestrians.
-| **Allow light for left lanes** : enable traffic light for leftside entities (by default, traffic light is enabled only for rightside lane entities).
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
-| **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegments <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
+| **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegment <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
 | **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <autoPathConnection>`).
 | **Auto path is created** : auto path is created (:ref:`more info <autoPathConnection>`).
 	
-**Buttons:**
-	* **Connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes if no external paths are created yet.
-	* **Force connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes whether it is :ref:`connected <autoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
-	* **Resize** : resize :ref:`collider <trafficNodeCollider>` of node.
+Buttons
+~~~~~~~~~~~~
+
+| **Connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes if no external paths are created yet.
+| **Force connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes whether it is :ref:`connected <autoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
+| **Resize** : resize :ref:`collider <trafficNodeCollider>` of node.
 	
 .. _trafficNodeOneWay:
 
@@ -112,13 +134,13 @@ Auto-path Connection
 
 * To quickly generate connections between :ref:`RoadSegments <roadSegment>` on the same line is used auto-path connection. 
 * If the :ref:`segments <roadSegment>` are not on the same line you should to create another :ref:`Custom straight road segment <roadSegmentCreatorCustomStraight>` or :ref:`Custom segment <roadSegmentCreatorCustomSegment>` between them and do the same connection.
-* Also you can manually create paths between :ref:`segments <roadSegment>` with :ref:`TrafficNodePathCreator tool <trafficNodePathCreator>`.
+* Also you can manually create paths between :ref:`segments <roadSegment>` with :ref:`PathCreator tool <pathCreator>`.
 
 How To Use
 ~~~~~~~~~~~~ 
 
-* To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParent>` by pressing `Connect` button. 
-* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParent>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
+* To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParentInfo>` by pressing `Connect` button. 
+* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
 
 .. _trafficNodeCollider:
 

@@ -8,7 +8,7 @@ Traffic Road Installation
 
 #. Create initial :ref:`scene <cityCreation>` objects.
 #. Create required :ref:`RoadSegments <roadSegment>`. And add them to the :ref:`RoadParent <roadParent>` as children.
-#. Create the :ref:`necessary paths <trafficNodePathCreator>`. 
+#. Create the :ref:`necessary paths <pathCreator>`. 
 #. Configure :ref:`paths <path>`. 
 #. Create required :ref:`PedestrianNode <pedestrianNode>` by :ref:`PedestrianNodeCreator <pedestrianNodeCreator>`.
 #. Adjust the :ref:`Traffic lights <trafficLight>`.

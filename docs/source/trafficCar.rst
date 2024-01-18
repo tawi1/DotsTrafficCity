@@ -297,16 +297,42 @@ CullState Info
 
 * **InVisionOfCamera** : entity fully enabled.
 
-Common Info
+.. _trafficAvoidance:
+
+Avoidance
 ----------------
 
-Obstacle Info
-~~~~~~~~~~~~
+| Avoidance is used in case of stuck vehicles.
+Currently enabled in the following situations:
+	* Cyclical obstacle of cars getting stuck in each other (:ref:`avoidance config <trafficAvoidanceConfig>`).
+	* A car collided frontally with another car (:ref:`collision config <trafficCollisionConfig>`).
+	
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	`Cyclical obstacle example.`
+	
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	`Avoiding cyclical obstacle example.`
+	
+	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.
+
+.. _trafficRail:
+
+Rail Movement
+----------------
+
+The `Rail movement` is used to drive the vehicle precisely along the :ref:`path <path>`, which can be useful in small enclosed :ref:`parking areas <path>`, for example.
+To enable rail movement, tick on the `Rail` parameter in the :ref:`path settings <pathSettings>`.
+Open the :ref:`rail config <trafficRailConfig>` to adjust `Rail movement`.
+
+	.. note:: Enabled by default for :ref:`trams <trafficPublicType>`.
+
+Obstacle Detection
+----------------
 
 .. _trafficCarRaycastInfo:
 
 Raycast
-""""""""""""""
+~~~~~~~~~~~~
 
 :ref:`Config. <trafficCarRaycastConfig>`
 

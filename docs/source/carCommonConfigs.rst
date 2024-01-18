@@ -12,9 +12,8 @@ Car Engine Damage System Settings
 	.. image:: /images/configs/cars/CarEngineDamageSystemSettings.png
 	
 **Damage states:**
-	* **Min hp** :
-	* **Max hp** :
-	* **Prefab** :
+	* **Min/max hp** : min/max vehicle health (as % of maximum health) at which engine damage starts to appear.
+	* **Prefab** : VFX prefab.
 		
 Car Ignition Config
 ------------
@@ -22,8 +21,8 @@ Car Ignition Config
 	.. image:: /images/configs/cars/CarIgnitionConfig.png
 	
 | **Has ignition** :
-| **Idle before start** :
-| **Ignition duration** :
+| **Idle before start** : idle before starting ignition.
+| **Ignition duration** : ignition duration.
 | **Engine started time duration** :
 | **Max pitch** :
 | **Max volume** :

@@ -68,7 +68,7 @@ Traffic Car Settings
 | **Change lane support** : on/off feature to change lanes for traffic.
 | **Traffic public support** : on/off public traffic vehicle in the city.	
 | **Antistuck support** : on/off :ref:`antistuck <trafficCarAntistuckConfig>` feature for traffic vehicles.	
-| **Avoidance support** : on/off avoidance of the vehicles.	
+| **Avoidance support** : on/off :ref:`avoidance <trafficAvoidance>` of the vehicles.	
 | **Car hit collision reaction** : on/off traffic collision reaction to other traffic cars.
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 

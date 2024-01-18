@@ -8,7 +8,7 @@ Path
 How To Create
 ----------------
 
-`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator <roadSegmentCreator>` or you can add them to existing :ref:`road segments <roadSegment>` using the :ref:`Path Creator tool<trafficNodePathCreator>`
+`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator <roadSegmentCreator>` or you can add them to existing :ref:`road segments <roadSegment>` using the :ref:`Path Creator tool<pathCreator>`
 
 .. _pathCustomize:
 
@@ -31,7 +31,7 @@ Cached values
 		* **Connected traffic node** : :ref:`connected traffic node <trafficNodeConnection>`.
 	* **Path point** :
 		* **Connected path** : connected path in the :ref:`custom point <pathPointConnection>`.
-| **Nodes** : key node point to create curves (bezier).
+| **Nodes** : key nodes for creating curves (Bezier).
 | **Waypoints** : :ref:`waypoints <pathWaypointInfo>` of path.
 
 .. _pathIntersects:
@@ -75,7 +75,8 @@ Settings
 | **Waypoints count per curve** : number of waypoints in the curve segment.
 | **Path speed limit** : speed limit for the entire route
 | **Connected lane index** : connected lane index.
-| **Hightlight normalized length** : normalized length of the highlighted path (for editor only).
+| **Hightlight normalized length** : normalized length of the highlighted path (editor only).
+| **Rail** : cars entering this path will move with a :ref:`rail movement <trafficRail>`.
 | **Reversed connection side** : path will be connected to the :ref:`opposite side of the node <trafficNodeConnectionInfo>`.
 	
 .. _pathVisualSettings:
@@ -173,10 +174,24 @@ Traffic Group Info
 * If the vehicle enters the forbidden :ref:`path <pathWaypointInfo>` or :ref:`path node <pathWaypointInfo>`, the vehicle will automatically attempt to change the current lane (:ref:`test scene <trafficTestSceneTrafficGroup>`).
 
 	.. note::
-		* You can change the available types in the enum file:
+		* You can change the available types in the `Global Settings` or in the enum file:
 			* **TrafficGroupType.cs**
 		* You can debug the path group :ref:`here <pathDataViewer>`.
 			
+How To Change
+~~~~~~~~~~~~
+
+#. Open `Global Settings` window.
+
+	.. image:: /images/road/path/GlobalSettingsOpen.png
+	
+#. Select `Traffic group types` tab.
+	
+	.. image:: /images/road/path/GlobalSettingsTab.png
+	
+#. Rename, remove, add groups as you wish.
+#. After making any changes, click on the `Save` button.
+
 Traffic Group Settings
 ~~~~~~~~~~~~
 

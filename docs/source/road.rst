@@ -12,9 +12,10 @@ Road
 		/roadSegmentCreator.rst
 		/bakingInfo.rst
 		/trafficNode.rst
-		/trafficNodePathCreator.rst
+		/pathCreator.rst
 		/path.rst
 		/trafficLight.rst
 		/pedestrianNode.rst
 		/trafficArea.rst
 		/trafficPublicRoute.rst	
+		/roadConfigs.rst	

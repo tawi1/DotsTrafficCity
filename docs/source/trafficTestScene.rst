@@ -169,9 +169,23 @@ Check Traffic Reverse
 	.. image:: /images/testscenes/traffic/BackwardTest2.png
 	`Final result result.`
 	
+.. _trafficTestSceneAvoidance:
+	
+Check Avoidance
+~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExampleSource.png
+	`Sourc settings.`
+		
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	`Cyclical obstacle example.`
+	
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	`Avoiding cyclical obstacle example.`
+	
 .. _testSceneTrafficCarRoadDebugger:
 
-TrafficCar Road Debugger	
+Traffic Road Debugger	
 ------------
 
 	.. image:: /images/testscenes/traffic/TrafficCarRoadDebugger.png

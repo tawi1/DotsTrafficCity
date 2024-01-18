@@ -38,7 +38,7 @@ How To Create
 	.. image:: /images/road/trafficArea/TrafficAreaExample6.png
 	`Selected Exit node example`.
 	
-#. Customize :ref:`Max queue amount <trafficAreaSettings>` depending on how many cars can fit in the queue without blocking other cars.
+#. Customize :ref:`Max queue count <trafficAreaSettings>` depending on how many cars can fit in the queue without blocking other cars.
 	
 	.. image:: /images/road/trafficArea/TrafficAreaExample7.png
 	`TrafficArea result example (parking created by` :ref:`ParkingBuilder <roadSegmentCreatorParkingBuilder>` `).`
@@ -53,8 +53,8 @@ Settings
 Settings
 ~~~~~~~~~~~~ 
 	
-| **Max queue amount** : maximum number of cars in a queue (if the maximum number is exceeded the entrance node will be closed).
-| **Max skip enter order amount** : number of vehicles that can be let in at the entrance (1 value example: 1 enters vehicle - 1 exits - 1 enters - 1 exits).
+| **Max queue count** : maximum number of cars in a queue (if the maximum number is exceeded the entrance node will be closed).
+| **Max skip enter order count** : number of vehicles that can be let in at the entrance (1 value example: 1 enters vehicle - 1 exits - 1 enters - 1 exits).
 | **Has exit order** : cars leave the `TrafficArea` on a queue basis.
 
 .. _trafficAreaSceneVisual:

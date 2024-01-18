@@ -271,7 +271,7 @@ Component for vehicle :ref:`sounds <sharedSoundSettings>` **[optional]**.
 HealthAuthoring
 ~~~~~~~~~~~~
 
-Vehicle health component for damage system [optional].
+Vehicle health component for damage system **[optional]**.
 
 CarDamageEngineAuthoring
 ~~~~~~~~~~~~
@@ -310,7 +310,7 @@ Currently enabled in the following situations:
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample1.png
 	`Cyclical obstacle example.`
 	
-	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample2s.png
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample2.png
 	`Avoiding cyclical obstacle example.`
 	
 	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.

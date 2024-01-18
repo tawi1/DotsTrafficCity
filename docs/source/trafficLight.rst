@@ -59,7 +59,7 @@ Global Lights Settings
 
 Window for quick display of crossroad timings and for connecting the traffic lights to different entities.
 
-How To Open
+How To Use
 ~~~~~~~~~~~~
 
 Read more :ref:`here <trafficLightGlobalLightHowToUse>`.
@@ -198,6 +198,13 @@ Light States
 * Yellow
 * Red Yellow : red and yellow lights at the same time, shown as orange in the inspector.
 
+.. _trafficLightIndex:
+
+Light Index
+------------
+
+Unique traffic light ID in :ref:`TrafficLightCrossroad <trafficLightCrossroad>` defined in :ref:`TrafficLightHandler <trafficLightHandler>` used to link :ref:`TrafficLightHandlers <trafficLightHandler>` and :ref:`traffic lights <trafficLightFrame>`.
+
 .. _trafficLightHandler:
 
 Traffic Light Handler
@@ -214,10 +221,7 @@ Settings
 | **Triggers** : nodes that relate to the handler.
 | **Traffic light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
 | **Pedestrian light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
-
-.. _trafficLightIndex:
-
-| **Related light index** : linked traffic light traffic index.
+| **Related light index** : linked traffic :ref:`light traffic index <trafficLightIndex>`.
 | **Child lights** : list of attached child :ref:`light objects <trafficLightObject>`.
 | **Custom lights** : list of attached custom :ref:`light objects <trafficLightObject>`.
 | **Show world traffic lights** :

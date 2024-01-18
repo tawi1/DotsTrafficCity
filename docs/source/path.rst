@@ -8,7 +8,7 @@ Path
 How To Create
 ----------------
 
-`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator <roadSegmentCreator>` or you can add them to existing :ref:`road segments <roadSegment>` using the :ref:`Path Creator tool<pathCreator>`
+`Paths` are generated in :ref:`RoadSegment<roadSegment>` with :ref:`RoadSegmentCreator <roadSegmentCreator>` or you can add them to existing :ref:`road segments <roadSegment>` using the :ref:`Path Creator tool <pathCreator>`
 
 .. _pathCustomize:
 
@@ -289,8 +289,8 @@ Multiple
  	* **Fixed** : all waypoints change speed limit.
  	* **Interpolate** : speed will be interpolated from the beginning of the section to the end.
 		* **Interpolate type** :
-			* **Node index** : speed is interpolated regarding to the waypoint index.
-			* **Distance** : speed is interpolated regarding the position of the waypoint.
+			* **Node index** : speed is interpolated relative to the waypoint index.
+			* **Distance** : speed is interpolated relative the position of the waypoint.
 		* **Start speed limit** : initial speed limit of the section.
 		* **End speed limit** : end speed limit of the section.
 		
@@ -349,7 +349,7 @@ Custom section
 	
 **Path section type:**
 	* **Start of path** : section will be created at the beginning of the path.
-	* **End of path** : section will be created at the end of the path
+	* **End of path** : section will be created at the end of the path.
 	* **All path** : section will be generated all along the path.
 **Path section create type:**
 	* **Clear path nodes** : waypoints will be generated anew each time a section is created.
@@ -357,7 +357,7 @@ Custom section
 | **Section length** : length of the created section.
 | **Section waypoints** : number of waypoints of the created section.
 | **Start speed limit** : initial speed of the section.
-| **End speed limit** : end speed of the section
+| **End speed limit** : end speed of the section.
 
 **How to use:**
 	* Set all parameters.

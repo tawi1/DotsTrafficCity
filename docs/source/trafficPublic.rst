@@ -18,12 +18,12 @@ How To Create
 #. Position the created entry `GameObject` where the pedestrian entrances/exits will be.
 #. Create :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set :ref:`CarModel <carModel>` according to created public transport vehicle. **[Optional step]**
 
-TrafficPublic Components
+Components
 ------------
 
 .. _trafficPublicAuthoring
 
-TrafficPublicAuthoring component
+TrafficPublicAuthoring
 ~~~~~~~~~~~~ 
 
 Authoring component that contains settings for public transport.
@@ -37,7 +37,7 @@ Authoring component that contains settings for public transport.
 
 .. _trafficPublicCarCapacity:
 
-Car capacity component
+Car capacity authoring
 ~~~~~~~~~~~~ 
 
 Authoring component that contains capacity settings of the vehicle.
@@ -55,7 +55,7 @@ Authoring component that contains capacity settings of the vehicle.
 	
 .. _vehicleEntryAuthoring:
 
-VehicleEntryAuthoring component
+VehicleEntryAuthoring
 ~~~~~~~~~~~~ 
 
 	.. image:: /images/entities/trafficCar/VehicleEntryAuthoring.png

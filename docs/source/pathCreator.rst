@@ -1,4 +1,4 @@
-.. _trafficNodePathCreator:
+.. _pathCreator:
 
 Path Creator
 =====
@@ -10,14 +10,14 @@ How To Use
 
 #. Open tool in the Unity toolbar:
 
-	`Spirit604/CityEditor/Window/TrafficNode Path Creator`
+	`Spirit604/CityEditor/Window/Path Creator`
 	
 	.. image:: /images/road/trafficNode/pathCreator/OpenExample.png
 	
-#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene (:ref:`example <trafficNodePathCreatorExamples>`).
-#. Customize new :ref:`path settings <trafficNodePathCreatorPathSettings>`.
-#. Select desired `Connection Mode Type` (:ref:`connection settings <trafficNodePathCreatorConnectionSettings>`).
-#. Customize `source` & `target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <trafficNodePathCreatorExamples>`) (:ref:`connection settings <trafficNodePathCreatorConnectionSettings>`).
+#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene (:ref:`example <pathCreatorExamples>`).
+#. Customize new :ref:`path settings <pathCreatorPathSettings>`.
+#. Select desired `Connection Mode Type` (:ref:`connection settings <pathCreatorConnectionSettings>`).
+#. Customize `source` & `target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <pathCreatorExamples>`) (:ref:`connection settings <pathCreatorConnectionSettings>`).
 #. Click `Create` button.
 #. :ref:`Customize <pathCustomize>` created :ref:`paths <path>`.
 
@@ -32,7 +32,7 @@ Node Settings
 | **Source Traffic Node** : source :ref:`traffic node <trafficNode>`.
 | **Target Traffic Node** : target :ref:`traffic node <trafficNode>`.
 
-.. _trafficNodePathCreatorPathSettings:
+.. _pathCreatorPathSettings:
 
 Path Settings
 ~~~~~~~~~~~~ 
@@ -58,7 +58,7 @@ Visual Settings
 | **Forbidden connection color** : forbidden connection line color.
 | **Overriden connection color** : overriden connection line color.
 
-.. _trafficNodePathCreatorConnectionSettings:
+.. _pathCreatorConnectionSettings:
 
 Connection Settings
 ~~~~~~~~~~~~ 
@@ -97,7 +97,7 @@ Buttons
 | **Swap nodes** : swap source and target node.
 | **Create** : create available paths.
 
-.. _trafficNodePathCreatorExamples:
+.. _pathCreatorExamples:
 
 Examples
 ------------ 

@@ -64,20 +64,23 @@ Settings
 | **Default color** : default :ref:`path <path>` color.
 
 **Path view type:** selected :ref:`parameter <pathSettings>` for visualisation (:ref:`examples <pathDataViewerExamples>`)
-	* **Speed limit**
-	* **Priority**
-	* **Path type**
-	* :ref:`Traffic path group <pathTrafficGroup>`
-	* :ref:`Traffic path node group <pathWaypointInfo>`
-	* **Node direction**
+	* **Speed limit** : speed limit of the :ref:`paths <path>.
+	* **Priority** : priority of the :ref:`paths <path>.
+	* **Path type** : path type of the :ref:`paths <path>.
+	* :ref:`Traffic path group <pathTrafficGroup>` : :ref:`traffic group <pathTrafficGroup>` of the :ref:`paths <path>.
+	* :ref:`Traffic path node group <pathWaypointInfo>` : :ref:`traffic group <pathTrafficGroup>` of the :ref:`waypoints <pathWaypointInfo>`
+	* **Node direction** : node direction (forward or backward) of the :ref:`waypoints <pathWaypointInfo>` in the :ref:`paths <path>`.
+	* **Arrow light** : shows the :ref:`paths <path>` with the assigned custom light.
+	* **Rail** : shows the :ref:`paths <path>` with the :ref:`rail <trafficRail>` parameter.
 	
 | **Draw custom colors** : on/off custom colors of the :ref:`paths <path>` on the scene.
-| **Show world buttons** : Show world :ref:`path <path>` selection buttons.
+| **Show world buttons** : show world :ref:`path <path>` selection buttons.
 | **Show intersect point** : on/off visual :ref:`intersection points <pathIntersects>` on the scene.
-| **Show waypoints** : on/off waypoints of the :ref:`path <path>` on the scene.
+| **Show waypoints** : on/off :ref:`waypoints <pathWaypointInfo>` of the :ref:`path <path>` on the scene.
 | **Show path handles** : on/off :ref:`path <path>` position handles of the selected path.
 | **Show path edit buttons** : on/off :ref:`path <path>` edit buttons of the selected path.
 | **Multiple selection** : on/off feature to select multiple :ref:`paths <path>` at the same time (useful for setting the same value for multiple :ref:`paths <path>`).
+| **Show unselect buttons** : show unselect button for already selected :ref:`paths <path>` in multiple selection mode.
 | **Refresh** : update :ref:`path <path>` data in the viewer.
 
 .. _pathDataViewerExamples:

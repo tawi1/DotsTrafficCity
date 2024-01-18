@@ -12,7 +12,7 @@ How To Use
 
 	`Spirit604/CityEditor/Window/TrafficNode Path Creator`
 	
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/OpenExample.png
+	.. image:: /images/road/trafficNode/pathCreator/OpenExample.png
 	
 #. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene (:ref:`example <trafficNodePathCreatorExamples>`).
 #. Customize new :ref:`path settings <trafficNodePathCreatorPathSettings>`.
@@ -27,7 +27,7 @@ Settings
 Node Settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/NodeSettings.png
+	.. image:: /images/road/trafficNode/pathCreator/NodeSettings.png
 	
 | **Source Traffic Node** : source :ref:`traffic node <trafficNode>`.
 | **Target Traffic Node** : target :ref:`traffic node <trafficNode>`.
@@ -37,7 +37,7 @@ Node Settings
 Path Settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/PathSettings.png
+	.. image:: /images/road/trafficNode/pathCreator/PathSettings.png
 	
 | :ref:`Path settings <pathSettings>`.
 | **Select after create** : the path will be selected in the inspector after creation.
@@ -45,7 +45,7 @@ Path Settings
 Visual Settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/VisualSettings.png
+	.. image:: /images/road/trafficNode/pathCreator/VisualSettings.png
 	
 **Show preview dotted line:** on/off connection line on the scene.
 	* **Show path direction** : on/off arrows of the connection line.
@@ -63,7 +63,7 @@ Visual Settings
 Connection Settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/ConnectionSettings.png
+	.. image:: /images/road/trafficNode/pathCreator/ConnectionSettings.png
 	
 **Connection mode type:** 
 	* **Single connect** : only 1 :ref:`path <path>` is created.
@@ -92,7 +92,7 @@ Connection Settings
 Buttons
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/Buttons.png
+	.. image:: /images/road/trafficNode/pathCreator/Buttons.png
 	
 | **Swap nodes** : swap source and target node.
 | **Create** : create available paths.
@@ -102,11 +102,11 @@ Buttons
 Examples
 ------------ 
 
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example1.png
+	.. image:: /images/road/trafficNode/pathCreator/Example1.png
 	`Connection available example (allow override path enabled, show overriden path disabled).`
 	
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example2.png	
+	.. image:: /images/road/trafficNode/pathCreator/Example2.png	
 	`Connection available example (allow override path enabled, show overriden path enabled).`
 	
-	.. image:: /images/road/trafficNode/trafficNodePathCreator/Example3.png
+	.. image:: /images/road/trafficNode/pathCreator/Example3.png
 	`Connection forbidden example.`

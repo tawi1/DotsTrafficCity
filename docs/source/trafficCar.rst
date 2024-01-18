@@ -307,10 +307,10 @@ Currently enabled in the following situations:
 	* Cyclical obstacle of cars getting stuck in each other (:ref:`avoidance config <trafficAvoidanceConfig>`).
 	* A car collided frontally with another car (:ref:`collision config <trafficCollisionConfig>`).
 	
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample1.png
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample1.png
 	`Cyclical obstacle example.`
 	
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample2.png
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample2s.png
 	`Avoiding cyclical obstacle example.`
 	
 	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.

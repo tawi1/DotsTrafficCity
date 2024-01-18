@@ -179,10 +179,10 @@ Test case of traffic :ref:`avoidance config <trafficAvoidance>`.
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExampleSource.png
 	`Source settings.`
 		
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample1.png
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample1.png
 	`Cyclical obstacle example.`
 	
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample2.png
+	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample2.png
 	`Avoiding cyclical obstacle example.`
 	
 .. _testSceneTrafficCarRoadDebugger:

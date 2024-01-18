@@ -174,13 +174,15 @@ Check Traffic Reverse
 Check Avoidance
 ~~~~~~~~~~~~
 
+Test case of traffic :ref:`avoidance config <trafficAvoidance>`.
+
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExampleSource.png
-	`Sourc settings.`
+	`Source settings.`
 		
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample1.png
 	`Cyclical obstacle example.`
 	
-	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample.png
+	.. image:: /images/entities/trafficCar/avoidance/AnimationDataExample2.png
 	`Avoiding cyclical obstacle example.`
 	
 .. _testSceneTrafficCarRoadDebugger:

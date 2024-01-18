@@ -117,17 +117,18 @@ Automatically used by :ref:`Entity Subscene Generator <subsceneGenerator>`.
 PhysicsShape Transfer Service
 ~~~~~~~~~~~~
 
-Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
+| Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`. 
+| Also tool exists to maintain both the `legacy physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, 
+so `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_  classes.
 
-	.. image:: /images/road/installation/PhysicsShapeTransferService.png
-	
-How To Use
-""""""""""""""
-
-Used by :ref:`Entity Subscene Generator <subsceneGenerator>` or :ref:`SubSceneChunk Creator <subSceneCreator>`.
+Current project use cases:
+	* Keep `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
+	* Cloning of physical shapes to split them into pieces subscene by using :ref:`SubSceneChunk Creator <subSceneCreator>` or cloning to :ref:`main subscene <subscene>` by using :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
 	.. note:: The tool can use only one tool at a time, either a :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.
 
+	.. image:: /images/road/installation/PhysicsShapeTransferService.png
+	
 Settings
 """"""""""""""
 

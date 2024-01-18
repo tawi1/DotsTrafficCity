@@ -295,6 +295,7 @@ How To Create
 		* Implemented by `PedestrianRagdollSystem`.
 		* Currently collides only with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_
 		* Make sure, that the scene contains `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
+		* Read more info about :ref:`physics transfer service <physicsShapeTransfer>` how to clone legacy colliders.
 
 .. _pedestrianNavigation:
 

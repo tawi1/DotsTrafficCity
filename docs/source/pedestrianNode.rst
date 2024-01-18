@@ -263,7 +263,7 @@ Settings
 | **Max path width** : global width of routes for all nodes (enable preview :ref:`here <creatorShowBorders>`, save global width :ref:`here <creatorSaveGlobalWidth>`).
 | **Connect with previous node** : currently created node will be connected to the previously created node.
 | **Auto select connected node** : node will be selected after it is connected to the source node.
-| **Allow connect traffic node** : on/of feature to connect to the :ref:`TrafficNode <trafficNode>`.
+| **Allow connect traffic node** : on/off feature to connect to the :ref:`TrafficNode <trafficNode>`.
 **Auto split connection** : if a node is located between a connection of existing nodes, the connection will be reconnected between them (made with a `Raycast`).
 	* **Disabled**
 	* **Right angle** : 90° angle.

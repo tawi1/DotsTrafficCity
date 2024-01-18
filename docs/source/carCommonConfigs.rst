@@ -14,9 +14,13 @@ Car Engine Damage System Settings
 **Damage states:**
 	* **Min/max hp** : min/max vehicle health (as % of maximum health) at which engine damage starts to appear.
 	* **Prefab** : VFX prefab.
-		
+	
+.. _carIgnitionConfig:
+	
 Car Ignition Config
 ------------
+
+Config used by :ref:`parking states <trafficParking>`.
 
 	.. image:: /images/configs/cars/CarIgnitionConfig.png
 	
@@ -30,8 +34,12 @@ Car Ignition Config
 | **Pitch animation curve** : pitch ignition curve. Y - pitch value. X - normalized duration time.
 | **Volume animation curve** : volume ignition curve. Y - volume value. X - normalized duration time.
 	
+.. _carStoppingConfig:
+	
 Car Stopping Engine Config
 ------------
+
+Config used by :ref:`parking states <trafficParking>`.
 
 	.. image:: /images/configs/cars/CarStoppingEngineConfig.png
 	

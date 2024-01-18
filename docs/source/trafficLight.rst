@@ -203,7 +203,7 @@ Light States
 Light Index
 ------------
 
-Unique traffic light ID in :ref:`TrafficLightCrossroad <trafficLightCrossroad>` defined in :ref:`TrafficLightHandler <trafficLightHandler>` used to link :ref:`TrafficLightHandlers <trafficLightHandler>` and :ref:`traffic lights <trafficLightFrame>`.
+Unique traffic light ID in :ref:`TrafficLightCrossroad <trafficLightCrossroad>` defined in :ref:`TrafficLightHandler <trafficLightHandler>` used to link :ref:`TrafficLightHandlers <trafficLightHandler>` and :ref:`traffic lights <trafficLightFrame>` by index.
 
 .. _trafficLightHandler:
 
@@ -224,9 +224,6 @@ Settings
 | **Related light index** : linked traffic :ref:`light traffic index <trafficLightIndex>`.
 | **Child lights** : list of attached child :ref:`light objects <trafficLightObject>`.
 | **Custom lights** : list of attached custom :ref:`light objects <trafficLightObject>`.
-| **Show world traffic lights** :
-| **Show light connection** :
-| **Visible light connection** :
 | **Light states** : :ref:`light state of handler <trafficLightState>`.
 
 Components

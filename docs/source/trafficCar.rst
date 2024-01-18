@@ -297,6 +297,30 @@ CullState Info
 
 * **InVisionOfCamera** : entity fully enabled.
 
+.. _trafficParking:
+
+Parking
+----------------
+
+Сar parking consists of the following states:
+
+Entering parking states
+~~~~~~~~~~~~
+
+#. The car has chosen the path containing the :ref:`parking node <trafficNode>`.
+#. The car links the :ref:`parking node <trafficNode>` to prevent it being selected by other cars (list of linked node can be customized :ref:`here <trafficRoadConfig>`).
+#. When the car reaches the :ref:`parking node <trafficNode>`, the car position correction is activated for precise parking (if disabled in the :ref:`parking config <trafficCarParkingConfig>`, this step is skipped).
+#. Stopping the engine state is starting (if enabled in the :ref:`stopping engine config <carStoppingConfig>` & vehicle in view of camera's player).
+#. Pedestrian gets out of the car.
+
+Exiting parking states
+~~~~~~~~~~~~
+
+#. The Pedestrian enters :ref:`pedestrian parking node <pedestrianNode>`, if available.
+#. The parking car removes link with :ref:`TrafficNode <trafficNode>`.
+#. Ignition state system begins (if enabled in :ref:`ignition config <carIgnitionConfig>`).
+#. Once the car has started the engine, the car will start to move.
+
 .. _trafficAvoidance:
 
 Avoidance

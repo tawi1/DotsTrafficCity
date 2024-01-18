@@ -45,7 +45,7 @@ Settings
 	
 **Traffic node type:** 
 	* **Default**
-	* **Parking** : node where cars are :ref:`parked <trafficArea>`.
+	* **Parking** : node where cars are :ref:`parked <trafficArea>` (read more :ref:`parking states <trafficParking>`).
 	* **Traffic public stop** : node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
 	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
 	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.

@@ -330,6 +330,8 @@ Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
 | **Precise position** : on/off minor driving correction speed to parking point.
 | **Movement speed** : on/off minor driving correction speed to parking point.
 | **Achieve distance** : on/off minor driving correction speed to parking point.
+
+	.. note :: Read more about :ref:`parking states <trafficParking>`.
 		
 .. _trafficCarAntistuckConfig:
 		
@@ -361,7 +363,7 @@ Config to sound random horns when an obstacle is detected. It can be disabled (:
 Traffic NavMesh Loader Config
 ------------
 
-Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for traffic.
+Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for traffic. 
 
 	.. image:: /images/configs/traffic/TrafficNavMeshLoaderConfig.png
 
@@ -369,7 +371,7 @@ Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation
 | **Load only view** : load `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ in view of camera only.
 | **Load frequency** : load frequency of `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for the car.
 
-	.. ::note 
+	.. note::
 		* `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ loading is enabling in the :ref:`Traffic Settings <trafficNavMeshObstacle>` config.
 		* Make sure, that pedestrians have :ref:`NavMesh navigation <pedestrianNavmeshNavigation>`.
 		

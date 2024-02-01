@@ -58,8 +58,8 @@ Detect Npc Mode
 Simple Physics Movement Type
 ~~~~~~~~~~~~ 
 
-* **Car input** :
-* **Follow target** :
+* **Car input** : simple emulation of real movement based on traffic input.
+* **Follow target** : the vehicle rotation is set based on the destination direction.
 	
 Common Settings
 ~~~~~~~~~~~~ 

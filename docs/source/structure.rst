@@ -118,25 +118,25 @@ PhysicsShape Transfer Service
 ~~~~~~~~~~~~
 
 | Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`. 
-| Also tool exists to maintain both the `legacy physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, so `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_  classes.
+| Also tool exists to maintain both the `default physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, so `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_  classes.
 
 Current project use cases:
-	* Keep `legacy colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
+	* Keep `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
 	* Cloning of physical shapes from :ref:`main scene <mainScene>` to split them into pieces subscene by using :ref:`SubSceneChunk Creator <subSceneCreator>` or cloning to :ref:`main subscene <subscene>` by using :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
 	.. note:: The tool can use only one tool at a time, either a :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.
 
-	.. image:: /images/road/installation/PhysicsShapeTransferService.png
-	
 Settings
 """"""""""""""
+
+	.. image:: /images/road/installation/PhysicsShapeTransferService.png
 
 | **Clean components** : removes all components from the physics shape.
 | **Clean childs** : removes all childs from the physics shape.
 | **Search type** : searching shapes by layer or tag.
 
 **Proccesing type** : 
-	* **Stay previous** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>`, useful to keep `legacy collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `Unity.Physics collider <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ running at the same time.
+	* **Stay previous** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>`, useful to keep `default collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `Unity.Physics collider <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ running at the same time.
 	* **Disable collider** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>` and disable it.
 
 | **New layer** : assigns new layer for cloned shape.

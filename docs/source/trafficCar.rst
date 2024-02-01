@@ -346,7 +346,7 @@ Rail Movement
 
 The `Rail movement` is used to drive the vehicle precisely along the :ref:`path <path>`, which can be useful in small enclosed :ref:`parking areas <path>`, for example.
 To enable rail movement, tick on the `Rail` parameter in the :ref:`path settings <pathSettings>`.
-Open the :ref:`rail config <trafficRailConfig>` to adjust `Rail movement`.
+Open the :ref:`rail config <trafficRailConfig>` to adjust `Rail` parameters.
 
 	.. note:: Enabled by default for :ref:`trams <trafficPublicType>`.
 

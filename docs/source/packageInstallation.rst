@@ -70,7 +70,7 @@ Steps
 			* **REESE_PATH**	
 		
 	.. warning::
-		If you get the error 'No git executable was found', read :ref:`this <git>`.
+		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 			
 #. Download the required assets from the `Asset Store`:
 

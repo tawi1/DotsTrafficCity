@@ -68,6 +68,9 @@ Steps
 	.. note::
 		**Script define symbols required for the project:**
 			* **REESE_PATH**	
+		
+	.. warning::
+		If you get the error 'No git executable was found', read :ref:`this <git>`.
 			
 #. Download the required assets from the `Asset Store`:
 

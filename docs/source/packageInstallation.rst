@@ -55,6 +55,9 @@ Steps
 			* **DOTS_CITY**
 			* **UNITY_PHYSICS_CUSTOM**
 			
+	.. warning::
+		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
+			
 #. Restart the `Unity` project after all the packages have been downloaded.
 			
 	.. _packageInstallationOptional:

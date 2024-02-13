@@ -373,7 +373,8 @@ Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation
 
 	.. note::
 		* `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ loading is enabling in the :ref:`Traffic Settings <trafficNavMeshObstacle>` config.
-		* Make sure, that pedestrians have :ref:`NavMesh navigation <pedestrianNavmeshNavigation>`.
+		* Make sure, that the pedestrians have :ref:`NavMesh navigation <pedestrianNavmeshNavigation>`.
+		* Make sure, that the `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ is generated.
 		
 .. _trafficAvoidanceConfig:
 

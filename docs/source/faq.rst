@@ -16,6 +16,6 @@ No 'git' executable was found
 How to fix
 ^^^^^^^^^^^^^^^^^^^^^^
 
-#. Download `git <https://git-scm.com/download/>`_.
+#. Download & install `git <https://git-scm.com/download/>`_.
 #. Make sure the system variable `PATH <https://www.java.com/en/download/help/path.html>`_ contains the git install path.
 #. Reboot your PC.

@@ -53,7 +53,7 @@ Traffic Debugger
 
 .. _trafficCarNpcObstacleDebugger:
 
-TrafficNpcObstacleDebugger
+Traffic NpcObstacle Debugger
 ------------
 
 Shows the calculation area and the vehicle's obstacle NPCs.

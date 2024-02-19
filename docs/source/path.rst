@@ -29,7 +29,7 @@ How To Move
 """"""""""""""
 
 #. Enable :ref:`Show handles <pathSettings>` option.
-#. Draw the desired path handles.
+#. Drag the desired path handles.
 
 How Add & Remove
 """"""""""""""
@@ -282,7 +282,7 @@ Common settings
 | :ref:`Traffic mask group <pathTrafficGroup>`.
 | :ref:`Waypoints count per curve<pathWaypointsPerCurve>`.
 | :ref:`Priority<pathPriority>`.
-| :ref:`Draw additional settings<pathDrawAdditionalSettingsExample>` : displays additional settings for each waypoint (`Backward Movement`).
+| :ref:`Draw additional settings<pathDrawAdditionalSettingsExample>` : displays additional settings for each waypoint (`Backward Movement`, `Traffic Group`).
 
 Custom settings
 ~~~~~~~~~~~~
@@ -292,7 +292,7 @@ Custom settings
 Single
 """"""""""""""
 
-`Single` - change each waypoint one by one.
+`Single` - change each waypoint one at a time.
 
 	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindow1.png
 	
@@ -304,7 +304,7 @@ Single
 Multiple
 """"""""""""""
 
-`Multiple` - speed limit will be changed on the selected section.
+`Multiple` - the speed limit will be changed on the selected section.
 	
 	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple1.png
 
@@ -313,12 +313,12 @@ Multiple
  	* **Interpolate** : speed will be interpolated from the beginning of the section to the end.
 		* **Interpolate type** :
 			* **Node index** : speed is interpolated relative to the waypoint index.
-			* **Distance** : speed is interpolated relative the position of the waypoint.
+			* **Distance** : speed is interpolated relative to the position of the waypoint.
 		* **Start speed limit** : initial speed limit of the section.
 		* **End speed limit** : end speed limit of the section.
 		
 **How to use:**
-	* Select the start and end of the section in the window or turn on `Draw Select Buttons` and select start (`S`) and end (`E`) in the scene.
+	* Select the start and end of the section in the window or switch on the `Draw Select Buttons` and select the start (`S`) and end (`E`) in the scene.
 	* Set the parameter `Selected Path Speed Limit` to the value you need.
 		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowMultiple5.png
 	* Click `Set Speed Limit`.
@@ -359,14 +359,14 @@ All way
 **How to use:**
 	* Set the parameter `Selected Path Speed Limit` to the value you need.
 		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowAllway1.png
-	* Click `Set Speed Limit`.
+	* Click the `Set Speed Limit` button.
 		.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowAllway2.png
 		`Result.`
 
 Custom section
 """"""""""""""
 
-`Custom section` - section with the custom speed will be automatically generated depending on the parameters.
+`Custom section` - the section with the custom speed is automatically generated depending on the parameters.
 
 	.. image:: /images/road/path/pathSettingsWindow/PathSettingsWindowSection1.png
 	

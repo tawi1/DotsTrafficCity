@@ -22,7 +22,7 @@ How to fix
 
 .. _nunitFix:
 
-error CS0006: Metadata file 'Library/PackageCache/com.unity.ext.nunit@2.0.3/net35/unity-custom/nunit.framework.dll' could not be founds
+error CS0006: Metadata file 'nunit.framework.dll' could not be found
 ~~~~~~~~~~~~
 
 How to fix

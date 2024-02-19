@@ -98,6 +98,7 @@ Friction
 | **Forward friction** : forward friction value.
 | **Lateral friction** : lateral friction value.
 | **Brake friction** : brake friction value.
+| **Drag** : drag value of the vehicle.
 
 Transient Forces
 """"""""""""""""""
@@ -131,7 +132,6 @@ Engine
 
 | **Torque** : engine torque.
 | **Transimission rate** : engine torque to wheel speed ratio.
-| **Drag** : drag value of the vehicle.
 
 Scene Settings
 """"""""""""""""""

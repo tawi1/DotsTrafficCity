@@ -112,8 +112,8 @@ Chunk Settings
 | **Destroy previous created** : destroy previously created chunks.
 
 **Object find method** : method for finding an object to add to a chunk.
-	* **By tag** : by unity tag.
-	* **By layer** : by unity layer.
+	* **By tag** : by `Unity` tag.
+	* **By layer** : by `Unity` layer.
 	
 | **Target tag** : search tag.
 | **Disable old source objects** : turn off the source objects.

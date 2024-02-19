@@ -88,8 +88,8 @@ Other Settings
 
 **Physics simulation type:**
 	* **No physics** : dots physics off.
-	* **Unity physics** : unity dots physics on.
-	* **Havok physics** : havok dots physics on (havok physical package is required).
+	* **Unity physics** : `Unity` dots physics on.
+	* **Havok physics** : `Havok` dots physics on (havok physical package is required).
 	
 | **Cull physics** : on/off culling of the physics of dynamic objects that are far from the player.
 | **Cull static physics** :on/off culling of the physics of static objects that are far from the player.

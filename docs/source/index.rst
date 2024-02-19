@@ -3,7 +3,7 @@ Welcome to DOTS Traffic City documentation!
 
 **DOTS Traffic City** is a tool for quickly creating performant city traffic.
 
-You can buy it from unity asset store: `DOTS Traffic City <https://u3d.as/2PCK>`_
+You can buy it from `Unity Asset Store`: `DOTS Traffic City <https://u3d.as/2PCK>`_
 
 `Youtube tutorial playlist. <https://www.youtube.com/playlist?list=PLk8IsonsJZcjhJBk95AVzuW8HVFYbPBME>`_
 

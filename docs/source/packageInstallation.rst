@@ -27,7 +27,7 @@ Limitations
 * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space currently not available (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
 * `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles only calculated with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
-* :ref:`Ragdoll <pedestrianRagdoll>` currently only supported with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
+* :ref:`Ragdoll <pedestrianRagdoll>` currently only collides with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
 
 Package Installation
 ============

@@ -648,10 +648,10 @@ Path
 	* **Path** [paths will be connected to the `Parking source path` (:ref:`PathPoint connection <pathPointConnection>`)]
 		* **Parking source path** : path from which the created parking slot paths will start and end.
 		* **Show select path buttons** : on/off display exist paths of the segment to add a parking source path.
-	* **Node** [paths will be connected to the target `TrafficNode` (:ref:`TrafficNode connection <trafficNodeConnection>`)]
+	* **Node** [paths will be connected to the selected `TrafficNodes` (:ref:`TrafficNode connection <trafficNodeConnection>`)]
 		* **Source TrafficNode** : node from which the created parking slot paths will start.
 		* **Target TrafficNode** : node to which the paths connected from the parking place.
-	* **Single node:**
+	* **Single node** [paths will be connected to the selected single `TrafficNode` (same node for enter & exit paths)]
 		* **Source TrafficNode** : enter & exit :ref:`TrafficNode <trafficNode>` for parking :ref:`paths <path>` are the same.
 
 | **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.

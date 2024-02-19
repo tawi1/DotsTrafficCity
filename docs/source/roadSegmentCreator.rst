@@ -571,14 +571,15 @@ How To Use
 	
 #. In the created path create additional waypoint nodes by pressing `+` in the scene.
 	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png
-	
+	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png	
+
 #. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node Clone Count <roadSegmentCreatorParkingBuilderPath>` parameters.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
 	
-#. Repeat the same steps (11 - 13) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
+#. Open the `Offsets` tab and adjust the position handle for each node individually if required **[optional]**.		
+#. Repeat the same steps (11 - 14) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
 
 	.. _roadSegmentCreatorParkingBuilderPathExample:
 	

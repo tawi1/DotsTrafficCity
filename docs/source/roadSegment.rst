@@ -34,15 +34,15 @@ Component for connection to other road segments.
 Variables
 """"""""""""""
 
-| **Road segment placer** : reference to :ref:`RoadSegmentPlacer<roadSegmentPlacer>`.
-| **Short title name** : short name for `RoadSegmentPlacer`.
+| **Road segment placer** : reference to the :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
+| **Short title name** : short name for :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
 | **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExample>` in the scene.
 	
 Buttons
 """"""""""""""
 
-| **Connect nodes** : auto-connect :ref:`Traffic Nodes<trafficNode>`.
-| **Reset nodes** : reset already auto-connected paths of :ref:`Traffic Nodes<trafficNode>`.
+| **Connect nodes** : :ref:`auto-connect <autoPathConnection>` :ref:`Traffic Nodes<trafficNode>`.
+| **Reset nodes** : reset already :ref:`auto-connected <autoPathConnection>` paths of :ref:`Traffic Nodes<trafficNode>` (except :ref:`locked <trafficNode>` nodes).
 | **Bake data** : :ref:`bake <roadSegmentBakingInfo>` all :ref:`paths <path>` data (path's length, intersections).
 	
 .. _trafficLightCrossroad:

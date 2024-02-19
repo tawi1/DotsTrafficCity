@@ -573,7 +573,7 @@ How To Use
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png	
 
-#. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node Clone Count <roadSegmentCreatorParkingBuilderPath>` parameters.
+#. Customize :ref:`Traffic Group <pathTrafficGroup>`, :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node Clone Count <roadSegmentCreatorParkingBuilderPath>` parameters.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
@@ -624,18 +624,18 @@ Common
 | **Parking place spacing offset** : distance between parking slots.
 
 **Line object type:** 
-	* **Parking place** 
-	* **Parking line** 
+	* **Parking place** : handle parking place.
+	* **Parking line** : handle parking line.
 	
 **Handles:**
-	* **None** 
-	* **Position** 
-	* **Rotation** 
+	* **None** : no handles.
+	* **Position** : enabled position handle for the place or line.
+	* **Rotation** : enabled rotation handle for the place or line.
 	
 | **Line start point local** : local parking line start position.
 | **Place size** : parking lot size.
-| **Node direction** : local direction of :ref:`TrafficNode <trafficNode>` in the parking place.
-| **Line direction** : local direction of parking line.
+| **Node direction** : local direction of the :ref:`TrafficNode <trafficNode>` in the parking place.
+| **Line direction** : local direction of the parking line.
 	
 .. _roadSegmentCreatorParkingBuilderPath:
 
@@ -655,6 +655,13 @@ Path
 		* **Source TrafficNode** : enter & exit :ref:`TrafficNode <trafficNode>` for parking :ref:`paths <path>` are the same.
 
 | **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.
+
+**Rail type:**
+	* **None** : :ref:`Rail Movement <trafficRail>` is disabled.
+	* **Enter only** : the vehicles entering the car park have a :ref:`Rail Movement <trafficRail>`.
+	* **Exit only** : the vehicles leaving the car park have a :ref:`Rail Movement <trafficRail>`.
+	* **Enter & exit** : enter & exit paths have a :ref:`Rail Movement <trafficRail>`.
+
 | **Traffic mask group** : :ref:`group <pathTrafficGroup>` of the vehicles that allowed on the parking.
 | **Show edit path parking buttons** : on/off edit (add & remove) buttons of the path.
 

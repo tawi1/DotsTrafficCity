@@ -37,7 +37,7 @@ Package Installation
 Steps
 ------------
 
-#. Download & import from the `Unity Asset Store`.
+#. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 

@@ -81,7 +81,7 @@ Clip Data
 
 	.. image:: /images/pedestrian/baker/window/ClipData.png
 
-* **Clip** : reference to clip.
+* **Clip** : reference to the clip.
 * **Custom frame rate** : custom frame rate of the clip.
 * **Interpolate** : on/off interpolation feature for the clip.
 * **Offset** : local offset of vertices in baked animation.

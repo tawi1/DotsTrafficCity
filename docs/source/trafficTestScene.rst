@@ -197,7 +197,7 @@ Traffic Road Debugger
 Scene settings
 ~~~~~~~~~~~~
 	
-| **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
+| **Vehicle data collection** : reference to the :ref:`collection <vehicleCollection>` of all vehicles.
 | **Enable visual debug** : on/off visual debug in the scene.
 | **Show buttons** : show add :ref:`path <path>` button to the component in the scene.
 | **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.

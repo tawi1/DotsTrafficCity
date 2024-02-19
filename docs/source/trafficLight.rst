@@ -217,7 +217,7 @@ Settings
 
 	.. image:: /images/road/trafficLight/TrafficLightHandler.png
 	
-| **Traffic light crossroad** : reference to :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
+| **Traffic light crossroad** : reference to the :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
 | **Triggers** : nodes that relate to the handler.
 | **Traffic light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
 | **Pedestrian light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.

@@ -102,7 +102,7 @@ Props Authoring
 
 	.. image:: /images/other/PropsAuthoring.png
 	
-| **Has custom prop reset** : if enabled, a custom reset system must be implemented for this object that contains `PropsCustomResetTag` component.
+| **Has custom prop reset** : if checked, a custom reset system must be implemented for this object that contains `PropsCustomResetTag` component.
 
 Custom reset of hydrant, example code:
 

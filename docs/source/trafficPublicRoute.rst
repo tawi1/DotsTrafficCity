@@ -55,7 +55,7 @@ Component
 Route settings
 ~~~~~~~~~~~~ 
 
-| **Vehicle data collection** : reference to :ref:`vehicle collection <vehicleCollection>`.
+| **Vehicle data collection** : reference to the :ref:`vehicle collection <vehicleCollection>`.
 | **Max vehicle count** : maximum number of vehicles on the route.
 | **Preferred interval distance** : preferred distance between public transport vehicles.
 | **Ignore camera** : if the camera is ignored, public transport can be spawned in view of the camera.

@@ -48,13 +48,13 @@ You read more :ref:`here <roadInstallation>`.
 Settings
 """"""""""""""
 
-| **Connection waypoint offset** : automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value greater than zero).
-| **Connect segments** : creates the :ref:`automatically created paths <autoPathConnection>`.
+| **Connection waypoint offset** : automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
+| **Connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>`.
 | **Reset segments** : reset the :ref:`automatically created paths <autoPathConnection>`.
 | **Connect pedestrian nodes** : automatically connects :ref:`pedestrian nodes <pedestrianNode>` that configured :ref:`auto-connection <pedestrianNodeConnections>`.
-| **Add crossroads** : adding crossroad if missing.
-| **Bake path data** : :ref:`bakes <bakingInfo>` road data. 
-| **Clear unattached paths** : clear the :ref:`paths <path>` that are not connected to any a :ref:`TrafficNode <trafficNode>`.
+| **Add crossroads** : adds crossroad if missing.
+| **Bake path data** : :ref:`bake <bakingInfo>` road data. 
+| **Clear unattached paths** : delete the :ref:`paths <path>` that are not connected to any a :ref:`TrafficNode <trafficNode>`.
 
 .. _subsceneGenerator:
 
@@ -80,7 +80,7 @@ Settings
 | **Entity subscene save path** : save path of :ref:`subscene <subscene>`.
 | **Entity subscene name** : name of :ref:`subscene <subscene>`.
 | **Autosync configs** : on/off auto-sync config on :ref:`main scene <mainScene>` & :ref:`subscene <subscene>`.
-| **Move tools** : on/off moving of following tools: :ref:`PedestrianNode Creator <pedestrianNodeCreator>`, `RoadSegmentPlacer`.
+| **Move tools** : on/off moving of following tools: :ref:`PedestrianNode Creator <pedestrianNodeCreator>`, :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
 | **Move lights** : on/off moving of :ref:`subscene <trafficLightObject>`.
 | **Move props** : on/off moving of :ref:`props <propsInfo>`.
 | **Move surface** : on/off moving of the selected physics surface.

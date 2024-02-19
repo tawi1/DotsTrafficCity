@@ -9,12 +9,12 @@ Sound
 Installation
 ------------
 
-#. Download `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin from the `Asset Store`.
-#. `Sign up <https://www.fmod.com/profile/register>`_ & download `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_).
+#. Download the `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin from the `Asset Store`.
+#. `Sign up <https://www.fmod.com/profile/register>`_ & download the `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_).
 
 	.. image:: /images/sound/FMODstudio-download.png
 		
-#. Add `FMOD` scripting define to the project.
+#. Add the `FMOD` scripting define to the project.
 #. Open `FMOD` settings.
 
 	.. image:: /images/sound/FMOD-toolbar-settings.png
@@ -26,7 +26,7 @@ Installation
 How To Use
 ------------
 
-#. Open `FMOD studio` installed on your computer.
+#. Open `FMOD Studio` installed on your computer.
 
 	.. image:: /images/sound/FMOD-Studio-mainwindow.png
 	
@@ -34,8 +34,8 @@ How To Use
 
 	.. image:: /images/sound/FMOD-Studio-bankwindow.png
 	
-#. If you do not have an existing bank or need to set up a new one, right-click in the window and press `New Bank`.
-#. In the bookmark `Events` - create or open exist folder.
+#. If you do not have an existing bank or need to create a new one, right-click in the window and press `New Bank`.
+#. In the bookmark `Events` - Create or open exist folder.
 
 	.. image:: /images/sound/FMOD-Studio-eventswindow.png
 	
@@ -43,17 +43,17 @@ How To Use
 
 	.. image:: /images/sound/FMOD-Studio-NewEventExample.png
 	
-#. Right-click `Add Timeline Sheet` in the created event.
+#. Right-click on `Add Timeline Sheet` in the created event.
 
 	.. image:: /images/sound/FMOD-Studio-NewTimelineExample.png
 	.. image:: /images/sound/FMOD-Studio-NewTimelineExample2.png
 	
-#. Drag and drop the desired sound to the timeline.
+#. Drag and drop the desired sound into the timeline.
 
 	.. image:: /images/sound/FMOD-Studio-DragNDropTimelineExample.png
 	
 #. `Customize <https://www.fmod.com/docs/2.02/studio/authoring-events.html>`_  your sound.
-#. Assign selected `FMOD event` to the `Bank`.
+#. Assign the selected `FMOD event` to the `Bank`.
 
 	.. image:: /images/sound/FMOD-Studio-AssignToBankExample.png
 	
@@ -87,7 +87,7 @@ Contains data about the `FMOD` sound.
 How To Create
 ~~~~~~~~~~~~
 
-In project context menu select:
+Select from the project context menu:
 
 	`Spirit604/City/Sound/Sound Data`
 
@@ -220,10 +220,10 @@ How To Play
 How To Destroy
 ~~~~~~~~~~~~
 
-Add `PooledEventTag` component to the `sound` entity.
+Add the `PooledEventTag` component to the `sound` entity.
 
 How To Loop
 ~~~~~~~~~~~~
 
-#. Create :ref:`Sound entity <soundCodeHowToCreate>`.
-#. Add `LoopSoundData` component (assign `Duration` value).
+#. Create a :ref:`Sound entity <soundCodeHowToCreate>`.
+#. Add a `LoopSoundData` component (assign a `Duration` value).

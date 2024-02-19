@@ -12,7 +12,7 @@ Streaming
 Cullpoint Info
 -------------------
 
-The cull point is the point of origin for the surrounding entities (by default, it's a child of the camera). The :ref:`culling state <cullPointStates>` of the surrounding entities varies depending on the distance to the culling point (:ref:`example <cullPointExamples>`).
+The cull point is the origin for the surrounding entities (by default, it's a child of the camera). The :ref:`cull state <cullPointStates>` of the surrounding entities varies depending on the distance to the culling point (:ref:`example <cullPointExamples>`).
 You can change the distances in the :ref:`cull config <cullConfig>`.
 
 .. _cullPointStates:
@@ -21,8 +21,8 @@ States
 ~~~~~~~~~~~~
 
 * **Culled** : entity is far away (by default, the entity is destroyed or disabled).
-* **CloseToCamera** : entity enabled but with limited or modified functionality for better performance.
-* **InVisionOfCamera** : entity fully enabled.
+* **CloseToCamera** : entity is enabled but with limited or modified functionality for better performance.
+* **InVisionOfCamera** : entity is fully enabled.
 
 Scene Streaming
 -------------------
@@ -42,8 +42,8 @@ How To Adjust
 #. Enable streaming in the :ref:`Road Streaming Config <roadStreamingConfig>` to load road sections at the runtime.
 #. Adjust load/unload distance and section cell size.
 #. :ref:`TrafficNode <trafficNode>`, :ref:`PedestrianNode <pedestrianNode>`, :ref:`TrafficLightHandler <trafficLightHandler>` automatically attaches to related :ref:`RoadSegment <roadSegment>`.
-#. :ref:`Traffic lights <trafficLightObject>` has :ref:`SectionObjectAuthoring <sectionObject>` component.
-#. If you want to add your own section object, add :ref:`SectionObjectAuthoring <sectionObject>` component and select proper `Section object type`.
+#. :ref:`Traffic lights <trafficLightObject>` has a :ref:`SectionObjectAuthoring <sectionObject>` component.
+#. If you want to add your own section object, add the :ref:`SectionObjectAuthoring <sectionObject>` component and select the appropriate `Section object type`.
 #. :ref:`Debug streaming <sectionDebugger>` distance and section size.
 
 	.. image:: /images/other/RoadStreamingExample.png
@@ -57,37 +57,37 @@ Section Object Authoring
 	.. image:: /images/other/SectionObjectAuthoring.png
 	
 **Section object type:**
-	* **Attach to closest** : attach to closest road section.
-	* **Create new if nessesary** : create new road section if not exist with the current computed section hash.
-	* **Provider object** : object has a component that implements the `IProviderObject` interface, which provides a reference to the associated object section.
-	* **Custom object** : user's custom related object section.
+	* **Attach to closest** : attach to nearest road section.
+	* **Create new if nessesary** : create a new road section if doesn't exist with the currently computed section hash.
+	* **Provider object** : object has a component that implements the `IProviderObject` interface, that provides a reference to the associated object section.
+	* **Custom object** : user's own associated object section.
 	
-| **Include childs** :  all child objects are included in the section of the parent object.
+| **Include childs** : all child objects are included in the section of the parent object.
 
 .. _contentStreaming:
 
 Content Streaming
 ~~~~~~~~~~~~
 
-You can divide the scene content into chunks for partial loading at runtime.
+You can split the scene content into chunks for partial loading at runtime.
 
 `Youtube tutorial. <https://youtu.be/lTg24NdlM0E>`_
 
 How To Create
 """"""""""""""
 
-#. Create new empty `GameObject` and add :ref:`SubSceneCreator <subSceneCreator>` component. 
-#. Customize :ref:`chunk settings <subSceneCreatorChunkSettings>`.
-#. If necessary enable :ref:`post process settings <subSceneCreatorPostProcess>` **[optional step]**.
-#. Press `Create` button.
-#. Adjust :ref:`Streaming Level Config <streamingLevelConfig>` to load/unload subscenes at the runtime.
+#. Create a new empty `GameObject` and add the :ref:`SubSceneCreator <subSceneCreator>` component. 
+#. Adjust the :ref:`chunk settings <subSceneCreatorChunkSettings>`.
+#. If necessary, enable :ref:`post process settings <subSceneCreatorPostProcess>` **[optional step]**.
+#. Press the `Create` button.
+#. Adjust the :ref:`Streaming Level Config <streamingLevelConfig>` to load/unload subscenes at the runtime.
 
 .. _subSceneCreator:
 
 SubScene Chunk Creator
 ~~~~~~~~~~~~
 
-Content chunking tool to split the scene into chunks. Old objects remain and disabled in the old scene and are used to create duplicates in the chunk sub-scenes.
+Content chunking tool to split the scene into chunks. Old objects remain disabled in the old scene and are used to create duplicates in the chunk sub-scenes.
 
 	.. image:: /images/other/subSceneCreator.png
 	

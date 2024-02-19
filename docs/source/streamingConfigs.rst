@@ -15,7 +15,7 @@ Config of the :ref:`cull point <cullPointInfo>`.
 **Has cull:**
 	* **Max distance** : maximum distance to activate entities.
 	* **Visible distance** : distance to activate visual features of entities.
-| **Show debug** : on/off visual culling circle on the scene.
+| **Show debug** : on/off visual culling circle in the scene.
 	
 .. _roadStreamingConfig:
 

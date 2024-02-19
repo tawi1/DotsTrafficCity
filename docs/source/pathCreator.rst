@@ -8,18 +8,18 @@ Path Creator
 How To Use
 ------------
 
-#. Open tool in the Unity toolbar:
+#. Open the tool from the `Unity` toolbar:
 
 	`Spirit604/CityEditor/Window/Path Creator`
 	
 	.. image:: /images/road/trafficNode/pathCreator/OpenExample.png
 	
-#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` on the scene (:ref:`example <pathCreatorExamples>`).
+#. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` in the scene (:ref:`example <pathCreatorExamples>`).
 #. Customize new :ref:`path settings <pathCreatorPathSettings>`.
-#. Select desired `Connection Mode Type` (:ref:`connection settings <pathCreatorConnectionSettings>`).
-#. Customize `source` & `target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <pathCreatorExamples>`) (:ref:`connection settings <pathCreatorConnectionSettings>`).
-#. Click `Create` button.
-#. :ref:`Customize <pathCustomize>` created :ref:`paths <path>`.
+#. Select the desired `Connection Mode Type` (:ref:`connection settings <pathCreatorConnectionSettings>`).
+#. Customize `Source` & `Target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <pathCreatorExamples>`) (:ref:`connection settings <pathCreatorConnectionSettings>`).
+#. Click the `Create` button.
+#. :ref:`Customize <pathCustomize>` the created :ref:`paths <path>`.
 
 Settings
 ------------
@@ -47,7 +47,7 @@ Visual Settings
 
 	.. image:: /images/road/trafficNode/pathCreator/VisualSettings.png
 	
-**Show preview dotted line:** on/off connection line on the scene.
+**Show preview dotted line:** on/off connection line in the scene.
 	* **Show path direction** : on/off arrows of the connection line.
 	* **Arrow spacing** : arrow spacing.
 	

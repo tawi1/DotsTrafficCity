@@ -81,7 +81,9 @@ House
 
 Node for entry/exit to the house (:ref:`test scene <pedestrianHouseTest>`).
 
-	.. tip:: Pedestrians who have entered the house node are will be destroyed.
+	.. tip:: 
+		* Enable `Can spawn in view` in the pedestrian node :ref:`settings <pedestrianNodeSettings>` to simulate leaving from the house.
+		* Pedestrians who have entered the house node are will be destroyed.
 
 .. _pedestrianNodeIdle:
 
@@ -212,9 +214,9 @@ How To
 Create Node
 """"""""""""""
  
-#. Press `Tab` button on keyboard to create preview :ref:`PedestrianNode <pedestrianNode>`.
-#. Place preview :ref:`PedestrianNode <pedestrianNode>` where you want to be.
-#. Press `E` button on keyboard for the final creation of the :ref:`PedestrianNode <pedestrianNode>`.
+#. Press the `Tab` button on the keyboard to create preview :ref:`PedestrianNode <pedestrianNode>`.
+#. Place the preview :ref:`PedestrianNode <pedestrianNode>` at the desired position.
+#. Press `E` button on the keyboard to create the final :ref:`PedestrianNode <pedestrianNode>`.
 
 	.. tip:: You can change the :ref:`hotkeys <pedestrianNodeCreatorHotkeys>` to your taste.
 
@@ -224,20 +226,20 @@ Select Node
 """"""""""""""
 
 #. Choose :ref:`Selection mode <pedestrianNodeCreatorSelectionMode>`.
-#. Click `W` over the node to select :ref:`PedestrianNode <pedestrianNode>`.
+#. Click `W` above the node to select :ref:`PedestrianNode <pedestrianNode>`.
 
 Connect Node
 """"""""""""""
 
-#. :ref:`Select desired node <pedestrianNodeCreatorSelect>`.
+#. :ref:`Select the desired node <pedestrianNodeCreatorSelect>`.
 #. Click `E` over the target :ref:`PedestrianNode <pedestrianNode>` to connect (:ref:`Single selection mode <pedestrianNodeCreatorSelectionMode>` only).
 
 Locate Node
 """"""""""""""
 
 #. Choose :ref:`Selection mode <pedestrianNodeCreatorSelectionMode>`.
-#. :ref:`Select desired nodes <pedestrianNodeCreatorSelect>`.
-#. Move the position handle where you want it.
+#. :ref:`Select the desired nodes <pedestrianNodeCreatorSelect>`.
+#. Drag the position handle to the desired position.
 
 .. _pedestrianNodeCreatorSettings:
 

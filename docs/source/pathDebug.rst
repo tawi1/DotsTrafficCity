@@ -25,10 +25,10 @@ Settings
 	
 	.. image:: /images/debuggers/path/PathDebugger.png		
 	
-| **Draw editor traffic path** : on/off :ref:`path <path>` visualisation on the scene in `Editor`.
-**Draw entity traffic path** : on/off entity :ref:`path <path>` visualisation on the scene at runtime.
+| **Draw editor traffic path** : on/off :ref:`path <path>` visualisation in the scene in `Editor`.
+**Draw entity traffic path** : on/off entity :ref:`path <path>` visualisation in the scene at runtime.
 	* **Draw entity traffic node connection** : on/off draw :ref:`TrafficNode <trafficNode>` entity connection debug at runtime.
-**Draw pedestrian connection path** : on/off :ref:`PedestrianNode <pedestrianNode>` connection visualisation on the scene in the `Editor`.
+**Draw pedestrian connection path** : on/off :ref:`PedestrianNode <pedestrianNode>` connection visualisation in the scene in the `Editor`.
 	
 .. _pathDataViewer:
 
@@ -73,10 +73,10 @@ Settings
 	* **Arrow light** : shows the :ref:`paths <path>` with the assigned custom light.
 	* **Rail** : shows the :ref:`paths <path>` with the :ref:`rail <trafficRail>` parameter.
 	
-| **Draw custom colors** : on/off custom colors of the :ref:`paths <path>` on the scene.
+| **Draw custom colors** : on/off custom colors of the :ref:`paths <path>` in the scene.
 | **Show world buttons** : show world :ref:`path <path>` selection buttons.
-| **Show intersect point** : on/off visual :ref:`intersection points <pathIntersects>` on the scene.
-| **Show waypoints** : on/off :ref:`waypoints <pathWaypointInfo>` of the :ref:`path <path>` on the scene.
+| **Show intersect point** : on/off visual :ref:`intersection points <pathIntersects>` in the scene.
+| **Show waypoints** : on/off :ref:`waypoints <pathWaypointInfo>` of the :ref:`path <path>` in the scene.
 | **Show path handles** : on/off :ref:`path <path>` position handles of the selected path.
 | **Show path edit buttons** : on/off :ref:`path <path>` edit buttons of the selected path.
 | **Multiple selection** : on/off feature to select multiple :ref:`paths <path>` at the same time (useful for setting the same value for multiple :ref:`paths <path>`).

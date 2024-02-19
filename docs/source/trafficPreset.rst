@@ -4,7 +4,7 @@ Presets
 =====
 
 * Preset contain prefabs that are converted to entities.
-* There are multiple :ref:`Entity type <entityType>`. 
+* There are several :ref:`Entity type <entityType>`. 
 * The preset for conversion is selected from the :ref:`Entity type <entityType>` in the :ref:`Traffic Settings <trafficCarSettings>`.
 
 	.. warning::
@@ -18,7 +18,7 @@ Presets can only be created by using the :ref:`Car Prefab Creator <carPrefabCrea
 Where To Find
 ----------------
 
-You can find on the scene here:
+You can find in the scene here:
 
 	.. image:: /images/entities/trafficCar/preset/PresetHolderExample.png
 	

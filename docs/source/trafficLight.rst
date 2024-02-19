@@ -21,13 +21,13 @@ How To Customize City Crossroads
 
 	.. image:: /images/road/trafficLight/GlobalLightViewExample1.png
 	
-#. You can now quickly see and adjust the timelines of all the crossroads.
-#. Enable :ref:`Show disabled lights <trafficLightGlobalLightCommonSettings>` to see crossroads with traffic lights off.
+#. You can now quickly view and adjust the timelines of all the crossroads.
+#. Enable :ref:`Show disabled Lights <trafficLightGlobalLightCommonSettings>` to see crossroads with traffic lights switched off.
 
 	.. image:: /images/road/trafficLight/GlobalLightViewExample2.png
 	
 #. Select the desired crossroad and press `Select`.
-#. Now in the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component you can adjust timings.
+#. In the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component, you can now set the timings.
 
 How To Assign Light
 ------------
@@ -37,14 +37,14 @@ How To Assign Light
 
 	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
-#. Select :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>` for example :ref:`traffic node <trafficNode>`.
+#. Select :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>` for example :ref:`Traffic node <trafficNode>`.
 
 	.. image:: /images/road/trafficLight/GlobalLightViewTrafficNodeConnection.png
 	
 #. Select :ref:`H0 <trafficLightGlobalLightObjectDescription>` or :ref:`H1 <trafficLightGlobalLightObjectDescription>` depending on the desired light index.
-#. Next, select desired :ref:`T <trafficLightGlobalLightObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
+#. Next, select the desired :ref:`T <trafficLightGlobalLightObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
 #. Now, the selected :ref:`TrafficNode <trafficNode>` will have the selected  :ref:`TrafficLightHandler <trafficLightHandler>`.
-#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
+#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing the :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
 
 	.. image:: /images/road/trafficLight/GlobalLightViewPedestrianConnection.png
 	`Pedestrian node connection example.`
@@ -57,7 +57,7 @@ How To Assign Light
 Global Lights Settings 
 ------------
 
-Window for quick display of crossroad timings and for connecting the traffic lights to different entities.
+Window for quick display of crossroad timings and for linking the traffic lights to different entities.
 
 How To Use
 ~~~~~~~~~~~~
@@ -75,8 +75,8 @@ Common Settings
 ~~~~~~~~~~~~
 
 | **Focus on select** : move the `SceneView` camera to the selected traffic light crossroad when you select.
-| **Show world info** : show enabled traffic light data on the scene (:ref:`example <trafficLightSceneInfo>`).
-| **Show disabled lights** : show all traffic light data (include disabled) on the scene (:ref:`example <trafficLightSceneInfo2>`).
+| **Show world info** : show enabled traffic light data in the scene (:ref:`example <trafficLightSceneInfo>`).
+| **Show disabled lights** : show all traffic light data (include disabled) in the scene (:ref:`example <trafficLightSceneInfo2>`).
 
 .. _trafficLightSceneInfo:
 
@@ -95,7 +95,7 @@ Connection Settings
 
 	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
-| **Show light connections** : on/off light connections on the scene.
+| **Show light connections** : on/off light connections in the scene.
 | **Auto unselect handler** : auto unselect :ref:`TrafficLightHandler <trafficLightHandler>` when connecting :ref:`TrafficLightHandler <trafficLightHandler>` traffic lights to any object.
 | **Allow override light index** : allow index traffic light overrides in traffic :ref:`light objects <trafficLightObject>`.
 | **Reparent light** : traffic :ref:`light object <trafficLightObject>` will be a child of the connected crossroad.
@@ -148,17 +148,17 @@ How To Replace Global Light States
 
 	.. image:: /images/road/trafficLight/replaceShared0.png
 	
-#. Select the source :ref:`state container <sharedLightStates>` you want to replace.
+#. Select the source :ref:`state container <sharedLightStates>` you wish to replace.
 
 
 	.. image:: /images/road/trafficLight/replaceShared1.png
 	
-#. Select your new desired :ref:`state container <sharedLightStates>`.
+#. Select your new desired :ref:`State container <sharedLightStates>`.
 	
 	.. image:: /images/road/trafficLight/replaceShared2.png
 	
-#. Click `Replace` button.
-#. As a result, all the source :ref:`state container <sharedLightStates>` are replaced.
+#. Click the `Replace` button.
+#. As a result, all the source :ref:`State containers <sharedLightStates>` are replaced.
 
 	.. image:: /images/road/trafficLight/replaceShared3.png
 
@@ -167,12 +167,12 @@ How To Replace Global Light States
 Shared Light State Container
 ------------
 
-Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared container using the :ref:`Global Light Settings <sharedLightStateReplace>` tool.
+Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared containers using the :ref:`Global Light Settings <sharedLightStateReplace>` tool.
 
 How To Create
 ~~~~~~~~~~~~
 
-In the project context menu:
+from the project context :
 
 	.. image:: /images/road/trafficLight/sharedLightStatesPath.png
 	
@@ -240,7 +240,7 @@ Traffic Light Object
 Main Component
 ~~~~~~~~~~~~ 
 
-Traffic light object on the scene.
+Traffic light object in the scene.
 
 Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light indexes <trafficLightIndex>`.
 
@@ -263,4 +263,4 @@ Contains data on traffic light indicators.
 | **Yellow light** : yellow light :ref:`state <trafficLightState>` entity.
 | **Green light** : green light :ref:`state <trafficLightState>` entity.
 | **Initial light index** : initial :ref:`light index <trafficLightIndex>`.
-| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed on the scene.
+| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed in the scene.

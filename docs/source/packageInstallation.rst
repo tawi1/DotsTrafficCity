@@ -22,12 +22,12 @@ Minimum **Unity** version:
 Limitations
 ============
 
-* The project overwrites the settings, be sure to make a project backup before using tool.
+* The project overwrites the settings, so be sure to make a project backup before using the tool.
 * :ref:`Roads <road>` can only be modified in the `Editor`.
 * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space currently not available (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
-* `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles calculated only with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
-* Currently :ref:`ragdoll <pedestrianRagdoll>` supported only with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
+* `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles only calculated with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
+* :ref:`Ragdoll <pedestrianRagdoll>` currently only supported with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
 
 Package Installation
 ============
@@ -37,13 +37,13 @@ Package Installation
 Steps
 ------------
 
-#. Download & import from unity asset store.
+#. Download & import from the `Unity Asset Store`.
 
-#. First time initialization window will appear automatically or you can open it manually in toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
+#. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
 	.. image:: /images/gettingstarted/InitilizationWindow.png
 
-#. Click `Load Packages` to start download packages required for this tool.
+#. Click `Load Packages` to start downloading the packages required for this tool.
 
 	.. note::
 		**Required custom packages:**
@@ -56,13 +56,14 @@ Steps
 			* **UNITY_PHYSICS_CUSTOM**
 			
 	.. warning::
-		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
+		* If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
+		* 'nunit.framework.dll' could not be found, read :ref:`this <nunitFix>`.
 			
 #. Restart the `Unity` project after all the packages have been downloaded.
 			
 	.. _packageInstallationOptional:
 	
-#. Click `Load Optional Packages` to start download optional packages.
+#. Click `Load Optional Packages` to start downloading the optional packages.
 
 	.. note::
 		**Optional packages:**
@@ -85,6 +86,6 @@ Steps
 		**Script define symbols required for the project:**
 			* **FMOD**
 			
-#. After that, press `Add Scripting Define` button.
+#. After that, press the `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
 #. Next step is :ref:`setting up the scene <cityCreation>`.

@@ -8,7 +8,7 @@ Car Prefab Creator
 How To Use
 ----------------
 
-#. In the Unity toolbar, open `Car Prefab Creator`.
+#. from the `Unity` toolbar, open `Car Prefab Creator`.
 
 	``Spirit604/CityEditor/Car Prefab Creator``
 	
@@ -94,7 +94,7 @@ Save Settings
 	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
 **Save to exist preset:** 
-	* **Scene**: add the created prefabs to an existing :ref:`preset <trafficPreset>` on the scene.
+	* **Scene**: add the created prefabs to an existing :ref:`preset <trafficPreset>` in the scene.
 	* **Selected**: add the created prefabs to selected :ref:`preset <trafficPreset>`.
 
 **New preset settings:**

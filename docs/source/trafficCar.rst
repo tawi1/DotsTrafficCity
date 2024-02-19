@@ -9,12 +9,12 @@ Traffic Car
 How To Create
 ----------------
 
-#. Create vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type).
+#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type).
 
 	.. image:: /images/entities/trafficCar/howTo/Step1.png
 	:ref:`Car Prefab Creator <carPrefabCreator>` final step example.
 	
-#. Make sure, that the :ref:`vehicle collection <vehicleCollection>` contains the created vehicle.
+#. Make sure, that the :ref:`vehicle collection <vehicleCollection>` contains vehicle you have created.
 
 	.. image:: /images/entities/trafficCar/howTo/Step2.png
 	
@@ -22,19 +22,19 @@ How To Create
 
 	.. image:: /images/entities/trafficCar/howTo/Step3.png
 
-#. Open :ref:`Traffic settings <trafficCarSettings>` and select :ref:`Simple physics entity <entityType>` type (if you created `Simple physics entity`).
+#. Open the :ref:`Traffic settings <trafficCarSettings>` and select the :ref:`Simple physics entity <entityType>` type (if you have created a `Simple physics entity`).
 
 	.. image:: /images/entities/trafficCar/howTo/Step4.png
 	
-#. Open :ref:`Hub <roadEntitySubscene>` object on the scene and press `Copy To Subscene` button.
+#. Open the :ref:`Hub <roadEntitySubscene>` object in the scene and press the `Copy To Subscene` button.
 
 	.. image:: /images/entities/trafficCar/howTo/Step5.png
 	
-#. Open `EntitySubScene`, find `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 	
-#. Adjust traffic settings of the created vehicles.
+#. Adjust the traffic settings of the created vehicles.
 	* For :ref:`simple physics <trafficCarSettings>`.
 	* For :ref:`custom physics <customPhysicsVehicle>`. 
 
@@ -48,8 +48,8 @@ Vehicle Physics Types
 Custom Physics
 ~~~~~~~~~~~~
 
-* Entities moved by the custom physical system.
-* :ref:`Hybrid entity custom physics <entityType>` & :ref:`Pure entity custom physics <entityType>` types refer to this.
+* Entities that are moved by the custom physical system.
+* :ref:`Hybrid Entity Custom Physics <entityType>` & :ref:`Pure Entity Custom Physics <entityType>` types refer to this.
 * `Youtube tutorial. <https://youtu.be/uxKg2lklHaw>`_
 
 Authoring components
@@ -191,7 +191,7 @@ PhysicsShape
 Simple Physics
 ~~~~~~~~~~~~
 
-* Entities moved by the simple physical system (simply adding physics velocity to the physics body).
+* Entities moved by the simple physical system (by simply adding the physics velocity to the physics body).
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Hybrid entity simple physics <entityType>` & :ref:`Pure entity simple physics <entityType>` types refer to this.
 
@@ -308,7 +308,7 @@ Entering parking states
 ~~~~~~~~~~~~
 
 #. The car has chosen the path containing the :ref:`parking node <trafficNode>`.
-#. The car links the :ref:`parking node <trafficNode>` to prevent it being selected by other cars (list of linked node can be customized :ref:`here <trafficRoadConfig>`).
+#. The car links the :ref:`parking node <trafficNode>` to prevent it from being selected by other cars (the list of linked nodes can be customized :ref:`here <trafficRoadConfig>`).
 #. When the car reaches the :ref:`parking node <trafficNode>`, the car position correction is activated for precise parking (if disabled in the :ref:`parking config <trafficCarParkingConfig>`, this step is skipped).
 #. Stopping the engine state is starting (if enabled in the :ref:`stopping engine config <carStoppingConfig>` & vehicle in view of camera's player).
 #. Pedestrian gets out of the car.
@@ -316,20 +316,20 @@ Entering parking states
 Exiting parking states
 ~~~~~~~~~~~~
 
-#. The Pedestrian enters :ref:`pedestrian parking node <pedestrianNode>`, if available.
+#. The Pedestrian enters the :ref:`pedestrian parking node <pedestrianNode>`, if available.
 #. The parking car removes link with :ref:`TrafficNode <trafficNode>`.
-#. Ignition state system begins (if enabled in :ref:`ignition config <carIgnitionConfig>`).
-#. Once the car has started the engine, the car will start to move.
+#. Ignition state system starts (if enabled in :ref:`ignition config <carIgnitionConfig>`).
+#. Once the car has started the engine, the car starts moving.
 
 .. _trafficAvoidance:
 
 Avoidance
 ----------------
 
-| Avoidance is used in case of stuck vehicles.
+| Avoidance is used in the case of stuck vehicles.
 Currently enabled in the following situations:
-	* Cyclical obstacle of cars getting stuck in each other (:ref:`avoidance config <trafficAvoidanceConfig>`).
-	* A car collided frontally with another car (:ref:`collision config <trafficCollisionConfig>`).
+	* A cyclical obstacle where cars get stuck in each other (:ref:`avoidance config <trafficAvoidanceConfig>`).
+	* A car has collided frontally with another car (:ref:`collision config <trafficCollisionConfig>`).
 	
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample1.png
 	`Cyclical obstacle example.`
@@ -346,7 +346,7 @@ Rail Movement
 
 The `Rail movement` is used to drive the vehicle precisely along the :ref:`path <path>`, which can be useful in small enclosed :ref:`parking areas <path>`, for example.
 To enable rail movement, tick on the `Rail` parameter in the :ref:`path settings <pathSettings>`.
-Open the :ref:`rail config <trafficRailConfig>` to adjust `Rail` parameters.
+Open the :ref:`rail config <trafficRailConfig>` to adjust the `Rail` parameters.
 
 	.. note:: Enabled by default for :ref:`trams <trafficPublicType>`.
 

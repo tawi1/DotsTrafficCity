@@ -20,7 +20,7 @@ Displays the :ref:`cull point <cullPointInfo>` radius (:ref:`example <cullPointE
 CullState Object Debugger
 ------------
 
-Displays the :ref:`cull state <cullPointStates>` of objects on the scene (:ref:`example <cullPointExamples>`).
+Displays the :ref:`cull state <cullPointStates>` of objects in the scene (:ref:`example <cullPointExamples>`).
 
 	.. image:: /images/debuggers/other/CullStateObjectDebugger.png	
 
@@ -40,7 +40,7 @@ Displays the size and position of the hashmap cell (can be useful when choosing 
 	.. image:: /images/debuggers/other/HashmapGridDebugger.png	
 
 | **Enable debug** : on/off debugger.
-| **Line color** : colour line on the scene.
+| **Line color** : colour line in the scene.
 | **Cell size** : grid cell size.
 | **X size** : X grid size.
 | **Y size** : Y grid size.

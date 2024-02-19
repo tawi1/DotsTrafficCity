@@ -3,7 +3,7 @@
 Traffic Node
 =====
 
-`Traffic node is a set of traffic node entities that are connected to other traffic node entities by` :ref:`path <path>`
+`Traffic node is a set of traffic node entities that are connected to other traffic node entities by a `:ref:`path <path>`
 
 .. _trafficNodeSettings:
 
@@ -111,7 +111,7 @@ Leftside lanes (external lanes) connect :ref:`TrafficNodes <trafficNode>` in ext
 	
 .. _trafficNodeLeftDirectionInfo:
 
-	.. warning:: Intersected `External paths` should be replaced by a separate :ref:`segment <roadSegment>` to :ref:`bake the intersection of the paths <roadSegmentBakingInfo>`.
+	.. warning:: Intersecting `External paths` should be replaced by a separate :ref:`segment <roadSegment>` to :ref:`bake the intersection of the paths <roadSegmentBakingInfo>`.
 	
 .. _trafficNodeRotation:
 
@@ -123,7 +123,7 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 	.. image:: /images/road/trafficNode/TrafficNodeDirectionExample.png
 
 **Example description:**
-	* Arrow represents the forward rotation of the :ref:`node <trafficNode>`.
+	* The arrow represents the forward rotation of the :ref:`node <trafficNode>`.
 	* Purple arrows the direction of the outer :ref:`nodes <trafficNode>` of the :ref:`segment <roadSegment>`.
 	* Blue arrows the direction of the internal :ref:`segment <roadSegment>` :ref:`oneway nodes <trafficNodeOneWay>`.
 
@@ -132,21 +132,21 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 Auto-path Connection
 ----------------
 
-* To quickly generate connections between :ref:`RoadSegments <roadSegment>` on the same line is used auto-path connection. 
+* To quickly create connections between :ref:`RoadSegments <roadSegment>` on the same line, the `Auto-Path` connection is used. 
 * If the :ref:`segments <roadSegment>` are not on the same line you should to create another :ref:`Custom straight road segment <roadSegmentCreatorCustomStraight>` or :ref:`Custom segment <roadSegmentCreatorCustomSegment>` between them and do the same connection.
-* Also you can manually create paths between :ref:`segments <roadSegment>` with :ref:`PathCreator tool <pathCreator>`.
+* You can also manually create paths between :ref:`segments <roadSegment>` using the :ref:`PathCreator tool <pathCreator>`.
 
 How To Use
 ~~~~~~~~~~~~ 
 
 * To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParentInfo>` by pressing `Connect` button. 
-* Every time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
+* Each time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
 
 .. _trafficNodeCollider:
 
 	.. note:: 
 		* To prevent auto-path connection for the selected :ref:`TrafficNode <trafficNode>` enable **Lock path auto creation** in the :ref:`settings <trafficNodeSettings>` of the node.
-		* Every :ref:`TrafficNode <trafficNode>` has a `box collider` that is size calculated based on the number of lanes, their width, and the type of lanes (:ref:`oneway <trafficNodeOneWay>` or not).
+		* Each :ref:`TrafficNode <trafficNode>` has a `box collider` whose is size calculated based on the number of lanes, their width, and the type of lanes (:ref:`one-way <trafficNodeOneWay>` or not).
 		* Make sure that the :ref:`direction of the node <trafficNodeRotation>` is set correctly.
 		
 .. _trafficNodeConnectionExample:

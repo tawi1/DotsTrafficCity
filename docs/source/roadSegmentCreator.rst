@@ -15,8 +15,8 @@ How To Use
 
 `Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
-#. Create :ref:`RoadSegment<roadSegment>`.
-#. Set the segment to the desired position.
+#. Create a :ref:`RoadSegment<roadSegment>`.
+#. Place the segment at the desired position.
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
 #. Select :ref:`Road segment type <roadSegmentCreatorGeneralSettings>`.
 
@@ -107,7 +107,7 @@ Merge Crossroad To Oneway Road
 | **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
 | **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
 | **SubTrafficNode distance from center** : :ref:`info <roadSegmentCreatorId3>`.
-| **Is enter of oneway** : if it is on, it is the beginning of one-way traffic, if it is off, it is the end of one-way traffic.
+| **Is enter of oneway** : if it is on, it is the start of one-way traffic, if it is off, it is the end of one-way traffic.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
 	`Example`.
@@ -153,12 +153,12 @@ How To Use
 """"""""""""""
 
 #. Place the custom  straight segment where you want it.
-#. Place the :ref:`traffic nodes <trafficNode>` where the beginning and the end of the path (or expand the road by holding `left-shift` key and pressing `left-mouse` button).
+#. Place the :ref:`traffic nodes <trafficNode>` at the start and the end of the path (or expand the road by holding `left-shift` key and clicking the `left-mouse` button).
 #. Rotate the :ref:`TrafficNodes <trafficNode>` in the direction of the route (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
-#. Customize the number of lanes and speed limit of segment.
-#. Add additional nodes to the paths if necessary (by pressing `+` on the scene) **[optional step]**.
-#. Rotate the nodes of paths according to the direction of the path **[optional step]**.
-#. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to surface by pressing `Snap To Surface` button if required **[optional step]**.
+#. Adjust the number of lanes and the speed limit of the segment.
+#. If necessary, add more additional nodes to the paths (by pressing `+` in the scene) **[optional step]**.
+#. Rotate the nodes of the paths according to the direction of the path **[optional step]**.
+#. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the `Snap To Surface` button if necessary **[optional step]**.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 Custom Settings
@@ -230,10 +230,10 @@ How To Use
 
 #. Place the custom segment where you want it.
 #. Toggle on :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
-#. Select `New node settings type` & create new :ref:`TrafficNode <trafficNode>` by pressing `Add Traffic Node` button **[optional step]**.
+#. Select the `New node settings type` & create a new :ref:`TrafficNode <trafficNode>` by pressing the `Add Traffic Node` button **[optional step]**.
 #. :ref:`Place <roadSegmentCreatorCustomSnapNodeSettings>` & rotate all created :ref:`TrafficNode <trafficNode>` according to your needs (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
-#. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to surface by pressing `Snap To Surface` button if required **[optional step]**.
-#. Open :ref:`PathCreator tool <pathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
+#. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the `Snap To Surface` button if required **[optional step]**.
+#. Open the :ref:`PathCreator tool <pathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 New Node Settings
@@ -402,7 +402,7 @@ Light settings
 Traffic lights
 """"""""""""""
 
-| **Show light indexes** : on/off display light :ref:`TrafficLightHandler <trafficLightHandler>` index around :ref:`traffic nodes <trafficNode>` and traffic lights on the scene.
+| **Show light indexes** : on/off display light :ref:`TrafficLightHandler <trafficLightHandler>` index around :ref:`traffic nodes <trafficNode>` and traffic lights in the scene.
 | **Min TrafficNodes count for add light** : minimum number of :ref:`traffic nodes <trafficNode>` in the segment to add traffic light.
 | **Add traffic light** : add traffic light to the segment.
 
@@ -440,7 +440,7 @@ Node selection panel
 
 **How to customize path:**
 	#. Select `TrafficNode` on the inspector panel.
-	#. Select desired :ref:`path <path>` on the inspector panel (it will be highlighted on the scene).
+	#. Select desired :ref:`path <path>` on the inspector panel (it will be highlighted in the scene).
 	#. Adjust the position of the path nodes (make sure :ref:`path handles <roadSegmentCreatorPathSceneSettings>` is enabled).
 	#. Press `Open Path Settings` button to customize :ref:`Path settings window<pathSettingsWindow>`.
 	
@@ -463,9 +463,9 @@ Road settings
 Scene settings
 """"""""""""""
 
-**Show path handles** : on/off position handles on the scene.
-	* **Show edit buttons path nodes** : on/off `add` & `remove` buttons nodes on the scene.
-**Show waypoints** : on/off visual circle position of the waypoint on the scene.
+**Show path handles** : on/off position handles in the scene.
+	* **Show edit buttons path nodes** : on/off `add` & `remove` buttons nodes in the scene.
+**Show waypoints** : on/off visual circle position of the waypoint in the scene.
 	* **Show waypoints info** : on/off info of waypoints (local index, speedlimit).
 
 Turn connection settings
@@ -538,15 +538,15 @@ How To Use
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample1.png
 		
-#. Position parking pointer where the line will start.
+#. Position the parking pointer where you want the line to start.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment2.png
 	
-#. Enable rotation handle and set the rotation of parking slot by dragging circle on the scene.
+#. Enable rotation handle and set the rotation of the parking slot by dragging a circle in the scene.
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample2.png
 	
-#. Set the object parking line to `parking line` and rotate the direction of parking line by dragging circle on the scene.
+#. Set the object parking line to `parking line` and rotate the direction of the parking line by dragging a circle in the scene.
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample3.png
 	
@@ -556,24 +556,24 @@ How To Use
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment3.png
 	
-#. Open :ref:`Path <roadSegmentCreatorParkingBuilderPath>` tab.
+#. Open the :ref:`Path <roadSegmentCreatorParkingBuilderPath>` tab.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentPathTab.png
 	
 #. Toggle on `Show select path buttons` option.
-#. Select the source path on the scene.
+#. Select the source path in the scene.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment4.png
 
-#. Select `Enter` tab and press `Create` button.
+#. Select the `Enter` tab and press the `Create` button.
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings2.png
 	
-#. In the created path create additional waypoint nodes by pressing `+` on the scene.
+#. In the created path create additional waypoint nodes by pressing `+` in the scene.
 	
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png
 	
-#. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node clone count <roadSegmentCreatorParkingBuilderPath>` parameters.
+#. Customize :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node Clone Count <roadSegmentCreatorParkingBuilderPath>` parameters.
 
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
 	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png

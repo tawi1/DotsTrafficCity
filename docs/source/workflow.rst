@@ -13,7 +13,7 @@ Any change of road can take a while if it is done in a :ref:`subscene <subscene>
 Steps
 ~~~~~~~~~~~~
 
-#. Open the :ref:`Hub <hub>` on the scene.
+#. Open the :ref:`Hub <hub>` in the scene.
 #. Select the :ref:`Entity Subscene Generator <subsceneGenerator>`.
 #. Click `Move Back` button to move road from subscene to main scene.
 #. Make any change in the road.
@@ -35,8 +35,8 @@ Main Scene Editing
 Steps
 """"""""""""""
 
-#. Select :ref:`Hub <hub>` on the scene.
-#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press `Copy To Subscene` button.
+#. Select :ref:`Hub <hub>` in the scene.
+#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button.
 	
 	.. image:: /images/road/installation/Hub.png
 	

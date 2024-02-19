@@ -133,7 +133,7 @@ Common Sound Config
 Crowd Sound Config
 ~~~~~~~~~~~~
 
-Сonfig for crowd background sound. The sound of the crowd is calculated on the basis of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
+Сonfig for crowd background sound. The sound of the crowd is calculated based on of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
 
 	.. image:: /images/configs/common/CrowdSoundConfig.png
 	

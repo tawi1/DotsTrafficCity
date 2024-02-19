@@ -10,7 +10,7 @@ Road Segment
 How To Create
 ------------
 
-Select in the unity toolbar:
+Select from the `Unity` toolbar:
 
 	.. image:: /images/road/installation/RoadSegmentCreation.png
 	
@@ -36,7 +36,7 @@ Variables
 
 | **Road segment placer** : reference to :ref:`RoadSegmentPlacer<roadSegmentPlacer>`.
 | **Short title name** : short name for `RoadSegmentPlacer`.
-| **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExample>` on the scene.
+| **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExample>` in the scene.
 	
 Buttons
 """"""""""""""
@@ -80,23 +80,23 @@ Timeline custom
 		
 **How to add states:**
 	#. Enable `custom settings`.
-	#. Select desired :ref:`TrafficLightHandler <trafficLightHandler>`.
-	#. Press `+` button.
+	#. Select the desired :ref:`TrafficLightHandler <trafficLightHandler>`.
+	#. Press the `+` button.
 	#. Add desired :ref:`states <trafficLightState>`.
-	#. Enter duration of the :ref:`state <trafficLightState>`.
+	#. Enter the duration of the :ref:`state <trafficLightState>`.
 		
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimeline.png
 	
-After you have set up 1 `TrafficLightHandler`, it can be looped to the 2nd :ref:`TrafficLightHandler <trafficLightHandler>`.
+Once you have set up 1 `TrafficLightHandler`, you can loop to the 2nd :ref:`TrafficLightHandler <trafficLightHandler>`.
 	
 **How to loop timeline:**
-	#. Select the :ref:`TrafficLightHandler <trafficLightHandler>` that should be looped.
-	#. Enter `Source Data Handler Index` parameter based on which to loop.
+	#. Select the :ref:`TrafficLightHandler <trafficLightHandler>` to be looped.
+	#. Enter the `Source Data Handler Index` parameter based on which to loop.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample1.png
 		`Settings example.`
 		
-	#. Click `Loop Time`.
+	#. Click the `Loop Time` button.
 	
 **Loop result:**
 
@@ -110,25 +110,25 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 **How to create arrows:**
 	#. Click `Show Custom Arrow Light Setup`.
 	#. Select `Custom Related Light Index`.
-	#. Select related :ref:`TrafficNode <trafficNode>` in the toolbar.
+	#. Select related :ref:`TrafficNode <trafficNode>` from the toolbar.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample.png
 			
-	#. Select related :ref:`path <path>` in the toolbar.
+	#. Select related :ref:`path <path>` from the toolbar.
 	
 		.. image:: /images/road/roadSegment/TrafficLightCrossroadLightArrowSettingsExample2.png
 		`Selected path example.`
 		
-	#. Click `Add Custom Light` button.
+	#. Click the `Add Custom Light` button.
 	
-	.. note:: To remove the light arrow, select appropriate `TrafficNode` and `path` and press `Remove Selected Path` button.
+	.. note:: To remove the light arrow, select the appropriate `TrafficNode` and `Path` and press the `Remove Selected Path` button.
 
 .. _roadSegmentBakingInfo:
 
 Baking info
 ------------
 
-The intersection of :ref:`paths <pathBakingInfo>` is baked only in those :ref:`paths <pathBakingInfo>` that are in the segment. How to :ref:`bake <bakingInfo>`.
+The intersection of :ref:`paths <pathBakingInfo>` is only baked in those :ref:`paths <pathBakingInfo>` that are in the segment. How to :ref:`bake <bakingInfo>`.
 
 .. _roadSegmentIntersectionExample:
 

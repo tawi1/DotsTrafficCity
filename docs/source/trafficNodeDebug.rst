@@ -38,7 +38,7 @@ Settings
 | **Full labels** : show full setting labels.
 | **Show only on cursor** : show node traffic data only when the cursor is hovering.
 | **Custom param filter** : node filtering by selected parameters.
-| **Show select buttons** : on/off select buttons on the scene.
+| **Show select buttons** : on/off select buttons in the scene.
 | **Selected node** : :ref:`settings <trafficNodeSettings>` for the selected :ref:`traffic node <trafficNodeSettings>` (here you can quickly tweak the settings).
 
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDataViewerExample1.png		

@@ -12,23 +12,23 @@ Animation Baker
 How To Bake
 ------------
 
-	#. Open baker in the unity toolbar.
+	#. Open `Baker` from the `Unity` toolbar.
 	
 		``Spirit604/Animation Baker``
 		
 	#. Customize texture :ref:`settings <animationBakerSettings>`.
-	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians to `skins` :ref:`field <animationBakedSourceData>`.
-	#. Drag & drop selected animations of pedestrians to `clips` :ref:`field <animationBakedSourceData>`.
+	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians into `Skins` :ref:`field <animationBakedSourceData>`.
+	#. Drag & drop selected animations of pedestrians into the `Clips` :ref:`field <animationBakedSourceData>`.
 	
 		.. image:: /images/pedestrian/baker/window/SourceDataExample.png
 		`Drag & drop example.`
 		
-	#. Press `Create new` button.
+	#. Press the `Create new` button.
 	
 		.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 		`Multiple animation result example.`
 		
-	#. Check the created `Animation Texture Data` result in the tab :ref:`Animation Texture Data <animationBakedAnimationData>`.
+	#. In the tab :ref:`Animation Texture Data <animationBakedAnimationData>` tab, check the `Animation Texture Data` result.
 	
 		.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
 		`AnimationData result example.`
@@ -139,10 +139,10 @@ Animation Texture Data
 How To Replace
 """"""""""""""
 
-	#. Drag & drop target character prefab to the scene.
-	#. Drag & drop `SkinnedMeshRenderer` of the target character from the scene to `Sampling skin` field.
-	#. Drag & drop new animation clip to `New anim` field.
-	#. Press `Replace` button.
+	#. Drag & drop the target character's `Prefab` into the scene.
+	#. Drag & drop `SkinnedMeshRenderer` of the target character from the scene into the `Sampling Skin` field.
+	#. Drag & drop the new animation clip into the `New anim` field.
+	#. Press the `Replace` button.
 	
 	.. image:: /images/pedestrian/baker/window/AnimationDataReplaceExample.png
 	`Replace example.`
@@ -151,7 +151,7 @@ How To Replace
 Crowd GPU Animator
 ------------
 
-Crowd GPU Animator is used for transitions between GPU animations.
+The `Crowd GPU Animator` is used for transitions between GPU animations.
 	
 How To
 ~~~~~~~~~~~~
@@ -159,7 +159,7 @@ How To
 Open
 """"""""""""""
 
-Open on the scene `CrowdGPUAnimatorAuthoring`.
+Open in the scene `CrowdGPUAnimatorAuthoring`.
 
 	``Hub/Configs/BakerRefs/Settings/CrowdGPUAnimatorAuthoring``
 		
@@ -169,7 +169,7 @@ Initial Set Up
 """"""""""""""
 
 **Steps:**
-	#. Create :ref:`Animator Data Container <animationGPUAnimatorContainer>` in the project context menu and assign to custom animator (if necessary).
+	#. Create an :ref:`Animator Data Container <animationGPUAnimatorContainer>` from the project context  and assign it to the custom animator (if necessary).
 	#. Create (if necessary) and assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
 
 	.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
@@ -177,7 +177,7 @@ Initial Set Up
 Create Node
 """"""""""""""
 
-Right-click in the window and select the :ref:`desired node<animationBakerAnimatorNodeTypes>` in the context menu.
+Right-click in the window and select the :ref:`desired node<animationBakerAnimatorNodeTypes>` from the context menu.
 
 Create Transition
 """"""""""""""
@@ -185,16 +185,16 @@ Create Transition
 Transition is a sequential set of nodes StartNode-->AnimNode-->TransitionNode-->AnimNode-->TransitionNode-->AnimNode-->... (:ref:`example <animationBakerAnimatorTransitionExample>`).
 	
 **Steps:**
-	#. Create :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
+	#. Create a :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if required).
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
-	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
+	#. Create and connect :ref:`AnimationNodes <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
 .. _animationBakerAnimatorNewTransitionLayer:
 
 Create Transition Layer
 """"""""""""""
 
-Press `+` button on the main toolbar at custom animator to create a new layer or press `-` to delete current selected layer.
+Press the `+` button on the main toolbar at custom animator to create a new layer, or press `-` to delete the currently selected layer.
 
 .. _animationBakerAnimatorNodeTypes:
 
@@ -243,10 +243,10 @@ Node with settings for switching between animations.
 	* **Default** : animations play sequentially one by one without interpolation.
 		.. image:: /images/pedestrian/baker/animator/TransitionNodeDefaultExample.png	
 		
-	* **To Start** : previous animation is interpolated to the beginning of the next animation with the set duration.
+	* **To Start** : the previous animation is interpolated to the beginning of the next animation with the set duration.
 		.. image:: /images/pedestrian/baker/animator/TransitionNodeToStartExample.png
 		
-	* **To Global Sync** : previous animation is interpolated to the global playback time of the next animation with the set duration.
+	* **To Global Sync** : the previous animation is interpolated to the global playback time of the next animation with the set duration.
 		.. image:: /images/pedestrian/baker/animator/TransitionNodeToGlobalSyncExample.png
 
 
@@ -271,7 +271,7 @@ Contains meta-data of existing animations for the pedestrians.
 How To Create
 ~~~~~~~~~~~~
 
-In the project context menu:
+from the project context :
 	
 	``Spirit604/Animation Baker/Animation Collection``
 
@@ -282,8 +282,8 @@ Settings
 
 
 | **Name** : animation name.
-**Unique animation** : unique animation mesh instance pool will be created for this animation.
-	* **Allow duplicate** : is it allowed to take an animation from the pool if it is already used by another character.
+**Unique animation** : a unique animation mesh instance pool will be created for this animation.
+	* **Allow duplicate** : is it allowed to take an animation from the pool if it is already being used by another character.
 	* **Instance count** : animation pool size.
 
 .. _animationGPUAnimatorContainer:

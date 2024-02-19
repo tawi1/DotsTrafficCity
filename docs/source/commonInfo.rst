@@ -14,8 +14,8 @@ Entities that combine `DOTS` entities and default `GameObjects` (game objects ar
 How To Create
 ~~~~~~~~~~~~
 
-#. Create prefab entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_.
-#. Add ``CopyTransformToGameObject`` component and add your custom init component to the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ process for initialization, pseudo code example:
+#. Create a prefab entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_.
+#. Add the ``CopyTransformToGameObject`` component and add your custom init component to the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ process for initialization, pseudocode example:
 
 	..  code-block:: r
 	
@@ -23,8 +23,8 @@ How To Create
 		{		  
 		}
 		
-#. Spawn prefab entity at runtime.
-#. Create your own init system to initialize your hybrid entity, pseudo code example:
+#. Spawn a prefab entity at runtime.
+#. Create your own init system to initialize your hybrid entity, pseudocode example:
 
 	..  code-block:: r
 	
@@ -76,14 +76,14 @@ How To Create
 			}		
 		}
 		
-	.. warning:: All code provided in the example is not part of `DOTS City` and is not for production.
+	.. warning:: All code provided in the example is not part of `DOTS City` and is not intended for production.
 
 .. _propsInfo:
 
 Props
 -------------------
 
-Props are active entities that have a reaction to damage.
+Props are active entities that react to damage.
 
 How To Use
 ~~~~~~~~~~~~
@@ -92,7 +92,7 @@ How To Use
 #. Add :ref:`Props Authoring <propsAuthoring>` component.
 #. Tick if necessary `Has Custom Prop Reset`.
 #. Make sure that :ref:`Props damage system support <propsDamageOption>` option is enabled.
-#. Use :ref:`test scene <propsTestScene>` to check that the props are working.
+#. Use a :ref:`test scene <propsTestScene>` to check that the props work.
 
 .. _propsAuthoring:
 

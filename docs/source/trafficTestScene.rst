@@ -8,14 +8,14 @@ How To Use
 
 `Youtube tutorial. <https://youtu.be/OtIERf2qEm0>`_
 	
-#. Create :ref:`road segment <roadSegmentCreator>`.
-#. Create parent `GameObject` and add :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` component.
-#. In the created component, press :ref:`Show buttons <testSceneTrafficCarRoadDebuggerSceneSettings>`.
-#. Select the paths on the scene where you want the vehicle to spawn.
+#. Create a :ref:`road segment <roadSegmentCreator>`.
+#. Create a parent `GameObject` and add the :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` component.
+#. In the created component, press the :ref:`Show buttons <testSceneTrafficCarRoadDebuggerSceneSettings>`.
+#. Select the in paths in the scene where you want the vehicle to spawn.
 #. Adjust the normalized :ref:`path <path>` position to set the spawn point.
 #. Start the scene.
-#. Click `Spawn` button in the component.
-#. Learn more about :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` settings.
+#. Click the `Spawn` button in the component.
+#. Learn more about the :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` settings.
 
 Test Cases
 ------------
@@ -198,8 +198,8 @@ Scene settings
 ~~~~~~~~~~~~
 	
 | **Vehicle data collection** : reference to :ref:`collection <vehicleCollection>` of all vehicles.
-| **Enable visual debug** : on/off visual debug on the scene.
-| **Show buttons** : show add :ref:`path <path>` button to the component on the scene.
+| **Enable visual debug** : on/off visual debug in the scene.
+| **Show buttons** : show add :ref:`path <path>` button to the component in the scene.
 | **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.
 	
 Spawn settings
@@ -221,7 +221,7 @@ Traffic spawn test entry
 | **Related trafficlight crossroad** : linked :ref:`trafficlight crossroad <trafficLightCrossroad>`.
 | **Path** : linked :ref:`path <path>` for the spawned cars.
 | **Highlight** : on/off highlight :ref:`path <path>`.
-| **Show info** : on/off visual info of spawned cars on the scene.
+| **Show info** : on/off visual info of spawned cars in the scene.
 | **Idle car** : on/off vehicle idle of the spawned vehicle.
 | **Normalized path position** : min approach speed.
 | **Spawn delay** : delayed vehicle spawn after test case spawn has started.

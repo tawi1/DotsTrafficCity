@@ -9,17 +9,17 @@ How To Use
 `Youtube tutorial. <https://youtu.be/uadbaQ4QV2A>`_
 
 #. Create :ref:`pedestrian nodes <pedestrianNodeCreator>` & connect them.
-#. Create parent `GameObject` and add :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` component.
-#. In the created component, press :ref:`Show scene buttons <pedestrianLocalSpawnerCommonSettings>`.
-#. Select the :ref:`pedestrian nodes <pedestrianNode>` on the scene where you want the pedestrians to spawn.
+#. Create a parent `GameObject` and add the :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` component.
+#. In the created component, press the :ref:`Show scene buttons <pedestrianLocalSpawnerCommonSettings>`.
+#. Select the :ref:`pedestrian nodes <pedestrianNode>` in the scene where you want the pedestrians to spawn.
 
 	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawnerExample.png
 	`Selection example.`
 	
 #. Adjust the :ref:`Spawn count <pedestrianLocalSpawnerCommonSettings>`.
 #. Start the scene.
-#. Click `Spawn` button in the component.
-#. Learn more about :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` settings.
+#. Click on the `Spawn` button in the component.
+#. Learn more about the :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` settings.
 	
 .. _pedestrianLocalSpawner:
 
@@ -34,7 +34,7 @@ Common settings
 """"""""""""""
 
 | **Spawn on play** : spawn the pedestrian after the start of the scene.
-| **Show scene buttons** : show add :ref:`pedestrian node <pedestrianNode>` button to the component on the scene
+| **Show scene buttons** : show add :ref:`pedestrian node <pedestrianNode>` button to the component in the scene
 | **Hightlight added nodes** :  on/off hightlight added :ref:`pedestrian nodes <pedestrianNode>`.
 | **Hightlight radius** : hightlight radius.
 | **Show child nodes only** : only the child :ref:`pedestrian nodes <pedestrianNode>` will be shown.
@@ -73,7 +73,7 @@ TalkArea Test
 Crossroad Test
 ~~~~~~~~~~~~
 
-Test case how pedestrians wait at traffic lights and cross the crossroad.
+Test case of pedestrians waiting at traffic lights and crossing the crossroad.
 
 	.. image:: /images/testscenes/pedestrian/CrossroadTest.png
 	`Source nodes.`
@@ -102,7 +102,7 @@ Test case to test bench :ref:`seating <pedestrianNodeSit>`.
 House & Idle Test
 ~~~~~~~~~~~~
 
-Test case for :ref:`idling <pedestrianNodeIdle>` and entering :ref:`house <pedestrianNodeHouse>`.
+Test case for :ref:`idling <pedestrianNodeIdle>` and entering the :ref:`house <pedestrianNodeHouse>`.
 
 	.. image:: /images/testscenes/pedestrian/HouseTest.png
 	`Source nodes.`
@@ -115,7 +115,7 @@ Test case for :ref:`idling <pedestrianNodeIdle>` and entering :ref:`house <pedes
 Navigation Test
 ~~~~~~~~~~~~
 
-Test case for navigating :ref:`navigating <pedestrianNavmeshNavigation>`.
+Test case for :ref:`navigation <pedestrianNavmeshNavigation>`.
 Red circle navigation is disabled. Green circle navigation is enabled.
 
 	.. image:: /images/testscenes/pedestrian/NavigationTest.png

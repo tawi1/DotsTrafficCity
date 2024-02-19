@@ -6,7 +6,7 @@ Traffic Object Finder
 .. contents::
    :local:
 
-Tool for finding traffic objects on the scene by `InstanceID` for troubleshooting.
+Tool for finding traffic objects in the scene by `InstanceID` for troubleshooting.
 
 .. _trafficObjectFinderTypes:
 

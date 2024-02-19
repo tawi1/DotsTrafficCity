@@ -8,10 +8,10 @@ Defined public route for :ref:`public transport <trafficPublic>`.
 How To Create
 ------------
 
-#. Create needed :ref:`road segments <roadSegmentCreator>`.
-#. Connect created segments by :ref:`paths <path>`.
-#. Create empty `GameObject` and add :ref:`TrafficPublicRoute <trafficPublicRouteComponent>` component.
-#. Enable :ref:`Show path selection buttons <trafficPublicRouteSceneSettings>` option.
+#. Create necessary :ref:`road segments <roadSegmentCreator>`.
+#. Connect the created segments by :ref:`paths <path>`.
+#. Create an empty `GameObject` and add the :ref:`TrafficPublicRoute <trafficPublicRouteComponent>` component.
+#. Enable the :ref:`Show path selection buttons <trafficPublicRouteSceneSettings>` option.
 #. Sequentially select each :ref:`path <path>` of the route (also you make a :ref:`lane change <trafficPublicRouteHowToCreateTransition>`).
 
 	.. image:: /images/road/PublicRoute/PublicRouteExample2.png

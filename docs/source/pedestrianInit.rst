@@ -15,22 +15,22 @@ How To Create
 Hybrid Legacy Skin
 ~~~~~~~~~~~~
 
-`Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with `animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_) and the DOTS entity.
+A `Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with `animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_) and the DOTS entity.
 
 Factory
 """"""""""""""
 
-	#. Open on the scene `PedestrianSkinFactory`.
+	#. Open `PedestrianSkinFactory` in the scene.
 	
 		``Hub/Pools/Npc/Pedestrian/PedestrianSkinFactory``
 
 		.. image:: /images/configs/pedestrian/PedestrianSkinFactory.png
 	
-	#. Enable `Show Add New Prefab Settings`.
-	#. Drag & drop source prefabs to the `New Prefabs` field.
-	#. Customize prefab names.
-	#. Click `Try To Add Prefabs`.
-	#. If you needed configure :ref:`Ragdoll <pedestrianRagdoll>` and assign to the `Pedestrian Skin Factory Data` (make sure ragdoll is :ref:`enabled <pedestrianSettingsConfig>`).
+	#. Enable the `Show Add New Prefab Settings`.
+	#. Drag & drop source prefabs into the `New Prefabs` field.
+	#. Customize the prefab names.
+	#. Click the `Try To Add Prefabs`.
+	#. If necessary, configure :ref:`Ragdoll <pedestrianRagdoll>` and assign to the `Pedestrian Skin Factory Data` (make sure :ref:`Ragdoll <pedestrianRagdoll>` is :ref:`enabled <pedestrianSettingsConfig>`).
 
 	.. note:: 
 		Each `Hybrid legacy` pedestrian prefab should have `PedestrianReferences` component.
@@ -68,14 +68,14 @@ Factory
 """"""""""""""
 
 	#. :ref:`Create textures and animation sheets <animationBaker>`.
-	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` in the project context menu.
+	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context .
 	
 		``Spirit604/Animation Baker/Animation Collection``
 	
 		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 	
 	#. Add and customize desired animations data.
-	#. Open on the scene `PedestrianCrowdSkinFactory`.
+	#. Open in the scene `PedestrianCrowdSkinFactory`.
 	
 		``Hub/Pools/Npc/Pedestrian/PedestrianCrowdSkinFactory``
 
@@ -95,33 +95,29 @@ Factory
 	#. Select `Entry Key Source Type` to `Selected Mesh Name` (or select `Custom` if you want to enter the name manually).
 	
 		.. image:: /images/pedestrian/baker/SettingsExample1.png
-			
-	#. Select `Entry Mesh Source Type` to `Selected Sheet` (or select `Custom` if you want to enter the mesh data manually).
-
-		.. image:: /images/pedestrian/baker/SettingsExample2.png
 		
-	#. Assign `Default Atlas Texture` (if selected pedestrians has the same texture material). **[optional step]**
+	#. Assign `Default Atlas Texture` (if selected pedestrians have the same texture material). **[optional step]**
 
 		.. image:: /images/pedestrian/baker/SettingsExample3.png
 			
-	#. One by one click `Select` and `Add entry` button. Or click `Add all entries` button to add all entries in the container.	
+	#. One by one click `Select` and `Add entry` button. Or click the `Add all entries` button to add all entries in the container.	
 	
 		.. image:: /images/pedestrian/baker/NewEntry2.png
 			
-	#. Turn on `Find Related Animations` button.
+	#. Turn on the `Find Related Animations` button.
 	
 		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample2.png
 			
 	#. Generate Animation Material.
 		#. Assign main texture of selected model **[if missing]**.
-		#. Press `Generate` button.
+		#. Press the `Generate` button.
 	
 			.. image:: /images/pedestrian/baker/GenerateMaterialExample.png
 		
 	#. Select entry & assign animations:
 	
 		#. **Manual way:**
-			#. Select the animation in the inspector that you want to assign to the selected character.
+			#. In the inspector, select the animation that you want to assign to the selected character.
 		
 				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
 				
@@ -129,13 +125,13 @@ Factory
 		
 		#. **Automated way:**
 			#. Automatic assignment works if the animation in the list matches (or partially matches) the animation name in the selected container.
-			#. Press `Auto Bind Animations` button.
+			#. Press the `Auto Bind Animations` button.
 			#. Make sure, that all animations are assigned.
 			
 				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
 
-	#. Assign animations for each entry in the same way.
-	#. Assign :ref:`ragdolls <pedestrianRagdoll>`. **[optional step]**.
+	#. Assign animations to each entry in the same way.
+	#. Assign :ref:`Ragdolls <pedestrianRagdoll>`. **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
 	
@@ -151,22 +147,22 @@ Data about baked animations in texture (:ref:`How to create <animationBakerHowTo
 Crowd GPU Custom Animator
 """"""""""""""
 
-Crowd GPU Custom animator is used for transitions between baked animations (implemented by `CrowdAnimatorTransitionSystem` system).
+The Crowd GPU Custom animator is used for transitions between baked animations (implemented by `CrowdAnimatorTransitionSystem` system).
 
 .. _animationBakerHowToCreateTransition:
 
 **How To Create Transition:**
-	#. Open on the scene `CrowdGPUAnimatorAuthoring`.
+	#. Open in the scene `CrowdGPUAnimatorAuthoring`.
 	
 		``Hub/Configs/BakerRefs/Settings/CrowdGPUAnimatorAuthoring``
 		
-		.. image:: /images/pedestrian/baker/animator/PedestrianBakedAnimatorAuthoring.png
+		.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
 
 				
-	#. Create :ref:`Animator Data Container <animationGPUAnimatorContainer>` in the project context menu and assign to animator (if necessary).
+	#. Create an :ref:`Animator Data Container <animationGPUAnimatorContainer>` from the project context  and assign it to the animator (if required).
 	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
-	#. Press `Open Animator` button.
-	#. Create :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
+	#. Press the `Open Animator` button.
+	#. Create a :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
 	#. Create and connect :ref:`AnimationNode <animationBakerAnimatorAnimationNode>` and :ref:`TransitionNodes <animationBakerAnimatorTransitionNode>`.
 	
@@ -177,7 +173,7 @@ Crowd GPU Custom animator is used for transitions between baked animations (impl
 
 		`Sitout transition example.`
 	
-	#. Copy & paste :ref:`generated hash <animationBakerAnimatorTriggerHash>` from `AnimatorContainer` to code (:ref:`usage example <pedestrianGPUFactoryTransitionExample>`).
+	#. Copy & paste the :ref:`generated hash <animationBakerAnimatorTriggerHash>` from the `AnimatorContainer` into the code (:ref:`usage example <pedestrianGPUFactoryTransitionExample>`).
 		
 		.. image:: /images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
@@ -270,32 +266,32 @@ Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is 
 How To Create
 """"""""""""""
 
-#. Add all colliders and rigidbodies according to the tutorial `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ to character.
+#. Add all the colliders and rigidbodies to character according to the `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ tutorial.
 
 	.. image:: /images/pedestrian/RagdollAssignExample.png	
 	`RagdollWizard example.`
 		
-#. Add `PedestrianRagdoll` component.
+#. Add the `PedestrianRagdoll` component.
 
 	.. image:: /images/pedestrian/RagdollComponent.png	
 	
-#. For remain characters, open `RagdollCloner` tool.
+#. For the remaining characters, open the `RagdollCloner` tool.
 
 	.. image:: /images/pedestrian/RagdollClonerPath.png	
 	.. image:: /images/pedestrian/RagdollCloner1.png	
 	
-#. Assign source character first created and target characters remain characters.
+#. Assign the source character created first and the target remaining characters.
 
 	.. image:: /images/pedestrian/RagdollCloner2.png	
 
-#. Click `Create` button.
-#. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` according to the chosen :ref:`type of rig <pedestrianSettingsConfig>`.
+#. Click the `Create` button.
+#. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` depending on the :ref:`type of rig <pedestrianSettingsConfig>` you have chosen.
 
 	.. note:: 
 		* Implemented by `PedestrianRagdollSystem`.
-		* Currently collides only with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_
+		* Currently only collides with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_
 		* Make sure, that the scene contains `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
-		* Read more info about :ref:`physics transfer service <physicsShapeTransfer>` how to clone legacy colliders.
+		* Read more info about the :ref:`Physics Transfer Service <physicsShapeTransfer>` on how to clone legacy colliders.
 
 .. _pedestrianNavigation:
 
@@ -320,16 +316,16 @@ Installation
 """"""""""""""
 
 * Check that the :ref:`navigation package <packageInstallationOptional>` is installed.
-* Make sure that navigation is enabled in the :ref:`general config <generalSettingsConfig>`.
-* Make sure :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
-* Each dynamic object on the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
+* Make sure that navigation is enabled in the :ref:`General Config <generalSettingsConfig>`.
+* Ensure that :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
+* Each dynamic object in the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
 
 How To Setup
 """"""""""""""
 
 * Create & customize `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
-* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` Or `Persist` mode.
-* Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Calc nav path`.
+* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Calc Nav Path`.
 		
 Pros And Cons
 """"""""""""""
@@ -346,7 +342,7 @@ Cons:
 Local Avoidance 
 ~~~~~~~~~~~~
 
-DOTS system for avoiding local obstacles (vehicles).
+DOTS system to avoid local obstacles (vehicles).
 
 Useful links:
 	* :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`
@@ -355,8 +351,8 @@ Useful links:
 How To Setup
 """"""""""""""
 
-* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` mode.
-* Set :ref:`Obstacle avoidance type <pedestrianObstacleAvoidanceType>` to `Local avoidance`.
+* Set the :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` mode.
+* Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Local Avoidance`.
 * Configure :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`.
 
 Pros And Cons
@@ -375,7 +371,7 @@ Common Info
 Collision
 ~~~~~~~~~~~~
 
-In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust :ref:`Antistuck config <pedestrianAntistuckConfig>`.
+In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust the :ref:`Antistuck config <pedestrianAntistuckConfig>`.
 
 Authoring Components
 ----------------
@@ -456,8 +452,8 @@ Action State
 * WaitForGreenLight : when a pedestrian is waiting for a green traffic light.
 * CrossingTheRoad : when a pedestrian goes crossing a crosswalk.
 * ScaryRunning : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
-* Sitting : when a pedestrian sits.
-* Talking : when a pedestrian talks.	
+* Sitting : when a pedestrian is sitting.
+* Talking : when a pedestrian is talking.	
 
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.

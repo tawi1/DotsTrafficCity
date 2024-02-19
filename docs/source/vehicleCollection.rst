@@ -3,7 +3,7 @@
 Vehicle Collection
 =====
 
-Vehicle collection contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
+The `Vehicle collection` contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
 	
@@ -36,7 +36,7 @@ Steps
 	
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep2.png
 	
-#. Select `Settings Type` to `Custom Engine` and `Custom Sound` (if you want override both).
+#. Select the `Settings Type` to `Custom Engine` and `Custom Sound` (if you want to override both).
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep3.png
 	
@@ -52,7 +52,7 @@ Steps
 Entity Conversion
 ~~~~~~~~~~~~
 
-Vehicle collection assigned to `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
+Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
 
@@ -68,7 +68,7 @@ Unique ID
 Car Model
 ----------------
 
-| **Car model** - name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>`. 
+| **Car model** - the name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>`. 
 
 	.. note::
 		You can change the `CarModel` name at any time in the :ref:`Collection <vehicleCollection>` tab.

@@ -91,7 +91,7 @@ Suspension
 Friction
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/custom/friction.png
+	.. image:: /images/entities/trafficCar/custom/friction1.png
 	
 | **Longitudinal** : forward friction curve (Y-axis - forward slip value, X-axis forward speed in metres per second).
 | **Lateral** : lateral friction curve (Y-axis - lateral slip value, X-axis lateral speed in metres per second).
@@ -128,7 +128,7 @@ Brakes
 Engine
 """"""""""""""""""
 
-	.. image:: /images/entities/trafficCar/custom/engine.png
+	.. image:: /images/entities/trafficCar/custom/engine1.png
 
 | **Torque** : engine torque.
 | **Transimission rate** : engine torque to wheel speed ratio.

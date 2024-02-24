@@ -51,6 +51,22 @@ Traffic Debugger
 | **Show obstacle info** : display obstacles for vehicles (red color vehicle has obstacle).
 | **Show common info** : show the entity index of the vehicles.
 
+.. _trafficCarRaycastDebugger:
+
+Traffic Raycast Debugger
+------------
+
+Shows the raycast box of the car. (:ref:`Config <trafficCarRaycastConfig>`) (:ref:`info <trafficCarRaycastInfo>`)
+
+	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebugger.png		
+	
+| **Enable debug** : on/off debugger.
+
+Example
+~~~~~~~~~~~~
+
+	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebuggerExample.png		
+
 .. _trafficCarNpcObstacleDebugger:
 
 Traffic NpcObstacle Debugger
@@ -64,7 +80,8 @@ Shows the calculation area and the vehicle's obstacle NPCs.
 | **Area color** : colour of the area where the vehicle calculates the npc obstacles.
 | **Selected index** : only for this entity index will debug be enabled (-1 all entities).
 	
-Example:
+Example
+~~~~~~~~~~~~
 
 	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebuggerExample.png		
 	
@@ -78,7 +95,8 @@ Shows :ref:`public transport traffic <trafficPublic>` data.
 | **Enable debug** : on/off debugger.
 | **Text color** : colour of scene text UI.
 
-Example:
+Example
+~~~~~~~~~~~~
 
 	.. image:: /images/debuggers/traffic/TrafficPublicDebuggerExample.png		
 	

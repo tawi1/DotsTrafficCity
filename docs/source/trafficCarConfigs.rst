@@ -246,7 +246,7 @@ The car automatically brakes to the new speed limit at the selected distance.
 Traffic Raycast Config
 ------------
 
-Traffic raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`example<trafficCarNpcObstacleDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
+Traffic raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`debug example<trafficCarRaycastDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
 
 	.. image:: /images/configs/traffic/TrafficCarRaycastConfig.png
 	

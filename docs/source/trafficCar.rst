@@ -384,8 +384,8 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 		
 * :ref:`TrafficCarDetectObstacleMode. <trafficDetectObstacleMode>`
 * :ref:`TrafficCarDetectNpcMode. <trafficDetectObstacleMode>`
-* **Temp raycast CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of hybrid raycast mode.
-* **Raycast always CollisionFilter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
+* **Hybrid Mode Filter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of hybrid raycast mode.
+* **Raycast Only Filter** : `collision filter <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/collision-queries.html#filtering>`_ of raycast only mode.
 		
 	.. note:: 
 		* You can also dynamically change the raycast target for `Hybrid mode` by adding or removing the `TrafficCustomRaycastTargetTag` component.

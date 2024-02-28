@@ -358,18 +358,15 @@ Obstacle Detection
 Raycast
 ~~~~~~~~~~~~
 
-Config
-""""""""""""""""""
+**Config**
 
 :ref:`TrafficCarRaycastConfig. <trafficCarRaycastConfig>`
 
-Debugger
-""""""""""""""""""
+**Debugger**
 
 :ref:`TrafficCarRaycastDebugger. <trafficCarRaycastDebugger>`
 
-Modes
-""""""""""""""""""
+**Modes**
 
 * `Hybrid mode` : raycast is activated only when the selected targets are close to the car.
 * `Raycast only` : raycasts are sent constantly.

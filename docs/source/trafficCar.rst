@@ -392,4 +392,4 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 		
 	.. note:: 
 		* You can also dynamically change the raycast target for `Hybrid mode` by adding or removing the `TrafficCustomRaycastTargetTag` component.
-		* Layer constants are stored in the ProjectConstants.cs file.
+		* Layer constants are stored in the `ProjectConstants.cs` file.

@@ -12,6 +12,7 @@ how to :ref:`install` the project.
 
 .. toctree::
 	:maxdepth: 1
+	:titlesonly:
 	
    gettingstarted
    road.rst

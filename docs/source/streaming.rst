@@ -22,8 +22,12 @@ States
 
 * **Culled** : entity is far away (by default, the entity is destroyed or disabled).
 * **CloseToCamera** : entity is enabled but with limited or modified functionality for better performance.
+* **PreInitInCamera** : state between to `CloseToCamera` and `InVisionOfCamera`, currently used to activate static physics objects **[optional]**.
 * **InVisionOfCamera** : entity is fully enabled.
 
+	.. image:: /images/other/CullStateExample.png
+	`Cull state example.`
+	
 Scene Streaming
 -------------------
 

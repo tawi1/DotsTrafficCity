@@ -40,7 +40,7 @@ How To Use
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings.png
 
-#. After, open :ref:`Prefab Info <carPrefabCreatorPrefabSettings>` tab, adjust unique settings for each vehicle.
+#. After, open :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, adjust unique settings for each vehicle.
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
@@ -165,7 +165,7 @@ Common Settings
 | **Suspension length** : suspension length of the vehicle. **[Custom physics vehicles only]**
 
 	.. note::
-		* Editing additional parameters will affect all cars in the `Prefab Info` tab, to make unique parameters check the toolbox opposite on the parameter.
+		* Editing additional parameters will affect all cars in the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, to make unique parameters check the toolbox opposite on the parameter in the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>`.
 		* Arrow-button applies the setting for the selected parameter.
 		
 Physics
@@ -210,7 +210,7 @@ Info Tab
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings3-2.png
 	
-.. _carPrefabCreatorPrefabSettings:
+.. _carPrefabCreatorPrefabInfo:
 	
 Prefab Info
 ----------------

@@ -8,7 +8,7 @@ Car Prefab Creator
 How To Use
 ----------------
 
-#. from the `Unity` toolbar, open `Car Prefab Creator`.
+#. From the `Unity` toolbar, open `Car Prefab Creator`.
 
 	``Spirit604/CityEditor/Car Prefab Creator``
 	
@@ -155,6 +155,9 @@ Preview Settings
 Additional Settings
 ----------------
 
+Common Settings
+~~~~~~~~~~~~
+
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings.png
 	
 | **Wheel radius** : wheel radius.
@@ -162,7 +165,50 @@ Additional Settings
 | **Suspension length** : suspension length of the vehicle. **[Custom physics vehicles only]**
 
 	.. note::
-		Editing addtional parameters affects all cars in `Prefab Info` tab.
+		* Editing additional parameters will affect all cars in the `Prefab Info` tab, to make unique parameters check the toolbox opposite on the parameter.
+		* Arrow-button applies the setting for the selected parameter.
+		
+Physics
+~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings2-1.png
+	
+| **Size offset** : size offset of physics shape.
+| **Center offset** : center offset of physics shape.
+| **Center of mass** : center of mass of the vehicle.
+| **Bevel radius** : bevel radius of physics shape.
+| **Mass** : mass of the vehicle.
+ 
+Info Tab
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings2-2.png
+
+Graphics
+~~~~~~~~~~~~
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings3-1.png
+	
+**Wheel source type:** 
+	* **Model unique** : the wheels remain as in the original model.
+	* **Shared from model** : the wheel model selected by the user from the original model is used for all wheels.
+	* **Shared all** : the wheel model selected by the user shared between all wheels.
+	
+**Wheel rotation type [shared wheel only]:** 
+	* **Source** : the wheel rotation remains unchanged.
+	* **Flip left row** : rotate the wheel in the left-hand row by 180° if you are using the wheel model from the right-hand row..
+	* **Flip right row** : rotate the wheel in the left-hand row by 180° if you are using the wheel model from the right-hand row..
+	
+**Has lods:** on/off LODs for vehicle.
+	* **Lod 0, 1, 2 screen size** : screen size of LOD.
+	
+	.. note:: 
+		Wheel sharing is useful for using the same wheel model for all wheels to reduce drawcalls.
+	
+Info Tab
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings3-2.png
 	
 .. _carPrefabCreatorPrefabSettings:
 	
@@ -178,15 +224,23 @@ Car Info
 * **Name** : user's :ref:`name <carModel>` of the vehicle.
 * **ID** : new :ref:`ID <trafficId>` entry for :ref:`vehicle collection <vehicleCollection>`.
 * **Traffic group** : :ref:`traffic group <pathTrafficGroup>` of the vehicle.
+
 * **Override entity type** : new :ref:`entity type <trafficCarSettings>` for selected vehicle (might be useful for specific vehicles such as `tram`).
 	* **Entity type**
+	
 * **Public transport** : on/off :ref:`public transport <trafficPublic>` feature. (:ref:`Settings <trafficPublicAuthoring>`)
 	* **Predefined road** 
 	* **Capacity** 
 	* **Entries**
+	
+* **Settings type:** 
+	* **New** : user-defined settings.
+	* **Template** : vehicle settings are copied from the selected template **[custom physics vehicle only]**.
+	* **Clone model** : vehicle settings are copied from the selected `CarModel` in the list.
+	
 * **Wheel radius** : wheel radius. **(can be unique value)**
 * **Wheel offset** : wheel offset by Y-axis of the vehicle. **(can be unique value)**
-* **Suspension length** : :ref:`traffic group <vehicleCollection>` of the vehicle. **(can be unique value)** **[Custom physics vehicles only]**
+* **Suspension length** : suspension length of the vehicle. **(can be unique value)** **[Custom physics vehicles only]**
 		
 Buttons
 ----------------

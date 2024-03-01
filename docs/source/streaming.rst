@@ -30,23 +30,23 @@ Default State List
 
 The default list is used for most objects, contains *Culled*, *Close to camera*, *In view of camera* states.
 
-	.. note:: 
-		* States add to the prefab entity by `CullComponentsExtension.CullComponentSet` extension method.
-		
 	.. image:: /images/other/CullStateExample1.png
 	`Default state list example.`
+	
+	.. note:: 
+		* States add to the prefab entity by `CullComponentsExtension.CullComponentSet` extension method.
 	
 Extended State List
 """"""""""""""
 
 The extended state list is used for objects that require a pre-init state before viewing in camera state, but earlier than the *close to camera* state, contains *Culled*, *Close to camera*, *Pre-init in camera*, *In view of camera* states.
 
+	.. image:: /images/other/CullStateExample2.png
+	`Extended state list example.`
+	
 	.. note:: 
 		* States add to the prefab entity by `CullComponentsExtension.PreinitCullComponentSet` extension method.
 		* It is used in the project for static physics objects.
-	
-	.. image:: /images/other/CullStateExample2.png
-	`Extended state list example.`
 	
 Scene Streaming
 -------------------

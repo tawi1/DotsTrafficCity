@@ -22,11 +22,31 @@ States
 
 * **Culled** : entity is far away (by default, the entity is destroyed or disabled).
 * **CloseToCamera** : entity is enabled but with limited or modified functionality for better performance.
-* **PreInitInCamera** : state between to `CloseToCamera` and `InVisionOfCamera`, currently used to activate static physics objects **[optional]**.
-* **InVisionOfCamera** : entity is fully enabled.
+* **PreInitInCamera** : state between to `CloseToCamera` and `InViewOfCamera`, currently used to activate static physics objects **[optional]**.
+* **InViewOfCamera** : entity is fully enabled.
 
-	.. image:: /images/other/CullStateExample.png
-	`Cull state example.`
+Default State List
+""""""""""""""
+
+The default list is used for most objects, contains *Culled*, *Close to camera*, *In view of camera* states.
+
+	.. note:: 
+		* States add to the prefab entity by `CullComponentsExtension.CullComponentSet` extension method.
+		
+	.. image:: /images/other/CullStateExample1.png
+	`Default state list example.`
+	
+Extended State List
+""""""""""""""
+
+The extended state list is used for objects that require a pre-init state before viewing in camera state, but earlier than the *close to camera* state, contains *Culled*, *Close to camera*, *Pre-init in camera*, *In view of camera* states.
+
+	.. note:: 
+		* States add to the prefab entity by `CullComponentsExtension.PreinitCullComponentSet` extension method.
+		* It is used in the project for static physics objects.
+	
+	.. image:: /images/other/CullStateExample2.png
+	`Extended state list example.`
 	
 Scene Streaming
 -------------------

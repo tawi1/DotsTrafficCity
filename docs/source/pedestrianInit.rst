@@ -35,6 +35,44 @@ Factory
 	.. note:: 
 		Each `Hybrid legacy` pedestrian prefab should have `PedestrianReferences` component.
 		
+Animations
+""""""""""""""
+
+By default, each pedestrian has a `PedestrianBaseController` animator.
+
+**Animation List:**
+
+* **Walking**
+	* **Parameters:**
+		* **yInput** : **[0.3]**
+		* **SideMovement** : **[0]**
+	
+* **Running**
+	* **Parameters:**
+		* **yInput** : **[1]**
+		* **SideMovement** : **[0]**
+	
+* **Idle**
+	* **Parameters:**
+		* **yInput** : **[0]**
+		* **SideMovement** : **[0]**
+	
+* **Stand To Sit**
+	* **Parameters:**
+		* **IsSitting** : **[true]**
+	
+* **Sitting Idle**
+	* Starts when *Stand To Sit* is completed.
+	
+* **Sit To Stand**
+	* Starts after *Sitting Idle*.
+	* **Parameters:**
+		* **IsSitting** : **[false]**
+	
+* **Talking 1, 2, 3**
+	* **Parameters:**
+		* **Talking** : **[0, 1, 2]**
+
 How To Use
 """"""""""""""
 
@@ -130,6 +168,8 @@ Factory
 			
 				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
 
+		.. note:: In the current version of the project, all pedestrians should have all the animations from the :ref:`Animation Collection <animationGPUAnimationCollection>` (will be changed in the near future).
+		
 	#. Assign animations to each entry in the same way.
 	#. Assign :ref:`Ragdolls <pedestrianRagdoll>`. **[optional step]**.
 	

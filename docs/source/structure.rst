@@ -38,6 +38,8 @@ Scene Components
 Road Parent
 ~~~~~~~~~~~~
 
+The root of all crossroads in the scene.
+
 	.. image:: /images/road/installation/RoadParent.png
 
 How To Use

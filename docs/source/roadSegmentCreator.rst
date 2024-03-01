@@ -240,6 +240,7 @@ New Node Settings
 """"""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png
+
 	
 .. _roadSegmentCreatorCustomCustomSettingsOption:
 	
@@ -251,6 +252,14 @@ New node settings type [custom settings enabled] new :ref:`TrafficNode <trafficN
 	* **Copy last** : will be created with the settings of the last created node.
 	* **Copy selected** : will be created with the settings of the selected node.
 		* **Copy node index**
+		
+Node Handles
+""""""""""""""
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentNodeHandles.png
+	
+| **Show traffic node handles** : on/off handles of :ref:`TrafficNodes <trafficNode>`
+| **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwading.
 	
 Parking Builder
 """"""""""""""

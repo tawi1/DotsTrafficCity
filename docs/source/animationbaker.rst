@@ -271,7 +271,7 @@ Contains meta-data of existing animations for the pedestrians.
 How To Create
 ~~~~~~~~~~~~
 
-from the project context :
+From the project context :
 	
 	``Spirit604/Animation Baker/Animation Collection``
 

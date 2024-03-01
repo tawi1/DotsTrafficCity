@@ -196,8 +196,8 @@ Graphics
 	
 **Wheel rotation type [shared wheel only]:** 
 	* **Source** : the wheel rotation remains unchanged.
-	* **Flip left row** : rotate the wheel in the left-hand row by 180° if you are using the wheel model from the right-hand row..
-	* **Flip right row** : rotate the wheel in the left-hand row by 180° if you are using the wheel model from the right-hand row..
+	* **Flip left row** : rotate the wheel in the left-hand row by 180° if you are using the wheel model from the right-hand row.
+	* **Flip right row** : rotate the wheel in the right-hand row by 180° if you are using the wheel model from the left-hand row.
 	
 **Has lods:** on/off LODs for vehicle.
 	* **Lod 0, 1, 2 screen size** : screen size of LOD.

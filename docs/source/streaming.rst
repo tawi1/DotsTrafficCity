@@ -22,7 +22,7 @@ States
 
 * **Culled** : entity is far away (by default, the entity is destroyed or disabled).
 * **CloseToCamera** : entity is enabled but with limited or modified functionality for better performance.
-* **PreInitInCamera** : state between to `CloseToCamera` and `InViewOfCamera`, currently used to activate static physics objects **[optional]**.
+* **PreInitInCamera** : :ref:`state <extendedStateList>` between to `CloseToCamera` and `InViewOfCamera`, currently used to activate static physics objects **[optional]**.
 * **InViewOfCamera** : entity is fully enabled.
 
 Default State List
@@ -35,6 +35,8 @@ The default list is used for most objects, contains *Culled*, *Close to camera*,
 	
 	.. note:: 
 		* States add to the prefab entity by `CullComponentsExtension.CullComponentSet` extension method.
+	
+.. _extendedStateList:
 	
 Extended State List
 """"""""""""""

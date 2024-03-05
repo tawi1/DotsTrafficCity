@@ -118,6 +118,17 @@ Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
 Code Examples
 ------------
 
+.. _soundType:
+
+Sound Types
+~~~~~~~~~~~~
+
+* **Default** : default sound entity.
+* **One Shot** : entity played once & destroyed afterwards.
+* **Tracking** : entity tracks target entity.
+* **Tracking Vehicle** : entity tracks target vehicle entity.
+* **Tracking And Loop** : entity tracks target entity & loop playback.
+
 .. _soundCodeHowToCreate:
 
 How To Create
@@ -128,17 +139,17 @@ EntityManager methods
 
 ..  code-block:: r
 
-	SoundExtension.CreateSoundEntity(ref this EntityManager entityManager, int soundId, float volume = 1f, bool oneShot = false)
+	SoundExtension.CreateSoundEntity(ref this EntityManager entityManager, int soundId, float volume = 1f)
 	// Creating a default sound entity.
 	
 ..  code-block:: r
 
-	SoundExtension.CreateTrackedSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false)
+	SoundExtension.CreateTrackedSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f)
 	// Creation of a sound entity that follows a given entity.
 	
 ..  code-block:: r
 
-	SoundExtension.CreateChildSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f, bool oneShot = false)
+	SoundExtension.CreateChildSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f)
 	// Creation of a sound entity that will be a child of a given entity.
 	
 CommandBuffer methods
@@ -148,37 +159,31 @@ Burst compatible methods.
 
 ..  code-block:: r
 
-	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float volume = 1f, bool oneShot = false)
+	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, Entity soundPrefabEntity, int soundId, float volume = 1f)
 	// Creating a default sound entity.
 	
 ..  code-block:: r
 
-	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, EntityArchetype soundEntityArchetype, int soundId, float3 position, float volume = 1f, bool oneShot = false)
+	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, Entity soundPrefabEntity, int soundId, float3 position, float volume = 1f)
 	// Create a sound entity at a specific position.
 	
-.. _soundArchetypeExample:
+.. _soundPrefabExample:
 
-Create Archetype methods
+Create prefab query method
 """"""""""""""
 	
 ..  code-block:: r
 
-	SoundExtension.GetSoundArchetype(EntityManager entityManager, bool force = false)
-	// Default sound archetype.
-
-..  code-block:: r	
-
-	SoundExtension.GetSoundOneShotArchetype(EntityManager entityManager)
-	// OneShot sound archetype.
+	SoundExtension.GetSoundQuery(EntityManager entityManager, SoundType soundType)
+	// Get `EntityQuery` with the selected :ref:`Sound type <soundType>`.
 	
 Params
 """"""""""""""
             
 * soundId : id of sound taken from :ref:`sound data <soundData>`.
-* soundEntityArchetype : sound :ref:`archetype <soundArchetypeExample>`.
+* soundPrefabEntity : sound :ref:`prefab entity <soundPrefabExample>` taken from :ref:`EntityQuery <soundPrefabExample>`.
 * position : initial position of the sound.
 * volume : volume of the sound (0..1 range).
-* oneShot : sound is played once and then destroyed.
 	
 How To Play
 ~~~~~~~~~~~~

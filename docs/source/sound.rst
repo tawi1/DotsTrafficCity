@@ -175,7 +175,7 @@ Create prefab query method
 ..  code-block:: r
 
 	SoundExtension.GetSoundQuery(EntityManager entityManager, SoundType soundType)
-	// Get `EntityQuery` with the selected :ref:`Sound type <soundType>`.
+	// Get `EntityQuery` with the selected `Sound type`.
 	
 Params
 """"""""""""""

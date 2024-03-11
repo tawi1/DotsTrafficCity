@@ -486,14 +486,14 @@ Movement State
 Action State
 ~~~~~~~~~~~~
 
-* Default : no state.
-* Idle : when a pedestrian is waiting.
-* MovingToNextTargetPoint : when going from :ref:`PedestrianNode <pedestrianNode>` to :ref:`PedestrianNode <pedestrianNode>` (excluding crosswalk).
-* WaitForGreenLight : when a pedestrian is waiting for a green traffic light.
-* CrossingTheRoad : when a pedestrian goes crossing a crosswalk.
-* ScaryRunning : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
-* Sitting : when a pedestrian is sitting.
-* Talking : when a pedestrian is talking.	
+* **Default** : no state.
+* **Idle** : when a pedestrian is waiting.
+* **MovingToNextTargetPoint** : when going from :ref:`PedestrianNode <pedestrianNode>` to :ref:`PedestrianNode <pedestrianNode>` (excluding crosswalk).
+* **WaitForGreenLight** : when a pedestrian is waiting for a green traffic light.
+* **CrossingTheRoad** : when a pedestrian goes crossing a crosswalk.
+* **ScaryRunning** : activated when a pedestrian runs away in a panic (for example, the sound of a gunshot or the death of a pedestrian nearby).
+* **Sitting** : when a pedestrian is sitting.
+* **Talking** : when a pedestrian is talking.	
 
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
@@ -700,9 +700,10 @@ State Dictionary
 | **Next states** : which :ref:`states <pedestrianActionState>` can override the current :ref:`state <pedestrianActionState>`.
 
 **State type:** 
-	* Default : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there).
-	* External system : the state proccessed by external system (code processing for state should be in the separate system).
-	* Additive : additive state flag adds to the current state and is processed by the `External system`.
+	* **Default** : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there).
+	* **External system** : the state proccessed by external system (code processing for state should be in the separate system).
+	* **Additive** : additive state flag adds to the current state and is processed by the `External system`.
+	* **Additive any** : additive state flag adds to the current state and is processed by the `External system` & ignores available next state flags.
 
 
 Movement State Binding Dictionary

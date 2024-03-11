@@ -4,7 +4,7 @@ Project Requirements
 ============
 
 Minimum **Unity** version:
-	* 2022.3.11+
+	* 2022.3.19+
 
 **Required packages:**
 	* `Entities 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities@1.1/manual/index.html>`_

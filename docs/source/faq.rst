@@ -21,6 +21,11 @@ Temporary fix until official `Unity` release
 #. Download fork packages `Unity.Entities <https://github.com/tertle/com.unity.entities>`_ & `Unity.Physics <https://github.com/tertle/com.unity.physics>`_ by `tertle <https://github.com/tertle>`_ to `ProjectFolder/Packages/` path.
 #. Open the project, if it fails, close `Unity`, clear the library folder & open again.
 
+Leak Detected : Persistent allocates 3 individual allocations.
+~~~~~~~~~~~~
+
+Editor-related memory leaks.
+
 Common Questions
 -------------------
 

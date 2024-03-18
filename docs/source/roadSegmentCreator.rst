@@ -236,6 +236,8 @@ How To Use
 #. Open the :ref:`PathCreator tool <pathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
+	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_. in the `Other settings`_. tab.
+
 New Node Settings
 """"""""""""""
 

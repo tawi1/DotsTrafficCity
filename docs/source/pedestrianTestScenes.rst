@@ -6,7 +6,7 @@ Pedestrian Test Scene
 How To Use
 ------------
 
-`Youtube tutorial. <https://youtu.be/uadbaQ4QV2A>`_
+`Youtube tutorial. <https://youtu.be/sgFJLXiP4og>`_
 
 #. Create :ref:`pedestrian nodes <pedestrianNodeCreator>` & connect them.
 #. Create a parent `GameObject` and add the :ref:`Pedestrian Local Spawner <pedestrianLocalSpawner>` component.

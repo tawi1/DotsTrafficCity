@@ -6,7 +6,7 @@ Common Debug
 .. contents::
    :local:
 
-`Youtube tutorial. <https://youtu.be/rj1Rww-9Yq8&t=331>`_
+`Youtube tutorial. <https://youtu.be/5ZtQahmDoO0&t=331>`_
 
 CullPoint Debugger
 ------------

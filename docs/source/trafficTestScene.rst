@@ -6,7 +6,7 @@ Traffic Test Scene
 How To Use
 ------------
 
-`Youtube tutorial. <https://youtu.be/OtIERf2qEm0>`_
+`Youtube tutorial. <https://youtu.be/wYSuXm7ekFI>`_
 	
 #. Create a :ref:`road segment <roadSegmentCreator>`.
 #. Create a parent `GameObject` and add the :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` component.

@@ -33,4 +33,4 @@ Demo Scene
 	`DotsCity/Scenes/Demo`
 	
 #. Press `Play` button.
-#. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>.
+#. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.

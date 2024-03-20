@@ -23,6 +23,8 @@ New Scene
 #. Create :ref:`pedestrians <pedestrian>`.
 #. Add & customize :ref:`game sounds <sound>`.
 
+.. _demoOpening:
+
 Demo Scene
 ------------
 

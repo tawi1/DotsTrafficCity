@@ -88,4 +88,4 @@ Steps
 			
 #. After that, press the `Add Scripting Define` button.
 #. For more information on how to add sounds :ref:`click here <sound>`.
-#. Next step is :ref:`setting up the scene <cityCreation>`.
+#. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo scene <demoOpening>`.

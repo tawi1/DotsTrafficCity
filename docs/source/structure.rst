@@ -19,7 +19,7 @@ Project Scenes
 #. **Traffic stress scene mobile** : mobile version of `Traffic stress scene`.
 #. **Pedestrian stress scene** : stressed scene is extremely crowded with :ref:`pedestrians <pedestrian>`.
 #. **Pedestrian stress scene mobile** : mobile version of `Pedestrian stress scene`.
-#. **Pedestrian animation stress scene** : performance scene comparison between `Unity Animator` animations and `GPU` animations.
+#. **Pedestrian animation stress scene** : performance scene comparison between :ref:`Unity Animator <pedestrianHybridLegacy>` animations and :ref:`GPU animations <pedestrianGPU>`.
 #. **Vehicle physics stress scene** : stress scene for the thousands cars with :ref:`Custom vehicle controller <customPhysicsVehicle>`.
 #. **Vehicle custom physics test scene** : scene for testing various parameters of the :ref:`Custom vehicle controller <customPhysicsVehicle>`.
 

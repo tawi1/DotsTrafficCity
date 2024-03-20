@@ -90,9 +90,9 @@ Section Object Authoring
 	
 | **Include childs** : all child objects are included in the section of the parent object.
 
-.. _contentStreaming:
+.. _sceneStreaming:
 
-Content Streaming
+Scene Streaming
 ~~~~~~~~~~~~
 
 You can split the scene content into chunks for partial loading at runtime.

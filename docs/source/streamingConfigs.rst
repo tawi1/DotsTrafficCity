@@ -38,7 +38,7 @@ Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref
 Streaming Level Config
 ~~~~~~~~~~~~
 
-Config for :ref:`load/unload <contentStreaming>` content subscenes.
+Config for :ref:`load/unload <sceneStreaming>` content subscenes.
 
 	.. image:: /images/configs/common/StreamingLevelConfig.png
 	

@@ -3,7 +3,7 @@
 City Creation
 ============
 
-Steps
+New Scene
 ------------
 
 #. Create new `scene`.
@@ -22,3 +22,13 @@ Steps
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
 #. Add & customize :ref:`game sounds <sound>`.
+
+Demo Scene
+------------
+
+#. In the `Project Folder` view, select the following scene:
+
+	`DotsCity/Scenes/Demo`
+	
+#. Press `Play` button.
+#. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>.

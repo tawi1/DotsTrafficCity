@@ -3,6 +3,26 @@
 Structure
 ============
 
+.. _projectScenes:
+
+Project Scenes
+----------------
+
+#. **Demo** : the main optimized demo scene of the project (read more about scene structure :ref:`here <sceneStructure>`).
+#. **Demo source** : same as `Demo` scene, but contains raw 3D models without optimization, also scene :ref:`streaming objects <streaming>` are disabled, including :ref:`static physics colliders <physicsShapeTransfer>`.
+#. **Traffic test scene** : :ref:`traffic test scene <trafficTestScene>` where all parameters can be tested with a set of most :ref:`traffic <trafficCar>` situations.
+#. **Pedestrian test scene** : :ref:`pedestrian test scene <pedestrianTestScene>` where the workability of entities can be tested.
+#. **Props test scene** : :ref:`props test scene <propsTestScene>` where the workability of entities can be tested.
+#. **City stress scene** : stress scene that combines thousands of :ref:`vehicles <trafficCar>` and :ref:`pedestrians <pedestrian>`.
+#. **City stress scene mobile** : mobile version of `City stress scene`.
+#. **Traffic stress scene** : stressed scene is extremely crowded with :ref:`vehicles <trafficCar>`.
+#. **Traffic stress scene mobile** : mobile version of `Traffic stress scene`.
+#. **Pedestrian stress scene** : stressed scene is extremely crowded with :ref:`pedestrians <pedestrian>`.
+#. **Pedestrian stress scene mobile** : mobile version of `Pedestrian stress scene`.
+#. **Pedestrian animation stress scene** : performance scene comparison between `Unity Animator` animations and `GPU` animations.
+#. **Vehicle physics stress scene** : stress scene for the thousands cars with :ref:`Custom vehicle controller <customPhysicsVehicle>`.
+#. **Vehicle custom physics test scene** : scene for testing various parameters of the :ref:`Custom vehicle controller <customPhysicsVehicle>`.
+
 .. _sceneStructure:
 
 Scene Hierarchy

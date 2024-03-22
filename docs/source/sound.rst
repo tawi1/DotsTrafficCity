@@ -10,6 +10,10 @@ Installation
 ------------
 
 #. Download the `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin from the `Asset Store`.
+#. Select the project `FMOD` path in the window that appears on the `Linking` tab (by default `DotsCity/FMOD/fmodproject/fmodproject.fspro`).
+
+	.. image:: /images/sound/FMOD-setup.png
+	
 #. `Sign up <https://www.fmod.com/profile/register>`_ & download the `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_).
 
 	.. image:: /images/sound/FMODstudio-download.png

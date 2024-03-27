@@ -170,7 +170,7 @@ Initial Set Up
 
 **Steps:**
 	#. Create an :ref:`Animator Data Container <animationGPUAnimatorContainer>` from the project context  and assign it to the custom animator (if necessary).
-	#. Create (if necessary) and assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
+	#. Create (if necessary) and assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <crowdSkinFactory>`.
 
 	.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
 	

@@ -100,7 +100,7 @@ Pure GPU Skin
 
 `Pure GPU skin` is a :ref:`pure entity <pureEntity>` that combines the GPU texture animations and the DOTS entity.
 
-.. _pedestrianCrowdSkinFactory:
+.. _crowdSkinFactory:
 
 Factory
 """"""""""""""
@@ -200,7 +200,7 @@ The Crowd GPU Custom animator is used for transitions between baked animations (
 
 				
 	#. Create an :ref:`Animator Data Container <animationGPUAnimatorContainer>` from the project context  and assign it to the animator (if required).
-	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>`.
+	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` the same as in the :ref:`PedestrianCrowdSkinFactory <crowdSkinFactory>`.
 	#. Press the `Open Animator` button.
 	#. Create a :ref:`new transition layer <animationBakerAnimatorNewTransitionLayer>` (if needed).
 	#. Enter the name of the trigger in the :ref:`StartNode <animationBakerAnimatorStartNode>`.
@@ -325,7 +325,7 @@ How To Create
 	.. image:: /images/pedestrian/RagdollCloner2.png	
 
 #. Click the `Create` button.
-#. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <pedestrianCrowdSkinFactory>` depending on the :ref:`type of rig <pedestrianSettingsConfig>` you have chosen.
+#. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <crowdSkinFactory>` depending on the :ref:`type of rig <pedestrianSettingsConfig>` you have chosen.
 
 	.. note:: 
 		* Implemented by `PedestrianRagdollSystem`.

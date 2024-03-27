@@ -94,11 +94,9 @@ How To Preview
 #. :ref:`Bake <animationBakerHowTo>` the texture.
 #. Select any character (for example `Character1`).
 #. Press the `Preview` button.
+#. Make sure that `Refresh Always` option is enabled for preview.
 
-	.. note:: 
-		Make sure that `Refresh Always` option is enabled for preview.
-		
-		.. image:: /images/pedestrian/baker/window/RefreshAlways.png
+	.. image:: /images/pedestrian/baker/window/RefreshAlways.png
 			
 Texture Data
 """"""""""""""
@@ -125,11 +123,12 @@ Shows a preview of the transition animation between two selected animations.
 How To Use
 ^^^^^^^^^^^^^^^^^^^^^^
 
-#. Enable :ref:`Transitiom Mode <animationBakerSettings>` in the settings.
+#. Enable :ref:`Transition mode <animationBakerSettings>` in the settings.
 #. :ref:`Bake <animationBakerHowTo>` the texture.
 #. Select any character (for example `Character1`).
-#. Press the `Preview` button. for the source transition animation.
+#. Press the `Preview` button for the source transition animation.
 #. Then, press the `To` button next to the animation you want to target.
+#. Adjust the `Transition duration` if required.
 
 Buttons
 """"""""""""""

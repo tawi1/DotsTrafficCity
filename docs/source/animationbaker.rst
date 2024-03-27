@@ -46,6 +46,7 @@ Settings
 | **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
 | **Make squared texture** : rounding texture size.
+| **Transition mode** : allows you to preview the transition from one animation to another in the editor.
 | **Add normal texture** : add normal texture.
 
 **Compression type:**
@@ -59,7 +60,6 @@ Settings
 | **Clip data template path** : path to clip templates.
 | **Save texture data path** : creating path of :ref:`texture animation data <animationBakedAnimationData>`.
 | **Save texture path** : creating path of baked textures.
-| **Created texture data** : :ref:`data <animationBakedAnimationData>` about baked animations in texture.
 	
 .. _animationBakedSourceData:
 
@@ -88,24 +88,49 @@ Clip Data
 * **Custom animation name** : custom animation name (if the field is empty the name from the clip will be taken).
 * **Preview** : on/off preview playback of baked animation (make sure the texture is created and any character is selected in the :ref:`toolbar <animationBakerToolbar>`).
 		
+How To Preview
+^^^^^^^^^^^^^^^^^^^^^^
+
+#. :ref:`Bake <animationBakerHowTo>` the texture.
+#. Select any character (for example `Character1`).
+#. Press the `Preview` button.
+
+	.. note:: 
+		Make sure that `Refresh Always` option is enabled for preview.
+		
+		.. image:: /images/pedestrian/baker/window/RefreshAlways.png
+			
 Texture Data
 """"""""""""""
 
 Shows a preview of the created texture.
 
 	.. image:: /images/pedestrian/baker/window/TextureData.png
+	
+Transition Data
+""""""""""""""
 
-**Texture size:** 
-	* **x** : animation frame vertex coordinate.
-	* **y** : number of vertexes in the skin.
+Shows a preview of the transition animation between two selected animations.
+
+	.. image:: /images/pedestrian/baker/window/TransitionData.png
 	
-	.. note::
-		**Texture [2008x1287]:**
-			* Texture has 2008 animation frames.
-			* Max skin size 1287 vertices.
+* **Transition type:**
+	* **Play once** : animation plays only once. 
+	* **Play forever** : animation looped forever. 
 	
-	.. tip:: Texture rounding to the POT4 format is used for texture compression (256x256, 256х512, 512x512, etc...).
+* **Transition duration** : time to end of current animation when interpolation transition between animations is enabled.
 	
+.. _animationTransitionEditor:
+	
+How To Use
+^^^^^^^^^^^^^^^^^^^^^^
+
+#. Enable :ref:`Transitiom Mode <animationBakerSettings>` in the settings.
+#. :ref:`Bake <animationBakerHowTo>` the texture.
+#. Select any character (for example `Character1`).
+#. Press the `Preview` button. for the source transition animation.
+#. Then, press the `To` button next to the animation you want to target.
+
 Buttons
 """"""""""""""
 
@@ -116,37 +141,13 @@ Buttons
 | **Save to exist** : save the texture to an existing asset.
 | **Clear** : clean up the texture.
 	
-.. _animationBakedAnimationData:
-	
+.. _animationBakedAnimationData:	
+
 Animation Texture Data
 ~~~~~~~~~~~~
 
 	.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
-		
-| **Sampling skin** : skin on the basis of a playback animation (for :ref:`replace <animationBakedAnimationDataReplace>` purposes only).
-
-**Animation data:**
-	* **Source mesh** : source mesh of character.
-	* **Source anim** : source animation clip.
-	* **New anim** : new animation for :ref:`replace <animationBakedAnimationDataReplace>` source animation.
-	* **Animation name** : the name of the animation that will be displayed in :ref:`Baked Animation Sheet Data <animationTextureData>`.
-	* **Frame rate** : frame rate of baked animation.
-	* **Texture offset** : texture offset of baked animation.
-	* **Frame count** : frame count of baked animation.
-	
-.. _animationBakedAnimationDataReplace:
-
-How To Replace
-""""""""""""""
-
-	#. Drag & drop the target character's `Prefab` into the scene.
-	#. Drag & drop `SkinnedMeshRenderer` of the target character from the scene into the `Sampling Skin` field.
-	#. Drag & drop the new animation clip into the `New anim` field.
-	#. Press the `Replace` button.
-	
-	.. image:: /images/pedestrian/baker/window/AnimationDataReplaceExample.png
-	`Replace example.`
-	
+	`Example`.
 	
 Crowd GPU Animator
 ------------
@@ -195,6 +196,11 @@ Create Transition Layer
 """"""""""""""
 
 Press the `+` button on the main toolbar at custom animator to create a new layer, or press `-` to delete the currently selected layer.
+
+Test
+""""""""""""""
+
+You can test the transition between two animations & adjust the transition duration in the editor in :ref:`AnimationBakerWindow <animationTransitionEditor>`.
 
 .. _animationBakerAnimatorNodeTypes:
 

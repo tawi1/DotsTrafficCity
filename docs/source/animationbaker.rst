@@ -94,7 +94,7 @@ How To Preview
 #. :ref:`Bake <animationBakerHowTo>` the texture.
 #. Select any character (for example `Character1`).
 #. Press the `Preview` button.
-#. Make sure that `Refresh Always` option is enabled for preview.
+#. Make sure that `Refresh Always` option is enabled in the editor.
 
 	.. image:: /images/pedestrian/baker/window/RefreshAlways.png
 			

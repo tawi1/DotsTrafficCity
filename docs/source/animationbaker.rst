@@ -134,10 +134,8 @@ Buttons
 """"""""""""""
 
 | **Create new** : create a new texture.
-| **Add to exist texture** : adds new animations to an existing texture.
-| **Resize texture** : texture resizing according to rounding parameters.
 | **Save as new** : save the texture as a new asset.
-| **Save to exist** : save the texture to an existing asset.
+| **Override exist** : overrides existing texture & data.
 | **Clear** : clean up the texture.
 	
 .. _animationBakedAnimationData:	

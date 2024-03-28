@@ -3,6 +3,24 @@
 Change Log
 ************
 
+[1.0.3] - 29-03-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added GPU animation transition preview.
+* New optimized shaders for crowds.
+* GPU data preparation for LODs.
+* New user-friendly animation shader control.
+
+Changed
+~~~~~~~~~~~~
+
+* Update to entities 1.2.0
+* GPU animation baking and playback algorithm for better memory texture layout.
+* Improved GPU transition animations.
+
 [1.0.2] - 25-03-2024
 ------------
 

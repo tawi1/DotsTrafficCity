@@ -7,12 +7,12 @@ Minimum **Unity** version:
 	* 2022.3.19+
 
 **Required packages:**
-	* `Entities 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities@1.1/manual/index.html>`_
-	* `Entities.Graphics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.1/manual/index.html>`_
-	* `Unity.Physics 1.1.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.physics@1.1/manual/index.html>`_
-	* `Custom Physics Authoring <https://docs.unity3d.com/Packages/com.unity.physics@1.1/manual/custom-samples-physics-components.html>`_
-	* `Unity.Collections 2.3.0.pre-3 <https://docs.unity3d.com/Packages/com.unity.collections@2.3/manual/index.html>`_
-	* `Burst 1.8.9 <https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html>`_ 
+	* `Entities 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.2/manual/index.html>`_
+	* `Entities.Graphics 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.2/manual/index.html>`_
+	* `Unity.Physics 1.2.0 <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/index.html>`_
+	* `Custom Physics Authoring <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/custom-samples-physics-components.html>`_
+	* `Unity.Collections 2.4.0 <https://docs.unity3d.com/Packages/com.unity.collections@2.4/manual/index.html>`_
+	* `Burst 1.8.12 <https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html>`_ 
 
 **Asset store packages:**
 	* `Naughty attributes. <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_

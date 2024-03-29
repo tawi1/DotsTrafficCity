@@ -45,7 +45,6 @@ Settings
 	
 | **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
-| **Make squared texture** : rounding texture size.
 | **Transition mode** : allows you to preview the transition from one animation to another in the editor.
 | **Add normal texture** : add normal texture.
 

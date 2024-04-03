@@ -39,7 +39,7 @@ Fixed
 Added
 ~~~~~~~~~~~~
 
-* Added GPU animation transition preview.
+* Added GPU animation :ref:`transition preview <animationTransitionEditor>`.
 * New optimized shaders for crowds.
 * GPU data preparation for LODs.
 * New user-friendly animation shader control.

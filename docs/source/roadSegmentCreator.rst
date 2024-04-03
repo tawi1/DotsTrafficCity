@@ -197,13 +197,15 @@ Snap Surface Settings
 Snap Line Settings
 """"""""""""""
 
-Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes of the collider **(v 1.0.4+)**.  
+Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes of the collider to have the line run along the collider to make the :ref:`path <path>` follow the shape of the collider **(v 1.0.4+)**.  
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapLineSettings.png
 
 | **Angle threshold** : minimum angle between normal faces to create new :ref:`path nodes <pathWaypointInfo>`.
 | **Min waypoint offset** : min offset between generated :ref:`path nodes <pathWaypointInfo>`.
 | **Snap surface offset** : offset between snap point and the node (Y axis).
+
+.. only:: readthedocs
 
 	.. image:: /images/road/roadSegment/creator/SnapLineExample.gif
 	`Example.`

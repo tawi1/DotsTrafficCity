@@ -42,16 +42,16 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 
 **Animation List:**
 
-+------------------------+--------------+----------+------------+
-| Animation name         | Parameters   | Value    | When it    |
-|                        |              |          | starts     |
-+========================+==============+==========+============+
-| Walking                | yInput       |   0.3    | By default |
-| 			             | SideMovement |    0     | 			|
-+------------------------+--------------+----------+------------+
-| Running                | yInput       |    1     | By default |
-| 			             | SideMovement |    0     | 			|
-+------------------------+--------------+----------+------------+
++------------------------+--------------+-----------+------------+
+| Animation name         |  Parameters  |   Value   |   When it  |
+|                        |              |           |   starts   |
++========================+==============+===========+============+
+| Walking                | yInput       |    0.3    | By default |
+|                        | SideMovement |     0     |            |
++------------------------+--------------+-----------+------------+
+| Running                | yInput       |     1     | By default |
+|                        | SideMovement |     0     |            |
++------------------------+--------------+-----------+------------+
 
 * **Walking**
 	* **Parameters:**

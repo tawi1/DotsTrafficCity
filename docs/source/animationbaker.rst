@@ -28,7 +28,7 @@ How To Bake
 		.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 		`Multiple animation result example.`
 		
-	#. In the tab :ref:`Animation Texture Data <animationBakedAnimationData>` tab, check the `Animation Texture Data` result.
+	#. In the project view, check the `Animation Texture Data` result.
 	
 		.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
 		`AnimationData result example.`
@@ -46,7 +46,7 @@ Settings
 | **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
 
-* **Settings type:** : 
+**Settings type:** : 
 	* **Frame rate** : shows frame rate settings.
 	* **Common** : shows common settings (custom offset & custom animation name).
 	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.

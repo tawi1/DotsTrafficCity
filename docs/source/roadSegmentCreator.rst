@@ -205,7 +205,7 @@ Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes 
 | **Min waypoint offset** : min offset between generated :ref:`path nodes <pathWaypointInfo>`.
 | **Snap surface offset** : offset between snap point and the node (Y axis).
 
-.. only :: readthedocs
+.. only:: readthedocs
 
 	.. image:: /images/road/roadSegment/creator/SnapLineExample.gif
 	`Example.`

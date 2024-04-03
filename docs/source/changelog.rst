@@ -3,6 +3,36 @@
 Change Log
 ************
 
+[1.0.4] - 04-04-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* New align custom straight road feature :ref:`along the surface <snapLine>`. 
+* New animation baker clip :ref:`binding <animationBakerBind>. 
+
+Fixed
+~~~~~~~~~~~~
+
+* Path recalculation for custom straight roads.
+* Re-creation of the road segment with custom user orientation.
+* Fix waypoint info display for road segment in some cases.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved :ref:`snapping <roadSegmentCreatorCustomSnapNodeSettings>` for custom road segments.
+
+[1.0.3b] - 01-04-2024
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* First init editor hotfix.
+* Path baking validation fix.
+
 [1.0.3] - 29-03-2024
 ------------
 

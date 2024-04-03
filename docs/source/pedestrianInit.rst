@@ -152,8 +152,10 @@ Factory
 	
 			.. image:: /images/pedestrian/baker/GenerateMaterialExample.png
 		
-	#. Select entry & assign animations:
-	
+	#. Select entry & assign animations:	
+		#. **Animation baker binding:**
+			#. :ref:`Bind <animationBakerBind>` the animation on the baking texture step.
+		
 		#. **Manual way:**
 			#. In the inspector, select the animation that you want to assign to the selected character.
 		

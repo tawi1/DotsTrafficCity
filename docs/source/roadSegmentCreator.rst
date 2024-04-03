@@ -191,6 +191,22 @@ Snap Surface Settings
 	
 **Buttons:** 
 	* Snap to surface: snap selected nodes to the surface.
+	
+.. _snapLine:
+	
+Snap Line Settings
+""""""""""""""
+
+Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes of the collider **(v 1.0.4+)**.  
+
+	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapLineSettings.png
+
+| **Angle threshold** : minimum angle between normal faces to create new :ref:`path nodes <pathWaypointInfo>`.
+| **Min waypoint offset** : min offset between generated :ref:`path nodes <pathWaypointInfo>`.
+| **Snap surface offset** : offset between snap point and the node (Y axis).
+
+	.. image:: /images/road/roadSegment/creator/SnapLineExample.gif
+	`Example.`
 
 .. _roadSegmentCreatorCustomStraightPathSettings:
 

@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Dots Traffic City'
+project = 'DOTS Traffic City'
 copyright = '2024, 604Spirit'
 author = '604Spirit'
 
-release = '1.0.3'
-version = '1.0.3'
+release = '1.0.4'
+version = '1.0.4'
 
 # -- General configuration
 

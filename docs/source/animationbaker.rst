@@ -45,7 +45,13 @@ Settings
 	
 | **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
-| **Transition mode** : allows you to preview the transition from one animation to another in the editor.
+
+* **Settings type:** : 
+	* **Frame rate** : shows frame rate settings.
+	* **Common** : shows common settings (custom offset & custom animation name).
+	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.
+	* **Animation binding** : shows binding settings of the :ref:`Animation collection <animationGPUAnimationCollection>`.
+
 | **Add normal texture** : add normal texture.
 
 **Compression type:**
@@ -94,6 +100,15 @@ How To Preview
 #. Select any character (for example `Character1`).
 #. Press the `Preview` button.
 #. Make sure that `Refresh Always` option is enabled in the editor.
+
+.. _animationBakerBind:
+
+How To Bind
+^^^^^^^^^^^^^^^^^^^^^^
+
+#. Select :ref:`Animation collection <animationGPUAnimationCollection>` in the :ref:`settings <animationBakerSettings>`.
+#. Enable `Animation binding` type in the :ref:`settings type <animationBakerSettings>`.
+#. In the `Clip data` select the animation from the :ref:`Animation collection <animationGPUAnimationCollection>` according to required animation.
 
 	.. image:: /images/pedestrian/baker/window/RefreshAlways.png
 			

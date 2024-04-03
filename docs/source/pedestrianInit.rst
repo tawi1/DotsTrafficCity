@@ -42,47 +42,32 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 
 **Animation List:**
 
-+------------------------+--------------+-----------+------------+
-| Animation name         |  Parameters  |   Value   |   When it  |
-|                        |              |           |   starts   |
-+========================+==============+===========+============+
-| Walking                |- yInput      |    0.3\   | By default |
-|                        |- SideMovement|     0\    |            |
-+------------------------+--------------+-----------+------------+
-| Running                |- yInput      |     1\    | By default |
-|                        |- SideMovement|     0\    |            |
-+------------------------+--------------+-----------+------------+
-
-* **Walking**
-	* **Parameters:**
-		* **yInput** : **[0.3]**
-		* **SideMovement** : **[0]**
-	
-* **Running**
-	* **Parameters:**
-		* **yInput** : **[1]**
-		* **SideMovement** : **[0]**
-	
-* **Idle**
-	* **Parameters:**
-		* **yInput** : **[0]**
-		* **SideMovement** : **[0]**
-	
-* **Stand To Sit**
-	* **Parameters:**
-		* **IsSitting** : **[true]**
-	
-* **Sitting Idle**
-	* Starts when *Stand To Sit* is completed.
-	
-* **Sit To Stand**
-	* Starts after *Sitting Idle*.
-	* **Parameters:**
-		* **IsSitting** : **[false]**
-	
-* **Talking 1, 2, 3**
-	* **Parameters:**
-		* **Talking** : **[0, 1, 2]**
++------------------------+--------------+-----------+--------------+
+| Animation name         |  Parameters  |   Value   |   When it    |
+|                        |              |           |   starts     |
++========================+==============+===========+==============+
+| Walking                |- yInput      |   - 0.3   | By default   |
+|                        |- SideMovement|   - 0     |              |
++------------------------+--------------+-----------+--------------+
+| Running                |- yInput      |   - 1     | By default   |
+|                        |- SideMovement|   - 0     |              |
++------------------------+--------------+-----------+--------------+
+| Idle                   |- yInput      |   - 0     | By default   |
+|                        |- SideMovement|   - 0     |              |
++------------------------+--------------+-----------+--------------+
+| Stand To Sit           |- IsSitting   |   - true  | By default   |
+|                        |              |           |              |
++------------------------+--------------+-----------+--------------+
+| Sitting Idle           |              |           | Starts when  |
+|                        |              |           |*Stand To Sit*|            
+|                        |              |           |is completed  |
++------------------------+--------------+-----------+--------------+
+| Sit To Stand           |- IsSitting   |   - false | Starts after |
+|                        |              |           |*Sitting Idle*|
++------------------------+--------------+-----------+--------------+
+| Talking 1, 2, 3        |- Talking     |   - 0,1,2 | By default   |
+|                        |              |           |              |
++------------------------+--------------+-----------+--------------+
 
 How To Use
 """"""""""""""

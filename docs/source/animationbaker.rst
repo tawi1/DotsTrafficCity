@@ -46,7 +46,7 @@ Settings
 | **Animation material base** : base animation material.
 | **Frame rate** : frame rate of baked animation.
 
-**Settings type:** : 
+**Settings type:** 
 	* **Frame rate** : shows frame rate settings.
 	* **Common** : shows common settings (custom offset & custom animation name).
 	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.
@@ -109,7 +109,7 @@ How To Bind
 ^^^^^^^^^^^^^^^^^^^^^^
 
 #. Select :ref:`Animation collection <animationGPUAnimationCollection>` in the :ref:`settings <animationBakerSettings>`.
-#. Enable `Animation binding` type in the :ref:`settings type <animationBakerSettings>`.
+#. Enable `Animation binding` type in the :ref:`Settings type <animationBakerSettings>`.
 #. In the `Clip data` select the animation from the :ref:`Animation collection <animationGPUAnimationCollection>` according to required animation.
 			
 Texture Data

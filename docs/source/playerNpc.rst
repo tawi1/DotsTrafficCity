@@ -22,8 +22,10 @@ Components
 
 	.. note::
 	
-		.. image:: /images/configs/player/PlayerSpawner.png
-		Spawned by `PlayerSpawner`.
+		* Spawned by `PlayerSpawner`.
+			.. image:: /images/configs/player/PlayerSpawner.png
+		
+		* Entity movement controlled by `NpcControllerSystem`.
 	
 .. _playerNpcFactory:
 	

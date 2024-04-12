@@ -39,10 +39,10 @@ How To Create
 
 .. _playerHybridMono:
 
-Hybrid Mono
+Hybrid Mono (experimental)
 ----------------
 
-* Player vehicle physics handled by custom user's `Monobehaviour physics plugin` **[experimental]**.
+* Player vehicle physics handled by custom user's `Monobehaviour physics plugin`.
 * Unlike the :ref:`Hybrid DOTS <playerHybridDots>`, the entity following the skin.
 * The `DOTS entity` collider processes the collision with the `DOTS physics world` & adds impulses to the vehicle's `Rigidbody <https://docs.unity3d.com/ScriptReference/Rigidbody.html>`_ according to the calculated impulse.
 

@@ -12,7 +12,7 @@ Added
 * New :ref:`multi-mesh <animationBakerHowToMulti>` customization support for GPU animations. 
 * New custom :ref:`attachments <animationBakerHowToMulti>` support for GPU animations. 
 * New custom GPU animation :ref:`option <crowdSkinFactory>` for selected pedestrians . 
-* Integration for custom  :ref:`player vehicle controller <playerHybridMono>` which controlled by MonoBehaviour script **[experimental]**. 
+* Integration for custom  :ref:`player vehicle controller <playerHybridMono>` plugin which controlled by MonoBehaviour script **[experimental]**. 
 
 Fixed
 ~~~~~~~~~~~~

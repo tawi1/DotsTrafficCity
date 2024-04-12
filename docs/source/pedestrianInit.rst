@@ -171,7 +171,7 @@ How To Create
 		
 	#. Assign animations to each entry in the same way.
 	
-	#. Add custom optional animations for the desired pedestrians **[optional step]**.
+	#. Add custom optional animations for the desired pedestrians [optional step].
 		#. In the :ref:`Animation Collection <animationGPUAnimationCollection>` add new `Optional` animations.
 		#. Tick on `Show optional animation popup` in Pedestrian crowd skin factory settings.
 		#. Add desired optional animations in the character list of the factory.
@@ -217,7 +217,8 @@ How To Use
                 ref SkinUpdateComponent skinUpdateComponent,
                 EnabledRefRW<UpdateSkinTag> updateSkinTagRW)
             {
-                var animHash = 54335363; // Some animation hash
+				// Some animation hash calculated from animation name & AnimUtils.StringToHash method
+                var animHash = 54335363; 
 
 				AnimEntitiesUtils.UpdateAnimation(ref skinUpdateComponent, ref updateSkinTagRW, animHash);
             }

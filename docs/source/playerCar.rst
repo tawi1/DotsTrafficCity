@@ -34,7 +34,7 @@ How To Create
 #. Set `Player simulation type` to `Hybrid DOTS` in the `Prefab` tab.
 #. Make sure `Player simulation type` is set to :ref:`Hybrid DOTS <playerHybridDotsConfig>` in the player car settings.
 #. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
-#. Create prefab variant from the `PlayerCarSkinBase` prefab & assign to `:ref:`Player Car Pool <playerCarPool>` according to the vehicle.
+#. Create prefab variant from the `PlayerCarSkinBase` prefab & assign to :ref:`Player Car Pool <playerCarPool>` according to the vehicle.
 #. Customize the car slots in the created prefab if you plan to make the NPC's shooting option from the car **[optional step]**.
 
 .. _playerHybridMono:
@@ -50,13 +50,13 @@ Hybrid Mono
 	* `Edy's Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/edy-s-vehicle-physics-403>`_
 	* `Realistic Car Controller Pro <https://assetstore.unity.com/packages/tools/physics/realistic-car-controller-pro-178967>`_
 	* `NWH Vehicle Physics 2 <https://assetstore.unity.com/packages/tools/physics/nwh-vehicle-physics-2-166252>`_
-	* `Universal Vehicle Controller (Plus) <https://assetstore.unity.com/packages/tools/physics/universal-vehicle-controller-plus-176314>`_
-	* `MS Vehicle System (Vehicle controller) <https://assetstore.unity.com/packages/tools/physics/ms-vehicle-system-vehicle-controller-88035>`_
+	* `Universal Vehicle Controller Plus <https://assetstore.unity.com/packages/tools/physics/universal-vehicle-controller-plus-176314>`_
+	* `MS Vehicle System <https://assetstore.unity.com/packages/tools/physics/ms-vehicle-system-vehicle-controller-88035>`_
 	* `Sim-Cade Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/sim-cade-vehicle-physics-243624>`_
 
 	.. note::
 		* To make the vehicle work, the scene should have default Unity `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
-		* Processing the `default physical world <https://docs.unity3d.com/Manual/PhysicsSection.html>`_ may require additional CPU resources.
+		* Processing a combination of `DOTS physical world <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/index.html>`_ and the `default physical world <https://docs.unity3d.com/Manual/PhysicsSection.html>`_ at the same time may require additional CPU resources.
 
 How To Create
 ~~~~~~~~~~~~

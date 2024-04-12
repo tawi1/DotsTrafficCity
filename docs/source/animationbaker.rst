@@ -40,7 +40,7 @@ How To Bake Multi-Mesh
 
 	#. Enable `Multimesh` type in the :ref:`Settings type <animationBakerSettings>`.
 	#. Customize modular character with desired skinned mesh renderers.
-	#. Add gameobjects with the desired attachments to the child of the desired bone **[optional step]**.
+	#. Add gameobjects with the desired attachments to the child of the desired bone **[optional]**.
 	#. Drag & drop character parents to source skin list.
 	#. Make the same :ref:`steps <animationBakerSettings>` for baking.
 		

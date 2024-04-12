@@ -18,7 +18,7 @@ Components
 | * **Npc weapon holder** : reference to the anchor bone that holds the weapon & reference to the weapon.
 | * **Npc hit reaction behaviour** : behaviour that handles the reaction to a bullet hit.
 | * **Ragdoll base** : activates `Ragdoll` when the NPC dies.
-| * **Npc health entity behaviour* : wrapper for entity health in the `Monobehaviour` world.
+| * **Npc health entity behaviour** : wrapper for entity health in the `Monobehaviour` world.
 
 	.. note::
 	

@@ -104,16 +104,6 @@ Other Settings
 | **Hide UI** : on/off UI.
 | **Show FPS** : on/off fps ui panel.
 
-Player Configs
--------------------	
-
-Player Npc Sound Config
-~~~~~~~~~~~~
-
-	.. image:: /images/configs/common/PlayerNpcSoundConfig.png
-	
-| **Footstep frequency** : :ref:`sound <soundData>` frequency of the player's footsteps.
-	
 Sound Configs
 -------------------	
 

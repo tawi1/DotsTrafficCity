@@ -33,6 +33,17 @@ How To Bake
 		.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
 		`AnimationData result example.`
 		
+.. _animationBakerHowToMulti:
+		
+How To Bake Multi-Mesh
+------------
+
+	#. Enable `Multimesh` type in the :ref:`Settings type <animationBakerSettings>`.
+	#. Customize modular character with desired skinned mesh renderers.
+	#. Add gameobjects with the desired attachments to the child of the desired bone **[optional step]**.
+	#. Drag & drop character parents to source skin list.
+	#. Make the same :ref:`steps <animationBakerSettings>` for baking.
+		
 Baker Window
 ------------
 
@@ -51,6 +62,7 @@ Settings
 	* **Common** : shows common settings (custom offset & custom animation name).
 	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.
 	* **Animation binding** : shows binding settings of the :ref:`Animation collection <animationGPUAnimationCollection>`.
+	* **Multimesh** : allows you to bake animations with multi-skin renderers or with custom attachments **[v1.0.5+]**.
 
 | **Add normal texture** : add normal texture.
 
@@ -297,11 +309,15 @@ Settings
 	
 	.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 
-
 | **Name** : animation name.
+
 **Unique animation** : a unique animation mesh instance pool will be created for this animation.
 	* **Allow duplicate** : is it allowed to take an animation from the pool if it is already being used by another character.
 	* **Instance count** : animation pool size.
+	
+**Animation type:** 
+	* **Mandatory** : each entity of the crowd must have this animation.
+	* **Optional** : each entity of the crowd doesn't necessarily have to have this animation [:ref:`step 16 <crowdSkinFactory>`].
 
 .. _animationGPUAnimatorContainer:
 

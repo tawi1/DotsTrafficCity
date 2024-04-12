@@ -18,6 +18,7 @@ how to :ref:`install` the project.
    road.rst
    traffic.rst
    pedestrian.rst
+   player.rst
    npc.rst
    streaming.rst
    common.rst

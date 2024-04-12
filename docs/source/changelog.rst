@@ -3,6 +3,22 @@
 Change Log
 ************
 
+[1.0.5] - 12-04-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* New :ref:`multi-mesh <animationBakerHowToMulti>` customization support for GPU animations. 
+* New custom :ref:`attachments <animationBakerHowToMulti>` support for GPU animations. 
+* New custom GPU animation :ref:`option <crowdSkinFactory>` for selected pedestrians . 
+* Integration for custom  :ref:`player vehicle controller <playerHybridMono>` which controlled by MonoBehaviour script **[experimental]**. 
+
+Fixed
+~~~~~~~~~~~~
+
+* Animation GPU baking with animated parent.
+
 [1.0.4] - 04-04-2024
 ------------
 

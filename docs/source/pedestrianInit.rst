@@ -98,7 +98,7 @@ Pure GPU Skin
 
 .. _crowdSkinFactory:
 
-Factory
+How To Create
 """"""""""""""
 
 	#. :ref:`Create textures and animation sheets <animationBaker>`.
@@ -149,6 +149,7 @@ Factory
 			.. image:: /images/pedestrian/baker/GenerateMaterialExample.png
 		
 	#. Select entry & assign animations:	
+	
 		#. **Animation baker binding:**
 			#. :ref:`Bind <animationBakerBind>` the animation on the baking texture step.
 		
@@ -169,9 +170,64 @@ Factory
 		.. note:: In the current version of the project, all pedestrians should have all the animations from the :ref:`Animation Collection <animationGPUAnimationCollection>` (will be changed in the near future).
 		
 	#. Assign animations to each entry in the same way.
+	
+	#. Add custom optional animations for the desired pedestrians **[optional step]**.
+		#. In the :ref:`Animation Collection <animationGPUAnimationCollection>` add new `Optional` animations.
+		#. Tick on `Show optional animation popup` in Pedestrian crowd skin factory settings.
+		#. Add desired optional animations in the character list of the factory.
+		#. Bind added animations.		
+
 	#. Assign :ref:`Ragdolls <pedestrianRagdoll>`. **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
+	
+How To Use
+""""""""""""""
+
+| **Code example:**
+
+..  code-block:: r
+	
+        private NativeHashMap<SkinAnimationHash, HashToIndexData> hashToLocalDataLocalRef;
+
+        void ISystemStartStop.OnStartRunning(ref SystemState state)
+        {
+            hashToLocalDataLocalRef = CrowdSkinProviderSystem.HashToLocalDataStaticRef;
+        }
+
+        [BurstCompile]
+        void ISystem.OnUpdate(ref SystemState state)
+        {
+            var switchAnimJob = new SwitchAnimJob()
+            {
+                HashToLocalData = hashToLocalDataLocalRef,
+            };
+
+            switchAnimJob.Schedule();
+        }
+
+        [BurstCompile]
+        public partial struct SwitchAnimJob : IJobEntity
+        {
+            [ReadOnly]
+            public NativeHashMap<SkinAnimationHash, HashToIndexData> HashToLocalData;
+
+            void Execute(
+                Entity entity,
+                ref SkinUpdateComponent skinUpdateComponent,
+                EnabledRefRW<UpdateSkinTag> updateSkinTagRW)
+            {
+                var animHash = 54335363; // Some animation hash
+
+				AnimEntitiesUtils.UpdateAnimation(ref skinUpdateComponent, ref updateSkinTagRW, animHash);
+            }
+        }
+    }
+		
+**Used in systems:**
+	* GPUAnimatorSystem
+	* GPUAnimatorCustomSitStateSystem
+	* GPUTalkAnimatorSystem
 	
 .. _animationTextureData:
 
@@ -326,7 +382,7 @@ How To Create
 #. Assign the result to :ref:`PedestrianHybridLegacyFactory <pedestrianHybridLegacy>` or :ref:`PedestrianCrowdSkinFactory <crowdSkinFactory>` depending on the :ref:`type of rig <pedestrianSettingsConfig>` you have chosen.
 
 	.. note:: 
-		* Implemented by `PedestrianRagdollSystem`.
+		* Implemented by `RagdollSystem`.
 		* Currently only collides with default `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_
 		* Make sure, that the scene contains `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
 		* Read more info about the :ref:`Physics Transfer Service <physicsShapeTransfer>` on how to clone legacy colliders.

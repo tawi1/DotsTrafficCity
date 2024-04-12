@@ -25,7 +25,11 @@ Components
 		* Spawned by `PlayerSpawner`.
 			.. image:: /images/configs/player/PlayerSpawner.png
 		
-		* Entity movement controlled by `NpcControllerSystem`.
+		* Entity movement controlled by systems:
+			* `NpcControllerSystem`.
+			* `NpcGroundStateSystem`.
+			* `NpcRaycastGroundSystem`.
+			* `NpcFreezeVerticalRotationSystem`.
 	
 .. _playerNpcFactory:
 	

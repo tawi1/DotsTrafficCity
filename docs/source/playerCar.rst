@@ -56,7 +56,7 @@ Hybrid Mono (experimental)
 	* `Sim-Cade Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/sim-cade-vehicle-physics-243624>`_
 
 	.. note::
-		* To make the vehicle work, the scene should have default Unity `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_.
+		* To make the vehicle work, the scene should have default Unity `colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ (read more about :ref:`PhysicsShape Transfer tool <physicsShapeTransfer>`).
 		* Processing a combination of `DOTS physical world <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/index.html>`_ and the `default physical world <https://docs.unity3d.com/Manual/PhysicsSection.html>`_ at the same time may require additional CPU resources.
 
 How To Create

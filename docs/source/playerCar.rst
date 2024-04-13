@@ -32,7 +32,7 @@ How To Create
 
 #. Open :ref:`Car Prefab Creator <carPrefabCreator>` & set `Car type` to `Player` in the `Prefab` tab.
 #. Set `Player simulation type` to `Hybrid DOTS` in the `Prefab` tab.
-#. Make sure `Player simulation type` is set to :ref:`Hybrid DOTS <playerHybridDotsConfig>` in the player car settings (make sure that config on the :ref:`subscene <roadEntitySubscene>` has the same value).
+#. Make sure `Player simulation type` is set to :ref:`Hybrid DOTS <playerHybridDotsConfig>` in the player car settings (make sure that config on the :ref:`subscene <subscene>` has the same value).
 #. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
 #. Create prefab variant from the `PlayerCarSkinBase` prefab & assign to :ref:`Player Car Pool <playerCarPool>` according to the vehicle.
 #. Customize the car slots in the created prefab if you plan to make the NPC's shooting option from the car **[optional step]**.
@@ -64,7 +64,7 @@ How To Create
 
 #. Open the :ref:`Car Prefab Creator <carPrefabCreator>` & set `Car type` to `Player` in the `Prefab` tab.
 #. Set `Player simulation type` to `Hybrid mono` in the `Prefab` tab.
-#. Set the `Hybrid mono` in the :ref:`Player car settings <playerHybridMonoConfig>` config (make sure that config on the :ref:`subscene <roadEntitySubscene>` has the same value).
+#. Set the `Hybrid mono` in the :ref:`Player car settings <playerHybridMonoConfig>` config (make sure that config on the :ref:`subscene <subscene>` has the same value).
 #. Drag & drop your desired prefabs into the `Prefabs` field.
 #. Click the `Scan` button.
 #. Customize :ref:`Save settings <carPrefabCreatorSaveSettings>` in the `Save` tab.

@@ -44,7 +44,7 @@ Hybrid Mono (experimental)
 ----------------
 
 * Player vehicle physics handled by custom user's `Monobehaviour physics plugin`.
-* Unlike the :ref:`Hybrid DOTS <playerHybridDots>`, the entity following the skin.
+* Unlike the :ref:`Hybrid DOTS <playerHybridDots>`, the entity following & presents collider for `DOTS` world without mesh representation.
 * The `DOTS entity` collider processes the collision with the `DOTS physics world` & adds impulses to the vehicle's `Rigidbody <https://docs.unity3d.com/ScriptReference/Rigidbody.html>`_ according to the calculated impulse.
 
 * List of vehicle controllers from the Asset Store that can be used for (e.g.) 

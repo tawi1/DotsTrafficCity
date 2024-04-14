@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.0.5] - 12-04-2024
+[1.0.5] - 15-04-2024
 ------------
 
 Added
@@ -18,6 +18,12 @@ Fixed
 ~~~~~~~~~~~~
 
 * Animation GPU baking with animated parent.
+* Fixed surface cloning tool in some cases.
+
+Changed
+~~~~~~~~~~~~
+
+* Removed obsolete save options for Car Prefab Creator.
 
 [1.0.4] - 04-04-2024
 ------------

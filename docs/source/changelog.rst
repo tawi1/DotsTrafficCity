@@ -19,13 +19,15 @@ Fixed
 
 * Animation GPU baking with animated parent.
 * Fixed physics surface cloning tool in some cases.
+* Traffic spawn fix in some cases.
+* Fixed obstacle detection for reverse or arc paths.
 * Static physics culling.
 
 Changed
 ~~~~~~~~~~~~
 
 * Traffic lights are disabled by default for straight road templates.
-* Removed obsolete save options for Car Prefab Creator.
+* Removed obsolete options for Car Prefab Creator.
 
 [1.0.4] - 04-04-2024
 ------------

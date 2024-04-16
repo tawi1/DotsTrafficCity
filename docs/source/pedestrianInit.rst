@@ -499,7 +499,7 @@ States
 Common Logic
 ~~~~~~~~~~~~
 
-#. Some system set the next :ref:`Action state <pedestrianActionState>` in the `NextStateComponent` by method.
+#. Custom system set the next :ref:`Action state <pedestrianActionState>` in the `NextStateComponent` by utils method.
 
 	* bool NextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent)
 		`Example method, if state can't be set, then target swap back.`
@@ -513,7 +513,7 @@ Common Logic
 	
 #. If state is available, set `StateComponent` to the new state and set :ref:`Movement state <pedestrianMovementState>` according to :ref:`Movement binding data <pedestrianStateBinding>`.
 #. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system.
-	* For legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
+	* For Legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
 	* For GPU skin :ref:`GPUAnimatorSystem <gpuAnimatorExample>`.
 	
 #. If you want to set the :ref:`Custom animation <customAnimatorState>` for pedestrian read :ref:`this <customAnimatorState>`.
@@ -627,7 +627,7 @@ Method #1
 	* ``AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)``
 		
 	* And add hash of your animation in the following systems.
-	* For :ref:`legacy skin <pedestrianHybridLegacy>`.
+	* For :ref:`Legacy skin <pedestrianHybridLegacy>`.
 		* **LegacyAnimatorCustomStateSystem**
 		
 	* For :ref:`GPU skin <pedestrianGPU>`.
@@ -650,7 +650,7 @@ Method #2
 
 * If the entity has the `Idle` :ref:`Movement state <pedestrianMovementState>`, you can change the animation directly by using the following methods:
 
-	* For :ref:`legacy skin <pedestrianHybridLegacy>` by changing the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
+	* For :ref:`Legacy skin <pedestrianHybridLegacy>` by changing the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
 	* For :ref:`GPU skin <pedestrianGPU>` by using utils method (:ref:`example <gpuAnimatorExample>`).
 		
 	.. note::

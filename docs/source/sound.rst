@@ -196,34 +196,38 @@ How To Play
 	
 	public partial class PlayAndStopSoundExampleSystem : SystemBase
 	{
-		protected override void OnUpdate()
+	protected override void OnUpdate()
+	{
+	
+	// Get world sounds
+	var sounds = GetComponentLookup<FMODSound>(true);
+	
+	Entities
+	.WithBurst()
+	.WithReadOnly(sounds)
+	.ForEach((
+		Entity entity
+		in SoundHolder soundHolder) =>
+	{
+		// Some play condition
+		bool shouldPlay = true; 
+		
+		// Some sound entity container component 
+		Entity soundEntity = soundHolder.Entity 
+		
+		FMODSound fmodSound = sounds[soundEntity];
+		
+		if (shouldPlay)
 		{
-			//get world sounds
-			var sounds = GetComponentLookup<FMODSound>(true);
-			
-			Entities
-			.WithBurst()
-			.WithReadOnly(sounds)
-			.ForEach((
-				Entity entity
-				in SoundHolder soundHolder) =>
-			{
-				bool shouldPlay = true; //some play condition
-				Entity soundEntity = soundHolder.Entity //some sound entity container component 
-				
-                FMODSound fmodSound = sounds[soundEntity];
-
-                if (shouldPlay)
-                {
-                    fmodSound.Event.start();
-                }
-                else
-                {
-                    fmodSound.Event.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                }
-					
-			}).Schedule();
+			fmodSound.Event.start();
 		}
+		else
+		{
+			fmodSound.Event.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		}
+			
+	}).Schedule();
+	}
 	}
 	
 How To Destroy

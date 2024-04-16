@@ -192,41 +192,37 @@ How To Use
 
 ..  code-block:: r
 	
-        private NativeHashMap<SkinAnimationHash, HashToIndexData> hashToLocalDataLocalRef;
-
-        void ISystemStartStop.OnStartRunning(ref SystemState state)
-        {
-            hashToLocalDataLocalRef = CrowdSkinProviderSystem.HashToLocalDataStaticRef;
-        }
-
-        [BurstCompile]
-        void ISystem.OnUpdate(ref SystemState state)
-        {
-            var switchAnimJob = new SwitchAnimJob()
-            {
-                HashToLocalData = hashToLocalDataLocalRef,
-            };
-
-            switchAnimJob.Schedule();
-        }
-
-        [BurstCompile]
-        public partial struct SwitchAnimJob : IJobEntity
-        {
-            [ReadOnly]
-            public NativeHashMap<SkinAnimationHash, HashToIndexData> HashToLocalData;
-
-            void Execute(
-                Entity entity,
-                ref SkinUpdateComponent skinUpdateComponent,
-                EnabledRefRW<UpdateSkinTag> updateSkinTagRW)
-            {
-				// Some animation hash calculated from animation name & AnimUtils.StringToHash method
-                var animHash = 54335363; 
-
-				AnimEntitiesUtils.UpdateAnimation(ref skinUpdateComponent, ref updateSkinTagRW, animHash);
-            }
-        }
+	private NativeHashMap<SkinAnimationHash, HashToIndexData> hashToLocalDataLocalRef;
+	void ISystemStartStop.OnStartRunning(ref SystemState state)
+	{
+		hashToLocalDataLocalRef = CrowdSkinProviderSystem.HashToLocalDataStaticRef;
+	}
+	
+	[BurstCompile]
+	void ISystem.OnUpdate(ref SystemState state)
+	{
+		var switchAnimJob = new SwitchAnimJob()
+		{
+			HashToLocalData = hashToLocalDataLocalRef,
+		};
+		switchAnimJob.Schedule();
+	}
+	
+    [BurstCompile]
+    public partial struct SwitchAnimJob : IJobEntity
+    {
+		[ReadOnly]
+		public NativeHashMap<SkinAnimationHash, HashToIndexData> HashToLocalData;
+		void Execute(
+		Entity entity,
+		ref SkinUpdateComponent skinUpdateComponent,
+		EnabledRefRW<UpdateSkinTag> updateSkinTagRW)
+		{
+			// Some animation hash calculated from animation name & AnimUtils.StringToHash method
+			var animHash = 54335363; 
+			AnimEntitiesUtils.UpdateAnimation(ref skinUpdateComponent, ref updateSkinTagRW, animHash);
+		}
+		}
     }
 		
 **Used in systems:**
@@ -517,7 +513,7 @@ Common Logic
 	* For legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
 	* For GPU skin :ref:`GPUAnimatorSystem <gpuAnimatorExample>`.
 	
-#. If you want to set the :ref:`custom animation <customAnimatorState>` for pedestrian read :ref:`this <customAnimatorState>`.
+#. If you want to set the :ref:`Custom animation <customAnimatorState>` for pedestrian read :ref:`this <customAnimatorState>`.
 
 How To Change
 ~~~~~~~~~~~~
@@ -530,41 +526,41 @@ How To Change
     [BurstCompile]
     public partial struct CheckTrafficLightJob : IJobEntity
     {
-        void Execute(
-		ref DestinationComponent destinationComponent,
-		ref NextStateComponent nextStateComponent,
-		EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
-		EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
-		{
-			// Tag is triggering system
-			checkTrafficLightStateTagRW.ValueRW = false;
+    void Execute(
+	ref DestinationComponent destinationComponent,
+	ref NextStateComponent nextStateComponent,
+	EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
+	EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
+	{
+		// Tag is triggering system
+		checkTrafficLightStateTagRW.ValueRW = false;
 
-			//Example red traffic light flag logic
-			bool redLight = true;
-			
-			if (redLight)
-			{
+		//Example red traffic light flag logic
+		bool redLight = true;
+		
+		if (redLight)
+		{
 			// If the next state is available, start waiting for a green light. 
 			
 			if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
 			{
-			// Some logic
+				// Some logic
 			
-			waitForGreenLightTagRW.ValueRW = true;
+				waitForGreenLightTagRW.ValueRW = true;
 			
-			// If the entity has a custom animation for this state, use the 'AnimatorStateExtension.AddCustomAnimatorState' method
+				// If the entity has a custom animation for this state, use the 'AnimatorStateExtension.AddCustomAnimatorState' method
 			}
 			else
 			{
-			// Otherwise return to previous destination, for example
+				// Otherwise return to previous destination, for example
 			}				
-			}
-			else
-			{
+		}
+		else
+		{
 			// Not red traffic light then set cross the road state										
 			nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
-			}
 		}
+	}
 	}
 	
 Custom State System
@@ -587,7 +583,7 @@ Custom State System
 			
 			if (!greenLight)
 			{
-			// Some logic while waiting for the green light			
+				// Some logic while waiting for the green light			
 			}
 			
 			// If the traffic light is green or another system has changed state, leave current system
@@ -595,16 +591,16 @@ Custom State System
 			
 			if (leaveState)
 			{
-			waitForGreenLightTagRW.ValueRW = false;
-			
-			if (greenLight)
-			{
-				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
-			}
-			else
-			{
-				// Otherwise logic if the state is interrupted with another system
-			}
+				waitForGreenLightTagRW.ValueRW = false;
+				
+				if (greenLight)
+				{
+					nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+				}
+				else
+				{
+					// Otherwise logic if the state is interrupted with another system
+				}
 			}	
 		}
 	}
@@ -638,7 +634,7 @@ Method #1
 	
 #. After all the custom animation is complete, use the method to return the default animation system:
 
-	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)````
+	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)``
 			
 	.. note::
 		For an example of a system, please read the scripts below:
@@ -649,9 +645,7 @@ Method #2
 
 * If the entity has the `Idle` :ref:`Movement state <pedestrianMovementState>`, you can change the animation directly by using the following methods:
 
-	* For :ref:`legacy skin <pedestrianHybridLegacy>`:
-		* Change the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
-		
+	* For :ref:`legacy skin <pedestrianHybridLegacy>` by changing the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
 	* For :ref:`GPU skin <pedestrianGPU>` by using utils method (:ref:`example <gpuAnimatorExample>`).
 		
 	.. note::
@@ -902,4 +896,4 @@ Movement State Binding Dictionary
 Contains data - which :ref:`Movement state <pedestrianMovementState>` is assigned after the :ref:`Action state <pedestrianActionState>` is assigned.
 	
 	.. note:: 
-		You can read about available states :ref:`here <pedestrianStates>`.
+		* Read more the :ref:`state info <pedestrianStates>` & :ref:`available states <pedestrianActionState>`.

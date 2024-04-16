@@ -513,7 +513,11 @@ Common Logic
 	`Available state list for the current state can be defined` :ref:`here <pedestrianStateAuthoring>`.
 	
 #. If state is available, set `StateComponent` to the new state and set :ref:`Movement state <pedestrianMovementState>` according to :ref:`Movement binding data <pedestrianStateBinding>`.
-#. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system (for legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`, for GPU skin :ref:` GPUAnimatorSystem <gpuAnimatorExample>`).
+#. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system.
+	* For legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
+	* For GPU skin :ref:` GPUAnimatorSystem <gpuAnimatorExample>`.
+	
+#. If you want to set the :ref:`custom animation <customAnimatorState>` for pedestrian read :ref:` this <customAnimatorState>`.
 
 How To Change
 ~~~~~~~~~~~~
@@ -527,11 +531,12 @@ How To Change
     public partial struct CheckTrafficLightJob : IJobEntity
     {
         void Execute(
-            ref DestinationComponent destinationComponent,
-            ref NextStateComponent nextStateComponent,
-            EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
+			ref DestinationComponent destinationComponent,
+			ref NextStateComponent nextStateComponent,
+			EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
 			EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
 		{
+			// Tag is triggering system
 			checkTrafficLightStateTagRW.ValueRW = false;
 
 			//Example red traffic light flag logic
@@ -556,7 +561,7 @@ How To Change
 			}
 			else
 			{
-			    // Not red traffic light then set cross the road state										
+				// Not red traffic light then set cross the road state										
 				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
 			}
 		}
@@ -603,23 +608,20 @@ Custom State System Example
 			}	
 		}
 	}
-	
-	.. note::
-		For an example of a system, please read the scripts below:
-			* BenchStateSystem.cs.
-			* SwitchTalkingKeySystem.cs.
+
+.. _customAnimatorState:
 
 Custom Animator State
 ~~~~~~~~~~~~
 
+Method #1
+""""""""""""""
+
 #. If you want to override default movement animation use the method:
-
 	..  code-block:: r
-
 		AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)
 		
 	* And add hash of your animation in the following systems.
-
 	* For :ref:`legacy skin <pedestrianHybridLegacy>`.
 		* **LegacyAnimatorCustomStateSystem**
 		
@@ -629,15 +631,31 @@ Custom Animator State
 #. If the pedestrian already in the custom animator state use the method:
 
 	..  code-block:: r
-
 		AnimatorStateExtension.ChangeAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState, bool immediateUpdate = true)
 	
 #. After all the custom animation is complete, use the method to return the default animation system:
 
 	..  code-block:: r
-
 		AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)
-	
+			
+	.. note::
+		For an example of a system, please read the scripts below:
+			* BenchStateSystem.cs.
+			
+Method #2
+""""""""""""""
+
+* If the entity has the `Idle` :ref:`Movement state <pedestrianMovementState>`, you can change the animation directly by using the following methods:
+
+	* For :ref:`legacy skin <pedestrianHybridLegacy>`:
+		* Change the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
+		
+	* For :ref:`GPU skin <pedestrianGPU>` by using utils method (:ref:`example <gpuAnimatorExample>`).
+		
+	.. note::
+		For an example of a system, please read the scripts below:
+			* SwitchTalkingKeySystem.cs.
+			
 .. _pedestrianMovementState:
 
 Movement State

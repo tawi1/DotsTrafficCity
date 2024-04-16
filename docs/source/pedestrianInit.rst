@@ -69,6 +69,8 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 |                        |              |           |              |
 +------------------------+--------------+-----------+--------------+
 
+.. _legacyAnimatorExample:
+
 How To Use
 """"""""""""""
 
@@ -180,6 +182,8 @@ How To Create
 	#. Assign :ref:`Ragdolls <pedestrianRagdoll>`. **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
+	
+.. _gpuAnimatorExample:
 	
 How To Use
 """"""""""""""
@@ -493,39 +497,147 @@ Physics
 States
 ----------------
 
+Common Logic
+~~~~~~~~~~~~
+
+#. Some system set the next :ref:`Action state <pedestrianActionState>` in the `NextStateComponent` by method.
+
+	* bool NextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent)
+		`Example method, if state can't be set, then target swap back.`
+		
+	* bool NextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight)
+		`Example method without retargeting.`
+	
+#. `PedestrianStateSystem` is checking `NextStateComponent` for non-default next :ref:`Action state <pedestrianActionState>` and checks if the list of available states contains that state.
+
+	`Available state list for the current state can be defined` :ref:`here <pedestrianStateAuthoring>`.
+	
+#. If state is available, set `StateComponent` to the new state and set :ref:`Movement state <pedestrianMovementState>` according to :ref:`Movement binding data <pedestrianStateBinding>`.
+#. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system (for legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`, for GPU skin :ref:` GPUAnimatorSystem <gpuAnimatorExample>`).
+
 How To Change
+~~~~~~~~~~~~
+
+..  code-block:: r
+
+	// Switch state example
+	
+    [WithDisabled(typeof(WaitForGreenLightTag))]
+    [BurstCompile]
+    public partial struct CheckTrafficLightJob : IJobEntity
+    {
+        void Execute(
+            ref DestinationComponent destinationComponent,
+            ref NextStateComponent nextStateComponent,
+            EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
+			EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
+		{
+			checkTrafficLightStateTagRW.ValueRW = false;
+
+			//Example red traffic light flag logic
+			bool redLight = true;
+			
+			if (redLight)
+			{
+				// If the next state is available, start waiting for a green light. 
+				
+				if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
+				{
+					// Some logic
+					
+					waitForGreenLightTagRW.ValueRW = true;
+					
+					// If the entity has a custom animation for this state, use the 'AnimatorStateExtension.AddCustomAnimatorState' method
+				}
+				else
+				{
+					// Otherwise return to previous destination, for example
+				}				
+			}
+			else
+			{
+			    // Not red traffic light then set cross the road state										
+				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+			}
+		}
+	}
+	
+Custom State System Example
 ~~~~~~~~~~~~
 
 ..  code-block:: r
 
 	//Switch state example
 	
-    [WithAll(typeof(CheckTrafficLightStateTag))]
     [BurstCompile]
-    public partial struct CheckTrafficLightJob : IJobEntity
+    public partial struct CustomStateJob : IJobEntity
     {
-        public EntityCommandBuffer.ParallelWriter CommandBuffer;
-
         void Execute(
-            Entity entity,
-            [ChunkIndexInQuery] int entityInQueryIndex,
-            ref DestinationComponent destinationComponent,
-            ref NextStateComponent nextStateComponent)
+            ref StateComponent stateComponent,
+            ref NextStateComponent nextStateComponent,
+            EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW)
 		{
-			//Example red traffic light flag logic
-			bool redLight = true;
+			// Some logic for waiting traffic light
+			bool greenLight = true;
 			
-			if (redLight)
+			if (!greenLight)
 			{
-				if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
-				{
-					 CommandBuffer.SetComponentEnabled<WaitForGreenLightTag>(entityInQueryIndex, entity, true);
-					 //Logic
-				}
+				// Some logic while waiting for the green light			
 			}
+			
+			// If the traffic light is green or another system has changed state, leave current system
+			var leaveState = greenLight || !stateComponent.HasActionState(in nextStateComponent, ActionState.WaitForGreenLight);
+			
+			if (leaveState)
+			{
+				waitForGreenLightTagRW.ValueRW = false;
+				
+				if (greenLight)
+				{
+					nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+				}
+				else
+				{
+					// Otherwise logic if the state is interrupted with another system
+				}
+			}	
 		}
 	}
+	
+	.. note::
+		For an example of a system, please read the scripts below:
+			* BenchStateSystem.cs.
+			* SwitchTalkingKeySystem.cs.
 
+Custom Animator State
+~~~~~~~~~~~~
+
+#. If you want to override default movement animation use the method:
+
+	..  code-block:: r
+
+		AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)
+		
+	* And add hash of your animation in the following systems.
+
+	* For :ref:`legacy skin <pedestrianHybridLegacy>`.
+		* **LegacyAnimatorCustomStateSystem**
+		
+	* For :ref:`GPU skin <pedestrianGPU>`.
+		* **GPUAnimatorCustomStateSystem**	
+	
+#. If the pedestrian already in the custom animator state use the method:
+
+	..  code-block:: r
+
+		AnimatorStateExtension.ChangeAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState, bool immediateUpdate = true)
+	
+#. After all the custom animation is complete, use the method to return the default animation system:
+
+	..  code-block:: r
+
+		AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)
+	
 .. _pedestrianMovementState:
 
 Movement State
@@ -760,6 +872,7 @@ State Dictionary
 	* **Additive** : additive state flag adds to the current state and is processed by the `External system`.
 	* **Additive any** : additive state flag adds to the current state and is processed by the `External system` & ignores available next state flags.
 
+.. _pedestrianStateBinding:
 
 Movement State Binding Dictionary
 """"""""""""""""""

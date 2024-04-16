@@ -193,6 +193,7 @@ How To Use
 ..  code-block:: r
 	
 	private NativeHashMap<SkinAnimationHash, HashToIndexData> hashToLocalDataLocalRef;
+	
 	void ISystemStartStop.OnStartRunning(ref SystemState state)
 	{
 		hashToLocalDataLocalRef = CrowdSkinProviderSystem.HashToLocalDataStaticRef;
@@ -205,6 +206,7 @@ How To Use
 		{
 			HashToLocalData = hashToLocalDataLocalRef,
 		};
+		
 		switchAnimJob.Schedule();
 	}
 	
@@ -213,6 +215,7 @@ How To Use
     {
 		[ReadOnly]
 		public NativeHashMap<SkinAnimationHash, HashToIndexData> HashToLocalData;
+		
 		void Execute(
 		Entity entity,
 		ref SkinUpdateComponent skinUpdateComponent,
@@ -526,6 +529,7 @@ How To Change
     [BurstCompile]
     public partial struct CheckTrafficLightJob : IJobEntity
     {
+	
     void Execute(
 	ref DestinationComponent destinationComponent,
 	ref NextStateComponent nextStateComponent,
@@ -573,36 +577,37 @@ Custom State System
     [BurstCompile]
     public partial struct CustomStateJob : IJobEntity
     {
-        void Execute(
-		ref StateComponent stateComponent,
-		ref NextStateComponent nextStateComponent,
-		EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW)
+	
+	void Execute(
+	ref StateComponent stateComponent,
+	ref NextStateComponent nextStateComponent,
+	EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW)
+	{
+		// Some logic for waiting traffic light
+		bool greenLight = true;
+		
+		if (!greenLight)
 		{
-			// Some logic for waiting traffic light
-			bool greenLight = true;
-			
-			if (!greenLight)
-			{
-				// Some logic while waiting for the green light			
-			}
-			
-			// If the traffic light is green or another system has changed state, leave current system
-			var leaveState = greenLight || !stateComponent.HasActionState(in nextStateComponent, ActionState.WaitForGreenLight);
-			
-			if (leaveState)
-			{
-				waitForGreenLightTagRW.ValueRW = false;
-				
-				if (greenLight)
-				{
-					nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
-				}
-				else
-				{
-					// Otherwise logic if the state is interrupted with another system
-				}
-			}	
+			// Some logic while waiting for the green light			
 		}
+		
+		// If the traffic light is green or another system has changed state, leave current system
+		var leaveState = greenLight || !stateComponent.HasActionState(in nextStateComponent, ActionState.WaitForGreenLight);
+		
+		if (leaveState)
+		{
+			waitForGreenLightTagRW.ValueRW = false;
+			
+			if (greenLight)
+			{
+				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+			}
+			else
+			{
+				// Otherwise logic if the state is interrupted with another system
+			}
+		}	
+	}
 	}
 
 .. _customAnimatorState:
@@ -637,7 +642,7 @@ Method #1
 	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)``
 			
 	.. note::
-		For an example of a system, please read the scripts below:
+		For an example of a system, please read the script below:
 			* BenchStateSystem.cs.
 			
 Method #2
@@ -649,7 +654,7 @@ Method #2
 	* For :ref:`GPU skin <pedestrianGPU>` by using utils method (:ref:`example <gpuAnimatorExample>`).
 		
 	.. note::
-		For an example of a system, please read the scripts below:
+		For an example of a system, please read the script below:
 			* SwitchTalkingKeySystem.cs.
 			
 .. _pedestrianMovementState:

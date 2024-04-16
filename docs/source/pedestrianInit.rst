@@ -515,9 +515,9 @@ Common Logic
 #. If state is available, set `StateComponent` to the new state and set :ref:`Movement state <pedestrianMovementState>` according to :ref:`Movement binding data <pedestrianStateBinding>`.
 #. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system.
 	* For legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
-	* For GPU skin :ref:` GPUAnimatorSystem <gpuAnimatorExample>`.
+	* For GPU skin :ref:`GPUAnimatorSystem <gpuAnimatorExample>`.
 	
-#. If you want to set the :ref:`custom animation <customAnimatorState>` for pedestrian read :ref:` this <customAnimatorState>`.
+#. If you want to set the :ref:`custom animation <customAnimatorState>` for pedestrian read :ref:`this <customAnimatorState>`.
 
 How To Change
 ~~~~~~~~~~~~
@@ -531,10 +531,10 @@ How To Change
     public partial struct CheckTrafficLightJob : IJobEntity
     {
         void Execute(
-			ref DestinationComponent destinationComponent,
-			ref NextStateComponent nextStateComponent,
-			EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
-			EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
+		ref DestinationComponent destinationComponent,
+		ref NextStateComponent nextStateComponent,
+		EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW,
+		EnabledRefRW<CheckTrafficLightStateTag> checkTrafficLightStateTagRW)
 		{
 			// Tag is triggering system
 			checkTrafficLightStateTagRW.ValueRW = false;
@@ -544,50 +544,50 @@ How To Change
 			
 			if (redLight)
 			{
-				// If the next state is available, start waiting for a green light. 
-				
-				if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
-				{
-					// Some logic
-					
-					waitForGreenLightTagRW.ValueRW = true;
-					
-					// If the entity has a custom animation for this state, use the 'AnimatorStateExtension.AddCustomAnimatorState' method
-				}
-				else
-				{
-					// Otherwise return to previous destination, for example
-				}				
+			// If the next state is available, start waiting for a green light. 
+			
+			if (nextStateComponent.TryToSetNextState(ActionState.WaitForGreenLight, ref destinationComponent))
+			{
+			// Some logic
+			
+			waitForGreenLightTagRW.ValueRW = true;
+			
+			// If the entity has a custom animation for this state, use the 'AnimatorStateExtension.AddCustomAnimatorState' method
 			}
 			else
 			{
-				// Not red traffic light then set cross the road state										
-				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+			// Otherwise return to previous destination, for example
+			}				
+			}
+			else
+			{
+			// Not red traffic light then set cross the road state										
+			nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
 			}
 		}
 	}
 	
-Custom State System Example
+Custom State System
 ~~~~~~~~~~~~
 
 ..  code-block:: r
 
-	//Switch state example
+	// Custom state system example
 	
     [BurstCompile]
     public partial struct CustomStateJob : IJobEntity
     {
         void Execute(
-            ref StateComponent stateComponent,
-            ref NextStateComponent nextStateComponent,
-            EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW)
+		ref StateComponent stateComponent,
+		ref NextStateComponent nextStateComponent,
+		EnabledRefRW<WaitForGreenLightTag> waitForGreenLightTagRW)
 		{
 			// Some logic for waiting traffic light
 			bool greenLight = true;
 			
 			if (!greenLight)
 			{
-				// Some logic while waiting for the green light			
+			// Some logic while waiting for the green light			
 			}
 			
 			// If the traffic light is green or another system has changed state, leave current system
@@ -595,16 +595,16 @@ Custom State System Example
 			
 			if (leaveState)
 			{
-				waitForGreenLightTagRW.ValueRW = false;
-				
-				if (greenLight)
-				{
-					nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
-				}
-				else
-				{
-					// Otherwise logic if the state is interrupted with another system
-				}
+			waitForGreenLightTagRW.ValueRW = false;
+			
+			if (greenLight)
+			{
+				nextStateComponent.TryToSetNextState(ActionState.CrossingTheRoad);
+			}
+			else
+			{
+				// Otherwise logic if the state is interrupted with another system
+			}
 			}	
 		}
 	}
@@ -614,12 +614,16 @@ Custom State System Example
 Custom Animator State
 ~~~~~~~~~~~~
 
+If you want to override the default motion animation, use these methods:
+
 Method #1
 """"""""""""""
 
-#. If you want to override default movement animation use the method:
-	..  code-block:: r
-		AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)
+* This method is used when :ref:`GPU pedestrians <pedestrianGPU>` require complex :ref:`animation transitions <animationBakerHowToCreateTransition>`.
+
+#. Add the custom anitator state by using the utils method:
+
+	* ``AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)``
 		
 	* And add hash of your animation in the following systems.
 	* For :ref:`legacy skin <pedestrianHybridLegacy>`.
@@ -630,13 +634,11 @@ Method #1
 	
 #. If the pedestrian already in the custom animator state use the method:
 
-	..  code-block:: r
-		AnimatorStateExtension.ChangeAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState, bool immediateUpdate = true)
+	* ``AnimatorStateExtension.ChangeAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState, bool immediateUpdate = true)``
 	
 #. After all the custom animation is complete, use the method to return the default animation system:
 
-	..  code-block:: r
-		AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)
+	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)````
 			
 	.. note::
 		For an example of a system, please read the scripts below:

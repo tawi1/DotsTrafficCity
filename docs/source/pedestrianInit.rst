@@ -886,7 +886,7 @@ State Dictionary
 | **Next states** : which :ref:`states <pedestrianActionState>` can override the current :ref:`state <pedestrianActionState>`.
 
 **State type:** 
-	* **Default** : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there).
+	* **Default** : the state proccessed by `PedestrianStateSystem` system (code processing for state should be there PedestrianStateSystem.cs:144).
 	* **External system** : the state proccessed by external system (code processing for state should be in the separate system).
 	* **Additive** : additive state flag adds to the current state and is processed by the `External system`.
 	* **Additive any** : additive state flag adds to the current state and is processed by the `External system` & ignores available next state flags.

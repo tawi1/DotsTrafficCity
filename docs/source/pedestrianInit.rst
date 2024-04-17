@@ -88,8 +88,9 @@ How To Use
 	}).Run();
 		
 **Used in systems:**
-	* PedestrianLegacyAnimatorSystem
-	* PedestrianSittingLegacyAnimatorSystem
+	* LegacyAnimatorSystem
+	* LegacyAnimatorCustomStateSystem
+	* LegacyTalkingAnimatorSystem
 
 .. _pedestrianGPU:
 
@@ -169,8 +170,6 @@ How To Create
 			
 				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
 
-		.. note:: In the current version of the project, all pedestrians should have all the animations from the :ref:`Animation Collection <animationGPUAnimationCollection>` (will be changed in the near future).
-		
 	#. Assign animations to each entry in the same way.
 	
 	#. Add custom optional animations for the desired pedestrians [optional step].
@@ -230,7 +229,7 @@ How To Use
 		
 **Used in systems:**
 	* GPUAnimatorSystem
-	* GPUAnimatorCustomSitStateSystem
+	* GPUAnimatorCustomStateSystem
 	* GPUTalkAnimatorSystem
 	
 .. _animationTextureData:

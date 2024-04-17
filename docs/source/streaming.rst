@@ -48,7 +48,7 @@ The extended state list is used for objects that require a pre-init state before
 	
 	.. note:: 
 		* States add to the prefab entity by `CullComponentsExtension.PreinitCullComponentSet` extension method.
-		* It is used in the project for static physics objects.
+		* It is used in the project for static physics objects to load them earlier than the dynamic physics objects to avoid dips through static surfaces.
 	
 Scene Streaming
 -------------------

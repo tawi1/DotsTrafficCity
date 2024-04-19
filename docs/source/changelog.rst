@@ -10,8 +10,8 @@ Added
 ~~~~~~~~~~~~
 
 * New connection type for :ref:`Path Creator <pathCreator>`.
-* New traffic light customizations for Road Segment Creator tool.
-* New crosswalk node shape option for Road Segment Creator.
+* New :ref:`traffic light <roadSegmentCreatorLightSettings>` customizations for Road Segment Creator tool.
+* New :ref:`crosswalk node shape <pedestrianNodeSettings>` option for :ref:`Road Segment Creator <roadSegmentCreator>`.
 * New state utils methods for pedestrian.
 
 Fixed

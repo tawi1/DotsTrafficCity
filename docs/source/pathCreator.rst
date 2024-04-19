@@ -16,7 +16,7 @@ How To Use
 	
 #. Select the :ref:`source traffic node <trafficNode>` and :ref:`target traffic node <trafficNode>` in the scene (:ref:`example <pathCreatorExamples>`).
 #. Customize new :ref:`path settings <pathCreatorPathSettings>`.
-#. Select the desired `Connection Mode Type` (:ref:`connection settings <pathCreatorConnectionSettings>`).
+#. Select the desired `Connection Type` (:ref:`connection settings <pathCreatorConnectionSettings>`).
 #. Customize `Source` & `Target` :ref:`connection side <trafficNodeConnectionInfo>`, so that the path is positioned correctly (:ref:`example <pathCreatorExamples>`) (:ref:`connection settings <pathCreatorConnectionSettings>`).
 #. Click the `Create` button.
 #. :ref:`Customize <pathCustomize>` the created :ref:`paths <path>`.
@@ -65,22 +65,24 @@ Connection Settings
 
 	.. image:: /images/road/trafficNode/pathCreator/ConnectionSettings.png
 	
-**Connection mode type:** 
-	* **Single connect** : only 1 :ref:`path <path>` is created.
-	* **Direction connect** : :ref:`paths <path>` of all lanes are created.
-	
 **Connection type:** 
-	* **Create only if not exist** : :ref:`path <path>` will be created only if the :ref:`path <path>` has not been created before.
-	* **Allow override** : :ref:`path <path>` will be overwritten if created earlier.
+	* **Single connect** : only 1 :ref:`path <path>` is created.
+	* **One direction connect** : :ref:`paths <path>` of all lanes are created for one side.
+	* **Two direction connect** : :ref:`paths <path>` of all lanes are created for two sides **[New]**.
 	
-| **Auto detect side** : when selecting nodes, the selected :ref:`sides <trafficNodeConnectionInfo>` will be automatically detected
+**Override type:** 
+	* **Not allowed** : :ref:`path <path>` will be created only if the :ref:`path <path>` has not been created before.
+	* **Allowed** : :ref:`path <path>` will be overwritten if created earlier.
+	
+| **Auto detect side** : when selecting nodes, the selected :ref:`sides <trafficNodeConnectionInfo>` will be automatically detected.
+| **Auto switch type** : automatically switch connection type after selecting nodes depending on connection sides.
 | **Connect same side** : target :ref:`side <trafficNodeConnectionInfo>` will be the same as source :ref:`side <trafficNodeConnectionInfo>`.
 
-**Source connection type** : 
+**Source node side** : 
 	* **Default side** : selected :ref:`right side <trafficNodeConnectionInfo>` point in the source :ref:`traffic node <trafficNode>`.
 	* **External side** : selected :ref:`left side <trafficNodeConnectionInfo>` point in the source :ref:`traffic node <trafficNode>`.
 	
-**Target connection type** : 
+**Target node side** : 
 	* **Default side** : selected :ref:`right side <trafficNodeConnectionInfo>` point in the target :ref:`traffic node <trafficNode>`.
 	* **External side** : selected :ref:`left side <trafficNodeConnectionInfo>` point in the target :ref:`traffic node <trafficNode>`.
 	

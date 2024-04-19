@@ -428,6 +428,14 @@ Light settings
 	
 `Youtube tutorial. <https://youtu.be/r85kMJ4BL5E>`_
 	
+How To Use
+""""""""""""""
+
+#. Turn on traffic light option.
+#. Select `Light prefab type`.
+#. Set the traffic light offset or enable `Light handle type`.
+#. If you want to configure the traffic lights individually, select the `Node` button.
+	
 Traffic lights
 """"""""""""""
 
@@ -435,6 +443,11 @@ Traffic lights
 | **Min TrafficNodes count for add light** : minimum number of :ref:`traffic nodes <trafficNode>` in the segment to add traffic light.
 | **Add traffic light** : add traffic light to the segment.
 
+**Light handle type:** 
+	* **None**
+	* **Position** : enable position handle for traffic lights.
+	* **Rotation** : enable rotation handle for traffic lights.
+	
 **Selected light prefab type** : prefab of the traffic light to be added [can be changed in creator settings].
 	* **Oneway**
 	* **Two way**
@@ -446,9 +459,10 @@ Traffic lights
 	* **Right left** : will be added on both sides of the :ref:`traffic node <trafficNode>`.
 	
 | **Traffic lights offset** : local traffic light offset relative to :ref:`traffic node <trafficNode>`.
-**Light angle offset settings** :
-	* **Angle index** : rotation angle index (0 - 0°, 1 - 90°, 2 - 180°, 3 - 270°).
-	* **Revert** :
+
+**Light angle offset settings:** 
+	* **Angle offset** : local rotation angle of the traffic light.
+	* **Flip index** : switches to the opposite :ref:`light index <trafficLightIndex>` in the traffic light.
 	
 Pedestrian lights
 """"""""""""""

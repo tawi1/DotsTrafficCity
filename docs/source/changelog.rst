@@ -3,6 +3,28 @@
 Change Log
 ************
 
+[1.0.6] - 19-04-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* New connection type for :ref:`Path Creator <pathCreator>`.
+* New traffic light customizations for Road Segment Creator tool.
+* New crosswalk node shape option for Road Segment Creator.
+* New state utils methods for pedestrian.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed path connection for Path Creator in some cases
+* Fix for traffic light duplication when editing a road segment in the subscene.
+
+Changed
+~~~~~~~~~~~~
+
+* UX improvement for Path Creator.
+
 [1.0.5] - 15-04-2024
 ------------
 

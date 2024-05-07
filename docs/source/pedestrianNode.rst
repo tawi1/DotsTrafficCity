@@ -216,6 +216,7 @@ Create Node
  
 #. Press the `Tab` button on the keyboard to create preview :ref:`PedestrianNode <pedestrianNode>`.
 #. Place the preview :ref:`PedestrianNode <pedestrianNode>` at the desired position.
+#. If you need to attach the :ref:`PedestrianNode <pedestrianNode>` to a custom shape surface, enable `Auto Attach To Surface` in the `Inspector`.
 #. Press `E` button on the keyboard to create the final :ref:`PedestrianNode <pedestrianNode>`.
 
 	.. tip:: You can change the :ref:`hotkeys <pedestrianNodeCreatorHotkeys>` to your taste.

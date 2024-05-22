@@ -10,3 +10,4 @@ Common Info
 		/commonInfo.rst
 		/commonConfigs.rst
 		/commonTestScenes.rst
+		/layerInfo.rst

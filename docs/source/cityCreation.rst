@@ -20,6 +20,10 @@ New Scene
 #. Create a `Spawnpoint object` (any transform) in the scene where you want the player to spawn & assign it to :ref:`PlayerSpawner <playerSpawner>`.
 
 	.. image:: /images/gettingstarted/PlayerSpawner.png
+	`Scene hierarchy example.`
+	
+	.. image:: /images/gettingstarted/PlayerSpawner1.png
+	`Component example.`
 	
 #. In the :ref:`PlayerSpawner <playerSpawner>` select which type of player you want to spawn first, NPC or Car. 
 	
@@ -35,7 +39,11 @@ New Scene
 #. Generate a :ref:`subscene <roadEntitySubscene>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
-#. Set desired local position of :ref:`Cull point <cullPointInfo>` (by default, the cull point is the child in the `Main Camera`) & :ref:`Culling distances <cullConfig>`.
+#. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>`.
+	
+	.. note:: By default, the cull point is the child in the `Main Camera`.
+	
+#. Set the layer for your ground surfaces to :ref:`Ground (18) <pedestrian>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <pedestrian>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
 #. Add & customize :ref:`game sounds <sound>`.
 
 .. _demoOpening:

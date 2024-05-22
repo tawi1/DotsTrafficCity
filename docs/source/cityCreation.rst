@@ -17,7 +17,7 @@ New Scene
 
 	.. image:: /images/gettingstarted/ExampleScene.png
 	
-#. Create a `Spawnpoint object` (any transform) in the scene where you want the player to spawn & assign it to :ref:`PlayerSpawner <playerSpawner>`.
+#. Create a `SpawnPoint object` (any transform) in the scene where you want the player to spawn & assign it to :ref:`PlayerSpawner <playerSpawner>`.
 
 	.. image:: /images/gettingstarted/PlayerSpawner.png
 	`Scene hierarchy example.`
@@ -29,7 +29,7 @@ New Scene
 	
 	.. image:: /images/gettingstarted/PlayerSpawner2.png
 
-#. Select the `Player agent type` in the :ref:`General Settings <roadSegmentCreatorGeneralSettings>` to spawn the `Player` or the `Flying camera`.
+#. Select the `Player agent type` in the :ref:`General Settings <roadSegmentCreatorGeneralSettings>` to spawn the `Player` or the `Free fly camera`.
 
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	

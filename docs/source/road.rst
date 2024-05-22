@@ -11,6 +11,7 @@ Road
 		/roadSegment.rst
 		/roadSegmentCreator.rst
 		/bakingInfo.rst
+		/roadWorkflow.rst
 		/trafficNode.rst
 		/pathCreator.rst
 		/path.rst

@@ -44,4 +44,35 @@ Steps:
 	#. Press the `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 
+.. _configEdit:
+
+Config Editing
+----------------
+
+There are 2 variants to edit configs:
+
+Main Scene Editing
+~~~~~~~~~~~~
+
+	.. image:: /images/road/installation/MainSceneExample.png
+
+Steps
+""""""""""""""
+
+#. Select :ref:`Hub <hub>` in the scene.
+#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button.
+	
+	.. image:: /images/road/installation/Hub.png
+	
+Directional Editing
+~~~~~~~~~~~~
+
+	.. image:: /images/road/installation/EntitySubSceneExample.png
+	
+Steps
+""""""""""""""
+
+#. Open the `EntitySubScene` :ref:`subscene <subscene>`.
+#. Edit any config.
+#. Save & close :ref:`subscene <subscene>`.
 	

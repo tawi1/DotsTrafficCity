@@ -29,7 +29,7 @@ New Scene
 	
 	.. image:: /images/gettingstarted/PlayerSpawner2.png
 
-#. Select the `Player agent type` in the :ref:`General Settings <roadSegmentCreatorGeneralSettings>` to spawn the `Player` or the `Free fly camera`.
+#. Select the `Player agent type` in the :ref:`General Settings <generalSettingsConfig>` to spawn the `Player` or the `Free fly camera`.
 
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
@@ -43,7 +43,7 @@ New Scene
 	
 	.. note:: By default, the cull point is the child in the `Main Camera`.
 	
-#. Set the layer for your ground surfaces to :ref:`Ground (18) <pedestrian>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <pedestrian>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
+#. Set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
 #. Add & customize :ref:`game sounds <sound>`.
 
 .. _demoOpening:

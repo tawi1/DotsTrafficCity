@@ -9,12 +9,12 @@ Player Spawner
 Info
 -------------------	
 
-| `Player Spawner Service` is used to spawn player in the city. Implements `IPlayerSpawnerService` interface & called by `PlayerSpawnCommand.cs` script.
+| `Player Spawner Service` is used to spawn player in the city. This service implements `IPlayerSpawnerService` interface & called by `PlayerSpawnCommand.cs` script.
 
 Available spawn types:
 	* NPC: spawns the :ref:`Player NPC <playerNpc>`.
 	* Car: spawns the :ref:`Player Car <playerCar>`.
-	* Free fly camera : spawns free fly camera (should be set in the :ref:`General Settings <roadSegmentCreatorGeneralSettings>`)
+	* Free fly camera : spawns free fly camera (should be set in the :ref:`General Settings <generalSettingsConfig>`)
 
 Where To Find
 -------------------	
@@ -38,8 +38,8 @@ Steps
 
 * Find on the scene `PlayerInstaller`:
 
-	.. image:: /images/gettingstarted/PlayerSpawnerInstaller.png
+	.. image:: /images/configs/player/PlayerSpawnerInstaller.png
 	
 * Assign `Player Spawner Service`:
 	
-	.. image:: /images/gettingstarted/PlayerSpawnerInstaller2.png
+	.. image:: /images/configs/player/PlayerSpawnerInstaller2.png

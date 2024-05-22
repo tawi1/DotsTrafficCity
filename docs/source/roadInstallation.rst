@@ -60,7 +60,7 @@ Steps
 """"""""""""""
 
 #. Select :ref:`Hub <hub>` in the scene.
-#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button.
+#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row.
 	
 	.. image:: /images/road/installation/Hub.png
 	
@@ -74,5 +74,6 @@ Steps
 
 #. Open the `EntitySubScene` :ref:`subscene <subscene>`.
 #. Edit any config.
+#. After editing any config in the subscene, in the :ref:`Hub <subsceneGenerator>` press the `Copy From Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row in the subscene.
 #. Save & close :ref:`subscene <subscene>`.
 	

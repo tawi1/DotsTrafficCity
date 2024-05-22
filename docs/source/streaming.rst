@@ -13,7 +13,7 @@ Cullpoint Info
 -------------------
 
 The cull point is the origin for the surrounding entities (by default, it's a child of the camera). The :ref:`cull state <cullPointStates>` of the surrounding entities varies depending on the distance to the culling point (:ref:`example <cullPointExamples>`).
-You can change the distances in the :ref:`cull config <cullConfig>`.
+You can change the distances in the :ref:`cull config <cullConfig>` & :ref:`debug <cullPointDebug>`.
 
 .. _cullPointStates:
 

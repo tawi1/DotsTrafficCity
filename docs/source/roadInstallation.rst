@@ -9,11 +9,11 @@ Traffic Road Installation
 #. Create initial :ref:`scene <cityCreation>` objects.
 #. Create the required :ref:`RoadSegments <roadSegment>`. And add them as children to the :ref:`RoadParent <roadParent>`.
 #. Create the :ref:`necessary paths <pathCreator>`. 
-#. Configure the :ref:`paths <path>`. 
+#. Configure the :ref:`paths <pathCustomize>`. 
 #. Create the necessary :ref:`PedestrianNode <pedestrianNode>` using the :ref:`PedestrianNodeCreator <pedestrianNodeCreator>`.
 #. Adjust the :ref:`Traffic lights <trafficLight>`.
-#. Create the :ref:`Traffic Areas <trafficArea>` **[optional step]**.
-#. Create the :ref:`Public Routes <trafficPublicRoute>` **[optional step]**.
+#. Create the :ref:`Traffic Areas <trafficArea>`, for example if you have a congested car park **[optional step]**.
+#. Create the :ref:`Public Routes <trafficPublicRoute>` if you have :ref:`Public transport <trafficPublic>` with a given route **[optional step]**.
 #. Open the :ref:`Road Parent <roadParentInfo>`.
 	
 	.. _roadParent:
@@ -24,7 +24,7 @@ Traffic Road Installation
 #. Press `Connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
 #. Press the `Bake` button (:ref:`bake info <bakingInfo>`).
 #. Create the :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
-#. Read more about the :ref:`Road <roadEdit>` & :ref:`Config <configEdit>` editing workflow.
+#. For further changes to roads and configs, read the :ref:`Road <roadEdit>` & :ref:`Config <configEdit>` editing workflow.
 
 .. _roadEntitySubscene:
 
@@ -46,7 +46,7 @@ Steps:
 
 .. _configEdit:
 
-Config Editing
+Config Editing Workflow
 ----------------
 
 There are 2 variants to edit configs:

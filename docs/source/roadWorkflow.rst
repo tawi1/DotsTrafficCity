@@ -19,3 +19,5 @@ Steps
 #. Make any change in the road.
 #. :ref:`Bake <bakingInfo>` the road.
 #. Click `Generate` button in the :ref:`Entity Subscene Generator <subsceneGenerator>`.
+
+	.. note:: By default, the config from the :ref:`main scene <mainScene>` is copied to the :ref:`subscene <subscene>` when :ref:`subscene <subscene>` generation is repeated.

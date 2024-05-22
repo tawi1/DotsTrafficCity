@@ -8,6 +8,8 @@ Common Debug
 
 `Youtube tutorial. <https://youtu.be/5ZtQahmDoO0&t=331>`_
 
+.. _cullPointDebug:
+
 CullPoint Debugger
 ------------
 

@@ -3,7 +3,8 @@
 Baking Info
 =====
 
-Baking data is required to store calculated data to avoid heavy calculations each time. This should be done after each :ref:`road change <roadEdit>` and before the launch of the scene.
+* Baking data is required to store calculated data to avoid heavy calculations each time. This should be done after each :ref:`road change <roadEdit>` and before the launch of the scene.
+* To validate that all traffic objects are properly configured (use the :ref:`TrafficObjectFinder tool <trafficObjectFinder>` to find the traffic objects with the errors by `InstanceID` shown in the console).
 
 `Youtube tutorial. <https://youtu.be/P1iP4XR383M>`_
 

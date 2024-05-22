@@ -17,10 +17,24 @@ New Scene
 
 	.. image:: /images/gettingstarted/ExampleScene.png
 	
-#. Create a :ref:`road for traffic <roadInstallation>`.
+#. Create a `Spawnpoint object` (any transform) in the scene where you want the player to spawn & assign it to :ref:`PlayerSpawner <playerSpawner>`.
+
+	.. image:: /images/gettingstarted/PlayerSpawner.png
+	
+#. In the :ref:`PlayerSpawner <playerSpawner>` select which type of player you want to spawn first, NPC or Car. 
+	
+	.. image:: /images/gettingstarted/PlayerSpawner2.png
+
+#. Select the `Player agent type` in the :ref:`General Settings <roadSegmentCreatorGeneralSettings>` to spawn the `Player` or the `Flying camera`.
+
+	.. image:: /images/gettingstarted/CitySettingsInitializer.png
+	
+#. Create a :ref:`Custom camera <customCamera>` if you want to use your own camera solution **[optional step]**.
+#. Go through all the steps to create :ref:`road for traffic <roadInstallation>`.
 #. Generate a :ref:`subscene <roadEntitySubscene>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
+#. Set desired local position of :ref:`Cull point <cullPointInfo>` (by default, the cull point is the child in the `Main Camera`) & :ref:`Culling distances <cullConfig>`.
 #. Add & customize :ref:`game sounds <sound>`.
 
 .. _demoOpening:

@@ -56,12 +56,12 @@ Factory that contains player `Hybrid DOTS` NPCs.
 Hybrid Mono
 -------------------	
 
-The player NPC behaviour is handled by the user's character controller (your own implementation).
+The player NPC behaviour is handled by the user's character controller (your own implementation required).
 
 Use Cases
 ~~~~~~~~~~~~
 
-* Useful if you want to simulate :ref:`NPCs <pedestrian>` without traffic with your own controller based on a `Monobehaviour` script (e.g. for different ancient cities).
+* Useful if you want to simulate :ref:`NPCs <pedestrian>` without traffic with your own controller based on a `Monobehaviour` script (e.g. for different ancient cities without traffic).
 
 	.. note:: `DOTS` traffic collision with `Hybrid Mono player` is not implemented yet.
 	

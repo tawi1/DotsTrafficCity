@@ -33,7 +33,7 @@ Factory
 	#. If necessary, configure :ref:`Ragdoll <pedestrianRagdoll>` and assign to the `Pedestrian Skin Factory Data` (make sure :ref:`Ragdoll <pedestrianRagdoll>` is :ref:`enabled <pedestrianSettingsConfig>`).
 
 	.. note:: 
-		Each `Hybrid legacy` pedestrian prefab should have `PedestrianReferences` component.
+		Each `Hybrid legacy` pedestrian prefab should have `PedestrianEntityRef` component.
 		
 Animations
 """"""""""""""

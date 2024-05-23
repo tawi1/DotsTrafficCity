@@ -3,6 +3,38 @@
 Change Log
 ************
 
+[1.0.7] - 24-05-2024
+------------
+
+Added
+~~~~~~~~~~~~
+ 
+* New auto-spline option for `Bezier` curves in the :ref:`Path Creator <pathCreator>`
+* New extrude lane option :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road in the :ref:`RoadSegmentCreator <roadSegmentCreator>`
+* New divider line for :ref:`Traffic nodes <trafficNode>`.
+* New components to interact with :ref:`Hybrid pedestrians <pedestrianHybridLegacy>` from `MonoBehaviour's`.
+* Custom ragdoll user's support for :ref:`Hybrid pedestrians <pedestrianHybridLegacy>`.
+* New custom IDs for vehicles in the :ref:`Car Prefab Creator <carPrefabCreator>`.
+* New car model selection list for the :ref:`player spawner <playerSpawner>` when the player is spawned in the car.
+* User's :ref:`custom camera <customCamera>` integration.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed :ref:`Pedestrian node <pedestrianNode>` connection on custom terrain shapes in the :ref:`Pedestrian node creator <pedestrianNodeCreator>`.
+* Fixed auto-switch type for oneway paths in the :ref:`Path Creator <pathCreator>`.
+* Player spawn, if the player originally spawned in the car.
+* Fixed a potential `Type mismatch` error for animation clips in :ref:`Animation Baker <animationBaker>` which could cause the UI to break.
+* Fixed a potential `NaN` position for pedestrian in the `Antistuck system`.
+* Fixed traffic spawner for the path with `0` index.
+* Fixed compatibility with Unity 2023.2.
+
+Changed
+~~~~~~~~~~~~
+
+* :ref:`Pedestrian node <pedestrianNode>` scene filtering updates when node settings are changed in the :ref:`Pedestrian node creator <pedestrianNodeCreator>`.
+* `PedestrianReferences` component renamed to `PedestrianEntityRef`.
+
 [1.0.6] - 22-04-2024
 ------------
 

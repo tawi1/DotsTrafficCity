@@ -33,6 +33,7 @@ Settings
 
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
+| **Divider width** : divider line width.
 | **Chance to spawn** : chance of the vehicle spawning in the node.
 | **Weight** : weight of the node for route selection by traffic.
 | **Custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).

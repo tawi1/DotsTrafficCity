@@ -449,7 +449,6 @@ Useful links:
 How To Setup
 """"""""""""""
 
-* Set the :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` mode.
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Local Avoidance`.
 * Configure :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`.
 

@@ -293,7 +293,7 @@ Extrude Lane
 	
 **How to use:**
 	
-#. Drag the green sphere when you want the new lane to start.
+#. Drag the green sphere from where you want the new lane to start.
 #. Drop the cursor where you want the lane to end.
 #. Adjust the position handle of the new path.
 #. Press `E` key or press `Create` button in the inspector to create new lane.

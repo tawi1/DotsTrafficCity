@@ -1,4 +1,4 @@
-.. _layerInfo
+.. _layerInfo:
 
 Layer Info
 =====

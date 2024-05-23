@@ -11,7 +11,7 @@ Added
  
 * New auto-spline option for `Bezier` curves in the :ref:`Path Creator <pathCreator>`
 * New extrude lane option :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road in the :ref:`RoadSegmentCreator <roadSegmentCreator>`
-* New divider line for :ref:`Traffic nodes <trafficNode>`.
+* New divider line for :ref:`Traffic nodes <trafficNode>` & :ref:`Custom straight <roadSegmentCreatorCustomStraight>` roads.
 * New components to interact with :ref:`Hybrid pedestrians <pedestrianHybridLegacy>` from `MonoBehaviour's`.
 * Custom ragdoll user's support for :ref:`Hybrid pedestrians <pedestrianHybridLegacy>`.
 * New custom IDs for vehicles in the :ref:`Car Prefab Creator <carPrefabCreator>`.

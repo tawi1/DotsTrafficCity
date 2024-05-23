@@ -178,7 +178,7 @@ How To Create
 		#. Add desired optional animations in the character list of the factory.
 		#. Bind added animations.		
 
-	#. Assign :ref:`Ragdolls <pedestrianRagdoll>`. **[optional step]**.
+	#. Assign :ref:`Ragdolls <pedestrianRagdoll>` **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
 	
@@ -412,7 +412,7 @@ Useful links:
 Installation
 """"""""""""""
 
-* Check that the :ref:`navigation package <packageInstallationOptional>` is installed.
+* Check that the :ref:`Navigation package <packageInstallationOptional>` is installed.
 * Make sure that navigation is enabled in the :ref:`General Config <generalSettingsConfig>`.
 * Ensure that :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
 * Each dynamic object in the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.

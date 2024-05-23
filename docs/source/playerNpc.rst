@@ -63,7 +63,7 @@ Use Cases
 
 * Useful if you want to simulate :ref:`NPCs <pedestrian>` without traffic with your own controller based on a `Monobehaviour` script (e.g. for different ancient cities without traffic).
 
-	.. note:: `DOTS` traffic collision with `Hybrid Mono player` is not implemented yet.
+	.. note:: `DOTS` traffic collision & interaction with `Hybrid Mono player npc` is not implemented yet.
 	
 How To Create
 ~~~~~~~~~~~~

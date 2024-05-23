@@ -33,7 +33,7 @@ New Scene
 
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
-#. Create your own :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>`.
+#. Create your own :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>`, if required **[optional step]**.
 #. Create a :ref:`Custom camera <customCamera>` if you want to use your own camera solution **[optional step]**.
 #. Go through all the steps to create :ref:`road for traffic <roadInstallation>`.
 #. Generate a :ref:`subscene <roadEntitySubscene>`.
@@ -45,6 +45,7 @@ New Scene
 	
 #. Set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
 #. Add & customize :ref:`game sounds <sound>`.
+#. Launch the scene.
 
 .. _demoOpening:
 

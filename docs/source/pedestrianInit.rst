@@ -420,10 +420,11 @@ Installation
 How To Setup
 """"""""""""""
 
-* Create & customize `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
-* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
+* Create new gameobject & add `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ component.
+* Set `Agent type` to `Pedestrian` & press the `Bake` button in the created `NavMeshSurface`.
 * Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Calc Nav Path`.
-		
+* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
+
 Pros And Cons
 """"""""""""""
 	

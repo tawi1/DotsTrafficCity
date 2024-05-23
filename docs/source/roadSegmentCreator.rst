@@ -272,14 +272,36 @@ New node settings type [custom settings enabled] new :ref:`TrafficNode <trafficN
 	* **Copy last** : will be created with the settings of the last created node.
 	* **Copy selected** : will be created with the settings of the selected node.
 		* **Copy node index**
-		
-Node Handles
+			
+Custom Path Settings
 """"""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentNodeHandles.png
 	
 | **Show traffic node handles** : on/off handles of :ref:`TrafficNodes <trafficNode>`
 | **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwading.
+
+Additional Settings
+""""""""""""""
+
+.. _extrudeLane:
+
+Extrude Lane
+^^^^^^^^^^^^^^^^^^^^^^
+
+	.. image:: /images/road/roadSegment/creator/ExtrudeLaneSettings.png
+	
+**How to use:**
+	
+#. Drag the green sphere when you want the new lane to start.
+#. Drop the cursor where you want the lane to end.
+#. Adjust the position handle of the new path.
+#. Press `E` key or press `Create` button in the inspector to create new lane.
+	
+.. only:: builder_html
+
+	.. image:: /images/road/roadSegment/creator/ExtrudeLaneExample.gif
+	`Example.`
 	
 Parking Builder
 """"""""""""""

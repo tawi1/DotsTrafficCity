@@ -45,7 +45,7 @@ New Scene
 	
 #. Set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
 #. Add & customize :ref:`game sounds <sound>`.
-#. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ package is not rendered on the `Sceneview`, to fix this follow these steps:
+#. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:
 		
 		``Edit/Preferences``

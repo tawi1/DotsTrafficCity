@@ -53,7 +53,7 @@ New Scene
 	#. Select the `Entities` tab.
 	#. Set `Scene view mode` to `Runtime Data`.
 	
-	.. image:: /images/gettingstarted/EntitiesDisplay.png
+		.. image:: /images/gettingstarted/EntitiesDisplay.png
 	
 #. Launch the scene.
 

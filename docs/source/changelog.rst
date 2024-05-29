@@ -3,6 +3,23 @@
 Change Log
 ************
 
+[1.0.7b] - 29-05-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Auto bootstrap option for single scene.
+* Bootstrap logging.
+* Entity road drawer for the editor time.
+
+Fixed
+~~~~~~~~~~~~
+
+* Car prefab creator ID duplicate error.
+* Script defines after the project update.
+* Input in the custom vehicle test scene.
+
 [1.0.7] - 24-05-2024
 ------------
 

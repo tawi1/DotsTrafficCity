@@ -39,17 +39,18 @@ Steps
 
 #. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
 
-#. If the script first compilation hangs for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
+#. If the script first compilation `hangs <https://forum.unity.com/threads/unity-hangs-on-open-during-script-compilation.1410000>`_ for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
 	.. image:: /images/gettingstarted/InitilizationWindow.png
 
 #. Click `Load Packages` to start downloading the packages required for this tool.
+#. If you get the error 'No git executable was found', install the :ref:`git <gitFix>` on your PC (:ref:`how to install <gitFix>`) or download these packages from the store.
 
 	.. note::
 		**Required custom packages:**
-			* **Naughty Attributes** (`com.dbrizov.naughtyattributes`) - extension for unity inspector made by Denis Rizov, also you can manually download it from unity asset store `Naughty Attributes <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_
+			* **Naughty Attributes** (`com.dbrizov.naughtyattributes`) - extension for unity inspector made by Denis Rizov (`Naughty Attributes <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_)
 			* **Extenject** (`com.svermeulen.extenject`) - library for injecting dependencies (`Extenject <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_).
 
 	.. note::
@@ -58,7 +59,6 @@ Steps
 			* **UNITY_PHYSICS_CUSTOM**
 			
 	.. warning::
-		* If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 		* 'nunit.framework.dll' could not be found, read :ref:`this <nunitFix>`.
 			
 #. Restart the `Unity` project after all the packages have been downloaded.

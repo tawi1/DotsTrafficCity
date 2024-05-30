@@ -104,7 +104,7 @@ Pure GPU Skin
 How To Create
 """"""""""""""
 
-	#. :ref:`Create textures and animation sheets <animationBaker>`.
+	#. :ref:`Create textures and animation sheets <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
 	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context .
 	
 		``Spirit604/Animation Baker/Animation Collection``

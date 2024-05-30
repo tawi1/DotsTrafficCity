@@ -65,7 +65,7 @@ Steps
 			
 	.. _packageInstallationOptional:
 	
-#. Click `Load Optional Packages` to start downloading the optional packages *(optional,* :ref:`git <gitFix>` *required)*.
+#. Click `Load Optional Packages` to start downloading the optional packages *(optional package,* :ref:`git <gitFix>` *required)*.
 
 	.. note::
 		**Optional packages:**

@@ -39,6 +39,8 @@ Steps
 
 #. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
 
+#. If the script first compilation hangs for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
+
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
 	.. image:: /images/gettingstarted/InitilizationWindow.png

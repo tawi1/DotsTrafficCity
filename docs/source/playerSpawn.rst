@@ -9,7 +9,7 @@ Player Spawner
 Info
 -------------------	
 
-| `Player Spawner Service` is used to spawn player in the city. This service implements `IPlayerSpawnerService` interface & called by `PlayerSpawnCommand.cs` script.
+| `Player Spawner Service` is used to spawn player in the city.
 
 Available spawn types:
 	* NPC: spawns the :ref:`Player NPC <playerNpc>`.
@@ -31,7 +31,7 @@ How To Replace
 -------------------	
 
 You can replace spawner by your own solution.
-By default, `Player Spawner Service` implements `IPlayerSpawnerService` interface, create your own `Monobehaviour` class that implements `IPlayerSpawnerService` & assign here:
+By default, `Player Spawner Service` implements `IPlayerSpawnerService` interface & called by `PlayerSpawnCommand.cs` script, create your own `Monobehaviour` class that implements `IPlayerSpawnerService` & assign here:
 
 Steps
 ~~~~~~~~~~~~

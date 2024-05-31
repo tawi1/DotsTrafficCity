@@ -89,5 +89,5 @@ Steps
 			* **FMOD**
 			
 #. After that, press the `Add Scripting Define` button.
-#. For more information on how to add sounds :ref:`click here <sound>`.
+#. Install the :ref:`FMOD sound <sound>` settings.
 #. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo scene <demoOpening>`.

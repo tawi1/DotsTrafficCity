@@ -3,6 +3,34 @@
 Change Log
 ************
 
+[1.0.7d] - 06-06-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Create & connect :ref:`pedestrian nodes <pedestrianNode>` in the prefab scene.
+* Added gradle config for Android for Unity 6.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed Unity package dependency resolving for the first time can cause endless script compilation.
+* :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road may have null traffic nodes due to initial creation in some cases.
+* Fixed :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road oneway path generation with multiple lanes.
+* Fixed :ref:`Custom segment <roadSegmentCreatorCustomSegment>` path surface snapping.
+* Fixed :ref:`pedestrian node creator <pedestrianNodeCreator>` losing sceneview focus, causing the hotkey for it to be disabled.
+* Animation baker minor UI fixes & improvements.
+
+[1.0.7c] - 31-05-2024
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed package initilization window doesn't load in some cases.
+* Fixed package initilization window appears randomly on Mac OS.
+
 [1.0.7b] - 29-05-2024
 ------------
 

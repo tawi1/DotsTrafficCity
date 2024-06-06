@@ -34,12 +34,14 @@ Code example
 		// Your own camera solution example
         public vThirdPersonCamera cam;
 
+		// Injecting PlayerActorTracker via Zenject (mandatory code)
         [Inject]
         public override void Construct(PlayerActorTracker playerActorTracker)
         {
             base.Construct(playerActorTracker);
         }
 
+		// Override this event method to set target for your custom camera, pseudo code example:
         protected override void PlayerActorTracker_OnSwitchActor(PlayerActor newPlayerActor)
         {
 			// Set the player transform target

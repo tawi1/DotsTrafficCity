@@ -15,7 +15,7 @@ Installation
 
 	.. image:: /images/sound/FMOD-setup.png
 	
-#. `Sign up <https://www.fmod.com/profile/register>`_ & download the `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_).
+#. `Sign up <https://www.fmod.com/profile/register>`_ & download the `FMOD Studio <https://www.fmod.com/download>`_ software from the official site (`official guide <https://www.fmod.com/docs/2.02/unity/user-guide.html>`_) **[optional step, required if you want to add & edit sounds]**.
 
 	.. image:: /images/sound/FMODstudio-download.png
 

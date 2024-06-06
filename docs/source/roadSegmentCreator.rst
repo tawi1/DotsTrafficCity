@@ -456,7 +456,7 @@ How To Use
 #. Turn on traffic light option.
 #. Select `Light prefab type`.
 #. Set the traffic light offset or enable `Light handle type`.
-#. If you want to configure the traffic lights individually, select the `Node` button.
+#. If you want to configure the traffic lights individually, select the `Node` button with the appropriate index.
 	
 Traffic lights
 """"""""""""""

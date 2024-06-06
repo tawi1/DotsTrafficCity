@@ -41,6 +41,14 @@ How to fix
 #. Make sure the system variable `PATH <https://www.java.com/en/download/help/path.html>`_ contains the git install path.
 #. Reboot your PC.
 
+Errors
+-------------------
+
+ChunkDataUtility.cs(1412,60): error CS0117
+~~~~~~~~~~~~
+
+#. Update the Unity app to 2022.3.19 or higher.
+
 .. _nunitFix:
 
 error CS0006: Metadata file 'nunit.framework.dll' could not be found

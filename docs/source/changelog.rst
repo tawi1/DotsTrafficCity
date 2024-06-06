@@ -11,11 +11,12 @@ Added
 
 * Create & connect :ref:`Pedestrian nodes <pedestrianNode>` in the prefab scene.
 * Added gradle config for Android for Unity 6.
+* Added support `Cinemachine 3.0+ <https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html>`_.
 
 Fixed
 ~~~~~~~~~~~~
 
-* Fixed Unity package dependency resolving for the first time can cause endless script compilation or crash.
+* Fixed Unity package dependency resolving for the first time can cause endless script compilation.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road may have null traffic nodes due to initial creation in some cases.
 * Fixed :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road oneway path generation with multiple lanes.
 * Fixed :ref:`Custom segment <roadSegmentCreatorCustomSegment>` path surface snapping.

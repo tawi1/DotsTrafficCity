@@ -11,7 +11,7 @@ If you want to add your own camera solution, follow these steps:
 Steps
 ~~~~~~~~~~~~
 
-#. Implement the class that derived from `CameraBase` & add to your camera (the code example in the `Code Example` section below).
+#. Create a new script & implement the class that derived from `CameraBase` & add it to your custom camera (the code example in the `Code Example` section below).
 #. Find the `UIInstaller` object on the scene.
 
 	.. image:: /images/integration/CustomCameraExample1.png

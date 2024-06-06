@@ -28,7 +28,7 @@ Code example
 
 ..  code-block:: r
 
-	// The class should be derived from 'CameraBase'
+	// The new script script that derived from 'CameraBase'
     public class ExampleCamera : CameraBase
     {
 		// Your own camera solution example

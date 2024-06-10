@@ -38,7 +38,7 @@ Steps
 ------------
 
 #. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
-#. Make sure that you are running **Unity 2022.3.19** or higher (except **Unity 2022.3.31**, **Unity 2022.3.32**, **Unity 6.0.4**, which contains broken `Burst 1.8.15 <https://forum.unity.com/threads/burst-1-8-15-constant-crash-on-compile.1595067>`_)
+#. Make sure that you are running **Unity 2022.3.19** or higher (except **Unity 2022.3.31**, **Unity 2022.3.32**, **Unity 6.0.4**, **Unity 6.0.5**, which contains broken `Burst 1.8.15 <https://forum.unity.com/threads/burst-1-8-15-constant-crash-on-compile.1595067>`_)
 #. If the script first compilation `hangs <https://forum.unity.com/threads/unity-hangs-on-open-during-script-compilation.1410000>`_ for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.

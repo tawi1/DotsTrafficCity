@@ -17,7 +17,7 @@ HDRP
 
 #. Set the `Render pipeline asset` from the `HDRP sample`.
 
-	.. image:: /images/faq/HDRP_light.png
+	.. image:: /images/faq/HDRP_quality.png
 	
 #. Set the `Light settings` for the desired scene (light settings can be taken from the `HDRP sample`).
 

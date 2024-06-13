@@ -27,5 +27,6 @@ how to :ref:`install` the project.
    integration.rst
    debug.rst
    glossary.rst
+   knownIssues.rst
    faq.rst
    changelog.rst

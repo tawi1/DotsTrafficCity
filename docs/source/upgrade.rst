@@ -11,6 +11,14 @@ HDRP
 
 	.. image:: /images/faq/HDRP_pack.png
 	
+#. Open quality settings from the `Unity` toolbar:
+
+	``Edit/Project settings/Quality``
+
+#. Set the `Render pipeline asset` from the `HDRP sample`.
+
+	.. image:: /images/faq/HDRP_light.png
+	
 #. Set the `Light settings` for the desired scene (light settings can be taken from the `HDRP sample`).
 
 	.. image:: /images/faq/HDRP_light.png

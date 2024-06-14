@@ -37,7 +37,7 @@ How To Create
 #. Create prefab variant from the `PlayerCarSkinBase` prefab & assign to :ref:`Player Car Pool <playerCarPool>` according to the vehicle.
 #. Customize the car slots in the created prefab if you plan to make the NPC's shooting option from the car **[optional step]**.
 #. Enable spawn type to `Car` & select desired `Car model` from the list in the :ref:`PlayerSpawner <playerSpawner>`, if you want the player to spawn in a car initially **[optional step]**.
-#. Once all the steps have been completed, reimport :ref:`subscene <subscene>`.
+#. Once all the steps have been completed, reopen :ref:`subscene <subscene>`.
 
 .. _playerHybridMono:
 
@@ -75,7 +75,7 @@ How To Create
 #. Input for the player vehicle is implemented according to your vehicle controller plugin.
 #. The input enable & disable for the car when the player's npc exits & enters the car should be implemented in the `PlayerInteractCarService.cs` in the `EnterCar` & `ExitCar` methods.
 #. Enable spawn type to `Car` & select desired `Car model` from the list in the :ref:`PlayerSpawner <playerSpawner>`, if you want the player to spawn in a car initially **[optional step]**.
-#. Once all the steps have been completed, reimport :ref:`subscene <subscene>`.
+#. Once all the steps have been completed, reopen :ref:`subscene <subscene>`.
 
 .. _playerCarPool:
 

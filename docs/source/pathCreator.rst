@@ -108,7 +108,7 @@ Examples
 	`Connection available example (allow override path enabled, show overriden path disabled).`
 	
 	.. image:: /images/road/trafficNode/pathCreator/Example2.png	
-	`Connection available example (allow override path enabled, show overriden path enabled).`
+	`Connection available example (allow override path enabled, show overriden path enabled, paths already created for these nodes & overwritable).`
 	
 	.. image:: /images/road/trafficNode/pathCreator/Example3.png
-	`Connection forbidden example.`
+	`Connection forbidden example (path already created for these nodes & can't be overwritten).`

@@ -12,6 +12,7 @@ Added
 * Full `Hybrid mode` support. *[in progress]*
 * New EasyRoads3D integration.
 * New `API` for custom spline roads generation.
+* New `EntityWeakRef` class to link Monobehaviour script & DOTS entity.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.

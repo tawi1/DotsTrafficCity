@@ -15,13 +15,13 @@ Added
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
-* Pedestrian nodes along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
+* Pedestrian node generation along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added unique ID for all traffic & pedestrian nodes that can be linked to `Monobehaviour` scripts. *[in progress]*
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`. *[in progress]*
 * Multi texture container for :ref:`Animation Baker <animationBaker>`. *[in progress]*
 * New project initialization window. *[in progress]*
-* New spawn layer adjustment for traffic & pedestrian nodes.
+* New spawn culling layer adjustment for traffic & pedestrians.
 * New traffic node display for right, left lanes in segments & path spawn nodes.
 * Traffic & pedestrian node debug in `Editor` mode.
 * Added support for Unity's built-in audio engine.
@@ -34,8 +34,8 @@ Fixed
 * Fixed traffic spawning in culled areas.
 * Fixed a potential crash when user undoing changes :ref:`Custom straight <roadSegmentCreatorCustomStraight>` roads.
 * Fixed `Player spawner` not spawning in some cases when adding the new `ID` for player NPCs. 
-* Fixed `Input` for `Player car` in `Editor` when `Android` build is selected. *[in progress]*
 * Player spawn no longer throws an exception if it doesn't exist.
+* Fixed `Input` for `Player car` in `Editor` when `Android` build is selected. *[in progress]*
 * Fixed road segment merge.
 
 Changed

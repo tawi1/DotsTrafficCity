@@ -40,7 +40,7 @@ Steps:
 	#. Select `Entity subscene path` the path to create a :ref:`subscene <subscene>`.
 	#. Enter the `Entity subscene name` or use the default name.
 	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the :ref:`Hub <hub>`).
-	#. On/off copy physics shapes feature (read more about :ref:`physics shape transferring <physicsShapeTransfer>`) **[optional]**.
+	#. On/off copy physics shapes feature (read more about :ref:`physics shape transferring <physicsShapeTransfer>`) **[required if you plan to use DOTS physics]**.
 	#. Press the `Generate` button.
 	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 

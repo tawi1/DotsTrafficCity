@@ -12,15 +12,14 @@ Added
 * Full `Hybrid mode` support. *[in progress]*
 * New EasyRoads3D integration.
 * New `API` for custom spline roads generation.
-* New `EntityWeakRef` class to link Monobehaviour script & DOTS entity.
+* New `EntityWeakRef` class to link Monobehaviour script & traffic & pedestrian node entities.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
 * Pedestrian node generation along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
-* Added unique ID for all traffic & pedestrian nodes that can be linked to `Monobehaviour` scripts. *[in progress]*
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
-* Limit texture baking for :ref:`Animation Baker <animationBaker>`. *[in progress]*
-* Multi texture container for :ref:`Animation Baker <animationBaker>`. *[in progress]*
+* Limit texture baking for :ref:`Animation Baker <animationBaker>`.
+* Multi texture container for :ref:`Animation Baker <animationBaker>`.
 * New project initialization window. *[in progress]*
 * New spawn culling layer adjustment for traffic & pedestrians.
 * New traffic node display for right, left lanes in segments & path spawn nodes.

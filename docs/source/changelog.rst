@@ -13,6 +13,7 @@ Added
 * New EasyRoads3D integration.
 * New `API` for custom spline roads generation.
 * New `EntityWeakRef` class to link Monobehaviour script & traffic & pedestrian node entities.
+* New player traffic control feature. *[in progress]*
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
@@ -41,7 +42,7 @@ Fixed
 Changed
 ~~~~~~~~~~~~
 
-* Major refactoring of the project to make it more modular. *[in progress]*
+* Major refactoring of the project to make it more modular. 
 * Project no longer overwrites the settings.
 * FMOD no longer required package.
 * Removed `Naughty attributes` dependency.

@@ -13,7 +13,7 @@ Added
 * New EasyRoads3D integration.
 * New `API` for custom spline roads generation.
 * New `EntityWeakRef` class to link Monobehaviour script & traffic & pedestrian node entities.
-* New player traffic control feature. *[in progress]*
+* New player traffic control feature.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
@@ -21,7 +21,7 @@ Added
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`.
 * Multi texture container for :ref:`Animation Baker <animationBaker>`.
-* New project initialization window. *[in progress]*
+* New project initialization window.
 * New spawn culling layer adjustment for traffic & pedestrians.
 * New traffic node display for right, left lanes in segments & path spawn nodes.
 * Traffic & pedestrian node debug in `Editor` mode.

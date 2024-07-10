@@ -34,6 +34,7 @@ Fixed
 
 * Fixed traffic spawning in culled areas.
 * Fixed a potential crash when user undoing changes :ref:`Custom straight <roadSegmentCreatorCustomStraight>` roads.
+* Fixed obstacle detection for neighbouring paths.
 * Fixed `Player spawner` not spawning in some cases when adding the new `ID` for player NPCs. 
 * Player spawn no longer throws an exception if it doesn't exist.
 * Fixed `Input` for `Player car` in `Editor` when `Android` build is selected. *[in progress]*

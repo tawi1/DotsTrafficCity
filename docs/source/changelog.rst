@@ -18,6 +18,7 @@ Added
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
 * Pedestrian node generation along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
+* Added left-hand traffic option.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`.
 * Multi texture container for :ref:`Animation Baker <animationBaker>`.

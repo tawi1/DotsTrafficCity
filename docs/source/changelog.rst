@@ -45,6 +45,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Major refactoring of the project to make it more modular. 
+* Now the project can be used for traffic simulation only, without player & extra features.
 * Project no longer overwrites the settings.
 * FMOD no longer required package.
 * Removed `Naughty attributes` dependency.

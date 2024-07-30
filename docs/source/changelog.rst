@@ -21,6 +21,7 @@ Added
 * Added left-hand traffic option.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
 * New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* Custom cull state config calculation for specific entities.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`.
 * Multi texture container for :ref:`Animation Baker <animationBaker>`.
 * New project initialization window.

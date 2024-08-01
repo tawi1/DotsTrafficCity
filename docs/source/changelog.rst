@@ -10,7 +10,8 @@ Added
 ~~~~~~~~~~~~
 
 * Full `Hybrid mode` support. *[in progress]*
-* New EasyRoads3D integration.
+* New `EasyRoads3D <https://assetstore.unity.com/packages/tools/terrain/easyroads3d-pro-v3-469>`_. integration.
+* New `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233`_. integration.
 * New `API` for custom spline roads generation.
 * New `EntityWeakRef` class to link Monobehaviour script & traffic & pedestrian node entities.
 * New player traffic control feature.

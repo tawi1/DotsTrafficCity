@@ -8,9 +8,9 @@ v1.0.x to v1.1.0
 
 #. Make backup before importing the package.
 #. Delete the following files:
- 	#. Folder `DotsCity/Scripts/` 
-	#. Folder `Plugins/Spirit604/` 
-	#. File `Library/ArtifactDB`
+ 	#. Folder '`DotsCity/Scripts/`'
+	#. Folder '`Plugins/Spirit604/`'
+	#. File '`Library/ArtifactDB`'
 	
 #. Import the package.
 #. Untick `Import project layers` option.

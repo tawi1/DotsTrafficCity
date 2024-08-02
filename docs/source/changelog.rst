@@ -9,30 +9,33 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Full `Hybrid mode` support. *[in progress]*
+* Full `Hybrid mode` support: *[in progress]*
+	* New monobehaviour compatible traffic.
+	* New hybrid NPCs compatible with any custom character controller.
+	* New hybrid traffic lights.
 * New `EasyRoads3D <https://assetstore.unity.com/packages/tools/terrain/easyroads3d-pro-v3-469>`_ integration.
 * New `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ integration.
 * New `API` for custom spline roads generation.
 * New `EntityWeakRef` class to link Monobehaviour script & traffic & pedestrian node entities.
 * New player traffic control feature.
 * New runtime entity hybrid workflow for runtime gameobjects.
+* New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* Limit texture baking for :ref:`Animation Baker <animationBaker>`.
+* Multi texture container for :ref:`Animation Baker <animationBaker>`.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
 * Pedestrian node generation along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
-* Added left-hand traffic option.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
-* New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* Crosswalk connection for :ref:`Custom segment <roadSegmentCreatorCustomSegment>`.
+* Added left-hand traffic option.
 * Custom cull state config calculation for specific entities.
 * New camera view based culling calculation method.
-* Limit texture baking for :ref:`Animation Baker <animationBaker>`.
-* Multi texture container for :ref:`Animation Baker <animationBaker>`.
-* New project initialization window.
 * New spawn culling layer adjustment for traffic & pedestrians.
 * New traffic node display for right, left lanes in segments & path spawn nodes.
 * Traffic & pedestrian node debug in `Editor` mode.
+* New project initialization window.
 * Added support for Unity's built-in audio engine.
-* Crosswalk connection for :ref:`Custom segment <roadSegmentCreatorCustomSegment>`.
 * Added :ref:`HDRP <hdrp>` support.
 
 Fixed

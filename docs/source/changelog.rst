@@ -3,13 +3,13 @@
 Change Log
 ************
 
-[1.1.0] - In progress
+[1.1.0] - 02-08-2024
 ------------
 
 Added
 ~~~~~~~~~~~~
 
-* Full `Hybrid mode` support: *[in progress]*
+* Full `Hybrid mode` support:
 	* New monobehaviour compatible traffic.
 	* New hybrid NPCs compatible with any custom character controller.
 	* New hybrid traffic lights.
@@ -47,7 +47,7 @@ Fixed
 * Fixed obstacle detection for neighbouring paths.
 * Fixed `Player spawner` not spawning in some cases when adding the new `ID` for player NPCs. 
 * Player spawn no longer throws an exception if it doesn't exist.
-* Fixed `Input` for `Player car` in `Editor` when `Android` build is selected. *[in progress]*
+* Fixed `Input` for `Player car` in `Editor` when `Android` build is selected.
 * Fixed road segment merge.
 
 Changed
@@ -55,7 +55,7 @@ Changed
 
 * Major refactoring of the project to make it more modular. 
 * Now the project can be used for traffic simulation only, without player & extra features.
-* Project no longer overwrites the settings.
+* Project no longer overwrites the settings by default.
 * FMOD no longer required package.
 * Removed `Naughty attributes` dependency.
 * `Zenject` can be an optional dependency.

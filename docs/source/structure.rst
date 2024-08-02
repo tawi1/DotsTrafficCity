@@ -9,6 +9,7 @@ Project Scenes
 ----------------
 
 #. **Demo** : the main optimized demo scene of the project (read more about scene structure :ref:`here <sceneStructure>`).
+#. **Demo Mono** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
 #. **Demo source** : same as `Demo` scene, but contains raw 3D models without optimization, also scene :ref:`streaming objects <sceneStreaming>` are disabled, including :ref:`static physics colliders <physicsShapeTransfer>`.
 #. **Traffic test scene** : :ref:`traffic test scene <trafficTestScene>` where all parameters can be tested with a set of most :ref:`traffic <trafficCar>` situations.
 #. **Pedestrian test scene** : :ref:`pedestrian test scene <pedestrianTestScene>` where the workability of entities can be tested.

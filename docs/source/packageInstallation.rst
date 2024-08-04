@@ -21,7 +21,6 @@ Minimum **Unity** version:
 Limitations
 ============
 
-* The project overwrites the settings, so be sure to make a project backup before using the tool.
 * WebGL not supported.
 * Built-in RP not supported.
 * :ref:`Roads <road>` can only be modified in the `Editor`.

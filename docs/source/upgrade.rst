@@ -7,20 +7,29 @@ v1.0.x to v1.1.0
 -------------------
 
 #. Make backup before importing the package.
-#. Delete the following files:
- 	#. Folder '`DotsCity/Scripts/`'
-	#. Folder '`Plugins/Spirit604/`'
-	#. File '`Library/ArtifactDB`'
+#. Delete the following folders:
+
+ 	#. `DotsCity/Scripts/`
+	#. `Plugins/Spirit604/`
 	
 #. Import the package.
-#. Untick `Import project layers` option.
-#. Open `Package initialization window` & press `Clone Collision Matrix` & `Apply` buttons.
+#. Open `Package initialization window`.
 
-	.. image:: /images/faq/Layers_v_1_1_0.png
+	.. image:: /images/faq/Layers_v_1_1_0_1.png
+	
+#. Select `Layer settings` tab.
+#. Untick `Import all project layers` option.
+#. Press `Import Collision Matrix` & `Apply` buttons.
+
+	.. image:: /images/faq/Layers_v_1_1_0_2.png
 	
 #. Remove old `Naughty attributes` package (if installed).
-#. If the `Burst` has errors in the console, restart the project.
-#. The project is ready.
+#. Restart the `Unity`.
+#. If the scene has lost the references, close the Unity & delete this file:
+
+	#. `Library/ArtifactDB`
+	
+#. The new project is ready.
 
 .. _hdrp:
 

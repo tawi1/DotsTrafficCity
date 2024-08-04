@@ -73,7 +73,7 @@ Steps
 	.. warning::
 		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 			
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 7-10 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 8-10 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**

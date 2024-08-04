@@ -15,8 +15,7 @@ Minimum **Unity** version:
 	* `Burst 1.8.12 <https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html>`_ 
 
 **Asset store packages:**
-	* `Naughty attributes. <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_
-	* `Zenject. <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_
+	* `Zenject. <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_ [optional, but recommended].
 	* `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_ plugin for the sounds [optional].
 
 Limitations
@@ -40,7 +39,6 @@ Steps
 ------------
 
 #. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
-#. Make sure that you are running **Unity 2022.3.19** or higher (except **Unity 2022.3.31**, **Unity 2022.3.32**, **Unity 6.0.4**, **Unity 6.0.5**, which contains broken `Burst 1.8.15 <https://forum.unity.com/threads/burst-1-8-15-constant-crash-on-compile.1595067>`_)
 #. If the script first compilation `hangs <https://forum.unity.com/threads/unity-hangs-on-open-during-script-compilation.1410000>`_ for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
@@ -51,8 +49,7 @@ Steps
 #. If you get the error 'No git executable was found', install the :ref:`git <gitFix>` on your PC (:ref:`how to install <gitFix>`) or download these packages from the store.
 
 	.. note::
-		**Required custom packages:**
-			* **Naughty Attributes** (`com.dbrizov.naughtyattributes`) - extension for unity inspector made by Denis Rizov (`Naughty Attributes <https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996>`_)
+		**Required custom packages [is optional from version v1.1.0, but recommended]:**
 			* **Extenject** (`com.svermeulen.extenject`) - library for injecting dependencies (`Extenject <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_).
 
 	.. note::
@@ -77,10 +74,10 @@ Steps
 	.. warning::
 		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 			
-#. Download the required assets from the `Asset Store`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 7-10 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
-		**Required asset store packages:**
+		**Optional asset store packages:**
 			* **FMOD** - asset store plugin for :ref:`game sounds <sound>` `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_
 		
 	.. note::
@@ -89,4 +86,8 @@ Steps
 			
 #. After that, press the `Add Scripting Define` button.
 #. Install the :ref:`FMOD sound <sound>` settings.
+#. If the project is created from scratch, `Pipeline`, `Layer settings`, `Project settings` are automatically installed & go to the last step, if not, follow the next steps.
+#. Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+` in your pipeline settings.
+#. Open `Layer settings` tab & select the layers to import according to your use case.
+#. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.
 #. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo scene <demoOpening>`.

@@ -9,8 +9,8 @@ v1.0.x to v1.1.0
 #. Make backup before importing the package.
 #. Delete the following folders:
 
- 	#. `DotsCity/Scripts/`
-	#. `Plugins/Spirit604/`
+ 	* `DotsCity/Scripts/`
+	* `Plugins/Spirit604/`
 	
 #. Import the package.
 #. Open `Package initialization window`.
@@ -27,7 +27,7 @@ v1.0.x to v1.1.0
 #. Restart the `Unity`.
 #. If the scene has lost the references, close the Unity & delete this file:
 
-	#. `Library/ArtifactDB`
+	* `Library/ArtifactDB`
 	
 #. The new project is ready.
 

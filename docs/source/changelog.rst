@@ -22,6 +22,7 @@ Added
 * New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`.
 * Multi texture container for :ref:`Animation Baker <animationBaker>`.
+* Added chasing cars feature.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.

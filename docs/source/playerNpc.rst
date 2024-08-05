@@ -6,13 +6,16 @@ Player Npc
 .. contents::
    :local:
 
+Built-in Solution
+----------------
+
 Hybrid DOTS
--------------------	
+~~~~~~~~~~~~
 
 The player NPC behaviour is handled by the `DOTS` systems.
 
 How To Create
-~~~~~~~~~~~~
+""""""""""""""
 
 #. Add an `Animator` component to your character if it's missing & assign a `PlayerBaseController` if you want to use project animations.
 #. Add all required components to your character from the list below.
@@ -22,7 +25,7 @@ How To Create
 #. Select your character from the list in the :ref:`PlayerSpawner <playerSpawner>`.
 
 Components
-~~~~~~~~~~~~
+""""""""""""""
 
 	.. image:: /images/configs/player/PlayerNpcComponents.png
 	
@@ -44,50 +47,66 @@ Components
 			* `NpcRaycastGroundSystem`.
 			* `NpcFreezeVerticalRotationSystem`.
 			
+		* `Gangster outside Player` is example prefab.
+			
 .. _playerNpcFactory:
 	
 Factory
-~~~~~~~~~~~~
+""""""""""""""
 
 Factory that contains player `Hybrid DOTS` NPCs.
 
 	.. image:: /images/configs/player/PlayerNpcFactory.png
 			
 Hybrid Mono
--------------------	
-
-The player NPC behaviour is handled by the user's character controller (your own implementation required).
-
-Use Cases
 ~~~~~~~~~~~~
 
-* Useful if you want to simulate :ref:`NPCs <pedestrian>` without traffic with your own controller based on a `Monobehaviour` script (e.g. for different ancient cities without traffic).
+The player NPC behaviour is handled by the mono controller.
 
-	.. note:: `DOTS` traffic collision & interaction with `Hybrid Mono player npc` is not implemented yet.
-	
 How To Create
-~~~~~~~~~~~~
+""""""""""""""
 
-#. Add your own `Animator` & `Custom controller` to the character.
+#. Add animator to your model & assign `PlayerBaseController` into the controller field.
 #. Add all required components to your character from the list below.
 #. Add the result to the :ref:`PlayerHybridMonoFactory <playerHybridMonoFactory>`.
 #. Make sure that `NPC` & `Hybrid Mono` are selected in the :ref:`PlayerSpawner <playerSpawner>`.
 #. Select your character from the list in the :ref:`PlayerSpawner <playerSpawner>`.
+
+	.. note:: `Demo Mono` scene & `Gangster Mono outside Player` prefab are examples.
 	
 Components
-~~~~~~~~~~~~
+""""""""""""""
 
-	.. image:: /images/configs/player/PlayerNpcHybridMono.png
-	
 * **Player actor** : camera tracking component **[required]**.
-* **Npc hybrid entity ref** : component that contains the reference to `Entity` **[required]**.
-	
-	
+* **Character controller** : default unity component **[required]**.
+* **Npc motion behaviour** : component that handles NPC behaviour **[required]**.
+* **Player npc input behaviour** :  contains input from the player **[required]**.
+* **Npc weapon holder** : reference to the anchor bone that holds the weapon & reference to the weapon.
+* **Npc hit reaction behaviour** : behaviour that handles the reaction to a bullet hit.
+* **Ragdoll base** : activates `Ragdoll` when the NPC dies.
+* **Hybrid entity runtime authoring** : automatically  load the entity on enable at runtime for this gameobject. **[required]**.
+* **Npc health behaviour** : health component.
+
 .. _playerHybridMonoFactory:
-	
+
 Factory
-~~~~~~~~~~~~
+""""""""""""""
 
 Factory that contains player `Hybrid Mono` NPCs.
 
 	.. image:: /images/configs/player/PlayerNpcHybridMonoFactory.png
+	
+Custom User Solution
+----------------
+
+If you want your own script to spawn player npc, follow these steps:
+
+#. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
+#. Set the `Player controller type` to `Custom` in the :ref:`General settings <generalSettingsConfig>` config.
+#. Disable built-in camera on the scene.
+#. Add the `HybridEntityRuntimeAuthoring` component to your prefab.
+#. Add `Copy Transform From Game Object`, `Player Npc` components in the `Hybrid components` list.
+
+	.. image:: /images/configs/player/PlayerNpcHybridAuthoring.png
+	
+#. Your player prefab npc is ready.

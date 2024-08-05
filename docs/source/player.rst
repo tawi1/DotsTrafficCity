@@ -11,4 +11,3 @@ Player
 		/playerNpc.rst
 		/playerCar.rst
 		/playerConfig.rst
-		/customCamera.rst

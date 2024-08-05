@@ -59,7 +59,7 @@ Hybrid Mono
 	* `Sim-Cade Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/sim-cade-vehicle-physics-243624>`_
 
 How To Create
-~~~~~~~~~~~~
+""""""""""""""
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config (make sure that config on the :ref:`subscene <subscene>` has the same value).
 #. Open the :ref:`Car Prefab Creator <carPrefabCreator>` & set `Car type` to `Player` in the `Prefab` tab.
@@ -78,10 +78,10 @@ How To Create
 .. _playerCarPool:
 
 Player Car Pool
-----------------
+~~~~~~~~~~~~
 
 Where To Find
-~~~~~~~~~~~~
+""""""""""""""
 
 In the scene:
 
@@ -90,12 +90,12 @@ In the scene:
 	.. image:: /images/configs/player/PlayerCarPool.png
 	
 How To Use
-~~~~~~~~~~~~
+""""""""""""""
 
 Player cars spawned by `PlayerCarSpawner`.
 
 Example
-~~~~~~~~~~~~
+""""""""""""""
 
 	.. image:: /images/configs/player/PlayerCarPoolExample.png
 	

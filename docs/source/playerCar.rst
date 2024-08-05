@@ -107,6 +107,7 @@ If you want your own script to spawn player car, follow these steps:
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set the `Player controller type` to `Custom` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Disable built-in camera on the scene.
+#. Make sure that you created & selected `Hybrid mono` traffic.
 #. Add the `HybridEntityRuntimeAuthoring` component to your prefab.
 #. Add `Copy Transform From Game Object`, `Custom Raycast Target` , `PlayerCar` components in the `Hybrid components` list.
 

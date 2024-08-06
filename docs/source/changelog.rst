@@ -25,7 +25,7 @@ Added
 ~~~~~~~~~~~~
 
 * Full `Hybrid mode` support:
-	* New monobehaviour compatible traffic.
+	* New :ref:`monobehaviour compatible <hybridMonoVehicle>` traffic.
 	* New hybrid NPCs compatible with any custom character controller.
 	* New hybrid traffic lights.
 * New `EasyRoads3D <https://assetstore.unity.com/packages/tools/terrain/easyroads3d-pro-v3-469>`_ integration.

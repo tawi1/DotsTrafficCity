@@ -249,6 +249,107 @@ Main component of traffic entity **[required]**.
 | **Bounds source type** : selected bounds source for the entity bounds.
 | **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
 
+.. _hybridMonoVehicle:
+
+Hybrid Mono
+~~~~~~~~~~~~
+
+* Before using this vehicle type, make sure that you selected `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>`.
+* :ref:`Hybrid entities <hybridEntity>` that moved by custom monobehaviour controller.
+* :ref:`Settings <trafficCarSettings>`.
+* :ref:`Hybrid entity mono physics <entityType>` type refer to this.
+
+How To Create
+""""""""""""""
+
+Arcade (built-in sample controller)
+^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to use `Arcade's` built-in sample controller, follow these steps:
+
+#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
+#. Select `Prefab` tab.
+#. Set `Car type` to `Traffic`.
+#. Drag & drop your prefabs into the prefabs field (make sure your source `Prefabs` don't have any `Colliders`, `Wheel colliders` & `Rigidbodies`).
+#. Press `Scan` button.
+#. Select `Save` tab.
+#. Set `Entity type` to `Hybrid entity mono physics`.
+#. Set `Controller type` to `Arcade`.
+#. Set desired preset. Also hull & save paths.
+#. Select `Prefab info` tab.
+#. Customize settings.
+#. Press `Create` button.
+
+Custom user controller
+^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to use your own custom solution, follow these steps:
+
+#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
+#. Select `Prefab` tab.
+#. Set `Car type` to `Traffic`.
+#. Drag & drop your prefabs into the prefabs field.
+#. Press `Scan` button.
+#. Select `Save` tab.
+#. Set `Entity type` to `Hybrid entity mono physics`.
+#. Set `Controller type` to `Custom user`.
+#. Create script that implements `IVehicleInput` interface to link traffic input & your vehicle controller input (code example below)
+#. Assign created script into the `Input script` field.
+#. Set desired preset. Also hull & save paths.
+#. Select `Prefab info` tab.
+#. Set steering angle according to you custom car controller.
+#. Press `Create` button.
+#. To adjust your own custom car controller params for traffic use the :ref:`Traffic test scene <trafficTestScene>`.
+
+VehicleInput example code
+^^^^^^^^^^^^^^^^^^^^^^
+
+	..  code-block:: r
+
+		public class UVC_adapter : MonoBehaviour, IVehicleInput
+		{
+			// Replace by your custom controller script.
+			// The example uses a "Universal Vehicle Controller".
+			// https://assetstore.unity.com/packages/tools/physics/universal-vehicle-controller-plus-176314
+			public UVC_AIControl carControllerInput;
+
+			public float Throttle
+			{
+				get => carControllerInput.Acceleration;
+				set
+				{
+					if (value > 0)
+					{
+						carControllerInput.SetAcceleration(value);
+						carControllerInput.SetBrakeReverse(0);
+						carControllerInput.SetHandBrake(false);
+					}
+					else
+					{
+						carControllerInput.SetAcceleration(0);
+						carControllerInput.SetBrakeReverse(Mathf.Abs(value));
+
+						if (value == 0)
+							carControllerInput.SetHandBrake(true);
+					}
+				}
+			}
+
+			public float Steering { get => carControllerInput.Horizontal; set => carControllerInput.SetSteer(value); }
+			public bool Handbrake { get => carControllerInput.HandBrake; set => carControllerInput.SetHandBrake(value); }
+
+			public void SwitchEnabledState(bool isEnabled)
+			{
+				carControllerInput.enabled = isEnabled;
+			}
+		}
+
+Components
+""""""""""""""
+
+	.. image:: /images/entities/trafficCar/hybridMono/TrafficCarEntityAuthoring.png
+
+
 Shared Settings
 ~~~~~~~~~~~~
 

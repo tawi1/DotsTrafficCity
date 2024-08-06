@@ -3,6 +3,21 @@
 Change Log
 ************
 
+[1.1.0b] - 06-08-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+Added `CarModelRuntimeAuthoring`, `BoundsRuntimeAuthoring`, `VelocityRuntimeAuthoring` entity runtime components.
+
+Fixed
+~~~~~~~~~~~~
+
+Fixed initial entity scale for runtime entities with `CopyTransformFromGameObject` component.
+Fixed bootstrap if user tries to start bootstrap twice.
+Nav agents dependency fix.
+
 [1.1.0] - 05-08-2024
 ------------
 

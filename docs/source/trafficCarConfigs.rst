@@ -29,6 +29,7 @@ Entity Type
 
 * **Hybrid entity simple physics** : :ref:`hybrid entities <hybridEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
 * **Hybrid entity custom physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
+* **Hybrid entity mono physics** : :ref:`hybrid entities <hybridEntity>` moved by the custom monobehaviour controller (:ref:`description <hybridMonoVehicle>`) *(new)*
 * **Pure entity custom physics** : :ref:`pure entities <pureEntity>` moved by the custom physical system (:ref:`description <customPhysicsVehicle>`)  
 * **Pure entity simple physics** : :ref:`pure entities <pureEntity>` moved by the simple physical system (:ref:`description <simplePhysicsVehicle>`).
 * **Pure entity no physics** : :ref:`pure entities <pureEntity>` that moved by transform system without physics (:ref:`description <noPhysicsVehicle>`).

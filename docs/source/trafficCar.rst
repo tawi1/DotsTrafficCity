@@ -262,7 +262,7 @@ Hybrid Mono
 How To Create
 """"""""""""""
 
-Arcade (built-in sample controller)
+Arcade (built-in sample)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to use `Arcade's` built-in sample controller, follow these steps:
@@ -347,8 +347,23 @@ VehicleInput example code
 Components
 """"""""""""""
 
-	.. image:: /images/entities/trafficCar/hybridMono/TrafficCarEntityAuthoring.png
+**CarEntityAdapter**
 
+	.. image:: /images/entities/trafficCar/hybridMono/CarEntityAdapter.png
+	
+Component to syncronize gameobject & entity, also to switch physics & script when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
+	
+**PhysicsSwitcher**
+	
+	.. image:: /images/entities/trafficCar/hybridMono/PhysicsSwitcher.png
+	
+Component to on/off physics of the vehicle.
+	
+**ScriptSwitcher**
+	
+	.. image:: /images/entities/trafficCar/hybridMono/ScriptSwitcher.png
+	
+Component to on/off scripts of the vehicle.
 
 Shared Settings
 ~~~~~~~~~~~~

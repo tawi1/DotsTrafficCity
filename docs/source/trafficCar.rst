@@ -238,7 +238,6 @@ Hybrid Mono
 
 * Before using this vehicle type, make sure that you selected `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>`.
 * :ref:`Hybrid entities <hybridEntity>` that moved by custom monobehaviour controller.
-* :ref:`Settings <trafficCarSettings>`.
 * :ref:`Hybrid entity mono physics <entityType>` type refer to this.
 
 How To Create
@@ -334,6 +333,8 @@ Components
 	.. image:: /images/entities/trafficCar/hybridMono/CarEntityAdapter.png
 	
 Component to syncronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
+	
+	.. note:: You can turn off traffic physics culling in the :ref:`Traffic settings <trafficCarSettings>`.
 	
 **PhysicsSwitcher**
 	

@@ -258,7 +258,8 @@ If you want to use `Arcade's` built-in sample controller, follow these steps:
 #. Set `Controller type` to `Arcade`.
 #. Set desired preset. Also hull & save paths.
 #. Select `Prefab info` tab.
-#. Customize settings.
+#. Customize hull & wheel offsets.
+#. Customize traffic related settings.
 #. Press `Create` button.
 
 Custom user controller
@@ -279,6 +280,7 @@ If you want to use your own custom solution, follow these steps:
 #. Set desired preset. Also hull & save paths.
 #. Select `Prefab info` tab.
 #. Set steering angle according to you custom car controller.
+#. Customize traffic related settings.
 #. Press `Create` button.
 #. To adjust your own custom car controller params for traffic use the :ref:`Traffic test scene <trafficTestScene>`.
 

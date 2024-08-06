@@ -25,6 +25,7 @@ Config Example
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
+		:scale: 70%
 
 Player Settings
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -33,8 +34,15 @@ Player Settings
 	* **Player** : player will be spawned.
 	* **Free fly camera** :	flying camera will be spawned.
 	
-| **Player support** : on/off systems related to the player.
-
+**Player controller type:**
+	* **Built In** : the player spawned by the built-in solution & has an example built-in controller.
+	* **Built In Custom** : the player spawned by the built-in solution, but the player NPC has a custom character controller & taken from `PlayerCustomHybridMonoNpcFactory`.
+	* **Custom** : the player is spawned & handled entirely by the user's custom solution.
+	
+**Vehicle interaction type:**
+	* **Built In** : the player interacting with cars by the built-in solution.
+	* **Custom** : the player interacting with the cars by the custom user solution.
+			
 **Bullet collision type:** method of calculating collisions for a bullet.
 	* **Calculate collision** : manual calculating.
 	* **Raycast** : by raycast.
@@ -46,8 +54,8 @@ Player Settings
 Player Target Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
-| **Max target distance** : maximum distance for crosshair target capture.
-| **Max capture angle** :	maximum angle for crosshair target capture.
+| **Max target distance** : maximum distance for crosshair target capture *(crosshair mode only)*.
+| **Max capture angle** :	maximum angle for crosshair target capture *(crosshair mode only)*.
 | **Default aim point distance** : distance between the player and the crosshair if there is no target.	
 | **Default aim point Y position** : default Y-axis crosshair position.	
 
@@ -86,6 +94,10 @@ Pedestrian Settings
 Other Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
+**World simulation type:**
+	* **DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
+	* **Hybrid mono** : physics simulation run on `Monobehaviour` scripts, but input taken from `DOTS` entities simulation.
+	
 **Physics simulation type:**
 	* **No physics** : dots physics off.
 	* **Unity physics** : `Unity` dots physics on.

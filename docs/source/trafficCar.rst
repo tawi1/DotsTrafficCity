@@ -230,24 +230,6 @@ No Physics
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Pure entity no physics <entityType>` type refer to this.
 
-Common Authoring Components
-----------------
-
-.. _trafficCarEntityAuthoring:
-
-TrafficCarEntityAuthoring
-~~~~~~~~~~~~
-	
-	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
-	
-Main component of traffic entity **[required]**.
-	
-| **Hull mesh renderer** : vehicle hull mesh renderer reference.
-| **Physics shape** : vehicle entity `PhysicsShape` reference.
-| **Faction type** : selected :ref:`faction type <factions>` of vehicle.
-| **Car type** : selected :ref:`car type <carType>` of vehicle.
-| **Bounds source type** : selected bounds source for the entity bounds.
-| **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
 
 .. _hybridMonoVehicle:
 
@@ -364,6 +346,25 @@ Component to on/off physics of the vehicle.
 	.. image:: /images/entities/trafficCar/hybridMono/ScriptSwitcher.png
 	
 Component to on/off scripts of the vehicle.
+
+Common Authoring Components
+----------------
+
+.. _trafficCarEntityAuthoring:
+
+TrafficCarEntityAuthoring
+~~~~~~~~~~~~
+	
+	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
+	
+Main component of traffic entity **[required]**.
+	
+| **Hull mesh renderer** : vehicle hull mesh renderer reference.
+| **Physics shape** : vehicle entity `PhysicsShape` reference.
+| **Faction type** : selected :ref:`faction type <factions>` of vehicle.
+| **Car type** : selected :ref:`car type <carType>` of vehicle.
+| **Bounds source type** : selected bounds source for the entity bounds.
+| **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
 
 Shared Settings
 ~~~~~~~~~~~~

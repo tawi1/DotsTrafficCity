@@ -351,7 +351,7 @@ Components
 
 	.. image:: /images/entities/trafficCar/hybridMono/CarEntityAdapter.png
 	
-Component to syncronize gameobject & entity, also to switch physics & script when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
+Component to syncronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
 	
 **PhysicsSwitcher**
 	

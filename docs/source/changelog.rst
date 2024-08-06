@@ -20,6 +20,7 @@ Added
 * New player traffic control feature.
 * New runtime entity hybrid workflow for runtime gameobjects.
 * New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* New universal animation handling API for GPU & hybrid animator entities.
 * Limit texture baking for :ref:`Animation Baker <animationBaker>`.
 * Multi texture container for :ref:`Animation Baker <animationBaker>`.
 * Added chasing cars feature.

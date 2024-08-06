@@ -161,4 +161,5 @@ If you want your own script to spawn player npc, follow these steps:
 
 	.. image:: /images/configs/player/PlayerNpcHybridAuthoring.png
 	
+#. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.
 #. Your player prefab npc is ready.

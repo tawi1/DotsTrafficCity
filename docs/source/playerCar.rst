@@ -118,4 +118,6 @@ If you want your own script to spawn player car, follow these steps:
 
 	.. image:: /images/configs/player/PlayerCarBounds.png
 	
+#. Make sure that the traffic :ref:`Raycast config <trafficCarRaycastConfig>` includes a player car layer.	
+#. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.
 #. Your player prefab car is ready.

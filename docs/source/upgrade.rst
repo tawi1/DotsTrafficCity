@@ -16,12 +16,14 @@ v1.0.x to v1.1.0
 #. Open `Package initialization window`.
 
 	.. image:: /images/faq/Layers_v_1_1_0_1.png
+		:scale: 50%
 	
 #. Select `Layer settings` tab.
 #. Untick `Import all project layers` option.
 #. Press `Import Collision Matrix` & `Apply` buttons.
 
 	.. image:: /images/faq/Layers_v_1_1_0_2.png
+		:scale: 50%
 	
 #. Remove old `Naughty attributes` package (if installed).
 #. Restart the `Unity`.

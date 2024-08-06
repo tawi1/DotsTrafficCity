@@ -114,9 +114,13 @@ If you want your own script to spawn player car, follow these steps:
 
 	.. image:: /images/configs/player/PlayerCarHybridMono.png
 
-#. Add the `Bounds runtime authoring` component to your prefab.
+#. Add the `Bounds runtime authoring` & `Velocity runtime authoring`  components to your prefab if you want to have :ref:`calculated collisions <pedestrianCollisionType>` with pedestrians. *(optional step)*
 
 	.. image:: /images/configs/player/PlayerCarBounds.png
+	`Bounds component example.`
+	
+	.. image:: /images/configs/player/PlayerCarVelocity.png
+	`Velocity component example.`
 	
 #. Make sure that the traffic :ref:`Raycast config <trafficCarRaycastConfig>` includes a player car layer.	
 #. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.

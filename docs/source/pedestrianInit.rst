@@ -757,6 +757,8 @@ Pedestrian Navigation Type **[** :ref:`NavMesh <pedestrianNavmeshNavigation>` **
 * **Persist** : navigation is always on.
 * **Disabled**	
 	
+.. _pedestrianCollisionType:
+	
 Collision type
 """"""""""""""""""
 

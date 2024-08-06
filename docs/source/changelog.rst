@@ -14,6 +14,7 @@ Added `CarModelRuntimeAuthoring`, `BoundsRuntimeAuthoring`, `VelocityRuntimeAuth
 Fixed
 ~~~~~~~~~~~~
 
+Fixed compatibility with Entities 1.3.0.
 Fixed initial entity scale for runtime entities with `CopyTransformFromGameObject` component.
 Fixed bootstrap if user tries to start bootstrap twice.
 Nav agents dependency fix.

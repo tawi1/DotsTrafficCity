@@ -286,10 +286,10 @@ If you want to use your own custom solution, follow these steps:
 
 Input info
 ^^^^^^^^^^^^^^^^^^^^^^
-* Throttle 1 : forward motion.
-* Throttle -1 : reverse motion.
-* Throttle 0 : hand brake.
-* Throttle -0.9 : braking, for example, if the current speed is higher than permitted. (the value can be changed in the :ref:`Traffic settings <trafficCarSettings>`)
+* Throttle [1] : forward motion.
+* Throttle [-1] : reverse motion.
+* Throttle [0] : hand brake.
+* Throttle [-0.9] : braking, for example, if the current speed is higher than permitted. (the value can be changed in the :ref:`Traffic settings <trafficCarSettings>`)
 * Steering [-1, 1]
 
 VehicleInput example code

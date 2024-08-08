@@ -19,6 +19,11 @@ Fixed
 * Minor script fix for Unity 2023.2.
 * Fixed potential config corruption for builds.
 
+Changed
+~~~~~~~~~~~~
+
+* Minimum `Unity` version 2022.3.21.
+
 [1.1.0b] - 06-08-2024
 ------------
 

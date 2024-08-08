@@ -38,7 +38,7 @@ How to fix
 ChunkDataUtility.cs(1412,60): error CS0117
 ~~~~~~~~~~~~
 
-#. Update the Unity app to 2022.3.19 or higher.
+#. Update the Unity app to 2022.3.21 or higher.
 
 .. _nunitFix:
 

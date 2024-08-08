@@ -279,10 +279,10 @@ If you want to use your own custom solution, follow these steps:
 #. Assign created script into the `Input script` field.
 #. Set desired preset. Also hull & save paths.
 #. Select `Prefab info` tab.
-#. Set steering angle according to you custom car controller.
+#. Set the steering angle to match the steering of your custom car controller.
 #. Customize traffic related settings.
 #. Press `Create` button.
-#. To adjust your own custom car controller params for traffic use the :ref:`Traffic test scene <trafficTestScene>`.
+#. To set your own custom Car Controller parameters to handle the most common traffic situations, use the :ref:`Traffic test scene <trafficTestScene>`.
 
 Input info
 ^^^^^^^^^^^^^^^^^^^^^^

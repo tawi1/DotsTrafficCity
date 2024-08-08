@@ -18,6 +18,7 @@ If you want your own script to spawn player npc, follow these steps:
 	.. image:: /images/configs/player/PlayerNpcHybridAuthoring.png
 	
 #. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.
+#. Custom player only works with :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles.
 #. Your player prefab npc is ready.
 
 Player Car
@@ -45,4 +46,5 @@ If you want your own script to spawn player car, follow these steps:
 	
 #. Make sure that the traffic :ref:`Raycast config <trafficCarRaycastConfig>` includes a player car layer.	
 #. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.
+#. Custom player car only works with :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles.
 #. Your player prefab car is ready.

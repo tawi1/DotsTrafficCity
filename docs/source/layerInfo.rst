@@ -27,4 +27,4 @@ Misc Layers
 		
 * **CollidableNpc [15]** : player npc layer. 
 * **TraficCar [16]** : :ref:`Traffic car  <trafficCar>` layer.
-* **Npc [17]** : pedestrian npc layer.
+* **Npc [17]** : :ref:`Pedestrian <pedestrianEntity>` npc layer.

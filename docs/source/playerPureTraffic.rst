@@ -1,4 +1,4 @@
-Pure Traffic
+Pure Traffic Simulation
 =====
 
 If you strip out all sample code, including player feature & extras and remain only traffic simulation, follow these steps:

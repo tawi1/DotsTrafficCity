@@ -1,6 +1,6 @@
 .. _player:
 
-Built-in solution
+Built-in Solution
 =====
 
 	.. toctree::

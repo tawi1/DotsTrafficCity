@@ -1,5 +1,3 @@
-.. _player:
-
 *******
 Player
 *******
@@ -7,7 +5,6 @@ Player
 	.. toctree::
 		:maxdepth: 2
 
-		/playerSpawn.rst
-		/playerNpc.rst
-		/playerCar.rst
-		/playerConfig.rst
+		/playerBuiltin.rst
+		/playerCustom.rst
+		/playerPureTraffic.rst

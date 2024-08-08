@@ -25,9 +25,6 @@ Object Layers
 Misc Layers
 ~~~~~~~~~~~~
 		
-* **Npc [3]** : :ref:`Player <playerNpc>` & custom NPCs layer.
-* **SyncPlayer [13]** : layer of the player's car when using :ref:`Hybrid Mono <playerHybridMono>` for the player.
-* **PlayerCar [14]** : :ref:`Player car <playerCar>` layer layer. 
-* **PoliceCar [15]** : Police car layer. 
+* **CollidableNpc [15]** : player npc layer. 
 * **TraficCar [16]** : :ref:`Traffic car  <trafficCar>` layer.
-* **TriggerLayer [26]** : collider trigger player layer.
+* **Npc [17]** : pedestrian npc layer.

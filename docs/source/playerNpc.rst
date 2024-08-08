@@ -83,6 +83,9 @@ Components
 * **Npc hit reaction behaviour** : behaviour that handles the reaction to a bullet hit.
 * **Ragdoll base** : activates `Ragdoll` when the NPC dies.
 * **Hybrid entity runtime authoring** : automatically  load the entity on enable at runtime for this gameobject. **[required]**.
+
+	.. image:: /images/configs/player/PlayerNpcHybridAuthoring.png
+	
 * **Npc health behaviour** : health component.
 
 .. _playerHybridMonoFactory:

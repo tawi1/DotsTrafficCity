@@ -9,4 +9,5 @@ Built-in Solution
 		/playerSpawn.rst
 		/playerNpc.rst
 		/playerCar.rst
+		/playerCustomCamera.rst
 		/playerConfig.rst

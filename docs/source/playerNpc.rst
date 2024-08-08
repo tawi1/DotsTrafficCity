@@ -66,6 +66,7 @@ The player NPC behaviour is handled by the mono controller.
 How To Create
 """"""""""""""
 
+#. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Add animator to your model & assign `PlayerBaseController` into the controller field.
 #. Add all required components to your character from the list below.
 #. Add the result to the :ref:`PlayerHybridMonoFactory <playerHybridMonoFactory>`.

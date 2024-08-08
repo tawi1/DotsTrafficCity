@@ -29,7 +29,7 @@ v1.0.x to v1.1.0
 #. Restart the `Unity`.
 #. If the scene has lost the references, close the Unity & delete this file:
 
-	* `Library/ArtifactDB`
+	* `[ProjectFolder]/Library/ArtifactDB`
 	
 #. The new project is ready.
 

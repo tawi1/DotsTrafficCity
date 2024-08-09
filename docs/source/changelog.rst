@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.1.0c] - 08-08-2024
+[1.1.0c] - 09-08-2024
 ------------
 
 Added
@@ -18,11 +18,14 @@ Fixed
 
 * Minor script fix for Unity 2023.2.
 * Fixed potential config corruption for builds.
+* Fixed stress scene demo exit error.
+* Arcade vehicle controller wheel position fix.
 
 Changed
 ~~~~~~~~~~~~
 
 * Minimum `Unity` version 2022.3.21.
+* Improved arcade sample cars.
 
 [1.1.0b] - 06-08-2024
 ------------

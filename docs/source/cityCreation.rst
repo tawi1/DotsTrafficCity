@@ -68,3 +68,16 @@ Demo Scene
 	
 #. Press `Play` button.
 #. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.
+
+
+.. _demoMonoOpening:
+
+Demo Mono Scene
+------------
+
+#. In the `Project Folder` view, select the following scene:
+
+	`DotsCity/Scenes/Demo Mono`
+	
+#. Press `Play` button.
+#. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.

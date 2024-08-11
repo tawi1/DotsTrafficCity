@@ -15,8 +15,8 @@ Added
 Fixed
 ~~~~~~~~~~~~
 
-* Minor player arcade car prefab fix.
 * Agents Navigation integration editor error fix.
+* Minor player arcade car prefab fix.
 
 Changed
 ~~~~~~~~~~~~

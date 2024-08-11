@@ -3,6 +3,26 @@
 Change Log
 ************
 
+[1.1.0d] - 12-08-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Interpolation of the car view for culled mono physics cars.
+* New collision stuck avoidance system for :ref:`Hybrid mono <hybridMonoVehicle>` cars.
+
+Fixed
+~~~~~~~~~~~~
+
+* Minor player arcade car prefab fix.
+* Navigation agents editor error fix.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved transition between physics & no physics arcade cars.
+
 [1.1.0c] - 09-08-2024
 ------------
 

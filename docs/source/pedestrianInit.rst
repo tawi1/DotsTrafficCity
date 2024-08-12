@@ -413,8 +413,8 @@ Custom Animation
 To handle custom animation, follow these steps:
 
 * Add custom animations in the `Animation state authoring` for pedestrians.
-	* :ref:`Hybrid skin <legacyAnimatorExample>`.
-	* :ref:`GPU skin <gpuAnimatorExample>`.
+	* :ref:`Hybrid skin <legacyAnimatorExample>` (if you are using Hybrid animations).
+	* :ref:`GPU skin <gpuAnimatorExample>` (if you are using GPU animations).
 	
 * Add custom animator state by code:
 	

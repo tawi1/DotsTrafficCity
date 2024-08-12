@@ -254,7 +254,6 @@ The Crowd GPU Custom animator is used for transitions between baked animations (
 **Used in systems:**
 	* GPUAnimatorCustomStateSystem
 
-lol
 .. _hybridAndGpu:
 
 Hybrid and GPU

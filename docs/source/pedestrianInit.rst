@@ -476,34 +476,6 @@ To handle custom animation, follow these steps:
 		For an example of a system, please read the script below:
 			* BenchStateSystem.cs.			
 
-Common Info
-----------------
-
-Collision
-~~~~~~~~~~~~
-
-In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust the :ref:`Antistuck config <pedestrianAntistuckConfig>`.
-
-Authoring Components
-----------------
-
-Authoring components that make up the pedestrian entity.
-
-PedestrianAuthoring
-~~~~~~~~~~~~
-
-Contains the main components of pedestrian entity **[required]**.
-
-PlayerTargetAuthoring
-~~~~~~~~~~~~
-
-Component for player targeting systems **[optional]**.
-
-Physics
-~~~~~~~~~~~~
-
-`PhysicsBody` and `PhysicsShape` components for physics related systems **[optional]**.
-
 .. _pedestrianStates:
 
 States
@@ -649,6 +621,34 @@ Action State
 
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
+		
+Common Info
+----------------
+
+Collision
+~~~~~~~~~~~~
+
+In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust the :ref:`Antistuck config <pedestrianAntistuckConfig>`.
+
+Authoring Components
+----------------
+
+Authoring components that make up the pedestrian entity.
+
+PedestrianAuthoring
+~~~~~~~~~~~~
+
+Contains the main components of pedestrian entity **[required]**.
+
+PlayerTargetAuthoring
+~~~~~~~~~~~~
+
+Component for player targeting systems **[optional]**.
+
+Physics
+~~~~~~~~~~~~
+
+`PhysicsBody` and `PhysicsShape` components for physics related systems **[optional]**.
 
 .. _pedestrianConfigs:
 

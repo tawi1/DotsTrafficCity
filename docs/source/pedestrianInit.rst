@@ -89,7 +89,7 @@ Animation authoring
 	.. image:: /images/pedestrian/animation/PedestrianAnimationStateLegacyExample.png
 	
 	* **State name** : state name of the animation in the `Animator`.
-	* **State layer** : number of the layer in the `Animator`.
+	* **State layer** : number of the layer where the animation is stored in the `Animator`.
 	* **Param 1** : first parameter to start animation in the `Animator`.
 	* **Param 2** : second parameter to start animation in the `Animator` *[optional]*.
 	* **Exit param** : parameter to exit current animation in the `Animator` *[optional]*.
@@ -438,6 +438,8 @@ To handle custom animation, follow these steps:
 	
 * Change to new state if required, code:
 
+..  code-block:: r
+
 	// IJobEntity entity example
     void Execute(
         Entity entity,
@@ -454,6 +456,8 @@ To handle custom animation, follow these steps:
     }
 	
 * After all the custom animations have been played, turn off the custom animation state.
+
+..  code-block:: r
 
 	// IJobEntity entity example
     void Execute(

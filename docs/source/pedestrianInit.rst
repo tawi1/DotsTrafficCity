@@ -269,6 +269,12 @@ How To Create
 * Make sure that the number & the order of :ref:`Legacy <pedestrianHybridLegacy>` & :ref:`GPU <pedestrianGPU>` of the models are the same in the factories (`PedestrianSkinFactory` & `PedestrianGPUSkinFactory`).
 * How to play animation described :ref:`here <pedestrianAnimation>`.
 
+Cull state
+""""""""""""""
+
+* :ref:`InViewOfCamera <cullPointStates>`: :ref:`Hybrid <pedestrianHybridLegacy>` legacy skin is enabled.
+* :ref:`CloseToCamera <cullPointStates>`: :ref:`GPU <pedestrianGPU>` skin is enabled.
+
 .. _pedestrianRagdoll:
 
 Ragdoll

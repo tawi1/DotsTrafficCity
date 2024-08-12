@@ -267,7 +267,7 @@ How To Create
 * Create :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
 * Add desired animations in the :ref:`Animation state authoring <legacyAnimatorExample>` for :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
 * Create :ref:`GPU <pedestrianGPU>` pedestrians.
-* Add desired animations in the :ref:`Animation state authoring <legacyAnimatorExample>` for :ref:`GPU <pedestrianHybridLegacy>` pedestrians.
+* Add desired animations in the :ref:`Animation state authoring <gpuAnimatorExample>` for :ref:`GPU <pedestrianGPU>` pedestrians.
 * Make sure that the number & the order of :ref:`Legacy <pedestrianHybridLegacy>` & :ref:`GPU <pedestrianGPU>` of the models are the same in the factories (`PedestrianSkinFactory` & `PedestrianGPUSkinFactory`).
 * How to play animation described :ref:`here <pedestrianAnimation>`.
 

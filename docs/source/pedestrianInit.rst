@@ -254,6 +254,9 @@ The Crowd GPU Custom animator is used for transitions between baked animations (
 **Used in systems:**
 	* GPUAnimatorCustomStateSystem
 
+lol
+.. _hybridAndGpu:
+
 Hybrid and GPU
 ~~~~~~~~~~~~
 
@@ -402,6 +405,11 @@ How To Setup
 
 Animation
 ----------------
+
+.. _customAnimatorState:
+
+Custom Animation
+~~~~~~~~~~~~
 
 To handle custom animation, follow these steps:
 
@@ -612,51 +620,6 @@ Custom State System
 	}
 	}
 
-.. _customAnimatorState:
-
-Custom Animator State
-~~~~~~~~~~~~
-
-If you want to override the default motion animation, use these methods:
-
-Method #1
-""""""""""""""
-
-* This method is used when :ref:`GPU pedestrians <pedestrianGPU>` require complex :ref:`animation transitions <animationBakerHowToCreateTransition>`.
-
-#. Add the custom anitator state by using the utils method:
-
-	* ``AnimatorStateExtension.AddCustomAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState)``
-		
-	* And add hash of your animation in the following systems.
-	* For :ref:`Legacy skin <pedestrianHybridLegacy>`.
-		* **LegacyAnimatorCustomStateSystem**
-		
-	* For :ref:`GPU skin <pedestrianGPU>`.
-		* **GPUAnimatorCustomStateSystem**	
-	
-#. If the pedestrian already in the custom animator state use the method:
-
-	* ``AnimatorStateExtension.ChangeAnimatorState(ref EntityCommandBuffer commandBuffer, Entity entity, CustomAnimatorState customAnimationState, bool immediateUpdate = true)``
-	
-#. After all the custom animation is complete, use the method to return the default animation system:
-
-	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)``
-			
-
-			
-Method #2
-""""""""""""""
-
-* If the entity has the `Idle` :ref:`Movement state <pedestrianMovementState>`, you can change the animation directly by using the following methods:
-
-	* For :ref:`Legacy skin <pedestrianHybridLegacy>` by changing the `Animator` state directly (:ref:`example <legacyAnimatorExample>`).
-	* For :ref:`GPU skin <pedestrianGPU>` by using utils method (:ref:`example <gpuAnimatorExample>`).
-		
-	.. note::
-		For an example of a system, please read the script below:
-			* SwitchTalkingKeySystem.cs.
-			
 .. _pedestrianMovementState:
 
 Movement State
@@ -721,6 +684,7 @@ Rig Type
 
 * **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
 * **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianGPU>`.
+* **Hybrid and GPU** : :ref:`New hybrid GPU <hybridAndGpu>` mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
 
 .. _pedestrianEntityType:
 

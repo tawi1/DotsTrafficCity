@@ -396,7 +396,7 @@ Navigation
 ----------------
 
 | Navigation is used for pedestrian obstacle avoidance.
-| There are 2 types of navigation:
+| There are 3 types of navigation:
 
 .. _pedestrianNavmeshNavigation:
 
@@ -466,6 +466,8 @@ Cons:
 
 Agents Navigation 
 ~~~~~~~~~~~~
+
+DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_  using `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 
 How To Setup
 """"""""""""""

@@ -17,6 +17,7 @@ Fixed
 
 * Agents Navigation integration editor error fix.
 * Minor player arcade car prefab fix.
+* Traffic node viewer fix.
 
 Changed
 ~~~~~~~~~~~~

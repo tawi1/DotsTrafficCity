@@ -461,6 +461,18 @@ Pros:
 Cons:
 	* Can avoid vehicles only.
 	* Works on flat surfaces only.
+	
+.. _pedestrianAgentsNavigation:
+
+Agents Navigation 
+~~~~~~~~~~~~
+
+How To Setup
+""""""""""""""
+
+* Make sure that you purchased & downloaded `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ package.
+* Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Agents Navigation`.
+* Enable the `Auto Add Agent Components` option for quick prototyping, or add agent authoring components to the `PedestrianEntity` prefab from the `Agents Navigation` sample. (`Agents Navigation doc <https://lukaschod.github.io/agents-navigation-docs/manual/game-objects.html>`_.)
 
 Common Info
 ----------------
@@ -747,6 +759,7 @@ Obstacle Avoidance Type
 
 | **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
 | **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
+| **Agents navigation** : navigating with `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin (:ref:`how to setup <pedestrianAgentsNavigation>`).
 	
 .. _pedestrianNavigationType:
 

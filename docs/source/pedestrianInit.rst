@@ -69,28 +69,32 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 |                        |              |           |              |
 +------------------------+--------------+-----------+--------------+
 
-.. _legacyAnimatorExample:
-
-How To Use
-""""""""""""""
-
-| **Code example:**
-
-..  code-block:: r
-	
-	Entities
-	.WithoutBurst()
-	.ForEach((
-		Entity entity,
-		Animator animator) =>
-	{
-		animator.SetFloat("yInput", 1f);
-	}).Run();
-		
 **Used in systems:**
 	* LegacyAnimatorSystem
 	* LegacyAnimatorCustomStateSystem
-	* LegacyTalkingAnimatorSystem
+	
+.. _legacyAnimatorExample:
+
+Animation authoring
+""""""""""""""
+
+* Add your animation to `AnimationState` script file.
+* In the scene find:
+
+	.. image:: /images/pedestrian/animation/PedestrianAnimationStateAuthoring.png
+	`Hub/Configs/PedestrianConfigs/PedestrianAnimationStateAuthoring`.
+
+* Add your animation to the list & enter condition to start the animation from the assigned `Animator`:
+
+	.. image:: /images/pedestrian/animation/PedestrianAnimationStateLegacyExample.png
+	
+	* **State name** : state name of the animation in the `Animator`.
+	* **State layer** : number of the layer in the `Animator`.
+	* **Param 1** : first parameter to start animation in the `Animator`.
+	* **Param 2** : second parameter to start animation in the `Animator` *[optional]*.
+	* **Exit param** : parameter to exit current animation in the `Animator` *[optional]*.
+	
+* How to play animation described :ref:`here <pedestrianAnimation>`.
 
 .. _pedestrianGPU:
 
@@ -182,56 +186,29 @@ How To Create
 	
 		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
 	
-.. _gpuAnimatorExample:
+	**Used in systems:**
+		* GPUAnimatorSystem
+		* GPUAnimatorCustomStateSystem
 	
-How To Use
+.. _gpuAnimatorExample:
+
+Animation authoring
 """"""""""""""
 
-| **Code example:**
+* Add your animation to `AnimationState` script file.
+* In the scene find:
 
-..  code-block:: r
+	.. image:: /images/pedestrian/animation/PedestrianAnimationStateAuthoring.png
+
+	`Hub/Configs/PedestrianConfigs/PedestrianAnimationStateAuthoring`.
 	
-	private NativeHashMap<SkinAnimationHash, HashToIndexData> hashToLocalDataLocalRef;
+* Add binding in the list (`AnimationState` is a key, `Animation` from :ref:`Animation collection <animationGPUAnimationCollection>` is a value)
+
+	.. image:: /images/pedestrian/animation/PedestrianAnimationGpuExample.png
+	`Example.`
 	
-	void ISystemStartStop.OnStartRunning(ref SystemState state)
-	{
-		hashToLocalDataLocalRef = CrowdSkinProviderSystem.HashToLocalDataStaticRef;
-	}
-	
-	[BurstCompile]
-	void ISystem.OnUpdate(ref SystemState state)
-	{
-		var switchAnimJob = new SwitchAnimJob()
-		{
-			HashToLocalData = hashToLocalDataLocalRef,
-		};
-		
-		switchAnimJob.Schedule();
-	}
-	
-    [BurstCompile]
-    public partial struct SwitchAnimJob : IJobEntity
-    {
-		[ReadOnly]
-		public NativeHashMap<SkinAnimationHash, HashToIndexData> HashToLocalData;
-		
-		void Execute(
-		Entity entity,
-		ref SkinUpdateComponent skinUpdateComponent,
-		EnabledRefRW<UpdateSkinTag> updateSkinTagRW)
-		{
-			// Some animation hash calculated from animation name & AnimUtils.StringToHash method
-			var animHash = 54335363; 
-			AnimEntitiesUtils.UpdateAnimation(ref skinUpdateComponent, ref updateSkinTagRW, animHash);
-		}
-		}
-    }
-		
-**Used in systems:**
-	* GPUAnimatorSystem
-	* GPUAnimatorCustomStateSystem
-	* GPUTalkAnimatorSystem
-	
+* How to play animation described :ref:`here <pedestrianAnimation>`.
+			
 .. _animationTextureData:
 
 Animation Texture Data
@@ -274,84 +251,23 @@ The Crowd GPU Custom animator is used for transitions between baked animations (
 		
 		.. image:: /images/pedestrian/baker/animator/AnimatorContainerExample.png		
 
-How To Use
+**Used in systems:**
+	* GPUAnimatorCustomStateSystem
+
+Hybrid and GPU
+~~~~~~~~~~~~
+
+New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+
+How To Create
 """"""""""""""
 
-**Simple switch animation code example:**
-	
-..  code-block:: r
-    
-	Entities
-	.WithoutBurst()
-	.WithNone<UpdateSkinTag>()
-	.WithAll<HasSkinTag, GPUSkinTag>()
-	.ForEach((
-		Entity entity,
-		ref GPUSkinUpdateComponent gpuSkinUpdateComponent) =>
-	{
-		gpuSkinUpdateComponent.NewAnimationHash = PedestrianGPUAnimationsConstans.SittingIdle_Anim_Hash; //int animation hash
-		commandBuffer.SetComponentEnabled<UpdateSkinTag>(entity, true);
-	}).Schedule();
-	
-
-.. _pedestrianGPUFactoryTransitionExample:
-
-**Complex animation transition code example:**
-
-..  code-block:: r
-	
-	public partial class PedestrianSittingGPUAnimatorExampleSystem : SystemBase
-	{
-		private const int StartSitAnimHash = -1880722739; //StartSit hash trigger
-
-		private BeginPresentationEntityCommandBufferSystem entityCommandBufferSystem;
-		private CrowdTransitionProviderSystem crowdTransitionProviderSystem;
-
-		protected override void OnCreate()
-		{
-			base.OnCreate();
-			entityCommandBufferSystem = World.GetOrCreateSystemManaged<BeginPresentationEntityCommandBufferSystem>();
-			crowdTransitionProviderSystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<CrowdTransitionProviderSystem>();
-		}
-
-		protected override void OnUpdate()
-		{
-			var transitions = crowdTransitionProviderSystem.Transitions;
-
-			if (!transitions.IsCreated)
-			{
-				return;
-			}
-
-			var commandBuffer = entityCommandBufferSystem.CreateCommandBuffer();
-
-			Entities
-			.WithoutBurst()
-			.WithReadOnly(transitions)
-			.WithAll<HasSkinTag, GPUSkinTag>()
-			.ForEach((
-				Entity entity,
-				ref AnimationTransitionData animationTransitionData) =>
-			{
-				Entity animStateEntity = Entity.Null;
-
-				transitions.TryGetValue(StartSitAnimHash, out animStateEntity);
-
-				if (animStateEntity != Entity.Null)
-				{                 
-					animationTransitionData.CurrentAnimationState = animStateEntity;
-					commandBuffer.SetComponentEnabled<HasAnimTransitionTag>(entity, true);
-				}
-			}).Schedule();
-			
-			entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
-		}
-	}
-
-**Used in systems:**
-	* LoadGPUSkinSystem
-	* CrowdAnimatorTransitionSystem
-	* GPUSittingAnimatorSystem
+* Create :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
+* Add desired animations in the :ref:`Animation state authoring <legacyAnimatorExample>` for :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
+* Create :ref:`GPU <pedestrianGPU>` pedestrians.
+* Add desired animations in the :ref:`Animation state authoring <legacyAnimatorExample>` for :ref:`GPU <pedestrianHybridLegacy>` pedestrians.
+* Make sure that the number & the order of :ref:`Legacy <pedestrianHybridLegacy>` & :ref:`GPU <pedestrianGPU>` of the models are the same in the factories (`PedestrianSkinFactory` & `PedestrianGPUSkinFactory`).
+* How to play animation described :ref:`here <pedestrianAnimation>`.
 
 .. _pedestrianRagdoll:
 
@@ -475,6 +391,73 @@ How To Setup
 * Make sure that you purchased & downloaded `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Agents Navigation`.
 * Enable the `Auto Add Agent Components` option for quick prototyping, or add agent authoring components to the `PedestrianEntity` prefab from the `Agents Navigation` sample for more flexible settings. (`Agents Navigation doc <https://lukaschod.github.io/agents-navigation-docs/manual/game-objects.html>`_)
+
+.. _pedestrianAnimation:
+
+Animation
+----------------
+
+To handle custom animation, follow these steps:
+
+* Add custom animations in the `Animation state authoring` for pedestrians.
+	* :ref:`Hybrid skin <legacyAnimatorExample>`.
+	* :ref:`GPU skin <gpuAnimatorExample>`.
+	
+* Add custom animator state by code:
+	
+..  code-block:: r
+	
+	// IJobEntity entity example
+    void Execute(
+        Entity entity,
+        ref AnimationStateComponent animationStateComponent)
+    {
+		// Some condition
+		bool condition = true;
+		
+		if (condition)
+		{
+			// Replace 'AnimationState.StandToSit' with your animation.
+			AnimatorStateExtension.AddCustomAnimatorState(ref CommandBuffer, entity, ref animationStateComponent, AnimationState.StandToSit);
+		}
+    }
+	
+* Change to new state if required, code:
+
+	// IJobEntity entity example
+    void Execute(
+        Entity entity,
+        ref AnimationStateComponent animationStateComponent)
+    {
+		// Some condition
+		bool condition = true;
+		
+		if (condition)
+		{
+			// Replace 'AnimationState.SitToStand' with your animation.
+			AnimatorStateExtension.ChangeAnimatorState(ref CommandBuffer, entity, ref animationStateComponent, AnimationState.SitToStand);
+		}
+    }
+	
+* After all the custom animations have been played, turn off the custom animation state.
+
+	// IJobEntity entity example
+    void Execute(
+        Entity entity,
+        ref AnimationStateComponent animationStateComponent)
+    {
+		// Some condition
+		bool condition = true;
+		
+		if (condition)
+		{
+			AnimatorStateExtension.RemoveCustomAnimator(ref CommandBuffer, entity);
+		}
+    }	
+
+	.. note::
+		For an example of a system, please read the script below:
+			* BenchStateSystem.cs.			
 
 Common Info
 ----------------
@@ -654,9 +637,7 @@ Method #1
 
 	* ``AnimatorStateExtension.RemoveCustomAnimator(ref EntityCommandBuffer commandBuffer, Entity entity)``
 			
-	.. note::
-		For an example of a system, please read the script below:
-			* BenchStateSystem.cs.
+
 			
 Method #2
 """"""""""""""

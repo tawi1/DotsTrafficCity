@@ -93,6 +93,6 @@ Steps
 	.. image:: /images/gettingstarted/LayerSettings.png
 		:scale: 70%
 	
-#. **TrafficNode** & **PedestrianNode** layers are required, others are optional, read more about project layers :ref:`here <layerInfo>`.
+#. **TrafficNode** & **PedestrianNode** layers are **required**, others are optional, read more about project layers :ref:`here <layerInfo>`.
 #. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.
 #. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo <demoOpening>` or :ref:`Demo Mono <demoMonoOpening>` scene.

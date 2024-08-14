@@ -7,7 +7,7 @@ Sound
 Built-in
 ============
 
-By default is used for all sounds in the project.
+By default is used for all sounds in the project (if :ref:`FMOD <fmod>` is not installed).
 
 How To Use
 ------------
@@ -50,6 +50,8 @@ Jobs
 ~~~~~~~~~~~~
 
 If you want to create sound in Job, :ref:`read here <soundCodeExample>`.
+
+.. _fmod:
 
 FMOD
 ============

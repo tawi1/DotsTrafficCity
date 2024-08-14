@@ -297,7 +297,6 @@ How To Play
 	
 	Entities
 	.WithBurst()
-	.WithReadOnly(sounds)
 	.ForEach((
 		Entity entity
 		in SoundHolder soundHolder) =>

@@ -265,7 +265,7 @@ Create sound example
         }
 		
 		protected override void OnUpdate()
-        {
+		{
 			var commandBuffer = ...
 			var soundPrefabEntity = soundPrefabQuery.GetSingletonEntity();
 			

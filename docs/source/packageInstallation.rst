@@ -43,6 +43,7 @@ Steps
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
 	.. image:: /images/gettingstarted/InitilizationWindow.png
+		:scale: 50%
 
 #. Click `Load Packages` to start downloading the packages required for this tool.
 #. If you get the error 'No git executable was found', install the :ref:`git <gitFix>` on your PC (:ref:`how to install <gitFix>`) or download these packages from the store.
@@ -87,10 +88,10 @@ Steps
 #. Install the :ref:`FMOD sound <sound>` settings.
 #. If the project is created from scratch, `Pipeline`, `Layer settings`, `Project settings` are automatically installed & go to the last step, if not, follow the next steps.
 #. Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+` in your pipeline settings.
-#. Open `Layer settings` tab & select the layers to import according to your use case.
+#. Open `Layer settings` tab & select the layers to import according to your use case & press `Apply` button.
 	
 	.. image:: /images/gettingstarted/LayerSettings.png
-	:scale: 50%
+		:scale: 70%
 	
 #. `TrafficNode` & `PedestrianNode` layers are required, others are optional, read more about project layers :ref:`here <layerInfo>`.
 #. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.

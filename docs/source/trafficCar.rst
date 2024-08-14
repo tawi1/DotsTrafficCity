@@ -261,6 +261,7 @@ If you want to use `Arcade's` built-in sample controller, follow these steps:
 #. Customize hull & wheel offsets.
 #. Customize traffic related settings.
 #. Press `Create` button.
+#. In the ArcadeVehicleController, make sure the raycast layer matches your `Ground` layer.
 
 Custom user controller
 ^^^^^^^^^^^^^^^^^^^^^^

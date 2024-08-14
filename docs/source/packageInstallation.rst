@@ -88,5 +88,10 @@ Steps
 #. If the project is created from scratch, `Pipeline`, `Layer settings`, `Project settings` are automatically installed & go to the last step, if not, follow the next steps.
 #. Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+` in your pipeline settings.
 #. Open `Layer settings` tab & select the layers to import according to your use case.
+	
+	.. image:: /images/gettingstarted/LayerSettings.png
+	:scale: 50%
+	
+#. `TrafficNode` & `PedestrianNode` layers are required, others are optional, read more about project layers :ref:`here <layerInfo>`.
 #. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.
 #. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo <demoOpening>` or :ref:`Demo Mono <demoMonoOpening>` scene.

@@ -34,28 +34,59 @@ New Scene
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
 #. If you want to add your own player, :ref:`read here <playerCustom>`, otherwise you can use the temporary built-in :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>` **[optional step]**.
-#. Go through all the steps to create :ref:`road for traffic <roadInstallation>`.
+#. Add :ref:`Road segments <roadSegmentCreator>` to the scene.
 
-.. only:: builder_html
+	.. only:: builder_html
 
-	.. image:: /images/gettingstarted/Tutorial1.gif
+		.. image:: /images/gettingstarted/Tutorial1.gif
 	
-#. Generate a :ref:`subscene <roadEntitySubscene>`.
-#. Create :ref:`traffic vehicles <trafficCar>`.
-#. Create :ref:`pedestrians <pedestrian>`.
+#. In the :ref:`Road Parent <roadParentInfo>` press `Force connect segments` button.
+
+	.. only:: builder_html
+
+		.. image:: /images/gettingstarted/Tutorial2.gif
+	
+#. For more info read the :ref:`road installation <roadInstallation>`.			
+#. Connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>`
+
+	.. only:: builder_html
+		.. image:: /images/gettingstarted/Tutorial3.gif
+		
+#. In the :ref:`Road Parent <roadParentInfo>` press `Bake Path Data` button & select :ref:`Hub <Hub>` object on the scene & generate a :ref:`subscene <roadEntitySubscene>`.
+
+	.. only:: builder_html
+	
+		.. image:: /images/gettingstarted/Tutorial4.gif
+		
+#. Create ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
+
+	.. only:: builder_html
+	
+		.. image:: /images/gettingstarted/Tutorial5.gif
+
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
 #. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera:	
 	
 	.. image:: /images/gettingstarted/CityCreation1.png
 					
-	* Create your own :ref:` player <playerCustom>`.
+	* Create your own :ref:`player <playerCustom>`.
 	* Disable the `Main Camera City`.
 	
 		.. image:: /images/gettingstarted/CityCreation4.png
 					
 	* Create a new gameobject, add a `CullPointRuntimeAuthoring` component & add this object by child to your camera (set local position to zero) or add it to the scene not too far from the roads, if the camera is not yet created.
 		
-#. Create ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
+	.. only:: builder_html
+			
+		.. image:: /images/gettingstarted/Tutorial6.gif
+				
+#. Create :ref:`traffic vehicles <trafficCar>`.
+#. Create :ref:`pedestrians <pedestrian>`.
+
+	.. only:: builder_html
+			
+		.. image:: /images/gettingstarted/Tutorial7.gif
+		
 #. Add & customize :ref:`game sounds <sound>`.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:

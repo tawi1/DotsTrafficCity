@@ -34,7 +34,7 @@ New Scene
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
 #. If you want to add your own player, :ref:`read here <playerCustom>`, otherwise you can use the temporary built-in :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>` **[optional step]**.
-#. Add :ref:`Road segments <roadSegmentCreator>` to the scene.
+#. Add :ref:`Road segments <roadSegmentCreatorHowToUse>` to the scene.
 
 	.. only:: builder_html
 
@@ -46,10 +46,10 @@ New Scene
 
 		.. image:: /images/gettingstarted/Tutorial2.gif
 	
-#. For more info read the :ref:`road installation <roadInstallation>`.			
 #. Connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>`
 
 	.. only:: builder_html
+	
 		.. image:: /images/gettingstarted/Tutorial3.gif
 		
 #. In the :ref:`Road Parent <roadParentInfo>` press `Bake Path Data` button & select :ref:`Hub <Hub>` object on the scene & generate a :ref:`subscene <roadEntitySubscene>`.
@@ -58,6 +58,7 @@ New Scene
 	
 		.. image:: /images/gettingstarted/Tutorial4.gif
 		
+#. For more information on how to create a road, read the :ref:`road installation <roadInstallation>`.	
 #. Create ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
 
 	.. only:: builder_html
@@ -65,7 +66,7 @@ New Scene
 		.. image:: /images/gettingstarted/Tutorial5.gif
 
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
-#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera:	
+#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera: *[optional step]*	
 	
 	.. image:: /images/gettingstarted/CityCreation1.png
 					
@@ -79,6 +80,7 @@ New Scene
 	.. only:: builder_html
 			
 		.. image:: /images/gettingstarted/Tutorial6.gif
+		`New cull point example.`
 				
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
@@ -86,6 +88,7 @@ New Scene
 	.. only:: builder_html
 			
 		.. image:: /images/gettingstarted/Tutorial7.gif
+		`Result example.`
 		
 #. Add & customize :ref:`game sounds <sound>`.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
@@ -111,7 +114,6 @@ Demo Scene
 	
 #. Press `Play` button.
 #. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.
-
 
 .. _demoMonoOpening:
 

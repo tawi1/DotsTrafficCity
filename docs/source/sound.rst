@@ -4,7 +4,57 @@
 Sound
 ************
 
-`FMOD <https://www.fmod.com/docs/2.02/studio/welcome-to-fmod-studio.html>`_ is used for all sounds in the project.
+Built-in Unity Sound
+============
+
+By default is used for all sounds in the project.
+
+How To Use
+------------
+
+#. Create :ref:`Sound Data <soundData>` in the `Unity` project.
+
+	.. image:: /images/sound/SoundDataCreation.png
+	
+#. Assign your desired `AudioClip <https://docs.unity3d.com/ScriptReference/AudioClip.html>`_.
+
+	.. image:: /images/sound/SoundDataBuiltin.png
+	
+	.. note:: Sound ID is created automatically.
+	
+#. Press `Add To Container` button to add sound to the :ref:`Sound container <soundContainer>`.	
+
+	.. image:: /images/sound/FMOD-SoundServiceAddedExample.png
+	
+#. Now, we can trigger the sound using the code examples below.	
+
+Code Examples
+------------
+
+MonoBehaviour
+~~~~~~~~~~~~
+
+..  code-block:: r
+
+    public class ExampleSoundBehaviour : MonoBehaviour
+    {
+        [SerializeField] private SoundData exampleSoundData;
+		
+		private void PlaySound()
+		{
+			SoundManager.Instance.PlayOneShot(exampleSoundData, transform.position);
+		}
+	}
+	
+Jobs
+~~~~~~~~~~~~
+
+If you want to create sound in Job, :ref:`read here <soundCodeExample>`.
+
+FMOD
+============
+
+`FMOD <https://www.fmod.com/docs/2.02/studio/welcome-to-fmod-studio.html>`_ is used for all sounds in the project (if `FMOD` installed).
 
 Installation
 ------------
@@ -75,18 +125,21 @@ How To Use
 	
 	.. note:: Sound ID is created automatically.
 	
-#. Press `Add To Service` button to add sound to the :ref:`FMOD sound service <fmodSoundService>`.	
+#. Press `Add To Container` button to add sound to the :ref:`Sound container <soundContainer>`.	
 
 	.. image:: /images/sound/FMOD-SoundServiceAddedExample.png
 	
 #. Now, we can trigger the sound from the :ref:`code <soundCodeExample>`.	
+
+Data
+============
 
 .. _soundData:
 
 Sound Data
 ------------
 
-Contains data about the `FMOD` sound.
+Contains data about the sound.
 
 How To Create
 ~~~~~~~~~~~~
@@ -100,15 +153,29 @@ Select from the project context menu:
 Settings
 ~~~~~~~~~~~~
 
+Built-in
+""""""""""""""
+
+	.. image:: /images/sound/SoundDataBuiltin.png
+	
+| **Id** : immutable ID, by which sounds are triggered in `DOTS traffic city` (ID is created automatically).
+| **Loop** : on/off sound looping.
+| **Clip volume** : volume of the audio clip.
+| **Random sound** : on/off random sound.
+| **Audio clip** : reference to `AudioClip <https://docs.unity3d.com/ScriptReference/AudioClip.html>`_ .
+
+FMOD
+""""""""""""""
+
 	.. image:: /images/sound/SoundDataExample.png
 	
 | **Id** : immutable ID, by which sounds are triggered in `DOTS traffic city` (ID is created automatically).
 | **Name** : `event name <https://www.fmod.com/docs/2.02/studio/glossary.html#event>`_  of the sound.
 | **Parameters** : event `parameters <https://www.fmod.com/docs/2.02/studio/glossary.html#parameter>`_ .
 
-.. _fmodSoundService:
+.. _soundContainer:
 
-FMOD Sound Service
+Sound Data Container
 ------------
 
 Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
@@ -120,12 +187,12 @@ Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
 .. _soundCodeExample:
 
 Code Examples
-------------
+============
 
 .. _soundType:
 
 Sound Types
-~~~~~~~~~~~~
+------------
 
 * **Default** : default sound entity.
 * **One Shot** : entity played once & destroyed afterwards.
@@ -136,10 +203,10 @@ Sound Types
 .. _soundCodeHowToCreate:
 
 How To Create
-~~~~~~~~~~~~
+------------
 
 EntityManager methods
-""""""""""""""
+~~~~~~~~~~~~
 
 ..  code-block:: r
 
@@ -157,7 +224,7 @@ EntityManager methods
 	// Creation of a sound entity that will be a child of a given entity.
 	
 CommandBuffer methods
-""""""""""""""
+~~~~~~~~~~~~
 
 Burst compatible methods.
 
@@ -174,15 +241,39 @@ Burst compatible methods.
 .. _soundPrefabExample:
 
 Create prefab query method
-""""""""""""""
+~~~~~~~~~~~~
 	
 ..  code-block:: r
 
 	SoundExtension.GetSoundQuery(EntityManager entityManager, SoundType soundType)
 	// Get `EntityQuery` with the selected `Sound type`.
 	
+Create sound example
+~~~~~~~~~~~~
+
+..  code-block:: r
+
+    public partial class ExampleSoundSystem : SystemBase
+    {
+        private EntityQuery soundPrefabQuery;
+
+        protected override void OnCreate()
+        {
+            soundPrefabQuery = SoundExtension.GetSoundQuery(EntityManager, SoundType.Default);
+        }
+		
+		protected override void OnUpdate()
+        {
+			var commandBuffer = ...
+			var soundPrefabEntity = soundPrefabQuery.GetSingletonEntity();
+			
+			// Pass 'commandBuffer' & 'soundPrefabEntity' into the IJobEntity or Entities.ForEach
+			// commandBuffer.CreateSoundEntity(soundPrefabEntity, soundId, position);
+			// 'soundId' can be taken from 'SoundData'
+		}
+	
 Params
-""""""""""""""
+~~~~~~~~~~~~
             
 * soundId : id of sound taken from :ref:`sound data <soundData>`.
 * soundPrefabEntity : sound :ref:`prefab entity <soundPrefabExample>` taken from :ref:`EntityQuery <soundPrefabExample>`.
@@ -190,7 +281,7 @@ Params
 * volume : volume of the sound (0..1 range).
 	
 How To Play
-~~~~~~~~~~~~
+------------
 
 ..  code-block:: r
 	
@@ -200,7 +291,7 @@ How To Play
 	{
 	
 	// Get world sounds
-	var sounds = GetComponentLookup<FMODSound>(true);
+	var sounds = GetComponentLookup<SoundEventComponent>(false);
 	
 	Entities
 	.WithBurst()
@@ -215,15 +306,15 @@ How To Play
 		// Some sound entity container component 
 		Entity soundEntity = soundHolder.Entity 
 		
-		FMODSound fmodSound = sounds[soundEntity];
+		SoundEventComponent soundEvent = sounds[soundEntity];
 		
 		if (shouldPlay)
 		{
-			fmodSound.Event.start();
+			soundEvent.SetEvent(SoundEventType.Play);
 		}
 		else
 		{
-			fmodSound.Event.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			soundEvent.SetEvent(SoundEventType.StopFadeout);
 		}
 			
 	}).Schedule();
@@ -231,12 +322,12 @@ How To Play
 	}
 	
 How To Destroy
-~~~~~~~~~~~~
+------------
 
-Add the `PooledEventTag` component to the `sound` entity.
+Enable the `PooledEventTag` component in the `sound` entity.
 
 How To Loop
-~~~~~~~~~~~~
+------------
 
 #. Create a :ref:`Sound entity <soundCodeHowToCreate>`.
 #. Add a `LoopSoundData` component (assign a `Duration` value).

@@ -66,7 +66,7 @@ New Scene
 		.. image:: /images/gettingstarted/Tutorial5.gif
 
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
-#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera: *[optional step]*	
+#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera: **[optional step]**	
 	
 	.. image:: /images/gettingstarted/CityCreation1.png
 					
@@ -84,13 +84,7 @@ New Scene
 				
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
-
-	.. only:: builder_html
-			
-		.. image:: /images/gettingstarted/Tutorial7.gif
-		`Result example.`
-		
-#. Add & customize :ref:`game sounds <sound>`.
+#. Add & customize :ref:`game sounds <sound>` **[optional step]**.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:
 		
@@ -100,8 +94,14 @@ New Scene
 	#. Set `Scene view mode` to `Runtime Data`.
 	
 		.. image:: /images/gettingstarted/EntitiesDisplay.png
+			:scale: 70%
 	
 #. Launch the scene.
+
+	.. only:: builder_html
+			
+		.. image:: /images/gettingstarted/Tutorial7.gif
+		`Result example.`
 
 .. _demoOpening:
 

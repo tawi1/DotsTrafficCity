@@ -40,7 +40,7 @@ New Scene
 #. Create :ref:`pedestrians <pedestrian>`.
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
 	
-	.. note:: By default, the cull point is the child in the `Main Camera`.
+	.. note:: By default, the cull point is the child in the `Main Camera City`, but if you use your own camera, disable the `Main Camera City` & add a new gameobject by child to your camera (set local position to zero) & add a `CullPointRuntimeAuthoring` component.
 	
 #. Set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
 #. Add & customize :ref:`game sounds <sound>`.

@@ -70,7 +70,14 @@ New Scene
 	
 	.. image:: /images/gettingstarted/CityCreation1.png
 					
-	* Create your own :ref:`player <playerCustom>`.
+	* Select `CitySettingsInitializer` on the scene:
+
+		.. image:: /images/gettingstarted/CityCreation2.png
+		
+	* Set the `Player controller type` to `Custom` in the :ref:`General Settings <generalSettingsConfig>` config.
+	
+		.. image:: /images/gettingstarted/CityCreation3.png
+		
 	* Disable the `Main Camera City`.
 	
 		.. image:: /images/gettingstarted/CityCreation4.png

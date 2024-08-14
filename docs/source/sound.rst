@@ -318,6 +318,8 @@ How To Play
 		{
 			soundEvent.SetEvent(SoundEventType.StopFadeout);
 		}
+		
+		sounds[soundEntity] = soundEvent;
 			
 	}).Schedule();
 	}

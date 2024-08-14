@@ -66,7 +66,7 @@ New Scene
 		.. image:: /images/gettingstarted/Tutorial5.gif
 
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
-#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera: **[optional step]**	
+#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own :ref:`player & camera <playerCustom>`: **[optional step]**	
 	
 	.. image:: /images/gettingstarted/CityCreation1.png
 					

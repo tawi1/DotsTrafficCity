@@ -42,7 +42,7 @@ New Scene
 	
 	.. note:: By default, the cull point is the child in the `Main Camera City`, but if you use your own camera, disable the `Main Camera City` & add a new gameobject by child to your camera (set local position to zero) & add a `CullPointRuntimeAuthoring` component.
 	
-#. Set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service).
+#. Create ground (if missing, `GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
 #. Add & customize :ref:`game sounds <sound>`.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:

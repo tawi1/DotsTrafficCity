@@ -4,7 +4,7 @@
 Sound
 ************
 
-Built-in Unity Sound
+Built-in
 ============
 
 By default is used for all sounds in the project.

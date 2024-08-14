@@ -35,14 +35,27 @@ New Scene
 	
 #. If you want to add your own player, :ref:`read here <playerCustom>`, otherwise you can use the temporary built-in :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>` **[optional step]**.
 #. Go through all the steps to create :ref:`road for traffic <roadInstallation>`.
+
+.. only:: builder_html
+
+	.. image:: /images/gettingstarted/Tutorial1.gif
+	
 #. Generate a :ref:`subscene <roadEntitySubscene>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.
 #. Create :ref:`pedestrians <pedestrian>`.
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
+#. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own player & camera:	
 	
-	.. note:: By default, the cull point is the child in the `Main Camera City`, but if you use your own camera, disable the `Main Camera City` & add a new gameobject by child to your camera (set local position to zero) & add a `CullPointRuntimeAuthoring` component.
+	.. image:: /images/gettingstarted/CityCreation1.png
+					
+	* Create your own :ref:` player <playerCustom>`.
+	* Disable the `Main Camera City`.
 	
-#. Create ground (if missing, `GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
+		.. image:: /images/gettingstarted/CityCreation4.png
+					
+	* Create a new gameobject, add a `CullPointRuntimeAuthoring` component & add this object by child to your camera (set local position to zero) or add it to the scene not too far from the roads, if the camera is not yet created.
+		
+#. Create ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
 #. Add & customize :ref:`game sounds <sound>`.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:

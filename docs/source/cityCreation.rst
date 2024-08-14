@@ -46,7 +46,7 @@ New Scene
 
 		.. image:: /images/gettingstarted/Tutorial2.gif
 	
-#. Connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>`
+#. Create & connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>`
 
 	.. only:: builder_html
 	

@@ -1,3 +1,5 @@
+.. _playerCustom:
+
 User Custom Solution
 =====
 

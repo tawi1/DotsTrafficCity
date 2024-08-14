@@ -33,8 +33,7 @@ New Scene
 
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
-#. Create your own :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>`, if required **[optional step]**.
-#. Create a :ref:`Custom camera <customCamera>` if you want to use your own camera solution **[optional step]**.
+#. If you want to add your own player, :ref:`read here <playerCustom>`, otherwise you can use the temporary built-in :ref:`Player NPC <playerNpc>` & :ref:`Player car <playerCar>` **[optional step]**.
 #. Go through all the steps to create :ref:`road for traffic <roadInstallation>`.
 #. Generate a :ref:`subscene <roadEntitySubscene>`.
 #. Create :ref:`traffic vehicles <trafficCar>`.

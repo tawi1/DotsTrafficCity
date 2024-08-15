@@ -3,6 +3,29 @@
 Change Log
 ************
 
+[1.1.0e] - 16-08-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Auto-crosswalk connection in the :ref:`Road Parent <roadParentInfo>`.
+* Auto-connection distance in the :ref:`Road Parent <roadParentInfo>`.
+* Added new road warning messages.
+* New agent hybrid component.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed move handle for moving two or more road segments.
+* Crowd sound system dependency fix.
+* Fixed `Ragdoll` not being pooled.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved :ref:`Road Parent <roadParentInfo>` UI.
+
 [1.1.0d] - 12-08-2024
 ------------
 

@@ -12,6 +12,7 @@ Added
 * Auto-crosswalk connection in the :ref:`Road Parent <roadParentInfo>`.
 * Auto-connection distance in the :ref:`Road Parent <roadParentInfo>`.
 * Added new road warning messages.
+* New `Agents Navigation` editor config.
 * New agent hybrid component.
 
 Fixed

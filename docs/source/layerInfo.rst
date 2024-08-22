@@ -9,8 +9,8 @@ Layer Info
 Road Layers
 ~~~~~~~~~~~~
 
-* **TrafficNode [20]** : :ref:`TrafficNode <trafficNode>` layer. 
-* **PedestrianNode [21]** : :ref:`PedestrianNode <pedestrianNode>` layer. 
+* **TrafficNode [20]** : :ref:`TrafficNode <trafficNode>` layer **[required]**. 
+* **PedestrianNode [21]** : :ref:`PedestrianNode <pedestrianNode>` layer **[required]**. 
 
 Object Layers
 ~~~~~~~~~~~~
@@ -20,7 +20,7 @@ Object Layers
 * **StaticPhysicsShape [22]** : :ref:`Static object <physicsShapeTransfer>` layer collider layer (e.g. house, fence). 
 * **Chunk [23]** : layer of :ref:`streaming <sceneStreaming>` 3D chunks in the chunk subscenes created by :ref:`SubsceneChunkCreator <subSceneCreator>` tool. 
 * **Props [24]** :  collider layer of :ref:`props <propsInfo>` (e.g. traffic light, hydrant, mailbox). 
-* **Combined [25]** : layer of combined meshes into the one by 3rd party combining tool.  
+* **Combined [25]** : layer of combined meshes into the one by 3rd party combining tool *(demo scene only)*.  
 
 Misc Layers
 ~~~~~~~~~~~~

@@ -141,7 +141,7 @@ How To Use
 ~~~~~~~~~~~~ 
 
 * To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParentInfo>` by pressing `Connect` button. 
-* Each time you create a new :ref:`RoadSegment <roadSegment>` or move an existing :ref:`RoadSegment <roadSegment>`, press `Reset` and press `Connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
+* Each time you create a new :ref:`RoadSegment <roadSegment>`, press `Force connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
 
 .. _trafficNodeCollider:
 

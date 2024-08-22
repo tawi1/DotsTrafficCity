@@ -72,9 +72,9 @@ Settings
 ^^^^^^^^^^^^^^^^^^^^^^
 
 | **Connection waypoint offset** : automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
-| **Cast distance** : Raycast connection distance between :ref:`Traffic nodes <trafficNode>`, if zero, then infinite value.
-| **Multi angle raycast** : Multi-angle raycasting along Z-axis.
-| **Connect crosswalks** : Auto-connect:ref:`Pedestrian node <pedestrianNode>` crosswalks
+| **Cast distance** : raycast connection distance between :ref:`Traffic nodes <trafficNode>`, if zero, then infinite value.
+| **Multi angle raycast** : multi-angle raycasting along Z-axis.
+| **Connect crosswalks** : auto-connect :ref:`Pedestrian node <pedestrianNode>` crosswalks
 
 Utils
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -87,7 +87,7 @@ Buttons
 ^^^^^^^^^^^^^^^^^^^^^^
 
 | **Connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
-| **Force connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes (if a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, then the path will be overridden.).
+| **Force connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes (if a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, then the path will be overridden).
 | **Bake path data** : :ref:`bake <bakingInfo>` road data. 
 
 .. _subsceneGenerator:

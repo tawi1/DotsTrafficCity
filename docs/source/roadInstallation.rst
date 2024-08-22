@@ -20,8 +20,7 @@ Traffic Road Installation
 
 	.. image:: /images/road/installation/RoadParent.png
 
-#. Press `Reset` button to reset the :ref:`automatically created paths <autoPathConnection>`.
-#. Press `Connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
+#. Press `Force connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
 #. Press the `Bake` button (:ref:`bake info <bakingInfo>`).
 #. Create the :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
 #. For further changes to roads and configs, read the :ref:`Road <roadEdit>` & :ref:`Config <configEdit>` editing workflow.

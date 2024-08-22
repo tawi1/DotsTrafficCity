@@ -69,15 +69,26 @@ How To Use
 You read more :ref:`here <roadInstallation>`.
 
 Settings
-""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^
 
 | **Connection waypoint offset** : automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
-| **Connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>`.
-| **Reset segments** : reset the :ref:`automatically created paths <autoPathConnection>`.
+| **Cast distance** : Raycast connection distance between :ref:`Traffic nodes <trafficNode>`, if zero, then infinite value.
+| **Multi angle raycast** : Multi-angle raycasting along Z-axis.
+| **Connect crosswalks** : Auto-connect:ref:`Pedestrian node <pedestrianNode>` crosswalks
+
+Utils
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Add crossroads** : adds scene crossroad if missing.
 | **Connect pedestrian nodes** : automatically connects :ref:`pedestrian nodes <pedestrianNode>` that configured :ref:`auto-connection <pedestrianNodeConnections>`.
-| **Add crossroads** : adds crossroad if missing.
-| **Bake path data** : :ref:`bake <bakingInfo>` road data. 
 | **Clear unattached paths** : delete the :ref:`paths <path>` that are not connected to any a :ref:`TrafficNode <trafficNode>`.
+
+Buttons
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
+| **Force connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes (if a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, then the path will be overridden.).
+| **Bake path data** : :ref:`bake <bakingInfo>` road data. 
 
 .. _subsceneGenerator:
 

@@ -1,6 +1,6 @@
 .. _assetPacks:
 
-Integration Packages
+Integration Cities
 ============
 
 Integration packages allow you to quickly integrate your favourite cities into the `DOTS <https://unity.com/dots>`_ stack. Buy, download and integrate cities in a few clicks in less than a minute.

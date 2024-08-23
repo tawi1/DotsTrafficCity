@@ -14,7 +14,7 @@ How To Use
 #. Create a new game object & add `ER3D_RSGenerator` component.
 #. In the `Config` field select default config or duplicate exist sample config.
 #. Set `Min road length` to the desired value to ignore short roads.
-#. Select road on the scene.
+#. Select any 2-lane road in the scene.
 
 	.. image:: /images/integration/easyroads1.png
 	

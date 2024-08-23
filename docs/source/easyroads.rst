@@ -22,13 +22,23 @@ How To Use
 	
 	.. image:: /images/integration/easyroads2.png
 		
-#. Check `Road width` & set lane width in the `ER3D_RSGenerator` accordingly (e.g. 8 road width & 2 lanes => lane width is 4).	
+#. Check `Road width` & set lane width in the `ER3D_RSGenerator` accordingly.
 
 	.. image:: /images/integration/easyroads3.png
 	
-#. Set `Ignore road names` to ignore roads that aren't intended for traffic.
-#. Set `Speed limits` for crossings.
-#. Add `Custom Datas` if you want to override the settings for certain straight roads with specific text.
+#. For example, 8 road width & 2 lanes => lane width is 4.
+	
+	.. image:: /images/integration/easyroads3_1.png
+	
+#. Set `Ignore road names` to ignore roads that aren't intended for traffic. **[optional step]**
+#. Set `Speed limits` for crossings. **[optional step]**
+
+	.. image:: /images/integration/easyroads3_2.png
+	
+#. Add `Custom Datas` if you want to override the settings for certain straight roads with specific text. **[optional step]**
+
+	.. image:: /images/integration/easyroads3_3.png
+	
 #. If your scene have custom road prefabs with `ER Crossing Prefabs` component:
 	#. Create the :ref:`Road segment <roadSegmentCreator>` where your custom prefab road is located.
 	
@@ -60,11 +70,11 @@ How To Use
 #. Open the `Generated data` tab.
 
 	.. image:: /images/integration/easyroads8.png
-		:scale: 50%
+		:scale: 70%
 
 #. Check the generated data for errors & dead ends.
 #. If you want to customize road & exclude the desired road from being deleted for the new generation:
-	#. Select desired `Road segment` on scene.
+	#. Select the desired `Road segment` on the scene.
 	#. In the `RSSceneBinding` component, tick on the `Lock auto recreation` option.
 	#. If you now regenerate roads with `ER3D_RSGenerator`, this road will be saved for destruction.
 		

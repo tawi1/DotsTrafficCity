@@ -69,7 +69,7 @@ How To Use
 #. Press the `Generate` button.
 #. Open the `Generated data` tab.
 
-	.. image:: /images/integration/easyroads8.png
+	.. image:: /images/integration/easyroads9.png
 		:scale: 70%
 
 #. Check the generated data for errors & dead ends.

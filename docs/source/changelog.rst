@@ -3,6 +3,26 @@
 Change Log
 ************
 
+[1.1.1] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Runtime graph creation. *[in progress]*
+* Traffic light `API` to get traffic light state from monobehaviour script.
+
+Changed
+~~~~~~~~~~~~
+
+* Now the road `Graph` is created at runtime when the scene starts.
+* Improved `NPC` obstacle detection.
+
+Fixed
+~~~~~~~~~~~~
+
+* `TrafficNpcCalculateObstacleSystem` debug race condition fixed.
+
 [1.1.0e] - 16-08-2024
 ------------
 

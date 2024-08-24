@@ -75,18 +75,18 @@ Steps
 	.. warning::
 		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 			
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 8-10 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 9-11 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**
-			* **FMOD** - asset store plugin for :ref:`game sounds <sound>` `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_
+			* **FMOD** - asset store plugin for :ref:`game sounds <fmod>` `FMOD <https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-161631>`_
 		
 	.. note::
 		**Script define symbols required for the project:**
 			* **FMOD**
 			
 #. After that, press the `Add Scripting Define` button.
-#. Install the :ref:`FMOD sound <sound>` settings.
+#. Install the :ref:`FMOD sound <fmod>` settings.
 #. If the project is created from scratch, `Pipeline`, `Layer settings`, `Project settings` are automatically installed & go to the last step, if not, follow the next steps.
 #. Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+` in your pipeline settings.
 #. Open `Layer settings` tab & select the layers to import according to your use case & press `Apply` button.

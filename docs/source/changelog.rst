@@ -22,6 +22,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * `TrafficNpcCalculateObstacleSystem` debug race condition fixed.
+* Fixed warning messages.
 * Fixed `EasyRoads3D` exception when crossing has 1 connecting road.
 
 [1.1.0e] - 16-08-2024

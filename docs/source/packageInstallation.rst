@@ -38,7 +38,7 @@ Steps
 ------------
 
 #. Download & import from the `Unity Asset Store <https://u3d.as/2PCK>`_ .
-#. Make sure that you have **Unity 2022.3.21+** (except **2022.3.40**, **2022.3.41**, **2022.3.42**, **2022.3.43** which are `currently broken <https://discussions.unity.com/t/missing-prefab-references-when-baking-a-subscene/1502057>`_).
+#. Make sure that you have **Unity 2022.3.21+** (except **2022.3.40**, **2022.3.41**, **2022.3.42**, **2022.3.43**, **2022.3.44** which are `currently broken <https://discussions.unity.com/t/missing-prefab-references-when-baking-a-subscene/1502057>`_).
 #. If the script first compilation `hangs <https://forum.unity.com/threads/unity-hangs-on-open-during-script-compilation.1410000>`_ for more than 5 minutes, end the task in your OS's task manager & restart `Unity`.
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.

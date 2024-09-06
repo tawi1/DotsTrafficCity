@@ -10,6 +10,7 @@ Added
 ~~~~~~~~~~~~
 
 * Runtime graph creation. *[in progress]*
+* Added new `RuntimeTile Demo` scene.
 * Traffic light `API` to get traffic light state from monobehaviour script.
 
 Changed
@@ -22,6 +23,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * `TrafficNpcCalculateObstacleSystem` debug race condition fixed.
+* Anti-roll fix for `Arcade Vehicle Controller`.
 * Fixed warning messages.
 * Fixed potential config sync failure in some cases.
 * Fixed `EasyRoads3D` exception when crossing has 1 connecting road.

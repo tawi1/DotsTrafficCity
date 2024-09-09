@@ -17,6 +17,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Now the road `Graph` is created at runtime when the scene starts.
+* Traffic light states for each traffic light handler are now stored in the dynamic buffer.
 * Improved `NPC` obstacle detection.
 
 Fixed
@@ -26,6 +27,7 @@ Fixed
 * Anti-roll fix for `Arcade Vehicle Controller`.
 * Fixed warning messages.
 * Fixed potential config sync failure in some cases.
+* Fixed missing reference in the `PolygonCity`.
 * Fixed `EasyRoads3D` exception when crossing has 1 connecting road.
 
 [1.1.0e] - 16-08-2024

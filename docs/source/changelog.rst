@@ -18,6 +18,13 @@ Changed
 
 * Now the road `Graph` is created at runtime when the scene starts.
 * Traffic light states for each traffic light handler are now stored in the dynamic buffer.
+
+[1.1.0f] - 10-09-2024
+------------
+
+Changed
+~~~~~~~~~~~~
+
 * Improved `NPC` obstacle detection.
 
 Fixed

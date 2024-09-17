@@ -262,6 +262,9 @@ If you want to use `Arcade's` built-in sample controller, follow these steps:
 #. Customize traffic related settings.
 #. Press `Create` button.
 #. In the `ArcadeVehicleController`, make sure the raycast layer matches your `Ground` layer.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+
+	.. image:: /images/entities/trafficCar/howTo/Step6.png
 
 Custom user controller
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -284,7 +287,10 @@ If you want to use your own custom solution, follow these steps:
 #. Customize traffic related settings.
 #. Press `Create` button.
 #. To set your own custom Car Controller parameters to handle the most common traffic situations, use the :ref:`Traffic test scene <trafficTestScene>`.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
 
+	.. image:: /images/entities/trafficCar/howTo/Step6.png
+	
 Input info
 ^^^^^^^^^^^^^^^^^^^^^^
 * Throttle [1] : forward motion.

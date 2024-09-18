@@ -27,6 +27,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * Crossroad jam obstacle fix.
+* Fixed sound pooling when vehicle is destroyed.
 
 [1.1.0f] - 10-09-2024
 ------------

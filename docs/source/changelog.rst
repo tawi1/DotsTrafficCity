@@ -15,7 +15,7 @@ Added
 * Added option to manually handle traffic light state.
 * New train system. *[in progress]*
 * Custom train system support. *[in progress]*
-* The `Traffic Road Debugger` can be used at runtime to manually spawn specific vehicles.
+* The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
 
 Changed
 ~~~~~~~~~~~~
@@ -23,11 +23,17 @@ Changed
 * Now the road `Graph` is created at runtime when the scene starts.
 * Traffic light states for each traffic light handler are now stored in the dynamic buffer.
 
+[1.1.0g] - 18-09-2024
+------------
+
 Fixed
 ~~~~~~~~~~~~
 
 * Crossroad jam obstacle fix.
 * Fixed sound pooling when vehicle is destroyed.
+* Fixed lane change potential obstacle stuck when multiple cars are changing to the same lane.
+* Fixed avoidance of mono cars when trying to change lanes.
+* Fixed initial `HDRP` installation conflict with `Cinemachine v3` package.
 
 [1.1.0f] - 10-09-2024
 ------------

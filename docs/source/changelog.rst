@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.1.1] - In progress
+[1.2.0] - In progress
 ------------
 
 Added
@@ -20,6 +20,11 @@ Changed
 
 * Now the road `Graph` is created at runtime when the scene starts.
 * Traffic light states for each traffic light handler are now stored in the dynamic buffer.
+
+Fixed
+~~~~~~~~~~~~
+
+* Crossroad jam obstacle fix.
 
 [1.1.0f] - 10-09-2024
 ------------

@@ -12,6 +12,8 @@ Added
 * Runtime graph creation. *[in progress]*
 * Added new `RuntimeTile Demo` scene.
 * Traffic light `API` to get traffic light state from monobehaviour script.
+* New train system. *[in progress]*
+* Custom train system support. *[in progress]*
 
 Changed
 ~~~~~~~~~~~~

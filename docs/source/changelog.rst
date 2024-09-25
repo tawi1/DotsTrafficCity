@@ -17,6 +17,7 @@ Added
 * Custom train system support. *[in progress]*
 * The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
 * Added custom settings for pedestrian nodes for selected routes and the ability to split pedestrian routes into smaller ones to better balance spawning.
+* Added one-way roads for pedestrian nodes.
 * Added Mono cars for PolygonCity & Toon city.
 
 Changed

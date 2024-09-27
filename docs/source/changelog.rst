@@ -13,9 +13,10 @@ Added
 * Added new `RuntimeTile Demo` scene.
 * Traffic light `API` to get traffic light state from monobehaviour script.
 * Added option to manually handle traffic light state.
-* New train system. *[in progress]*
+* New train system.
 * Custom train system support. *[in progress]*
 * The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
+* Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes and the ability to split pedestrian routes into smaller ones to better balance spawning.
 * Added one-way roads for pedestrian nodes.
 * Added Mono cars for PolygonCity & Toon city.

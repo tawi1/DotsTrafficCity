@@ -19,6 +19,7 @@ Added
 * Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes.
 * Added the ability to split pedestrian routes into smaller ones to better balance spawning.
+* Added a sample custom player to interact with the custom car.
 * Added one-way roads for pedestrian nodes.
 * Added Mono cars for PolygonCity & Toon city.
 

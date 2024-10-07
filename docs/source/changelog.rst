@@ -15,6 +15,7 @@ Added
 * Added option to manually handle traffic light state.
 * New train system.
 * Custom train system support. *[in progress]*
+* Custom train demo scene.
 * The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
 * Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes.
@@ -28,6 +29,7 @@ Fixed
 
 * Fixed car creation offset for car parts when the car parts are not the parent of the car body.
 * Fixed wheel detection during car creation in some cases.
+* Fixed adding trigger area tag to non-pedestrian entities.
 
 Changed
 ~~~~~~~~~~~~

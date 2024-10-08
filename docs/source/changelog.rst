@@ -16,10 +16,11 @@ Added
 * New train system.
 * Custom train system support. *[in progress]*
 * Custom train demo scene.
-* The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
 * Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes.
 * Added the ability to split pedestrian routes into smaller ones to better balance spawning.
+* New `TriggerLight` type for TrafficNode, which triggers selected traffic light when traffic car enters this node.
+* The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
 * Added a sample custom player to interact with the custom car.
 * Added one-way roads for pedestrian nodes.
 * Added Mono cars for PolygonCity & Toon city.
@@ -30,6 +31,7 @@ Fixed
 * Fixed car creation offset for car parts when the car parts are not the parent of the car body.
 * Fixed wheel detection during car creation in some cases.
 * Fixed adding trigger area tag to non-pedestrian entities.
+* Fixed steering input can be incorrectly calculated in some cases.
 
 Changed
 ~~~~~~~~~~~~

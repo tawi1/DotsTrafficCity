@@ -14,7 +14,7 @@ Added
 * Traffic light `API` to get traffic light state from monobehaviour script.
 * Added option to manually handle traffic light state.
 * New train system.
-* Custom train system support. *[in progress]*
+* Custom train system support.
 * Custom train demo scene.
 * Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes.
@@ -37,6 +37,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Now the road `Graph` is created at runtime when the scene starts.
+* Improved randomization of initial pedestrian spawn.
 * Traffic light states for each traffic light handler are now stored in the dynamic buffer.
 
 [1.1.0g] - 19-09-2024

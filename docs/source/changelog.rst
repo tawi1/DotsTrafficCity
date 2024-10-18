@@ -24,6 +24,7 @@ Added
 * Added a sample custom player to interact with the custom car.
 * Added one-way roads for pedestrian nodes.
 * Added Mono cars for PolygonCity & Toon city.
+* Added manual sync button for all configs.
 
 Fixed
 ~~~~~~~~~~~~

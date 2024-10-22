@@ -52,7 +52,7 @@ New Scene
 	
 		.. image:: /images/gettingstarted/Tutorial3.gif
 		
-#. In the :ref:`Road Parent <roadParentInfo>` press :ref:`Bake Path Data <bakingInfo>` button & select :ref:`Hub <Hub>` object on the scene & generate a :ref:`subscene <roadEntitySubscene>`.
+#. In the :ref:`Road Parent <roadParentInfo>` press :ref:`Bake Path Data <bakingInfo>` button (should be done after each road edit & before starting the scene) & select :ref:`Hub <Hub>` object on the scene & generate a :ref:`subscene <roadEntitySubscene>`.
 
 	.. only:: builder_html
 	

@@ -21,6 +21,10 @@ How To Use
 #. Configure the :ref:`Common settings <carPrefabCreatorCommonSettings>` for creating a car.
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
+
+#.  In the `Save` tab, select the :ref:`Entity Type <entityType>` according to the desired use case.
+
+	.. image:: /images/entities/trafficCar/carPrefabCreator/EntityType.png
 	
 #. If the vehicle is the :ref:`Simple vehicle <simplePhysicsVehicle>` type, enable `Add wheel offset` in the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab.
 
@@ -30,11 +34,10 @@ How To Use
 	.. image:: /images/entities/trafficCar/physicsShape.png
 	:ref:`Simple physics entity <simplePhysicsVehicle>` `shape result example`
 	
-#. Configure the :ref:`Save settings <carPrefabCreatorSaveSettings>` for creating a car.
+#. In the `Save` tab, configure the :ref:`Save settings <carPrefabCreatorSaveSettings>`, which preset & path to use for saving the cars.
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
-#. Change the :ref:`Template settings <carPrefabCreatorTemplateSettings>` depending on the name of the car body (if it is a child) and the pattern of the names of the wheels.
 #. Click `Scan` button.
 #. Open :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>` tab, adjust common settings for all vehicles.
 
@@ -45,6 +48,7 @@ How To Use
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
 #. Once all the settings have been customised, click `Create` to create the prefabs.
+#. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
 
 Prefab Settings
 ----------------

@@ -21,7 +21,7 @@ Added
 * Added the ability to split pedestrian routes into smaller ones to better balance spawning.
 * New `TriggerLight` type for TrafficNode, which triggers selected traffic light when traffic car enters this node.
 * The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
-* Added saving of settings for `Road Segment Creator` to create a new road segment using old settings.
+* Added saving of `Road Segment Creator` settings so that a new road segment is created using the previously saved settings.
 * Added a handy duplicate feature for existing connected `Road Segment Creator` to create clean duplicates without existing connected paths.
 * Added a sample custom player to interact with the custom car & pedestrian.
 * Added one-way roads for pedestrian nodes.

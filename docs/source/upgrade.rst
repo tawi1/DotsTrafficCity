@@ -75,7 +75,7 @@ Cinemachine v3 Upgrade
 	
 	.. image:: /images/faq/cmv3_1.png
 	
-#. Open `UIInstaller`.
+#. Select `UIInstaller`.
 
 	.. image:: /images/faq/cmv3_2.png
 	

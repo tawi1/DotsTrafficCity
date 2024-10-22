@@ -18,7 +18,7 @@ Presets can only be created by using the :ref:`Car Prefab Creator <carPrefabCrea
 Where To Find
 ----------------
 
-Make sure, that `TrafficCarEntityPoolBakerRef` in the :ref:`main scene <mainScene>` & :ref:`subscene <subscene>` has the correct preset. Read more about :ref:`config editing <configEdit>`
+Make sure, that `TrafficCarEntityPoolBakerRef` in the :ref:`main scene <mainScene>` & :ref:`subscene <subscene>` has the correct preset. To sync both scenes, read more about :ref:`config editing <configEdit>`
 
 Main scene
 ~~~~~~~~~~~~

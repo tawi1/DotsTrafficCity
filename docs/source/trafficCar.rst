@@ -9,7 +9,7 @@ Traffic Car
 How To Create
 ----------------
 
-#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type).
+#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type, for ref:`Mono physics <hybridMonoVehicle>` cars read this ref:`article <hybridMonoVehicle>`).
 
 	.. image:: /images/entities/trafficCar/howTo/Step1.png
 	:ref:`Car Prefab Creator <carPrefabCreator>` final step example.
@@ -35,8 +35,8 @@ How To Create
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 	
 #. Adjust the traffic settings of the created vehicles.
-	* For :ref:`simple physics <trafficCarSettings>`.
-	* For :ref:`custom physics <customPhysicsVehicle>`. 
+	* For :ref:`Simple physics <trafficCarSettings>`.
+	* For :ref:`Custom physics <customPhysicsVehicle>`. 
 
 .. _vehicleType:
 
@@ -262,7 +262,7 @@ If you want to use `Arcade's` built-in sample controller, follow these steps:
 #. Customize traffic related settings.
 #. Press `Create` button.
 #. In the `ArcadeVehicleController`, make sure the raycast layer matches your `Ground` layer.
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 
@@ -287,7 +287,7 @@ If you want to use your own custom solution, follow these steps:
 #. Customize traffic related settings.
 #. Press `Create` button.
 #. To set your own custom Car Controller parameters to handle the most common traffic situations, use the :ref:`Traffic test scene <trafficTestScene>`.
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 	

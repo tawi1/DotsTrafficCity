@@ -9,7 +9,7 @@ Traffic Car
 How To Create
 ----------------
 
-#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type, if you need traffic with controller based on MonoBehaviour, read this :ref:`article <hybridMonoVehicle>`).
+#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type, if you need traffic with controller based on `MonoBehaviour`, read this :ref:`article <hybridMonoVehicle>`).
 
 	.. image:: /images/entities/trafficCar/howTo/Step1.png
 	:ref:`Car Prefab Creator <carPrefabCreator>` final step example.

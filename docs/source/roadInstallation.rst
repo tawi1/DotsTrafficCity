@@ -23,7 +23,7 @@ Traffic Road Installation
 #. Press `Force connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
 #. Press the `Bake` button (should be done after each road edit & before starting the scene, for more info the :ref:`bake info <bakingInfo>`).
 #. Create the :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
-#. For further changes to roads and configs, read the :ref:`Road <roadEdit>` & to sync both scenes, read the :ref:`Config <configEdit>` editing workflow.
+#. For further changes to roads and configs, read the :ref:`Road <roadEdit>` editing workflow & to sync both scenes, read the :ref:`Config <configEdit>` editing workflow.
 
 .. _roadEntitySubscene:
 

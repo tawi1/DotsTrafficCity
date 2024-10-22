@@ -14,7 +14,7 @@ How To Use
 	
 	.. image:: /images/entities/trafficCar/carPrefabCreator/CarPrefabCreatorToolbar.png
 	
-#. Drag & drop source cars from scene or project to `Prefabs` field depends on `Prefab Source Type` parameter.
+#. Drag and drop car prefabs into the `Prefabs` field.
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
 	

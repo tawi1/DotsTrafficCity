@@ -65,3 +65,24 @@ HDRP
 
 	.. image:: /images/faq/HDRP_env.png
 	`Example.`
+	
+.. _cinemachineV3:
+
+Cinemachine v3 Upgrade
+-------------------
+
+#. Unpack `Main Camera City CM_v3` package.
+	
+	.. image:: /images/faq/cmv3_1.png
+	
+#. Open `UIInstaller`.
+
+	.. image:: /images/faq/cmv3_2.png
+	
+#. Drag & drop `Camera` object into `Main Camera Base` field in `UIInstaller`.
+
+	.. image:: /images/faq/cmv3_3.png
+	
+#. Right click on this field & press `Apply to Prefab Hub`.
+
+	.. image:: /images/faq/cmv3_4.png

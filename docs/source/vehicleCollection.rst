@@ -7,9 +7,6 @@ The `Vehicle collection` contains data on all vehicles in the city and their :re
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
 	
-	.. note::
-		:ref:`FMOD plugin <sound>` for sounds should be installed.
-	
 How To
 ----------------
 	

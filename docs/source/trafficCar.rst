@@ -30,7 +30,7 @@ How To Create
 
 	.. image:: /images/entities/trafficCar/howTo/Step5.png
 	
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject, make sure the correct :ref:`preset <trafficPreset>` is assigned.
+#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
 
 	.. image:: /images/entities/trafficCar/howTo/Step6.png
 	

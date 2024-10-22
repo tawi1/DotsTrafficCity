@@ -26,7 +26,7 @@ How To Use
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/EntityType.png
 	
-#. If the vehicle is the :ref:`Simple vehicle <simplePhysicsVehicle>` type, enable `Add wheel offset` in the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab.
+#. If the vehicle is the :ref:`Simple physics vehicle <simplePhysicsVehicle>` type, enable `Fit physics shape` & `Include Wheels` in the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab.
 
 	.. image:: /images/entities/trafficCar/custom/physicsShape.png
 	:ref:`Custom physics entity <customPhysicsVehicle>` `shape result example`

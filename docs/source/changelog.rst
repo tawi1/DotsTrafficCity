@@ -34,6 +34,8 @@ Fixed
 * Fixed car creation offset for car parts when the car parts are not the parent of the car body.
 * Fixed wheel detection during car creation in some cases.
 * Fixed adding trigger area tag to non-pedestrian entities.
+* Fixed auto-crossroad generation when the custom segment contains one-way paths.
+* Fixed Path creator detects wrong connection sides in some cases.
 * Fixed steering input can be incorrectly calculated in some cases.
 
 Changed

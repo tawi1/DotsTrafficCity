@@ -25,7 +25,6 @@ Added
 * Added a handy duplicate feature for existing connected `Road Segment Creator` to create clean duplicates without existing connected paths.
 * Added a sample custom player to interact with the custom car & pedestrian.
 * Added one-way roads for pedestrian nodes.
-* Added Mono cars for PolygonCity & Toon city.
 * Added manual sync button for all configs.
 
 Fixed

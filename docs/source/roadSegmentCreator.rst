@@ -785,6 +785,7 @@ How To Use
 
 	.. image:: /images/road/roadSegment/auto/AutoCrossroad1.png
 	
+#. Press the `Clear` button to delete existing :ref:`paths <path>`.	
 #. Place :ref:`Traffic nodes <trafficNode>` at the entrances/exits of the intersection.
 
 	.. image:: /images/road/roadSegment/auto/AutoCrossroad2.png

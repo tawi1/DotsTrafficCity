@@ -767,6 +767,43 @@ Pedestrian
 | **Parking node offset** : :ref:`entry parking node <pedestrianNode>` offset relative to :ref:`traffic nodes <trafficNode>`.
 | **Parking enter node offset** : :ref:`node <pedestrianNode>` that connected to :ref:`entry parking node <pedestrianNode>` relative to :ref:`traffic nodes <trafficNode>`.
 
+.. _roadSegmentCreatorAuto:
+
+Auto Crossroad
+------------
+
+For automatic generation of custom crossroads, use this feature.
+
+How To Use
+~~~~~~~~~~~~ 
+
+#. Create a :ref:`Custom road segment <roadSegmentCreatorCustomSegment>`.
+
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad0.png
+	
+#. Open the `Path Settings` tab & enable the `Auto-Crossroads` option in the `Additional Settings` dialog.
+
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad1.png
+	
+#. Place :ref:`Traffic nodes <trafficNode>` at the entrances/exits of the intersection.
+
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad2.png
+	
+#. Press the `Create` button.
+
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad3.png
+	
+#. If you want to avoid connection for certain :ref:`Traffic nodes <trafficNode>` select indexes according to scene indexes & press `Add` button, then press `Create` button again.
+
+#. For example 1-3 & 3-1 nodes.
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad4.png
+	
+#. 1-3 & 3-1 nodes no longer connected.
+
+	.. image:: /images/road/roadSegment/auto/AutoCrossroad5.png
+	`Example result.`
+	
+	
 
 
 	

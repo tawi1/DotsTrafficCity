@@ -34,7 +34,7 @@ Fixed
 * Fixed car creation offset for car parts when the car parts are not the parent of the car body.
 * Fixed wheel detection during car creation in some cases.
 * Fixed adding trigger area tag to non-pedestrian entities.
-* Fixed auto-crossroad generation when the custom segment contains one-way paths.
+* Fixed :ref:`Auto-crossroad <roadSegmentCreatorAuto>` generation when the custom segment contains one-way paths.
 * Fixed Path creator detects wrong connection sides in some cases.
 * Fixed steering input can be incorrectly calculated in some cases.
 
@@ -186,7 +186,7 @@ Added
 * Added chasing cars feature.
 * Path Waypoints can be traffic node functionality.
 * Added endless streaming for :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
-* Added `Auto-crossroad` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
+* Added :ref:`Auto-crossroad <roadSegmentCreatorAuto>` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for custom shape crossroads.
 * Pedestrian node generation along :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` can be converted into the :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road.
 * Crosswalk connection for :ref:`Custom segment <roadSegmentCreatorCustomSegment>`.

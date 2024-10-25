@@ -9,7 +9,7 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Runtime graph creation. *[in progress]*
+* Runtime graph creation.
 * Added new `RuntimeTile Demo` scene.
 * Traffic light `API` to get traffic light state from monobehaviour script.
 * Added option to manually handle traffic light state.

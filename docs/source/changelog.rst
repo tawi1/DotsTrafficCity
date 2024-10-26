@@ -4,6 +4,7 @@ Change Log
 ************
 
 [1.2.0] - 25-10-2024
+[1.2.0] - 28-10-2024
 ------------
 
 Added
@@ -19,10 +20,10 @@ Added
 * Added the ability to split :ref:`external traffic routes <trafficNodeConnectionInfo>` into smaller ones to better balance spawning.
 * Added custom settings for pedestrian nodes for selected routes.
 * Added the ability to split pedestrian routes into smaller ones to better balance spawning.
-* New `TriggerLight` type for TrafficNode, which triggers selected traffic light when traffic car enters this node.
-* The `Traffic Road Debugger` can be used at runtime to manually spawn vehicles in custom scenarios.
-* Added saving of `Road Segment Creator` settings so that a new road segment is created using the previously saved settings.
-* Added a handy duplicate feature for existing connected `Road Segment Creator` to create clean duplicates without existing connected paths.
+* New `TriggerLight` type for :ref:`TrafficNode <trafficNode>`, which triggers selected traffic light when traffic car enters this node.
+* The :ref:`Traffic Road Debugger <testSceneTrafficCarRoadDebugger>` can be used at runtime to manually spawn vehicles in custom scenarios.
+* Added saving of :ref:`Road Segment Creator <roadSegmentCreator>` settings so that a new road segment is created using the previously saved settings.
+* Added a handy duplicate feature for existing connected :ref:`Road Segment Creator <roadSegmentCreator>` to create clean duplicates without existing connected paths.
 * Added a sample custom player to interact with the custom car & pedestrian.
 * Added one-way roads for pedestrian nodes.
 * Added manual sync button for all configs.

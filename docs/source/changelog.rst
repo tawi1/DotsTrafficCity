@@ -41,6 +41,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Now the road `Graph` is created at runtime when the scene starts.
+* `Cinemachine v3` used by default.
 * Traffic light states for each traffic light handler are now stored in the dynamic buffer.
 * Improved randomization of initial pedestrian spawn.
 * Added traffic light debugging for paths with custom lights.

@@ -71,6 +71,7 @@ HDRP
 Cinemachine v3 Upgrade
 -------------------
 
+#. Make sure you have downloaded `Cinemachine v3 <https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html>`_ package.
 #. Unpack `Main Camera City CM_v3` package.
 	
 	.. image:: /images/faq/cmv3_1.png

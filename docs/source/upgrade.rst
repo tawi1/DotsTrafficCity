@@ -87,3 +87,22 @@ Cinemachine v3 Upgrade
 #. Right click on this field & press `Apply to Prefab Hub`.
 
 	.. image:: /images/faq/cmv3_4.png
+	
+Cinemachine v2
+-------------------
+
+#. Unpack `Main Camera City CM_v2_legacy` package.
+	
+	.. image:: /images/faq/cmv2_1.png
+	
+#. Select `UIInstaller`.
+
+	.. image:: /images/faq/cmv3_2.png
+	
+#. Drag & drop `Camera` object into `Main Camera Base` field in `UIInstaller`.
+
+	.. image:: /images/faq/cmv3_3.png
+	
+#. Right click on this field & press `Apply to Prefab Hub`.
+
+	.. image:: /images/faq/cmv3_4.png

@@ -240,7 +240,7 @@ Traffic Light Object
 Main Component
 ~~~~~~~~~~~~ 
 
-Traffic light object in the scene.
+Traffic light object in the scene (parent component of the traffic light). 
 
 Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light indexes <trafficLightIndex>`.
 
@@ -254,7 +254,7 @@ Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`li
 Light Frame
 ~~~~~~~~~~~~ 
 
-Contains data on traffic light indicators.
+A child component that contains the data for the traffic light indicators.
 
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectFrameAssignExample.png
 

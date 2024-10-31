@@ -3,6 +3,27 @@
 Change Log
 ************
 
+[1.2.0b] - 31-10-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added a new option to leave the car idle for a certain amount of time when parking if pedestrian is disabled for the scene.
+* Parking can be used on sloping surfaces.
+* Added auto-curve type detection for :ref:`Path creator <pathCreator>`.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed :ref:`path <path>` intersection calculation for custom shape surface.
+* Minor fix `Car prefab creator` text pattern search for wheels.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved obstacle detection in intersecting & neighbouring cases.
+
 [1.2.0] - 28-10-2024
 ------------
 

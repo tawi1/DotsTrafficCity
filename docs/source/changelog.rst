@@ -18,6 +18,7 @@ Fixed
 
 * Fixed :ref:`path <path>` intersection calculation for custom shape surface.
 * Minor fix `Car prefab creator` text pattern search for wheels.
+* Fixed :ref:`Animation Baker <animationBaker>` baking with single texture atlas for multi-mesh characters.
 
 Changed
 ~~~~~~~~~~~~

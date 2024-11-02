@@ -3,13 +3,14 @@
 Change Log
 ************
 
-[1.2.0b] - 31-10-2024
-[1.2.0b] - 01-11-2024
+[1.2.1] - 04-11-2024
 ------------
 
 Added
 ~~~~~~~~~~~~
 
+* Added support for `Multi-road segments` by adding 1 `RuntimeSegment` at a time in `Runtime Road mode`.
+* Added new `RuntimeTile Chunk Road demo` to demonstrate the road chunks added at runtime.
 * Added a new option to leave the car idle for a certain amount of time when parking if pedestrian is disabled for the scene.
 * Parking can be used on sloping surfaces.
 * Added auto-curve type detection for :ref:`Path creator <pathCreator>`.

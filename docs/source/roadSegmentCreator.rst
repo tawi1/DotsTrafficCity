@@ -18,10 +18,11 @@ How To Use
 #. Create a :ref:`RoadSegment<roadSegment>`.
 #. Place the segment at the desired position.
 #. By default, :ref:`RoadSegment<roadSegment>` prefab contains `RoadSegmentCreator` component.
-#. Select the :ref:`Road segment type <roadSegmentCreatorGeneralSettings>`.
+#. Select the :ref:`Road segment type <roadSegmentCreatorGeneralSettings>` depending on the :ref:`shape <roadSegmentCreatorCustomSettings>` of your intersection.
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
-	
+
+#. In the other tab, you can convert any default shape :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
 #. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
 #. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
 #. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
@@ -31,7 +32,7 @@ How To Use
 	
 .. _roadSegmentCreatorCustomSettings:
 
-Custom Settings
+Standard Shapes
 ------------
 
 `Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
@@ -41,7 +42,7 @@ Default Crossroad
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorDefaultCrossroadSettings.png
 	
-| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
+| **Direction count** : number of sides of the crossroad.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentDefault.png
 	`Example`.
@@ -51,10 +52,10 @@ Turn Road
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
 	
-| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
-| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
-| **Additional local angle 1** : :ref:`info <roadSegmentCreatorId8>`.
-| **Additional local angle 2** : :ref:`info <roadSegmentCreatorId9>`.
+| **Node 1 offset** : node 1 offset on the X-axis.
+| **Node 2 offset** : node 2 offset on the X-axis.
+| **Additional local angle 1** : additional node 1 rotation angle.
+| **Additional local angle 2** : additional node 2 rotation angle.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTurnRoad.png
 	`Example`.
@@ -65,10 +66,10 @@ Straight Road
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentStraightSettings.png
 	
-| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
-| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
-| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
-| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
+| **Node 1 offset** : node 1 offset on the X-axis.
+| **Node 2 offset** : node 2 offset on the X-axis.
+| **Traffic node height 1** : node 1 offset on the Y-axis.
+| **Traffic node height 2** : node 2 offset on the Y-axis.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentStraight.png
 	`Example`.
@@ -78,9 +79,9 @@ Merge Crossroad
  
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
 	
-| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
-| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
-| **SubTrafficNode distance from center** : :ref:`info <roadSegmentCreatorId3>`.
+| **Direction count** : number of sides of the crossroad.
+| **Sub-lane count** : number of sub-lanes (a sub-lane is a lane with a different number of lanes than the main lane).
+| **SubTrafficNode distance from center** : distance between the `SubTrafficNode` (node that contains a sub-lane) and the center of the segment.
 	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroad.png
 	`Example`.
@@ -90,11 +91,11 @@ Merge Straight Road
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
 	
-| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
-| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
-| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
-| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
-| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
+| **Sub-lane count** : number of sub-lanes (a sub-lane is a lane with a different number of lanes than the main lane).
+| **Node 1 offset** : node 1 offset on the X-axis.
+| **Node 2 offset** : node 2 offset on the X-axis.
+| **Traffic node height 1** : node 1 offset on the Y-axis.
+| **Traffic node height 2** : node 2 offset on the Y-axis.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionStraightRoad.png
 	`Example`.
@@ -104,9 +105,9 @@ Merge Crossroad To Oneway Road
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
 	
-| **Direction count** : :ref:`info <roadSegmentCreatorId1>`.
-| **Sub-lane count** : :ref:`info <roadSegmentCreatorId2>`.
-| **SubTrafficNode distance from center** : :ref:`info <roadSegmentCreatorId3>`.
+| **Direction count** : number of sides of the crossroad.
+| **Sub-lane count** : number of sub-lanes (a sub-lane is a lane with a different number of lanes than the main lane).
+| **SubTrafficNode distance from center** : distance between the `SubTrafficNode` (node that contains a sub-lane) and the center of the segment.
 | **Is enter of oneway** : if it is on, it is the start of one-way traffic, if it is off, it is the end of one-way traffic.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentTransitionCrossroadToOneWay.png
@@ -117,11 +118,11 @@ Oneway Straight
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
 	
-| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
-| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
-| **Traffic node height 1** : :ref:`info <roadSegmentCreatorId6>`.
-| **Traffic node height 2** : :ref:`info <roadSegmentCreatorId7>`.
-| **Should revert direction** : :ref:`info <roadSegmentCreatorId10>`.
+| **Node 1 offset** : node 1 offset on the X-axis.
+| **Node 2 offset** : node 2 offset on the X-axis.
+| **Traffic node height 1** : node 1 offset on the Y-axis.
+| **Traffic node height 2** : node 2 offset on the Y-axis.
+| **Should revert direction** : direction of the crossroad lanes will be reversed.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayStraight.png
 	`Example`.
@@ -131,11 +132,11 @@ Oneway Turn
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
 	
-| **Node 1 offset** : :ref:`info <roadSegmentCreatorId4>`.
-| **Node 2 offset** : :ref:`info <roadSegmentCreatorId5>`.
-| **Additional local angle 1** : :ref:`info <roadSegmentCreatorId8>`.
-| **Additional local angle 2** : :ref:`info <roadSegmentCreatorId9>`.
-| **Should revert direction** : :ref:`info <roadSegmentCreatorId10>`.
+| **Node 1 offset** : node 1 offset on the X-axis.
+| **Node 2 offset** : node 2 offset on the X-axis.
+| **Additional local angle 1** : additional node 1 rotation angle.
+| **Additional local angle 2** : additional node 2 rotation angle.
+| **Should revert direction** : direction of the crossroad lanes will be reversed.
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentOneWayTurn.png
 	`Example`.
@@ -143,14 +144,14 @@ Oneway Turn
 .. _roadSegmentCreatorCustomStraight:
 
 Custom Straight Road
-~~~~~~~~~~~~ 
+------------
 
 Creator for creating straight roads of any shape.
 
 `Youtube tutorial. <https://youtu.be/JbhGYxVscew>`_
 
 How To Use
-""""""""""""""
+~~~~~~~~~~~~
 
 #. Place the custom  straight segment where you want it.
 #. Place the :ref:`traffic nodes <trafficNode>` at the start and the end of the path (or expand the road by holding `left-shift` key and clicking the `left-mouse` button).
@@ -160,6 +161,9 @@ How To Use
 #. Rotate the nodes of the paths according to the direction of the path **[optional step]**.
 #. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the `Snap To Surface` button if necessary **[optional step]**.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
+
+Settings
+~~~~~~~~~~~~
 
 Custom Settings
 """"""""""""""
@@ -237,14 +241,14 @@ Examples
 .. _roadSegmentCreatorCustomSegment:
 
 Custom Segment 
-~~~~~~~~~~~~ 
+------------ 
 
 Creator for creating segments of any shape and complexity.
 
 `Youtube tutorial. <https://youtu.be/AMrGJ7YGBNo>`_
 
 How To Use
-""""""""""""""
+~~~~~~~~~~~~
 
 #. Place the custom segment where you want it.
 #. Toggle on :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
@@ -255,6 +259,9 @@ How To Use
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab.
+
+Settings
+~~~~~~~~~~~~
 
 New Node Settings
 """"""""""""""
@@ -282,12 +289,12 @@ Custom Path Settings
 | **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwading.
 
 Additional Settings
-""""""""""""""
+~~~~~~~~~~~~
 
 .. _extrudeLane:
 
 Extrude Lane
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/ExtrudeLaneSettings.png
 	
@@ -341,49 +348,6 @@ Examples
 	
 Settings Description
 ~~~~~~~~~~~~ 
-
-Common
-""""""""""""""
-
-.. _roadSegmentCreatorId1:
-
-| **Direction count** : number of sides of the crossroad.
-
-.. _roadSegmentCreatorId2:
-
-| **Sub-lane count** : number of sub-lanes (sub-lane is a lane with a different number of bands from the main lane count).
-
-.. _roadSegmentCreatorId3:
-
-| **SubTrafficNode distance from center** : distance between the `SubTrafficNode` (node that contains a sub-lane) and the center of the segment.
-
-.. _roadSegmentCreatorId4:
-
-| **Node 1 offset** : node 1 offset on the X-axis.
-
-.. _roadSegmentCreatorId5:
-
-| **Node 2 offset** : node 2 offset on the X-axis.
-
-.. _roadSegmentCreatorId6:
-
-| **Traffic node height 1** :  node 1 offset on the Y-axis.
-
-.. _roadSegmentCreatorId7:
-
-| **Traffic node height 2** : node 2 offset on the Y-axis.
-
-.. _roadSegmentCreatorId8:
-
-| **Additional local angle 1** : additional node 1 rotation angle.
-
-.. _roadSegmentCreatorId9: 
-
-**Additional local angle 2** : additional node 2 rotation angle.
-
-.. _roadSegmentCreatorId10:
-
-**Should revert direction** : direction of the crossroad lanes will be reversed
 
 .. _roadSegmentCreatorId11:
 

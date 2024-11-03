@@ -22,7 +22,7 @@ How To Use
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
-#. In the other tab, you can convert any default shape :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
+#. In the other tab, you can convert any :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
 #. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
 #. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
 #. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.

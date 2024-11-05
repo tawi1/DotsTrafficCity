@@ -3,6 +3,20 @@
 Change Log
 ************
 
+[1.2.1b] - 05-11-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added support for lane changing on run-time roads.
+* Added a helper button for traffic lights that have lost their reference to a traffic light crossroad. 
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed intersection conversion for run-time road chunks.
+
 [1.2.1] - 04-11-2024
 ------------
 

@@ -24,7 +24,7 @@ Bootstrap
 Scene Unload
 ============
 
-* Before you unload the main scene, you should manually unload the entity scene.
+* Before you unload the main scene, you should manually unload the entity subscene.
 * Assign `EntityWorldService` to your script.
 
 	.. image:: /images/core/EntityWorldService.png

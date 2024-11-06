@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.2.1b] - 05-11-2024
+[1.2.1b] - 06-11-2024
 ------------
 
 Added
@@ -11,6 +11,7 @@ Added
 
 * Added support for lane changing on run-time roads.
 * Added a helper button for traffic lights that have lost their reference to a traffic light crossroad. 
+* Added support for `Odin Inspector`.
 
 Fixed
 ~~~~~~~~~~~~

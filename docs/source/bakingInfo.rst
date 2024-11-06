@@ -15,7 +15,7 @@ Baking Info
 How To Bake
 -------------------
 
-#. Open :ref:`RoadParent <roadParentInfo>` in the main scene or :ref:`subscene <subscene>` (:ref:`recommended <roadEdit>` in the main scene for performance reasons).
+#. Open :ref:`RoadParent <roadParentInfo>`.
 	
 	.. _roadParent:
 
@@ -23,6 +23,6 @@ How To Bake
 	`Subscene example.`
 
 	.. image:: /images/road/installation/RoadParent.png
-	
-#. Press the `Force connect Segments` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
+
+#. Press the `Force connect Segments` button to connect segments (if you are using :ref:`auto-connection <autoPathConnection>`, make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`). *[optional]*
 #. Press the `Bake Path Data` button.

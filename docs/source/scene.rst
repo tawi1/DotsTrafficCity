@@ -13,7 +13,7 @@ Bootstrap
 	.. image:: /images/core/CityEntryPoint2.png
 	`SceneBootstrap.`
 	
-* If you want to start with code, assign `CityEntryPoint` to your script & use follow method, example:
+* If you want to start the scene with code, assign `CityEntryPoint` with `SceneBootstrap` script to your script & use follow method, example:
 
 	..  code-block:: r
 	

@@ -22,6 +22,7 @@ how to :ref:`install` the project.
    npc.rst
    streaming.rst
    common.rst
+   scene.rst
    testScenes.rst
    sound.rst
    integration.rst

@@ -23,6 +23,22 @@ Bootstrap
 		{
 			sceneBootstrapBase.StartInitilization();
 		}
+		
+* Use this code if you need to know when the bootstrap is complete, example:
+
+	..  code-block:: r
+	
+		[SerializeField] private SceneBootstrapBase sceneBootstrapBase;
+		
+		private void Start()
+		{
+			sceneBootstrapBase.OnComplete += SceneBootstrap_OnComplete;
+		}
+		
+		private void SceneBootstrap_OnComplete()
+		{
+			// Custom logic.
+		}
 
 Scene Unload
 ============

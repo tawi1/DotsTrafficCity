@@ -157,11 +157,11 @@ RuntimeTileRoad Demo Structure
 	
 #. *Camera* : sample camera of Tile demo **[optional]**.
 #. *TileGameUI* : sample UI manager of the scene, used by TileGameManager. **[optional, can be replaced by an implementation of `TileGameUIBase`]**.
-#. *CullPoint* : Cull point of the scene **[required]**.
+#. *CullPoint* : :ref:`Cull point <cullPointInfo>` of the scene **[required]**.
 #. *CameraFollowObject* : follow & aim point of the `Camera`, controlled by `CameraMover` **[optional]**.
 #. *CameraMover* : controls the movement of the aim point of the `Camera` **[optional]**.
 #. *MapBounds* : limits of the movement of the `CameraFollowObject`, used by `CameraMover`  **[optional]**.
-#. *Input* : sample camera of Tile demo, used by `TileGameManager`  **[optional, can be replaced by an implementation of `TileGameInputBase`]**.
+#. *Input* : user input of the tile game, used by `TileGameManager`  **[optional, can be replaced by an implementation of `TileGameInputBase`]**.
 #. *TileGameManager* : main sample tile manager, which controls all sample placement logic **[required, if you are using RuntimeTileRoad demo scripts]**.
 #. *RuntimeRoadTilePlacer* : manager which responsible for tile layout on the scene **[required, only if you are using RuntimeTileRoad demo scripts]**.
 	* *TileGrid* : map of tiles added to the scene. **[optional, can be replaced by an implementation of `TileGridBase`]**.

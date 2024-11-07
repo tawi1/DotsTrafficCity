@@ -19,4 +19,5 @@ Road
 		/pedestrianNode.rst
 		/trafficArea.rst
 		/trafficPublicRoute.rst	
+		/runtimeRoad.rst	
 		/roadConfigs.rst	

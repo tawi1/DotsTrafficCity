@@ -36,7 +36,7 @@ How To Create
 		`Source tiles example.`
 		
 		.. image:: /images/road/runtimeRoad/tileCreation3_2.png
-		`Example of overlap between traffic nodes and pedestrian nodes.`
+		`Example of overlap between traffic nodes and pedestrian nodes (Traffic node arrows & blue pedestrian node should overlap perfectly)`
 		
 #. Add a `RuntimeSegment` component to the parent of the tile.
 
@@ -55,9 +55,10 @@ How To Create
 
 	.. image:: /images/road/runtimeRoad/tileCreation7.png
 	
-#. Select the directions of the connections if you want to use automatic tile replacement.
+#. Select the direction of the connections if you want to use automatic tile replacement (currently only works for 1x1 tiles).
 
 	.. image:: /images/road/runtimeRoad/tileCreation8.png
+	`Connection example (circles on scene show direction)`
 	
 #. Select `Recalculation type`, if you want to use automatic tile replacement.
 
@@ -73,6 +74,8 @@ How To Create
 	
 Preview Icon
 ~~~~~~~~~~~~
+
+To create a `Preview icon` for the `Prefab tile`, follow these steps:
 
 * Select from ``Spirit604/CityEditor/Window/Prefab Preview Saver`` the toolbar context menu.
 
@@ -147,12 +150,12 @@ How To Assign
 	
 	.. image:: /images/road/runtimeRoad/tilePreset3.png
 
-Structure
+RuntimeTileRoad Demo Structure
 ------------
 
 	.. image:: /images/road/runtimeRoad/structure1.png
 	
-#. *Camera* : sample camera of Tile demo**[optional]**.
+#. *Camera* : sample camera of Tile demo **[optional]**.
 #. *TileGameUI* : sample UI manager of the scene, used by TileGameManager. **[optional, can be replaced by an implementation of `TileGameUIBase`]**.
 #. *CullPoint* : Cull point of the scene **[required]**.
 #. *CameraFollowObject* : follow & aim point of the `Camera`, controlled by `CameraMover` **[optional]**.
@@ -165,7 +168,7 @@ Structure
 	* *GridSceneView* : grid display on the scene **[optional, can be replaced by an implementation of `GridSceneViewBase`]**.
 	* *PreviewService* : display a preview of an object on the scene before it is created **[optional, can be replaced by an implementation of `PreviewServiceBase`]**.
 #. *RuntimeRoadManager* : manager that converts `RuntimeSegment` road into an entity road graph. **[required]**.
-#. *GridBounds* : limit of the map of cells available for the tile prefabs **[optional, can be replaced by an implementation of `GridBoundsBase`]**.
+#. *GridBounds* : limit of the map of cells available for the tile prefabs, used by `RuntimeRoadTilePlacer` **[optional, can be replaced by an implementation of `GridBoundsBase`]**.
 #. *TileFactory* : factory containing all the `Tile presets`, used by TileGameManager **[optional, can be replaced by an implementation of `TileFactoryBase`]**.
 #. *Tiles* : tile parent of the tiles, used by `RuntimeRoadTilePlacer` **[optional]**.
 #. *Plane* : plane of the scene **[optional]**.

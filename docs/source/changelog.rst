@@ -9,15 +9,17 @@ Change Log
 Fixed
 ~~~~~~~~~~~~
 
-* Fixed rare endless stuck traffic car when using raycast
+* Fixed rare endless stuck traffic car when using raycast.
+* Fixed collision system calculation.
+* Fixed tile chunk prefab example.
 
 Changed
 ~~~~~~~~~~~~
 
 * Added an option to change some general settings from the corresponding configs.
-* :ref:`Path creator <pathCreator>` can be used in the `Prefab stage`;
-* :ref:`Global Light Settings <trafficLightGlobalLight>` can be used in the `Prefab stage`;
-* :ref:`Road segment <roadSegment>` can be created in the `Prefab stage`;
+* :ref:`Path creator <pathCreator>` can be used in the `Prefab stage`.
+* :ref:`Global Light Settings <trafficLightGlobalLight>` can be used in the `Prefab stage`.
+* :ref:`Road segment <roadSegment>` can be created in the `Prefab stage`.
 
 [1.2.1b] - 06-11-2024
 ------------

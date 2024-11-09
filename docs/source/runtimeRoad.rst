@@ -43,6 +43,7 @@ How To Create
 	.. image:: /images/road/runtimeRoad/tileCreation4.png
 	
 #. If you have made further changes to the road segment, press `Bake` in the `RuntimeSegment` to bake the data.
+#. **The next steps** are optional if you are using your own placement solution.
 #. Add a `RuntimeRoadTile` component to the parent of the tile.
 
 	.. image:: /images/road/runtimeRoad/tileCreation5.png

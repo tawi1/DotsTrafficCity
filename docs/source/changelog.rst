@@ -9,10 +9,11 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
+* Added new `Hybrid On Request And GPU` pedestrian type for manual control handling transition between Hybrid & GPU pedestrians.
 * Added entity selection example script.
 * Node navigation example for traffic.
 * Added ability to temporarily disable & enable traffic simulation in `Runtime Road Manager`.
-* Added an API to get road entities from `Runtime Segment`.
+* Added an API to get road entities in `Runtime Road Manager` using road scene objects.
 
 Fixed
 ~~~~~~~~~~~~

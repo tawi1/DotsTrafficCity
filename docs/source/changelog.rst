@@ -3,6 +3,29 @@
 Change Log
 ************
 
+[1.2.2] - 19-11-2024
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added entity selection example script.
+* Node navigation example for traffic.
+* Added ability to temporarily disable & enable traffic simulation in `Runtime Road Manager`.
+* Added an API to get road entities from `Runtime Segment`.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed potential incorrect init for mono trains.
+
+Changed
+~~~~~~~~~~~~
+
+* Major refactoring of the system order to significantly reduce the number of sync points.
+* `Traffic Car` will by default take the path with the fewest cars in `RuntimeRoad mode`.
+* `Runtime tile demo scene` now has 3 traffic lights at each intersection.
+
 [1.2.1c] - 08-11-2024
 ------------
 

@@ -11,6 +11,8 @@ Added
 
 * Added new `Hybrid On Request And GPU` pedestrian type for manual control handling transition between Hybrid & GPU pedestrians.
 * Added entity selection example script.
+* Added `Hybrid` pedestrian support with rigidbody that is affected by gravity.
+* Added mobile version of `RuntimeRoad demo`.
 * Node navigation example for traffic.
 * Added ability to temporarily disable & enable traffic simulation in `Runtime Road Manager`.
 * Added an API to get road entities in `Runtime Road Manager` using road scene objects.

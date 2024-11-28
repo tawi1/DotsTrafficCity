@@ -14,6 +14,7 @@ How To Create
 
 	.. image:: /images/entities/train/train0-1.png
 
+#. Remove the `ArcadeVehicleController` component & reference to `ArcadeVehicleController` from the `ScriptSwitcher` component.
 #. Copy paste parent & unpack prefab for all wagons.
 
 	.. image:: /images/entities/train/train0.png
@@ -47,6 +48,6 @@ How To Create
 
 	.. image:: /images/entities/train/train8.png
 	
-#. Create a :ref:`Public route <trafficPublicRoute>` & select `Forbidden/Everything` :ref:`Traffic Group Mask <groupMaskType>` to prevent spawn for other vehicles.
+#. Create a :ref:`Public route <trafficPublicRoute>` & select `Forbidden/Everything` :ref:`Traffic Group Mask <groupMaskType>` for each path of the route to prevent other vehicles from spawning.
 
 

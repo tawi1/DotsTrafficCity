@@ -9,6 +9,7 @@ Traffic
 
 		/trafficCar.rst
 		/trafficPublic.rst
+		/train.rst
 		/carPrefabCreator.rst
 		/vehicleCollection.rst
 		/trafficPreset.rst

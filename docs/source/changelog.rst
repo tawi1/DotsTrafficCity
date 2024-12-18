@@ -3,6 +3,34 @@
 Change Log
 ************
 
+[1.3.0] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added support for `Road Constructor`. *[In progress]*
+* Added support for `Fantastic City Generator`. *[In progress]*
+* Added support for `Rukhanka Animation System`.
+* New A* Traffic & Pedestrian navigation added to user-selected node.
+* Added `API` for runtime pedestrian node paths.
+* New ability to create U-turns with `Path Creator` & `Road Segment Creator`.
+* New utilities buttons for disconnecting automatically connected pedestrian & traffic nodes.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed Traffic Change Lane Config enable option not enabled in some cases.
+* Id reset fixed when spawning built-in npc player.
+* Fixed incorrect removal index for connected paths for runtime roads.
+* Path index debugger not initialized fix.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved `ArcadeVehicleController` braking & suspension.
+* Now runtime traffic nodes are connected with raycast method.
+
 [1.2.2] - 27-11-2024
 ------------
 

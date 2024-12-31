@@ -20,7 +20,7 @@ Added
 * New utilities buttons for disconnecting automatically connected pedestrian & traffic nodes.
 * Added car light for hybrid mono cars.
 * Added new options to change lane based on the speed of the car in front or randomly.
-* Added a new `CustomAreaTriggerCreatorSystem to create fear triggers from custom user code.
+* Added a new `CustomAreaTriggerCreatorSystem` to create fear triggers from custom user code.
 
 Fixed
 ~~~~~~~~~~~~

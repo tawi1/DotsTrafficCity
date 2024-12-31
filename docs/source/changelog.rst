@@ -10,14 +10,16 @@ Added
 ~~~~~~~~~~~~
 
 * Added support for `Road Constructor`. *[In progress]*
-* Added support for `Fantastic City Generator`.
-* Added support for `Rukhanka Animation System`.
+* Added support for `Fantastic City Generator` for editor & runtime generation.
+* Added support for `Rukhanka Animation System` for pure & hybrid mode.
 * New A* Traffic & Pedestrian navigation added to user-selected node.
 * Added `API` for runtime pedestrian node paths.
 * Added `API` to generate road segments from custom user code or unity splines.
 * Added runtime buildings for runtime demo scene.
 * New ability to create U-turns with `Path Creator` & `Road Segment Creator`.
 * New utilities buttons for disconnecting automatically connected pedestrian & traffic nodes.
+* Added car light for hybrid mono cars.
+* Added new options to change lane based on the speed of the car in front or randomly.
 
 Fixed
 ~~~~~~~~~~~~
@@ -31,8 +33,9 @@ Fixed
 Changed
 ~~~~~~~~~~~~
 
+* By default, a clean scene is created with a clean `HubBase` without any extra dependencies.
 * Improved `ArcadeVehicleController` braking & suspension.
-* Now runtime traffic nodes are connected with raycast method.
+* Now runtime segments are connected with raycast method.
 
 [1.2.2] - 27-11-2024
 ------------

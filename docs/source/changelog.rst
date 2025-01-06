@@ -3,13 +3,13 @@
 Change Log
 ************
 
-[1.3.0] - In progress
+[1.3.0] - 08-01-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
-* Added support for `Road Constructor`. *[In progress]*
+* Added support for `Road Constructor` for editor & runtime.
 * Added support for `Fantastic City Generator` for editor & runtime generation.
 * Added support for `Rukhanka Animation System` for pure & hybrid mode.
 * New A* Traffic & Pedestrian navigation added to user-selected node.
@@ -21,6 +21,7 @@ Added
 * Added car light for hybrid mono cars.
 * Added new options to change lane based on the speed of the car in front or randomly.
 * Added a new `CustomAreaTriggerCreatorSystem` to create fear triggers from custom user code.
+* Added priority to right option at intersection for cars with the same priority.
 
 Fixed
 ~~~~~~~~~~~~

@@ -26,7 +26,15 @@ Getting Started
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Find the `HybridTrafficCarMonoSkinBase Arcade` prefab & set the ground layer to `Default`.
-#. Select type.
+#. Open the folder where the `FCG` traffic light prefabs are stored.
+
+	.. image:: /images/integration/fcg1_2.png
+
+#. Open each prefab in the prefab stage & add the `FCGTrafficLightConverter` component & press the `Create` button.
+
+	.. image:: /images/integration/fcg1_3.png	
+
+#. Select mode type depending on your needs.
 
 Editor Mode
 ------------
@@ -57,13 +65,13 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 
 	.. image:: /images/integration/fcg3.png
 	
-#. Generate FCG prefab container.
+#. Generate `FCG` prefab container.
 	
 	.. image:: /images/integration/fcg2.png
 
 #. Configure all generator settings in the inspector.
 #. Press `Generate` button at the bottom of the inspector.
-#. Some of the prefab blocks should be edited because the FCG plugin doesn't have enough data to complete the generation (check all selected `Prefab Blocks` & `Broken Blocks` tab in the Inspector.), for example, let's open the `Border-Flat-Large-Exit` prefab.
+#. Some of the prefab blocks should be edited because the `FCG` plugin doesn't have enough data to complete the generation (check all selected `Prefab Blocks` & `Broken Blocks` tab in the `Inspector`), for example, let's open the `Border-Flat-Large-Exit` prefab.
 #. Roundabout here without exit segment:
 
 	.. image:: /images/integration/fcg4.png
@@ -94,7 +102,7 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	.. image:: /images/integration/fcg8.png
 	`Result`
 	
-#. Now when you regenerate blocks in `FCG Scene Generator`, the local block will be replaced with the previously generated prefab block.
+#. Now when you regenerate blocks in `FCG Scene Generator`, the local block will be replaced with the previously generated local prefab block.
 
 	.. image:: /images/integration/fcg9.png
 	`Created roundabouts are now created for all local blocks`

@@ -8,7 +8,7 @@ How To Use
 
 #. Buy & download, import the following asset plugin:
 
-	`Fantastic City Generator <https://assetstore.unity.com/packages/3d/environments/urban/fantastic-city-generator-157625>`_
+	`Fantastic City Generator (FCG) <https://assetstore.unity.com/packages/3d/environments/urban/fantastic-city-generator-157625>`_
 
 Getting Started
 ------------
@@ -18,7 +18,7 @@ Getting Started
 
 	`Spirit604/CityEditor/Create/City Base`
 	
-#. Create a new game object & add `FCG_SceneGenerator` component.
+#. Create a new game object & add `FCGSceneGenerator` component.
 
 #. Generate a new config:
 
@@ -31,14 +31,16 @@ Getting Started
 Editor Mode
 ------------
 
-Road segment editor generation from FCG raw data.
+Road segment editor generation from scene `FCGWaypointsContainer` road data.
 
-#. Configure generator settings.
+#. Configure all generator settings in the inspector.
 #. Press `Generate` button.
 #. Edit road segments in the scene as needed.
 
 Editor Blocks
 ------------
+
+Road segments are connected with prefab blocks in the `Editor`.
 
 #. Select `Runtime Blocks` type.
 #. Generate blocks like in `Runtime blocks` tutorial.
@@ -59,9 +61,9 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	
 	.. image:: /images/integration/fcg2.png
 
-#. Configure generator settings.
+#. Configure all generator settings in the inspector.
 #. Press `Generate` button.
-#. Some of the prefab blocks should be edited because the FCG plugin doesn't have enough data to complete the generation, for example, let's open the `Border-Flat-Large-Exit` prefab.
+#. Some of the prefab blocks should be edited because the FCG plugin doesn't have enough data to complete the generation (check all selected `Prefab Blocks` & `Broken Blocks` tab in the Inspector.), for example, let's open the `Border-Flat-Large-Exit` prefab.
 #. Roundabout here without exit segment:
 
 	.. image:: /images/integration/fcg4.png
@@ -71,12 +73,12 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	.. image:: /images/integration/fcg5.png
 	`Result`
 	
-#. Now need to bind local block to share the result with the same blocks.
+#. Now need to bind local block to share the result with the same local blocks.
 #. Select generated `FCG prefab container`.
 
 	.. image:: /images/integration/fcg5_2.png
 	
-#. Tick on `Show scene binding` option.
+#. Tick on `Show scene binding` option in the inspector.
 #. Select local block in the prefab stage on the scene.
 
 	.. image:: /images/integration/fcg6.png
@@ -89,7 +91,30 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	
 #. Press `Create block prefab` button.
 
-	.. image:: /images/integration/fcg7.png
+	.. image:: /images/integration/fcg8.png
 	`Result`
 	
 #. Now when you regenerate blocks in `FCG Scene Generator`, the local block will be replaced with the previously generated prefab block.
+
+	.. image:: /images/integration/fcg9.png
+	`Created roundabouts are now created for all local blocks`
+	
+#. The next step is to configure `Runtime Traffic` if you plan to use blocks at runtime otherwise switch back to `Editor Blocks`.
+
+Runtime Traffic
+------------
+
+#. After the generation of `Runtime Blocks` is finished, add a new gameobject & add a `RuntimeRoadManager` component.
+#. Replace the code in `RunTimeSample.cs` with the `GenerateCityAtRuntime` method:
+
+	..  code-block:: r
+	
+		public void GenerateCityAtRuntime(int citySize)
+		{
+			ObjectUtils.FindObjectOfType<RuntimeRoadManager>().RegenerateGraphAsync(() =>
+			{
+				generator = cg.GetComponent<CityGenerator>();
+
+				generator.GenerateCity(citySize, false, false); // (city size:  1 , 2, 3 or 4) 
+			});
+		}

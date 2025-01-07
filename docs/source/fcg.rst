@@ -39,7 +39,7 @@ Getting Started
 Editor Mode
 ------------
 
-Road segment editor generation from scene `FCGWaypointsContainer` road data.
+:ref:`Road segment <roadSegment>` editor generation from scene `FCGWaypointsContainer` road data.
 
 #. Configure all generator settings in the inspector.
 #. Press `Generate` button.
@@ -48,12 +48,12 @@ Road segment editor generation from scene `FCGWaypointsContainer` road data.
 Editor Blocks
 ------------
 
-Road segments are connected with prefab blocks in the `Editor`.
+:ref:`Road segments <roadSegment>` are connected with pregenerated prefab blocks in the `Editor`.
 
 #. Select `Runtime Blocks` type.
 #. Generate blocks like in `Runtime blocks` tutorial.
 #. Switch back to `Editor Blocks` type.
-#. Press the `Generate` button after each city generation using `FCG`.
+#. Press the `Generate` button after each city generation made by `Fantastic City Generator`.
 
 Runtime Blocks
 ------------
@@ -61,7 +61,7 @@ Runtime Blocks
 Runtime chunk generation from `FCG` prefab blocks, can also be used to generate blocks for `Editor blocks`.
 
 #. Select `Runtime Blocks` type.
-#. Drag & drop `FCG` road block into the field.
+#. Drag & drop `FCG` road block prefabs into the field.
 
 	.. image:: /images/integration/fcg3.png
 	

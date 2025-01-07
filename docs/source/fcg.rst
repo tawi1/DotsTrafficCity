@@ -62,7 +62,7 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	.. image:: /images/integration/fcg2.png
 
 #. Configure all generator settings in the inspector.
-#. Press `Generate` button.
+#. Press `Generate` button at the bottom of the inspector.
 #. Some of the prefab blocks should be edited because the FCG plugin doesn't have enough data to complete the generation (check all selected `Prefab Blocks` & `Broken Blocks` tab in the Inspector.), for example, let's open the `Border-Flat-Large-Exit` prefab.
 #. Roundabout here without exit segment:
 

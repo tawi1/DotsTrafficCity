@@ -31,12 +31,12 @@ Getting Started
 
 	.. image:: /images/integration/rc11.png	
 	
-#. Activate `TrafficLightHybridService` 
+#. Activate `TrafficLightHybridService`.
 
-	``Hub/Controllers/Road/TrafficLightHybridService``
 	.. image:: /images/integration/rc13.png	
-	
-#. Select mode type depending on your needs.
+	`Hub/Controllers/Road/TrafficLightHybridService`
+		
+#. Select scene type depending on your needs.
 
 Editor Scene
 ------------
@@ -93,10 +93,10 @@ Runtime Scene
 
 #. Add the `RUNTIME_ROAD` scripting define to the `Player Settings` of the project.
 #. Open `RoadConstructorDemoPlayer` scene.
+#. Create a new gameobject & add `RuntimeRoadManagerCustom` & `RC_RuntimeSceneGenerator` components.
 
 	.. image:: /images/integration/rc4.png	
-
-#. Create a new gameobject & add `RuntimeRoadManagerCustom` & `RC_RuntimeSceneGenerator` components.
+	
 #. In the `RC_RuntimeSceneGenerator` assign `RuntimeRoadManagerCustom` & `Road Constructor` references from the scene in the inspector.
 #. Set or duplicate any existing :ref:`Light State Container <sharedLightStates>` & assign it in the `Inspector`.
 

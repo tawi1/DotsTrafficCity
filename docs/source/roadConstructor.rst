@@ -19,6 +19,7 @@ Getting Started
 ------------
 
 #. Open your scene.
+#. Add the `ROAD_CONSTRUCTOR` scripting define to the `Player Settings` of the project.
 #. Create `City base`, in the `Unity` toolbar open:
 
 	`Spirit604/CityEditor/Create/City Base`	
@@ -35,7 +36,7 @@ Getting Started
 
 	.. image:: /images/integration/rc13.png	
 	`Hub/Controllers/Road/TrafficLightHybridService`
-		
+
 #. Select scene type depending on your needs.
 
 Editor Scene

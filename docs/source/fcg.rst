@@ -13,6 +13,7 @@ How To Use
 Getting Started
 ------------
 
+#. Add the `FCG` scripting define to the `Player Settings` of the project.
 #. Open your scene.
 #. Create `City base`, in the `Unity` toolbar open:
 
@@ -36,9 +37,8 @@ Getting Started
 
 #. Remove or disable built-in traffic system.
 
-	.. image:: /images/integration/fcg10.png
-	
-#. Add the `FCG` scripting define to the `Player Settings` of the project.
+	.. image:: /images/integration/fcg10.png	
+
 #. Select mode type depending on your needs.
 
 Editor Mode

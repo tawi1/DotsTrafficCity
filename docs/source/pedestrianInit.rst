@@ -280,7 +280,7 @@ Cull state
 Hybrid Shape GPU
 ~~~~~~~~~~~~
 
-`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animatated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrian in familliar way.
+`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrian in familliar way.
 
 How To Create
 """"""""""""""
@@ -824,7 +824,7 @@ Interaction Mono Example
 			}
 		}		
 		
-.. _pedestrianEntitySelection
+.. _pedestrianEntitySelection:
 		
 Entity Selection
 ----------------

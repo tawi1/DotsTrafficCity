@@ -489,10 +489,10 @@ Pure DOTS
 
 	..  code-block:: r
 	
-	    public Entity TryToSelectEntity(Vector3 worldPosition)
-        {
-            return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Traffic, 1f);
-        }
+		public Entity TryToSelectEntity(Vector3 worldPosition)
+		{
+			return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Traffic, 1f);
+		}
 
 Hybrid Mono
 ~~~~~~~~~~~~

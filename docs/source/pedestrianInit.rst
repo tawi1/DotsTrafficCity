@@ -769,12 +769,12 @@ PedestrianInteractUtils Methods
 	..  code-block:: r
 	
 		// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehavior scripts.
-		PedestrianInteractUtils.Activate(entity);
+		PedestrianInteractUtils.RemoveFromSimulation(entity);
 		
 	..  code-block:: r
 	
-		// Return the entity to the simulation..
-		PedestrianInteractUtils.Deactivate(entity);
+		// Return the entity to the simulation.
+		PedestrianInteractUtils.RestoreToSimulation(entity);
 		
 Interaction Mono Example
 ~~~~~~~~~~~~
@@ -800,7 +800,7 @@ Interaction Mono Example
 			{
 				if (activated) return false;
 
-				if (PedestrianInteractUtils.Activate(hybridEntityRef.RelatedEntity))
+				if (PedestrianInteractUtils.RemoveFromSimulation(hybridEntityRef.RelatedEntity))
 				{
 					activated = true;
 				}
@@ -815,7 +815,7 @@ Interaction Mono Example
 			{
 				if (!activated) return false;
 
-				if (PedestrianInteractUtils.Deactivate(hybridEntityRef.RelatedEntity))
+				if (PedestrianInteractUtils.RestoreToSimulation(hybridEntityRef.RelatedEntity))
 				{
 					activated = false;
 				}

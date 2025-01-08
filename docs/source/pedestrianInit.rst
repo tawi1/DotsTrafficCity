@@ -401,7 +401,7 @@ If you need to attach some gameobject weapon e.g:
 			
 			private void Release()
 			{
-				adapter.ReleaseAttachement(0);
+				adapter.ReleaseAttachment(0);
 			}	
 		}
 		

@@ -309,6 +309,8 @@ How To Create
 	.. image:: /images/integration/rukhanka2.png	
 	
 	.. image:: /images/integration/rukhanka3.png	
+	
+* Animation taken from :ref:`Animation state authoring <legacyAnimatorExample>` as for :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrian.
 
 .. _rukhankaHybridSkin:
 
@@ -333,6 +335,75 @@ How To Create
 * The hybrid shape can be edited here:
 	
 	.. image:: /images/pedestrian/HybridShapeFactory.png	
+	
+* Animation taken from :ref:`Animation state authoring <legacyAnimatorExample>` as for :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrian.
+	
+How To Control
+""""""""""""""
+
+You can control the Rukhanka npc with the monobehaviour script:
+
+* Make sure that `HybridShapeFactory` prefab contains `RukhankaEntityAdapter`.
+* :ref:`Temporarily remove <pedestrianDisableSimulation>` the entity from the built-in DOTS simulation.
+* Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Animator.html>`_
+* Example:
+
+ 	..  code-block:: r
+	
+		public struct AnimationControlExample : MonoBehaviour
+		{		  
+			private RukhankaEntityAdapterBase adapter;
+			
+			private void Awake()
+			{
+				adapter = GetComponent<RukhankaEntityAdapterBase>();			
+			}
+			
+			private void SetTriggerByName(string name)
+			{
+				adapter.SetTrigger(name);
+			}		
+			
+			private void SetTriggerByHash(string name)
+			{
+				var hash = RukhankaUtils.GetHash(name);
+				adapter.SetTrigger(hash);
+			}		
+		}
+		
+How To Attach
+""""""""""""""
+
+If you need to attach some gameobject weapon e.g:
+
+* Add `RukhankaHybridBoneAnchorAuthoring` to entity prefab.
+* In `RukhankaHybridBoneAnchorAuthoring` assign bone that you want to attach.
+* Attach the bone with the local index:
+
+ 	..  code-block:: r
+	
+		public struct AttachExample : MonoBehaviour
+		{		  
+			[SerializeField] private GameObject attachment;
+		
+			private RukhankaEntityAdapterBase adapter;
+			
+			private void Awake()
+			{
+				adapter = GetComponent<RukhankaEntityAdapterBase>();			
+			}
+			
+			private void Attach()
+			{
+				// Attach to bone with local index 0
+				adapter.AttachToBone(attachment, 0);
+			}		
+			
+			private void Release()
+			{
+				adapter.ReleaseAttachement(0);
+			}	
+		}
 
 .. _pedestrianRagdoll:
 
@@ -613,6 +684,8 @@ How To Change
 Custom State System
 ~~~~~~~~~~~~
 
+If you want to temporarily control certain pedestrians with monobehaviour :ref:`read this article <pedestrianDisableSimulation>` or see the sample code below to control pedestrians with `DOTS` script:
+
 ..  code-block:: r
 
 	// Custom state system example
@@ -680,8 +753,12 @@ Action State
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 				
+.. _pedestrianDisableSimulation:
+				
 User Custom Control & Interaction
 ----------------
+
+If you need to temporarily take full control of specific `Pedestrian` in your own way, use this:
 
 * Get the desired entity using :ref:`either method <pedestrianEntitySelection>`.
 * Use this sample code to temporarily remove/restore pedestrians from built-in DOTS systems.
@@ -762,10 +839,10 @@ Pure DOTS
 
 	..  code-block:: r
 	
-	    public Entity TryToSelectEntity(Vector3 worldPosition)
-        {
-            return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Pedestrian, 1f);
-        }
+		public Entity TryToSelectEntity(Vector3 worldPosition)
+		{
+			return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Pedestrian, 1f);
+		}
 
 Hybrid Mono
 ~~~~~~~~~~~~

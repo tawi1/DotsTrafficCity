@@ -474,6 +474,46 @@ Currently enabled in the following situations:
 	
 	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.
 
+.. _trafficEntitySelection
+		
+Entity Selection
+----------------
+		
+Entity can be retrieved using one of these methods:
+		
+Pure DOTS
+~~~~~~~~~~~~
+
+* Create new gameobject with `EntitySelectionService` component
+* Use world position to get the nearest entity for that position.
+
+	..  code-block:: r
+	
+	    public Entity TryToSelectEntity(Vector3 worldPosition)
+        {
+            return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Traffic, 1f);
+        }
+
+Hybrid Mono
+~~~~~~~~~~~~
+
+Entity can be retrieved if the car has a collider:
+
+	..  code-block:: r
+	
+			private Entity GetEntity()
+			{
+				Entity entity = Entity.Null;
+				
+			    if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.0f))
+				{
+					var hybridEntityRef = hit.collider.GetComponent<IHybridEntityRef>();
+					entity = hybridEntityRef.RelatedEntity;
+				}				
+				
+				return entity;
+			}		
+
 .. _trafficRail:
 
 Rail Movement

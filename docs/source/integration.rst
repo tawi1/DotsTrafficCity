@@ -8,5 +8,6 @@
 	
    easyroads.rst
    roadConstructor.rst
+   rukhanka.rst
    fcg.rst
    assetPacks.rst

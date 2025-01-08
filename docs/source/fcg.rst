@@ -48,7 +48,7 @@ Editor Mode
 
 #. Configure all generator settings in the inspector.
 #. Press `Generate` button.
-#. Edit road segments in the scene as needed.
+#. Edit generated road segments in the scene as needed.
 #. In the :ref:`Hub <subsceneGenerator>` object in the scene, generate the subscene.
 #. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>`.
 

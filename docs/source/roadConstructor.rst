@@ -19,7 +19,7 @@ Getting Started
 ------------
 
 #. Add the `ROAD_CONSTRUCTOR` scripting define to the `Player Settings` of the project.
-#. Open your scene.
+#. Open demo scene.
 #. Create `City base`, in the `Unity` toolbar open:
 
 	`Spirit604/CityEditor/Create/City Base`	

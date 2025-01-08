@@ -277,6 +277,63 @@ Cull state
 * :ref:`InViewOfCamera <cullPointStates>`: :ref:`Hybrid <pedestrianHybridLegacy>` legacy skin is enabled.
 * :ref:`CloseToCamera <cullPointStates>`: :ref:`GPU <pedestrianGPU>` skin is enabled.
 
+Hybrid Shape GPU
+~~~~~~~~~~~~
+
+`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animatated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrian in familliar way.
+
+How To Create
+""""""""""""""
+
+* Create :ref:`GPU <pedestrianGPU>` pedestrians.
+* The hybrid shape can be edited here:
+	
+	.. image:: /images/pedestrian/HybridShapeFactory.png	
+
+.. _rukhankaSkin:
+
+Rukhanka
+~~~~~~~~~~~~
+
+NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ pure in DOTS.
+
+How To Create
+""""""""""""""
+
+* Unpack rukhanka sample:
+
+	.. image:: /images/integration/rukhanka1.png	
+	
+* Add desired prefabs here:
+
+	.. image:: /images/integration/rukhanka2.png	
+	
+	.. image:: /images/integration/rukhanka3.png	
+
+.. _rukhankaHybridSkin:
+
+Rukhanka Hybrid
+~~~~~~~~~~~~
+
+NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_, but have hybrid monobehaviour collider & rigidbody to control or interact pedestrian in familliar way.
+
+How To Create
+""""""""""""""
+
+* Unpack rukhanka sample:
+
+	.. image:: /images/integration/rukhanka1.png	
+	
+* Add desired prefabs here:
+
+	.. image:: /images/integration/rukhanka2.png	
+	
+	.. image:: /images/integration/rukhanka3.png	
+	
+* The hybrid shape can be edited here:
+	
+	.. image:: /images/pedestrian/HybridShapeFactory.png	
+
 .. _pedestrianRagdoll:
 
 Ragdoll
@@ -623,6 +680,114 @@ Action State
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 		
+		
+Custom Control & Interaction
+----------------
+
+* Get the desired entity using :ref:`either method <pedestrianEntitySelection>`.
+* Use this sample code to temporarily remove/restore pedestrians from built-in DOTS systems.
+
+PedestrianInteractUtils Methods
+~~~~~~~~~~~~
+
+	..  code-block:: r
+	
+		// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehavior scripts.
+		PedestrianInteractUtils.Activate(entity);
+		
+	..  code-block:: r
+	
+		// Return the entity to the simulation..
+		PedestrianInteractUtils.Deactivate(entity);
+		
+Interaction Mono Example
+~~~~~~~~~~~~
+
+	..  code-block:: r
+	
+		public class PedestrianInteractable : MonoBehaviour
+		{
+			private IHybridEntityRef hybridEntityRef;
+			private bool activated;
+
+			public bool Activated => activated;
+
+			private void Awake()
+			{
+				hybridEntityRef = GetComponent<IHybridEntityRef>();
+			}
+
+			/// <summary>
+			/// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehavior scripts.
+			/// </summary>
+			public bool Activate()
+			{
+				if (activated) return false;
+
+				if (PedestrianInteractUtils.Activate(hybridEntityRef.RelatedEntity))
+				{
+					activated = true;
+				}
+
+				return activated;
+			}
+
+			/// <summary>
+			/// Return the entity to the simulation.
+			/// </summary>
+			public bool Deactivate()
+			{
+				if (!activated) return false;
+
+				if (PedestrianInteractUtils.Deactivate(hybridEntityRef.RelatedEntity))
+				{
+					activated = false;
+				}
+
+				return !activated;
+			}
+		}		
+		
+.. _pedestrianEntitySelection
+		
+Entity Selection
+----------------
+		
+Entity can be retrieved using one of these methods:
+		
+Pure DOTS
+~~~~~~~~~~~~
+
+* Create new gameobject with `EntitySelectionService` component
+* Use world position to get the nearest entity for that position.
+
+	..  code-block:: r
+	
+	    public Entity TryToSelectEntity(Vector3 worldPosition)
+        {
+            return EntitySelectionService.Instance.SelectEntity(worldPosition, EntityType.Pedestrian, 1f);
+        }
+
+Hybrid Mono
+~~~~~~~~~~~~
+
+Entity can be retrieved if the NPC has a collider:
+
+	..  code-block:: r
+	
+			private Entity GetEntity()
+			{
+				Entity entity = Entity.Null;
+				
+			    if (Physics.Raycast(transform.position, Vector3.forward, out hit, 1.0f))
+				{
+					var hybridEntityRef = hit.collider.GetComponent<IHybridEntityRef>();
+					entity = hybridEntityRef.RelatedEntity;
+				}				
+				
+				return entity;
+			}		
+
 Common Info
 ----------------
 

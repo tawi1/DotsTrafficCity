@@ -31,6 +31,11 @@ Getting Started
 
 	.. image:: /images/integration/rc11.png	
 	
+#. Activate `TrafficLightHybridService` 
+
+	``Hub/Controllers/Road/TrafficLightHybridService``
+	.. image:: /images/integration/rc13.png	
+	
 #. Select mode type depending on your needs.
 
 Editor Scene
@@ -50,14 +55,17 @@ Editor Scene
 	
 	.. image:: /images/integration/rc6.png	
 	
-#. 
 #. Select `Road Builder Editor` on the scene
 #. Press `Initialize` button.
 
 	.. image:: /images/integration/rc1.png	
 	
 #. Place your roads according to your needs.
-#. Then, press `Register scene objects`, `Add traffic components`, `Create waypoints` buttons.
+
+	.. image:: /images/integration/rc14.png	
+	`Example.`
+	
+#. Then, press `Register scene objects`, `Add Traffic Components`, `Create Waypoints` buttons.
 
 	.. image:: /images/integration/rc2.png	
 	
@@ -67,6 +75,10 @@ Editor Scene
 	
 #. Adjust any necessary settings in the `Inspector`. 
 #. Press `Generate` button.
+
+	.. image:: /images/integration/rc15.png	
+	`Result example.`
+	
 #. Select :ref:`Hub <hub>` object in the scene
 #. Untick `Move lights` option.
 
@@ -117,7 +129,7 @@ Hybrid Mono
 Physics simulation vehicles run on standart `Monobehaviour` scripts.
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
-#. Find the `HybridTrafficCarMonoSkinBase Arcade` prefab & set the ground layer to match the ground collider layer in the road builder.
+#. Find the `HybridTrafficCarMonoSkinBase Arcade` prefab & set the ground layer to match the ground collider layer in the `Road Constructor`.
 #. Create :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles. 
 
 No Physics
@@ -126,6 +138,7 @@ No Physics
 Vehicles without physics.
 
 #. Set the `World simulation type` to `DOTS` in the :ref:`General settings <generalSettingsConfig>` config.
+#. Set the `Physics simulation type` to `No physics` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set `Entity type` to :ref:`Pure entity no physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
 #. Create :ref:`No physics <trafficCar>` vehicles. 
 
@@ -135,10 +148,12 @@ Custom Physics
 Vehicles with `DOTS` physics (works only in the `Editor scene`).
 
 #. Set the `World simulation type` to `DOTS` in the :ref:`General settings <generalSettingsConfig>` config.
+#. Set the `Physics simulation type` to `Unity physics` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set `Entity type` to :ref:`Pure custom physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
 #. Select :ref:`Hub <hub>` object in the scene
 #. Enable the `Copy Physics Shapes' option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`sub-scene <subScene>` after each :ref:`sub-scene <subScene>` regeneration.
 #. Add layer according to your ground layer in the `Road Constructor` (read more about :ref:`physics shape transferring <physicsShapeTransfer>`)
-#. Create :ref:`Custom physics <trafficCar>` vehicles. 
 
 	.. image:: /images/integration/rc12.png	
+	
+#. Create :ref:`Custom physics <trafficCar>` vehicles. 

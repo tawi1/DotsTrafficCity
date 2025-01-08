@@ -44,6 +44,8 @@ Editor Mode
 #. Configure all generator settings in the inspector.
 #. Press `Generate` button.
 #. Edit road segments in the scene as needed.
+#. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
+#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`hub <hub>`.
 
 Editor Blocks
 ------------
@@ -54,6 +56,8 @@ Editor Blocks
 #. Generate blocks like in `Runtime blocks` tutorial.
 #. Switch back to `Editor Blocks` type.
 #. Press the `Generate` button after each city generation made by `Fantastic City Generator`.
+#. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
+#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`hub <hub>`.
 
 Runtime Blocks
 ------------
@@ -107,11 +111,13 @@ Runtime chunk generation from `FCG` prefab blocks, can also be used to generate 
 	.. image:: /images/integration/fcg9.png
 	`Created roundabouts are now created for all local blocks`
 	
+#. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
 #. The next step is to configure `Runtime Traffic` if you plan to use blocks at runtime otherwise switch back to `Editor Blocks`.
 
 Runtime Traffic
 ------------
 
+#. Add the `RUNTIME_ROAD` scripting define to the `Player Settings` of the project.
 #. After the generation of `Runtime Blocks` is finished, add a new gameobject & add a `RuntimeRoadManager` component.
 #. Replace the code in `RunTimeSample.cs` with the `GenerateCityAtRuntime` method:
 

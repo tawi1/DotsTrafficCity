@@ -7,5 +7,6 @@
 	:maxdepth: 2
 	
    easyroads.rst
+   roadConstructor.rst
    fcg.rst
    assetPacks.rst

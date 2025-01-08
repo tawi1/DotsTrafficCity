@@ -558,6 +558,7 @@ How To Setup
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Agents Navigation`.
 * Enable the `Auto Add Agent Components` option for quick prototyping & customize the settings in the `Agents Navigation Config Authoring` tab, or add agent authoring components to the `PedestrianEntity` prefab from the `Agents Navigation` sample for more flexible settings. (`Agents Navigation doc <https://lukaschod.github.io/agents-navigation-docs/manual/game-objects.html>`_)
 * Ensure that :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
+* Add `Agent Collider Hybrid Component` to the `HybridEntityRuntimeAuthoring` of your player NPC if you want to collide with pedestrians [**optional step**]
 
 .. _pedestrianAnimation:
 

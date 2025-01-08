@@ -9,5 +9,6 @@
    easyroads.rst
    roadConstructor.rst
    rukhanka.rst
+   agentsNavigation.rst
    fcg.rst
    assetPacks.rst

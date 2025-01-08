@@ -679,9 +679,8 @@ Action State
 
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
-		
-		
-Custom Control & Interaction
+				
+User Custom Control & Interaction
 ----------------
 
 * Get the desired entity using :ref:`either method <pedestrianEntitySelection>`.

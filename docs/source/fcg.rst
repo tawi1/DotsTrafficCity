@@ -45,7 +45,7 @@ Editor Mode
 #. Press `Generate` button.
 #. Edit road segments in the scene as needed.
 #. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
-#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`hub <hub>`.
+#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`Hub <hub>`.
 
 Editor Blocks
 ------------
@@ -57,7 +57,7 @@ Editor Blocks
 #. Switch back to `Editor Blocks` type.
 #. Press the `Generate` button after each city generation made by `Fantastic City Generator`.
 #. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
-#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`hub <hub>`.
+#. If you need to regenerate roads, select :ref:`hub <hub>`, press `Move back` button, then regenerate roads in `FCGSceneGenerator` & press `Generate` again in the :ref:`Hub <hub>`.
 
 Runtime Blocks
 ------------

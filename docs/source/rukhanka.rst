@@ -14,11 +14,11 @@ How To Use
 
 	.. image:: /images/integration/rukhanka1.png	
 
-* Set Pedestrian Rig Type to  :ref:`Rukhanka <rukhankaSkin>` or :ref:` Rukhanka Hybrid <rukhankaHybridSkin>` in the :ref:`Pedestrian settings <pedestrianSettingsConfig>`.
+#. Set Pedestrian Rig Type to  :ref:`Rukhanka <rukhankaSkin>` or :ref:`Rukhanka Hybrid <rukhankaHybridSkin>` in the :ref:`Pedestrian settings <pedestrianSettingsConfig>`.
 
 	.. image:: /images/integration/rukhanka4.png	
 	
-* Add desired prefabs here:
+#. Add desired prefabs here:
 
 	.. image:: /images/integration/rukhanka2.png	
 	

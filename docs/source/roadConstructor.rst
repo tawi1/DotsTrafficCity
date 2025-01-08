@@ -18,8 +18,8 @@ Limitations
 Getting Started
 ------------
 
-#. Open your scene.
 #. Add the `ROAD_CONSTRUCTOR` scripting define to the `Player Settings` of the project.
+#. Open your scene.
 #. Create `City base`, in the `Unity` toolbar open:
 
 	`Spirit604/CityEditor/Create/City Base`	

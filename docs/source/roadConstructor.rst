@@ -151,7 +151,7 @@ Vehicles with `DOTS` physics (works only in the `Editor scene`).
 #. Set the `Physics simulation type` to `Unity physics` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set `Entity type` to :ref:`Pure custom physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
 #. Select :ref:`Hub <hub>` object in the scene
-#. Enable the `Copy Physics Shapes' option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`sub-scene <subScene>` after each :ref:`sub-scene <subScene>` regeneration.
+#. Enable the `Copy Physics Shapes` option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`sub-scene <subScene>` after each :ref:`sub-scene <subScene>` regeneration.
 #. Add layer according to your ground layer in the `Road Constructor` (read more about :ref:`physics shape transferring <physicsShapeTransfer>`)
 
 	.. image:: /images/integration/rc12.png	

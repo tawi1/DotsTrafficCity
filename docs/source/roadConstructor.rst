@@ -8,7 +8,7 @@ How To Use
 
 #. Buy & download, import the following asset plugin:
 
-	`Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445`_
+	`Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_
 
 Getting Started
 ------------

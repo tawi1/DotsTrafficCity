@@ -13,7 +13,7 @@ Where To Find
 Limitations
 ------------
 
-#. Roundabouts are not currently supported.
+* Roundabouts are not currently supported.
 
 Getting Started
 ------------
@@ -79,13 +79,13 @@ Editor Scene
 	.. image:: /images/integration/rc15.png	
 	`Result example.`
 	
-#. Select :ref:`Hub <hub>` object in the scene
+#. Select :ref:`Hub <subsceneGenerator>` object in the scene
 #. Untick `Move lights` option.
 
 	.. image:: /images/integration/rc9.png	
 	
-#. In the :ref:`Hub <hub>`, generate the subscene.
-#. If you need to regenerate roads, select :ref:`Hub <hub>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <hub>`.
+#. In the :ref:`Hub <subsceneGenerator>`, generate the subscene.
+#. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>`.
 #. The next step is to set up `Vehicles`_
 
 Runtime Scene
@@ -116,7 +116,7 @@ Runtime Scene
 	
 	.. image:: /images/integration/rc6.png	
 		
-#. In the :ref:`Hub <hub>` object in the scene, generate the subscene.
+#. In the :ref:`Hub <subsceneGenerator>` object in the scene, generate the subscene.
 #. The next step is to set up `Vehicles`_
 #. Launch the scene & place the roads.
 
@@ -150,7 +150,7 @@ Vehicles with `DOTS` physics (works only in the `Editor scene`).
 #. Set the `World simulation type` to `DOTS` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set the `Physics simulation type` to `Unity physics` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set `Entity type` to :ref:`Pure custom physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
-#. Select :ref:`Hub <hub>` object in the scene
+#. Select :ref:`Hub <subsceneGenerator>` object in the scene
 #. Enable the `Copy Physics Shapes` option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`sub-scene <subScene>` after each :ref:`sub-scene <subScene>` regeneration.
 #. Add layer according to your ground layer in the `Road Constructor` (read more about :ref:`physics shape transferring <physicsShapeTransfer>`)
 

@@ -95,7 +95,7 @@ Section Object Authoring
 Scene Streaming
 ~~~~~~~~~~~~
 
-You can split the scene content into chunks for partial loading at runtime.
+You can split the scene content into chunks for partial loading at runtime (`DOTS` simulation only).
 
 `Youtube tutorial. <https://youtu.be/6M_dn7yjMNk>`_
 

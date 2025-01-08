@@ -34,6 +34,11 @@ Getting Started
 
 	.. image:: /images/integration/fcg1_3.png	
 
+#. Remove or disable built-in traffic system.
+
+	.. image:: /images/integration/fcg10.png
+	
+#. Add the `FCG` scripting define to the `Player Settings` of the project.
 #. Select mode type depending on your needs.
 
 Editor Mode

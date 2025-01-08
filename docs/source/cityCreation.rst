@@ -46,7 +46,7 @@ New Scene
 
 		.. image:: /images/gettingstarted/Tutorial2.gif
 	
-#. Create & connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>`
+#. Create & connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>` (`W` hotkey to select node, `E` hotkey to connect nodes)
 
 	.. only:: builder_html
 	

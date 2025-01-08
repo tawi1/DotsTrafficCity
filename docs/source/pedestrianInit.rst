@@ -341,11 +341,11 @@ How To Create
 How To Control
 """"""""""""""
 
-You can control the Rukhanka npc with the monobehaviour script:
+You can control the `Rukhanka Hybrid` npc with the monobehaviour script:
 
 * Make sure that `HybridShapeFactory` prefab contains `RukhankaEntityAdapter`.
 * :ref:`Temporarily remove <pedestrianDisableSimulation>` the entity from the built-in DOTS simulation.
-* Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Animator.html>`_
+* Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Animator.html>`_ but using `RukhankaEntityAdapterBase` component.
 * Example:
 
  	..  code-block:: r
@@ -404,6 +404,36 @@ If you need to attach some gameobject weapon e.g:
 				adapter.ReleaseAttachement(0);
 			}	
 		}
+		
+Animation Event
+""""""""""""""
+
+ 	..  code-block:: r
+	
+		public struct AnimationEventExample : MonoBehaviour
+		{		  
+			[SerializeField] private string desiredAnimationEventName;
+		
+			private RukhankaEntityAdapterBase adapter;
+			private uint desiredAnimationEventHash;
+			
+			private void Awake()
+			{
+				adapter = GetComponent<RukhankaEntityAdapterBase>();
+				adapter.OnAnimationEvent += RukhankaEntityAdapter_OnAnimationEvent;
+				
+				desiredAnimationEventHash = RukhankaUtils.GetHash(desiredAnimationEventName);				
+			}
+			
+			private void RukhankaEntityAdapter_OnAnimationEvent(AnimationEventComponent animationEvent)
+			{
+				if (animationEvent.nameHash == desiredAnimationEventHash)
+				{
+					// Take action
+				}
+			}
+		}
+		
 
 .. _pedestrianRagdoll:
 

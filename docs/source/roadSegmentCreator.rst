@@ -768,6 +768,7 @@ How To Use
 	.. image:: /images/road/roadSegment/auto/AutoCrossroad5.png
 	`Example result.`
 	
+#. If you are missing a connection, use the :ref:`Path Creator <pathCreator>` to add missing paths.
 	
 
 

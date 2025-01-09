@@ -304,7 +304,7 @@ How To Create
 
 	.. image:: /images/integration/rukhanka1.png	
 	
-* Add desired prefabs here:
+* Create a pedestrian prefab with the `Animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_, add `PedestrianAuthoring` & `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ components & assign desired prefab here:
 
 	.. image:: /images/integration/rukhanka2.png	
 	
@@ -326,7 +326,7 @@ How To Create
 
 	.. image:: /images/integration/rukhanka1.png	
 	
-* Add desired prefabs here:
+* Create a pedestrian prefab with the `Animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_, add `PedestrianAuthoring` & `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ components & assign desired prefab here:
 
 	.. image:: /images/integration/rukhanka2.png	
 	
@@ -345,7 +345,7 @@ You can control the `Rukhanka Hybrid` npc with the monobehaviour script:
 
 * Make sure that `HybridShapeFactory` prefab contains `RukhankaEntityAdapter`.
 * :ref:`Temporarily remove <pedestrianDisableSimulation>` the entity from the built-in DOTS simulation.
-* Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Animator.html>`_ but using `RukhankaEntityAdapterBase` component.
+* Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_, but using `RukhankaEntityAdapterBase` component.
 * Example:
 
  	..  code-block:: r
@@ -378,7 +378,7 @@ If you need to attach some gameobject weapon e.g:
 
 * Add `RukhankaHybridBoneAnchorAuthoring` to entity prefab.
 * In `RukhankaHybridBoneAnchorAuthoring` assign bone that you want to attach.
-* Attach the bone with the local index:
+* Attach the anchor with the local index:
 
  	..  code-block:: r
 	
@@ -395,7 +395,7 @@ If you need to attach some gameobject weapon e.g:
 			
 			private void Attach()
 			{
-				// Attach to bone with local index 0
+				// Attach to anchor with local index 0
 				adapter.AttachToBone(attachment, 0);
 			}		
 			

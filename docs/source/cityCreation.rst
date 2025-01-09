@@ -34,6 +34,7 @@ Hub Base
 	.. image:: /images/gettingstarted/ExampleScene2.png
 	
 #. By default, the :ref:`Cull point <cullPointInfo>` is automatically generated as a child of the main camera.	
+#. If you want to add your own player that interacts with traffic, :ref:`read here <playerCustom>` **[optional step]**.
 #. The next step is to configure `Scene`_
 
 Hub

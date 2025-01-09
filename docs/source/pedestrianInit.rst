@@ -280,7 +280,7 @@ Cull state
 Hybrid Shape GPU
 ~~~~~~~~~~~~
 
-`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrian in familliar way.
+`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrians in a familliar way.
 
 How To Create
 """"""""""""""
@@ -317,7 +317,7 @@ How To Create
 Rukhanka Hybrid
 ~~~~~~~~~~~~
 
-NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_, but have hybrid monobehaviour collider & rigidbody to control or interact pedestrian in familliar way.
+NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_, but have hybrid monobehaviour collider & rigidbody to control or interact pedestrians in a familliar way.
 
 How To Create
 """"""""""""""

@@ -408,7 +408,7 @@ If you need to attach some gameobject weapon e.g:
 Animation Event
 """"""""""""""
 
-* In `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ enable `Has Animation Events` option.
+* In `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ component enable `Has Animation Events` option.
 * Then, use this sample code:
 
  	..  code-block:: r

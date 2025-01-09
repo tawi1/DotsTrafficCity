@@ -26,6 +26,7 @@ Added
 Fixed
 ~~~~~~~~~~~~
 
+* Fixed bounds calculation in some cases that could cause incorrect avoidance or obstacle detection.
 * Fixed Traffic Change Lane Config enable option not enabled in some cases.
 * Fixed incorrect removal index for connected paths for runtime roads.
 * Fixed potential exception when using auto-sync config in `Editor`.

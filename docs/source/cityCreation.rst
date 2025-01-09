@@ -6,7 +6,7 @@ City Creation
 Initial Components
 ------------
 
-#. Create new `scene`.
+#. Create a new `scene`.
 #. In the `Unity` toolbar open:
 
 	`Spirit604/CityEditor/Create/City Base`

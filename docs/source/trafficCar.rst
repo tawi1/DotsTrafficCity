@@ -154,7 +154,7 @@ Template Settings
 	.. image:: /images/entities/trafficCar/custom/templateSettings.png
 
 **Tabs:**
-	* **Create new** : create new template settings.
+	* **Create new** : create a new template settings.
 	* **Copy from template** : copy settings from the selected template.
 	* **Save to template** : save settings to the selected template.
 	
@@ -484,7 +484,7 @@ Entity can be retrieved using one of these methods:
 Pure DOTS
 ~~~~~~~~~~~~
 
-* Create new gameobject with `EntitySelectionService` component
+* Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
 
 	..  code-block:: r

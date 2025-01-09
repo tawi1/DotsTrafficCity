@@ -505,7 +505,7 @@ Installation
 How To Setup
 """"""""""""""
 
-* Create new gameobject & add `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ component.
+* Create a new gameobject & add `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ component.
 * Set `Agent type` to `Pedestrian` & press the `Bake` button in the created `NavMeshSurface`.
 * Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Calc Nav Path`.
 * Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
@@ -868,7 +868,7 @@ Entity can be retrieved using one of these methods:
 Pure DOTS
 ~~~~~~~~~~~~
 
-* Create new gameobject with `EntitySelectionService` component
+* Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
 
 	..  code-block:: r

@@ -5,10 +5,10 @@ User Custom Solution
 
 This topic about how to replace the player with a custom user solution.
 	
-Player Npc
+Player Character
 ----------------
 
-If you want your own script to spawn player npc, follow these steps:
+If you want your own script to spawn player character, follow these steps:
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set the `Player controller type` to `Custom` in the :ref:`General settings <generalSettingsConfig>` config.
@@ -24,7 +24,7 @@ If you want your own script to spawn player npc, follow these steps:
 	
 #. If you haven't created your own scene yet, you can try the `Demo Mono` scene for tests.
 #. Custom player only works with :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles.
-#. Your player prefab npc is ready.
+#. Your player prefab character is ready.
 
 Player Car
 ----------------

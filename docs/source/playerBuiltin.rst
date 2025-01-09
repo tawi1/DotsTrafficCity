@@ -7,7 +7,7 @@ Built-in Solution
 		:maxdepth: 2
 
 		/playerSpawn.rst
-		/playerNpc.rst
+		/playerCharacter.rst
 		/playerCar.rst
 		/playerCustomCamera.rst
 		/playerConfig.rst

@@ -1,6 +1,6 @@
 .. _playerNpc:
 
-Player Npc
+Player Character
 ----------------
 
 .. contents::
@@ -9,7 +9,7 @@ Player Npc
 Hybrid DOTS
 ~~~~~~~~~~~~
 
-The player NPC behaviour is handled by the `DOTS` systems.
+The player character behaviour is handled by the `DOTS` systems.
 
 How To Create
 """"""""""""""
@@ -58,7 +58,7 @@ Factory that contains player `Hybrid DOTS` NPCs.
 Hybrid Mono
 ~~~~~~~~~~~~
 
-The player NPC behaviour is handled by the mono controller.
+The player character behaviour is handled by the mono controller.
 
 How To Create
 """"""""""""""

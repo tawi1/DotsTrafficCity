@@ -44,7 +44,7 @@ Getting Started
 Editor Mode
 ------------
 
-:ref:`Road segment <roadSegment>` editor generation from scene `FCGWaypointsContainer` road data.
+:ref:`Road segment <roadSegment>` editor generation from scene `FCGWaypointsContainer` road data (useful if you plan to generate the city once, otherwise select the `Editor Blocks` method).
 
 #. Configure all generator settings in the inspector.
 #. Press `Generate` button.

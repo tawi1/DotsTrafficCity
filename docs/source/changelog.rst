@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.3.0] - 08-01-2025
+[1.3.0] - 10-01-2025
 ------------
 
 Added
@@ -31,6 +31,7 @@ Fixed
 * Fixed potential exception when using auto-sync config in `Editor`.
 * Id reset fixed when spawning built-in npc player.
 * Path index debugger not initialized fix.
+* Fixed editor memory leak caused by `TrafficNpcCalculateObstacleSystem`.
 
 Changed
 ~~~~~~~~~~~~

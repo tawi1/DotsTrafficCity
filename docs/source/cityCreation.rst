@@ -17,11 +17,11 @@ Initial Components
 
 	.. image:: /images/gettingstarted/CityBase2.png
 
-#. Select `Hub` or `Hub Base` according to your needs (in most cases `Hub Base` will be suitable for you if you don't need sample scripts (built-in player, ui, etc))
+#. Select `Hub` or `Hub Base` according to your needs (in most cases `Hub Base` will be suitable for you if you don't need sample scripts (built-in player, UI, camera, etc))
 
 #. Description:
-	* Hub : root prefab used in demo & demo mono scene & contains demo sample dependencies.
-	* Hub Base : clean root prefab with just traffic & pedestrian simulation without any extra stuff.
+	* **Hub** : root prefab used in demo & demo mono scene & contains demo sample dependencies.
+	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff.
 
 #. Press `Create` button.
 #. Continue with the `Hub Base`_ or `Hub`_ article, depending on your choice.
@@ -33,6 +33,7 @@ Hub Base
 
 	.. image:: /images/gettingstarted/ExampleScene2.png
 	
+#. By default, the :ref:`Cull point <cullPointInfo>` is automatically generated as a child of the main camera.	
 #. The next step is to configure `Scene`_
 
 Hub

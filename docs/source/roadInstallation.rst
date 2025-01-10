@@ -48,7 +48,7 @@ Steps:
 Config Editing Workflow
 ----------------
 
-There are 2 variants to edit configs:
+There are 4 variants to edit configs:
 
 Main Scene Editing
 ~~~~~~~~~~~~
@@ -75,4 +75,25 @@ Steps
 #. Edit any config.
 #. After editing any config in the subscene, in the :ref:`Hub <subsceneGenerator>` press the `Copy From Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row in the subscene.
 #. Save & close :ref:`subscene <subscene>`.
+
+Manual Sync Local Config
+~~~~~~~~~~~~
+
+Steps
+""""""""""""""
+
+#. Change the desired value of the desired config.
+#. After that, the `Sync To Subscene` button will appear to synchronize this config with the subscene.
+
+Auto-Sync Local Config
+~~~~~~~~~~~~
+
+Steps
+""""""""""""""
+
+#. Open project settings from the `Unity` toolbar:
+
+	* `Edit/ProjectSettings/604Spirit/City Settings/`
 	
+#. Tick on `Sync Config On Change`.
+#. After that, any configuration changes made to the main scene are automatically synchronized to the subscene.	

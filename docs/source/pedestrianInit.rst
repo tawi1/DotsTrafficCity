@@ -277,10 +277,21 @@ Cull state
 * :ref:`InViewOfCamera <cullPointStates>`: :ref:`Hybrid <pedestrianHybridLegacy>` legacy skin is enabled.
 * :ref:`CloseToCamera <cullPointStates>`: :ref:`GPU <pedestrianGPU>` skin is enabled.
 
+Hybrid On Request And GPU
+~~~~~~~~~~~~
+
+By default, the entity is animated by the `GPU` until a `Hybrid skin` is requested.
+
+How To Create
+""""""""""""""
+
+* Create entity as :ref:`Hybrid and GPU <hybridAndGpu>` pedestrians.
+* Hybrid skin is enabled if the entity disables the `PreventHybridSkinTagTag` tag, to switch back to `GPU`, enable `PreventHybridSkinTagTag` tag again.
+
 Hybrid Shape GPU
 ~~~~~~~~~~~~
 
-`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrians in a familliar way.
+`Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrians in a familiar way.
 
 How To Create
 """"""""""""""
@@ -295,7 +306,7 @@ How To Create
 Rukhanka
 ~~~~~~~~~~~~
 
-NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ pure in DOTS.
+Pure entities animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ in `DOTS`.
 
 How To Create
 """"""""""""""
@@ -317,7 +328,7 @@ How To Create
 Rukhanka Hybrid
 ~~~~~~~~~~~~
 
-NPCs animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_, but have hybrid monobehaviour collider & rigidbody to control or interact pedestrians in a familliar way.
+Hybrid entities animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.
 
 How To Create
 """"""""""""""
@@ -802,7 +813,7 @@ PedestrianInteractUtils Methods
 
 	..  code-block:: r
 	
-		// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehavior scripts.
+		// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehaviour scripts.
 		PedestrianInteractUtils.RemoveFromSimulation(entity);
 		
 	..  code-block:: r
@@ -828,7 +839,7 @@ Interaction Mono Example
 			}
 
 			/// <summary>
-			/// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehavior scripts.
+			/// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehaviour scripts.
 			/// </summary>
 			public bool Activate()
 			{

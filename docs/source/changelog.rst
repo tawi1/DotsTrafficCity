@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.3.0] - 10-01-2025
+[1.3.0] - 13-01-2025
 ------------
 
 Added
@@ -39,6 +39,7 @@ Changed
 
 * By default, a clean scene is created with a clean `HubBase` without any extra dependencies.
 * Improved `ArcadeVehicleController` braking & suspension.
+* Improved some corner cases of generation for different types of crossroads.
 * Now runtime segments are connected with raycast method.
 
 [1.2.2] - 27-11-2024

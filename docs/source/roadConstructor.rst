@@ -93,6 +93,7 @@ Runtime Scene
 ------------
 
 #. Add the `RUNTIME_ROAD` scripting define to the `Player Settings` of the project.
+#. Contact `DOTS city` support to make it compatible with `Road Constructor v1.4.2` or wait for `Road Constructor v1.5.0` which will be compatible out of the box.
 #. Open `RoadConstructorDemoPlayer` scene.
 #. Create a new gameobject & add `RuntimeRoadManagerCustom` & `RC_RuntimeSceneGenerator` components.
 

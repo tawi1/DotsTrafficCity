@@ -14,7 +14,7 @@ How To Use
 
 	.. image:: /images/integration/rukhanka0.png	
 	
-#. Unpack rukhanka sample:
+#. Unpack `RukhankaSample` prefabs:
 
 	.. image:: /images/integration/rukhanka1.png	
 

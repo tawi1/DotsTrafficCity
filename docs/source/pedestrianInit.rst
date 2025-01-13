@@ -311,6 +311,10 @@ Pure entities animated with `Rukhanka Animation System <https://assetstore.unity
 How To Create
 """"""""""""""
 
+* Import `Rukhanka` samples.
+
+	.. image:: /images/integration/rukhanka0.png	
+	
 * Unpack rukhanka sample:
 
 	.. image:: /images/integration/rukhanka1.png	
@@ -333,6 +337,10 @@ Hybrid entities animated with `Rukhanka Animation System <https://assetstore.uni
 How To Create
 """"""""""""""
 
+* Import `Rukhanka` samples.
+
+	.. image:: /images/integration/rukhanka0.png	
+	
 * Unpack rukhanka sample:
 
 	.. image:: /images/integration/rukhanka1.png	

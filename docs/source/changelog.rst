@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.3.0] - 13-01-2025
+[1.3.0] - 15-01-2025
 ------------
 
 Added
@@ -26,6 +26,7 @@ Added
 Fixed
 ~~~~~~~~~~~~
 
+* Fixed potential crash on some devices.
 * Fixed bounds calculation in some cases that could cause incorrect avoidance or obstacle detection.
 * Fixed Traffic Change Lane Config enable option not enabled in some cases.
 * Fixed incorrect removal index for connected paths for runtime roads.

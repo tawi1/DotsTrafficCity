@@ -3,6 +3,15 @@
 Change Log
 ************
 
+[1.3.1] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added support for `Multiverse Roads`.
+* Traffic nodes can now hold different lane counts for forward and reverse lanes.
+
 [1.3.0] - 15-01-2025
 ------------
 

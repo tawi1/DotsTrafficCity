@@ -11,6 +11,7 @@ Added
 
 * Added support for `Multiverse Roads`.
 * Added `Roundabout` template for `Road Segment Creator`.
+* Added compatibility to auto-generate intersections between selected straight roads.
 * Traffic nodes can now hold different lane counts for forward and backward lanes.
 
 [1.3.0] - 15-01-2025

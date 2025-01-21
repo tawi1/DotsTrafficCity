@@ -10,7 +10,8 @@ Added
 ~~~~~~~~~~~~
 
 * Added support for `Multiverse Roads`.
-* Traffic nodes can now hold different lane counts for forward and reverse lanes.
+* Added `Roundabout` template for `Road Segment Creator`.
+* Traffic nodes can now hold different lane counts for forward and backward lanes.
 
 [1.3.0] - 15-01-2025
 ------------

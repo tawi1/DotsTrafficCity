@@ -10,9 +10,16 @@ Added
 ~~~~~~~~~~~~
 
 * Added support for `Multiverse Roads`.
+* Added support for `CityGen3D`. [In progress]
 * Added `Roundabout` template for `Road Segment Creator`.
+* Added new trigger node type for traffic and pedestrian nodes to invoke callback when entity reaches the node. [In progress]
 * Added compatibility to auto-generate intersections between selected straight roads.
 * Traffic nodes can now hold different lane counts for forward and backward lanes.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed input steering when fps dropped below 30 in the `Editor`. [In progress]
 
 [1.3.0] - 15-01-2025
 ------------

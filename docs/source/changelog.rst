@@ -10,6 +10,11 @@ Change Log
 * Added support for `CityGen3D`. [In progress]
 * Added `Roundabout` template for `Road Segment Creator`.
 
+Changed
+~~~~~~~~~~~~
+
+* * All presets & prefabs packed in separate packages so project can be updated seamlessly & without overwriting editing presets. [In progress]
+
 [1.3.1] - 31-01-2025
 ------------
 

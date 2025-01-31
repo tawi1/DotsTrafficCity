@@ -17,6 +17,7 @@ Added
 * `TrafficIdleStateDebugger` for a handy display of all the reasons why the car is idling.
 * `Traffic Object Finder` & `Path Data Viewer` can be used in `Prefab Stage`.
 * Added hotkeys for `Path Creator`.
+* Added `UGizmos` plugin to improve the performance of gizmos.
 
 Fixed
 ~~~~~~~~~~~~
@@ -31,6 +32,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Improved editor performance of gizmos.
+* Now the project can be used completely without the old input system.
 
 [1.3.0] - 15-01-2025
 ------------

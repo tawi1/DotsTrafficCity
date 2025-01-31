@@ -3,6 +3,13 @@
 Change Log
 ************
 
+[1.4.0] - In progress
+------------
+
+* Added support for `Microverse Roads`.
+* Added support for `CityGen3D`. [In progress]
+* Added `Roundabout` template for `Road Segment Creator`.
+
 [1.3.1] - 31-01-2025
 ------------
 

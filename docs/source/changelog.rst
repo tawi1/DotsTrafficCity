@@ -3,23 +3,34 @@
 Change Log
 ************
 
-[1.3.1] - In progress
+[1.3.1] - 31-01-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
-* Added support for `Multiverse Roads`.
-* Added support for `CityGen3D`. [In progress]
-* Added `Roundabout` template for `Road Segment Creator`.
 * Added new trigger node type for traffic and pedestrian nodes to invoke callback when entity reaches the node.
 * Added compatibility to auto-generate intersections between selected straight roads.
 * Traffic nodes can now hold different lane counts for forward and backward lanes.
+* Added input limit steering based on vehicle speed to stabilise when fps drops below 30 in `Editor` or at high speeds.
+* Added pre-built template roads for `Fantastic City Generator`.
+* `TrafficIdleStateDebugger` for a handy display of all the reasons why the car is idling.
+* `Traffic Object Finder` & `Path Data Viewer` can be used in `Prefab Stage`.
+* Added hotkeys for `Path Creator`.
 
 Fixed
 ~~~~~~~~~~~~
 
-* Fixed input steering when fps dropped below 30 in the `Editor`. [In progress]
+* Fixed potential exceptions in `Runtime Tile Road Demo`.
+* Fixed auto-crossroad generation can cause incorrect connection paths.
+* Fixed `ID` not being generated for `TrafficLightCrossroad`.
+* Fixed editor performance leak caused by frequent loading of editor settings.
+* Fixed recalculation of connected path for custom straight one-way roads in the `Prefab Stage`.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved editor performance of gizmos.
 
 [1.3.0] - 15-01-2025
 ------------

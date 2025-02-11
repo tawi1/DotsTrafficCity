@@ -6,14 +6,24 @@ Change Log
 [1.4.0] - In progress
 ------------
 
+Added
+~~~~~~~~~~~~
+
 * Added support for `Microverse Roads`.
 * Added support for `CityGen3D`. [In progress]
+* Added support for Aaron's A* pathfinding project. [In progress]
 * Added `Roundabout` template for `Road Segment Creator`.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed `Pedestrian node creator` attachment to surface when attach to mesh is selected.
 
 Changed
 ~~~~~~~~~~~~
 
 * * All presets & prefabs packed in separate packages so project can be updated seamlessly & without overwriting editing presets. [In progress]
+* Significantly improved performance of built-in A* pathing for large numbers of entities searching the path simultaneously.
 
 [1.3.1] - 31-01-2025
 ------------

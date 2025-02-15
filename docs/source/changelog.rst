@@ -15,6 +15,8 @@ Added
 * Added gearbox for Arcade & DOTS car controllers. [In progress]
 * Added jobified version of the `Arcade Car Controller`. [In progress]
 * Added `Roundabout` template for `Road Segment Creator`.
+* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
+* Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 
 Fixed
 ~~~~~~~~~~~~

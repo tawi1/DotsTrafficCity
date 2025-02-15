@@ -11,7 +11,7 @@ Added
 
 * Added support for `Microverse Roads`.
 * Added support for `CityGen3D`. [In progress]
-* Added support for Aaron's A* pathfinding project.
+* Added support for Aron's A* pathfinding project.
 * Added gears for Arcade & DOTS car controllers. [In progress]
 * Added jobified version of the `Arcade Car Controller`. [In progress]
 * Added `Roundabout` template for `Road Segment Creator`.

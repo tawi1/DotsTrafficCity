@@ -18,16 +18,22 @@ Added
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 * Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 
-Fixed
-~~~~~~~~~~~~
-
-* Fixed `Pedestrian node creator` attachment to surface when attach to mesh is selected.
-
 Changed
 ~~~~~~~~~~~~
 
 * All presets & prefabs packed in separate packages so project can be updated seamlessly & without overwriting editing presets.
 * Significantly improved performance of built-in A* pathing for large numbers of entities searching the path simultaneously.
+
+[1.3.2] - 21-02-2025
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed `Pedestrian node creator` attachment to surface when attach to mesh is selected.
+* Fixed road segment creator drag position handle for new gizmos system.
+* Fixed inspector for traffic light converter for `Road Constructor` if custom inspector is used.
+* Fixed `Path data viewer` for new gizmos system.
 
 [1.3.1] - 31-01-2025
 ------------

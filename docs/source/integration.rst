@@ -11,5 +11,6 @@
    rukhanka.rst
    agentsNavigation.rst
    microverseRoads.rst
+   astar.rst
    fcg.rst
    assetPacks.rst

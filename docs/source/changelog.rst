@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.4.0] - 04-03-2025
+[1.4.0] - 05-03-2025
 ------------
 
 Added
@@ -11,7 +11,7 @@ Added
 
 * Added support for `Microverse Roads`.
 * Added support for `CityGen3D`. 
-* Added support for Aron's A* pathfinding project (point graph).
+* Added support for Aron's A* pathfinding project (point graph for traffic & pedestrian).
 * Added multithreaded raycasting for `Arcade Car Controller` to improve overall performance.
 * Added `Roundabout` template for `Road Segment Creator`.
 * Added new external runtime connection for runtime segments for custom solutions.

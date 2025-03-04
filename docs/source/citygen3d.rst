@@ -56,7 +56,7 @@ Getting Started
 	.. image:: /images/integration/citygen6.png	
 	`Result`
 		
-#. In the CityGen3D_RoadGenerator`, press `Generate` button.	
+#. In the `CityGen3D_RoadGenerator`, press `Generate` button.	
 	
 	.. image:: /images/integration/citygen7.png	
 	
@@ -66,3 +66,4 @@ Getting Started
 	.. image:: /images/integration/citygen8.png	
 	
 #. Generate a :ref:`subscene <subscene>` when all steps are done.
+#. If you want to regenerate roads, press `Move back` button in the :ref:`Hub <hub>` & regenerate roads in `CityGen3D_RoadGenerator` & generate subscene in the :ref:`Hub <hub>` again.

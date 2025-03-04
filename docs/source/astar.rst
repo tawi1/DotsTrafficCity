@@ -24,7 +24,7 @@ Getting Started
 
 	.. image:: /images/integration/astar1.png
 	
-#. The next step is to create a graph for runtime or editor mode.
+#. The next step is to create a graph for runtime or static scene.
 #. To retrieve traffic or pedestrians, read the :ref:`traffic entity selection <trafficEntitySelection>` or :ref:`pedestrian entity selection <pedestrianEntitySelection>`
 #. To get entity nodes on the scenes, read `TrafficNodeSelector` & `PedestrianNodeSelector` examples.
 #. After you have added service & graph, use this code:
@@ -42,13 +42,17 @@ Getting Started
 		}
 		}
 
-Editor Graph
+Static Graph
 ------------
+
+Used for static scenes created in the `Editor`.
 
 #. Add components `AstarPedestrianStaticGraph` & `AstarTrafficStaticGraph` & assign these references to corresponding services, making sure local graph indexes are different for both graphs & matched with `AstarPath` (e.g. 0 index for pedestrian & 1 index for traffic).
 
 Runtime Graph
 ------------
+
+Used for run-time generated scenes.
 
 #. Create a new gameobject & add a `RuntimeRoadManager` component & you can use :ref:`Runtime Road <runtimeRoad>` for demo.
 #. Add components `AstarPedestrianRuntimeGraphModifier` & `AstarTrafficRuntimeGraphModifier` & assign these references to corresponding services, making sure local graph indexes are different for both graphs & matched with `AstarPath` (e.g. 0 index for pedestrian & 1 index for traffic).

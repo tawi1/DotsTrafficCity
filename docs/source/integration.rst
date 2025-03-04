@@ -10,5 +10,6 @@
    roadConstructor.rst
    rukhanka.rst
    agentsNavigation.rst
+   microverseRoads.rst
    fcg.rst
    assetPacks.rst

@@ -3,20 +3,18 @@
 Change Log
 ************
 
-[1.4.0] - In progress
+[1.4.0] - 04-03-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
 * Added support for `Microverse Roads`.
-* Added support for `CityGen3D`. [In progress]
-* Added support for Aron's A* pathfinding project.
-* Added gearbox for Arcade & DOTS car controllers. [In progress]
-* Added jobified version of the `Arcade Car Controller`. [In progress]
+* Added support for `CityGen3D`. 
+* Added support for Aron's A* pathfinding project (point graph).
+* Added multithreaded raycasting for `Arcade Car Controller` to improve overall performance.
 * Added `Roundabout` template for `Road Segment Creator`.
-* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
-* Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
+* Added new external runtime connection for runtime segments for custom solutions.
 
 Changed
 ~~~~~~~~~~~~

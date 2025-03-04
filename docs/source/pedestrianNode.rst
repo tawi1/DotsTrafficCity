@@ -146,6 +146,57 @@ Node for entering :ref:`public transport <trafficPublic>`.
 	
 	.. warning:: Entry node should be any `GameObject` with the component :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` which adds a node with `Traffic public entry` type.
 	
+	
+Trigger
+""""""""""""""
+
+Node to notify the user that the entity has reached the node.
+
+**How to use:**
+
+	* Activate `TriggerNodeConfig` & sync with the subscene.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger1.png
+
+			
+	* If you need to subscribe to this reach event, use `Traffic Node Service`.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger2.png
+				
+If you need to associate a scene object with the trigger event, follow these steps:
+
+	* Activate `EntityBindingConfig` & sync with the subscene.
+	
+		.. image:: /images/core/entityBindingConfig.png
+	
+	* Create a new game object in the scene where the trigger is expected (e.g. cube).
+	
+		.. image:: /images/road/pedestrianNode/PedestrianNodeTrigger1.png
+			
+	* Add `TriggerNodeHybridListener component`.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger4.png
+		
+	* Press `+` button & set `Binding type` to `Pedestrian node` in the inspector.
+			
+		.. image:: /images/road/pedestrianNode/PedestrianNodeTrigger2.png
+				
+	* Press `+` on the scene node to which you want to associate the current scene object with the entity.
+	
+		.. image:: /images/road/pedestrianNode/PedestrianNodeTrigger3.png
+		`Source scene example.`
+				
+		.. image:: /images/road/pedestrianNode/PedestrianNodeTrigger4.png
+		`Selected node example.`
+		
+	* Now you can listen to entities arriving on this node by subscribing to ``TriggerNodeHybridListener.OnTriggerEnter`` with code in the `TriggerNodeHybridListener` component or by using `UnityEvent` in the inspector of this component.
+			
+
+Trigger And Destroy
+^^^^^^^^^^^^^^^^^^^^^^
+
+Node to notify the user that the entity has reached the node & then destroy the entity. Use case is the same as the `Trigger type`.
+
 .. _pedestrianNodeSettings:
 
 Common Settings

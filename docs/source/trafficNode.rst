@@ -44,20 +44,92 @@ Settings
 	* **Left** : left-hand lanes have traffic lights.
 	* **Right and left** : right and left lanes have traffic lights.
 	
-**Traffic node type:** 
-	* **Default**
-	* **Parking** : node where cars are :ref:`parked <trafficArea>` (read more :ref:`parking states <trafficParking>`).
-	* **Traffic public stop** : node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
-	* **Destroy vehicle** : node where the vehicle entity is destroyed (useful for nodes outside the map).
-	* **Traffic area** : :ref:`TrafficArea node <trafficArea>`.
-	* **Idle** : node where the vehicle is idling.
-	
 | **Has crollwalk** : quick on/off crosswalk option for pedestrians.
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
 | **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegment <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
 | **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <autoPathConnection>`).
 | **Auto path is created** : auto path is created (:ref:`more info <autoPathConnection>`).
+
+Traffic Node Type
+~~~~~~~~~~~~
+
+Default
+^^^^^^^^^^^^^^^^^^^^^^
+
+Parking
+^^^^^^^^^^^^^^^^^^^^^^
 	
+Node where cars are :ref:`parked <trafficArea>` (read more :ref:`parking states <trafficParking>`).
+	
+Traffic public stop
+^^^^^^^^^^^^^^^^^^^^^^
+
+Node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
+	
+Destroy vehicle
+^^^^^^^^^^^^^^^^^^^^^^
+
+Node where the vehicle entity is destroyed (useful for nodes outside the map).
+	
+Traffic area
+^^^^^^^^^^^^^^^^^^^^^^
+
+:ref:`TrafficArea node <trafficArea>`.
+	
+Idle
+^^^^^^^^^^^^^^^^^^^^^^
+	
+Node where the vehicle is idling.
+
+Trigger
+^^^^^^^^^^^^^^^^^^^^^^
+
+Node to notify the user that the entity has reached the node.
+
+**How to use:**
+
+	* Activate `TriggerNodeConfig` & sync with the subscene.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger1.png
+
+			
+	* If you need to subscribe to this reach event, use `Traffic Node Service`.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger2.png
+	
+If you need to associate a scene object with the trigger event, follow these steps:
+
+	* Activate `EntityBindingConfig` & sync with the subscene.
+	
+		.. image:: /images/core/entityBindingConfig.png
+	
+	* Create a new game object in the scene where the trigger is expected (e.g. cube).
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger3.png
+			
+	* Add `TriggerNodeHybridListener component`.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger4.png
+		
+	* Press `+` button in the inspector.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger5.png
+		
+	* Press `+` on the scene node to which you want to associate the current scene object with the entity.
+	
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger6.png
+		`Source scene example.`
+		
+		.. image:: /images/road/trafficNode/TrafficNodeTrigger7.png
+		`Selected node example.`
+		
+	* Now you can listen to entities arriving on this node by subscribing to ``TriggerNodeHybridListener.OnTriggerEnter`` with code in the `TriggerNodeHybridListener` component or by using `UnityEvent` in the inspector of this component.
+			
+Trigger And Destroy
+^^^^^^^^^^^^^^^^^^^^^^
+
+Node to notify the user that the entity has reached the node & then destroy the entity. Use case is the same as the `Trigger type`.
+	 
 Buttons
 ~~~~~~~~~~~~
 
@@ -73,6 +145,7 @@ OneWay Node Info
 Oneway node description example:
 
 	.. image:: /images/road/trafficNode/OnewayExample.png
+
 	
 Node example key features:
 	* **Node 1:**

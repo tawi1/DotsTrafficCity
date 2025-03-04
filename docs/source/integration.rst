@@ -10,6 +10,7 @@
    roadConstructor.rst
    rukhanka.rst
    agentsNavigation.rst
+   citygen3d.rst
    microverseRoads.rst
    astar.rst
    fcg.rst

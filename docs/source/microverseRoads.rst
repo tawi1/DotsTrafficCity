@@ -8,8 +8,8 @@ How To Use
 
 #. Buy & download, import the following asset plugins:
 
-	`MicroVerse - Core Collection <https://assetstore.unity.com/packages/tools/terrain/microverse-core-collection-232976>`_ or (`MicroVerse <https://assetstore.unity.com/packages/tools/terrain/microverse-232972>`_ & `MicroVerse - Splines <https://assetstore.unity.com/packages/tools/terrain/microverse-splines-232974>`_)
-	`MicroVerse - Roads <https://assetstore.unity.com/packages/tools/terrain/microverse-roads-208590>`_
+	* `MicroVerse - Core Collection <https://assetstore.unity.com/packages/tools/terrain/microverse-core-collection-232976>`_ or (`MicroVerse <https://assetstore.unity.com/packages/tools/terrain/microverse-232972>`_ & `MicroVerse - Splines <https://assetstore.unity.com/packages/tools/terrain/microverse-splines-232974>`_)
+	* `MicroVerse - Roads <https://assetstore.unity.com/packages/tools/terrain/microverse-roads-208590>`_
 
 Getting Started
 ------------

@@ -14,6 +14,7 @@ Added
 * Added support for Aron's A* pathfinding project (point graph for traffic & pedestrian).
 * Added multithreaded raycasting for `Arcade Car Controller` to improve overall performance.
 * Added `Roundabout` template for `Road Segment Creator`.
+* Added a new option for a non-physical pedestrian to precisely follow tilted surfaces.
 * Added new external runtime connection for runtime segments for custom solutions.
 
 Changed

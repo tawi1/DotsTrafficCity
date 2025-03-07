@@ -3,6 +3,17 @@
 Change Log
 ************
 
+[1.4.1] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added gearbox for Arcade & DOTS car controllers. [In progress]
+* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
+* Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
+* State machine for entering parking car slot. [Under consideration]
+
 [1.4.0] - 05-03-2025
 ------------
 

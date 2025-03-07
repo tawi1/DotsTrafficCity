@@ -25,7 +25,7 @@ Getting Started
 	.. image:: /images/integration/astar1.png
 	
 #. The next step is to create a graph for runtime or static scene.
-#. To retrieve traffic or pedestrians, read the :ref:`traffic entity selection <trafficEntitySelection>` or :ref:`pedestrian entity selection <pedestrianEntitySelection>`
+#. To retrieve traffic or pedestrians, read the :ref:`traffic entity selection <TrafficEntitySelection>` or :ref:`Pedestrian entity selection <pedestrianEntitySelection>`
 #. To get entity nodes on the scenes, read `TrafficNodeSelector` & `PedestrianNodeSelector` examples.
 #. After you have added service & graph, use this code:
 

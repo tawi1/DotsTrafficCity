@@ -474,7 +474,7 @@ Currently enabled in the following situations:
 	
 	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.
 
-.. _trafficEntitySelection
+.. _trafficEntitySelection:
 		
 Entity Selection
 ----------------

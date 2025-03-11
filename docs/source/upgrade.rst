@@ -3,6 +3,14 @@
 Upgrade Guide
 =====
 
+v1.1.x & 1.2.x to v1.4.x
+-------------------
+
+#. Make backup before importing the package.
+#. Import following file:
+
+	.. image:: /images/faq/upgrade_v1.4.0.png
+
 v1.0.x to v1.1.0
 -------------------
 

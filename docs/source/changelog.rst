@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.4.1] - In progress
+[1.4.2] - In progress
 ------------
 
 Added
@@ -13,6 +13,33 @@ Added
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 * Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
+
+[1.4.1] - 17-03-2025
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added new `Runtime CustomRoad Demo` scene to demonstrate the use of the `API` to generate run-time roads from `Unity` spline roads or from custom data.
+* Added support for priority intersections without traffic lights for custom run-time roads.
+* Added gizmos for RuntimeRoadManagerCustom for nodes.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed drawing of road segment paths after segment rotation.
+* Fixed position handle when moving multiple road segments at the same time.
+* Fixed root detection when different projects have different path roots.
+* Fixed external connection path if source lane index is different from connected lane index.
+
+[1.4.0b] - 07-03-2025
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed initial installation for Unity 2022.3.
+* Fixed wrong skin index selection for Hybrid Shape GPU.
 
 [1.4.0] - 05-03-2025
 ------------

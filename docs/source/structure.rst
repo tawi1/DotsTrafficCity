@@ -14,6 +14,7 @@ Project Scenes
 #. **RuntimeTile Road Demo** : sample scene showing how to create a city builder based on tiles (runtime spline can be used with `Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_ plugin). **(new)**
 #. **RuntimeTile Road Mobile Demo** : sample scene showing how to create a city builder based on tiles *[mobile version]*. **(new)**
 #. **Runtime ChunkRoad Demo** : sample scene demonstrating the road chunks added at runtime. **(new)**
+#. **Runtime CustomRoad Demo** : sample scene to demonstrate the use of the `API` to generate run-time roads from `Unity` spline roads or from custom data. **(new)**
 #. **Custom Train Demo** : an example of how a 3rd party train solution can be integrated. **(new)**
 #. **Traffic test scene** : :ref:`traffic test scene <trafficTestScene>` where all parameters can be tested with a set of most :ref:`traffic <trafficCar>` situations.
 #. **Pedestrian test scene** : :ref:`pedestrian test scene <pedestrianTestScene>` where the workability of entities can be tested.

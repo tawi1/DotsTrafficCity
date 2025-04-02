@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.4.2] - In progress
+[1.4.3] - In progress
 ------------
 
 Added
@@ -13,6 +13,29 @@ Added
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 * Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
+
+[1.4.2] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added new player-interactive car system for mono players.
+* Added ability to callback user spawned entities.
+* Added ability to merge `Traffic nodes` with `Road parent`.
+* Added support for manual user connection merged nodes in `Path creator` & `Pedestrian node` connection.
+* Added ability to use `Mesh Collider` in `Car Prefab Creator` for mono cars.
+
+Fixed 
+~~~~~~~~~~~~ 
+
+* Fixed speed limit set for custom straight roads.
+* Fixed rare wrong obstacle calculation on intersecting roads.
+* Fixed car system order for DOTS cars which could cause initial jump for car.
+* Fixed traffic path service registration when not all sample services are in the scene.
+* Fixed rail movement for DOTS cars.
+* Fixed player interaction with car when car ignition option is disabled.
+* Fixed start shooting until realod finished for built-in controller in sample scene.
 
 [1.4.1] - 17-03-2025
 ------------

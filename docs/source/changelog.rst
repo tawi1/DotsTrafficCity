@@ -20,10 +20,13 @@ Added
 Added
 ~~~~~~~~~~~~
 
-* Added new player-interactive car system for mono players.
+* Added support for parking & oneway roads for runtime tile sample.
+* Added support for custom pedestrian node types for runtime tile sample.
+* Added new player-interactive car system for mono players. [in progress]
 * Added ability to callback user spawned entities.
 * Added ability to merge `Traffic nodes` with `Road parent`.
 * Added support for manual user connection merged nodes in `Path creator` & `Pedestrian node` connection.
+* Added ragdoll syncing with GPU animations.
 * Added ability to use `Mesh Collider` in `Car Prefab Creator` for mono cars.
 
 Fixed 
@@ -33,6 +36,7 @@ Fixed
 * Fixed rare wrong obstacle calculation on intersecting roads.
 * Fixed car system order for DOTS cars which could cause initial jump for car.
 * Fixed traffic path service registration when not all sample services are in the scene.
+* Fixed parking for Toon City template. [in progress]
 * Fixed rail movement for DOTS cars.
 * Fixed player interaction with car when car ignition option is disabled.
 * Fixed start shooting until realod finished for built-in controller in sample scene.

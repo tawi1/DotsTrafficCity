@@ -26,6 +26,7 @@ Added
 * Added ability to callback user spawned entities.
 * Added ability to merge `Traffic nodes` with `Road parent`.
 * Added support for manual user connection merged nodes in `Path creator` & `Pedestrian node` connection.
+* Added talk animation config.
 * Added ragdoll syncing with GPU animations.
 * Added ability to use `Mesh Collider` in `Car Prefab Creator` for mono cars.
 
@@ -36,6 +37,7 @@ Fixed
 * Fixed rare wrong obstacle calculation on intersecting roads.
 * Fixed car system order for DOTS cars which could cause initial jump for car.
 * Fixed traffic path service registration when not all sample services are in the scene.
+* Fixed talk area NPC randomization.
 * Fixed parking for Toon City template.
 * Fixed rail movement for DOTS cars.
 * Fixed player interaction with car when car ignition option is disabled.

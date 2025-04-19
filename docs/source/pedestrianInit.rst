@@ -327,7 +327,7 @@ How To Create
 	.. image:: /images/integration/rukhanka3.png	
 	
 * Animation taken from :ref:`Animation state authoring <legacyAnimatorExample>` as for :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrian.
-* If you get a ``Unity.Entities.Hash128 is corrupted`` error, try closing the subscene (uncheck the box next to `EntitySubscene`) & start the scene again.
+* If you get a ``Blob asset System.String System.Type::get_FullName() with hash 'Unity.Entities.Hash128' is corrupted.`` error, try closing the subscene (uncheck the box next to `EntitySubscene`) & start the scene again.
 
 .. _rukhankaHybridSkin:
 
@@ -359,7 +359,7 @@ How To Create
 	.. image:: /images/pedestrian/HybridShapeFactory.png	
 	
 * Animation taken from :ref:`Animation state authoring <legacyAnimatorExample>` as for :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrian.
-* If you get a ``Unity.Entities.Hash128 is corrupted`` error, try closing the subscene (uncheck the box next to `EntitySubscene`) & start the scene again.
+* If you get a ``Blob asset System.String System.Type::get_FullName() with hash 'Unity.Entities.Hash128' is corrupted.`` error, try closing the subscene (uncheck the box next to `EntitySubscene`) & start the scene again.
 	
 How To Control
 """"""""""""""

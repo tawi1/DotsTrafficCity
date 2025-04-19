@@ -311,7 +311,7 @@ Pure entities animated with `Rukhanka Animation System <https://assetstore.unity
 How To Create
 """"""""""""""
 
-* Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader).
+* Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader from the sample).
 
 	.. image:: /images/integration/rukhanka0.png	
 	
@@ -339,7 +339,7 @@ Hybrid entities animated with `Rukhanka Animation System <https://assetstore.uni
 How To Create
 """"""""""""""
 
-* Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader).
+* Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader from the sample).
 
 	.. image:: /images/integration/rukhanka0.png	
 	

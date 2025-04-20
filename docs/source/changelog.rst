@@ -22,6 +22,7 @@ Added
 
 * Added support for parking & oneway roads for runtime tile sample.
 * Added support for custom pedestrian node types for runtime tile sample.
+* Added support for `Rukhanka Animation System` ragdoll.
 * Added new player-interactive car system for mono players.
 * Added ability to callback user spawned entities.
 * Added ability to merge `Traffic nodes` with `Road parent`.

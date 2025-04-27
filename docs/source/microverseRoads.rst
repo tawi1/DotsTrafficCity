@@ -39,7 +39,7 @@ Getting Started
 MVR UserPrefab
 ------------
 
-This component helps users conveniently add prefabs to the MVR config.
+This component helps users conveniently add prefabs to the `MVR config`.
 
 How To Use
 ~~~~~~~~~~~~

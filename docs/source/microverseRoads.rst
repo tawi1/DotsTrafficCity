@@ -32,7 +32,7 @@ Getting Started
 	.. image:: /images/integration/mvr3.png
 	`Result example.`
 		
-#. If you have `Not found` road objects in the `Inspector` and are using your own microverse roads, use ``MVR UserPrefab`` to add the prefabs in ``MVR Config`` or ``MVR UserSceneSegment``, depending on your needs. After adding these components, regenerate the scene.
+#. If you have `Not found` road objects in the `Inspector` and are using your own microverse road objects, use ``MVR UserPrefab`` to add the prefabs in ``MVR Config`` if your prefab is repeatable and not unique or use ``MVR UserSceneSegment`` if you have a unique road segment for a road object. After adding these components, regenerate the scene.
 #. Generate a :ref:`subscene <subscene>`.
 #. If you want to regenerate roads, press `Move back` button in the :ref:`Hub <hub>` & regenerate roads in `MVR_Generator` & generate subscene in the :ref:`Hub <hub>` again.
 
@@ -49,12 +49,12 @@ How To Use
 * Add ``MVR_UserPrefab`` component.
 * Select the `Intersection` in the scene by pressing the `Select` button.
 * Press `Add Prefab` button in the inspector.
-* Now, your prefab addded to MVR config & you can regenerate the 
+* Now, your prefab addded to MVR config & you can regenerate the scene.
 
 MVR UserSceneSegment
 ------------
 
-This component prevents the road segment from being cleaned up during regeneration.
+This component prevents the road segment from being cleaned up during regeneration, useful for unique road objects.
 
 How To Use
 ~~~~~~~~~~~~

@@ -32,6 +32,33 @@ Getting Started
 	.. image:: /images/integration/mvr3.png
 	`Result example.`
 		
+#. If you have `Not found` road objects in the `Inspector` and are using your own microverse roads, use ``MVR UserPrefab`` to add the prefabs in ``MVR Config`` or ``MVR UserSceneSegment``, depending on your needs. After adding these components, regenerate the scene.
 #. Generate a :ref:`subscene <subscene>`.
 #. If you want to regenerate roads, press `Move back` button in the :ref:`Hub <hub>` & regenerate roads in `MVR_Generator` & generate subscene in the :ref:`Hub <hub>` again.
 
+MVR UserPrefab
+------------
+
+This component helps users conveniently add prefabs to the MVR config.
+
+How To Use
+~~~~~~~~~~~~
+
+* Create a road segment in the scene where you want your custom intersection.
+* Add your segment to prefabs.
+* Add ``MVR_UserPrefab`` component.
+* Select the `Intersection` in the scene by pressing the `Select` button.
+* Press `Add Prefab` button in the inspector.
+* Now, your prefab addded to MVR config & you can regenerate the 
+
+MVR UserSceneSegment
+------------
+
+This component prevents the road segment from being cleaned up during regeneration.
+
+How To Use
+~~~~~~~~~~~~
+
+* Create a road segment in the scene where you want your custom intersection.
+* Add ``MVR_UserSceneSegment`` component.
+* In the inspector, press `Sync Position` to synchronize the intersection and segment positions.

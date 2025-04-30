@@ -32,7 +32,7 @@ Player Car
 If you want your own script to spawn player car, follow these steps:
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
-#. Set the `Player controller type` to `Custom` in the :ref:`General settings <generalSettingsConfig>` config.
+#. Set the `Player controller type` to `Custom` in the :ref:`General settings <generalSettingsConfig>` config (this step is irrelevant if you are using the `Hub Base` instead of the `Hub`).
 #. Disable built-in camera on the scene (this step is irrelevant if you are using the `Hub Base` instead of the `Hub`).
 
 	.. image:: /images/gettingstarted/CityCreation4.png

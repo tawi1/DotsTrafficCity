@@ -21,7 +21,7 @@ How To Use
 #. Select the :ref:`Road segment type <roadSegmentCreatorGeneralSettings>` depending on the :ref:`shape <roadSegmentCreatorCustomSettings>` of your intersection.
 	* :ref:`Standard shape <roadSegmentCreatorCustomSettings>` used for the most common shapes (T-cross, X-cross & etc).
 	* :ref:`Custom segment <roadSegmentCreatorCustomSegment>` used for intersection with custom shape.
-	* :ref:`Custom straight road segment <roadSegmentCreatorCustomStraight>` used on straight roads with curves or long straight roads.
+	* :ref:`Custom straight <roadSegmentCreatorCustomStraight>` used on straight roads with curves or long straight roads.
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 

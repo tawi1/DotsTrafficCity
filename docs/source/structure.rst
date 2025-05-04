@@ -47,7 +47,7 @@ Scene Hierarchy
 #. **City Settings Initializer** : contains the :ref:`General Settings <generalSettingsConfig>` of the `DOTS` city [moved to the `Config` tab].
 #. **Main scene configs** (read more about the :ref:`config editing <configEdit>` workflow).
 #. **Pools** : contains all the entity presets.
-#. **Spawnpoint** : spawnpoint of the player (assigned in the `PlayerSpawner`).
+#. **Spawnpoint** : spawnpoint of the player (assigned in the `PlayerSpawner` if built-in solution in use).
 
 	.. _subscene:
 

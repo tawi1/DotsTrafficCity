@@ -1,6 +1,6 @@
 .. _cityCreation:
 
-City Creation
+Quick Start
 ============
 
 Initial Components
@@ -21,7 +21,7 @@ Initial Components
 
 #. Description:
 	* **Hub** : root prefab used in `Demo` & `Demo Mono` scenes & contains demo sample dependencies.
-	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff.
+	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff (player should be spawned with your own script or simply drag & drop into the scene).
 
 #. Press `Create` button.
 #. Continue with the `Hub Base`_ or `Hub`_ article, depending on your choice.
@@ -121,8 +121,8 @@ Scene
 	
 		.. image:: /images/gettingstarted/Tutorial5.gif
 				
-#. Create :ref:`traffic vehicles <trafficCar>`.
-#. Create :ref:`pedestrians <pedestrian>`.
+#. Create your own :ref:`traffic vehicles <trafficCar>` or temporarily use the built-in traffic already added.
+#. Create your own :ref:`pedestrians <pedestrian>` or temporarily use the built-in pedestrians already added.
 #. Add & customize :ref:`game sounds <sound>` **[optional step]**.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:

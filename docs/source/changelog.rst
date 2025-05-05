@@ -14,7 +14,7 @@ Added
 * Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
 
-[1.4.2] - 04-05-2025
+[1.4.2] - 05-05-2025
 ------------
 
 Added

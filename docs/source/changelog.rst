@@ -40,6 +40,7 @@ Fixed
 * Fixed traffic path service registration when not all sample services are in the scene.
 * Fixed talk area NPC randomization.
 * Fixed parking for Toon City template.
+* Fixed sound tracking for built-in sound engine for DOTS cars.
 * Fixed rail movement for DOTS cars.
 * Fixed player interaction with car when car ignition option is disabled.
 * Fixed start shooting until realod finished for built-in controller in sample scene.

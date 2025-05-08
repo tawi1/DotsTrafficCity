@@ -14,6 +14,15 @@ Added
 * Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
 
+[1.4.2b] - 08-05-2025
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed ragdoll system exception for Hybrid pedestrian.
+* Fixed sound looping for custom user sound.
+
 [1.4.2] - 05-05-2025
 ------------
 

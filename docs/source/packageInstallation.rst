@@ -57,7 +57,7 @@ Steps
 			* **DOTS_CITY**
 			* **UNITY_PHYSICS_CUSTOM**
 			
-#. After the packages have been downloaded & installed, if the console has :ref:`nunit.framework <nunitFix>` error, restart `Unity`.
+#. After the packages have been downloaded & installed, if the console has :ref:`nunit.framework <nunitFix>` or `Burst` compilation errors, restart `Unity`.
 			
 	.. _packageInstallationOptional:
 	

@@ -3,16 +3,25 @@
 Change Log
 ************
 
-[1.4.3] - In progress
+[1.5.1] - In progress
+------------
+
+* Added gearbox for Arcade & DOTS car controllers. [Under consideration]
+* State machine for entering parking car slot. [Under consideration]
+* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
+
+[1.5.0] - In progress
 ------------
 
 Added
 ~~~~~~~~~~~~
 
-* Added gearbox for Arcade & DOTS car controllers. [In progress]
-* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
-* Added `GPU` bone method animation to reduce texture memory usage. [Under consideration]
-* State machine for entering parking car slot. [Under consideration]
+* Added new option to enable different driving styles for traffic. [In progress]
+* Added ability for traffic to avoid stucked traffic cars. [In progress]
+* Added ability for traffic to avoid player vehicle. [In progress]
+* Added `GPU` bone method animation to reduce texture memory usage. [In progress]
+* Added new lightweight vehicle controller for mono cars. [In progress]
+* Added weight spawns for pedestrian NPCs.
 
 [1.4.2b] - 08-05-2025
 ------------

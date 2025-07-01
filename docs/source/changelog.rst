@@ -20,8 +20,30 @@ Added
 * Added ability for traffic to avoid stucked traffic cars. [In progress]
 * Added ability for traffic to avoid player vehicle. [In progress]
 * Added `GPU` bone method animation to reduce texture memory usage. [In progress]
-* Added new lightweight vehicle controller for mono cars. [In progress]
+* Added new lightweight simple vehicle controller for mono cars. [In progress]
+* Demo project importing according to player choise at start. [In progress]
 * Added weight spawns for pedestrian NPCs.
+
+[1.4.3] - 01-07-2025
+------------
+
+Added
+~~~~~~~~~~~~
+
+* A crosswalk node type has been added for crosswalks without traffic nodes.
+* Added crosswalk system for pedestrian passing the road in the crosswalk node type.
+* Added npc obstacle with flexible detection area based on its speed.
+* NPC obstacle offset authoring has been added for certain vehicles that require a custom offset for NPC obstacle detection.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed Road Constructor compatibility.
+* Fixed A* compatibility.
+* Fixed rotation of attachment for Rukhanka hybrid pedestrian.
+* Fixed Rukhanka hybrid animation event registration.
+* Fixed chaser controller spawn.
+* Fixed Car prefab creator for some corner cases.
 
 [1.4.2b] - 08-05-2025
 ------------

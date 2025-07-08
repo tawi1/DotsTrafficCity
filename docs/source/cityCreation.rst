@@ -125,6 +125,8 @@ Scene
 #. Create your own :ref:`traffic vehicles <trafficCar>` or temporarily use the built-in traffic already added **[optional step]**.
 #. If you have created your own traffic, make sure the raycasting layer matches your ground collider layer (traffic prefabs can be found in `TrafficCarEntityPoolBakerRef` at the scene).
 #. Create your own :ref:`pedestrians <pedestrian>` or temporarily use the built-in pedestrians already added **[optional step]**.
+#. In the :ref:`Cull config <cullConfig>`, adjust culling distance at which road objects, traffic, pedestrians etc. will be activated & use :ref:`Cull debug <cullPointDebug>` to view culling states **[optional step]**.
+#. In the :ref:`Traffic settings <trafficCarSettings>`, disable `Cull physics` if you don't want cars to disable their physics when they're far away **[optional step]**.
 #. Add & customize :ref:`game sounds <sound>` **[optional step]**.
 #. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:

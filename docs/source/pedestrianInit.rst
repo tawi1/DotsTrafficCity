@@ -958,6 +958,7 @@ Pedestrian Spawner Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianSpawnerConfig.png
+	``Hub/Configs/PedestrianConfigs/CommonConfig``
 	
 | **Min pedestrian count** : number of pedestrians in the city.
 | **Pool size** : pool size of :ref:`HybridLegacy <pedestrianHybridLegacy>` skins.
@@ -970,6 +971,7 @@ Pedestrian Settings Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
+	``Hub/Configs/PedestrianConfigs/CommonConfig``
 
 Skin Type
 """"""""""""""""""
@@ -1044,6 +1046,7 @@ NavAgent Config
 Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
 
 	.. image:: /images/configs/pedestrian/NavAgentConfig.png
+	``Hub/Configs/PedestrianConfigs/NavAgentConfig``
 
 | **Update frequency** : how often the nav target can be updated.
 | **Max distance to target node** : distance to nav path node.
@@ -1061,6 +1064,7 @@ Obstacle Local Avoidance Config
 Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 
 	.. image:: /images/configs/pedestrian/PedestrianObstacleLocalAvoidanceSettings.png
+	``Hub/Configs/PedestrianConfigs/LocalAvoidanceConfig``
 	
 **Obstacle avoidance method:**
 	* **Simple** : is able to avoid only 1 object.
@@ -1079,6 +1083,7 @@ Antistuck Config
 Anti-stuck config for pedestrians stucked in a collision.
 
 	.. image:: /images/configs/pedestrian/PedestrianAntistuckConfig.png
+	``Hub/Configs/PedestrianConfigs/AntistuckConfig``
 	
 | **Antistuck enabled** : on/off anti-stuck feature (if disabled previous target will be selected).
 | **Target direction dot** : direction between the pedestrian's forward and the anti-stuck point.
@@ -1089,6 +1094,7 @@ Trigger Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianTriggerConfig.png
+	``Hub/Configs/PedestrianConfigs/TriggerConfigs/PedestrianCommonTriggerConfig``
 	
 | **Trigger HashMap capacity** : initial hashmap capacity  that contains data of triggers.
 | **Trigger HashMap cell size** : hashmap cell size.
@@ -1102,6 +1108,7 @@ Scary Trigger Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
+	``Hub/Configs/PedestrianConfigs/TriggerConfigs/PedestrianScaryTriggerConfigAuthoring``
 	
 Trigger settings
 """"""""""""""""""
@@ -1122,6 +1129,7 @@ Bench Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianBenchConfig.png
+	``Hub/Configs/PedestrianConfigs/BenchConfig``
 	
 | **Min/Max idle time** : min/max idle duration on the bench.
 | **Custom achieve enter point distance** : distance to achieve the entry point on the bench.
@@ -1136,6 +1144,7 @@ Common Sound Config
 Common pedestrian sound settings
 
 	.. image:: /images/configs/pedestrian/PedestrianCommonSoundConfig.png
+	``Hub/Configs/PedestrianConfigs/SoundConfig``
 	
 | **Sound death** : :ref:`sound<soundData>` when a pedestrian died.
 | **Enter tram sound** : :ref:`sound<soundData>` when entering a tram.
@@ -1151,6 +1160,7 @@ State Dictionary
 """"""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring1.png
+	``Hub/Configs/PedestrianConfigs/PedestrianStateAuthoring``
 
 | **Next states** : which :ref:`states <pedestrianActionState>` can override the current :ref:`state <pedestrianActionState>`.
 
@@ -1166,6 +1176,7 @@ Movement State Binding Dictionary
 """"""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring2.png
+	``Hub/Configs/PedestrianConfigs/PedestrianStateAuthoring``
 
 Contains data - which :ref:`Movement state <pedestrianMovementState>` is assigned after the :ref:`Action state <pedestrianActionState>` is assigned.
 	

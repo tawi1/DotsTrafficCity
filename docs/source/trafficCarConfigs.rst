@@ -7,6 +7,7 @@ Traffic Car Spawner Config
 ------------
 
 	.. image:: /images/configs/traffic/TrafficCarSpawnerConfig.png
+	``Hub/Configs/TrafficCarConfigs/CommonConfig``
 	
 | **Preferable count** : maximum number of cars in the city.
 | **HashMap capacity** : initial capacity of the hashmap that contains the data of the traffic cars.
@@ -21,6 +22,7 @@ Traffic Car Settings
 ------------
 
 	.. image:: /images/configs/traffic/TrafficCarSettingsConfig.png
+	``Hub/Configs/TrafficCarConfigs/CommonConfig``
 	
 .. _entityType:
 
@@ -105,6 +107,7 @@ Traffic Nav Config
 Config distance to target nodes and traffic light handlers.
 
 	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
+	``Hub/Configs/TrafficCarConfigs/NavConfig``
 	
 | **Min distance to target** : min distance to target :ref:`TrafficNode<trafficNode>`.
 | **Min distance to path point target** : min distance to connected :ref:`path point <pathPointConnection>`.
@@ -135,6 +138,7 @@ Traffic Obstacle Config
 Config to calculate obstacles on the path.
 
 	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
+	``Hub/Configs/TrafficCarConfigs/ObstacleConfig``
 	
 | **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`) (:ref:`test scene <trafficTestSceneObstacle>`).
 | **Min distance to start approach** : minimum distance to the last car in the current lane to start (:ref:`approaching <trafficCarApproachConfig>`) (stay at the same speed as the target car) (:ref:`example<trafficCarObstacleConfig2>`) (:ref:`test scene <trafficTestSceneObstacle>`).
@@ -224,6 +228,7 @@ Traffic Approach Config
 Config of approaching obstacles and lights (:ref:`test scene <trafficTestSceneObstacle>`).
 
 	.. image:: /images/configs/traffic/TrafficCarApproachConfig.png
+	``Hub/Configs/TrafficCarConfigs/ApproachConfig``
 	
 | **Min approach speed** : min approach speed.
 | **Min approach speed soft** : min approach speed soft at the long distance to obstacle.
@@ -250,6 +255,7 @@ Traffic Raycast Config
 Traffic raycast Config (:ref:`TrafficDetectObstacleMode<trafficDetectObstacleMode>` raycast or hybrid should be enabled) (:ref:`debug example<trafficCarRaycastDebugger>`) (:ref:`more info <trafficCarRaycastInfo>`).
 
 	.. image:: /images/configs/traffic/TrafficCarRaycastConfig.png
+	``Hub/Configs/TrafficCarConfigs/RaycastConfig``
 	
 | **Side offset** : width of raycast box.
 | **Min/Max ray length** : lenght of raycast box.
@@ -266,6 +272,7 @@ Traffic Change Lane Config
 Config for automatic calculation of lane change by traffic (works for :ref:`paths<path>` with the `Straight road` :ref:`road type<pathRoadType>` only) (:ref:`test scene <trafficTestSceneChangeLane>`).
 
 	.. image:: /images/configs/traffic/TrafficCarChangeLaneConfig.png
+	``Hub/Configs/TrafficCarConfigs/ChangeLaneConfig``
 	
 | **Can change lane** : on/off ability to change lanes.
 | **Min max change lane offset** : min/max offset in the target lane depending on the speed of the car. (:ref:`example<trafficCarChangeLaneConfig1>`)
@@ -309,6 +316,7 @@ Traffic Npc Obstacle Config
 Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`).
 
 	.. image:: /images/configs/traffic/TrafficCarNpcObstacleConfig.png
+	``Hub/Configs/TrafficCarConfigs/NpcObstacleConfig``
 	
 | **Obstacle pedestrian action state** : the car only reacts to pedestrians with the selected :ref:`Action State<pedestrianActionState>`.
 | **Check distance** : obstacle calculation length.
@@ -324,6 +332,7 @@ Traffic Parking Config
 Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
 
 	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
+	``Hub/Configs/TrafficCarConfigs/ParkingConfig``
 
 | **Precise Aligmentn At Node** : on/off precise positioning of the car's parking space.
 | **Rotation speed** : rotation speed.
@@ -342,6 +351,7 @@ Traffic Antistuck Config
 Config to culling car in case of stuckness.
 
 	.. image:: /images/configs/traffic/TrafficCarAntistuckConfig.png
+	``Hub/Configs/TrafficCarConfigs/AntistuckConfig``
 
 | **Obstacle stuck time** : duration of sighting of the obstacle after which the car will be culled.
 | **Stuck distance difference** : if the car moved more than the parameter distance the `Obstacle stuck time` is reset.
@@ -353,6 +363,7 @@ Traffic Horn Config
 Config to sound random horns when an obstacle is detected. It can be disabled (:ref:`here<soundConfig>`).
 
 	.. image:: /images/configs/traffic/TrafficCarHornConfig.png
+	``Hub/Configs/TrafficCarConfigs/HornConfig``
 
 | **Chance to start** : chance to start the horn.
 | **Idle time to start** : idle time to start the horn.
@@ -367,6 +378,7 @@ Traffic NavMesh Loader Config
 Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ for traffic. 
 
 	.. image:: /images/configs/traffic/TrafficNavMeshLoaderConfig.png
+	``Hub/Configs/TrafficCarConfigs/TrafficNavMeshLoaderConfig``
 
 | **Size offset** : size offset of loaded `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_.
 | **Load only view** : load `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ in view of camera only.
@@ -385,6 +397,7 @@ Traffic Avoidance Config
 Config of traffic :ref:`avoidance <trafficAvoidance>`.
 
 	.. image:: /images/configs/traffic/TrafficAvoidanceConfig.png
+	``Hub/Configs/TrafficCarConfigs/AvoidanceConfig``
 	
 | **Custom achieve distance** : custom achieve distance of avoidance point.
 | **Resolve cyclic obstacle** : overcome the cyclical obstacle of cars getting stuck in each other.
@@ -395,6 +408,7 @@ Traffic Custom Destination Config
 Config for custom destination of the vehicles. Also used by :ref:`traffic avoidance <trafficAvoidance>`.
 
 	.. image:: /images/configs/traffic/TrafficCustomDestinationConfig.png
+	``Hub/Configs/TrafficCarConfigs/CustomDestinationConfig``
 		
 | **Default speed limit** : default speed limit for custom destination (if user doesn't set custom).
 | **Check side point** : check that the destination is on the side of the car.
@@ -411,6 +425,7 @@ Traffic Rail Config
 Config for :ref:`rail movement <trafficRail>` of the vehicles.
 
 	.. image:: /images/configs/traffic/TrafficRailConfig.png
+	``Hub/Configs/TrafficCarConfigs/RailConfig``
 	
 | **Max distance to rail line** : maximum distance between the rail and the vehicle.
 | **Lateral speed** : lateral speed of the vehicle to align with the rail.
@@ -426,6 +441,7 @@ Traffic Collision Config
 The config is used in a two-car collision.
 
 	.. image:: /images/configs/traffic/TrafficCollisionConfig.png
+	``Hub/Configs/TrafficCarConfigs/CollisionConfig``
 	
 | **Idle duration** : idling time after collision with other vehicle.
 | **Avoid stucked collision** : attempt to :ref:`avoid <trafficAvoidance>` a stuck collision vehicle.

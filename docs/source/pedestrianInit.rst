@@ -683,6 +683,7 @@ Common Logic
 	`Available state list for the current state can be defined` :ref:`here <pedestrianStateAuthoring>`.
 	
 #. If state is available, set `StateComponent` to the new state and set :ref:`Movement state <pedestrianMovementState>` according to :ref:`Movement binding data <pedestrianStateBinding>`.
+#. If you need to implement custom logic, such as enabling a custom tag for a pedestrian entity when it reaches a node with your own custom type, you can modify the code in the `SelectAchievedTargetUtils.ProcessAchievedTarget` method.
 #. After the :ref:`Movement state <pedestrianMovementState>` is set to a new state, the `MovementStateChangedEventTag` tag is enabled & new animation movement animation is running in the appropriate animation system.
 	* For Legacy skin :ref:`LegacyAnimatorSystem <legacyAnimatorExample>`.
 	* For GPU skin :ref:`GPUAnimatorSystem <gpuAnimatorExample>`.

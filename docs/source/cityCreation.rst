@@ -102,8 +102,8 @@ Scene
 
 		.. image:: /images/gettingstarted/Tutorial2.gif
 	
-#. Create & connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>` (`W` hotkey to select node, `E` hotkey to connect nodes) or tick on `Connect crosswalk` option in the :ref:`Road Parent <roadParentInfo>` & press `Force connect segments` button again.
-
+#. Create & connect :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`Pedestrian Node Creator <pedestrianNodeCreatorCreate>` (`W` hotkey to select node, `E` hotkey to connect nodes,) or tick on `Connect crosswalk` option in the :ref:`Road Parent <roadParentInfo>` & press `Force connect segments` button again (Use `Tab` and `E` hotkeys to place new nodes)
+	
 	.. only:: builder_html
 	
 		.. image:: /images/gettingstarted/Tutorial3.gif

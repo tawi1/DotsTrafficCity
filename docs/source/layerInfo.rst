@@ -9,8 +9,8 @@ Layer Info
 Road Layers
 ~~~~~~~~~~~~
 
-* **TrafficNode [20]** : :ref:`TrafficNode <trafficNode>` layer **[required]**. 
-* **PedestrianNode [21]** : :ref:`PedestrianNode <pedestrianNode>` layer **[required]**. 
+* **TrafficNode [20]** : :ref:`TrafficNode <trafficNode>` layer is used for `TrafficNode` prefab **[required]**. 
+* **PedestrianNode [21]** : :ref:`PedestrianNode <pedestrianNode>` layer is used for `PedestrianNode` prefab **[required]**. 
 
 Object Layers
 ~~~~~~~~~~~~

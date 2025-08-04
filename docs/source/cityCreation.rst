@@ -122,7 +122,7 @@ Scene
 		.. image:: /images/gettingstarted/Tutorial5.gif
 				
 #. If you plan to use :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles, set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config **[optional step]**.
-#. Create your own :ref:`traffic vehicles <trafficCar>` or temporarily use the built-in traffic already added **[optional step]**. lol
+#. Create your own :ref:`traffic vehicles <trafficCar>` or temporarily use the built-in traffic already added **[optional step]**.
 #. If you have created your own traffic, make sure the raycasting layer matches your ground collider layer (traffic prefabs can be found in :ref:`TrafficCarEntityPoolBakerRef <trafficPreset>` at the scene).
 #. Create your own :ref:`pedestrians <pedestrian>` or temporarily use the built-in pedestrians already added **[optional step]**.
 #. In the :ref:`Cull config <cullConfig>`, adjust culling distance at which road objects, traffic, pedestrians etc. will be activated & use :ref:`Cull debug <cullPointDebug>` to view culling states **[optional step]**.

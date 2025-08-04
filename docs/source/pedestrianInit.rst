@@ -978,10 +978,7 @@ Skin Type
 """"""""""""""""""
 
 * **Rig show only in view** : rig skin will be loaded in the camera's view area.
-* **Rig and dummy** : rig will be in the camera's view, and the dummy skin will be out of the camera's view.
-* **Dummy show only in view** : dummy skin will be loaded in the camera's view area.
 * **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
-* **Dummy show always** : dummy skin will be loaded when the entity is created and will exist until it is destroyed..
 * **No skin** : entities without a skin will be created.
 	
 Rig Type

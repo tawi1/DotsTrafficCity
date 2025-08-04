@@ -16,6 +16,7 @@ CullPoint Debugger
 Displays the :ref:`cull point <cullPointInfo>` radius (:ref:`example <cullPointExamples>`).
 
 	.. image:: /images/debuggers/other/CullPointDebugger.png		
+	``CityDebugger/OtherDebuggers/CullStateObjectsDebugger``
 	
 | **Enable debug** : on/off debugger.
 	
@@ -25,6 +26,7 @@ CullState Object Debugger
 Displays the :ref:`cull state <cullPointStates>` of objects in the scene (:ref:`example <cullPointExamples>`).
 
 	.. image:: /images/debuggers/other/CullStateObjectDebugger.png	
+	``CityDebugger/OtherDebuggers/CullPointDebug``
 
 .. _cullPointExamples:
 
@@ -40,6 +42,7 @@ Hashmap Grid Debugger
 Displays the size and position of the hashmap cell (can be useful when choosing the basic hashmap cell size in `DOTS` systems).
 
 	.. image:: /images/debuggers/other/HashmapGridDebugger.png	
+	``CityDebugger/OtherDebuggers/HashMapGridViewDebugger``
 
 | **Enable debug** : on/off debugger.
 | **Line color** : colour line in the scene.
@@ -57,6 +60,7 @@ Section Debugger
 Displays the :ref:`load section <roadStreaming>` radius, created road sections, road connections (:ref:`TrafficNodes <trafficNode>` and :ref:`PedestrianNodes <pedestrianNode>`).
 
 	.. image:: /images/debuggers/other/SectionDebugger.png	
+	``CityDebugger/OtherDebuggers/SectionDebugger``
 
 | **Enable debug** : on/off debugger.
 | **Show traffic path** : on/off display connection of :ref:`TrafficNodes <trafficNode>`.

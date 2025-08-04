@@ -11,6 +11,7 @@ Cull Config
 Config of the :ref:`cull point <cullPointInfo>`.
 
 	.. image:: /images/configs/common/CullConfig.png
+	``Hub/StreamingConfigs/CullConfig``
 	
 **Has cull:**
 	* **Max distance** : maximum distance to activate entities.
@@ -25,6 +26,7 @@ Road Streaming Config
 Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref:`subscene <subscene>`.
 
 	.. image:: /images/configs/common/RoadStreamingConfig.png
+	``Hub/StreamingConfigs/RoadStreamingConfig``
 	
 | **Streaming is enabled** : on/off streaming.
 | **Ignore Y** : ignore calculation of distance to road section for Y axis.
@@ -41,6 +43,7 @@ Streaming Level Config
 Config for :ref:`load/unload <sceneStreaming>` content subscenes.
 
 	.. image:: /images/configs/common/StreamingLevelConfig.png
+	``Hub/StreamingConfigs/StreamingLevelConfig``
 	
 **Streaming is enabled:**
 	* **Distance for streaming in** : distance at what the subscene is loaded.

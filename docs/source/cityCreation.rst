@@ -90,7 +90,7 @@ Hub
 Scene
 ------------
 
-#. Add :ref:`Road segments <roadSegmentCreatorHowToUse>` to the scene.
+#. Add :ref:`Road segments <roadSegmentCreatorHowToUse>` to the scene (Use `Ctrl+D` to duplicate and `Caps Lock` to rotate).
 
 	.. only:: builder_html
 
@@ -115,7 +115,7 @@ Scene
 		.. image:: /images/gettingstarted/Tutorial4.gif
 		
 #. For more information on how to create a road, read the :ref:`road installation <roadInstallation>`.	
-#. Create ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only).
+#. Create a ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only). For DOTS cars, the ground surface should be on a sub-scene. For mono cars, the ground surface should be on the main scene.
 
 	.. only:: builder_html
 	

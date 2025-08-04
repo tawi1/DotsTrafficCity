@@ -54,6 +54,11 @@ State
 
 Shows the state of the vehicle.
 
+Idle State
+""""""""""""""""""
+
+Shows the reason for the vehicle's idle state.
+
 Target index 
 """"""""""""""""""
 

@@ -16,7 +16,7 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Added new option to enable different driving styles for traffic. [In progress]
+* Added new option to enable different driving styles for traffic.
 * Added ability for traffic to avoid stucked traffic cars. [In progress]
 * Added ability for traffic to avoid player vehicle. [In progress]
 * Added `GPU` bone method animation to reduce texture memory usage. [In progress]

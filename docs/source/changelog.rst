@@ -29,11 +29,13 @@ Changed
 ~~~~~~~~~~~~
 
 * Added traffic light cloning for the traffic lights that are part of the road prefab.
+* Polygon city sample updated with new GPU animations.
 
 Fixed
 ~~~~~~~~~~~~
 
 * Fixed disappearing traffic lights during subscene generation in some corner cases.
+* Fixed movement for simple dots vehicles.
 
 [1.4.3] - 01-07-2025
 ------------

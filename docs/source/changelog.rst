@@ -23,6 +23,7 @@ Added
 * Added `GPU` skinning bone method animation to significantly reduce texture memory usage.
 * Added new lightweight simple vehicle controller for mono cars.
 * Demo project importing according to player choise at start. [In progress]
+* Added an option to cull vehicle sounds based on distance.
 * Added weight spawns for pedestrian NPCs.
 
 Changed

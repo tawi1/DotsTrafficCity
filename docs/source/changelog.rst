@@ -3,9 +3,10 @@
 Change Log
 ************
 
-[1.5.1] - In progress
+[1.6.0] - In progress
 ------------
 
+* Added support NetCode for Entities [In progress]
 * Added gearbox for Arcade & DOTS car controllers. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
@@ -23,6 +24,16 @@ Added
 * Added new lightweight simple vehicle controller for mono cars.
 * Demo project importing according to player choise at start. [In progress]
 * Added weight spawns for pedestrian NPCs.
+
+Changed
+~~~~~~~~~~~~
+
+* Added traffic light cloning for the traffic lights that are part of the road prefab.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed disappearing traffic lights during subscene generation in some corner cases.
 
 [1.4.3] - 01-07-2025
 ------------

@@ -24,6 +24,7 @@ Added
 * Demo project importing according to player choise at start.
 * Added an option to cull vehicle sounds based on distance.
 * Added weight spawns for pedestrian NPCs.
+* Hybrid shape factory can override hybrid shape for certain pedestrians.
 
 Changed
 ~~~~~~~~~~~~

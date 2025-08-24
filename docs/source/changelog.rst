@@ -35,6 +35,7 @@ Changed
 Fixed
 ~~~~~~~~~~~~
 
+* Fixed installation on Unity 6.2.
 * Fixed disappearing traffic lights during subscene generation in some corner cases.
 * Fixed movement for simple dots vehicles.
 

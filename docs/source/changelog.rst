@@ -36,6 +36,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed installation on Unity 6.2.
+* Fixed a potential jitter for Arcade vehicle controller on Unity 6+.
 * Fixed disappearing traffic lights during subscene generation in some corner cases.
 * Fixed movement for simple dots vehicles.
 

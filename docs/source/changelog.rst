@@ -29,12 +29,16 @@ Added
 Changed
 ~~~~~~~~~~~~
 
-* Added traffic light cloning for the traffic lights that are part of the road prefab.
 * Polygon city sample updated with new GPU animations.
 * City pack sample updated with new GPU animations.
 
 [1.4.4] - 29-08-2025
 ------------
+
+Changed
+~~~~~~~~~~~~
+
+* Added traffic light cloning for the traffic lights that are part of the road prefab.
 
 Fixed
 ~~~~~~~~~~~~

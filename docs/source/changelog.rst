@@ -31,6 +31,10 @@ Changed
 
 * Added traffic light cloning for the traffic lights that are part of the road prefab.
 * Polygon city sample updated with new GPU animations.
+* City pack sample updated with new GPU animations.
+
+[1.4.4] - 29-08-2025
+------------
 
 Fixed
 ~~~~~~~~~~~~
@@ -39,6 +43,7 @@ Fixed
 * Fixed a potential jitter for Arcade vehicle controller on Unity 6+.
 * Fixed disappearing traffic lights during subscene generation in some corner cases.
 * Fixed movement for simple dots vehicles.
+* Fixed truncation warning for animation shader.
 
 [1.4.3] - 01-07-2025
 ------------

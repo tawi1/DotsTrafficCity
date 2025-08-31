@@ -6,7 +6,7 @@ Change Log
 [1.6.0] - In progress
 ------------
 
-* Added support NetCode for Entities [In progress]
+* Added support NetCode for Entities. [In progress]
 * Added gearbox for Arcade & DOTS car controllers. [Under consideration]
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
@@ -22,6 +22,7 @@ Added
 * Added `GPU` skinning bone method animation to significantly reduce texture memory usage.
 * Added new lightweight simple vehicle controller for mono cars.
 * Demo project importing according to player choise at start.
+* Added ability to choose which toolbar path to use for a project in the editor.
 * Added an option to cull vehicle sounds based on distance.
 * Added weight spawns for pedestrian NPCs.
 * Hybrid shape factory can override hybrid shape for certain pedestrians.

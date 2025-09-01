@@ -30,6 +30,8 @@ Added
 Changed
 ~~~~~~~~~~~~
 
+* `Unity.physics` package is no longer required if NoPhysics or Mono physics cars are in use.
+* `Cinemachine` package is no longer required.
 * Polygon city sample updated with new GPU animations.
 * City pack sample updated with new GPU animations.
 

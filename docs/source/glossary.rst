@@ -3,7 +3,6 @@ Glossary
 
 Common Terms
 -------------------
-	.. include:: factions.rst
 	
 .. _pureEntity:
 

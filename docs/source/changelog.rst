@@ -35,6 +35,11 @@ Changed
 * Polygon city sample updated with new GPU animations.
 * City pack sample updated with new GPU animations.
 
+Fixed
+~~~~~~~~~~~~
+
+* Fixed compatiblity with Road Constructor 1.7.0
+
 [1.4.4] - 29-08-2025
 ------------
 

@@ -21,11 +21,14 @@ Added
 * Added ability for traffic to avoid stucked traffic & player cars & custom obstacles. [In progress]
 * Added `GPU` skinning bone method animation to significantly reduce texture memory usage.
 * Added new lightweight simple vehicle controller for mono cars.
+* Added new sample for arcade vehicle controller with heavy mass.
 * Demo project importing according to player choise at start.
 * Added ability to choose which toolbar path to use for a project in the editor.
 * Added an option to cull vehicle sounds based on distance.
 * Added weight spawns for pedestrian NPCs.
 * Hybrid shape factory can override hybrid shape for certain pedestrians.
+* Added `Static transform hybrid component` for static runtime entities.
+* Added capability to select unique car models for each lane in the `Traffic road debugger` component.
 
 Changed
 ~~~~~~~~~~~~

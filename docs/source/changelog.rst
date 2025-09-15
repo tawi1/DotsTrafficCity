@@ -41,6 +41,7 @@ Changed
 Fixed
 ~~~~~~~~~~~~
 
+* Fixed an issue with invalid input for the mono traffic car when reversing in rare cases.
 * Fixed compatiblity with Road Constructor 1.7.0
 
 [1.4.4] - 29-08-2025

@@ -19,7 +19,7 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 17-09-2025
+[1.5.0] - 18-09-2025
 ------------
 
 Added

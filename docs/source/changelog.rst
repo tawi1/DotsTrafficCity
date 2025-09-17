@@ -11,14 +11,22 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.5.0] - In progress
+[1.5.1] - In progress
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added animatron support. [In progress]
+
+[1.5.0] - 17-09-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
 * Added new option to enable different driving styles for traffic.
-* Added ability for traffic to avoid stucked traffic & player cars & custom obstacles. [In progress]
+* Added ability for traffic to avoid stucked traffic & player cars & custom obstacles.
 * Added `GPU` skinning bone method animation to significantly reduce texture memory usage.
 * Added new lightweight simple vehicle controller for mono cars.
 * Added new sample for arcade vehicle controller with heavy mass.

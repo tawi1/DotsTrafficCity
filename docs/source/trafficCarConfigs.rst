@@ -451,3 +451,16 @@ The config is used in a two-car collision.
 | **Repeat avoidance frequency** : frequency of collision :ref:`avoidance <trafficAvoidance>` attempts.
 | **Forward direction value** : dot value of the direction of the colliding vehicles along the Z axis.
 | **Side direction value** : dot value of the direction of the colliding vehicles along the X axis.
+
+Traffic Behavior Config
+------------
+
+Config for setting different driving styles.
+
+| **Tailgate rate** : Tailgate rate. used with :ref:`Traffic Obstacle Config <trafficCarObstacleConfig>` MaxDistanceToObstacle = MaxDistanceToObstacle * TailgateRate.
+| **Acceleration rate** : input acceleration speed.
+| **Speeding rate** : degree of deviation from the speed limit.
+| **Idle input duration** : idle time before starting movement.
+| **Random change lane duration** : frequency of random lane changes.
+| **Approach distance rate** : approach distance rate. Used with :ref:`Traffic Obstacle Config <trafficCarObstacleConfig>` ApproachDistance = ApproachDistance * ApproachDistanceRate.
+| **Approach distance rate soft** : approach distance rate soft. Used with :ref:`Traffic Obstacle Config <trafficCarObstacleConfig>` ApproachDistanceSoft = ApproachDistanceSoft * ApproachDistanceRateSoft.

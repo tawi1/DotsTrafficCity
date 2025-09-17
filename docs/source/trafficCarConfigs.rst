@@ -137,7 +137,7 @@ Traffic Obstacle Config
 
 Config to calculate obstacles on the path.
 
-	.. image:: /images/configs/traffic/TrafficCarNavConfigConfig.png
+	.. image:: /images/configs/traffic/TrafficCarObstacleConfig.png
 	``Hub/Configs/TrafficCarConfigs/ObstacleConfig``
 	
 | **Max distance to obstacle** : minimum distance to an obstacle (:ref:`example<trafficCarObstacleConfig1>`) (:ref:`test scene <trafficTestSceneObstacle>`).

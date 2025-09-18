@@ -37,6 +37,7 @@ Added
 * Hybrid shape factory can override hybrid shape for certain pedestrians.
 * Added `Static transform hybrid component` for static runtime entities.
 * Added capability to select unique car models for each lane in the `Traffic road debugger` component.
+* Added new API to find the closest traffic path or pedestrian node to a given point in the scene.
 
 Changed
 ~~~~~~~~~~~~

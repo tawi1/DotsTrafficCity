@@ -19,14 +19,15 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 18-09-2025
+[1.5.0] - 19-09-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
 * Added new option to enable different driving styles for traffic.
-* Added ability for traffic to avoid stucked traffic & player cars & custom obstacles.
+* Added random lateral offset for traffic.
+* Added ability for traffic to avoid player & custom obstacles.
 * Added `GPU` skinning bone method animation to significantly reduce texture memory usage.
 * Added new lightweight simple vehicle controller for mono cars.
 * Added new sample for arcade vehicle controller with heavy mass.
@@ -37,7 +38,7 @@ Added
 * Hybrid shape factory can override hybrid shape for certain pedestrians.
 * Added `Static transform hybrid component` for static runtime entities.
 * Added capability to select unique car models for each lane in the `Traffic road debugger` component.
-* Added new API to find the closest traffic path or pedestrian node to a given point in the scene.
+* Added new API to find the closest traffic path or pedestrian node entity to a given point in the scene.
 
 Changed
 ~~~~~~~~~~~~

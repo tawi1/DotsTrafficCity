@@ -10,7 +10,7 @@ v1.4.x to v1.5.x
 #. Import the package.
 #. Fix any code error if it occurs.
 #. After that, migration will started. This process can take up to 10 minutes.
-#. After the project has finished importing, close `Unity` and clean up the `Library` folder.
+#. After the project has finished importing, if any asset or prefab references are lost, close `Unity` and clean up the `Library` folder. [optional]
 
 v1.1.x & 1.2.x to v1.4.x
 -------------------

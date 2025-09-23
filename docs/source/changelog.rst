@@ -19,7 +19,7 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 22-09-2025
+[1.5.0] - 23-09-2025
 ------------
 
 Added
@@ -52,6 +52,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed an issue with invalid input for the mono traffic car when reversing in rare cases.
+* Fixed an issue with obstacle detection at intersections when both vehicles were targeting the same destination.
 * Fixed compatiblity with Road Constructor 1.7.0
 
 [1.4.4] - 29-08-2025

@@ -23,7 +23,7 @@ how to :ref:`install` the project.
    streaming.rst
    common.rst
    scene.rst
-   testScenes.rst
+   samples.rst
    sound.rst
    integration.rst
    debug.rst

@@ -7,4 +7,3 @@ Player
 
 		/playerBuiltin.rst
 		/playerCustom.rst
-		/playerPureTraffic.rst

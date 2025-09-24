@@ -9,6 +9,8 @@ Demo Configs
 Configs
 ------------
 
+.. _generalSettingsDemo:
+
 General Settings Config
 ~~~~~~~~~~~~
 

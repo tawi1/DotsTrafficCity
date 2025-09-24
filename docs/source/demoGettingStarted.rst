@@ -22,7 +22,7 @@ Getting Started
 	
 	.. image:: /images/gettingstarted/PlayerSpawner2.png
 
-#. Select the `Player agent type` in the :ref:`General Settings <generalSettingsConfig>` to spawn the `Player` or the `Free fly camera`.
+#. Select the `Player agent type` in the :ref:`General Settings <generalSettingsDemo>` to spawn the `Player` or the `Free fly camera`.
 
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
@@ -36,7 +36,7 @@ Getting Started
 
 		.. image:: /images/gettingstarted/CityCreation2.png
 		
-	* Set the `Player controller type` to `Custom` in the :ref:`General Settings <generalSettingsConfig>` config.
+	* Set the `Player controller type` to `Custom` in the :ref:`General Settings <generalSettingsDemo>` config.
 	
 		.. image:: /images/gettingstarted/CityCreation3.png
 		

@@ -573,7 +573,7 @@ If you want the traffic to avoid obstacles, follow these steps:
 
 * Make sure that obstacle detection is set to either `Hybrid` or `Raycast` in the :ref:`Traffic config <trafficDetectObstacleMode>`.
 * Ensure that `Advanced avoidance` is enabled in the :ref:`Collision config <trafficCollisionConfig>`.
-* Add components from the example below, depending on the type of obstacle.
+* Add components to the obstacle object from the example below, depending on the type of obstacle.
 
 Player Character
 ~~~~~~~~~~~~

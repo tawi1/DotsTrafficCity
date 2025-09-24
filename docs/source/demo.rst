@@ -12,3 +12,4 @@ Demo City
 		/playerCar.rst
 		/playerCustomCamera.rst
 		/playerConfig.rst
+		/demoConfigs.rst

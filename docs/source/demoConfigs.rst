@@ -1,15 +1,13 @@
-Common Configs
-=====
+.. _demoConfigs:
 
-.. _commonConfigs:
+Demo Configs
+=====
 
 .. contents::
    :local:
-
-Common Configs
--------------------
-
-.. _generalSettingsConfig:
+	
+Configs
+------------
 
 General Settings Config
 ~~~~~~~~~~~~
@@ -24,8 +22,45 @@ Where To Find
 Config Example	
 ~~~~~~~~~~~~
 
-	.. image:: /images/configs/common/GeneralSettingsConfig.png
+	.. image:: /images/configs/common/GeneralSettingsConfigDemo.png
 		:scale: 70%
+
+Player Settings
+^^^^^^^^^^^^^^^^^^^^^^
+	
+**Player agent type:**
+	* **Player** : player will be spawned.
+	* **Free fly camera** :	flying camera will be spawned.
+	
+**Player controller type:**
+	* **Built In** : the player spawned by the built-in solution & has an example built-in controller.
+	* **Built In Custom** : the player spawned by the built-in solution, but the player NPC has a custom character controller & taken from `PlayerCustomHybridMonoNpcFactory`.
+	* **Custom** : the player is spawned & handled entirely by the user's custom solution.
+	
+**Vehicle interaction type:**
+	* **Built In** : the player interacting with cars by the built-in solution.
+	* **Custom** : the player interacting with the cars by the custom user solution.
+			
+**Bullet collision type:** method of calculating collisions for a bullet.
+	* **Calculate collision** : manual calculating.
+	* **Raycast** : by raycast.
+	
+**Shoot direction source:**
+	* **Joystick** : target of the firing in the direction of the joystick.
+	* **Crosshair** : target of the shooting in the direction of the crosshair position.
+
+Player Target Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Max target distance** : maximum distance for crosshair target capture *(crosshair mode only)*.
+| **Max capture angle** :	maximum angle for crosshair target capture *(crosshair mode only)*.
+| **Default aim point distance** : distance between the player and the crosshair if there is no target.	
+| **Default aim point Y position** : default Y-axis crosshair position.	
+
+Common Car Settings
+^^^^^^^^^^^^^^^^^^^^^^
+
+| **Car visual damage system support** : on/off visual hit feature for traffic vehicles by bullets.	
 
 Traffic Car Settings
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -53,7 +88,6 @@ Pedestrian Settings
 	* **Runtime** : all pedestrian entities are converted at runtime.
 	
 | **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due bullets etc...).
-| **Navigation support** : on/off navigation systems for pedestrians.
 
 Other Settings
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -71,41 +105,20 @@ Other Settings
 | **Cull static physics** :on/off culling of the physics of static objects that are far from the player.
 | **Force legacy physics** : force enable `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ , otherwise `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ will be disabled when :ref:`ragdoll <pedestrianRagdoll>` is disabled.
 | **Health system support** : on/off health systems for all entities (vehicles, pedestrians, etc...).
-
-.. _propsDamageOption:
-
+| **Navigation support** : on/off navigation systems for pedestrians.
 | **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
-
-Sound Configs
--------------------	
-
-.. _soundConfig:
-
-Common Sound Config
+| **Target FPS** : target fps of the device.
+| **Hide UI** : on/off UI.
+| **Show FPS** : on/off fps ui panel.
+		
+Npc Ground Config
 ~~~~~~~~~~~~
 
-	.. image:: /images/configs/common/CommonSoundConfig.png
-	
-| **Has sounds** : on/off `DOTS` sound systems.
-| **Crowd sound** : on/off :ref:`crowd sound <soundCrowdConfig>` system for pedestrians.
-| **Random horns sound** : on/off horn :ref:`sound <soundData>` system for traffic.
-	
-.. _soundCrowdConfig:
-	
-Crowd Sound Config
-~~~~~~~~~~~~
+	.. image:: /images/configs/npc/NpcGroundConfig.png
 
-Сonfig for crowd background sound. The sound of the crowd is calculated based on of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
+| **Cast distance** : raycast distance.
+| **Stop falling distance** : distance from the surface where the landing animation starts.
+| **Falling distance** : min distance from the surface where the falling state starts.
+| **Grounded distance** : distance from the surface for ground state.
 
-	.. image:: /images/configs/common/CrowdSoundConfig.png
-	
-| **Crowd sound data** : crowd :ref:`sound <soundData>` data.
-| **Inner crowd sound count** : maximum volume for a given number of pedestrians in the inner circle.
-| **Outer crowd sound count** : maximum volume for a given number of pedestrians in the outer circle.
-| **Min crowd sound count** : minimum number of pedestrians to play the crowd sound.
-| **Max volume** : maximum volume level for the crowd sound.
-| **Outer max volume** : maximum volume in the outer circle.
-| **Min volume** : minimum volume level for the crowd sound.
-| **Inner cell offset** : offset of neighbouring cells relative to current cell in hashmap in the inner circle.
-| **Outer cell offset** : offset of neighbouring cells relative to current cell in hashmap in the outer circle.
-| **Lerp volume speed** : speed of sound volume change between current value and target value.
+	.. note:: Currently only used for player NPCs.

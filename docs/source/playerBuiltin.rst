@@ -3,11 +3,4 @@
 Built-in Solution
 =====
 
-	.. toctree::
-		:maxdepth: 2
-
-		/playerSpawn.rst
-		/playerCharacter.rst
-		/playerCar.rst
-		/playerCustomCamera.rst
-		/playerConfig.rst
+Learn about the built-in player in the :ref:`Demo section <demo>`.

@@ -7,4 +7,5 @@ Runtime Demo
 		:maxdepth: 2
 
 		/tileDemo.rst
+		/chunkRoadDemo.rst
 		/customRoadDemo.rst

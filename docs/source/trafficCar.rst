@@ -587,9 +587,12 @@ Player Car
 
 	.. image:: /images/configs/player/PlayerCarAvoidance.png
 
-Custom Obstacle
+Dynamic Obstacle
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/player/CustomObstacleAvoidance.png
 
-	.. note:: For static obstacles, select the `Static` obstacle type.
+Static Obstacle
+~~~~~~~~~~~~
+
+	.. image:: /images/configs/player/CustomStaticObstacleAvoidance.png

@@ -51,4 +51,4 @@ Getting Started
 		.. image:: /images/gettingstarted/Tutorial6.gif
 		`New cull point example.`
 		
-#. The next step is to configure `Scene`_
+#. The next step is to configure :ref:`Scene <sceneCreation>`

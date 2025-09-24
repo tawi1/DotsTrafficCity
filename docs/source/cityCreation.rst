@@ -37,6 +37,8 @@ Hub Base
 #. If you want to add your own player that interacts with traffic, :ref:`read here <playerCustom>` **[optional step]**.
 #. The next step is to configure `Scene`_
 
+.. _sceneCreation:
+
 Scene
 ------------
 

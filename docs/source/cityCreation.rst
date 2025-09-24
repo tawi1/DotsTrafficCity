@@ -24,7 +24,7 @@ Initial Components
 	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff (player should be spawned with your own script or simply drag & drop into the scene).
 
 #. Press `Create` button.
-#. Continue with the `Hub Base`_ or `:ref:`Hub <demo>` article, depending on your choice.
+#. Continue with the `Hub Base`_ or :ref:`Hub <demo>` article, depending on your choice.
 		
 Hub Base
 ~~~~~~~~~~~~

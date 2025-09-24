@@ -565,3 +565,31 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 	.. note:: 
 		* You can also dynamically change the raycast target for `Hybrid mode` by adding or removing the `TrafficCustomRaycastTargetTag` component.
 		* Layer constants are stored in the `ProjectConstants.cs` file.
+		
+Obstacle Avoidance
+----------------
+
+If you want the traffic to avoid obstacles, follow these steps:
+
+* Make sure that obstacle detection is set to either `Hybrid` or `Raycast` in the :ref:`Traffic config <trafficDetectObstacleMode>`.
+* Ensure that `Advanced avoidance` is enabled in the :ref:`Collision config <trafficCollisionConfig>`.
+* Add components from the example below, depending on the type of obstacle.
+
+Player Character
+~~~~~~~~~~~~
+
+	.. image:: /images/configs/player/PlayerCharacterAvoidance.png
+	
+	.. note:: Make sure that `Player Npc Hybrid Component` is removed.
+
+Player Car
+~~~~~~~~~~~~
+
+	.. image:: /images/configs/player/PlayerCarAvoidance.png
+
+Custom Obstacle
+~~~~~~~~~~~~
+
+	.. image:: /images/configs/player/CustomObstacleAvoidance.png
+
+	.. note:: For static obstacles, select the `Static` obstacle type.

@@ -153,7 +153,7 @@ How To Assign
 	
 	.. image:: /images/road/runtimeRoad/tilePreset3.png
 
-RuntimeTileRoad Demo Structure
+Structure
 ------------
 
 	.. image:: /images/road/runtimeRoad/structure1.png

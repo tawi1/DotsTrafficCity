@@ -1,4 +1,4 @@
-.. _demo:
+.. _demoCity:
 
 Demo City
 ----------------

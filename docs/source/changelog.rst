@@ -19,7 +19,7 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 25-09-2025
+[1.5.0] - 26-09-2025
 ------------
 
 Added
@@ -53,6 +53,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed `RaycastCommand` for Arcade vehicles for Unity 6.2.
+* Fixed potential vehicle rollover for simple physics cars.
 * Fixed an issue with invalid input for the mono traffic car when reversing in rare cases.
 * Fixed an issue with obstacle detection at intersections when both vehicles were targeting the same destination.
 * Fixed compatiblity with Road Constructor 1.7.0+

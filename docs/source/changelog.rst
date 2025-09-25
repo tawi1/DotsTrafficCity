@@ -19,7 +19,7 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 24-09-2025
+[1.5.0] - 25-09-2025
 ------------
 
 Added
@@ -43,6 +43,7 @@ Added
 Changed
 ~~~~~~~~~~~~
 
+* `Entities.graphics` package is no longer required if Mono physics cars & Hybrid Legacy pedestrians are in use.
 * `Unity.physics` package is no longer required if NoPhysics or Mono physics cars are in use.
 * `Cinemachine` package is no longer required.
 * Polygon city sample updated with new GPU animations.

@@ -19,7 +19,7 @@ Added
 
 * Added animatron support. [In progress]
 
-[1.5.0] - 26-09-2025
+[1.5.0] - 30-09-2025
 ------------
 
 Added
@@ -39,6 +39,7 @@ Added
 * Added `Static transform hybrid component` for static runtime entities.
 * Added capability to select unique car models for each lane in the `Traffic road debugger` component.
 * Added new API to find the closest traffic path or pedestrian node entity to a given point in the scene.
+* Added validation for Traffic Area authoring.
 
 Changed
 ~~~~~~~~~~~~
@@ -48,6 +49,7 @@ Changed
 * `Cinemachine` package is no longer required.
 * Polygon city sample updated with new GPU animations.
 * City pack sample updated with new GPU animations.
+* Improved path recalculation during parking builder mode.
 
 Fixed
 ~~~~~~~~~~~~

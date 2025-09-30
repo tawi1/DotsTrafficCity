@@ -59,7 +59,7 @@ Fixed
 * Fixed pedestrians no longer get stuck in cars due to car movement during local avoidance.
 * Fixed an issue with invalid input for the mono traffic car when reversing in rare cases.
 * Fixed an issue with obstacle detection at intersections when both vehicles were targeting the same destination.
-* Fixed compatiblity with Road Constructor 1.7.0+
+* Fixed compatibility with Road Constructor 1.7.0+
 
 [1.4.4] - 29-08-2025
 ------------

@@ -17,7 +17,13 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Added animatron support. [In progress]
+* Added animatron support. 
+* Added support for single or multi-container splines in the `Road segment creator`. [In progress]
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed deprecation messages for Entities 1.4.2 & Unity 6.3. [In progress]
 
 [1.5.0] - 30-09-2025
 ------------

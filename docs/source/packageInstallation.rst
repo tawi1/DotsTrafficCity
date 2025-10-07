@@ -22,7 +22,7 @@ Limitations
 ============
 
 * WebGL not supported.
-* Built-in RP works only with :ref:`Mono <hybridMonoVehicle>` cars & :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrians.
+* Built-in RP only works with :ref:`Mono <hybridMonoVehicle>` cars & :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrians.
 * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space is currently available if you have `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ otherwise (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
 * `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles only calculated with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.

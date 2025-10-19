@@ -27,14 +27,16 @@ Added
 Changed
 ~~~~~~~~~~~~
 
+* Improved along path generation of pedestrian nodes for `Custom straight road segment creator`.
 * The monobehaviour type was removed from `RuntimeSegmentCustom` script to reduce overhead.
 
 Fixed
 ~~~~~~~~~~~~
 
 * Fixed deprecation messages for `Entities 1.4.2` & `Unity 6.3`.
-* Fixed a potential NaN destination for rare cases.
+* Fixed a potential NaN destination for traffic in rare cases.
 * Fixed unexpected activation avoidance for traffic on long roads in some cases.
+* Fixed cyclic obstacle avoidance case.
 
 [1.5.0] - 30-09-2025
 ------------

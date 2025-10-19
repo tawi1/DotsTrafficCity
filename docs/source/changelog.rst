@@ -19,7 +19,7 @@ Added
 
 * Added `Animatron` support. 
 * Added support for single or multi-container splines in the `Road segment creator`.
-* Added smooth corners of pedestrian nodes for `Custom road segment creator`.
+* Added smooth corners of pedestrian nodes for `Custom road segment`.
 * Added validation for traffic light.
 * Added auto-connect for custom segments that are added during runtime.
 * Added `RuntimeSegmentCustomView` helper scene component to view `RuntimeSegmentCustom` data.
@@ -27,7 +27,7 @@ Added
 Changed
 ~~~~~~~~~~~~
 
-* Improved along path generation of pedestrian nodes for `Custom straight road segment creator`.
+* Improved along path generation of pedestrian nodes for `Custom straight road segment`.
 * The monobehaviour type was removed from `RuntimeSegmentCustom` script to reduce overhead.
 
 Fixed

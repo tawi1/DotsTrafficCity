@@ -11,19 +11,30 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.5.1] - In progress
+[1.5.1] - 20-10-2025
 ------------
 
 Added
 ~~~~~~~~~~~~
 
-* Added animatron support. 
-* Added support for single or multi-container splines in the `Road segment creator`. [In progress]
+* Added `Animatron` support. 
+* Added support for single or multi-container splines in the `Road segment creator`.
+* Added smooth corners of pedestrian nodes for `Custom road segment creator`.
+* Added validation for traffic light.
+* Added auto-connect for custom segments that are added during runtime.
+* Added `RuntimeSegmentCustomView` helper scene component to view `RuntimeSegmentCustom` data.
+
+Changed
+~~~~~~~~~~~~
+
+* The monobehaviour type was removed from `RuntimeSegmentCustom` script to reduce overhead.
 
 Fixed
 ~~~~~~~~~~~~
 
-* Fixed deprecation messages for Entities 1.4.2 & Unity 6.3. [In progress]
+* Fixed deprecation messages for `Entities 1.4.2` & `Unity 6.3`.
+* Fixed a potential NaN destination for rare cases.
+* Fixed unexpected activation avoidance for traffic on long roads in some cases.
 
 [1.5.0] - 30-09-2025
 ------------

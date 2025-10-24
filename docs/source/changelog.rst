@@ -11,7 +11,7 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.5.1] - 20-10-2025
+[1.5.1] - 25-10-2025
 ------------
 
 Added
@@ -19,9 +19,11 @@ Added
 
 * Added `Animatron` support. 
 * Added support for single or multi-container splines in the `Road segment creator`.
+* Added a new `API` & `Runtime RawData Demo` scene that demonstrates the generation of a road from raw data at runtime.
 * Added smooth corners of pedestrian nodes for `Custom road segment`.
 * Added validation for traffic light.
 * Added auto-connect for custom segments that are added during runtime.
+* Added U-turn support for runtime roads.
 * Added `RuntimeSegmentCustomView` helper scene component to view `RuntimeSegmentCustom` data.
 
 Changed
@@ -37,6 +39,7 @@ Fixed
 * Fixed a potential NaN destination for traffic in rare cases.
 * Fixed unexpected activation avoidance for traffic on long roads in some cases.
 * Fixed cyclic obstacle avoidance case.
+* Fixed `Road Constructor` generation for some cases.
 
 [1.5.0] - 30-09-2025
 ------------

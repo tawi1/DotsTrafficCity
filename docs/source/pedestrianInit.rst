@@ -485,7 +485,7 @@ How To Create
 
 	.. image:: /images/integration/animatron1_4.png
 	
-* Drag & drop animation clips into the animation list. Order of animations should match :ref:`PAnimation authoring <legacyAnimatorExample>`, animation name can be any. Then, press `Apply` button.
+* Drag & drop animation clips into the animation list. Order of animations should match :ref:`Animation authoring <legacyAnimatorExample>`, animation name can be any. Then, press `Apply` button.
 
 	.. image:: /images/integration/animatron4.png
 
@@ -505,7 +505,7 @@ How To Create
 
 	.. image:: /images/integration/animatron6.png
 
-* Added result prefab to the `Prefab container`.
+* Add the result prefab to the `Prefab container`.
 
 	.. image:: /images/integration/animatron7.png
 	.. image:: /images/integration/animatron8.png

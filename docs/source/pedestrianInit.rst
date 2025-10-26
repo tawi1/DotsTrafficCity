@@ -460,7 +460,70 @@ Animation Event
 			}
 		}
 		
+.. _animatronSkin:
 
+Animatron
+~~~~~~~~~~~~
+
+Pure entities animated with `Animatron <https://assetstore.unity.com/packages/tools/animation/animatron-314750>`_ in `DOTS`.
+
+How To Create
+""""""""""""""
+lol
+* Unpack `AnimatronSample` prefabs:
+
+	.. image:: /images/integration/animatron1.png
+	
+* Imported sample you can find here.
+
+	.. image:: /images/integration/animatron1_2.png
+	.. image:: /images/integration/animatron1_3.png
+	
+* Create a new `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset from the project context menu ``Create/Rig``.
+
+* In the created rig, drap & drop your FBX file your pedestrian into the prefab field. Then, press `Apply` button.
+
+	.. image:: /images/integration/animatron1_4.png
+	
+* Drag & drop animation clips into the animation list. Order of animations should match :ref:`PAnimation authoring <legacyAnimatorExample>`, animation name can be any. Then, press `Apply` button.
+
+	.. image:: /images/integration/animatron4.png
+
+* In the `Skins` tab, only keep the skin that is being used for the character.
+
+	.. image:: /images/integration/animatron4_2.png
+	
+* Drag & drop created rig into the scene.
+
+	.. image:: /images/integration/animatron5.png
+
+* Add `PedestrianAuthoring` component to the created object in the scene.
+
+	.. image:: /images/integration/animatron5_2.png
+	
+* Then, drag & drop created prefab of the scene into the project view.
+
+	.. image:: /images/integration/animatron6.png
+
+* Added result prefab to the `Prefab container`.
+
+	.. image:: /images/integration/animatron7.png
+	.. image:: /images/integration/animatron8.png
+	
+* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` enable `Animatron` rig type.
+
+Animatron Hybrid
+~~~~~~~~~~~~
+
+Hybrid entities animated with `Animatron <https://assetstore.unity.com/packages/tools/animation/animatron-314750>`_ in `DOTS`.
+
+How To Create
+""""""""""""""
+
+* Follow steps of :ref:`Animatron <animatronSkin>`.
+* Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
+* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` enable `Animatron hybrid` rig type.
+		
 .. _pedestrianRagdoll:
 
 Ragdoll

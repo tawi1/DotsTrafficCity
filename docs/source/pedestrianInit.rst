@@ -469,7 +469,7 @@ Pure entities animated with `Animatron <https://assetstore.unity.com/packages/to
 
 How To Create
 """"""""""""""
-lol
+
 * Unpack `AnimatronSample` prefabs:
 
 	.. image:: /images/integration/animatron1.png

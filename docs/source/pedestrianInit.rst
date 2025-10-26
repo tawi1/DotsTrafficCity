@@ -470,64 +470,64 @@ Pure entities animated with `Animatron <https://assetstore.unity.com/packages/to
 How To Create
 """"""""""""""
 
-* Unpack `AnimatronSample` prefabs:
+#. Unpack `AnimatronSample` prefabs:
 
 	.. image:: /images/integration/animatron1.png
 	
-* Imported sample you can find here.
+#. Imported sample you can find here.
 
 	.. image:: /images/integration/animatron1_2.png
 	.. image:: /images/integration/animatron1_3.png
 	
-* Create a new `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset from the project context menu ``Create/Rig``.
+#. Create a new `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset from the project context menu ``Create/Rig``.
 
-* In the created rig, drap & drop your FBX file your pedestrian into the prefab field. Then, press `Apply` button.
+#. In the created rig, drap & drop your FBX file your pedestrian into the prefab field. Then, press `Apply` button.
 
 	.. image:: /images/integration/animatron1_4.png
 	
-* Drag & drop animation clips into the animation list. Order of animations should match :ref:`Animation authoring <legacyAnimatorExample>`, animation name can be any. Then, press `Apply` button.
+#. Drag & drop animation clips into the animation list. Order of animations should match :ref:`Animation authoring <legacyAnimatorExample>`, animation name can be any. Then, press `Apply` button.
 
 	.. image:: /images/integration/animatron4.png
 
-* In the `Skins` tab, only keep the skin that is being used for the character.
+#. In the `Skins` tab, only keep the skin that is being used for the character.
 
 	.. image:: /images/integration/animatron4_2.png
 	
-* Drag & drop created rig into the scene.
+#. Drag & drop created rig into the scene.
 
 	.. image:: /images/integration/animatron5.png
 
-* Add `PedestrianAuthoring` component to the created object in the scene.
+#. Add `PedestrianAuthoring` component to the created object in the scene.
 
 	.. image:: /images/integration/animatron5_2.png
 
-* Select `Render Mesh Array` of the character.
+#. Select `Render Mesh Array` of the character.
 
 	.. image:: /images/integration/animatron5_1.png
 	
-* Create a new material & assign ``Shader Graphs/Lit Skinned`` shader to it.
+#. Create a new material & assign ``Shader Graphs/LitSkinned`` shader to it.
 	
 	.. image:: /images/integration/animatron5_1_1.png
 	
-* Assign your texture to the `BaseMap`.
+#. Assign your texture to the `BaseMap`.
 
 	.. image:: /images/integration/animatron5_1_2.png
 	
-* Drag & drop the created material into the material field of the `Render Mesh Array` component.
+#. Drag & drop the created material into the material field of the `Render Mesh Array` component.
 	
 	.. image:: /images/integration/animatron5_1_3.png
 	
-* Then, drag & drop created prefab of the scene into the project view.
+#. Then, drag & drop created prefab of the scene into the project view.
 
 	.. image:: /images/integration/animatron6.png
 
-* Add the result prefab to the `Prefab container`.
+#. Add the result prefab to the `Prefab container`.
 
 	.. image:: /images/integration/animatron7.png
 	.. image:: /images/integration/animatron8.png
 	
-* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron` rig type.
-* To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new prefab with different skins.
+#. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron` rig type.
+#. To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new prefab with different skins.
 
 Animatron Hybrid
 ~~~~~~~~~~~~
@@ -537,12 +537,12 @@ Hybrid entities animated with `Animatron <https://assetstore.unity.com/packages/
 How To Create
 """"""""""""""
 
-* Follow steps of :ref:`Animatron <animatronSkin>`.
-* Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
+#. Follow steps of :ref:`Animatron <animatronSkin>`.
+#. Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
 
 	.. image:: /images/integration/animatron9.png
 	
-* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
+#. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
 		
 .. _pedestrianRagdoll:
 

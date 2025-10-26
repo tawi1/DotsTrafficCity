@@ -539,6 +539,9 @@ How To Create
 
 * Follow steps of :ref:`Animatron <animatronSkin>`.
 * Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
+
+	.. image:: /images/integration/animatron9.png
+	
 * In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
 		
 .. _pedestrianRagdoll:

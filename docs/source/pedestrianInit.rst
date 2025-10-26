@@ -527,6 +527,7 @@ How To Create
 	.. image:: /images/integration/animatron8.png
 	
 * In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` enable `Animatron` rig type.
+* To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new prefab with different skins.
 
 Animatron Hybrid
 ~~~~~~~~~~~~

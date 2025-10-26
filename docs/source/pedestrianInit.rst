@@ -500,6 +500,22 @@ How To Create
 * Add `PedestrianAuthoring` component to the created object in the scene.
 
 	.. image:: /images/integration/animatron5_2.png
+
+* Select `Render Mesh Array` of the character.
+
+	.. image:: /images/integration/animatron5_1.png
+	
+* Create a new material & assign ``Shader Graphs/Lit Skinned`` shader to it.
+	
+	.. image:: /images/integration/animatron5_1_1.png
+	
+* Assign your texture to the `BaseMap`.
+
+	.. image:: /images/integration/animatron5_1_2.png
+	
+* Drag & drop the created material into the material field of the `Render Mesh Array` component.
+	
+	.. image:: /images/integration/animatron5_1_3.png
 	
 * Then, drag & drop created prefab of the scene into the project view.
 

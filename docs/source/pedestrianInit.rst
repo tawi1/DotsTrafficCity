@@ -526,7 +526,7 @@ How To Create
 	.. image:: /images/integration/animatron7.png
 	.. image:: /images/integration/animatron8.png
 	
-* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` enable `Animatron` rig type.
+* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron` rig type.
 * To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new prefab with different skins.
 
 Animatron Hybrid
@@ -539,7 +539,7 @@ How To Create
 
 * Follow steps of :ref:`Animatron <animatronSkin>`.
 * Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
-* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` enable `Animatron hybrid` rig type.
+* In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
 		
 .. _pedestrianRagdoll:
 

@@ -545,6 +545,12 @@ How To Create
 #. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
 #. Now, you can disable the pedestrian from the :ref:`DOTS simulation <pedestrianDisableSimulation>` at any time and handle it manually via the `AnimatronEntityAdapter` component.
 		
+Runtime Attachment
+""""""""""""""
+
+#. Add `AnimatronRuntimeAttachment` component to your attachment
+#. Use ``SetAttachment`` method of `AnimatronRuntimeAttachment` to attach to the `AnimatronEntityAdapter` with the specified `Joint name`.
+
 .. _pedestrianRagdoll:
 
 Ragdoll

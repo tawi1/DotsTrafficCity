@@ -481,7 +481,7 @@ How To Create
 	
 #. Create a new `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset from the project context menu ``Create/Rig``.
 
-#. In the created rig, drap & drop your FBX file your pedestrian into the prefab field. Then, press `Apply` button.
+#. In the created rig, drap & drop your FBX file of the pedestrian into the prefab field. Then, press `Apply` button.
 
 	.. image:: /images/integration/animatron1_4.png
 	
@@ -527,7 +527,7 @@ How To Create
 	.. image:: /images/integration/animatron8.png
 	
 #. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron` rig type.
-#. To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new prefab with different skins.
+#. To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new FBX file with different skins. Then, drag and drop it into the scene as before, save it as a prefab, and assign it to the `Prefab container`.
 
 Animatron Hybrid
 ~~~~~~~~~~~~

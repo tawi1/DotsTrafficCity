@@ -543,6 +543,7 @@ How To Create
 	.. image:: /images/integration/animatron9.png
 	
 #. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron hybrid` rig type.
+#. Now, you can disable the pedestrian from the :ref:`DOTS simulation <pedestrianDisableSimulation>` at any time and handle it manually via the `AnimatronEntityAdapter` component.
 		
 .. _pedestrianRagdoll:
 

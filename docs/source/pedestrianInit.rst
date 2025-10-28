@@ -548,7 +548,7 @@ How To Create
 Runtime Attachment
 """"""""""""""
 
-#. Add `AnimatronRuntimeAttachment` component to your attachment
+#. Add `AnimatronRuntimeAttachment` component to your attachment.
 #. Use ``SetAttachment`` method of `AnimatronRuntimeAttachment` to attach to the `AnimatronEntityAdapter` with the specified `Joint name`.
 
 .. _pedestrianRagdoll:

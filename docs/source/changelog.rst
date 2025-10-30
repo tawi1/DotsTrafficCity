@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.6.0] - In progress
+[1.7.0] - In progress
 ------------
 
 * Added support NetCode for Entities. [In progress]
@@ -11,7 +11,7 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.5.1] - 29-10-2025
+[1.6.0] - 30-10-2025
 ------------
 
 Added
@@ -20,6 +20,7 @@ Added
 * Added `Animatron` support. 
 * Added a new `API` & `Runtime RawData Demo` scene that demonstrates the generation of a road from raw data at runtime.
 * Added tools to the `Road Segment Creator` for quickly merging `Traffic nodes`, creating new `Traffic nodes`, and creating a new `Road segment` from an existing one.
+* Added auto-crossroad recalculation during its editing.
 * Added support for single or multi-container splines in the `Road segment creator`.
 * Added smooth corners of pedestrian nodes for `Custom road segment`.
 * Added validation for traffic light.
@@ -31,13 +32,14 @@ Changed
 ~~~~~~~~~~~~
 
 * Improved along path generation of pedestrian nodes for `Custom straight road segment`.
-* The monobehaviour type was removed from `RuntimeSegmentCustom` script to reduce overhead.
+* `Monobehaviour` type was removed from `RuntimeSegmentCustom` script to reduce overhead.
 
 Fixed
 ~~~~~~~~~~~~
 
 * Fixed deprecation messages for `Entities 1.4.2` & `Unity 6.3`.
 * Fixed a potential NaN destination for traffic in rare cases.
+* Fixed raycast for DOTS cars & obstacle detection outside its path.
 * Fixed unexpected activation avoidance for traffic on long roads in some cases.
 * Fixed cyclic obstacle avoidance case.
 * Fixed `Road Constructor` generation for some cases.

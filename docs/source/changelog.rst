@@ -11,7 +11,7 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.6.0] - 30-10-2025
+[1.6.0] - 06-11-2025
 ------------
 
 Added
@@ -19,6 +19,7 @@ Added
 
 * Added `Animatron` support. 
 * Added a new `API` & `Runtime RawData Demo` scene that demonstrates the generation of a road from raw data at runtime.
+* Added new detection obstacle method for traffic at intersections to improve better obstacle detection in some corner cases.
 * Added tools to the `Road Segment Creator` for quickly merging `Traffic nodes`, creating new `Traffic nodes`, and creating a new `Road segment` from an existing one.
 * Added auto-crossroad recalculation during its editing.
 * Added support for single or multi-container splines in the `Road segment creator`.
@@ -38,9 +39,11 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed deprecation messages for `Entities 1.4.2` & `Unity 6.3`.
+* Fixed compatibility with Rukhanka 2.5.0+.
 * Fixed a potential NaN destination for traffic in rare cases.
 * Fixed raycast for DOTS cars & obstacle detection outside its path.
 * Fixed unexpected activation avoidance for traffic on long roads in some cases.
+* Fixed simple mono preset.
 * Fixed cyclic obstacle avoidance case.
 * Fixed `Road Constructor` generation for some cases.
 

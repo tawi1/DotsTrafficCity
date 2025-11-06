@@ -28,6 +28,8 @@ Added
 * Added auto-connect for custom segments that are added during runtime.
 * Added U-turn support for runtime roads.
 * Added `RuntimeSegmentCustomView` helper scene component to view `RuntimeSegmentCustom` data.
+* Added support for custom lane counts for the forward & backward directions of traffic nodes for custom runtime road.
+* Added support for merge road for custom runtime road.
 
 Changed
 ~~~~~~~~~~~~

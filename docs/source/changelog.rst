@@ -46,6 +46,7 @@ Fixed
 * Fixed a potential NaN destination for traffic in rare cases.
 * Fixed raycast for DOTS cars & obstacle detection outside its path.
 * Fixed unexpected activation avoidance for traffic on long roads in some cases.
+* Fixed the path drawer exception at the start of the scene if it was initially enabled.
 * Fixed simple mono preset.
 * Fixed cyclic obstacle avoidance case.
 * Fixed `Road Constructor` generation for some cases.

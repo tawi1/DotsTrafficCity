@@ -11,7 +11,7 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.6.0] - 06-11-2025
+[1.6.0] - 09-11-2025
 ------------
 
 Added
@@ -36,6 +36,7 @@ Changed
 
 * Improved along path generation of pedestrian nodes for `Custom straight road segment`.
 * `Monobehaviour` type was removed from `RuntimeSegmentCustom` script to reduce overhead.
+* The editor metadata was removed from the serializable dictionary.
 
 Fixed
 ~~~~~~~~~~~~

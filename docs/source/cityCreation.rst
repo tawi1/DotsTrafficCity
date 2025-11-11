@@ -105,7 +105,7 @@ Demo Scene
 
 #. In the `Project Folder` view, select the following scene:
 
-	`DotsCity/Scenes/Demo`
+	`DotsCity/Samples/Demo City/Scenes/Demo`
 	
 #. Press `Play` button.
 #. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.
@@ -117,7 +117,7 @@ Demo Mono Scene
 
 #. In the `Project Folder` view, select the following scene:
 
-	`DotsCity/Scenes/Demo Mono`
+	`DotsCity/Samples/Demo City/Scenes/Demo Mono`
 	
 #. Press `Play` button.
 #. Read more about :ref:`Project Scenes <projectScenes>` & :ref:`Scene Structure <sceneStructure>`.

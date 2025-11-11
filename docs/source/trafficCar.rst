@@ -596,3 +596,13 @@ Static Obstacle
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/player/CustomStaticObstacleAvoidance.png
+	
+Left-hand Drive
+----------------
+
+To make the traffic left-hand drive:
+
+* Find & open ``ProjectConstants`` script.
+* Change the ``LaneHandDirection`` variable to ``-1``.
+
+	.. note:: Changing this parameter will only affect newly created scenes. Old scenes with a different lane direction will not work.

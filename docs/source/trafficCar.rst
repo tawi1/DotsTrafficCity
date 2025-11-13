@@ -647,4 +647,4 @@ To set a custom destination for a specific traffic car, do the following:
 			TrafficCustomPathService.Instance.SetFollowPath(trafficEntity, destinationPath);
 		}
 		
-* As an alternative, you can check the ``TrafficPathSelector`` prefab for an interactive user-selected path used in the `RuntimeTileRoad Demo` scene.
+* As an alternative, you can check the ``TrafficPathSelector`` prefab for an interactive user-selected path used in the `RuntimeTileRoad Demo` scene (runtime sample should be imported & :ref:`RUNTIME_ROAD <runtimeTileDemo>` scripting define added).

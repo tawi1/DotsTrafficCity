@@ -613,7 +613,6 @@ Pathfinding
 To set a custom destination for a specific traffic car, do the following:
 
 * Create a new gameobject with ``EntitySelectionService`` component.
-* Create a new gameobject with ``PathHashMapSystem`` component.
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 

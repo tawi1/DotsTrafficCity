@@ -11,6 +11,19 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
+[1.6.1] - In progress
+------------
+
+* Added the ability to change lanes during built-in A* navigation for traffic.
+* Added new events for spawning and reaching the target for pedestrians.
+
+Fixed:
+~~~~~~~~~
+
+* Fixed unexpected acceleration beyond the maximum speed for mono cars.
+* Fixed auto crossroad generation for left-lane driving.
+* Fixed a minor memory leak in the traffic test scene.
+
 [1.6.0] - 09-11-2025
 ------------
 

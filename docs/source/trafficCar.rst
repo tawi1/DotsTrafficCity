@@ -601,6 +601,7 @@ Left-hand Drive
 ----------------
 
 To make the traffic left-hand drive:
+
 * Find & open ``ProjectConstants`` script.
 * Change the ``LaneHandDirection`` variable to ``-1``.
 
@@ -610,6 +611,7 @@ Pathfinding
 ----------------
 
 To set a custom destination for a specific traffic car, do the following:
+
 * Create a new gameobject with ``EntitySelectionService`` component.
 * Create a new gameobject with ``PathHashMapSystem`` component.
 * Create a new gameobject with ``TrafficCustomPathService`` component.

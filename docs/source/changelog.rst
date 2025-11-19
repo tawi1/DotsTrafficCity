@@ -14,6 +14,9 @@ Change Log
 [1.6.1] - 19-11-2025
 ------------
 
+Added
+~~~~~~~~~~~~
+
 * Added the ability to change lanes during built-in A* navigation for traffic.
 * Added the ability to follow traffic to a user-defined point.
 * Added new events for spawning and reaching the target for pedestrians.
@@ -23,7 +26,7 @@ Changed
 
 * The project no longer overrides constant scripts and enums during version updates.
 
-Fixed:
+Fixed
 ~~~~~~~~~
 
 * Fixed unexpected acceleration beyond the maximum speed for mono cars.

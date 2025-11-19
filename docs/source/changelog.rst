@@ -11,7 +11,7 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.6.1] - 19-11-2025
+[1.6.1] - 20-11-2025
 ------------
 
 Added

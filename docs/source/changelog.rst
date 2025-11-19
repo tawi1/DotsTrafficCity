@@ -11,16 +11,25 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.6.1] - In progress
+[1.6.1] - 19-11-2025
 ------------
 
 * Added the ability to change lanes during built-in A* navigation for traffic.
+* Added the ability to follow traffic to a user-defined point.
 * Added new events for spawning and reaching the target for pedestrians.
+
+Changed
+~~~~~~~~~~~~
+
+* The project no longer overrides constant scripts and enums during version updates.
 
 Fixed:
 ~~~~~~~~~
 
 * Fixed unexpected acceleration beyond the maximum speed for mono cars.
+* Fixed the issue of the traffic light not linking with the crossroad when it was in an arbitrary hierarchy during the entity root scene was moved to the main scene.
+* Fixed Road constructor traffic lights intergration.
+* Fixed Road constructor being set wrong speed limit for runtime scene.
 * Fixed auto crossroad generation for left-lane driving.
 * Fixed a minor memory leak in the traffic test scene.
 

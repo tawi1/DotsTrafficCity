@@ -11,7 +11,25 @@ Change Log
 * State machine for entering parking car slot. [Under consideration]
 * Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
 
-[1.6.1] - 20-11-2025
+[1.6.3] - 28-11-2025
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed the missing driving sound for cars.
+* Fixed player interaction with cars in Demo scenes.
+
+[1.6.2] - 24-11-2025
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed compatibility with Unity 2022.3
+* Fixed PathHashMapSystem Burst error message.
+
+[1.6.1] - 21-11-2025
 ------------
 
 Added
@@ -31,6 +49,7 @@ Fixed
 
 * Fixed unexpected acceleration beyond the maximum speed for mono cars.
 * Fixed the issue of the traffic light not linking with the crossroad when it was in an arbitrary hierarchy during the entity root scene was moved to the main scene.
+* Fixed potenial warning messages after subscene generation.
 * Fixed Road constructor traffic lights intergration.
 * Fixed Road constructor being set wrong speed limit for runtime scene.
 * Fixed auto crossroad generation for left-lane driving.

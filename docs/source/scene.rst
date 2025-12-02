@@ -43,7 +43,8 @@ Bootstrap
 Scene Unload
 ============
 
-* Before you unload the main scene, you should manually unload the entity subscene.
+* Since version 1.6.0, entities are unloaded from the subscene automatically. If you need to unload a scene manually, read on.
+* Find `EntityWorldService` on the scene & untick `Auto destroy entity scene` option.
 * Assign `EntityWorldService` to your script.
 
 	.. image:: /images/core/EntityWorldService.png

@@ -45,10 +45,10 @@ Scene Unload
 
 * Since version 1.6.0, entities are unloaded from the subscene automatically. If you need to unload a scene manually, read on.
 * Find `EntityWorldService` on the scene & untick `Auto destroy entity scene` option.
-* Assign `EntityWorldService` to your script.
 
 	.. image:: /images/core/EntityWorldService.png
-	
+
+* Assign `EntityWorldService` to your script.	
 * You can use this sample code:
 
 
@@ -60,3 +60,9 @@ Scene Unload
 		{
 			entityWorldService.DisposeWorld();
 		}
+		
+* Or use simply use:
+
+	..  code-block:: r
+	
+            EntityWorldService.Instance.DisposeWorld();

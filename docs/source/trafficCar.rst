@@ -610,30 +610,15 @@ To make the traffic left-hand drive:
 Pathfinding
 ----------------
 
+Custom Point
+~~~~~~~~~~~~
+
 To set a custom destination for a specific traffic car, do the following:
 
-* Create a new gameobject with ``EntitySelectionService`` component.
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
 	..  code-block:: r
-	
-		private EntityManager EntityManager => World.DefaultGameObjectInjectionWorld.EntityManager;
-
-		private PathHashMapSystem.Singleton PathHashMap
-		{
-			get
-			{
-				var pathHashMapSystem = World.DefaultGameObjectInjectionWorld.Unmanaged.GetExistingUnmanagedSystem<PathHashMapSystem>();
-
-				if (EntityManager.HasComponent<PathHashMapSystem.Singleton>(pathHashMapSystem))
-				{
-					return EntityManager.GetComponentData<PathHashMapSystem.Singleton>(pathHashMapSystem);
-				}
-
-				return default;
-			}
-		}
 
 		private void Awake()
 		{
@@ -642,10 +627,34 @@ To set a custom destination for a specific traffic car, do the following:
 
 		public void SetEntity(Vector3 trafficPosition, Vector3 destination)
 		{
+			TrafficCustomPathService.Instance.SetFollowPath(trafficEntity, destination);
+		}
+		
+* Use the ``OnStatusUpdated`` callback in ``TrafficCustomPathService`` to listen to the current state of the traffic car's pathfinding.
+		
+Custom Node
+~~~~~~~~~~~~
+
+To set a custom node destination for a specific traffic car, do the following:
+
+* Create a new gameobject with ``EntitySelectionService`` component.
+* Create a new gameobject with ``TrafficCustomPathService`` component.
+* Use this sample code:
+
+	..  code-block:: r
+	
+		private void Awake()
+		{
+			PathHashMapSystem.Register();
+		}
+
+		public void SetEntity(Vector3 trafficPosition, Vector3 destination)
+		{
 			var trafficEntity = EntitySelectionService.Instance.SelectEntity(trafficPosition, EntitySelectionService.EntityType.Traffic, 2f);
-			var destinationPath = PathHashMap.GetClosestPath(destination);
+			var destinationPath = PathHashMapSystem.GetClosestPath(destination);
 
 			TrafficCustomPathService.Instance.SetFollowPath(trafficEntity, destinationPath);
 		}
 		
+* Use the ``OnStatusUpdated`` callback in ``TrafficCustomPathService`` to listen to the current state of the traffic car's pathfinding.
 * As an alternative, you can check the ``TrafficPathSelector`` prefab for an interactive user-selected path used in the `RuntimeTileRoad Demo` scene (runtime sample should be imported & :ref:`RUNTIME_ROAD <runtimeTileDemo>` scripting define added).

@@ -3,7 +3,7 @@
 API
 ----------------
 
-Node Hash Map System
+Node HashMap System
 ~~~~~~~~~~~~
 
 Used to find the nearest entity node.
@@ -31,6 +31,14 @@ Spawn a pedestrian in a custom position using user code.
 
 	..  code-block:: r
 	
+		using Spirit604.DotsCity.Simulation.Pedestrian;
+		using Spirit604.Extensions;
+		using Unity.Entities;
+		using Unity.Mathematics;
+		using UnityEngine;
+
+		public class SpawnExample : MonoBehaviour
+		{
 		private EntityQuery pedestrianSettingsQuery;
 		private EntityQuery prefabContainerQuery;
 
@@ -43,7 +51,7 @@ Spawn a pedestrian in a custom position using user code.
 			NodeHashMapSystem.Register();
 		}
 
-		public void SpawnExampleMethod(Vector3 spawnPosition, Quaternion spawnRotation, Vector3 destination)
+		public void Spawn(Vector3 spawnPosition, Quaternion spawnRotation, Vector3 destination)
 		{
 			var commandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
 			uint seed = MathUtilMethods.GetRandomSeed();
@@ -53,9 +61,22 @@ Spawn a pedestrian in a custom position using user code.
 
 			var rnd = new Unity.Mathematics.Random(seed);
 
-			var entityPrefab = prefabContainer.GetRandomPrefab(rnd, out var skinIndex);
+			Entity entityPrefab;
 
-			Entity destinationNode = NodeHashMapSystem.GetClosestNode(destination, out destination);
+			if (skinIndex == -1)
+			{
+				entityPrefab = prefabContainer.GetRandomPrefab(rnd, out skinIndex);
+			}
+			else
+			{
+				if (prefabContainer.HasPrefabVariants())
+					entityPrefab = prefabContainer[skinIndex].PrefabEntity;
+				else
+					entityPrefab = prefabContainer[0].PrefabEntity;
+			}
+
+			Entity destinationNode = NodeHashMapSystem.GetClosestNode(destination, out var destinationNodePos);
+			destination = destinationNodePos;
 
 			Spawn(
 				ref commandBuffer,
@@ -104,4 +125,5 @@ Spawn a pedestrian in a custom position using user code.
 			PedestrianInitUtils.Initialize(ref commandBuffer, pedestrianEntity, in spawnParams, in pedestrianSettings);
 
 			return pedestrianEntity;
+		}
 		}

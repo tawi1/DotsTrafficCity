@@ -15,3 +15,4 @@ Traffic
 		/trafficPreset.rst
 		/trafficConfigs.rst
 		/trafficTestScenesRedirect.rst
+		/trafficApi.rst

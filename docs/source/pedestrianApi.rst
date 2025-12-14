@@ -51,7 +51,7 @@ Spawn a pedestrian in a custom position using user code.
 			NodeHashMapSystem.Register();
 		}
 
-		public void Spawn(Vector3 spawnPosition, Quaternion spawnRotation, Vector3 destination)
+		public void Spawn(Vector3 spawnPosition, Quaternion spawnRotation, Vector3 destination, int skinIndex = -1)
 		{
 			var commandBuffer = new EntityCommandBuffer(Unity.Collections.Allocator.Temp);
 			uint seed = MathUtilMethods.GetRandomSeed();

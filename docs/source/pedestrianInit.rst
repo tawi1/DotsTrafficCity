@@ -1270,5 +1270,3 @@ Contains data - which :ref:`Movement state <pedestrianMovementState>` is assigne
 	
 	.. note:: 
 		* Read more the :ref:`state info <pedestrianStates>` & :ref:`available states <pedestrianActionState>`.
-
-.. include:: pedestrianApi.rst

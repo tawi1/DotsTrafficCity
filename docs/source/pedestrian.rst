@@ -10,3 +10,4 @@ Pedestrian
 		/pedestrianInit.rst
 		/animationbaker.rst
 		/pedestrianTestScenes.rst
+		/pedestrianApi.rst

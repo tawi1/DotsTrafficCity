@@ -615,6 +615,7 @@ Custom Point
 
 To set a custom destination for a specific traffic car, do the following:
 
+* Create a new gameobject with ``EntitySelectionService`` component.
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
@@ -627,6 +628,7 @@ To set a custom destination for a specific traffic car, do the following:
 
 		public void SetEntity(Vector3 trafficPosition, Vector3 destination)
 		{
+			var trafficEntity = EntitySelectionService.Instance.SelectEntity(trafficPosition, EntitySelectionService.EntityType.Traffic, 2f);
 			TrafficCustomPathService.Instance.SetFollowPath(trafficEntity, destination);
 		}
 		

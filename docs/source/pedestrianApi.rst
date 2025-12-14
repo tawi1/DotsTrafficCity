@@ -25,7 +25,7 @@ How To Use
 			return NodeHashMapSystem.GetClosestNode(position, out nodePosition);
 		}
 		
-Custom Spawn
+User Spawn
 ~~~~~~~~~~~~
 
 Spawn a pedestrian in a custom position using user code.

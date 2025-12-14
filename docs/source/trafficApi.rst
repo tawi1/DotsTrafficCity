@@ -25,7 +25,7 @@ How To Use
 			return PathHashMapSystem.GetClosestPath(position);
 		}
 		
-Custom Spawn
+User Spawn
 ~~~~~~~~~~~~
 
 Spawn a traffic car in a custom position using user code.

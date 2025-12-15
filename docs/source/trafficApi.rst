@@ -39,7 +39,7 @@ Spawn a traffic car in a custom position using user code.
 		using Unity.Entities;
 		using UnityEngine;
 
-		public class SpawnExample1 : MonoBehaviour
+		public class TrafficSpawnExample : MonoBehaviour
 		{
 		private EntityQuery pedestrianSettingsQuery;
 		private EntityQuery prefabContainerQuery;
@@ -65,13 +65,14 @@ Spawn a traffic car in a custom position using user code.
 
 		public void Spawn(Vector3 spawnPosition, int carModel)
 		{
-			var path = PathHashMapSystem.GetClosestPath(spawnPosition);
+			var pathIndex = PathHashMapSystem.GetClosestPath(spawnPosition);
 			var graph = GetRoadGraph();
 			var entityGraph = GetEntityGraph();
 
-			var sourceNodeEntity = entityGraph.TryToGetSourceNode(path);
+			var sourceNodeEntity = entityGraph.TryToGetSourceNode(pathIndex);
+			var targetNodeEntity = entityGraph.TryToGetConnectedNode(pathIndex);
 
-			TrafficSpawnParams trafficSpawnParams = TrafficSpawnUtils.GetSpawnParams(in graph, EntityManager, sourceNodeEntity, carModel, TrafficCustomInitType.UserCallback);
+			TrafficSpawnParams trafficSpawnParams = TrafficSpawnUtils.GetSpawnParams(in graph, sourceNodeEntity, targetNodeEntity, carModel, pathIndex, spawnPosition, TrafficCustomInitType.UserCallback);
 			trafficSpawnerSystem.Spawn(trafficSpawnParams, true);
 		}
 

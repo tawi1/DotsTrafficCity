@@ -39,7 +39,7 @@ Spawn a pedestrian in a custom position using user code.
 		using Unity.Mathematics;
 		using UnityEngine;
 
-		public class SpawnExample : MonoBehaviour
+		public class PedestrianSpawnExample : MonoBehaviour
 		{
 		private EntityQuery pedestrianSettingsQuery;
 		private EntityQuery prefabContainerQuery;

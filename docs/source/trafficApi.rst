@@ -8,7 +8,7 @@ Section is progress.
 Path HashMap System
 ~~~~~~~~~~~~
 
-Used to find the nearest path.
+Used to find the nearest path of the road to a given position.
 
 How To Use
 """"""""""""""

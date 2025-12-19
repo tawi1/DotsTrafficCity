@@ -8,7 +8,7 @@ Section is progress.
 Node HashMap System
 ~~~~~~~~~~~~
 
-Used to find the nearest entity node.
+Used to find the nearest pedestrian entity node.
 
 How To Use
 """"""""""""""

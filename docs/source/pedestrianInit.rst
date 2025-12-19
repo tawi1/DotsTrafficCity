@@ -672,7 +672,7 @@ How To Setup
 
 * Make sure that you purchased & downloaded `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Agents Navigation`.
-* Enable the `Auto Add Agent Components` option for quick prototyping & customize the settings in the `Agents Navigation Config Authoring` tab, or add agent authoring components to the `PedestrianEntity` prefab from the `Agents Navigation` sample for more flexible settings. (`Agents Navigation doc <https://lukaschod.github.io/agents-navigation-docs/manual/game-objects.html>`_)
+* Enable the `Auto Add Agent Components` option for quick prototyping in the :ref:`Pedestrian settings <pedestrianSettingsConfig>` & customize the settings in the `Agents Navigation Config Authoring` tab (the tab below :ref:`Pedestrian settings <pedestrianSettingsConfig>`), or add agent authoring components to the `PedestrianEntity` prefab from the `Agents Navigation` sample for more flexible settings. (`Agents Navigation doc <https://lukaschod.github.io/agents-navigation-docs/manual/game-objects.html>`_)
 * Ensure that :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
 * Add `Agent Collider Hybrid Component` to the `HybridEntityRuntimeAuthoring` of your :ref:`player character <playerCustom>` if you want to collide with pedestrians [**optional step**]
 
@@ -901,6 +901,22 @@ Action State
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 				
+Entity Customization
+----------------
+
+By default, 1 entity shared across all pedestrian, but if you want customize (change weight, add custom entity component etc.) certain entity for certain skin:
+
+* Open :ref:`Pedestrian settings <pedestrianSettingsConfig>`.
+
+	.. image:: /images/configs/pedestrian/entityCustomization1.png
+	
+* Duplicate the entity prefab. Set unique customization for the prefab authorings (the order of the entity prefabs within the prefab container should match that of the factory). 
+* See the image below for an example of a prefab container (there are 2 prefabs, 1 for pedestrian, 1 unique for police)
+
+	.. image:: /images/configs/pedestrian/entityCustomization2.png
+	
+* The number of entries of entities prefab in this scriptable object should match with the factory it uses (`PedestrianSkinFactory` for the hybrid pedestrians or `PedestrianGPUSkinFactory` for the GPU pedestrians)
+
 .. _pedestrianDisableSimulation:
 				
 User Custom Control & Interaction

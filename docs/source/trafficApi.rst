@@ -81,3 +81,57 @@ Spawn a traffic car in a custom position using user code.
 			Debug.Log($"Spawned {entity.Index}");
 		}
 		}
+		
+		
+Density
+~~~~~~~~~~~~
+
+Change the density of traffic at runtime.
+
+	..  code-block:: r
+
+		using Spirit604.Attributes;
+		using Spirit604.DotsCity.Simulation.Traffic.Authoring;
+		using Spirit604.Extensions;
+		using System;
+		using System.Linq;
+		using UnityEngine;
+
+		public class TrafficDensityChanger : MonoBehaviour
+		{
+			[SerializeField] private TrafficSettings trafficSettings;
+			[SerializeField] private TrafficSpawnerSettingsAuthoring trafficSpawnerSettingsAuthoring;
+			[SerializeField] private int count = 20;
+
+			public void SetCountRuntime(int count)
+			{
+				if (count < 0)
+					throw new ArgumentException("Count should be greater than zero");
+
+				trafficSpawnerSettingsAuthoring.ChangeDensity(count);
+			}
+
+			public void SetCountEditor(int count)
+			{
+				if (count < 0)
+					throw new ArgumentException("Count should be greater than zero");
+
+				trafficSettings.TrafficSpawnerConfig.PreferableCount = count;
+				EditorSaver.SetObjectDirty(trafficSettings.TrafficSpawnerConfig);
+			}
+
+			[Button]
+			private void SetCountFromInspector()
+			{
+				SetCountRuntime(count);
+			}
+
+		#if UNITY_EDITOR
+			private void Reset()
+			{
+				trafficSettings = ObjectUtils.FindObjectsOfType<TrafficSettings>().Where(a => !a.gameObject.scene.isSubScene).FirstOrDefault();
+				trafficSpawnerSettingsAuthoring = ObjectUtils.FindObjectsOfType<TrafficSpawnerSettingsAuthoring>().Where(a => !a.gameObject.scene.isSubScene).FirstOrDefault();
+				EditorSaver.SetObjectDirty(this);
+			}
+		#endif
+		}

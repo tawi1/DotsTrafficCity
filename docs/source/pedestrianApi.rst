@@ -129,3 +129,56 @@ Spawn a pedestrian in a custom position using user code.
 			return pedestrianEntity;
 		}
 		}
+		
+Density
+~~~~~~~~~~~~
+
+Change the density of pedestrians at runtime.
+
+	..  code-block:: r
+
+		using Spirit604.Attributes;
+		using Spirit604.DotsCity.Simulation.Pedestrian.Authoring;
+		using Spirit604.Extensions;
+		using System;
+		using System.Linq;
+		using UnityEngine;
+
+		public class PedestrianDensityChanger : MonoBehaviour
+		{
+			[SerializeField] private PedestrianSpawnerConfigHolder pedestrianSpawnerConfigHolder;
+			[SerializeField] private PedestrianSpawnerConfigAuthoring pedestrianSpawnerConfigAuthoring;
+			[SerializeField] private int count = 200;
+
+			public void SetCountRuntime(int count)
+			{
+				if (count < 0)
+					throw new ArgumentException("Count should be greater than zero");
+
+				pedestrianSpawnerConfigAuthoring.ChangeDensity(count);
+			}
+
+			public void SetCountEditor(int count)
+			{
+				if (count < 0)
+					throw new ArgumentException("Count should be greater than zero");
+
+				pedestrianSpawnerConfigHolder.PedestrianSpawnerConfig.MinPedestrianCount = count;
+				EditorSaver.SetObjectDirty(pedestrianSpawnerConfigHolder.PedestrianSpawnerConfig);
+			}
+
+			[Button]
+			private void SetCountFromInspector()
+			{
+				SetCountRuntime(count);
+			}
+
+		#if UNITY_EDITOR
+			private void Reset()
+			{
+				pedestrianSpawnerConfigHolder = ObjectUtils.FindObjectsOfType<PedestrianSpawnerConfigHolder>().Where(a => !a.gameObject.scene.isSubScene).FirstOrDefault();
+				pedestrianSpawnerConfigAuthoring = ObjectUtils.FindObjectsOfType<PedestrianSpawnerConfigAuthoring>().Where(a => !a.gameObject.scene.isSubScene).FirstOrDefault();
+				EditorSaver.SetObjectDirty(this);
+			}
+		#endif
+		}

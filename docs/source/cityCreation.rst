@@ -21,7 +21,7 @@ Initial Components
 
 #. Description:
 	* **Hub** : root prefab used in `Demo` & `Demo Mono` scenes & contains demo sample dependencies.
-	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff (:ref:`playerCustom <player>` should be spawned with your own script or simply drag & drop into the scene).
+	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff (:ref:`player <playerCustom>` should be spawned with your own script or simply drag & drop into the scene).
 
 #. Press `Create` button.
 #. Continue with the `Hub Base`_ or :ref:`Hub <demoCity>` article, depending on your choice.

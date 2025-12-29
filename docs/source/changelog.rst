@@ -7,9 +7,26 @@ Change Log
 ------------
 
 * Added support NetCode for Entities. [In progress]
-* Added gearbox for Arcade & DOTS car controllers. [Under consideration]
-* State machine for entering parking car slot. [Under consideration]
-* Added ability to control traffic & pedestrians with custom behavior code or plugin. [Under consideration]
+
+[1.6.4] - 29-12-2025
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added unity vehicle support.
+* Added a car player blocker component for mono traffic to prevent the player from being push the car if it the player has custom controller.
+
+Changed
+~~~~~~~~~~~~
+
+* 2 unused layers were removed from the demo scene.
+
+Fixed
+~~~~~~~~~~~~
+
+* Removed scheduling from Begin Simulation Systems to prevent potential structural changes during Job System.
+* Fixed road constructor generation for some cases.
 
 [1.6.3] - 28-11-2025
 ------------

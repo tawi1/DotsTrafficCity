@@ -6,7 +6,11 @@ Vehicle Collection
 The `Vehicle collection` contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
-	
+		:scale: 50%
+		
+	.. note::
+		`VehicleDataHolder` contains a reference to the vehicle collection.
+
 How To
 ----------------
 	
@@ -65,7 +69,7 @@ Unique ID
 Car Model
 ----------------
 
-| **Car model** - the name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>`. 
+| **Car model** - the name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>` (the :ref:`ID <trafficId>` can be found in the :ref:`Collection <vehicleCollection>` before the name of the car). 
 
 	.. note::
 		You can change the `CarModel` name at any time in the :ref:`Collection <vehicleCollection>` tab.

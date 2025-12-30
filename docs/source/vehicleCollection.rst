@@ -6,14 +6,18 @@ Vehicle Collection
 The `Vehicle collection` contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
-		:scale: 50%
-		
-	.. note::
-		`VehicleDataHolder` contains a reference to the vehicle collection.
+		:scale: 60%
 
 How To
 ----------------
-	
+				
+Entity Conversion
+~~~~~~~~~~~~
+
+Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
+
+	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
+
 Add To Collection
 ~~~~~~~~~~~~
 	
@@ -49,13 +53,6 @@ Steps
 	
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep4-0.png
 	.. image:: /images/entities/trafficCar/vehicleCollection/OverrideStep5.png
-		
-Entity Conversion
-~~~~~~~~~~~~
-
-Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
-
-	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
 
 .. _trafficId:
 

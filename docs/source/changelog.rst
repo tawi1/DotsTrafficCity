@@ -8,7 +8,7 @@ Change Log
 
 * Added support NetCode for Entities. [In progress]
 
-[1.6.4] - 30-12-2025
+[1.6.4] - 31-12-2025
 ------------
 
 Added
@@ -27,6 +27,8 @@ Fixed
 
 * Removed scheduling from Begin Simulation Systems to prevent potential structural changes during Job System.
 * Fixed road constructor generation for some cases.
+* Fixed the demo's mono bullet collision with pedestrians.
+* Fixed the player demo's shooting on non-flat surfaces.
 
 [1.6.3] - 28-11-2025
 ------------

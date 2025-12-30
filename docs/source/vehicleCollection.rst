@@ -8,15 +8,16 @@ The `Vehicle collection` contains data on all vehicles in the city and their :re
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollection.png
 		:scale: 60%
 
-How To
-----------------
-				
 Entity Conversion
-~~~~~~~~~~~~
+----------------
 
 Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/VehicleCollectHolder.png
+
+
+How To
+----------------
 
 Add To Collection
 ~~~~~~~~~~~~

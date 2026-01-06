@@ -788,7 +788,7 @@ U Turn
 
 To create u turn path:
 
-#. Open :ref:`Path Creator <pathCreator>`.
+#. Open :ref:`Path Creator <pathCreator>` tool.
 #. Select desired :ref:`Traffic node <trafficNode>` for u turn.
 #. Enable `U turn` option in the `Node settings` tab.
 #. Enable `Connect same side` option & set `Source node side` to `External side`.

@@ -781,7 +781,7 @@ Dead End
 Destroy
 ~~~~~~~~~~~~
 
-If you want traffic to be destroyed at the dead end (e.g., when it drives beyond the scene), enable the `Destroy vehicle` type in the :ref:`Traffic node <trafficNode>`.
+If you want traffic to be destroyed at the dead end (e.g. when it drives beyond the scene), enable the `Destroy vehicle` type in the :ref:`Traffic node <trafficNode>`.
 
 U Turn
 ~~~~~~~~~~~~ 
@@ -791,7 +791,7 @@ To create u turn path:
 #. Open :ref:`Path Creator <pathCreator>`.
 #. Select desired :ref:`Traffic node <trafficNode>` for u turn.
 #. Enable `U turn` option in the `Node settings` tab.
-#. Enable `Connect same side` option & set `Source node` side to `External side`.
+#. Enable `Connect same side` option & set `Source node side` to `External side`.
 #. Press `Create` button.
 
 

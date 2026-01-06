@@ -31,6 +31,7 @@ Node Settings
 	
 | **Source Traffic Node** : source :ref:`traffic node <trafficNode>`.
 | **Target Traffic Node** : target :ref:`traffic node <trafficNode>`.
+| **U turn** : enable it if you plan to create a U-turn.
 
 .. _pathCreatorPathSettings:
 

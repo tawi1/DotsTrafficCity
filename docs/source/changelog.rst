@@ -8,6 +8,22 @@ Change Log
 
 * Added support NetCode for Entities. [In progress]
 
+[1.6.5] - 07-01-2026
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added custom post processing for mono cars during car creating in the car prefab creator.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed targeting for custom physics vehicle in some corner cases.
+* Fixed weight parameter for mono cars in the car prefab creator.
+* Fixed navigation for parking segment if it merged with other segment.
+* Fixed change lane during A* navigation for some corner cases.
+
 [1.6.4] - 31-12-2025
 ------------
 

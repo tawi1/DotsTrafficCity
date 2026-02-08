@@ -11,12 +11,13 @@ Added
 
 * Added support NetCode for Entities. [In progress]
 * Reworked the GPU animation engine, which reduces the overall number of draw calls, adds custom timings for each animation, and provides a more convenient workflow.
-* Added animation speed for walking animations for all animation engines (Legacy Animator, Built-In GPU Engine, Rukhanka, and Animatron).
+* Added custom animation speed for walking animations for each entity for all animation engines (Unity Animator, Built-In GPU Engine, Rukhanka, and Animatron).
 * Ability to add runtime pedestrian nodes for custom pedestrian routes or buildings.
-* Added methods for adding custom roads by custom chunks.
+* Added methods for adding runtime custom roads by custom chunks to reduce overhead across the frame during the creation of large maps at runtime.
 
 Changed
 ~~~~~~~~~~~~
+
 * Significantly improved performance of adding runtime roads for giant maps.
 
 Fixed

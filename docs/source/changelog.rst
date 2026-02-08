@@ -6,7 +6,24 @@ Change Log
 [1.7.0] - In progress
 ------------
 
+Added
+~~~~~~~~~~~~
+
 * Added support NetCode for Entities. [In progress]
+* Reworked the GPU animation engine, which reduces the overall number of draw calls, adds custom timings for each animation, and provides a more convenient workflow.
+* Added animation speed for walking animations for all animation engines (Legacy Animator, Built-In GPU Engine, Rukhanka, and Animatron).
+* Ability to add runtime pedestrian nodes for custom pedestrian routes or buildings.
+* Added methods for adding custom roads by custom chunks.
+
+Changed
+~~~~~~~~~~~~
+* Significantly improved performance of adding runtime roads for giant maps.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed the build size for giant entity scenes.
+* Fixed the roundabout template when the entrance traffic node has a different lane number than the inner traffic nodes.
 
 [1.6.5] - 07-01-2026
 ------------

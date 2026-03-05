@@ -10,6 +10,7 @@ Added
 ~~~~~~~~~~~~
 
 * Added support NetCode for Entities.
+* Added support for multiple cull points for local split-screen multiplayer.
 * Reworked the GPU animation engine, which reduces the overall number of draw calls, adds custom timings for each animation, and provides a more convenient workflow.
 * Added support for runtime attachments & animation events for GPU animations.
 * Added custom animation speed for walking animations for each entity for all animation engines (Unity Animator, Built-In GPU Engine, Rukhanka, and Animatron).

@@ -9,11 +9,15 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Added support NetCode for Entities. [In progress]
+* Added support NetCode for Entities.
 * Reworked the GPU animation engine, which reduces the overall number of draw calls, adds custom timings for each animation, and provides a more convenient workflow.
+* Added support for runtime attachments & animation events for GPU animations.
 * Added custom animation speed for walking animations for each entity for all animation engines (Unity Animator, Built-In GPU Engine, Rukhanka, and Animatron).
 * Ability to add runtime pedestrian nodes for custom pedestrian routes or buildings.
 * Added methods for adding runtime custom roads by custom chunks to reduce overhead across the frame during the creation of large maps at runtime.
+* Added a new parameter to reduce or prevent overtaking from the road side.⁠
+* Added checking the opposite lane for obstacle during avoidance for straight roads.
+* Improved precision for obstacle detection on short-width roads.
 
 Changed
 ~~~~~~~~~~~~
@@ -24,6 +28,9 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed the build size for giant entity scenes.
+* Fixed a potential exception in avoidance system.
+* Fixed avoidance at intersections in some cases.
+* Fixed jittering for no physics cars during avoidance.
 * Fixed the roundabout template when the entrance traffic node has a different lane number than the inner traffic nodes.
 
 [1.6.5] - 07-01-2026

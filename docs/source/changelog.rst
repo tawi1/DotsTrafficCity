@@ -32,6 +32,7 @@ Fixed
 * Fixed a potential exception in avoidance system.
 * Fixed avoidance at intersections in some cases.
 * Fixed jittering for no physics cars during avoidance.
+* Fixed speeding of approaching vehicles with custom behavior.
 * Fixed the roundabout template when the entrance traffic node has a different lane number than the inner traffic nodes.
 
 [1.6.5] - 07-01-2026

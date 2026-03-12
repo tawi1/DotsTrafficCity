@@ -18,7 +18,11 @@ Added
 * Added methods for adding runtime custom roads by custom chunks to reduce overhead across the frame during the creation of large maps at runtime.
 * Added a new parameter to reduce or prevent overtaking from the road side.⁠
 * Added checking the opposite lane for obstacle during avoidance for straight roads.
+* Added a new option adding different wagons for trains at runtime.
 * Improved precision for obstacle detection on short-width roads.
+* Added position handles for the default type of segments.
+* Added mono vehicles to `Polygon city` template.
+* Added choise for entity types in the `Hub` selection window
 
 Changed
 ~~~~~~~~~~~~
@@ -34,8 +38,10 @@ Fixed
 * Fixed jittering for no physics cars during avoidance.
 * Fixed speeding of approaching vehicles with custom behavior.
 * Fixed the roundabout template when the entrance traffic node has a different lane number than the inner traffic nodes.
+* Fixed compatibility with latest `Polygon City` template.
+* Fixed collision avoidance for dots vehicles in traffic areas.
 
-[1.6.5] - 07-01-2026
+[1.6.5] - 08-01-2026
 ------------
 
 Added

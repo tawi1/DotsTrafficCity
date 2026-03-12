@@ -27,6 +27,7 @@ Added
 Changed
 ~~~~~~~~~~~~
 
+* Improved parking navigation for traffic.
 * Significantly improved performance of adding runtime roads for giant maps.
 
 Fixed

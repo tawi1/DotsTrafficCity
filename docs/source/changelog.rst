@@ -9,11 +9,11 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Added support NetCode for Entities.
+* Added support `NetCode for Entities`.
 * Added support for multiple cull points for local split-screen multiplayer.
 * Reworked the GPU animation engine, which reduces the overall number of draw calls, adds custom timings for each animation, and provides a more convenient workflow.
 * Added support for runtime attachments & animation events for GPU animations.
-* Added custom animation speed for walking animations for each entity for all animation engines (Unity Animator, Built-In GPU Engine, Rukhanka, and Animatron).
+* Added custom animation speed for walking animations for each entity for all animation engines (`Unity Animator`, `Built-In GPU Engine`, `Rukhanka`, and `Animatron`).
 * Ability to add runtime pedestrian nodes for custom pedestrian routes or buildings.
 * Added methods for adding runtime custom roads by custom chunks to reduce overhead across the frame during the creation of large maps at runtime.
 * Added a new parameter to reduce or prevent overtaking from the road side.⁠
@@ -28,6 +28,7 @@ Changed
 ~~~~~~~~~~~~
 
 * Improved parking navigation for traffic.
+* Improved `EasyRoads3D` generation.
 * Significantly improved performance of adding runtime roads for giant maps.
 
 Fixed
@@ -41,6 +42,7 @@ Fixed
 * Fixed the roundabout template when the entrance traffic node has a different lane number than the inner traffic nodes.
 * Fixed compatibility with latest `Polygon City` template.
 * Fixed collision avoidance for dots vehicles in traffic areas.
+* Fixed `Trigger and Destroy` type for `Traffic node`.
 
 [1.6.5] - 08-01-2026
 ------------

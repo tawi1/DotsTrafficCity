@@ -108,7 +108,7 @@ Pure GPU Skin
 How To Create
 """"""""""""""
 
-	#. Create :ref:` GPU prefabs <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
+	#. Create :ref:`GPU prefabs <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
 
 	#. Open in the scene `PedestrianCrowdSkinFactory`.
 	

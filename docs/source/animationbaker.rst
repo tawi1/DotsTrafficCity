@@ -16,7 +16,7 @@ How To Bake
 	
 		``Spirit604/Animation Baker``
 		
-	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context .
+	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context, or use existing one (**optional step**).
 	
 		``Spirit604/Animation Baker/Animation Collection``
 	
@@ -26,9 +26,13 @@ How To Bake
 	#. Add and customize desired animations data.
 	#. Assign collection in the `Animation collection` field.
 	
-		.. image:: /images/pedestrian/baker/window/animBaker1.png	
+		.. image:: /images/pedestrian/baker/window/animBaker1.png
 	
 	#. Customize texture :ref:`settings <animationBakerSettings>`.
+	#. By default, animations are taken from `TemplateClipData Interpolated` template when selected template type. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
+	
+		.. image:: /images/pedestrian/baker/window/animBaker1_1.png
+	
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians into `Skins` :ref:`field <animationBakedSourceData>`.
 	#. Drag & drop selected animations of pedestrians into the `Clips` :ref:`field <animationBakedSourceData>`.
 	

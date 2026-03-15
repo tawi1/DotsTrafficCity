@@ -52,6 +52,7 @@ How To Bake
 	
 		.. image:: /images/pedestrian/baker/window/animBaker3.png
 		
+	#. If you edit any settings, press the `Update texture` button.
 	#. After customizing all settings, press the `Save as new` button.
 	#. In the project view, check the prefab result.
 	

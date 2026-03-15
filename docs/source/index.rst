@@ -25,6 +25,7 @@ how to :ref:`install` the project.
    scene.rst
    samples.rst
    sound.rst
+   multiplayer.rst
    integration.rst
    debug.rst
    glossary.rst

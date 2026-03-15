@@ -30,16 +30,16 @@ How To Bake
 	
 	#. Customize texture & save path :ref:`settings <animationBakerSettings>`.
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians into `Skins` :ref:`field <animationBakedSourceData>`.
+	#. By default, animations are taken from `TemplateClipData Interpolated` template when selected template type. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
+	
+		.. image:: /images/pedestrian/baker/window/animBaker1_1.png
+	
 	#. Drag & drop selected animations of pedestrians into the `Clips` :ref:`field <animationBakedSourceData>`.
 	
 		.. image:: /images/pedestrian/baker/window/SourceDataExample.png
 		`Drag & drop example.`
-		
-	#. By default, animations are taken from `TemplateClipData Interpolated` template when selected template type. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
-	
-		.. image:: /images/pedestrian/baker/window/animBaker1_1.png
-		
-	#. Press the `Save as new` button.
+
+	#. Press the `Create new` button.
 	
 		.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 		`Multiple animation result example.`
@@ -52,10 +52,11 @@ How To Bake
 	
 		.. image:: /images/pedestrian/baker/window/animBaker3.png
 		
+	#. After customizing all settings, press the `Save as new` button.
 	#. In the project view, check the prefab result.
 	
 		.. image:: /images/pedestrian/baker/window/ResultExample.png
-		`AnimationData result example.`
+		`Prefab result example.`
 		
 .. _animationBakerHowToMulti:
 		

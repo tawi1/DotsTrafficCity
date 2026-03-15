@@ -28,7 +28,7 @@ How To Bake
 	
 		.. image:: /images/pedestrian/baker/window/animBaker1.png
 	
-	#. Customize texture :ref:`settings <animationBakerSettings>`.
+	#. Customize texture & save path :ref:`settings <animationBakerSettings>`.
 	#. By default, animations are taken from `TemplateClipData Interpolated` template when selected template type. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
 	
 		.. image:: /images/pedestrian/baker/window/animBaker1_1.png

@@ -16,6 +16,18 @@ How To Bake
 	
 		``Spirit604/Animation Baker``
 		
+	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context .
+	
+		``Spirit604/Animation Baker/Animation Collection``
+	
+		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
+			:scale: 50%
+	
+	#. Add and customize desired animations data.
+	#. Assign collection in the `Animation collection` field.
+	
+		.. image:: /images/pedestrian/baker/window/animBaker1.png	
+	
 	#. Customize texture :ref:`settings <animationBakerSettings>`.
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians into `Skins` :ref:`field <animationBakedSourceData>`.
 	#. Drag & drop selected animations of pedestrians into the `Clips` :ref:`field <animationBakedSourceData>`.
@@ -23,14 +35,22 @@ How To Bake
 		.. image:: /images/pedestrian/baker/window/SourceDataExample.png
 		`Drag & drop example.`
 		
-	#. Press the `Create new` button.
+	#. Press the `Save as new` button.
 	
 		.. image:: /images/pedestrian/baker/window/SourceDataResult1.png
 		`Multiple animation result example.`
 		
-	#. In the project view, check the `Animation Texture Data` result.
+	#. Enable `Animation binding` flag in the `Settings type`.
 	
-		.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
+		.. image:: /images/pedestrian/baker/window/animBaker2.png
+		
+	#. In the `Clip data` section, select each animation according to the :ref:`Animation Collection <animationGPUAnimationCollection>`.
+	
+		.. image:: /images/pedestrian/baker/window/animBaker3.png
+		
+	#. In the project view, check the prefab result.
+	
+		.. image:: /images/pedestrian/baker/window/ResultExample.png
 		`AnimationData result example.`
 		
 .. _animationBakerHowToMulti:
@@ -38,6 +58,7 @@ How To Bake
 How To Bake Multi-Mesh
 ------------
 
+	#. This only works for vertex skinning method.
 	#. Enable `Multimesh` type in the :ref:`Settings type <animationBakerSettings>`.
 	#. Customize modular character with desired skinned mesh renderers.
 	#. Add gameobjects with the desired attachments to the child of the desired bone **[optional]**.
@@ -62,7 +83,7 @@ Settings
 	* **Common** : shows common settings (custom offset & custom animation name).
 	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.
 	* **Animation binding** : shows binding settings of the :ref:`Animation collection <animationGPUAnimationCollection>`.
-	* **Multimesh** : allows you to bake animations with multi-skin renderers or with custom attachments **[v1.0.5+]**.
+	* **Multimesh** : allows you to bake animations with multi-skin renderers or with custom attachments **[vertex skinning method only]**.
 
 | **Add normal texture** : add normal texture.
 
@@ -115,15 +136,6 @@ How To Preview
 
 	.. image:: /images/pedestrian/baker/window/RefreshAlways.png
 
-.. _animationBakerBind:
-
-How To Bind
-^^^^^^^^^^^^^^^^^^^^^^
-
-#. Select :ref:`Animation collection <animationGPUAnimationCollection>` in the :ref:`settings <animationBakerSettings>`.
-#. Enable `Animation binding` type in the :ref:`Settings type <animationBakerSettings>`.
-#. In the `Clip data` select the animation from the :ref:`Animation collection <animationGPUAnimationCollection>` according to required animation.
-			
 Texture Data
 """"""""""""""
 
@@ -163,15 +175,7 @@ Buttons
 | **Save as new** : save the texture as a new asset.
 | **Override exist** : overrides existing texture & data.
 | **Clear** : clean up the texture.
-	
-.. _animationBakedAnimationData:	
 
-Animation Texture Data
-~~~~~~~~~~~~
-
-	.. image:: /images/pedestrian/baker/window/AnimationDataExample.png
-	`Example`.
-	
 Crowd GPU Animator
 ------------
 

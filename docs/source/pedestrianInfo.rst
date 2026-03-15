@@ -108,83 +108,27 @@ Pure GPU Skin
 How To Create
 """"""""""""""
 
-	#. :ref:`Create textures and animation sheets <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
-	#. Create :ref:`Animation Collection <animationGPUAnimationCollection>` from the project context .
-	
-		``Spirit604/Animation Baker/Animation Collection``
-	
-		.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
-	
-	#. Add and customize desired animations data.
+	#. Create :ref:` GPU prefabs <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
+
 	#. Open in the scene `PedestrianCrowdSkinFactory`.
 	
-		``Hub/Pools/Npc/Pedestrian/PedestrianCrowdSkinFactory``
+		``Hub/Pools/Npc/Pedestrian/PedestrianGPUSkinFactory``
 
-	#. Assign :ref:`Animation Collection <animationGPUAnimationCollection>` to `PedestrianCrowdSkinFactory`.
-	
-		.. image:: /images/pedestrian/baker/AddNewEntryPanelExample.png
-		
 	#. Click `+` to show `New Entry` panel.
 	
-		.. image:: /images/pedestrian/baker/NewEntry.png
+		.. image:: /images/pedestrian/baker/AddNewEntryPanelExample.png
 			
-	#. Select created :ref:`Baked Animation Sheet Data <animationTextureData>`.
+	#. Drag & drop prefabs.
 	
-		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample.png
-			
-	#. Open factory settings.
-	#. Select `Entry Key Source Type` to `Selected Mesh Name` (or select `Custom` if you want to enter the name manually).
+		.. image:: /images/pedestrian/baker/animBaker4.png
 	
-		.. image:: /images/pedestrian/baker/SettingsExample1.png
-		
-	#. Assign `Default Atlas Texture` (if selected pedestrians have the same texture material). **[optional step]**
-
-		.. image:: /images/pedestrian/baker/SettingsExample3.png
-			
-	#. One by one click `Select` and `Add entry` button. Or click the `Add all entries` button to add all entries in the container.	
+	#. Result example:
 	
-		.. image:: /images/pedestrian/baker/NewEntry2.png
-			
-	#. Turn on the `Find Related Animations` button.
-	
-		.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample2.png
-			
-	#. Generate Animation Material.
-		#. Assign main texture of selected model **[if missing]**.
-		#. Press the `Generate` button.
-	
-			.. image:: /images/pedestrian/baker/GenerateMaterialExample.png
-		
-	#. Select entry & assign animations:	
-	
-		#. **Animation baker binding:**
-			#. :ref:`Bind <animationBakerBind>` the animation on the baking texture step.
-		
-		#. **Manual way:**
-			#. In the inspector, select the animation that you want to assign to the selected character.
-		
-				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample.png
-				
-			#. Press the `Assign` button according to the selected animation in :ref:`Animation Texture Data <animationTextureData>`.
-		
-		#. **Automated way:**
-			#. Automatic assignment works if the animation in the list matches (or partially matches) the animation name in the selected container.
-			#. Press the `Auto Bind Animations` button.
-			#. Make sure, that all animations are assigned.
-			
-				.. image:: /images/pedestrian/baker/PedestrianAnimationsAssignExample2.png
-
-	#. Assign animations to each entry in the same way.
-	
-	#. Add custom optional animations for the desired pedestrians [optional step].
-		#. In the :ref:`Animation Collection <animationGPUAnimationCollection>` add new `Optional` animations.
-		#. Tick on `Show optional animation popup` in Pedestrian crowd skin factory settings.
-		#. Add desired optional animations in the character list of the factory.
-		#. Bind added animations.		
+		.. image:: /images/pedestrian/baker/animBaker5.png
 
 	#. Assign :ref:`Ragdolls <pedestrianRagdoll>` **[optional step]**.
 	
-		.. image:: /images/pedestrian/baker/PedestrianGPURagdolleExample.png
+		.. image:: /images/pedestrian/baker/animBaker6.png
 	
 	**Used in systems:**
 		* GPUAnimatorSystem
@@ -208,16 +152,7 @@ Animation authoring
 	`Example.`
 	
 * How to play animation described :ref:`here <pedestrianAnimation>`.
-			
-.. _animationTextureData:
 
-Animation Texture Data
-""""""""""""""
-
-Data about baked animations in texture (:ref:`How to create <animationBakerHowTo>`). 
-	
-	.. image:: /images/pedestrian/baker/PedestrianAnimationSheetDataExample3.png	
-	
 Crowd GPU Custom Animator
 """"""""""""""
 

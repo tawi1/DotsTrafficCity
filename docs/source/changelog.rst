@@ -861,7 +861,7 @@ Added
 ~~~~~~~~~~~~
 
 * New align custom straight road feature :ref:`along the surface <snapLine>`. 
-* New animation baker clip :ref:`binding <animationBakerBind>`. 
+* New animation baker clip binding. 
 
 Fixed
 ~~~~~~~~~~~~

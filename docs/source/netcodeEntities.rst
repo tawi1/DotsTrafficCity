@@ -10,7 +10,7 @@ NetCode For Entities
 	.. image:: /images/multiplayer/netcode1.png
 
 * In the :ref:`Cull config <cullConfig>`, make sure `Multiplayer Calculate Distance` or `Multiplayer Camera View` type.
-* Add a new gameObject to the subscene with the `NetcodeCullPointPrefab` component and assign the `NetcodeCullPoint` prefab to it. The sample scene contains this prefab by default.
+* Add a new gameobject to the subscene with the `NetcodeCullPointPrefab` component and assign the `NetcodeCullPoint` prefab to it. The sample scene contains this prefab by default.
 * Import & open `NetCode demo scene` for sample.
 
 NetCode Sample

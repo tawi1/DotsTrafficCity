@@ -13,7 +13,7 @@ Where To Find
 Limitations
 ------------
 
-* Roundabouts are not currently supported.
+* Roundabouts are not currently supported for runtime scene.
 
 Getting Started
 ------------

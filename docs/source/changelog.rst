@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.7.0] - In progress
+[1.7.0] - 21-03-2026
 ------------
 
 Added
@@ -23,6 +23,8 @@ Added
 * Added position handles for the default type of segments.
 * Added mono vehicles to `Polygon city` template.
 * Added choise for entity types in the `Hub` selection window
+* Added 3 new weapons to the `Demo Mono` scene.
+* Added `Roundabout` support for `Road constructor` editor scene.
 
 Changed
 ~~~~~~~~~~~~
@@ -30,6 +32,8 @@ Changed
 * Improved parking navigation for traffic.
 * Improved `EasyRoads3D` generation.
 * Significantly improved performance of adding runtime roads for giant maps.
+* All of the demo city scenes prefabs have been moved to separate presets.
+* Improved `Roundabout` template workflow.
 
 Fixed
 ~~~~~~~~~~~~

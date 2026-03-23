@@ -25,6 +25,7 @@ Added
 * Added choise for entity types in the `Hub` selection window
 * Added 3 new weapons to the `Demo Mono` scene.
 * Added `Roundabout` support for `Road constructor` editor scene.
+* Added Unity 6.4 support.
 
 Changed
 ~~~~~~~~~~~~

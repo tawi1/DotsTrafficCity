@@ -95,4 +95,8 @@ Steps
 	
 #. **TrafficNode** & **PedestrianNode** layers are **required** for :ref:`TrafficNode <trafficNode>` & :ref:`PedestrianNode <pedestrianNode>` prefabs accordingly, others are optional, read more about project layers :ref:`here <layerInfo>`.
 #. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.
+#. In the appeared `License Manager` window, enter your `invoice ID <https://support.unity.com/hc/en-us/articles/205790859-How-can-I-get-an-invoice-for-an-Asset-Store-purchase>`_ .
+
+	.. image:: /images/gettingstarted/License.png
+
 #. The next step is :ref:`to set up the new scene <cityCreation>` or launch the existing :ref:`Demo <demoOpening>` or :ref:`Demo Mono <demoMonoOpening>` scene.

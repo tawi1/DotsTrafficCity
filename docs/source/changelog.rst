@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.7.0] - 21-03-2026
+[1.7.0] - 23-03-2026
 ------------
 
 Added
@@ -29,6 +29,7 @@ Added
 Changed
 ~~~~~~~~~~~~
 
+* Improved the performance of some high-loaded systems.
 * Improved parking navigation for traffic.
 * Improved `EasyRoads3D` generation.
 * Significantly improved performance of adding runtime roads for giant maps.

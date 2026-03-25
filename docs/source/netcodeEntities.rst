@@ -3,7 +3,7 @@
 NetCode For Entities
 =====
 
-* Install `NetCode for Entities` package.
+* Install `NetCode for Entities <https://docs.unity3d.com/Packages/com.unity.netcode@1.13/manual/index.html>`_ package.
 * Unpack ``DotsCity/Packages/Upgrades/NetcodePrefabs`` package if you installed Netcode manually; otherwise, it was unpacked automatically.
 * In the player settings set `Run In Background`.
 

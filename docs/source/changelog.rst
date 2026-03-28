@@ -3,6 +3,20 @@
 Change Log
 ************
 
+[1.7.1] - 28-03-2026
+------------
+
+Changed
+~~~~~~~~~~~~
+
+* Added a new clear job for hashmap systems.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed physics culling for dots physics cars.
+* Fixed baking order for simple physics cars to avoid a potential exception.
+
 [1.7.0] - 25-03-2026
 ------------
 

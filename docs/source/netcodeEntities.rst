@@ -15,6 +15,9 @@ NetCode For Entities
 * Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate a few players locally **(optional)**. 
 * Import & open `NetCode demo scene` for sample.
 
+	.. note:: 
+		By default, only `NetCode demo scene` sample works out of the box.	
+
 NetCode Sample
 ============================
 

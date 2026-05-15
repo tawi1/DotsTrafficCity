@@ -16,7 +16,7 @@ NetCode For Entities
 * Import & open `NetCode demo scene` for sample.
 
 	.. note:: 
-		By default, only `NetCode demo scene` sample works out of the box.	
+		By default, only `NetCode demo scene` sample works out of the box.
 
 NetCode Sample
 ============================

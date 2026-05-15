@@ -3,6 +3,18 @@
 Change Log
 ************
 
+[1.7.2] - 15-05-2026
+------------
+
+Added
+~~~~~~~~~~~~
+
+* New crowd avoidance navigation method [beta].
+* Added a new feature: the temporary ragdoll will now get up after being hit by a car.
+* New ability to link custom user's runtime NPCs with the pedestrian system.
+* Add pathfinding support for parking nodes.
+* Added ability to turn on ignoring traffic lights by the traffic.
+
 [1.7.1] - 28-03-2026
 ------------
 

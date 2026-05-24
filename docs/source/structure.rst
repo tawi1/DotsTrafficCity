@@ -67,34 +67,53 @@ Road Parent
 
 The root of all crossroads in the scene.
 
-	.. image:: /images/road/installation/RoadParent.png
+.. image:: /images/road/installation/RoadParent.png
+   :alt: Road Parent Component View
+   :align: center
 
 How To Use
 """"""""""""""
 
-You read more :ref:`here <roadInstallation>`.
+Read more in the :ref:`Road Installation <roadInstallation>` section.
 
 Settings
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""
 
-| **Connection waypoint offset** : automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
-| **Cast distance** : raycast connection distance between :ref:`Traffic nodes <trafficNode>`, if zero, then infinite value.
-| **Multi angle raycast** : multi-angle raycasting along Z-axis.
-| **Connect crosswalks** : auto-connect :ref:`Pedestrian node <pedestrianNode>` crosswalks
+Connection waypoint offset
+  Automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
+
+Cast distance
+  Raycast connection distance between :ref:`Traffic nodes <trafficNode>`. If set to zero, the value is infinite.
+
+Multi angle raycast
+  Multi-angle raycasting along the Z-axis.
+
+Connect crosswalks
+  Auto-connect :ref:`Pedestrian node <pedestrianNode>` crosswalks.
 
 Utils
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""
 
-| **Add crossroads** : adds scene crossroad if missing.
-| **Connect pedestrian nodes** : automatically connects :ref:`pedestrian nodes <pedestrianNode>` that configured :ref:`auto-connection <pedestrianNodeConnections>`.
-| **Clear unattached paths** : delete the :ref:`paths <path>` that are not connected to any a :ref:`TrafficNode <trafficNode>`.
+Add crossroads
+  Adds a scene crossroad if it is missing.
+
+Connect pedestrian nodes
+  Automatically connects :ref:`pedestrian nodes <pedestrianNode>` that have :ref:`auto-connection <pedestrianNodeConnections>` configured. 
+
+Clear unattached paths
+  Deletes the :ref:`paths <path>` that are not connected to any :ref:`TrafficNode <trafficNode>`.
 
 Buttons
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""
 
-| **Connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
-| **Force connect segments** : creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes (if a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, then the path will be overridden).
-| **Bake path data** : :ref:`bake <bakingInfo>` road data. 
+Connect segments
+  Creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
+
+Force connect segments
+  Creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes. If a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, the path will be overridden. [cite: 38]
+
+Bake path data
+  Bakes the road data (:ref:`read more about baking <bakingInfo>`).
 
 .. _subsceneGenerator:
 

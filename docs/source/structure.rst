@@ -35,7 +35,9 @@ Project Scenes
 Scene Hierarchy
 ----------------
 
-	.. image:: /images/road/sceneStructure.png
+.. image:: /images/road/sceneStructure.png
+   :alt: Scene Hierarchy Diagram
+   :align: center
 	
 .. _mainScene:
 	
@@ -118,87 +120,121 @@ Bake path data
 .. _subsceneGenerator:
 
 Entity Subscene Generator
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	.. image:: /images/road/installation/HubInfo.png
+.. image:: /images/road/installation/HubInfo.png
+   :alt: Entity Subscene Generator View
+   :align: center
 
 Where To Find
 """"""""""""""
 
-#. Create :ref:`city base <cityCreation>` **[if missing, optional step]**.
-#. Select :ref:`Hub <hub>` in the scene.
+1. Create a :ref:`city base <cityCreation>` **[if missing, optional step]**.
+2. Select the :ref:`Hub <hub>` in the scene.
 
 How To Use
 """"""""""""""
 
-You read more :ref:`here <roadEntitySubscene>`.
+Read more in the :ref:`Road Entity Subscene <roadEntitySubscene>` section.
 
 Settings
 """"""""""""""
 
-| **Entity subscene save path** : save path of :ref:`subscene <subscene>`.
-| **Entity subscene name** : name of :ref:`subscene <subscene>`.
-| **Autosync configs** : on/off auto-sync config on :ref:`main scene <mainScene>` & :ref:`subscene <subscene>`.
-| **Move tools** : on/off moving of following tools: :ref:`PedestrianNode Creator <pedestrianNodeCreator>`, :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
-| **Move lights** : on/off moving of :ref:`subscene <trafficLightObject>`.
-| **Move props** : on/off moving of :ref:`props <propsInfo>`.
-| **Move surface** : on/off moving of the selected physics surface.
-| **Copy physics shapes** : on/off feature of physics shape :ref:`cloning <physicsShapeTransfer>`.
+Entity subscene save path
+  Save path of the :ref:`subscene <subscene>`.
+
+Entity subscene name
+  Name of the :ref:`subscene <subscene>`.
+
+Autosync configs
+  On/off auto-sync config on the :ref:`main scene <mainScene>` & :ref:`subscene <subscene>`.
+
+Move tools
+  On/off moving of the following tools: :ref:`PedestrianNode Creator <pedestrianNodeCreator>`, :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
+
+Move lights
+  On/off moving of the :ref:`subscene <trafficLightObject>` lights.
+
+Move props
+  On/off moving of :ref:`props <propsInfo>`.
+
+Move surface
+  On/off moving of the selected physics surface.
+
+Copy physics shapes
+  On/off feature of physics shape :ref:`cloning <physicsShapeTransfer>`.
 
 Config
 """"""""""""""
 
-| **Copy to subscene** : :ref:`subscene <subscene>` configs will be synchronised with the :ref:`main scene <mainScene>`.
-| **Copy from subscene** : :ref:`main scene <mainScene>` configs will be synchronised with the :ref:`subscene <subscene>`.
+Copy to subscene
+  The :ref:`subscene <subscene>` configs will be synchronized with the :ref:`main scene <mainScene>`.
+
+Copy from subscene
+  The :ref:`main scene <mainScene>` configs will be synchronized with the :ref:`subscene <subscene>`.
 
 Buttons
 """"""""""""""
 
-| **Generate** : generates :ref:`subscene <subscene>`.
-| **Move back** : move road from :ref:`subscene <subscene>` to the :ref:`main scene <mainScene>` (can be useful for editing roads in the :ref:`main scene <mainScene>` due to `Editor` performance).
+Generate
+  Generates the :ref:`subscene <subscene>`.
 
+Move back
+  Move the road from the :ref:`subscene <subscene>` to the :ref:`main scene <mainScene>` (can be useful for editing roads in the :ref:`main scene <mainScene>` due to Editor performance).
+  
 PedestrianNode Transfer Service
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tool for cloning :ref:`Pedestrian nodes <pedestrianNode>` that are part of the prefab from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>` .
+Tool for cloning :ref:`Pedestrian nodes <pedestrianNode>` that are part of the prefab from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
 
-	.. image:: /images/road/installation/PedestrianNodeTransferService.png
+.. image:: /images/road/installation/PedestrianNodeTransferService.png
+   :alt: PedestrianNode Transfer Service View
+   :align: center
 	
-	.. note:: For example, can be useful to separate the `Building prefab` asset and its attached :ref:`Pedestrian nodes <pedestrianNode>`.
-	
+.. note:: For example, can be useful to separate the `Building prefab` asset and its attached :ref:`Pedestrian nodes <pedestrianNode>`.
+
 How To Use
 """"""""""""""
 
-Automatically used by :ref:`Entity Subscene Generator <subsceneGenerator>`.
+Automatically used by the :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
 .. _physicsShapeTransfer:
 
 PhysicsShape Transfer Service
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * This tool only works for `DOTS` if the `DOTS` simulation type is selected in the :ref:`General Settings <generalSettingsConfig>`.
-* Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`. 
-* There is also a tool exists to maintain both the `default physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, so that `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_  classes.
+* Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
+* There is also a tool to maintain both the `default physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, so that `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_ classes.
 
 Current project use cases:
-	* Keep `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
-	* Cloning of physical shapes from the :ref:`main scene <mainScene>` to be split them into subscene pieces by using :ref:`SubSceneChunk Creator <subSceneCreator>` or cloned into the :ref:`main subscene <subscene>` by using :ref:`Entity Subscene Generator <subsceneGenerator>`.
+  * Keep `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
+  * Cloning of physical shapes from the :ref:`main scene <mainScene>` to split them into subscene pieces by using :ref:`SubSceneChunk Creator <subSceneCreator>` or cloned into the :ref:`main subscene <subscene>` by using :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
-	.. note:: The tool can only use one tool at a time, either an :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.
+.. note:: The tool can only use one tool at a time, either an :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.
 
 Settings
 """"""""""""""
 
-	.. image:: /images/road/installation/PhysicsShapeTransferService.png
+.. image:: /images/road/installation/PhysicsShapeTransferService.png
+   :alt: PhysicsShape Transfer Service Settings View
+   :align: center
 
-| **Clean components** : removes all components from the physics shape.
-| **Clean childs** : removes all childs from the physics shape.
-| **Search type** : searching shapes by layer or tag.
+Clean components
+  Removes all components from the physics shape.
 
-**Proccesing type** : 
-	* **Stay previous** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>`, useful to keep `default collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `Unity.Physics collider <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ running at the same time.
-	* **Disable collider** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>` and disable it in the main scene.
+Clean childs
+  Removes all childs from the physics shape.
 
-**Preinit layer** : enable :ref:`pre-init <extendedStateList>` cull state for physics objects.
+Search type
+  Searching shapes by layer or tag.
 
-| **New layer** : assigns new layer for cloned shape.
+Proccesing type
+  * **Stay previous** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>`, useful to keep `default collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `Unity.Physics collider <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ running at the same time.
+  * **Disable collider** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>` and disable it in the main scene.
+
+Preinit layer
+  Enable :ref:`pre-init <extendedStateList>` cull state for physics objects.
+
+New layer
+  Assigns new layer for cloned shape.

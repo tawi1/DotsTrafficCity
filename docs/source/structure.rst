@@ -110,7 +110,7 @@ Connect segments
   Creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
 
 Force connect segments
-  Creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes. If a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, the path will be overridden. [cite: 38]
+  Creates the :ref:`automatically generated paths <autoPathConnection>` for all paths of :ref:`external <trafficNodeConnectionInfo>` nodes. If a path was previously created & autopath lock is off for the :ref:`Traffic node <trafficNode>`, the path will be overridden.
 
 Bake path data
   Bakes the road data (:ref:`read more about baking <bakingInfo>`).

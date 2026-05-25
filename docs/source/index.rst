@@ -17,7 +17,6 @@ how to :ref:`install` the project.
    gettingstarted
    road.rst
    traffic.rst
-   pedestrian.rst
    player.rst
    npc.rst
    streaming.rst
@@ -25,7 +24,6 @@ how to :ref:`install` the project.
    scene.rst
    samples.rst
    sound.rst
-   multiplayer.rst
    integration.rst
    debug.rst
    glossary.rst

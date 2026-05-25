@@ -18,16 +18,9 @@ Phase 2: Path & Node Creation
 #. Create the :ref:`necessary paths <pathCreator>` using the editor tools.
 #. Configure specific path parameters such as speed limits, traffic groups, and lanes (read more about :ref:`path customization <pathCustomize>`).
 #. Connect the adjacent road segments together. For detailed instructions on automation and manual tools, see the :ref:`How To Connect Roads <howToConnectRoad>` guide.
-#. Create the necessary :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`PedestrianNode Creator <pedestrianNodeCreator>` if your city requires walking NPCs.
 #. Adjust the :ref:`Traffic lights <trafficLight>` and intersection timings.
 
-Phase 3: Advanced Elements (Optional)
--------------------------------------
-
-* **Traffic Areas:** Create :ref:`Traffic Areas <trafficArea>` if your map includes specific zones like congested parking lots.
-* **Public Transport:** Set up :ref:`Public Routes <trafficPublicRoute>` if you are planning to use :ref:`Buses or Trains <trafficPublic>` with predefined routes.
-
-Phase 4: Baking & Subscenes
+Phase 3: Baking & Subscenes
 ---------------------------
 
 #. Select the **Road Parent** component in the hierarchy.
@@ -63,7 +56,6 @@ Steps:
 	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the :ref:`Hub <hub>`).
 	#. On/off copy physics shapes feature (read more about :ref:`physics shape transferring <physicsShapeTransfer>`) **[required if you plan to use DOTS physics]**.
 	#. Press the `Generate` button.
-	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 
 .. _configEdit:
 

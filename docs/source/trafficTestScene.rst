@@ -140,23 +140,6 @@ High speed change lane
 		
 	.. image:: /images/testscenes/traffic/ChangeLaneTest8.png
 	`Test case result.`	
-	
-	
-.. _trafficTestSceneParking:
-	
-Check Traffic Parking
-~~~~~~~~~~~~
-
-Config :ref:`parameters <trafficCarParkingConfig>`.
-
-	.. image:: /images/testscenes/traffic/ParkingTest1.png
-	`Source settings.`
-	
-	.. image:: /images/testscenes/traffic/ParkingTest2.png
-	`Source car.`	
-	
-	.. image:: /images/testscenes/traffic/ParkingTest3.png
-	`Test case result.`	
 
 .. _trafficTestSceneTrafficReverse:
 	

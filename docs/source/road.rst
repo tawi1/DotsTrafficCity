@@ -17,8 +17,4 @@ Road
 		/pathCreator.rst
 		/path.rst
 		/trafficLight.rst
-		/pedestrianNode.rst
-		/trafficArea.rst
-		/trafficPublicRoute.rst	
-		/runtimeRoad.rst	
 		/roadConfigs.rst	

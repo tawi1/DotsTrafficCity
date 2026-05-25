@@ -15,7 +15,6 @@ Available Types
 
 * :ref:`Traffic nodes <trafficNode>`.
 * :ref:`Path <path>`.
-* :ref:`Pedestrian Node <pedestrianNode>`.
 * :ref:`Traffic Light Object <trafficLightObject>`.
 * :ref:`Traffic Light Handler <trafficLightHandler>`.
 * :ref:`Traffic Light Crossroad <trafficLightCrossroad>`.

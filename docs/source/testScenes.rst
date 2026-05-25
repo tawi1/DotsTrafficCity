@@ -7,5 +7,4 @@ Test Scenes
 		:maxdepth: 2
 
 		/trafficTestScene.rst
-		/pedestrianTestScenes.rst
 		/commonTestScenes.rst

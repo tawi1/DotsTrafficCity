@@ -8,25 +8,12 @@ Structure
 Project Scenes
 ----------------
 
-#. **Demo** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
-#. **Demo Mono** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
-#. **Demo source** : same as `Demo` scene, but contains raw 3D models without optimization, also scene :ref:`streaming objects <sceneStreaming>` are disabled, including :ref:`static physics colliders <physicsShapeTransfer>`.
-#. **RuntimeTile Road Demo** : :ref:`sample scene <runtimeTileDemo>` showing how to create a city builder based on tiles (runtime spline can be used with `Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_ plugin). **(new)**
-#. **RuntimeTile Road Mobile Demo** : :ref:`sample scene <runtimeTileDemo>` showing how to create a city builder based on tiles *[mobile version]*. **(new)**
-#. **Runtime ChunkRoad Demo** : :ref:`sample scene <chunkRoadDemo>` demonstrating the road chunks added at runtime. **(new)**
-#. **Runtime CustomRoad Demo** : :ref:`sample scene <customRoadDemo>` to demonstrate the use of the `API` to generate run-time roads from `Unity` spline roads or from custom data. **(new)**
-#. **Runtime RawData Demo** : :ref:`sample scene <customRoadDemo>` that demonstrates the generation of a road from raw data at runtime. **(new)**
-#. **Custom Train Demo** : an example of how a 3rd party train solution can be integrated. **(new)**
+#. **Demo Lite** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
+#. **Demo Mono Lite** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
 #. **Traffic test scene** : :ref:`traffic test scene <trafficTestScene>` where all parameters can be tested with a set of most :ref:`traffic <trafficCar>` situations.
-#. **Pedestrian test scene** : :ref:`pedestrian test scene <pedestrianTestScene>` where the workability of entities can be tested.
 #. **Props test scene** : :ref:`props test scene <propsTestScene>` where the workability of entities can be tested.
-#. **City stress scene** : stress scene that combines thousands of :ref:`vehicles <trafficCar>` and :ref:`pedestrians <pedestrian>`.
-#. **City stress scene mobile** : mobile version of `City stress scene`.
 #. **Traffic stress scene** : stressed scene is extremely crowded with :ref:`vehicles <trafficCar>`.
 #. **Traffic stress scene mobile** : mobile version of `Traffic stress scene`.
-#. **Pedestrian stress scene** : stressed scene is extremely crowded with :ref:`pedestrians <pedestrian>`.
-#. **Pedestrian stress scene mobile** : mobile version of `Pedestrian stress scene`.
-#. **Pedestrian animation stress scene** : performance scene comparison between :ref:`Unity Animator <pedestrianHybridLegacy>` animations and :ref:`GPU animations <pedestrianGPU>`.
 #. **Vehicle physics stress scene** : stress scene for the thousands cars with :ref:`Custom vehicle controller <customPhysicsVehicle>`.
 #. **Vehicle custom physics test scene** : scene for testing various parameters of the :ref:`Custom vehicle controller <customPhysicsVehicle>`.
 
@@ -90,17 +77,11 @@ Cast distance
 Multi angle raycast
   Multi-angle raycasting along the Z-axis.
 
-Connect crosswalks
-  Auto-connect :ref:`Pedestrian node <pedestrianNode>` crosswalks.
-
 Utils
 """"""""""""""
 
 Add crossroads
   Adds a scene crossroad if it is missing.
-
-Connect pedestrian nodes
-  Automatically connects :ref:`pedestrian nodes <pedestrianNode>` that have :ref:`auto-connection <pedestrianNodeConnections>` configured. 
 
 Clear unattached paths
   Deletes the :ref:`paths <path>` that are not connected to any :ref:`TrafficNode <trafficNode>`.
@@ -150,7 +131,7 @@ Autosync configs
   On/off auto-sync config on the :ref:`main scene <mainScene>` & :ref:`subscene <subscene>`.
 
 Move tools
-  On/off moving of the following tools: :ref:`PedestrianNode Creator <pedestrianNodeCreator>`, :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
+  On/off moving of the following tools: :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
 
 Move lights
   On/off moving of the :ref:`subscene <trafficLightObject>` lights.
@@ -182,17 +163,6 @@ Generate
 Move back
   Move the road from the :ref:`subscene <subscene>` to the :ref:`main scene <mainScene>` (can be useful for editing roads in the :ref:`main scene <mainScene>` due to Editor performance).
   
-PedestrianNode Transfer Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Tool for cloning :ref:`Pedestrian nodes <pedestrianNode>` that are part of the prefab from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
-
-.. image:: /images/road/installation/PedestrianNodeTransferService.png
-   :alt: PedestrianNode Transfer Service View
-   :align: center
-	
-.. note:: For example, can be useful to separate the `Building prefab` asset and its attached :ref:`Pedestrian nodes <pedestrianNode>`.
-
 How To Use
 """"""""""""""
 
@@ -208,7 +178,6 @@ PhysicsShape Transfer Service
 * There is also a tool to maintain both the `default physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ and the `DOTS physical world <https://docs.unity3d.com/2022.2/Documentation/Manual/PhysicsOverview.html>`_ at the same time, so that `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `DOTS colliders <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-shapes.html>`_ exist at the same time if you need to use `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ in `MonoBehaviour <https://docs.unity3d.com/ScriptReference/MonoBehaviour.html>`_ classes.
 
 Current project use cases:
-  * Keep `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to work with :ref:`Legacy ragdoll <pedestrianRagdoll>`.
   * Cloning of physical shapes from the :ref:`main scene <mainScene>` to split them into subscene pieces by using :ref:`SubSceneChunk Creator <subSceneCreator>` or cloned into the :ref:`main subscene <subscene>` by using :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
 .. note:: The tool can only use one tool at a time, either an :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.

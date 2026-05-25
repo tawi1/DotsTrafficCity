@@ -44,7 +44,7 @@ If you want your own script to spawn player car, follow these steps:
 
 	.. image:: /images/configs/player/PlayerCarHybridMono.png
 
-#. Add the `Bounds runtime authoring` & `Velocity runtime authoring`  components to your prefab if you want to have :ref:`calculated collisions <pedestrianCollisionType>` with pedestrians. *(optional step)*
+#. Add the `Bounds runtime authoring` & `Velocity runtime authoring` components to your prefab. *(optional step)*
 
 	.. image:: /images/configs/player/PlayerCarBounds.png
 	`Bounds component example.`

@@ -33,7 +33,7 @@ Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref
 | **Distance for streaming in** : distance at what the road section is loaded.
 | **Distance for streaming out** : distance at what the road section is unloaded.
 | **Section cell size** : cell size of the road section.
-| **Node cell size** : node size for :ref:`TrafficNode <trafficNode>` and :ref:`PedestrianNode <pedestrianNode>` in order to compute a unique position hash for them.
+| **Node cell size** : node size for :ref:`TrafficNode <trafficNode>` in order to compute a unique position hash for them.
 
 .. _streamingLevelConfig:
 

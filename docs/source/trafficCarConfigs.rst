@@ -12,7 +12,6 @@ Traffic Car Spawner Config
 | **Preferable count** : maximum number of cars in the city.
 | **HashMap capacity** : initial capacity of the hashmap that contains the data of the traffic cars.
 | **Max spawn count by iteration** : maximum number of cars that will be spawned in one iteration.
-| **Max parking cars** : maximum number of parked in the city.
 | **Min/Max spawn delay** : minimum/maximum duration between spawns.
 | **Min spawn distance** : minimum distance for spawning between cars.
 	
@@ -318,31 +317,11 @@ Config to calculate npc obstacles (:ref:`example<trafficCarNpcObstacleDebugger>`
 	.. image:: /images/configs/traffic/TrafficCarNpcObstacleConfig.png
 	``Hub/Configs/TrafficCarConfigs/NpcObstacleConfig``
 	
-| **Obstacle pedestrian action state** : the car only reacts to pedestrians with the selected :ref:`Action State<pedestrianActionState>`.
 | **Check distance** : obstacle calculation length.
 | **Square length** : length of the obstacle calculation square.
 | **Side offset X** : width of the obstacle calculation square.
 | **Max Y diff** : maximum difference in Y-axis position between the car and the npc.
-	
-.. _trafficCarParkingConfig:
-	
-Traffic Parking Config
-------------
 
-Config for parking cars (:ref:`test scene <trafficTestSceneParking>`).
-
-	.. image:: /images/configs/traffic/TrafficCarParkingConfig.png
-	``Hub/Configs/TrafficCarConfigs/ParkingConfig``
-
-| **Precise Aligmentn At Node** : on/off precise positioning of the car's parking space.
-| **Rotation speed** : rotation speed.
-| **Complete angle** : angle at which the rotation is complete.
-| **Precise position** : on/off minor driving correction speed to parking point.
-| **Movement speed** : on/off minor driving correction speed to parking point.
-| **Achieve distance** : on/off minor driving correction speed to parking point.
-
-	.. note :: Read more about :ref:`parking states <trafficParking>`.
-		
 .. _trafficCarAntistuckConfig:
 		
 Traffic Antistuck Config
@@ -386,7 +365,6 @@ Config to load `Navmesh obstacles <https://docs.unity3d.com/2022.2/Documentation
 
 	.. note::
 		* `NavMeshObstacle <https://docs.unity3d.com/2022.2/Documentation/Manual/class-NavMeshObstacle.html>`_ loading is enabling in the :ref:`Traffic Settings <trafficNavMeshObstacle>` config.
-		* Make sure, that the pedestrians have :ref:`NavMesh navigation <pedestrianNavmeshNavigation>`.
 		* Make sure, that the `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ is generated.
 		
 .. _trafficAvoidanceConfig:

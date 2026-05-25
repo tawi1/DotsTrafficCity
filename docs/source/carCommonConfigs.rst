@@ -20,8 +20,6 @@ Car Engine Damage System Settings
 Car Ignition Config
 ------------
 
-Config used by :ref:`parking states <trafficParking>`.
-
 	.. image:: /images/configs/cars/CarIgnitionConfig.png
 	
 | **Has ignition** : on/off ignition state of the car when the NPCs enters the car.
@@ -38,8 +36,6 @@ Config used by :ref:`parking states <trafficParking>`.
 	
 Car Stopping Engine Config
 ------------
-
-Config used by :ref:`parking states <trafficParking>`.
 
 	.. image:: /images/configs/cars/CarStoppingEngineConfig.png
 	

@@ -44,7 +44,6 @@ Settings
 	* **Left** : left-hand lanes have traffic lights.
 	* **Right and left** : right and left lanes have traffic lights.
 	
-| **Has crollwalk** : quick on/off crosswalk option for pedestrians.
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
 | **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegment <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
 | **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <autoPathConnection>`).
@@ -56,29 +55,14 @@ Traffic Node Type
 Default
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Parking
-^^^^^^^^^^^^^^^^^^^^^^
-	
-Node where cars are :ref:`parked <trafficArea>` (read more :ref:`parking states <trafficParking>`).
-	
-Traffic public stop
-^^^^^^^^^^^^^^^^^^^^^^
-
-Node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
-	
 Destroy vehicle
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Node where the vehicle entity is destroyed (useful for nodes outside the map).
-	
-Traffic area
-^^^^^^^^^^^^^^^^^^^^^^
 
-:ref:`TrafficArea node <trafficArea>`.
-	
 Idle
 ^^^^^^^^^^^^^^^^^^^^^^
-	
+
 Node where the vehicle is idling.
 
 Trigger

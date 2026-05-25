@@ -41,8 +41,6 @@ Spawn a traffic car in a custom position using user code.
 
 		public class TrafficSpawnExample : MonoBehaviour
 		{
-		private EntityQuery pedestrianSettingsQuery;
-		private EntityQuery prefabContainerQuery;
 		private EntityQuery graphQuery;
 		private EntityQuery entityGraphQuery;
 		private TrafficSpawnerSystem trafficSpawnerSystem;
@@ -81,7 +79,6 @@ Spawn a traffic car in a custom position using user code.
 			Debug.Log($"Spawned {entity.Index}");
 		}
 		}
-		
 		
 Density
 ~~~~~~~~~~~~

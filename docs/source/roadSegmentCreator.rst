@@ -28,7 +28,6 @@ How To Use
 #. In the other tab, you can convert any :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
 #. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
 #. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
-#. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
 #. Customize :ref:`light settings<roadSegmentCreatorLightSettings>`.
 #. Customize :ref:`path settings<roadSegmentCreatorPathSettings>`.
 #. Add :ref:`RoadSegment<roadSegment>` to the :ref:`RoadParent <roadParent>` as children.
@@ -313,11 +312,6 @@ Extrude Lane
 	.. image:: /images/road/roadSegment/creator/ExtrudeLaneExample.gif
 	`Example.`
 	
-Parking Builder
-""""""""""""""
-
-:ref:`Parking Builder info <roadSegmentCreatorParkingBuilder>`.
-	
 Custom Settings
 """"""""""""""
 	
@@ -388,25 +382,6 @@ Custom settings
 ~~~~~~~~~~~~ 
 
 :ref:`Custom settings <roadSegmentCreatorCustomSettings>`.
-
-.. _roadSegmentCreatorPedestrianSettings:
-
-Pedestrian node settings
-~~~~~~~~~~~~ 
-
-	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png	
-
-| **Add pedestrian nodes** : add a :ref:`pedestrian nodes <pedestrianNode>` to the segment.
-| **Unique crosswalk offset** : set up a unique offset for the selected crosswalk.
-| **Crosswalk offset** : set up a common offset for the crosswalks.
-| **Pedestrian route width** : :ref:`pedestrian route width <pedestrianNodeSettings>`.
-| **Custom crosswalk** : on/off selected crosswalk.
-| **Has crosswalk** : on/off :ref:`crosswalk <trafficNodeSettings>` for pedestrians.
-
-**Pedestrian corner connection type:**
-	* **Disabled**
-	* **Corner** : will be created corner :ref:`pedestrian node <pedestrianNode>` to connect crosswalks.
-	* **Straight** : crosswalks will be connected directly.
 
 .. _roadSegmentCreatorLightSettings:
 
@@ -546,193 +521,6 @@ Hotkeys
 ~~~~~~~~~~~~ 
 
 | **Capslock** : rotate segment by 90° degree.
-
-
-.. _roadSegmentCreatorParkingBuilder:
-
-Parking Builder
-------------
-
-A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
-
-`Youtube tutorial. <https://youtu.be/1F-8J0WC83Y>`_
-
-How To Use
-~~~~~~~~~~~~ 
-		
-#. Position a :ref:`custom segment <roadSegmentCreatorCustomSegment>` on the road where the parking spaces will be.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment.png
-		
-#. Set the size of the parking slot (:ref:`settings <roadSegmentCreatorParkingBuilderCommonSettings>`).
-
-#. Enable position handle
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample1.png
-		
-#. Position the parking pointer where you want the line to start.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment2.png
-	
-#. Enable rotation handle and set the rotation of the parking slot by dragging a circle in the scene.
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample2.png
-	
-#. Set the object parking line to `parking line` and rotate the direction of the parking line by dragging a circle in the scene.
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/ParkingBuilderExample3.png
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings1.png
-
-#. Enter the :ref:`number of parking slots <roadSegmentCreatorParkingBuilderCommonSettings>`.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment3.png
-	
-#. Open the :ref:`Path <roadSegmentCreatorParkingBuilderPath>` tab.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentPathTab.png
-	
-#. Toggle on `Show select path buttons` option.
-#. Select the source path in the scene.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment4.png
-
-#. Select the `Enter` tab and press the `Create` button.
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings2.png
-	
-#. In the created path create additional waypoint nodes by pressing `+` in the scene.
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment6.png	
-
-#. Customize :ref:`Traffic Group <pathTrafficGroup>`, :ref:`Initial speed limit <roadSegmentCreatorParkingBuilderPath>` and :ref:`Node Clone Count <roadSegmentCreatorParkingBuilderPath>` parameters.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings3.png
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment7.png
-	
-#. Open the `Offsets` tab and adjust the position handle for each node individually if required **[optional]**.		
-#. Repeat the same steps (11 - 14) for the :ref:`exit path <roadSegmentCreatorParkingBuilderPath>`.
-
-	.. _roadSegmentCreatorParkingBuilderPathExample:
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment10.png
-	
-#. Open :ref:`Pedestrian <roadSegmentCreatorParkingBuilderPedestrian>` tab.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings5.png
-	
-#. Customize `Weight`, `Parking node offset` and `Parking enter node offset`
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment11.png
-	`Blue circle - enter parking car PedestrianNode. Green circle - default PedestrianNode linked to the parking PedestrianNode.` 
-		
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment12.png
-	`Preview parking line result.`
-	
-#. Press `Create Line` button.
-	
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment13.png
-	`Create line result.`
-	
-#. :ref:`Connect the pedestrian nodes <pedestrianNodeCreator>` to the :ref:`pedestrian nodes <pedestrianNode>` of the city.
-
-	.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegment14.png
-	
-	.. note::
-		Created lines can be edited or deleted in the `Created lines` tab.
-			.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
-
-Settings
-~~~~~~~~~~~~ 
-
-.. _roadSegmentCreatorParkingBuilderCommonSettings:
-
-Common
-""""""""""""""
-
-	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderCommon.png
-
-| **Place count** : number of parking slots.
-| **Parking place spacing offset** : distance between parking slots.
-
-**Line object type:** 
-	* **Parking place** : handle parking place.
-	* **Parking line** : handle parking line.
-	
-**Handles:**
-	* **None** : no handles.
-	* **Position** : enabled position handle for the place or line.
-	* **Rotation** : enabled rotation handle for the place or line.
-	
-| **Line start point local** : local parking line start position.
-| **Place size** : parking lot size.
-| **Node direction** : local direction of the :ref:`TrafficNode <trafficNode>` in the parking place.
-| **Line direction** : local direction of the parking line.
-	
-.. _roadSegmentCreatorParkingBuilderPath:
-
-Path
-""""""""""""""
-
-	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPath.png
-
-**Parking connection source type** :
-	* **Path** [paths will be connected to the `Parking source path` (:ref:`PathPoint connection <pathPointConnection>`)]
-		* **Parking source path** : path from which the created parking slot paths will start and end.
-		* **Show select path buttons** : on/off display exist paths of the segment to add a parking source path.
-	* **Node** [paths will be connected to the selected `TrafficNodes` (:ref:`TrafficNode connection <trafficNodeConnection>`)]
-		* **Source TrafficNode** : node from which the created parking slot paths will start.
-		* **Target TrafficNode** : node to which the paths connected from the parking place.
-	* **Single node** [paths will be connected to the selected single `TrafficNode` (same node for enter & exit paths)]
-		* **Source TrafficNode** : enter & exit :ref:`TrafficNode <trafficNode>` for parking :ref:`paths <path>` are the same.
-
-| **Auto recalculate parking paths** : paths ends will be recalculated when changing the position of the parking line.
-
-**Rail type:**
-	* **None** : :ref:`Rail Movement <trafficRail>` is disabled.
-	* **Enter only** : the vehicles entering the car park have a :ref:`Rail Movement <trafficRail>`.
-	* **Exit only** : the vehicles leaving the car park have a :ref:`Rail Movement <trafficRail>`.
-	* **Enter & exit** : enter & exit paths have a :ref:`Rail Movement <trafficRail>`.
-
-| **Traffic mask group** : :ref:`group <pathTrafficGroup>` of the vehicles that allowed on the parking.
-| **Show edit path parking buttons** : on/off edit (add & remove) buttons of the path.
-
-**Handles Panel:**
-	* **None** : handles disabled.
-	* **Handles** : position handles of the path enabled for first parking place.
-	* **Offsets** : position handles for all parking places.
-	
-**Path Selection Panel:**
-	* **None** : displayed `Enter` & `Exit` paths.
-	* **Enter** : displayed only `Enter` paths.
-		* **Initial path speed limit** : initial speed limit of `Enter` paths.
-		* **Node clone count** : number of nodes in the next paths that are will clone position from source path.
-	* **Exit** : displayed only `Exit` paths
-		* **Initial path speed limit** : initial speed limit of exit paths.
-		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
-		
-Node
-""""""""""""""
-
-	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderNode.png
-
-| **Place TrafficNode type** : :ref:`TrafficNode type <trafficNodeSettings>`.
-| **Parking TrafficNode weight** : :ref:`TrafficNode weight <trafficNodeSettings>`.
-| **Node custom achieve distance** : custom distance to achieve a node (if 0 value default value will be taken).
-	
-.. _roadSegmentCreatorParkingBuilderPedestrian:
-	
-Pedestrian
-""""""""""""""
-
-	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPedestrian.png
-
-| **Add parking pedestrian nodes** : add an :ref:`entry parking node <pedestrianNode>` and a :ref:`node <pedestrianNode>` linking it. 
-| **Parking pedestrian node type** : :ref:`parking node type <pedestrianNodeSettings>`.
-| **Auto connect nodes** : auto connect created entry parking node and nearby created node.
-| **Parking pedestrian node weight** : :ref:`weight <pedestrianNodeSettings>` entry parking node.
-| **Parking node offset** : :ref:`entry parking node <pedestrianNode>` offset relative to :ref:`traffic nodes <trafficNode>`.
-| **Parking enter node offset** : :ref:`node <pedestrianNode>` that connected to :ref:`entry parking node <pedestrianNode>` relative to :ref:`traffic nodes <trafficNode>`.
 
 .. _roadSegmentCreatorAuto:
 

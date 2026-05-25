@@ -28,7 +28,6 @@ Settings
 | **Draw editor traffic path** : on/off :ref:`path <path>` visualisation in the scene in `Editor`.
 **Draw entity traffic path** : on/off entity :ref:`path <path>` visualisation in the scene at runtime.
 	* **Draw entity traffic node connection** : on/off draw :ref:`TrafficNode <trafficNode>` entity connection debug at runtime.
-**Draw pedestrian connection path** : on/off :ref:`PedestrianNode <pedestrianNode>` connection visualisation in the scene in the `Editor`.
 	
 .. _pathDataViewer:
 

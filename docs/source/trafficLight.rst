@@ -44,11 +44,8 @@ How To Assign Light
 #. Select :ref:`H0 <trafficLightGlobalLightObjectDescription>` or :ref:`H1 <trafficLightGlobalLightObjectDescription>` depending on the desired light index.
 #. Next, select the desired :ref:`T <trafficLightGlobalLightObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
 #. Now, the selected :ref:`TrafficNode <trafficNode>` will have the selected  :ref:`TrafficLightHandler <trafficLightHandler>`.
-#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing the :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
+#. In the same way, you can assign :ref:`Light objects <trafficLightObject>` by changing the :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
 
-	.. image:: /images/road/trafficLight/GlobalLightViewPedestrianConnection.png
-	`Pedestrian node connection example.`
-	
 	.. image:: /images/road/trafficLight/GlobalLightViewLightConnection2.png
 	`Light object connection example.`
 
@@ -102,7 +99,6 @@ Connection Settings
 **Light connection type** : 
 	* **All** : show all connection types.
 	* **Traffic node** : show :ref:`traffic node <trafficNode>` connection only.
-	* **Pedestrian node** : show :ref:`pedestrian node <pedestrianNode>` connection only.
 	* **Light** : show light object connection only.
 | **Show connection buttons** : show connection buttons for selected `Light connection type`.
 | **Lights index** : objects with a selected :ref:`light index <trafficLightIndex>` are displayed (-1 value - all indexes are displayed).
@@ -126,13 +122,11 @@ SceneView Light Objects Description
 Select:
 	* H0/H1 : :ref:`TrafficLightHandler <trafficLightHandler>` (index 0, index 1).
 	* T0/T1/T : :ref:`TrafficNode <trafficNode>` (index 0, index 1, no index).
-	* P0/P1/P : :ref:`PedestrianNode <pedestrianNode>` (index 0, index 1, no index).
 	* L0/L1/L : :ref:`Light object <trafficLightObject>` (index 0, index 1, no index).
 
 Unselect:
 	* H- : unselect :ref:`TrafficLightHandler <trafficLightHandler>`.
 	* T- : unselect :ref:`TrafficNode <trafficNode>`.
-	* P- : unselect :ref:`PedestrianNode <pedestrianNode>`.
 	* L- : unselect :ref:`Light object <trafficLightObject>`.
 
 	.. image:: /images/road/trafficLight/GlobalLightAllConnections.png

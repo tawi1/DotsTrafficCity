@@ -8,7 +8,7 @@ Minimum **Unity** version:
 
 **Required packages:**
 	* `Entities 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.2/manual/index.html>`_
-	* `Entities.Graphics 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.2/manual/index.html>`_ [not required for :ref:`Mono <hybridMonoVehicle>` cars & :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrians]
+	* `Entities.Graphics 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.2/manual/index.html>`_ [not required for :ref:`Mono <hybridMonoVehicle>` cars]
 	* `Unity.Physics 1.2.0 <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/index.html>`_ [not required for :ref:`Mono <hybridMonoVehicle>` cars]
 	* `Custom Physics Authoring <https://docs.unity3d.com/Packages/com.unity.physics@1.2/manual/custom-samples-physics-components.html>`_ [not required for :ref:`Mono <hybridMonoVehicle>` cars]
 	* `Unity.Collections 2.4.0 <https://docs.unity3d.com/Packages/com.unity.collections@2.4/manual/index.html>`_
@@ -22,11 +22,7 @@ Limitations
 ============
 
 * WebGL not supported.
-* Built-in RP only works with :ref:`Mono <hybridMonoVehicle>` cars & :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrians.
 * Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
-* `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with sceletal bone animation in pure `DOTS <https://unity.com/dots>`_ space is currently available if you have `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ otherwise (available only :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations).
-* `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles only calculated with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
-* :ref:`Ragdoll <pedestrianRagdoll>` currently only collides with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_. For DOTS Ragdolls, you need the `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_.
 
 Package Installation
 ============
@@ -61,19 +57,6 @@ Steps
 			
 	.. _packageInstallationOptional:
 	
-#. Click `Load Optional Packages` to start downloading the optional packages *(optional package,* :ref:`git <gitFix>` *required)*.
-
-	.. note::
-		**Optional packages:**
-			* **Reese's DOTS Navigation** (`com.reese.path`) - Reese's DOTS navigation package for :ref:`navigating <pedestrianNavigation>` on the NavMesh (`original git <https://github.com/reeseschultz/ReeseUnityDemos>`_) (the project uses the `604spirit's fork version <https://github.com/tawi1/ReeseUnityDemos>`_).
-		
-	.. note::
-		**Script define symbols required for the project:**
-			* **REESE_PATH**	
-		
-	.. warning::
-		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
-			
 #. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 9-11 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
@@ -93,7 +76,7 @@ Steps
 	.. image:: /images/gettingstarted/LayerSettings.png
 		:scale: 70%
 	
-#. **TrafficNode** & **PedestrianNode** layers are **required** for :ref:`TrafficNode <trafficNode>` & :ref:`PedestrianNode <pedestrianNode>` prefabs accordingly, others are optional, read more about project layers :ref:`here <layerInfo>`.
+#. **TrafficNode** layer is **required** for :ref:`TrafficNode <trafficNode>` prefab, others are optional, read more about project layers :ref:`here <layerInfo>`.
 #. Open `Project settings` tab & press `Add all scenes to build` if you want to add demo scenes to your project.
 #. In the appeared `License Manager` window, enter your `invoice ID <https://support.unity.com/hc/en-us/articles/205790859-How-can-I-get-an-invoice-for-an-Asset-Store-purchase>`_ .
 

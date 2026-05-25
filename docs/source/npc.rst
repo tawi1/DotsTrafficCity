@@ -16,4 +16,4 @@ Npc Common Config
 	
 | **Npc HashMap capacity** : initial capacity of the hashmap containing data about the NPC (position, state, etc...). 
 	
-	.. note:: HashMap contains pedestrian npcs, common nps and player npcs.	
+	.. note:: HashMap contains common nps and player npcs.	

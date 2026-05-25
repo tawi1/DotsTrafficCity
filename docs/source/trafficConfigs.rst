@@ -8,5 +8,4 @@ Traffic Configs
 		:maxdepth: 2
 
 		/trafficCarConfigs.rst
-		/trafficPublicConfigs.rst
 		/carCommonConfigs.rst

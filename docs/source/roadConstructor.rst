@@ -10,10 +10,6 @@ Where To Find
 
 	`Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_
 
-Limitations
-------------
-
-* Roundabouts are not currently supported for runtime scene.
 
 Getting Started
 ------------
@@ -88,38 +84,6 @@ Editor Scene
 #. In the :ref:`Hub <subsceneGenerator>`, generate the subscene.
 #. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>`.
 #. The next step is to set up `Vehicles`_
-
-Runtime Scene
-------------
-
-#. Add the `RUNTIME_ROAD` scripting define to the `Player Settings` of the project.
-#. Open `RoadConstructorDemoPlayer` scene.
-#. Create a new gameobject & add `RuntimeRoadManagerCustom` & `RC_RuntimeSceneGenerator` components.
-
-	.. image:: /images/integration/rc4.png	
-	
-#. In the `RC_RuntimeSceneGenerator` assign `RuntimeRoadManagerCustom` & `Road Constructor` references from the scene in the inspector.
-#. Set or duplicate any existing :ref:`Light State Container <sharedLightStates>` & assign it in the `Inspector`.
-
-	.. image:: /images/integration/rc7.png	
-	
-#. Adjust any necessary settings in the `Inspector`. 
-#. Select `Road Constructor` on the scene.
-#. Select collider to `Non Convex` if you plan to use vehicles with physics **[optional step]**
-
-	.. image:: /images/integration/rc5.png	
-	
-#. Select the layer of the ground collider according to your vehicle's ground raycasting. **[optional step]**	
-
-	.. image:: /images/integration/rc8.png	
-	
-#. Tick on `Add Traffic comp`.
-	
-	.. image:: /images/integration/rc6.png	
-		
-#. In the :ref:`Hub <subsceneGenerator>` object in the scene, generate the subscene.
-#. The next step is to set up `Vehicles`_
-#. Launch the scene & place the roads.
 
 Vehicles
 ------------

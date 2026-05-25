@@ -101,7 +101,4 @@ Sounds
 
 * **Ignition** : playback during engine start of the vehicle.
 * **Idle** : idle sound of the vehicle.
-* **Driving** : plays when pedestrian or player driving the vehicle.
 * **Horn** : plays when the horn of the vehicle is active.
-* **Enter car** : plays when pedestrian or player enters vehicle.
-* **Exit car** : plays when pedestrian or player exits vehicle.		

@@ -11,8 +11,6 @@ Debug
 
 		/trafficDebug.rst
 		/trafficNodeDebug.rst
-		/pedestrianDebug.rst
-		/pedestrianNodeDebug.rst
 		/pathDebug.rst
 		/trafficObjectFinder.rst
 		/commonDebug.rst

@@ -58,7 +58,7 @@ Scene Streaming
 Road Streaming
 ~~~~~~~~~~~~
 
-Road Streaming is needed to split the map into chunks to create huge maps, so that road entities: :ref:`TrafficNodes <trafficNode>`, :ref:`PedestrianNodes <pedestrianNode>`, etc. are only loaded where the player is.
+Road Streaming is needed to split the map into chunks to create huge maps, so that road entities: :ref:`TrafficNodes <trafficNode>`, etc. are only loaded where the player is.
 
 `Youtube tutorial. <https://youtu.be/yoNqa0yjIYA>`_
 
@@ -67,7 +67,7 @@ How To Adjust
 
 #. Enable streaming in the :ref:`Road Streaming Config <roadStreamingConfig>` to load road sections at the runtime.
 #. Adjust load/unload distance and section cell size.
-#. :ref:`TrafficNode <trafficNode>`, :ref:`PedestrianNode <pedestrianNode>`, :ref:`TrafficLightHandler <trafficLightHandler>` automatically attaches to related :ref:`RoadSegment <roadSegment>`.
+#. :ref:`TrafficNode <trafficNode>`, :ref:`TrafficLightHandler <trafficLightHandler>` automatically attaches to related :ref:`RoadSegment <roadSegment>`.
 #. :ref:`Traffic lights <trafficLightObject>` has a :ref:`SectionObjectAuthoring <sectionObject>` component.
 #. If you want to add your own section object, add the :ref:`SectionObjectAuthoring <sectionObject>` component and select the appropriate `Section object type`.
 #. :ref:`Debug streaming <sectionDebugger>` distance and section size.

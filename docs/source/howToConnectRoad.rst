@@ -74,4 +74,8 @@ Merge Connection
       :alt: Selecting Segment for Merge
       :align: center
 
-#. Drag the :ref:`Traffic node <trafficNode>` close to another segment's node. They will automatically merge into a single connection point.
+#. Drag the :ref:`Traffic node <trafficNode>` close to another segment's node. They will automatically merge into a single connection point (purple colour).
+
+   .. image:: /images/road/installation/howToConnect7.png
+      :alt: Completed merge
+      :align: center

@@ -258,7 +258,7 @@ How To Use
 #. Select the `New node settings type` & create a new :ref:`TrafficNode <trafficNode>` by pressing the `Add Traffic Node` button **[optional step]**.
 #. :ref:`Place <roadSegmentCreatorCustomSnapNodeSettings>` & rotate all created :ref:`TrafficNode <trafficNode>` according to your needs (make sure that the :ref:`rotation of the nodes <trafficNodeRotation>` is set correctly).
 #. :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the `Snap To Surface` button if required **[optional step]**.
-#. Open the :ref:`PathCreator tool <pathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>`.
+#. Open the :ref:`PathCreator tool <pathCreator>` to quickly create :ref:`paths <path>` between :ref:`nodes <trafficNode>` or :ref:`auto-generate <roadSegmentCreatorAuto>` crossroad.
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab.

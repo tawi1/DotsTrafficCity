@@ -1,29 +1,51 @@
 .. _roadNetworkWorkflow:
 
 Road Network Workflow
-=====
+=====================
 
-Creating the City Road System
-----------------
+This guide covers the full step-by-step process of building and configuring a functional city road network from scratch.
 
-#. Create initial :ref:`scene <cityCreation>` objects.
-#. Create the required :ref:`RoadSegments <roadSegment>`. And add them as children to the :ref:`RoadParent <roadParent>`.
-#. Create the :ref:`necessary paths <pathCreator>`. 
-#. Configure the :ref:`paths <pathCustomize>`. 
-#. Create the necessary :ref:`PedestrianNode <pedestrianNode>` using the :ref:`PedestrianNodeCreator <pedestrianNodeCreator>`.
-#. Adjust the :ref:`Traffic lights <trafficLight>`.
-#. Create the :ref:`Traffic Areas <trafficArea>`, for example if you have a congested car park **[optional step]**.
-#. Create the :ref:`Public Routes <trafficPublicRoute>` if you have :ref:`Public transport <trafficPublic>` with a given route **[optional step]**.
-#. Open the :ref:`Road Parent <roadParentInfo>`.
+Phase 1: Initial Setup
+----------------------
+
+#. Create the initial :ref:`scene base <cityCreation>` objects via the Unity toolbar.
+#. Create the required :ref:`Road Segments <roadSegment>`. 
+#. Add all created segments as children to the **Road Parent** object in your scene hierarchy.
+
+Phase 2: Path & Node Creation
+-----------------------------
+
+#. Create the :ref:`necessary paths <pathCreator>` using the editor tools.
+#. Configure specific path parameters such as speed limits, traffic groups, and lanes (read more about :ref:`path customization <pathCustomize>`).
+#. Connect the adjacent road segments together. For detailed instructions on automation and manual tools, see the :ref:`How To Connect Roads <howToConnectRoad>` guide.
+#. Create the necessary :ref:`Pedestrian nodes <pedestrianNode>` using the :ref:`PedestrianNode Creator <pedestrianNodeCreator>` if your city requires walking NPCs.
+#. Adjust the :ref:`Traffic lights <trafficLight>` and intersection timings.
+
+Phase 3: Advanced Elements (Optional)
+-------------------------------------
+
+* **Traffic Areas:** Create :ref:`Traffic Areas <trafficArea>` if your map includes specific zones like congested parking lots.
+* **Public Transport:** Set up :ref:`Public Routes <trafficPublicRoute>` if you are planning to use :ref:`Buses or Trains <trafficPublic>` with predefined routes.
+
+Phase 4: Baking & Subscenes
+---------------------------
+
+#. Select the **Road Parent** component in the hierarchy.
 	
-	.. _roadParent:
+   .. image:: /images/road/installation/RoadParent.png
+      :alt: Road Parent Inspector View
+      :align: center
 
-	.. image:: /images/road/installation/RoadParent.png
+#. Click the **Bake** button. 
+   
+   .. warning:: Data baking must be done after *every* road modification and strictly before entering Play Mode. For more details, see :ref:`Baking Info <bakingInfo>`.
 
-#. Press `Force connect` button to connect segments (make sure all segments are :ref:`on one line <trafficNodeConnectionInfo>`).
-#. Press the `Bake` button (should be done after each road edit & before starting the scene, for more info the :ref:`bake info <bakingInfo>`).
-#. Create the :ref:`subscene <roadEntitySubscene>` **(one-time procedure)**.
-#. For further changes to roads and configs, read the :ref:`Road <roadEdit>` editing workflow & to sync both scenes, read the :ref:`Config <configEdit>` editing workflow.
+#. Generate the :ref:`Entity Subscene <roadEntitySubscene>`. This is a **one-time procedure** to convert standard GameObjects into high-performance DOTS entities.
+
+Next Steps
+----------
+
+For any further modifications to existing roads, layouts, or runtime parameters, please refer to the :ref:`Road Editing Workflow <roadEdit>`.
 
 .. _roadEntitySubscene:
 

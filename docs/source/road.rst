@@ -8,6 +8,7 @@ Road
 		:maxdepth: 2
 
 		/roadInstallation.rst
+		/howToConnectRoad.rst
 		/roadSegment.rst
 		/roadSegmentCreator.rst
 		/bakingInfo.rst

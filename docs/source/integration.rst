@@ -8,11 +8,4 @@
 	
    easyroads.rst
    roadConstructor.rst
-   rukhanka.rst
-   agentsNavigation.rst
-   animatron.rst
-   citygen3d.rst
    microverseRoads.rst
-   astar.rst
-   fcg.rst
-   assetPacks.rst

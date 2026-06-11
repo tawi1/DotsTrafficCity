@@ -26,11 +26,11 @@ How To Use
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
 #. In the other tab, you can convert any :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
-#. Adjust :ref:`general settings<roadSegmentCreatorGeneralSettings>`.
-#. Adjust :ref:`custom settings<roadSegmentCreatorCustomSettings>`.
-#. Customize :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`.
-#. Customize :ref:`light settings<roadSegmentCreatorLightSettings>`.
-#. Customize :ref:`path settings<roadSegmentCreatorPathSettings>`.
+#. In the :ref:`general settings<roadSegmentCreatorGeneralSettings>` adjust lane count, lane width, crossroad width.
+#. In the :ref:`custom settings<roadSegmentCreatorCustomSettings>` adjust settings according its type.
+#. In the :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`, you can customize pedestrian crosswalks.
+#. In the :ref:`light settings<roadSegmentCreatorLightSettings>`, you can set offsets or disable traffic lights.
+#. In the :ref:`path settings<roadSegmentCreatorPathSettings>`, you can adjust speed limits & waypoints of the created intersection.
 #. Add :ref:`RoadSegment<roadSegment>` to the :ref:`RoadParent <roadParent>` as children.
 	
 .. _roadSegmentCreatorCustomSettings:

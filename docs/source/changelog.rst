@@ -9,7 +9,7 @@ Change Log
 Added
 ~~~~~~~~~~~~
 
-* Added transient forces for arcade vehicle controller to prevent slipping on incliced surfaces.
+* Added transient forces for arcade vehicle controller to prevent slipping on inclined surfaces.
 * Added support motorcycles & three-wheelers for arcade vehicle controller.
 * Added configurable boundary constraints for pedestrians on paths for crowd avoidance method.
 

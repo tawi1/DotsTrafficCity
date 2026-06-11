@@ -3,6 +3,22 @@
 Change Log
 ************
 
+[1.7.3] - 11-06-2026
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added transient forces for arcade vehicle controller to prevent slipping on incliced surfaces.
+* Added support motorcycles & three-wheelers for arcade vehicle controller.
+* Added configurable boundary constraints for pedestrians on paths for crowd avoidance method.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved EasyRoads3D road generation, depending on the prefabs that are used.
+* Improved traffic light auto reconnecting with global traffic light tool for merged traffic nodes.
+
 [1.7.2] - 15-05-2026
 ------------
 

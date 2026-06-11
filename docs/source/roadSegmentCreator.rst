@@ -29,7 +29,7 @@ How To Use
 #. In the :ref:`general settings<roadSegmentCreatorGeneralSettings>`, adjust lane count, lane width, crossroad width.
 #. In the :ref:`custom settings<roadSegmentCreatorCustomSettings>`, adjust settings according its type.
 #. In the :ref:`pedestrian node settings<roadSegmentCreatorPedestrianSettings>`, you can customize pedestrian crosswalks.
-#. In the :ref:`light settings<roadSegmentCreatorLightSettings>`, you can set offsets of the traffic lights or disable them
+#. In the :ref:`light settings<roadSegmentCreatorLightSettings>`, you can set offsets of the traffic lights or disable them.
 #. In the :ref:`path settings<roadSegmentCreatorPathSettings>`, you can enable traffic node handles, adjust speed limit & waypoints of the paths of the created intersection.
 #. Add :ref:`RoadSegment<roadSegment>` to the :ref:`RoadParent <roadParent>` as children.
 	

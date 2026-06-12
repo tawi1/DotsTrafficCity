@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.7.3] - 11-06-2026
+[1.7.3] - 12-06-2026
 ------------
 
 Added
@@ -18,6 +18,12 @@ Changed
 
 * Improved EasyRoads3D road generation, depending on the prefabs that are used.
 * Improved traffic light auto reconnecting with global traffic light tool for merged traffic nodes.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed warning message for ReactionCollisionSystem.
+* Fixed warning messages for Unity 6.4.
 
 [1.7.2] - 15-05-2026
 ------------

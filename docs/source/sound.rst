@@ -160,7 +160,7 @@ Built-in
 
 	.. image:: /images/sound/SoundDataBuiltin.png
 	
-| **Id** : immutable ID, by which sounds are triggered in `DOTS traffic city` (ID is created automatically).
+| **Id** : immutable ID, by which sounds are triggered in `DOTS traffic core` (ID is created automatically).
 | **Loop** : on/off sound looping.
 | **Clip volume** : volume of the audio clip.
 | **Random sound** : on/off random sound.
@@ -171,7 +171,7 @@ FMOD
 
 	.. image:: /images/sound/SoundDataExample.png
 	
-| **Id** : immutable ID, by which sounds are triggered in `DOTS traffic city` (ID is created automatically).
+| **Id** : immutable ID, by which sounds are triggered in `DOTS traffic core` (ID is created automatically).
 | **Name** : `event name <https://www.fmod.com/docs/2.02/studio/glossary.html#event>`_  of the sound.
 | **Parameters** : event `parameters <https://www.fmod.com/docs/2.02/studio/glossary.html#parameter>`_ .
 

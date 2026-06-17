@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'DOTS Traffic City'
+project = 'DOTS Traffic Core'
 copyright = '2026, 604Spirit'
 author = '604Spirit'
 

@@ -1,9 +1,9 @@
-Welcome to DOTS Traffic City documentation!
+Welcome to DOTS Traffic Core documentation!
 ===================================
 
-**DOTS Traffic City** is a tool for quickly creating performant city traffic.
+**DOTS Traffic Core** is a tool for quickly creating performant city traffic.
 
-You can buy it from `Unity Asset Store`: `DOTS Traffic City <https://assetstore.unity.com/packages/slug/280830>`_
+You can buy it from `Unity Asset Store`: `DOTS Traffic Core <https://assetstore.unity.com/packages/slug/280830>`_
 
 `Youtube tutorial playlist. <https://www.youtube.com/playlist?list=PLk8IsonsJZcg3tFA7HpUrKhSZhDJqF8vq>`_
 

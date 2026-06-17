@@ -3,6 +3,28 @@
 Change Log
 ************
 
+[1.7.4] - 17-06-2026
+------------
+
+Added
+~~~~~~~~~~~~
+
+* Added an additional safe distance parameter for changing lanes vehicles to prevent them from hitting the forward vehicle.
+* Added custom scaling support for road constructor roads.
+
+Changed
+~~~~~~~~~~~~
+
+* Improved global traffic light window for connecting merged traffic nodes with traffic light.
+* Improved path creator workflow with one-way roads to prevent incorrect connection side selection.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed a potential endless stuck during reverse avoidance.
+* Fixed potential wrong raycast detection if many mono cars are in use with physics enabled.
+* Fixed a warning message for the roundabout.
+
 [1.7.3] - 12-06-2026
 ------------
 

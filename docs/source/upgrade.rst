@@ -3,52 +3,23 @@
 Upgrade Guide
 =====
 
-v1.4.x to v1.5.x
+# Upgrading to Full Version (Quick Start)
 -------------------
 
-#. Make backup before importing the package.
-#. Import the package.
-#. After that, migration will started. This process can take up to 10 minutes.
-#. Fix any code error if it occurs.
-#. After the project has finished importing, if any asset or prefab references are lost, close `Unity` and clean up the `Library` folder. [optional]
+The upgrade process is fully automated across several phases to handle code compilation and package extraction cleanly. 
 
-v1.1.x & 1.2.x to v1.4.x
--------------------
+Instructions
+~~~~~~~~~~~~
 
-#. Make backup before importing the package.
-#. Import following file:
+#. **Start the Upgrade:** Locate the **Project Unpacker** asset in your project, select it, and click the **Update To Full** button in the Inspector.
+#. **Wait for Domain Reload:** Unity will clear the console, import core constants, and force a script compilation. The editor will briefly freeze—**do not close Unity** during this reload.
+#. **Automatic Package Extraction:** Once scripts are compiled, the system automatically triggers `OnScriptsReloaded` on the Main Thread. It will extract core packages, clone prefabs, and adapt your project settings (`PhaseImportingPackages`).
+#. **Completion:** When everything stabilizes, a final confirmation message will appear in your console: `"The project is upgraded"`.
 
-	.. image:: /images/faq/upgrade_v1.4.0.png
+Troubleshooting
+~~~~~~~~~~~~
 
-v1.0.x to v1.1.0
--------------------
-
-#. Make backup before importing the package.
-#. Delete the following folders:
-
- 	* `DotsCity/Scripts/`
-	* `Plugins/Spirit604/`
-	
-#. Import the package.
-#. Open `Package initialization window`.
-
-	.. image:: /images/faq/Layers_v_1_1_0_1.png
-		:scale: 50%
-	
-#. Select `Layer settings` tab.
-#. Untick `Import all project layers` option.
-#. Press `Import Collision Matrix` & `Apply` buttons.
-
-	.. image:: /images/faq/Layers_v_1_1_0_2.png
-		:scale: 50%
-	
-#. Remove old `Naughty attributes` package (if installed).
-#. Restart the `Unity`.
-#. If the scene has lost the references, close the Unity & delete this file:
-
-	* `[ProjectFolder]/Library/ArtifactDB`
-	
-#. The new project is ready.
+If the process is interrupted midway (due to an unexpected crash, closing the editor, etc.), it will not break your project. Simply select the **Project Unpacker** asset again and re-click **Update To Full** to restart the automated pipeline from scratch.
 
 .. _hdrp:
 

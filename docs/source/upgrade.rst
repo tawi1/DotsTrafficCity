@@ -3,7 +3,7 @@
 Upgrade Guide
 =====
 
-# Upgrading to Full Version (Quick Start)
+Upgrading to Full Version (Quick Start)
 -------------------
 
 The upgrade process is fully automated across several phases to handle code compilation and package extraction cleanly. 
@@ -11,6 +11,7 @@ The upgrade process is fully automated across several phases to handle code comp
 Instructions
 ~~~~~~~~~~~~
 
+#. **Create a Backup:** Before upgrading, make a complete backup of your project files (or commit your current state via Git) to prevent any accidental data loss.
 #. **Start the Upgrade:** Locate the **Project Unpacker** asset in your project, select it, and click the **Update To Full** button in the Inspector.
 #. **Wait for Domain Reload:** Unity will clear the console, import core constants, and force a script compilation. The editor will briefly freeze—**do not close Unity** during this reload.
 #. **Automatic Package Extraction:** Once scripts are compiled, the system automatically triggers `OnScriptsReloaded` on the Main Thread. It will extract core packages, clone prefabs, and adapt your project settings (`PhaseImportingPackages`).

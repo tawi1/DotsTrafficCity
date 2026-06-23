@@ -42,7 +42,7 @@ Requirements for Light Objects
 For the auto-connector to detect and link your traffic lights correctly, ensure that the following setup is met:
 
 * The root GameObject of the traffic light must contain both the **TrafficLightObjectAuthoring** and the :ref:`TrafficLightObject <trafficLightObject>` components.
-* Each child :ref:`TrafficLightFrame <trafficLightFrame>` component must have its **Index direction** property set strictly in accordance with where the physical frame (visor/lens) is facing. This direction is critical for the algorithm to properly align the traffic light orientation with the target road and traffic node.
+* Each child :ref:`TrafficLightFrame <trafficLightFrame>` component must have its **Index direction** property set strictly in accordance with where the physical frame (visor/lens) is facing. This direction is critical for the algorithm to properly align the traffic light orientation with the target road and traffic node. **A small ray is displayed in the Scene view to visualize this direction.**
 
 Execution Steps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -290,4 +290,4 @@ A child component that contains the data for the traffic light indicators.
 | **Yellow light** : yellow light :ref:`state <trafficLightState>` entity.
 | **Green light** : green light :ref:`state <trafficLightState>` entity.
 | **Initial light index** : initial :ref:`light index <trafficLightIndex>`.
-| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed in the scene.
+| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed in the scene. A small ray is displayed in the Scene view to visualize this direction.

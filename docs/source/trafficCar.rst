@@ -378,7 +378,8 @@ Follow these steps to set up the blocker for your vehicles:
 
 #. **Create a New Layer:** Open your Unity project settings and add a new layer (e.g., name it ``PlayerBlocker``).
 #. **Attach the Component:** Add the ``CarPlayerBlocker`` component to your vehicle's hull prefab.
-#. **Configure the Blocker:** * Assign the **Source Collider** and the **Physics Switcher**.
+#. **Configure the Blocker:** 
+	* Assign the **Source Collider** and the **Physics Switcher**.
 	* Set the **Player Blocker Layer** to the layer you created in Step 1.
 	* Click the **Create** button in the inspector. This will spawn a child GameObject named ``PlayerBlocker`` with a box collider and a kinematic rigidbody.
 #. **Configure the Layer Collision Matrix:**

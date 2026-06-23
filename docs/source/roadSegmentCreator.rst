@@ -369,6 +369,8 @@ Snap Node Settings
 **Auto round rotation:** : on/off rotation snapping.
 	* **Round angle** : snapping angle value.
 
+.. include:: roundabout.rst
+
 Components
 ------------
 

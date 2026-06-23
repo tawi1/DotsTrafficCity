@@ -403,7 +403,7 @@ Components
 General settings
 ~~~~~~~~~~~~ 
 
-	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings_2.png
 
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.

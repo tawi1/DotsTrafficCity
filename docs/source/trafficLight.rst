@@ -29,6 +29,39 @@ How To Customize City Crossroads
 #. Select the desired crossroad and press `Select`.
 #. In the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component, you can now set the timings.
 
+.. _trafficLightAutoConnection:
+
+How To Auto Connect Lights
+------------
+
+You can automatically reconnect traffic and pedestrian lights to their closest relevant road nodes using the built-in auto-connector tool.
+
+Requirements for Light Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For the auto-connector to detect and link your traffic lights correctly, ensure that the following setup is met:
+
+* The root GameObject of the traffic light must contain both the **TrafficLightObjectAuthoring** and the :ref:`TrafficLightObject <trafficLightObject>` components.
+* Each child :ref:`TrafficLightFrame <trafficLightFrame>` component must have its **Index direction** property set strictly in accordance with where the physical frame (visor/lens) is facing. This direction is critical for the algorithm to properly align the traffic light orientation with the target road and traffic node.
+
+Execution Steps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
+#. Expand the **Auto Light Connector** foldout section.
+#. Configure the following parameters:
+   
+   * **Raycast Distance**: Set the maximum search radius for finding nearby nodes.
+   * **Connect Only Missing**: If enabled, the system will skip lights that are already connected to a valid crossroad.
+   * **Traffic Lights**: Enable this checkbox to process vehicle traffic lights.
+   * **Pedestrian Lights**: Enable this checkbox to process pedestrian lights.
+   * **Pedestrian Name Pattern**: Enter a substring (e.g., ``Pedestrian``) to identify pedestrian light objects by their name.
+
+#. Click the **Reconnect Lights** button.
+
+.. note::
+   The tool performs a proximity and directional search. Vehicle lights will be linked to the closest aligned :ref:`TrafficNode <trafficNode>`, while pedestrian lights will look for a matching crosswalk node based on your name pattern.
+   
 How To Assign Light
 ------------
 

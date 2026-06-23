@@ -379,12 +379,12 @@ Follow these steps to set up the blocker for your vehicles:
 #. **Create a New Layer:** Open your Unity project settings and add a new layer (e.g., name it ``PlayerBlocker``).
 #. **Attach the Component:** Add the ``CarPlayerBlocker`` component to your vehicle's hull prefab.
 #. **Configure the Blocker:** * Assign the **Source Collider** and the **Physics Switcher**.
-   * Set the **Player Blocker Layer** to the layer you created in Step 1.
-   * Click the **Create** button in the inspector. This will spawn a child GameObject named ``PlayerBlocker`` with a box collider and a kinematic rigidbody.
+	* Set the **Player Blocker Layer** to the layer you created in Step 1.
+	* Click the **Create** button in the inspector. This will spawn a child GameObject named ``PlayerBlocker`` with a box collider and a kinematic rigidbody.
 #. **Configure the Layer Collision Matrix:**
-   * Navigate to **Project Settings -> Physics**.
-   * Locate the **Layer Collision Matrix** grid.
-   * For the ``PlayerBlocker`` layer, **untick all checkboxes** except for the layer used by your **Player** character/vehicle controller. 
+	* Navigate to **Project Settings -> Physics**.
+	* Locate the **Layer Collision Matrix** grid.
+	* For the ``PlayerBlocker`` layer, **untick all checkboxes** except for the layer used by your **Player** character/vehicle controller. 
 
 .. note:: 
    This matrix setup ensures the blocker collider interacts *only* with the player and remains completely invisible to traffic, NPCs, raycasts, and ground physics layers.

@@ -258,17 +258,17 @@ How To Use
 
 	* **Option A: Manual Connection (Fine-tuning)**
      
-		* Toggle on the :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter[cite: 67].
-		* Select the `New node settings type` and create new :ref:`TrafficNodes <trafficNode>` by pressing the **Add Traffic Node** button[cite: 68].
-		* :ref:`Place <roadSegmentCreatorCustomSnapNodeSettings>` and rotate all created nodes according to your needs (ensure correct :ref:`node rotation <trafficNodeRotation>`)[cite: 69].
-		* :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the **Snap To Surface** button if required[cite: 70].
-		* Open the manual :ref:`PathCreator tool <pathCreator>` to manually create and link :ref:`paths <path>` between the nodes[cite: 71].
+		* Toggle on the :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
+		* Select the `New node settings type` and create new :ref:`TrafficNodes <trafficNode>` by pressing the **Add Traffic Node** button.
+		* :ref:`Place <roadSegmentCreatorCustomSnapNodeSettings>` and rotate all created nodes according to your needs (ensure correct :ref:`node rotation <trafficNodeRotation>`).
+		* :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the **Snap To Surface** button if required.
+		* Open the manual :ref:`PathCreator tool <pathCreator>` to manually create and link :ref:`paths <path>` between the nodes.
 
 	* **Option B: Auto-Crossroads Mode (From Scratch)**
      
-		* Create and arrange your child :ref:`Traffic nodes <trafficNode>` inside this custom segment at the entry and exit points of the intersection[cite: 190].
-		* Open the **Path settings** tab and change **Additional Settings** to ``AutoCrossroad``[cite: 188].
-		* Press **Clear** to wipe any existing paths, then click **Create** to automatically calculate crossroad geometry and build all traffic paths[cite: 189, 190].
+		* Create and arrange your child :ref:`Traffic nodes <trafficNode>` inside this custom segment at the entry and exit points of the intersection.
+		* Open the **Path settings** tab and change **Additional Settings** to ``AutoCrossroad``.
+		* Press **Clear** to wipe any existing paths, then click **Create** to automatically calculate crossroad geometry and build all traffic paths.
 
 	* **Option C: Intersection Creation Mode (From Existing Scene Roads)**
      
@@ -284,9 +284,9 @@ How To Use
 		
 		* Click the **Create** button. The component will automatically match the node count, clone all settings from the selected scene nodes, align crosswalks, and build the intersection paths.
 
-#. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`[cite: 72].
+#. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
-	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab[cite: 72].
+	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab.
 	
 Settings
 ~~~~~~~~~~~~

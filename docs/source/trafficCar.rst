@@ -342,6 +342,53 @@ VehicleInput example code
 			}
 		}
 
+.. _carPlayerBlocker:
+
+Car Player Blocker
+^^^^^^^^^^^^^^^^^^^^^^
+
+The ``CarPlayerBlocker`` component is designed specifically for **Hybrid Mono** vehicles. It prevents a custom player physics controller from pushing or moving AI traffic vehicles upon collision. 
+
+It achieves this by dynamically creating an independent kinematic collider on a dedicated physics layer. This layer forces the player's controller to recognize the traffic car as an immovable obstacle, while the traffic car itself ignores this internal blocker collider to prevent self-jittering.
+
+.. note:: 
+   This component works **only** for vehicles with the `Hybrid entity mono physics` type. It does not affect Pure DOTS entities.
+
+How It Works
+""""""""""""""
+
+1. **Editor Generation:** The editor script copies the dimensions and center boundaries of your vehicle's main source collider (supports ``BoxCollider`` or ``MeshCollider``).
+2. **Layer Isolation:** It places this newly generated box collider onto a custom physics layer (e.g., `PlayerBlocker`).
+3. **Kinematic Rigidbody:** A kinematic ``Rigidbody`` is automatically attached to the blocker object, making it completely unyielding to the player's physical forces.
+4. **Collision Filtering:** At runtime (in ``Awake``), the script automatically configures Unity's physics engine to ignore collisions between the vehicle's driving colliders and this blocker collider.
+
+Inspector Parameters
+""""""""""""""""""""
+
+| **Source Collider** : The main physical collider of the traffic vehicle.
+| **Player Blocker Layer** : The physics layer intended to collide exclusively with your Player Controller.
+| **Size Offset** : Additional padding added to the blocker collider dimensions to detect or block the player slightly outside the mesh bounds.
+| **Physics Switcher** : Reference to the ``PhysicsSwitcher`` component to properly reset and synchronize collider states during culling.
+| **Created Collider** : The automatically generated ``BoxCollider`` slot.
+
+Step-by-Step Configuration
+""""""""""""""""""""""""""
+
+Follow these steps to set up the blocker for your vehicles:
+
+#. **Create a New Layer:** Open your Unity project settings and add a new layer (e.g., name it ``PlayerBlocker``).
+#. **Attach the Component:** Add the ``CarPlayerBlocker`` component to your vehicle's hull prefab.
+#. **Configure the Blocker:** * Assign the **Source Collider** and the **Physics Switcher**.
+   * Set the **Player Blocker Layer** to the layer you created in Step 1.
+   * Click the **Create** button in the inspector. This will spawn a child GameObject named ``PlayerBlocker`` with a box collider and a kinematic rigidbody.
+#. **Configure the Layer Collision Matrix:**
+   * Navigate to **Project Settings -> Physics**.
+   * Locate the **Layer Collision Matrix** grid.
+   * For the ``PlayerBlocker`` layer, **untick all checkboxes** except for the layer used by your **Player** character/vehicle controller. 
+
+.. note:: 
+   This matrix setup ensures the blocker collider interacts *only* with the player and remains completely invisible to traffic, NPCs, raycasts, and ground physics layers.
+   
 Components
 """"""""""""""
 

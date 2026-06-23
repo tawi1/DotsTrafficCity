@@ -256,7 +256,7 @@ How To Use
 #. Place the custom segment where you want it.
 #. Choose one of the following methods to create your intersection or layout:
 
-**Option A: Manual Connection (Fine-tuning)**
+Option A: Manual Connection (Fine-tuning)
 """"""""""""""
      
 * Toggle on the :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
@@ -265,14 +265,14 @@ How To Use
 * :ref:`Snap <roadSegmentCreatorCustomSnapNodeSettings>` :ref:`TrafficNodes <trafficNode>` to the surface by pressing the **Snap To Surface** button if required.
 * Open the manual :ref:`PathCreator tool <pathCreator>` to manually create and link :ref:`paths <path>` between the nodes.
 
-**Option B: Auto-Crossroads Mode (From Scratch)**
+Option B: Auto-Crossroads Mode (From Scratch)
 """"""""""""""
      
 * Create and arrange your child :ref:`Traffic nodes <trafficNode>` inside this custom segment at the entry and exit points of the intersection.
 * Open the **Path settings** tab and change **Additional Settings** to ``AutoCrossroad``.
 * Press **Clear** to wipe any existing paths, then click **Create** to automatically calculate crossroad geometry and build all traffic paths.
 
-**Option C: Intersection Creation Mode (From Existing Scene Roads)**
+Option C: Intersection Creation Mode (From Existing Scene Roads)
 """"""""""""""
      
 	.. note::

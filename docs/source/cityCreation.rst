@@ -15,7 +15,7 @@ Initial Components
 	
 #. This window appears for the first time:
 
-	.. image:: /images/gettingstarted/CityBase2.png
+	.. image:: /images/gettingstarted/CityBase2_2.png
 
 #. Select `Hub Base`.
 

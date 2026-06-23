@@ -21,4 +21,4 @@ Object Layers
 Misc Layers
 ~~~~~~~~~~~~
 		
-* **TraficCar [16]** : :ref:`Traffic car  <trafficCar>` layer. *[demo scene only, optional]*
+* **Traffic [16]** : :ref:`Traffic car  <trafficCar>` layer. *[demo scene only, optional]*

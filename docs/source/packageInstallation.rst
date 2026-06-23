@@ -38,11 +38,10 @@ Steps
 
 #. First time initialization window will appear automatically or you can open it manually from the toolbar ``604Spirit/CityEditor/Window/Package Initialization``.
 
-	.. image:: /images/gettingstarted/InitilizationWindow.png
+	.. image:: /images/gettingstarted/InitilizationWindow2.png
 		:scale: 50%
 
 #. Click `Load Packages` to start downloading the packages required for this tool.
-#. If you get the error 'No git executable was found', install the :ref:`git <gitFix>` on your PC (:ref:`how to install <gitFix>`) or download these packages from the store.
 
 	.. note::
 		**Required custom packages [is optional from version v1.1.0, but recommended]:**
@@ -57,7 +56,7 @@ Steps
 			
 	.. _packageInstallationOptional:
 	
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 9-11 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 7-9 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**

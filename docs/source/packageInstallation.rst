@@ -44,7 +44,7 @@ Steps
 #. Click `Load Packages` to start downloading the packages required for this tool.
 
 	.. note::
-		**Required custom packages [is optional from version v1.1.0, but recommended]:**
+		**Required custom packages [is optional from version v1.1.0 onwards, but is recommended for advanced users]:**
 			* **Extenject** (`com.svermeulen.extenject`) - library for injecting dependencies (`Extenject <https://assetstore.unity.com/packages/tools/utilities/extenject-dependency-injection-ioc-157735>`_).
 
 	.. note::

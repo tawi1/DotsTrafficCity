@@ -23,7 +23,7 @@ How To Use
 	* :ref:`Custom segment <roadSegmentCreatorCustomSegment>` used for intersection with custom shape.
 	* :ref:`Custom straight <roadSegmentCreatorCustomStraight>` used on straight roads with curves or long straight roads.
 
-	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
+	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings_2.png
 
 #. In the other tab, you can convert any :ref:`Standard shape <roadSegmentCreatorCustomSettings>` segment to a :ref:`Custom segment <roadSegmentCreatorCustomSegment>` for more flexibility (also check out the new :ref:`Auto-Crossroads <roadSegmentCreatorAuto>` feature for automatic crossroad generation).
 #. In the :ref:`general settings<roadSegmentCreatorGeneralSettings>`, adjust lane count, lane width, crossroad width.

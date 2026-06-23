@@ -24,5 +24,5 @@ Misc Layers
 ~~~~~~~~~~~~
 		
 * **CollidableNpc [15]** : player npc layer. *[demo scene built-in player, optional]*
-* **TraficCar [16]** : :ref:`Traffic car  <trafficCar>` layer. *[demo scene only, optional]*
+* **Traffic [16]** : :ref:`Traffic car  <trafficCar>` layer. *[demo scene only, optional]*
 * **Npc [17]** : :ref:`Pedestrian <pedestrianEntity>` npc layer. *[demo scene only, optional]*

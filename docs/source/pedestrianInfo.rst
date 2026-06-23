@@ -963,6 +963,8 @@ Entity can be retrieved if the NPC has a collider:
 				return entity;
 			}		
 
+.. include:: runtime_custom_npc.rst
+
 Common Info
 ----------------
 

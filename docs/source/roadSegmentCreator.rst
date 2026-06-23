@@ -287,7 +287,8 @@ How To Use
 
 * Click the **Create** button. The component will automatically match the node count, clone all settings from the selected scene nodes, align crosswalks, and build the intersection paths.
 
-* Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
+
+3. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab.
 	

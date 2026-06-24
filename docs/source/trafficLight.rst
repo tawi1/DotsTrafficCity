@@ -64,7 +64,7 @@ Execution Steps
    
 .. important::
 	If **DOTS Simulation** is enabled in your project settings and you want to use these traffic lights in the main scene during runtime, ensure that the **Is Active** checkbox is enabled on the **TrafficLightHybridService** component present in the scene. Without activating this option, scene traffic lights will not receive real-time state updates from the ECS simulation loop. 
-	*Note: If you are using the classic MonoBehaviour (Mono) simulation, this component is active by default and does not require manual toggling.*
+		*Note: If you are using the classic MonoBehaviour (Mono) simulation, this component is active by default and does not require manual toggling.*
 
 How To Assign Light
 ------------
@@ -301,3 +301,20 @@ A child component that contains the data for the traffic light indicators.
 | **Green light** : green light :ref:`state <trafficLightState>` entity.
 | **Initial light index** : initial :ref:`light index <trafficLightIndex>`.
 | **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed in the scene. A small ray is displayed in the Scene view to visualize this direction.
+
+.. _trafficLightHybridService:
+
+Traffic Light Hybrid Service
+----------------------------
+
+The ``TrafficLightHybridService`` component is responsible for synchronizing light states between the DOTS simulation ECS world and MonoBehaviour listeners/components on the scene.
+
+.. important::
+   If **DOTS Simulation** is enabled in your project settings and you want to use traffic lights in the main scene, you must ensure that the **Is Active** checkbox is enabled on the ``TrafficLightHybridService`` component present in the scene. Without activating this option, scene traffic lights will not receive real-time state updates from the ECS simulation loop.
+
+Settings
+~~~~~~~~
+
+* **Is Active**: Main toggle to enable or disable the hybrid synchronization. Only available and required when DOTS Simulation is active (for Mono simulation, it's active by default).
+* **Register Light States**: Enable this if you need to read the current light state of a crossroad from classic MonoBehaviour scripts using the ``GetLightState(int id)`` method.
+* **Register Light Entities**: Enable this if you need to dynamically force or modify the light states of ECS entities via standard scripts.

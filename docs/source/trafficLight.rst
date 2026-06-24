@@ -62,6 +62,10 @@ Execution Steps
 .. note::
    The tool performs a proximity and directional search. Vehicle lights will be linked to the closest aligned :ref:`TrafficNode <trafficNode>`, while pedestrian lights will look for a matching crosswalk node based on your name pattern.
    
+.. important::
+	If **DOTS Simulation** is enabled in your project settings and you want to use these traffic lights in the main scene during runtime, ensure that the **Is Active** checkbox is enabled on the **TrafficLightHybridService** component present in the scene. Without activating this option, scene traffic lights will not receive real-time state updates from the ECS simulation loop. 
+	*Note: If you are using the classic MonoBehaviour (Mono) simulation, this component is active by default and does not require manual toggling.*
+
 How To Assign Light
 ------------
 

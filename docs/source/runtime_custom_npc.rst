@@ -20,6 +20,8 @@ Prefab Structure & Requirements
 To ensure standard hybrid workflows and custom execution operate correctly, any custom runtime NPC prefab must include specific component references on its root GameObject.
 
 .. note::
+   Make sure that **Runtime Custom Npc** is enabled in the **General Settings** config. 
+   
    Since ``PedestrianEntityRef`` inherits directly from ``NpcHybridEntityRef``, you **only need to attach** ``PedestrianEntityRef``. Do not attach both components simultaneously.
 
 **Required Component Hierarchy:**

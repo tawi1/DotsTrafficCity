@@ -3,7 +3,25 @@
 Change Log
 ************
 
-[1.7.4] - 17-06-2026
+[1.7.5] - 27-06-2026
+------------
+
+Changed
+~~~~~~~~~~~~
+
+* Added updating from DOTS Traffic Core.
+* RuntimeGenerationUtils uses a separate runtime pool.
+* Moved subscene save path from the Hub prefab to the Editor prefs.
+* Changed empty & idle input systems running on main thread.
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed potential issue with vehicle navigation breaking after avoidance.
+* Impoved avoidance for vehicle for the crowd avoidance method.
+* Fixed issue of losing focus on the inspector when entering the first number for the speed limit.
+
+[1.7.4] - 18-06-2026
 ------------
 
 Added
@@ -11,6 +29,7 @@ Added
 
 * Added an additional safe distance parameter for changing lanes vehicles to prevent them from hitting the forward vehicle.
 * Added custom scaling support for road constructor roads.
+* Added Unity 6.5 support.
 
 Changed
 ~~~~~~~~~~~~

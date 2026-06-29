@@ -464,6 +464,8 @@ How To Create
 #. In the :ref:`Pedestrian settings <pedestrianSettingsConfig>` select `Animatron` rig type.
 #. To quickly create new characters, simply duplicate the `Rig <https://lukaschod.github.io/animatron-docs/manual/authoring/rig.html>`_ asset and assign a new FBX file with different skins. Then, drag and drop it into the scene as before, save it as a prefab, and assign it to the `Prefab container`.
 
+.. _animatronHybridSkin:
+
 Animatron Hybrid
 ~~~~~~~~~~~~
 
@@ -1037,7 +1039,7 @@ Rig Type
 * :ref:`Rukhanka <rukhankaSkin>` :  pure entities animated with Rukhanka Animation System in `DOTS`.
 * :ref:`Rukhanka Hybrid <rukhankaHybridSkin>` :  hybrid entities animated with Rukhanka Animation System with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.
 * :ref:`Animatron <animatronSkin>` : pure entities animated with Animatron system in `DOTS`.
-* :ref:`Animatron <animatronSkin>` Hybrid :  hybrid entities animated with Animatron System with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.llows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* :ref:`Animatron Hybrid <animatronHybridSkin>` :  hybrid entities animated with Animatron System with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.
 
 .. _pedestrianEntityType:
 

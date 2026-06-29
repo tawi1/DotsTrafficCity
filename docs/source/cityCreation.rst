@@ -23,13 +23,13 @@ Initial Components
 	* **Hub** : root prefab used in `Demo` & `Demo Mono` scenes & contains demo sample dependencies.
 	* **Hub Base** : clean root prefab with just traffic & pedestrian simulation without any extra stuff (:ref:`player <playerCustom>` should be spawned with your own script or simply drag & drop into the scene).
 
-#. Depending on the desired simulation, select the World simulation type: `DOTS` or `Hybrid Mono`.
+#. Depending on the desired simulation, select the `World simulation type`: `DOTS` or `Hybrid Mono`.
 
 	.. note::
-		**DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
-		**Hybrid mono** : physics simulation run on `Monobehaviour` scripts, but input taken from `DOTS` entities simulation.
+		* **DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
+		* **Hybrid mono** : physics simulation run on `Monobehaviour` scripts, but input taken from `DOTS` entities simulation.
 
-#. Select :ref:`Traffic entity type <entityType>` & :ref:`Pedestrian entity type <rigType>` according to your needs.
+#. Select :ref:`Traffic entity type <entityType>` & :ref:`Pedestrian entity type <rigType>` according to your needs (for the `Hybrid Mono` simulation, only the `Hybrid Mono physics` are available for traffic).
 #. Press `Create` button.
 #. Continue with the `Hub Base`_ or :ref:`Hub <demoCity>` article, depending on your choice.
 		

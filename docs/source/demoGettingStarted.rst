@@ -27,7 +27,6 @@ Getting Started
 	.. image:: /images/gettingstarted/CitySettingsInitializer.png
 	
 #. If you want to add your own player, :ref:`read here <playerCustom>`, otherwise you can use the temporary built-in :ref:`Player Character <playerNpc>` & :ref:`Player car <playerCar>` **[optional step]**.
-#. If you plan to use the `Mono` simulation, set the `Hybrid Mono` simulation type in the :ref:`General Settings <generalSettingsDemo>`. **[optional step]**	
 #. Set desired local position of :ref:`Cull point <cullPointInfo>` & :ref:`Culling distances <cullConfig>` at which road objects, traffic, pedestrians etc. will be activated.
 #. By default, the cull point is the child in the `Main Camera City`, but if you want to use your own :ref:`player & camera <playerCustom>`: **[optional step]**	
 	

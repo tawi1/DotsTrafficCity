@@ -1024,12 +1024,20 @@ Skin Type
 * **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
 * **No skin** : entities without a skin will be created.
 	
+.. _rigType:
+	
 Rig Type
 """"""""""""""""""
 
-* **Hybrid legacy** : :ref:`hybrid entity with animator component <pedestrianHybridLegacy>`.
-* **Pure GPU** : :ref:`pure entity with gpu animations <pedestrianGPU>`.
-* **Hybrid and GPU** : :ref:`New hybrid GPU <hybridAndGpu>` mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
+* **Hybrid legacy** : :ref:`Hybrid legacy skin <pedestrianHybridLegacy>` — hybrid entity with animator component.
+* **Pure GPU** : :ref:`Pure GPU skin <pedestrianGPU>` — pure entity with GPU animations.
+* **Hybrid and GPU** : :ref:`Hybrid and GPU <hybridAndGpu>` mode that allows you to mix Hybrid animator models for near and GPU animation for far at the same time.
+* **Hybrid On Request And GPU** : Hybrid skin will be load if `PreventHybridSkinTagTag` tag is manually disabled by the user for the specific entity, otherwise it will be animated by GPU.
+* **Hybrid Shape GPU** : hybrid entity animated on GPU in `DOTS` & has hybrid monobehaviour collider to interact with pedestrians in a familiar way.
+* **Rukhanka** : :ref:`Rukhanka <rukhankaSkin>` pure entities animated with Rukhanka Animation System in `DOTS`.
+* **Rukhanka Hybrid** : :ref:`Rukhanka Hybrid <rukhankaHybridSkin>` hybrid entities animated with Rukhanka Animation System with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.
+* **Animatron** : :ref:`Animatron <animatronSkin>` pure entities animated with Animatron system in `DOTS`.
+* **Animatron Hybrid** : :ref:`Animatron <animatronSkin>` Hybrid hybrid entities animated with Animatron System with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.llows you to mix hybrid animator models for near and GPU animation for far at the same time.
 
 .. _pedestrianEntityType:
 

@@ -27,7 +27,7 @@ Fixed
 ~~~~~~~~~~~~
 
 * Fixed potential issue with vehicle navigation breaking after avoidance.
-* Impoved avoidance of vehicles for the crowd avoidance method.
+* Improved avoidance of vehicles for the crowd avoidance method.
 * Fixed issue of losing focus on the inspector when entering the first number for the speed limit.
 
 [1.7.4] - 18-06-2026

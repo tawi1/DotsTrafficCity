@@ -3,6 +3,15 @@
 Change Log
 ************
 
+[1.7.6] - 29-06-2026
+------------
+
+Fixed
+~~~~~~~~~~~~
+
+* Fixed project update for some versions.
+* Fixed a race condition issue for car sound systems.
+
 [1.7.5] - 27-06-2026
 ------------
 

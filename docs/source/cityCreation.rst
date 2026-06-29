@@ -29,7 +29,7 @@ Initial Components
 		* **DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
 		* **Hybrid mono** : physics simulation run on `Monobehaviour` scripts, but input taken from `DOTS` entities simulation.
 
-#. Select :ref:`Traffic entity type <entityType>` & :ref:`Pedestrian entity type <rigType>` according to your needs (for the `Hybrid Mono` simulation, only the `Hybrid Mono physics` are available for traffic).
+#. Select :ref:`Traffic entity type <entityType>` & :ref:`Pedestrian entity type <rigType>` according to your needs (for the `Hybrid Mono` simulation, only the `Hybrid Mono physics` is available for traffic).
 #. Press `Create` button.
 #. Continue with the `Hub Base`_ or :ref:`Hub <demoCity>` article, depending on your choice.
 		

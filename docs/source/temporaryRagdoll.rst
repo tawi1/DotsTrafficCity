@@ -1,12 +1,13 @@
 Pedestrian Temporary Ragdoll System
----------------------------------
+-----------------------------------
 
 The pedestrian temporary ragdoll system manages the physical behavior of pedestrians (NPCs) during collisions. It allows them to dynamically transition into a ragdoll state upon impact and automatically recover (stand back up) after a configured duration, provided it is safe to do so.
 
 This feature is built using **Unity DOTS (Entities)** and supports a hybrid infrastructure to seamlessly switch between optimized GPU skinning and full GameObject-based physics components.
 
+
 Enabling the Feature in Pedestrian Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The temporary ragdoll state is globally controlled via the central ``PedestrianSettingsConfig`` asset. To make this functionality available for pedestrians, the following specific flags must be configured within these global configuration settings:
 
@@ -14,7 +15,7 @@ The temporary ragdoll state is globally controlled via the central ``PedestrianS
 * **Allow Temporal Ragdoll:** This setting explicitly activates the recovery feature. When enabled, it allows living NPCs with remaining health points to enter a temporary ragdoll state and subsequently stand back up, rather than being permanently incapacitated or destroyed.
 
 Animator Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 When transitioning out of the ragdoll state, the system relies on Unity's Mecanim Animator system (configured in controllers such as ``PedestrianBaseController``) to handle the standing-up sequence.
 

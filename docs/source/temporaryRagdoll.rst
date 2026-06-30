@@ -28,7 +28,7 @@ When transitioning out of the ragdoll state, the system relies on Unity's Mecani
 Ragdoll Configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-While global activation resides in the pedestrian settings, fine-grained physics behaviors are customized locally using `PedestrianRagdollConfigAuthoring.cs`. These settings are baked into an efficient multi-threaded ``BlobAsset``.
+While global activation resides in the pedestrian settings, fine-grained physics behaviors are customized locally using `PedestrianRagdollConfigAuthoring.cs`.
 
 .. list-table:: Ragdoll Runtime Parameters
    :widths: 25 15 60

@@ -84,7 +84,7 @@ Steps
 #. After that, press the `Add Scripting Define` button.
 #. Install the :ref:`FMOD sound <fmodSound>` settings.
 
-	.. info::
+	.. note::
 		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 13**.
 		* If you are updating an existing project, follow steps **10 to 12** manually inside the initialization window.
 

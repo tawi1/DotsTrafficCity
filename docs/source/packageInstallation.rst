@@ -71,7 +71,7 @@ Steps
 	.. warning::
 		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
 			
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 9-11 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 7-9 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**
@@ -85,9 +85,8 @@ Steps
 #. Install the :ref:`FMOD sound <fmodSound>` settings.
 
 	.. info::
-		  If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 13**.
-		  
-		  If you are updating an existing project, follow steps **10 to 12** manually inside the initialization window.
+		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 13**.
+		* If you are updating an existing project, follow steps **10 to 12** manually inside the initialization window.
 
 #. **[Manual Setup]** Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+` in your pipeline settings.
 #. **[Manual Setup]** Open the `Layer settings` tab, select the layers to import according to your use case, and press the `Apply` button.

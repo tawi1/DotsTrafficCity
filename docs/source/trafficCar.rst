@@ -12,21 +12,6 @@ How To Create
 
 To start creating traffic vehicles, follow the instructions below based on your desired physics and architecture type.
 
-Standard DOTS Traffic (Simple / Custom Physics)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool from the Unity toolbar: ``Spirit604/CityEditor/Car Prefab Creator``.
-#. Drag & drop your source prefabs, configure common settings, choose your physics type (**Simple Physics** or **Custom Physics**), and **adjust body/wheel offsets in the Prefab Info tab** to ensure the model aligns correctly. Follow the detailed generator steps inside the :ref:`Car Prefab Creator <carPrefabCreator>` guide.
-#. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` by default. You can open the collection to ensure they appear in the list.
-#. Make sure that your active :ref:`traffic preset <trafficPreset>` includes these new vehicles.
-#. Open the global :ref:`Traffic settings <trafficCarSettings>` and ensure the **Entity type** matches your choice (e.g., `Simple physics entity`).
-#. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
-#. Open your `EntitySubScene`, locate the `TrafficCarEntityPoolBakerRef` component on both the main scene and the subscene, and verify that the correct preset is assigned.
-#. **Adjust the specific traffic parameters of the created vehicles based on their physics type:**
-   
-   * For :ref:`Simple physics <trafficCarSettings>`.
-   * For :ref:`Custom physics <customPhysicsVehicle>`.
-
 MonoBehaviour-Based Traffic (Hybrid Mono)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,6 +38,21 @@ MonoBehaviour-Based Traffic (Hybrid Mono)
 #. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
 #. Open your `EntitySubScene`, locate the `TrafficCarEntityPoolBakerRef` component on both the main scene and the subscene, and make sure the correct preset is assigned.
 #. *(Optional)* To prevent your player-controlled car from pushing or glitching through AI traffic, attach the :ref:`CarPlayerBlocker <carPlayerBlocker>` component to the generated vehicle hull prefab and configure its physics layer.
+
+Standard DOTS Traffic (Simple / Custom Physics)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool from the Unity toolbar: ``Spirit604/CityEditor/Car Prefab Creator``.
+#. Drag & drop your source prefabs, configure common settings, choose your physics type (**Simple Physics** or **Custom Physics**), and **adjust body/wheel offsets** in the **Prefab Info tab** to ensure the model aligns correctly. Follow the detailed generator steps inside the :ref:`Car Prefab Creator <carPrefabCreator>` guide.
+#. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` by default. You can open the collection to ensure they appear in the list.
+#. Make sure that your active :ref:`traffic preset <trafficPreset>` includes these new vehicles.
+#. Open the global :ref:`Traffic settings <trafficCarSettings>` and ensure the **Entity type** matches your choice (e.g., `Simple physics entity`).
+#. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
+#. Open your `EntitySubScene`, locate the `TrafficCarEntityPoolBakerRef` component on both the main scene and the subscene, and verify that the correct preset is assigned.
+#. **Adjust the specific traffic parameters of the created vehicles based on their physics type:**
+   
+   * For :ref:`Simple physics <trafficCarSettings>`.
+   * For :ref:`Custom physics <customPhysicsVehicle>`.
 
 .. _vehicleType:
 

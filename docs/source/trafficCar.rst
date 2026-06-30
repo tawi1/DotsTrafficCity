@@ -27,12 +27,12 @@ MonoBehaviour-Based Traffic (Hybrid Mono)
 		* Set **Controller type** to `Arcade`. 
 		* Set your preset/paths in the **Save** tab.
 		* Click **Scan**.
-		* Adjust **body/wheel offsets** in the **Prefab Info tab**, and press **Create**. 
+		* Adjust **body/wheel offsets** in the **Prefab Info** tab, and press **Create**. 
 		* After generation, ensure the raycast layer in `ArcadeVehicleController` matches your **Ground** layer.
 	* **For Custom user controller:** 
 		* Set **Controller type** to `Custom user`. 
 		* Create and assign an adapter script implementing the `IVehicleInput` interface to link traffic logic with your custom controller (see :ref:`Input Info <inputInfo>` and the :ref:`VehicleInput Example Code <vehicleInputCode>`). 
-		* Click **Scan**, adjust **body/wheel offsets and steering angle** in the **Prefab Info tab** to match your custom car's setup, and press **Create**.
+		* Click **Scan**, adjust **body/wheel offsets and steering angle** in the **Prefab Info** tab to match your custom car's setup, and press **Create**.
 
 #. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` and your selected :ref:`preset <trafficPreset>` by default.
 #. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
@@ -43,7 +43,7 @@ Standard DOTS Traffic (Simple / Custom Physics)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool from the Unity toolbar: ``Spirit604/CityEditor/Car Prefab Creator``.
-#. Drag & drop your source prefabs, configure common settings, choose your physics type (**Simple Physics** or **Custom Physics**), and **adjust body/wheel offsets** in the **Prefab Info tab** to ensure the model aligns correctly. Follow the detailed generator steps inside the :ref:`Car Prefab Creator <carPrefabCreator>` guide.
+#. Drag & drop your source prefabs, configure common settings, choose your physics type (**Simple Physics** or **Custom Physics**), and **adjust body/wheel offsets** in the **Prefab Info** tab to ensure the model aligns correctly. Follow the detailed generator steps inside the :ref:`Car Prefab Creator <carPrefabCreator>` guide.
 #. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` by default. You can open the collection to ensure they appear in the list.
 #. Make sure that your active :ref:`traffic preset <trafficPreset>` includes these new vehicles.
 #. Open the global :ref:`Traffic settings <trafficCarSettings>` and ensure the **Entity type** matches your choice (e.g., `Simple physics entity`).

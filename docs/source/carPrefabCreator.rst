@@ -28,7 +28,7 @@ Hybrid Mono (MonoBehaviour)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Select Entity Type:** In the `Save` tab, set **Entity type** to `Hybrid entity mono physics`.
-* **Configure Controller:** In the `Save` tab, set your **Controller type** (`Arcade` built-in sample or `Custom user`). If using a custom solution, assign your `IVehicleInput` adapter script.
+* **Configure Controller:** In the `Save` tab, set your **Controller type** (`Arcade` built-in sample or `Custom user`). If using a custom solution, assign your :ref:`IVehicleInput <vehicleInputCode>` adapter script.
 * **Save Setup:** Configure the path and preset in :ref:`Save settings <carPrefabCreatorSaveSettings>`.
 * **Process:** Click **Scan**. In the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, customize traffic-related settings and verify the steering angle matches your custom car controller.
 * **Create:** Click **Create** to generate MonoBehaviour-compatible prefabs.

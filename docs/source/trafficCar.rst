@@ -31,7 +31,7 @@ MonoBehaviour-Based Traffic (Hybrid Mono)
 		* After generation, ensure the raycast layer in `ArcadeVehicleController` matches your **Ground** layer.
 	* **For Custom user controller:** 
 		* Set **Controller type** to `Custom user`. 
-		* Create and assign an adapter script implementing the `IVehicleInput` interface to link traffic logic with your custom controller (see :ref:`Input info <inputInfo>` and the :ref:`VehicleInput example code <vehicleInputCode>`). 
+		* Create and assign an adapter script implementing the `IVehicleInput` interface to link traffic logic with your custom controller (see :ref:`Input Info <inputInfo>` and the :ref:`VehicleInput Example Code <vehicleInputCode>`). 
 		* Click **Scan**, adjust **body/wheel offsets and steering angle** in the **Prefab Info tab** to match your custom car's setup, and press **Create**.
 
 #. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` and your selected :ref:`preset <trafficPreset>` by default.
@@ -147,7 +147,7 @@ Engine
 	.. image:: /images/entities/trafficCar/custom/engine1.png
 
 | **Torque** : engine torque.
-| **Transimission rate** : engine torque to wheel speed ratio.
+| **Transmission rate** : engine torque to wheel speed ratio.
 
 Scene Settings
 """"""""""""""""""
@@ -178,7 +178,7 @@ Template Settings
 	* **Physics settings** : copy the physics settings (mass, damping, gravity) of the `PhysicsBody` component.
 	* **Center of mass** : copy the center of mass local position of the `PhysicsBody` component.
 	* **Offsets** : copy the local offset of the wheels.
-	* **Settings** : copy the settings of `the VehicleAuthoring` component.
+	* **Settings** : copy the settings of the `VehicleAuthoring` component.
 
 Wheel Refs
 """"""""""""""""""
@@ -242,10 +242,9 @@ No Physics
 ~~~~~~~~~~~~
 
 * :ref:`Pure entities <pureEntity>` that moved by transform system without physics.
-* Contains the same components as :ref:`Simple Physics <simplePhysicsVehicle>`.
+* Contains the same non-physics components as :ref:`Simple Physics <simplePhysicsVehicle>` (e.g., `CarWheelAuthoring`).
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Pure entity no physics <entityType>` type refer to this.
-
 
 .. _hybridMonoVehicle:
 
@@ -259,20 +258,20 @@ Hybrid Mono
 
 .. _inputInfo:
 
-Input info
+Input Info
 ~~~~~~~~~~
 * Throttle [1] : forward motion.
 * Throttle [-1] : reverse motion.
 * Throttle [0] : hand brake.
 * Throttle [-0.9] : braking, for example, if the current speed is higher than permitted. (the value can be changed in the :ref:`Traffic settings <trafficCarSettings>`)
-* Steering [-1, 1]
+* Steering [-1, 1].
 
 .. _vehicleInputCode:
 
-VehicleInput example code
+VehicleInput Example Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	..  code-block:: r
+	..  code-block:: csharp
 
 		public class UVC_adapter : MonoBehaviour, IVehicleInput
 		{
@@ -367,7 +366,7 @@ Components
 
 	.. image:: /images/entities/trafficCar/hybridMono/CarEntityAdapter.png
 	
-Component to syncronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
+Component to synchronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
 	
 	.. note:: You can turn off traffic physics culling in the :ref:`Traffic settings <trafficCarSettings>`.
 	
@@ -455,7 +454,7 @@ CullState Info
 Parking
 ----------------
 
-Сar parking consists of the following states:
+Car parking consists of the following states:
 
 Entering parking states
 ~~~~~~~~~~~~
@@ -463,7 +462,7 @@ Entering parking states
 #. The car has chosen the path containing the :ref:`parking node <trafficNode>`.
 #. The car links the :ref:`parking node <trafficNode>` to prevent it from being selected by other cars (the list of linked nodes can be customized :ref:`here <trafficRoadConfig>`).
 #. When the car reaches the :ref:`parking node <trafficNode>`, the car position correction is activated for precise parking (if disabled in the :ref:`parking config <trafficCarParkingConfig>`, this step is skipped).
-#. Stopping the engine state is starting (if enabled in the :ref:`stopping engine config <carStoppingConfig>` & vehicle in view of camera's player).
+#. The engine stopping state is activated (if enabled in the :ref:`stopping engine config <carStoppingConfig>` & vehicle is in view of the player's camera).
 #. Pedestrian gets out of the car.
 
 Exiting parking states
@@ -471,7 +470,7 @@ Exiting parking states
 
 #. The Pedestrian enters the :ref:`pedestrian parking node <pedestrianNode>`, if available.
 #. The parking car removes link with :ref:`TrafficNode <trafficNode>`.
-#. Ignition state system starts (if enabled in :ref:`ignition config <carIgnitionConfig>`).
+#. The engine ignition system is triggered (if enabled in :ref:`ignition config <carIgnitionConfig>`).
 #. Once the car has started the engine, the car starts moving.
 
 .. _trafficAvoidance:
@@ -479,16 +478,16 @@ Exiting parking states
 Avoidance
 ----------------
 
-| Avoidance is used in the case of stuck vehicles.
-Currently enabled in the following situations:
-	* A cyclical obstacle where cars get stuck in each other (:ref:`avoidance config <trafficAvoidanceConfig>`).
-	* A car has collided frontally with another car (:ref:`collision config <trafficCollisionConfig>`).
+Avoidance is used to resolve situations where vehicles become stuck and cannot clear their path.
+Currently, it is triggered in the following scenarios:
+	* A traffic deadlock where cars are blocked behind one another (:ref:`avoidance config <trafficAvoidanceConfig>`).
+	* A frontal deadlock where two cars meet head-on and block each other's path (:ref:`collision config <trafficCollisionConfig>`).
 	
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample1.png
-	`Cyclical obstacle example.`
+	`Head-on deadlock example.`
 	
 	.. image:: /images/entities/trafficCar/avoidance/AvoidanceExample2.png
-	`Avoiding cyclical obstacle example.`
+	`Resolving deadlock with avoidance example.`
 	
 	.. note:: Test scene :ref:`example <trafficTestSceneAvoidance>`.
 
@@ -505,7 +504,7 @@ Pure DOTS
 * Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public Entity TryToSelectEntity(Vector3 worldPosition)
 		{
@@ -517,7 +516,7 @@ Hybrid Mono
 
 Entity can be retrieved if the car has a collider:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 			private Entity GetEntity()
 			{
@@ -566,7 +565,7 @@ Raycast
 	
 To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `GetTargetQuery` method in the ``TrafficCarRaycastObstacleTargetQueryProvider`` class, which returns the `EntityQuery <https://docs.unity.cn/Packages/com.unity.entities@1.0/api/Unity.Entities.EntityQuery.html>`_ of the targets.
 
-..  code-block:: r
+..  code-block:: csharp
 
 	public static EntityQuery GetTargetQuery(
 			   SystemBase sourceSystem,
@@ -638,7 +637,7 @@ To set a custom destination for a specific traffic car, do the following:
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
-	..  code-block:: r
+	..  code-block:: csharp
 
 		private void Awake()
 		{
@@ -662,7 +661,7 @@ To set a custom node destination for a specific traffic car, do the following:
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		private void Awake()
 		{

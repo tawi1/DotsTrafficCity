@@ -60,6 +60,7 @@ Hybrid Mono (MonoBehaviour)
 * **Create:** Click **Create** to generate MonoBehaviour-compatible prefabs.
 
 #. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
+
 Prefab Settings
 ----------------
 

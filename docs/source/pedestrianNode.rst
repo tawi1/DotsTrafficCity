@@ -20,8 +20,8 @@ How To Connect
 ----------------
 
 **There are 2 ways:**
-	#. Select a node in the hierarchy or on the scene and press `Tab` over the node you want to connect to.
-	#. Use the :ref:`PedestrianNodeCreator tool <pedestrianNodeCreator>` : select the initial node by pressing `W` above it and connect it to another node by pressing `E`.
+	#. Select a node in the hierarchy or on the scene and press ``Tab`` over the node you want to connect to.
+	#. Use the :ref:`PedestrianNodeCreator tool <pedestrianNodeCreator>` : select the initial node by pressing ``W`` above it and connect it to another node by pressing ``E``.
 
 	.. note:: Hotkeys can be modified in the `PedestrianNodeHotkeyConfig` asset.
 	

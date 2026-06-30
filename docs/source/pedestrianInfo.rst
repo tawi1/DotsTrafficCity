@@ -967,6 +967,8 @@ Entity can be retrieved if the NPC has a collider:
 
 .. include:: runtime_custom_npc.rst
 
+.. include:: temporaryRagdoll.rst
+
 Common Info
 ----------------
 

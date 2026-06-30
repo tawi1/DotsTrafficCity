@@ -102,3 +102,9 @@ Sounds
 * **Ignition** : playback during engine start of the vehicle.
 * **Idle** : idle sound of the vehicle.
 * **Horn** : plays when the horn of the vehicle is active.
+* **Driving** : plays when npc driving the vehicle.
+* **Horn** : plays when the horn of the vehicle is active.
+
+	.. note::
+		* If you want to provide your own custom sound logic for traffic, you can enable the **Force custom traffic sound** option in the :ref:`Common Sound Config <soundConfig>`.
+		* Additionally, you can configure vehicle sounds to be enabled by distance instead of culling layers by setting the **Sound culling type** to *By Distance* in the :ref:`Car Common Sound Config <carCommonSoundConfig>`.

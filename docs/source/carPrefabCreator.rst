@@ -22,7 +22,7 @@ How To Use
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
 
-**Choose your workflow based on the desired Entity Type:**
+#. **Choose your workflow based on the desired Entity Type:**
 
 Hybrid Mono (MonoBehaviour)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

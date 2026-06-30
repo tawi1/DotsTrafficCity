@@ -109,8 +109,6 @@ Paths describe the precise trajectories vehicles follow between lane indexes of 
        SourceLaneIndex = 0,      // Start lane index on the entry node
        ConnectedLaneIndex = 0,   // Target lane index on the destination node
        ConnectedNodeIndex = 1,   // The local array index of the destination node (exitNode)
-       Priority = 10,
-       External = false,
        LocalPathIndex = 0
    };
    forwardPath.SetSpeedLimitByKmh(60f);
@@ -128,8 +126,6 @@ Paths describe the precise trajectories vehicles follow between lane indexes of 
        SourceLaneIndex = 0,      // Start lane index on the exit node (acting as entry for return path)
        ConnectedLaneIndex = 0,   // Target lane index on the entry node destination
        ConnectedNodeIndex = 0,   // The local array index of the destination node (entryNode)
-       Priority = 10,
-       External = false,
        LocalPathIndex = 1
    };
    backwardPath.SetSpeedLimitByKmh(60f);
@@ -234,8 +230,7 @@ This example demonstrates how to programmatically initialize a complex junction 
            SourceLaneIndex = 0,
            ConnectedLaneIndex = 0,
            ConnectedNodeIndex = 3, // Array index of eastNode in Nodes list
-           Priority = 5,           // Right turns typically get secondary cross priority
-           External = false,
+           Priority = -5,           // Right turns typically get secondary cross priority
            LocalPathIndex = 0
        };
        southToEastPath.SetSpeedLimitByKmh(30f); // Slower speed limit for tight intersection curve

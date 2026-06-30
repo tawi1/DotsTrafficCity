@@ -24,18 +24,14 @@ How To Use
 
 **Choose your workflow based on the desired Entity Type:**
 
-Simple Physics (Pure/Hybrid)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Hybrid Mono (MonoBehaviour)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Configure Physics Shape:** In the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab, enable **Fit physics shape to mesh** & **Include Wheels** *[Required for Simple physics only]*.
-  
-  .. image:: /images/entities/trafficCar/physicsShape.png
-  `Simple physics entity shape result example`
-
-* **Select Entity Type:** In the `Save` tab, set **Entity type** to `Hybrid entity simple physics` or `Pure entity simple physics`.
+* **Select Entity Type:** In the `Save` tab, set **Entity type** to `Hybrid entity mono physics`.
+* **Configure Controller:** In the `Save` tab, set your **Controller type** (`Arcade` built-in sample or `Custom user`). If using a custom solution, assign your `IVehicleInput` adapter script.
 * **Save Setup:** Configure the path and preset in :ref:`Save settings <carPrefabCreatorSaveSettings>`.
-* **Process:** Click **Scan**, adjust common settings in :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>`, and fine-tune offsets in :ref:`Prefab Info <carPrefabCreatorPrefabInfo>`.
-* **Create:** Click **Create** to generate assets.
+* **Process:** Click **Scan**. In the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, customize traffic-related settings and verify the steering angle matches your custom car controller.
+* **Create:** Click **Create** to generate MonoBehaviour-compatible prefabs.
 
 Custom Physics (Pure/Hybrid)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,14 +46,18 @@ Custom Physics (Pure/Hybrid)
 * **Process:** Click **Scan**. In :ref:`Prefab Info <carPrefabCreatorPrefabInfo>`, select `Template` or `New` to set up advanced suspension, friction, and wheel components.
 * **Create:** Click **Create** to generate assets.
 
-Hybrid Mono (MonoBehaviour)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Simple Physics (Pure/Hybrid)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Select Entity Type:** In the `Save` tab, set **Entity type** to `Hybrid entity mono physics`.
-* **Configure Controller:** In the `Save` tab, set your **Controller type** (`Arcade` built-in sample or `Custom user`). If using a custom solution, assign your `IVehicleInput` adapter script.
+* **Configure Physics Shape:** In the :ref:`Common settings <carPrefabCreatorCommonSettings>` tab, enable **Fit physics shape to mesh** & **Include Wheels** *[Required for Simple physics only]*.
+  
+  .. image:: /images/entities/trafficCar/physicsShape.png
+  `Simple physics entity shape result example`
+
+* **Select Entity Type:** In the `Save` tab, set **Entity type** to `Hybrid entity simple physics` or `Pure entity simple physics`.
 * **Save Setup:** Configure the path and preset in :ref:`Save settings <carPrefabCreatorSaveSettings>`.
-* **Process:** Click **Scan**. In the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, customize traffic-related settings and verify the steering angle matches your custom car controller.
-* **Create:** Click **Create** to generate MonoBehaviour-compatible prefabs.
+* **Process:** Click **Scan**, adjust common settings in :ref:`Additional Settings <carPrefabCreatorAdditionalSettings>`, and fine-tune offsets in :ref:`Prefab Info <carPrefabCreatorPrefabInfo>`.
+* **Create:** Click **Create** to generate assets.
 
 5. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
 

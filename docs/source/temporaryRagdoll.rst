@@ -5,10 +5,24 @@ The pedestrian temporary ragdoll system manages the physical behavior of pedestr
 
 This feature is built using **Unity DOTS (Entities)** and supports a hybrid infrastructure to seamlessly switch between optimized GPU skinning and full GameObject-based physics components.
 
+Gameplay Logic Example
+~~~~~~~~~~~~~~~~~~~~~~
+
+To understand how health points and ragdoll states interact, consider the following lifecycle example:
+
+#. **Impact & Damage Calculation:** If a living NPC (e.g., with 100 HP) is struck by a car, the physical force of the collision is multiplied by the ``Force To Damage Multiplier`` and subtracted from the NPC's health.
+#. **State Evaluation:**
+
+   * If the remaining health drops to **0 or below**, the NPC dies permanently.
+   * If the remaining health is **above 0**, the NPC transitions into a temporary ragdoll state.
+
+#. **Temporary Invulnerability:** While the NPC is lying on the ground in the ragdoll state, **it is temporarily invulnerable to further damage**. Attacks (such as shooting or subsequent vehicle impacts) will not reduce its health during this phase.
+#. **Recovery & Vulnerability Window:** Once the ``Recovery Duration`` expires and safety checks pass, the NPC triggers the standing-up sequence. **As soon as the character starts getting up, the invulnerability wears off**. From this moment on, the NPC becomes fully vulnerable again, and any new damage can reduce its remaining health to 0, resulting in permanent death.
+
 Enabling
 ~~~~~~~~
 
-The temporary ragdoll state is globally controlled via the central ``PedestrianSettingsConfig`` asset. To make this functionality available for pedestrians, the following specific flags must be configured within these global configuration settings:
+The temporary ragdoll state is globally controlled via the central :ref:`Pedestrian settings <pedestrianSettingsConfig>` config. To make this functionality available for pedestrians, the following specific flags must be configured within these global configuration settings:
 
 * **Has Ragdoll:** This global toggle must be enabled to allow physical ragdoll interactions for pedestrians upon death or impact.
 * **Allow Temporal Ragdoll:** This setting explicitly activates the recovery feature. When enabled, it allows living NPCs with remaining health points to enter a temporary ragdoll state and subsequently stand back up, rather than being permanently incapacitated or destroyed.
@@ -56,7 +70,7 @@ State Machine Workflow
 The underlying logic is driven by `TemporaryRagdollStateSystem.cs`, which processes active entities based on their current ``RagdolState``:
 
 1. **Default**
-   When a ragdoll activation event triggers, the system clears active anti-stuck components, calculates the target ``RecoveryTime`` based on the config, and disables the default visual skin (deactivating the GameObject or disabling GPU mesh info depending on the rig type). The physical ragdoll instance is then activated.
+   When a ragdoll activation event triggers, the system clears active anti-stuck components, calculates the target ``RecoveryTime`` based on the config, and disables the default visual skin (deactivating the GameObject or disabling GPU mesh info depending on the :ref:`rig type <rigType>`). The physical ragdoll instance is then activated.
 
 2. **Reactivate**
    Invoked if a pedestrian experiences another impact while recovering. This resets the ``RecoveryTime`` and forces the physical ragdoll back into full simulation.

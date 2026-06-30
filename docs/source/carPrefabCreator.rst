@@ -59,7 +59,7 @@ Hybrid Mono (MonoBehaviour)
 * **Process:** Click **Scan**. In the :ref:`Prefab Info <carPrefabCreatorPrefabInfo>` tab, customize traffic-related settings and verify the steering angle matches your custom car controller.
 * **Create:** Click **Create** to generate MonoBehaviour-compatible prefabs.
 
-#. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
+5. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
 
 Prefab Settings
 ----------------

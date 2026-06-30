@@ -17,10 +17,11 @@ Installation & Setup
 2. **Explore Sample Scene**: Open the ``Runtime CustomRoad Demo`` scene to review a basic implementation bridge.
 
 	.. note::
-		**Architectural Separation (Sample vs Production):**
-		The classes ``RoadBase``, ``SplineRoad``, ``IntersectionRoad``, and the helper methods inside ``RoadSceneUtils`` are editor-time utilities provided **strictly as samples**. They illustrate how to extract node placement from Unity Splines. 
+It is important to distinguish between demonstration samples and production-ready components:
 
-   In a production environment, you do not need these helper classes; instead, you populate the low-level data structures (``RuntimeSegmentCustom``, ``TrafficNodeData``, ``PathData``) directly from your game loop logic (e.g., procedural grids, server states, or save files).
+   * **Production-Ready**: You should directly manipulate the low-level data structures (``RuntimeSegmentCustom``, ``TrafficNodeData``, ``PathData``) and the ``RuntimeRoadManagerCustom`` manager. You can also utilize ``RoadSceneUtils`` in production environments to assist in generating or calculating road data programmatically.
+   * **Demonstration Only**: The classes ``RoadBase``, ``SplineRoad``, and ``IntersectionRoad`` are provided **strictly as samples**. They are intended to demonstrate how to extract data from Unity Splines and are not intended for use in production run-time environments.
+   * **Disclaimer**: The code examples in this guide are for **demonstration purposes only**. They are not fully functional for production use and do not include necessary error handling or performance optimizations. Please use them as a conceptual starting point to build your own robust implementation.
 
 How to Use: Step-by-Step Graph Initialization
 ---------------------------------------------
@@ -42,8 +43,8 @@ Step 2: Designing Traffic Control Nodes (Segment Sides)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A ``TrafficNodeData`` represents a specific outer side (boundary) of a segment containing its own set of paths. The paths of this node enter the segment for the right lanes. The number of nodes depends entirely on the layout shape:
-* **Straight Road**: Requires exactly **2 nodes** (an entry side and an exit side).
-* **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
+|* **Straight Road**: Requires exactly **2 nodes** (an entry side and an exit side).
+|* **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
 
 	.. attention::
 		**The Traffic Node Rotation Rule:**
@@ -255,9 +256,6 @@ To tear down a road grid or clear memory blocks during runtime execution, pass t
 
    // Unlinks the graph data from spatial hashes and safely unloads running entity references
    runtimeRoadManagerCustom.RemoveSegments(segmentsToRemove);
-
-	.. warning::
-		The provided code samples are for **demonstration purposes only** and are not fully functional for production use. They are designed to illustrate the API structure and data flow. You should implement your own robust error handling, edge-case management, and performance optimizations tailored to your specific project needs.
 
 API Reference
 -------------

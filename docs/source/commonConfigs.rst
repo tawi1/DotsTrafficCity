@@ -101,6 +101,7 @@ Crowd Sound Config
 Сonfig for crowd background sound. The sound of the crowd is calculated based on of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
 
 	.. image:: /images/configs/common/CrowdSoundConfig.png
+	``Hub/Configs/SoundConfigs/CrowdSound``
 	
 | **Crowd sound data** : crowd :ref:`sound <soundData>` data.
 | **Inner crowd sound count** : maximum volume for a given number of pedestrians in the inner circle.

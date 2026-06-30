@@ -34,7 +34,7 @@ Code Examples
 MonoBehaviour
 ~~~~~~~~~~~~
 
-..  code-block:: r
+..  code-block:: csharp
 
     public class ExampleSoundBehaviour : MonoBehaviour
     {
@@ -210,17 +210,17 @@ How To Create
 EntityManager methods
 ~~~~~~~~~~~~
 
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.CreateSoundEntity(ref this EntityManager entityManager, int soundId, float volume = 1f)
 	// Creating a default sound entity.
 	
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.CreateTrackedSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f)
 	// Creation of a sound entity that follows a given entity.
 	
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.CreateChildSoundEntity(ref this EntityManager entityManager, int soundId, Entity parentEntity, float volume = 1f)
 	// Creation of a sound entity that will be a child of a given entity.
@@ -230,12 +230,12 @@ CommandBuffer methods
 
 Burst compatible methods.
 
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, Entity soundPrefabEntity, int soundId, float volume = 1f)
 	// Creating a default sound entity.
 	
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.CreateSoundEntity(ref this EntityCommandBuffer commandBuffer, Entity soundPrefabEntity, int soundId, float3 position, float volume = 1f)
 	// Create a sound entity at a specific position.
@@ -245,7 +245,7 @@ Burst compatible methods.
 Create prefab query method
 ~~~~~~~~~~~~
 	
-..  code-block:: r
+..  code-block:: csharp
 
 	SoundExtension.GetSoundQuery(EntityManager entityManager, SoundType soundType)
 	// Get `EntityQuery` with the selected `Sound type`.
@@ -253,7 +253,7 @@ Create prefab query method
 Create sound example
 ~~~~~~~~~~~~
 
-..  code-block:: r
+..  code-block:: csharp
 
     public partial class ExampleSoundSystem : SystemBase
     {
@@ -285,7 +285,7 @@ Params
 How To Play
 ------------
 
-..  code-block:: r
+..  code-block:: csharp
 	
 	public partial class PlayAndStopSoundExampleSystem : SystemBase
 	{

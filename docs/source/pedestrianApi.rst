@@ -13,7 +13,7 @@ Used to find the nearest pedestrian entity node.
 How To Use
 """"""""""""""
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		private void Awake()
 		{
@@ -31,7 +31,7 @@ User Spawn
 Spawn a pedestrian in a custom position using user code.
 
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		using Spirit604.DotsCity.Simulation.Pedestrian;
 		using Spirit604.Extensions;
@@ -135,7 +135,7 @@ Density
 
 Change the density of pedestrians at runtime.
 
-	..  code-block:: r
+	..  code-block:: csharp
 
 		using Spirit604.Attributes;
 		using Spirit604.DotsCity.Simulation.Pedestrian.Authoring;

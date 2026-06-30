@@ -29,7 +29,7 @@ Getting Started
 #. To get entity nodes on the scenes, read `TrafficNodeSelector` & `PedestrianNodeSelector` examples.
 #. After you have added service & graph, use this code:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public class StartPathServiceExample : MonoBehaviour
 		{

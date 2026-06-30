@@ -26,7 +26,7 @@ Steps
 Code example
 ~~~~~~~~~~~~
 
-..  code-block:: r
+..  code-block:: csharp
 
 	// The new MonoBehaviour script that derived from 'CameraBase'
     public class ExampleCamera : CameraBase

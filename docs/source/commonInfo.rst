@@ -17,7 +17,7 @@ How To Create
 #. Create a prefab entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_.
 #. Add the ``CopyTransformToGameObject`` component and add your custom init component to the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ process for initialization, pseudocode example:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public struct InitComponentExample : IComponentData, IEnableableComponent
 		{		  
@@ -26,7 +26,7 @@ How To Create
 #. Spawn a prefab entity at runtime.
 #. Create your own init system to initialize your hybrid entity, pseudocode example:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		[UpdateInGroup(typeof(InitializationSystemGroup))]
 		public partial class InitSystemExample : SystemBase
@@ -106,7 +106,7 @@ Props Authoring
 
 Custom reset of hydrant, example code:
 
-..  code-block:: r
+..  code-block:: csharp
 
 	Entities
 	.WithoutBurst()

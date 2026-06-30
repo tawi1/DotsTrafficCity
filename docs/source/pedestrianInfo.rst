@@ -306,7 +306,7 @@ You can control the `Rukhanka Hybrid` npc with the monobehaviour script:
 * Methods to control animation in the same way as the `Unity animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_, but using `RukhankaEntityAdapterBase` component.
 * Example:
 
- 	..  code-block:: r
+ 	..  code-block:: csharp
 	
 		public struct AnimationControlExample : MonoBehaviour
 		{		  
@@ -338,7 +338,7 @@ If you need to attach some gameobject weapon e.g:
 * In `RukhankaHybridBoneAnchorAuthoring` assign bone that you want to attach.
 * Attach the anchor with the local index:
 
- 	..  code-block:: r
+ 	..  code-block:: csharp
 	
 		public struct AttachExample : MonoBehaviour
 		{		  
@@ -369,7 +369,7 @@ Animation Event
 * In `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ component enable `Has Animation Events` option.
 * Then, use this sample code:
 
- 	..  code-block:: r
+ 	..  code-block:: csharp
 	
 		public struct AnimationEventExample : MonoBehaviour
 		{		  
@@ -631,7 +631,7 @@ To handle custom animation, follow these steps:
 	
 * Add custom animator state by code:
 	
-..  code-block:: r
+..  code-block:: csharp
 	
 	// IJobEntity entity example
     void Execute(
@@ -650,7 +650,7 @@ To handle custom animation, follow these steps:
 	
 * Change to new state if required, code:
 
-..  code-block:: r
+..  code-block:: csharp
 
 	// IJobEntity entity example
     void Execute(
@@ -669,7 +669,7 @@ To handle custom animation, follow these steps:
 	
 * After all the custom animations have been played, turn off the custom animation state.
 
-..  code-block:: r
+..  code-block:: csharp
 
 	// IJobEntity entity example
     void Execute(
@@ -720,7 +720,7 @@ Common Logic
 How To Change
 ~~~~~~~~~~~~
 
-..  code-block:: r
+..  code-block:: csharp
 
 	// Switch state example
 	
@@ -771,7 +771,7 @@ Custom State System
 
 If you want to temporarily control certain pedestrians with monobehaviour :ref:`read this article <pedestrianDisableSimulation>` or see the sample code below to control pedestrians with `DOTS` script:
 
-..  code-block:: r
+..  code-block:: csharp
 
 	// Custom state system example
 	
@@ -867,12 +867,12 @@ If you need to temporarily take full control of specific `Pedestrian` in your ow
 PedestrianInteractUtils Methods
 ~~~~~~~~~~~~
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using monobehaviour scripts.
 		PedestrianInteractUtils.RemoveFromSimulation(entity);
 		
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		// Return the entity to the simulation.
 		PedestrianInteractUtils.RestoreToSimulation(entity);
@@ -880,7 +880,7 @@ PedestrianInteractUtils Methods
 Interaction Mono Example
 ~~~~~~~~~~~~
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public class PedestrianInteractable : MonoBehaviour
 		{
@@ -938,7 +938,7 @@ Pure DOTS
 * Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public Entity TryToSelectEntity(Vector3 worldPosition)
 		{
@@ -950,7 +950,7 @@ Hybrid Mono
 
 Entity can be retrieved if the NPC has a collider:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 			private Entity GetEntity()
 			{

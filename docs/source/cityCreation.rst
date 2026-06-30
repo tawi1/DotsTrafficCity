@@ -1,10 +1,10 @@
 .. _cityCreation:
 
 Quick Start
-============
+===========
 
 Initial Components
-------------
+------------------
 
 #. Create a new `scene`.
 #. In the `Unity` toolbar open:
@@ -34,7 +34,7 @@ Initial Components
 #. Continue with the `Hub Base`_ or :ref:`Hub <demoCity>` article, depending on your choice.
 		
 Hub Base
-~~~~~~~~~~~~
+~~~~~~~~
 
 #. Initial scene example:
 
@@ -47,7 +47,7 @@ Hub Base
 .. _sceneCreation:
 
 Scene
-------------
+-----
 
 #. Add :ref:`Road segments <roadSegmentCreatorHowToUse>` to the scene (Use `Ctrl+D` to duplicate and `Caps Lock` to rotate).
 
@@ -74,7 +74,7 @@ Scene
 		.. image:: /images/gettingstarted/Tutorial4.gif
 		
 #. For more information on how to create a road, read the :ref:`Road Network Workflow <roadNetworkWorkflow>`.
-#. Create a ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only). For DOTS cars, the ground surface should be on a sub-scene. For mono cars, the ground surface should be on the main scene.
+#. Create a ground, if missing (`GlobalSurfaceCollider` example prefab) & set the layer for your ground surfaces to :ref:`Ground (18) <layerInfo>` & layer for your static objects to :ref:`StaticPhysicsShape (22) <layerInfo>` (read more about :ref:`PhysicsShapeTransfer <physicsShapeTransfer>` service, if you are going to use `DOTS` only). For DOTS cars, the ground surface must be placed inside a subscene, whereas for Mono cars, it should remain in the main scene.
 
 	.. only:: builder_html
 	
@@ -87,7 +87,7 @@ Scene
 #. In the :ref:`Cull config <cullConfig>`, adjust culling distance at which road objects, traffic, pedestrians etc. will be activated & use :ref:`Cull debug <cullPointDebug>` to view culling states **[optional step]**.
 #. In the :ref:`Traffic settings <trafficCarSettings>`, disable `Cull physics` if you don't want cars to disable their physics when they're far away **[optional step]**.
 #. Add & customize :ref:`game sounds <sound>` **[optional step]**.
-#. By default, the `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered on the `Sceneview`, to fix this follow these steps:
+#. By default, `Unity.Entities <https://docs.unity3d.com/Packages/com.unity.entities@1.2/>`_ is not rendered in the `Sceneview`, to fix this follow these steps:
 	#. In the `Unity editor` toolbar select:
 		
 		``Edit/Preferences``
@@ -108,7 +108,7 @@ Scene
 .. _demoOpening:
 
 Demo Scene
-------------
+----------
 
 #. In the `Project Folder` view, select the following scene:
 
@@ -120,7 +120,7 @@ Demo Scene
 .. _demoMonoOpening:
 
 Demo Mono Scene
-------------
+---------------
 
 #. In the `Project Folder` view, select the following scene:
 

@@ -104,4 +104,8 @@ Sounds
 * **Driving** : plays when pedestrian or player driving the vehicle.
 * **Horn** : plays when the horn of the vehicle is active.
 * **Enter car** : plays when pedestrian or player enters vehicle.
-* **Exit car** : plays when pedestrian or player exits vehicle.		
+* **Exit car** : plays when pedestrian or player exits vehicle.
+
+	.. note::
+		* If you want to provide your own custom sound logic for traffic, you can enable the **Force custom traffic sound** option in the :ref:`Common Sound Config <soundConfig>`.
+		* Additionally, you can configure vehicle sounds to be enabled by distance instead of culling layers by setting the **Sound culling type** to *By Distance* in the :ref:`Car Common Sound Config <carCommonSoundConfig>`.

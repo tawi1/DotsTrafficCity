@@ -85,9 +85,12 @@ Common Sound Config
 ~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/CommonSoundConfig.png
+	``Hub/Configs/SoundConfigs/SoundConfig``
 	
 | **Has sounds** : on/off `DOTS` sound systems.
+| **Custom audio listener** : custom audio listener will follow the player.
 | **Crowd sound** : on/off :ref:`crowd sound <soundCrowdConfig>` system for pedestrians.
+| **Force custom traffic sound** : if this option is enabled, sound logic should be provided by the user.
 | **Random horns sound** : on/off horn :ref:`sound <soundData>` system for traffic.
 	
 .. _soundCrowdConfig:

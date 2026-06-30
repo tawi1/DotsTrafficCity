@@ -23,6 +23,7 @@ Car Ignition Config
 Config used by :ref:`parking states <trafficParking>`.
 
 	.. image:: /images/configs/cars/CarIgnitionConfig.png
+	``Hub/Configs/CarConfigs/IgnitionConfig``
 	
 | **Has ignition** : on/off ignition state of the car when the NPCs enters the car.
 | **Idle before start** : idle before starting ignition.
@@ -39,21 +40,30 @@ Config used by :ref:`parking states <trafficParking>`.
 Car Stopping Engine Config
 ------------
 
-Config used by :ref:`parking states <trafficParking>`.
-
 	.. image:: /images/configs/cars/CarStoppingEngineConfig.png
+	``Hub/Configs/CarConfigs/StoppingEngineConfig``
 	
 | **Has stop engine** :
 | **Stopping duration** :
 | **Idle after stopping** :
 | **Target min pitch** :
 | **Target min volume** :
-	
+
+.. _carCommonSoundConfig:
+
 Car Common Sound Config
 ------------
 
 	.. image:: /images/configs/cars/CarCommonSoundConfig.png
+	``Hub/Configs/CarConfigs/CommonSoundConfig``
 
-| **Collision sound** :
-| **Car explode sound** :
-| **Bullet hit sound** :
+| **Collision sound** : sound data for car collisions.
+| **Car explode sound** : sound data for car explosions.
+| **Bullet hit sound** : sound data for bullet impacts.
+| **Npc hit sound** : sound data when a vehicle hits an NPC.
+
+**Sound culling type:**
+	* **By Layer** : the sound will be enabled for the vehicle when it's within the player's camera's field of view.
+	* **By Distance** : the sound will be enabled when the vehicle is within the player's camera's field of view and the specified radius.
+
+| **Enable distance** : radius distance within which the sound is enabled (active only if *By Distance* culling type is selected).

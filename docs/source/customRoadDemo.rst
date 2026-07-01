@@ -285,7 +285,7 @@ Core Runtime Structures
 ``RuntimeSegmentCustom``
   The primary structural tracking entity containing all physical lane nodes, walkway links, and traffic behaviors for a specific area. Refers directly to **RuntimeSegmentCustom.cs**.
 
-  **Methods:**
+	**Methods:**
 
   .. list-table::
      :widths: 35 25 40
@@ -300,14 +300,14 @@ Core Runtime Structures
      * - ``AddPedestrianNodes``
        - ``void (List<Vector3> positions, bool crosswalk = false)``
        - Runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
-	 * - ``AddPedestrianCrosswalk``
-       - ``(PedestrianNodeData, PedestrianNodeData) (Vector3 nodePosition1, Vector3 nodePosition2, float width = 1f, float height = 2f, NodeShapeType crosswalkShapeType = NodeShapeType.Rectangle)``
-       - Direct method to instantiate a localized pedestrian crosswalk between two exact coordinates. Allocates fresh runtime nodes, establishes their sequential links, and returns the tracking tuple.
      * - ``AddTrafficLights``
        - ``void ()``
        - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
-
-  **Properties & Fields:**
+     * - ``AddPedestrianCrosswalk``
+       - ``(PedestrianNodeData, PedestrianNodeData) (List<Vector3> nodes, float width = 1f, float height = 2f, NodeShapeType crosswalkShapeType = NodeShapeType.Rectangle)``
+       - Creates a dedicated pedestrian crosswalk pathway based on a provided list of coordinates (requires at least 2 points). Automatically links the generated nodes together and returns a tuple of the start and end nodes.
+	   
+	**Properties & Fields:**
 
   .. list-table::
      :widths: 30 20 50
@@ -316,7 +316,7 @@ Core Runtime Structures
      * - Name
        - Type
        - Description
-	 * - ``CrossroadID``
+     * - ``CrossroadID``
        - ``int``
        - Internal uniquely allocated simulation ID for intersection registration.
      * - ``Position``

@@ -3,20 +3,24 @@
 Change Log
 ************
 
-[1.7.6] - 29-06-2026
-------------
+[1.7.6] - 01-07-2026
+--------------------
+
+* Added a new method to RuntimeSegmentCustom for directly adding runtime road data without needing RoadSceneUtils data containers.
+* Added new dedicated pedestrian crosswalk creation methods to `RuntimeSegmentCustom`.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed project update for some versions.
 * Fixed a race condition issue for car sound systems.
+* Fixed temporal ragdoll disappearance for some corner cases.
 
 [1.7.5] - 27-06-2026
-------------
+--------------------
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Added updating from DOTS Traffic Core.
 * RuntimeGenerationUtils uses a separate runtime pool.
@@ -24,62 +28,62 @@ Changed
 * Changed empty & idle input systems running on main thread.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed potential issue with vehicle navigation breaking after avoidance.
 * Improved avoidance of vehicles for the crowd avoidance method.
 * Fixed issue of losing focus on the inspector when entering the first number for the speed limit.
 
 [1.7.4] - 18-06-2026
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added an additional safe distance parameter for changing lanes vehicles to prevent them from hitting the forward vehicle.
 * Added custom scaling support for road constructor roads.
 * Added Unity 6.5 support.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved global traffic light window for connecting merged traffic nodes with traffic light.
 * Improved path creator workflow with one-way roads to prevent incorrect connection side selection.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed a potential endless stuck during reverse avoidance.
 * Fixed potential wrong raycast detection if many mono cars are in use with physics enabled.
 * Fixed a warning message for the roundabout.
 
 [1.7.3] - 12-06-2026
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added transient forces for arcade vehicle controller to prevent slipping on inclined surfaces.
 * Added support motorcycles & three-wheelers for arcade vehicle controller.
 * Added configurable boundary constraints for pedestrians on paths for crowd avoidance method.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved EasyRoads3D road generation, depending on the prefabs that are used.
 * Improved traffic light auto reconnecting with global traffic light tool for merged traffic nodes.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed warning message for ReactionCollisionSystem.
 * Fixed warning messages for Unity 6.4.
 
 [1.7.2] - 15-05-2026
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New crowd avoidance navigation method [beta].
 * Added a new feature: the temporary ragdoll will now get up after being hit by a car.
@@ -88,24 +92,24 @@ Added
 * Added ability to turn on ignoring traffic lights by the traffic.
 
 [1.7.1] - 28-03-2026
-------------
+--------------------
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Added a new clear job for hashmap systems.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed physics culling for dots physics cars.
 * Fixed baking order for simple physics cars to avoid a potential exception.
 
 [1.7.0] - 25-03-2026
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support `NetCode for Entities`.
 * Added support for multiple cull points for local split-screen multiplayer.
@@ -126,7 +130,7 @@ Added
 * Added Unity 6.4 support.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved the performance of some high-loaded systems.
 * Improved parking navigation for traffic.
@@ -136,7 +140,7 @@ Changed
 * Improved `Roundabout` template workflow.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed the build size for giant entity scenes.
 * Fixed a potential exception in avoidance system.
@@ -149,15 +153,15 @@ Fixed
 * Fixed `Trigger and Destroy` type for `Traffic node`.
 
 [1.6.5] - 08-01-2026
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added custom post processing for mono cars during car creating in the car prefab creator.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed targeting for custom physics vehicle in some corner cases.
 * Fixed weight parameter for mono cars in the car prefab creator.
@@ -165,21 +169,21 @@ Fixed
 * Fixed change lane during A* navigation for some corner cases.
 
 [1.6.4] - 31-12-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added unity vehicle support.
 * Added a car player blocker component for mono traffic to prevent the player from being push the car if it the player has custom controller.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * 2 unused layers were removed from the demo scene.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Removed scheduling from Begin Simulation Systems to prevent potential structural changes during Job System.
 * Fixed road constructor generation for some cases.
@@ -187,35 +191,35 @@ Fixed
 * Fixed the player demo's shooting on non-flat surfaces.
 
 [1.6.3] - 28-11-2025
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed the missing driving sound for cars.
 * Fixed player interaction with cars in Demo scenes.
 
 [1.6.2] - 24-11-2025
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed compatibility with Unity 2022.3
 * Fixed PathHashMapSystem Burst error message.
 
 [1.6.1] - 21-11-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added the ability to change lanes during built-in A* navigation for traffic.
 * Added the ability to follow traffic to a user-defined point.
 * Added new events for spawning and reaching the target for pedestrians.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * The project no longer overrides constant scripts and enums during version updates.
 
@@ -231,10 +235,10 @@ Fixed
 * Fixed a minor memory leak in the traffic test scene.
 
 [1.6.0] - 09-11-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added `Animatron` support. 
 * Added a new `API` & `Runtime RawData Demo` scene that demonstrates the generation of a road from raw data at runtime.
@@ -251,14 +255,14 @@ Added
 * Added support for merge road for custom runtime road.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved along path generation of pedestrian nodes for `Custom straight road segment`.
 * `Monobehaviour` type was removed from `RuntimeSegmentCustom` script to reduce overhead.
 * The editor metadata was removed from the serializable dictionary.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed deprecation messages for `Entities 1.4.2` & `Unity 6.3`.
 * Fixed compatibility with Rukhanka 2.5.0+.
@@ -271,10 +275,10 @@ Fixed
 * Fixed `Road Constructor` generation for some cases.
 
 [1.5.0] - 30-09-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added new option to enable different driving styles for traffic.
 * Added random lateral offset for traffic.
@@ -293,7 +297,7 @@ Added
 * Added validation for Traffic Area authoring.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * `Entities.graphics` package is no longer required if Mono physics cars & Hybrid Legacy pedestrians are in use.
 * `Unity.physics` package is no longer required if NoPhysics or Mono physics cars are in use.
@@ -303,7 +307,7 @@ Changed
 * Improved path recalculation during parking builder mode.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed `RaycastCommand` for Arcade vehicles for Unity 6.2.
 * Fixed potential vehicle rollover for simple physics cars.
@@ -313,15 +317,15 @@ Fixed
 * Fixed compatibility with Road Constructor 1.7.0+
 
 [1.4.4] - 29-08-2025
-------------
+--------------------
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Added traffic light cloning for the traffic lights that are part of the road prefab.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed installation on Unity 6.2.
 * Fixed a potential jitter for Arcade vehicle controller on Unity 6+.
@@ -331,10 +335,10 @@ Fixed
 * Fixed truncation warning for animation shader.
 
 [1.4.3] - 01-07-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * A crosswalk node type has been added for crosswalks without traffic nodes.
 * Added crosswalk system for pedestrian passing the road in the crosswalk node type.
@@ -342,7 +346,7 @@ Added
 * NPC obstacle offset authoring has been added for certain vehicles that require a custom offset for NPC obstacle detection.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed Road Constructor compatibility.
 * Fixed A* compatibility.
@@ -352,19 +356,19 @@ Fixed
 * Fixed Car prefab creator for some corner cases.
 
 [1.4.2b] - 08-05-2025
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed ragdoll system exception for Hybrid pedestrian.
 * Fixed sound looping for custom user sound.
 
 [1.4.2] - 05-05-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support for parking & oneway roads for runtime tile sample.
 * Added support for custom pedestrian node types for runtime tile sample.
@@ -378,12 +382,12 @@ Added
 * Added ability to use `Mesh Collider` in `Car Prefab Creator` for mono cars.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved Microverse Roads workflow.
 
 Fixed 
-~~~~~~~~~~~~ 
+~~~~~ 
 
 * Fixed speed limit set for custom straight roads.
 * Fixed rare wrong obstacle calculation on intersecting roads.
@@ -397,17 +401,17 @@ Fixed
 * Fixed start shooting until realod finished for built-in controller in sample scene.
 
 [1.4.1] - 17-03-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added new `Runtime CustomRoad Demo` scene to demonstrate the use of the `API` to generate run-time roads from `Unity` spline roads or from custom data.
 * Added support for priority intersections without traffic lights for custom run-time roads.
 * Added gizmos for RuntimeRoadManagerCustom for nodes.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed drawing of road segment paths after segment rotation.
 * Fixed position handle when moving multiple road segments at the same time.
@@ -415,19 +419,19 @@ Fixed
 * Fixed external connection path if source lane index is different from connected lane index.
 
 [1.4.0b] - 07-03-2025
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed initial installation for Unity 2022.3.
 * Fixed wrong skin index selection for Hybrid Shape GPU.
 
 [1.4.0] - 05-03-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support for `Microverse Roads`.
 * Added support for `CityGen3D`. 
@@ -438,16 +442,16 @@ Added
 * Added new external runtime connection for runtime segments for custom solutions.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * All presets & prefabs packed in separate packages so project can be updated seamlessly & without overwriting editing presets.
 * Significantly improved performance of built-in A* pathing for large numbers of entities searching the path simultaneously.
 
 [1.3.2] - 21-02-2025
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed `Pedestrian node creator` attachment to surface when attach to mesh is selected.
 * Fixed road segment creator drag position handle for new gizmos system.
@@ -455,10 +459,10 @@ Fixed
 * Fixed `Path data viewer` for new gizmos system.
 
 [1.3.1] - 31-01-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added new trigger node type for traffic and pedestrian nodes to invoke callback when entity reaches the node.
 * Added compatibility to auto-generate intersections between selected straight roads.
@@ -471,7 +475,7 @@ Added
 * Added `UGizmos` plugin to improve the performance of gizmos.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed potential exceptions in `Runtime Tile Road Demo`.
 * Fixed auto-crossroad generation can cause incorrect connection paths.
@@ -480,16 +484,16 @@ Fixed
 * Fixed recalculation of connected path for custom straight one-way roads in the `Prefab Stage`.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved editor performance of gizmos.
 * Now the project can be used completely without the old input system.
 
 [1.3.0] - 15-01-2025
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support for `Road Constructor` for editor & runtime.
 * Added support for `Fantastic City Generator` for editor & runtime generation.
@@ -506,7 +510,7 @@ Added
 * Added priority to right option at intersection for cars with the same priority.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed potential crash on some devices.
 * Fixed bounds calculation in some cases that could cause incorrect avoidance or obstacle detection.
@@ -518,7 +522,7 @@ Fixed
 * Fixed editor memory leak caused by `TrafficNpcCalculateObstacleSystem`.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * By default, a clean scene is created with a clean `HubBase` without any extra dependencies.
 * Improved `ArcadeVehicleController` braking & suspension.
@@ -526,10 +530,10 @@ Changed
 * Now runtime segments are connected with raycast method.
 
 [1.2.2] - 27-11-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added new `Hybrid On Request And GPU` pedestrian type for manual control handling transition between Hybrid & GPU pedestrians.
 * Added entity selection example script.
@@ -540,13 +544,13 @@ Added
 * Added an API to get road entities in `Runtime Road Manager` using road scene objects.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed potential incorrect init for mono trains.
 * Fixed potential lane change when route is not on flat surface.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Major refactoring of the system order & system registration to significantly reduce the number of sync points.
 * `Traffic Car` will by default take the path with the fewest cars in `RuntimeRoad mode`.
@@ -554,17 +558,17 @@ Changed
 * Removed `Dummy` skin.
 
 [1.2.1c] - 08-11-2024
-------------
+---------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed rare endless stuck traffic car when using raycast.
 * Fixed collision system calculation.
 * Fixed tile chunk prefab example.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Added an option to change some general settings from the corresponding configs.
 * :ref:`Path creator <pathCreator>` can be used in the `Prefab stage`.
@@ -572,25 +576,25 @@ Changed
 * :ref:`Road segment <roadSegment>` can be created in the `Prefab stage`.
 
 [1.2.1b] - 06-11-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support for lane changing on run-time roads.
 * Added a helper button for traffic lights that have lost their reference to a traffic light crossroad. 
 * Added support for `Odin Inspector`.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed intersection conversion for run-time road chunks.
 
 [1.2.1] - 04-11-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added support for `Multi-road segments` by adding 1 `RuntimeSegment` at a time in `Runtime Road mode`.
 * Added new `RuntimeTile Chunk Road demo` to demonstrate the road chunks added at runtime.
@@ -599,7 +603,7 @@ Added
 * Added auto-curve type detection for :ref:`Path creator <pathCreator>`.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed :ref:`path <path>` intersection calculation for custom shape surface.
 * Minor fix `Car prefab creator` text pattern search for wheels.
@@ -607,15 +611,15 @@ Fixed
 * Fixed a problem with the `Local Avoidance` switch multi-targeting in a short amount of time.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved obstacle detection in intersecting & neighbouring cases.
 
 [1.2.0] - 28-10-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Runtime graph creation.
 * Added new `RuntimeTile Demo` scene.
@@ -636,7 +640,7 @@ Added
 * Added manual sync button for all configs.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed car creation offset for car parts when the car parts are not the parent of the car body.
 * Fixed wheel detection during car creation in some cases.
@@ -646,7 +650,7 @@ Fixed
 * Fixed steering input can be incorrectly calculated in some cases.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Now the road `Graph` is created at runtime when the scene starts.
 * `Cinemachine v3` used by default.
@@ -655,10 +659,10 @@ Changed
 * Added traffic light debugging for paths with custom lights.
 
 [1.1.0g] - 19-09-2024
-------------
+---------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Crossroad jam obstacle fix.
 * Fixed sound pooling when vehicle is destroyed.
@@ -668,15 +672,15 @@ Fixed
 * Fixed initial `HDRP` installation conflict with `Cinemachine v3` package.
 
 [1.1.0f] - 10-09-2024
-------------
+---------------------
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved `NPC` obstacle detection.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * `TrafficNpcCalculateObstacleSystem` debug race condition fixed.
 * Anti-roll fix for `Arcade Vehicle Controller`.
@@ -686,10 +690,10 @@ Fixed
 * Fixed `EasyRoads3D` exception when crossing has 1 connecting road.
 
 [1.1.0e] - 16-08-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Auto-crosswalk connection in the :ref:`Road Parent <roadParentInfo>`.
 * Auto-connection distance in the :ref:`Road Parent <roadParentInfo>`.
@@ -698,50 +702,50 @@ Added
 * New agent hybrid component.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed move handle for moving two or more road segments.
 * Crowd sound system dependency fix.
 * Fixed `Ragdoll` not being pooled.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved :ref:`Road Parent <roadParentInfo>` UI.
 
 [1.1.0d] - 12-08-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Interpolation of the car view for culled mono physics cars.
 * New collision stuck avoidance system for :ref:`Hybrid mono <hybridMonoVehicle>` cars.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Agents Navigation integration editor error fix.
 * Minor player arcade car prefab fix.
 * Traffic node viewer fix.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved transition between physics & no physics arcade cars.
 
 [1.1.0c] - 09-08-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New auto-sync config option between MainScene & Subscene.
 * Traffic node gizmos settings.
 * New pure city stress scene.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Minor script fix for Unity 2023.2.
 * Fixed potential config corruption for builds.
@@ -749,21 +753,21 @@ Fixed
 * Arcade vehicle controller wheel position fix.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Minimum `Unity` version 2022.3.21.
 * Improved arcade sample cars.
 
 [1.1.0b] - 06-08-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added `CarModelRuntimeAuthoring`, `BoundsRuntimeAuthoring`, `VelocityRuntimeAuthoring` entity runtime components.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed compatibility with Entities 1.3.0.
 * Fixed initial entity scale for runtime entities with `CopyTransformFromGameObject` component.
@@ -772,10 +776,10 @@ Fixed
 * Nav agents dependency fix.
 
 [1.1.0] - 05-08-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Full `Hybrid mode` support:
 	* New :ref:`monobehaviour compatible <hybridMonoVehicle>` traffic.
@@ -809,7 +813,7 @@ Added
 * Added :ref:`HDRP <hdrp>` support.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed traffic spawning in culled areas.
 * Fixed custom physics vehicle could jump after restoring physics at runtime in some cases.
@@ -821,7 +825,7 @@ Fixed
 * Fixed road segment merge.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Major refactoring of the project to make it more modular. 
 * Now the project can be used for traffic simulation only, without player & extra features.
@@ -833,17 +837,17 @@ Changed
 * Min `Burst` version 1.8.16 for `Unity` 2022.3.31 or higher.
 
 [1.0.7d] - 06-06-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Create & connect :ref:`Pedestrian nodes <pedestrianNode>` in the prefab scene.
 * Added gradle config for Android for Unity 6.
 * Added support `Cinemachine 3.0+ <https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html>`_.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed Unity package dependency resolving for the first time can cause endless script compilation.
 * :ref:`Custom straight <roadSegmentCreatorCustomStraight>` road may have null traffic nodes due to initial creation in some cases.
@@ -853,36 +857,36 @@ Fixed
 * Animation baker minor UI fixes & improvements.
 
 [1.0.7c] - 31-05-2024
-------------
+---------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed package initilization window doesn't load in some cases.
 * Fixed package initilization window appears randomly on Mac OS.
 
 [1.0.7b] - 29-05-2024
-------------
+---------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Auto bootstrap option for single scene.
 * Bootstrap logging.
 * Entity road drawer for the editor time.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Car prefab creator ID duplicate error.
 * Script defines after the project update.
 * Input in the custom vehicle test scene.
 
 [1.0.7] - 24-05-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
  
 * New auto-spline option for `Bezier` curves in the :ref:`Path Creator <pathCreator>`
 * New :ref:`extrude lane <extrudeLane>` option for :ref:`Custom segment <roadSegmentCreatorCustomSegment>` road in the :ref:`RoadSegmentCreator <roadSegmentCreator>`
@@ -894,7 +898,7 @@ Added
 * User's :ref:`custom camera <customCamera>` integration.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed :ref:`Pedestrian node <pedestrianNode>` connection on custom terrain shapes in the :ref:`Pedestrian node creator <pedestrianNodeCreator>`.
 * Fixed auto-switch type for oneway paths in the :ref:`Path Creator <pathCreator>`.
@@ -905,16 +909,16 @@ Fixed
 * Fixed compatibility with Unity 2023.2.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * :ref:`Pedestrian node <pedestrianNode>` scene filtering updates when node settings are changed in the :ref:`Pedestrian node creator <pedestrianNodeCreator>`.
 * `PedestrianReferences` component renamed to `PedestrianEntityRef`.
 
 [1.0.6] - 22-04-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New connection type for :ref:`Path Creator <pathCreator>`.
 * New :ref:`traffic light <roadSegmentCreatorLightSettings>` customizations for Road Segment Creator tool.
@@ -922,21 +926,21 @@ Added
 * New state utils methods for pedestrian.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Fixed path connection for Path Creator in some cases
 * Fix for traffic light duplication when editing a road segment in the subscene.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * UX improvement for Path Creator.
 
 [1.0.5] - 15-04-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New :ref:`multi-mesh <animationBakerHowToMulti>` customization support for GPU animations. 
 * New custom :ref:`attachments <animationBakerHowToMulti>` support for GPU animations. 
@@ -944,7 +948,7 @@ Added
 * Integration for custom  :ref:`player vehicle controller <playerHybridMono>` plugin which controlled by MonoBehaviour script **[experimental]**. 
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Animation GPU baking with animated parent.
 * Fixed physics surface cloning tool in some cases.
@@ -953,46 +957,46 @@ Fixed
 * Static physics culling.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Traffic lights are disabled by default for straight road templates.
 * Removed obsolete options for Car Prefab Creator.
 
 [1.0.4] - 04-04-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New align custom straight road feature :ref:`along the surface <snapLine>`. 
 * New animation baker clip binding. 
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Path recalculation for custom straight roads.
 * Re-creation of the road segment with custom user orientation.
 * Fix waypoint info display for road segment in some cases.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Improved :ref:`snapping <roadSegmentCreatorCustomSnapNodeSettings>` for custom road segments.
 
 [1.0.3b] - 01-04-2024
-------------
+---------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * First init editor hotfix.
 * Path baking validation fix.
 
 [1.0.3] - 29-03-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * Added GPU animation :ref:`transition preview <animationTransitionEditor>`.
 * New optimized shaders for crowds.
@@ -1000,45 +1004,45 @@ Added
 * New user-friendly animation shader control.
 
 Changed
-~~~~~~~~~~~~
+~~~~~~~
 
 * Update to entities 1.2.0
 * GPU animation baking and playback algorithm for better memory texture layout.
 * Improved GPU transition animations.
 
 [1.0.2] - 25-03-2024
-------------
+--------------------
 
 Added
-~~~~~~~~~~~~
+~~~~~
 
 * New movement randomization speed for pedestrians.
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * A rare build crash caused by the area trigger system.
 * Fixed the pedestrian physics runtime option in the build.
 * Mobile input for build.
 
 [1.0.1b] - 22-03-2024
-------------
+---------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Traffic mask settings editor fix.
 * Script refactoring.
 	
 [1.0.1] - 20-03-2024
-------------
+--------------------
 
 Fixed
-~~~~~~~~~~~~
+~~~~~
 
 * Missing script hotfix.
 
 [1.0.0] - 19-03-2024
-------------
+--------------------
 
 * Initial release.

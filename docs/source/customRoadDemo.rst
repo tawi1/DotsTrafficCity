@@ -52,10 +52,6 @@ Rather than manually adding nodes and paths directly into internal segment colle
    **The Traffic Node Rotation Rule:**
    To align with the internal traffic navigation matrix, the rotation of an entry boundary node must look **backwards (oriented in the opposite direction)** relative to the track's path direction. Exit nodes face the natural forward path direction.
 
-.. image:: /images/road/runtimeRoad/runtimeRoadRotation.png
-   :alt: Entry and Exit Node Rotation Constraint Diagram
-   :align: center
-
 Setup the boundary structures dynamically based on your path direction. In this example, the straight road ends at ``(50f, 0f, 35f)``, which acts as the entry boundary for the next intersection segment:
 
 .. code-block:: csharp
@@ -151,12 +147,6 @@ Here is an example of isolating this logic into clean, reusable helper methods:
    // Method to create a dedicated road crosswalk link from exactly 2 positions
    public void AddCrosswalkLink(RuntimeSegmentCustom segment, List<Vector3> crossingPoints)
    {
-       if (crossingPoints == null || crossingPoints.Count != 2)
-       {
-           Debug.LogError("A crosswalk requires exactly 2 boundary vector positions.");
-           return;
-       }
-
        // CRITICAL: For crosswalk generation, the crosswalk optional flag must be set to true
        segment.AddPedestrianNodes(crossingPoints, crosswalk: true);
    }
@@ -297,29 +287,49 @@ Core Runtime Structures
 
   **Methods:**
 
-  * ``public void AddNodeData(TrafficNodeData node, List<PathData> nodePaths, bool registerNode = true)``: Registers a traffic node and its associated paths into the segment, automatically assigning sequential internal path tracking IDs.
-  * ``public void AddPedestrianNodes(List<Vector3> positions, bool crosswalk = false)``: Runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
-  * ``public void AddTrafficLights()``: Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
+  .. list-table::
+     :widths: 35 25 40
+     :header-rows: 1
+
+     * - Method Name
+       - Return Type / Signature
+       - Description
+     * - ``AddNodeData``
+       - ``void (TrafficNodeData node, List<PathData> nodePaths, bool registerNode = true)``
+       - Registers a traffic node and its associated paths into the segment, automatically assigning sequential internal path tracking IDs.
+     * - ``AddPedestrianNodes``
+       - ``void (List<Vector3> positions, bool crosswalk = false)``
+       - Official runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
+     * - ``AddTrafficLights``
+       - ``void ()``
+       - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
 
   **Properties & Fields:**
 
   .. list-table::
-     :widths: 40 60
+     :widths: 30 20 50
      :header-rows: 1
 
-     * - Property / Field
+     * - Name
+       - Type
        - Description
-     * - ``public Vector3 Position { get; set; }``
+     * - ``Position``
+       - ``Vector3``
        - Center position of this localized road section grid.
-     * - ``public bool ForceDisableLight { get; set; }``
+     * - ``ForceDisableLight``
+       - ``bool``
        - Forces the segment to operate without traffic lights, relying purely on path crossing priorities.
-     * - ``public int CrossroadID { get; }``
+     * - ``CrossroadID``
+       - ``int``
        - Internal uniquely allocated simulation ID for intersection registration.
-     * - ``public List<TrafficNodeData> Nodes``
+     * - ``Nodes``
+       - ``List<TrafficNodeData>``
        - Grid collection of entry/exit traffic boundary sides.
-     * - ``public List<PathData> AllPaths``
+     * - ``AllPaths``
+       - ``List<PathData>``
        - Track vectors mapped out within this block.
-     * - ``public List<PedestrianNodeData> PedestrianNodes``
+     * - ``PedestrianNodes``
+       - ``List<PedestrianNodeData>``
        - Localized navigation graph markers for civilian pedestrian simulation.
 
 ``TrafficNodeData``
@@ -328,60 +338,86 @@ Core Runtime Structures
   **Properties & Fields:**
 
   .. list-table::
-     :widths: 40 60
+     :widths: 30 20 50
      :header-rows: 1
 
-     * - Property / Field
+     * - Name
+       - Type
        - Description
-     * - ``public RuntimeSegmentCustom Owner``
+     * - ``Owner``
+       - ``RuntimeSegmentCustom``
        - Reference to the parent runtime segment structure that holds this node.
-     * - ``public TrafficNodeData ConnectedExternalNode``
+     * - ``ConnectedExternalNode``
+       - ``TrafficNodeData``
        - Reference to an adjacent segment's external node that this boundary node is stitched to.
-     * - ``public PedestrianNodeData CrosswalkNodeLeft``
+     * - ``CrosswalkNodeLeft``
+       - ``PedestrianNodeData``
        - Left-side boundary pedestrian node allocated for a crosswalk crossing.
-     * - ``public PedestrianNodeData CrosswalkNodeRight``
+     * - ``CrosswalkNodeRight``
+       - ``PedestrianNodeData``
        - Right-side boundary pedestrian node allocated for a crosswalk crossing.
-     * - ``public TrafficNodeType NodeType``
+     * - ``NodeType``
+       - ``TrafficNodeType``
        - Defines the structural node style constraint (e.g., Default, DestroyVehicle, etc.).
-     * - ``public Vector3 Position``
+     * - ``Position``
+       - ``Vector3``
        - Spatial world position coordinates of this segment boundary side.
-     * - ``public Quaternion Rotation``
+     * - ``Rotation``
+       - ``Quaternion``
        - Direction orientation tracker. Must look backwards on entry nodes.
-     * - ``public Vector2Int LaneCountData``
+     * - ``LaneCountData``
+       - ``Vector2Int``
        - Configuration vector where ``X`` controls forward capacity (entry lanes) and ``Y`` controls backward lanes (exit lanes).
-     * - ``public float LaneWidth``
+     * - ``LaneWidth``
+       - ``float``
        - Sets space width requirements per vehicle (Default: 4.0).
-     * - ``public float Offset``
+     * - ``Offset``
+       - ``float``
        - Side positioning offset shift value from standard path origin curves.
-     * - ``public float DividerWidth``
+     * - ``DividerWidth``
+       - ``float``
        - Physical center width separating left and right traffic lane rows.
-     * - ``public bool IsOneWay``
+     * - ``IsOneWay``
+       - ``bool``
        - Toggles whether the route operates exclusively as a one-way path network.
-     * - ``public bool IsEndOfOneWay``
+     * - ``IsEndOfOneWay``
+       - ``bool``
        - Designates if this node acts as the final terminal exit of a one-way road layout.
-     * - ``public bool AddPedestrianNodes``
+     * - ``AddPedestrianNodes``
+       - ``bool``
        - Flag tracking whether regular sidewalk node structures should auto-generate here (Default: true).
-     * - ``public bool AddCrosswalk``
+     * - ``AddCrosswalk``
+       - ``bool``
        - Toggles the auto-generation of pedestrian crosswalk markings across lanes (Default: true).
-     * - ``public float CrosswalkOffset``
+     * - ``CrosswalkOffset``
+       - ``float``
        - Linear positioning displacement adjustment for the crosswalk link.
-     * - ``public int LightIndex``
+     * - ``LightIndex``
+       - ``int``
        - Identifies the traffic light group/phase assigned to this specific boundary node (Default: -1).
-     * - - ``public float ChanceToSpawn``
+     * - ``ChanceToSpawn``
+       - ``float``
        - Density probability weight influencing vehicle background generation loops.
-     * - ``public float Weight``
+     * - ``Weight``
+       - ``float``
        - Relative path selection preference modifier for traffic routing AI calculations.
-     * - ``public float CustomAchieveDistance``
+     * - ``CustomAchieveDistance``
+       - ``float``
        - Custom stopping distance accuracy tolerance value for paths intersecting near this boundary.
-     * - ``public int LocalNodeIndex { get; set; }``
+     * - ``LocalNodeIndex``
+       - ``int``
        - The index position assigned to this unique node within its parent segment.
-     * - ``public int CrosswalkIndex``
+     * - ``CrosswalkIndex``
+       - ``int``
        - Internal sequence tracker for crosswalk entity instances.
-     * - ``public bool InverseCrosswalk``
+     * - ``InverseCrosswalk``
+       - ``bool``
        - Property to mirror or flip crosswalk vector alignment.
-     * - ``public int MinLocalPathIndex { get; set; }``
+     * - ``MinLocalPathIndex``
+       - ``int``
        - Flat bounding helper representing the lowest localized index slice assigned to this node's tracks.
-     * - ``public int MaxLocalPathIndex { get; set; }``
+     * - ``MaxLocalPathIndex``
+       - ``int``
        - Flat bounding helper representing the upper localized index boundary assigned to this node's tracks.
 
 ``PathData``
@@ -389,35 +425,55 @@ Core Runtime Structures
 
   **Methods:**
 
-  * ``public void SetSpeedLimitByKmh(float speedLimitKmh)``: Sets and scales target velocities appropriately to matching internal physics architectures (KM/H to M/S).
+  .. list-table::
+     :widths: 35 25 40
+     :header-rows: 1
+
+     * - Method Name
+       - Return Type / Signature
+       - Description
+     * - ``SetSpeedLimitByKmh``
+       - ``void (float speedLimitKmh)``
+       - Sets and scales target velocities appropriately to matching internal physics architectures (KM/H to M/S).
 
   **Properties & Fields:**
 
   .. list-table::
-     :widths: 40 60
+     :widths: 30 20 50
      :header-rows: 1
 
-     * - Property / Field
+     * - Name
+       - Type
        - Description
-     * - ``public List<Vector3> Waypoints``
+     * - ``Waypoints``
+       - ``List<Vector3>``
        - Coordinate lists shaping out lane trajectories.
-     * - ``public int GlobalPathIndex``
+     * - ``GlobalPathIndex``
+       - ``int``
        - A unique, absolute simulation path ID assigned automatically by the pipeline.
-     * - ``public int SourceLaneIndex``
+     * - ``SourceLaneIndex``
+       - ``int``
        - The original source index track of the lane (if -1, it auto-detects based on layout).
-     * - ``public int ConnectedLaneIndex``
+     * - ``ConnectedLaneIndex``
+       - ``int``
        - The target lane row index on the destination boundary side.
-     * - ``public int ConnectedNodeIndex``
+     * - ``ConnectedNodeIndex``
+       - ``int``
        - Local index targeting the specific destination traffic node inside the segment.
-     * - ``public bool External``
+     * - ``External``
+       - ``bool``
        - Flag marking if this path forms a cross-boundary connection linking outward to a separate road segment.
-     * - ``public int LocalPathIndex { get; set; }``
+     * - ``LocalPathIndex``
+       - ``int``
        - The sequential sequence tracker assigned automatically by the parent runtime segment.
-     * - ``public float SpeedLimit``
+     * - ``SpeedLimit``
+       - ``float``
        - Raw target maximum vehicle traversal speed limits tracked in meters per second (M/S).
-     * - ``public int Priority``
+     * - ``Priority``
+       - ``int``
        - Crossing intersection priority ranking configuration (Higher values gain right-of-way).
-     * - ``public int TrafficGroup``
+     * - ``TrafficGroup``
+       - ``int``
        - Mask filter group determining types of vehicles permitted to traverse this path lane.
 
 ``PedestrianNodeData``
@@ -426,62 +482,60 @@ Core Runtime Structures
   **Properties & Fields:**
 
   .. list-table::
-     :widths: 40 60
+     :widths: 30 20 50
      :header-rows: 1
 
-     * - Property / Field
+     * - Name
+       - Type
        - Description
-     * - ``public int RuntimeID``
+     * - ``RuntimeID``
+       - ``int``
        - Absolute unique tracker ID assigned dynamically by the manager at network initialization.
-     * - ``public RuntimeSegmentCustom Owner``
+     * - ``Owner``
+       - ``RuntimeSegmentCustom``
        - Link reference to the parent custom runtime segment containing this walker node.
-     * - ``public PedestrianNodeData Previous``
+     * - ``Previous``
+       - ``PedestrianNodeData``
        - Link node reference back to the previous coordinate step along the current sidewalk chain.
-     * - ``public PedestrianNodeData Next``
+     * - ``Next``
+       - ``PedestrianNodeData``
        - Link node reference targeting the subsequent coordinate node step forward along the sidewalk chain.
-     * - ``public List<PedestrianNodeData> CustomConnectedNodes``
+     * - ``CustomConnectedNodes``
+       - ``List<PedestrianNodeData>``
        - Connection matrix managing non-standard pathway logic links (e.g., doorways or side-alleys).
-     * - ``public Vector3 Position``
+     * - ``Position``
+       - ``Vector3``
        - Exact 3D world space coordinates locating this specific pedestrian junction marker.
-     * - ``public int ConnectedNodeIndex``
-       - Structural connection index marker pointing towards neighboring target nodes.
-     * - ``public int LightIndex``
+     * - ``ConnectedNodeIndex``
+       - ``int``
+       - Structural connection index marker pointing towards neighboring target traffic nodes.
+     * - ``LightIndex``
+       - ``int``
        - Maps the node to a specific pedestrian crosswalk light signaling step phase (Default: -1).
-     * - ``public PedestrianNodeType PedestrianNodeType``
+     * - ``PedestrianNodeType``
+       - ``PedestrianNodeType``
        - Defines behavioral mode attributes assigned to the node (e.g., Default, Crosswalk, etc.).
-     * - ``public NodeShapeType NodeShapeType``
+     * - ``NodeShapeType``
+       - ``NodeShapeType``
        - Form shape layout style for target reaching mechanics (e.g., Circle, Square bounding).
-     * - ``public bool CanSpawnInView``
+     * - ``CanSpawnInView``
+       - ``bool``
        - Toggles whether fresh pedestrian agents can spawn on this node inside active camera viewing fields.
-     * - ``public float ChanceToSpawn``
+     * - ``ChanceToSpawn``
+       - ``float``
        - AI traffic density distribution weight configuration.
-     * - ``public float Weight``
+     * - ``Weight``
+       - ``float``
        - Pathfinding cost weight modifier used during long-distance walking route calculations.
-     * - ``public float CustomAchieveDistance``
+     * - ``CustomAchieveDistance``
+       - ``float``
        - Specific reaching threshold overriding default proximity target arrival checks.
-     * - ``public float Width``
+     * - ``Width``
+       - ``float``
        - Area space sizing width parameter assigned to the pedestrian track node.
-     * - ``public float Height``
+     * - ``Height``
+       - ``float``
        - Area space sizing height parameter assigned to the pedestrian track node.
-     * - ``public bool HasMovementRandomOffset``
+     * - ``HasMovementRandomOffset``
+       - ``bool``
        - Enables chaotic walk variance drift distributions preventing pedestrians from walking in a single thin line.
-
-Manager Interaction Methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``RuntimeRoadManagerCustom``
-  The main runtime engine manager coordinating initialization, stitching, lifecycle tracking, and destruction of entities within the ECS world. Refers directly to **RuntimeRoadManagerCustom.cs**.
-
-  **Properties & Fields**
-  
-  * ``public bool InProgress { get; }``: Returns true if there is an active asynchronous construction or processing batch currently executing.
-
-  **Public Methods**
-
-  * ``public void AddSegmentsSync(List<RuntimeSegmentCustom> segments)``: Blocks execution flow temporarily while constructing and stitching entities instantly within the simulation grid. Use this for immediate runtime map generation or small updates.
-  * ``public void AddSegments(List<RuntimeSegmentCustom> segments)``: Starts a background asynchronous initialization routine for the submitted list. Highly recommended for vast chunks or heavily threaded procedural environments to prevent frame rate drops.
-  * ``public void AddSegmentsAsync(List<RuntimeSegmentCustom> segments, Action<List<RuntimeSegmentCustom>> onResult = null, int addSegmentPerIteration = 20)``: Spawns a Coroutine task that incrementally initializes a fixed batch of segments (``addSegmentPerIteration``) per frame, triggering an optional callback complete loop (``onResult``) when done.
-  * ``public async Task AddSegmentsAsyncTask(List<RuntimeSegmentCustom> segments)``: A fully async/await compatible asynchronous wrapper task that completes when all requested segments have successfully processed and loaded into the active world state.
-  * ``public void CreateCustomRuntimeNodes(List<PedestrianNodeData> pedestrianNodes)``: Low-level initialization loop that processes a collection of pedestrian nodes, pre-calculating boundaries, checking crosswalk links, and registering them within the simulation grid. **Note:** This method requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
-  * ``public void CreateCustomRuntimeNode(PedestrianNodeData pedestrianNode)``: Low-level method to initialize a single pedestrian node. It generates its runtime tracking ID, sets up connections with neighboring nodes, and prepares its position data for the pedestrian simulation hash grid. **Note:** This method requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
-  * ``public void RemoveSegments(List<RuntimeSegmentCustom> segments)``: Immediately removes and cleans up the specified list of road segments. It clears spatial hash index positions, removes tracking data from neighbor nodes, and unloads any live simulation entities safely.

@@ -14,14 +14,14 @@ Installation & Setup
    :alt: Runtime Road Installation Setup
    :align: center
 
-2. **Explore Sample Scene**: Open the ``Runtime CustomRoad Demo`` scene to review a basic implementation bridge.
+2. **Architectural Note: Sample vs. Production Code**
+   
+   It is important to distinguish between demonstration samples and production-ready components:
 
-	.. note::
-It is important to distinguish between demonstration samples and production-ready components:
-
-   * **Production-Ready**: You should directly manipulate the low-level data structures (``RuntimeSegmentCustom``, ``TrafficNodeData``, ``PathData``) and the ``RuntimeRoadManagerCustom`` manager. You can also utilize ``RoadSceneUtils`` in production environments to assist in generating or calculating road data programmatically.
+   * **Production-Ready**: You should directly manipulate the low-level data structures (``RuntimeSegmentCustom``, ``TrafficNodeData``, ``PathData``) and the ``RuntimeRoadManagerCustom`` manager. These are pure data structures or ECS-compatible components fully intended for procedural run-time generation.
    * **Demonstration Only**: The classes ``RoadBase``, ``SplineRoad``, and ``IntersectionRoad`` are provided **strictly as samples**. They are intended to demonstrate how to extract data from Unity Splines and are not intended for use in production run-time environments.
-   * **Disclaimer**: The code examples in this guide are for **demonstration purposes only**. They are not fully functional for production use and do not include necessary error handling or performance optimizations. Please use them as a conceptual starting point to build your own robust implementation.
+
+   **Disclaimer**: The code examples in this guide are for **demonstration purposes only**. They are not fully functional for production use and do not include necessary error handling or performance optimizations. Please use them as a conceptual starting point to build your own robust implementation.
 
 How to Use: Step-by-Step Graph Initialization
 ---------------------------------------------
@@ -31,7 +31,7 @@ Follow these steps sequentially to generate a functional road layout directly vi
 Step 1: Instantiating the Root Runtime Segment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Every localized section of a road or an intersection must be encapsulated by a ``RuntimeSegmentCustom`` container. This tracking block manages the life cycle of its underlying paths and nodes.
+Every localized section of a road or an intersection must be encapsulated by a ``RuntimeSegmentCustom`` container. This tracking block manages the life cycle of its underlying paths, traffic nodes, and pedestrian nodes.
 
 .. code-block:: csharp
 
@@ -39,16 +39,22 @@ Every localized section of a road or an intersection must be encapsulated by a `
    Vector3 segmentCenter = new Vector3(50f, 0f, 17.5f);
    RuntimeSegmentCustom customSegment = new RuntimeSegmentCustom(segmentCenter);
 
-Step 2: Designing Traffic Control Nodes (Segment Sides)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 2: Designing Traffic Control Nodes and Associated Paths
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A ``TrafficNodeData`` represents a specific outer side (boundary) of a segment containing its own set of paths. The paths of this node enter the segment for the right lanes. The number of nodes depends entirely on the layout shape:
-|* **Straight Road**: Requires exactly **2 nodes** (an entry side and an exit side).
-|* **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
+A ``TrafficNodeData`` represents a specific outer side (boundary) of a segment containing its own set of paths. The paths of this node enter the segment for the right lanes.
+* **Straight Road**: Requires exactly **2 nodes** (an entry side and an exit side).
+* **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
 
-	.. attention::
-		**The Traffic Node Rotation Rule:**
-		To align with the internal traffic navigation matrix, the rotation of an entry boundary node must look **backwards (oriented in the opposite direction)** relative to the track's path direction. Instead of hardcoding angles, this rotation should always be derived dynamically from the direction vector of the path's starting waypoints. Exit nodes face the natural forward path direction.
+Rather than manually adding nodes and paths directly into internal segment collections, always populate the ``TrafficNodeData`` first, prepare its outgoing ``PathData`` list, and then register them using the structured execution loop of ``AddNodeData``.
+
+.. important::
+   **The Traffic Node Rotation Rule:**
+   To align with the internal traffic navigation matrix, the rotation of an entry boundary node must look **backwards (oriented in the opposite direction)** relative to the track's path direction. Exit nodes face the natural forward path direction.
+
+.. image:: /images/road/runtimeRoad/runtimeRoadRotation.png
+   :alt: Entry and Exit Node Rotation Constraint Diagram
+   :align: center
 
 Setup the boundary structures dynamically based on your path direction. In this example, the straight road ends at ``(50f, 0f, 35f)``, which acts as the entry boundary for the next intersection segment:
 
@@ -60,127 +66,109 @@ Setup the boundary structures dynamically based on your path direction. In this 
 
    // Calculate the forward direction of the track path
    Vector3 pathDirection = Vector3.Normalize(nextPos - startPos);
+   Vector3 laneOffset = Quaternion.LookRotation(pathDirection) * Vector3.right * 2.0f;
 
-   // Entry node rotation MUST look backwards from the forward path direction
-   Quaternion entryRotation = Quaternion.LookRotation(-pathDirection);
-
-   // Exit node rotation faces the natural forward path direction
-   Quaternion exitRotation = Quaternion.LookRotation(pathDirection);
-
-   // 1. Configure the Entry side node (Node Index 0)
+   // ==========================================
+   // 1. CONSTRUCT ENTRY NODE AND ITS PATHS (Index 0)
+   // ==========================================
    TrafficNodeData entryNode = new TrafficNodeData()
    {
-       Owner = customSegment,
        Position = startPos,
-       Rotation = entryRotation, // Derived dynamically from path direction
-       LaneCountData = new Vector2Int(1, 1), // X: 1 Forward Lane, Y: 1 Backward Lane
+       Rotation = Quaternion.LookRotation(-pathDirection), // Facing backward
+       LaneCount = 1,
        LaneWidth = 4.0f,
-       NodeType = TrafficNodeType.Default,
-       LocalNodeIndex = 0
    };
 
-   // 2. Configure the Exit side node (Node Index 1 - enters the intersection)
-   TrafficNodeData exitNode = new TrafficNodeData()
-   {
-       Owner = customSegment,
-       Position = endPos,
-       Rotation = exitRotation, // Facing forward
-       LaneCountData = new Vector2Int(1, 1),
-       LaneWidth = 4.0f,
-       NodeType = TrafficNodeType.Default,
-       LocalNodeIndex = 1
-   };
-
-   // Register nodes into the segment container
-   customSegment.Nodes.Add(entryNode);
-   customSegment.Nodes.Add(exitNode);
-
-Step 3: Creating Two-Way Path Data (Right & Left Side Lanes)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Paths describe the precise trajectories vehicles follow between lane indexes of different nodes inside the segment. For a standard straight road, we create **two distinct paths** (one for the right-hand traffic going forward, and one for the left-hand lane going backward).
-
-* **Speed limits** are processed internally using the Metric System (**meters per second**). Use the built-in abstraction helper ``SetSpeedLimitByKmh()`` to convert traditional values automatically.
-
-.. code-block:: csharp
-
-   // --- PATH 1: FORWARD PATH (Right side lane, from Entry Node 0 to Exit Node 1) ---
+   // Create Forward Path (Right side lane, from Entry Node 0 to Exit Node 1)
    PathData forwardPath = new PathData()
    {
-       SourceLaneIndex = 0,      // Start lane index on the entry node
-       ConnectedLaneIndex = 0,   // Target lane index on the destination node
-       ConnectedNodeIndex = 1,   // The local array index of the destination node (exitNode)
-       LocalPathIndex = 0
+       SourceLaneIndex = 0,
+       ConnectedLaneIndex = 0,
+       ConnectedNodeIndex = 1, // Targets local node index 1 (the exitNode)
    };
    forwardPath.SetSpeedLimitByKmh(60f);
-
-   // Right lane positions (shifted right by half of a lane width, e.g., 2 meters)
-   Vector3 laneOffset = Quaternion.LookRotation(pathDirection) * Vector3.right * 2.0f;
    forwardPath.Waypoints.Add(startPos + laneOffset);
    forwardPath.Waypoints.Add(nextPos + laneOffset);
    forwardPath.Waypoints.Add(endPos + laneOffset);
 
+   List<PathData> entryNodePaths = new List<PathData> { forwardPath };
 
-   // --- PATH 2: BACKWARD PATH (Left side lane, from Exit Node 1 to Entry Node 0) ---
+   // Safe atomic processing and index generation through the root container
+   customSegment.AddNodeData(entryNode, entryNodePaths, registerNode: true);
+
+
+   // ==========================================
+   // 2. CONSTRUCT EXIT NODE AND ITS PATHS (Index 1)
+   // ==========================================
+   TrafficNodeData exitNode = new TrafficNodeData()
+   {
+       Position = endPos,
+       Rotation = Quaternion.LookRotation(pathDirection), // Facing forward
+       LaneCount = 1,
+       LaneWidth = 4.0f,
+   };
+
+   // Create Backward Path (Left side lane, from Exit Node 1 back to Entry Node 0)
    PathData backwardPath = new PathData()
    {
-       SourceLaneIndex = 0,      // Start lane index on the exit node (acting as entry for return path)
-       ConnectedLaneIndex = 0,   // Target lane index on the entry node destination
-       ConnectedNodeIndex = 0,   // The local array index of the destination node (entryNode)
-       LocalPathIndex = 1
+       SourceLaneIndex = 0,
+       ConnectedLaneIndex = 0,
+       ConnectedNodeIndex = 0, // Targets local node index 0 (the entryNode)
    };
    backwardPath.SetSpeedLimitByKmh(60f);
-
-   // Left lane positions going in reverse direction (shifted left relative to forward path direction)
    backwardPath.Waypoints.Add(endPos - laneOffset);
    backwardPath.Waypoints.Add(nextPos - laneOffset);
    backwardPath.Waypoints.Add(startPos - laneOffset);
 
+   List<PathData> exitNodePaths = new List<PathData> { backwardPath };
 
-   // Bind both paths to the segment
-   customSegment.AllPaths.Add(forwardPath);
-   customSegment.AllPaths.Add(backwardPath);
+   // Complete registration for the straight road segment
+   customSegment.AddNodeData(exitNode, exitNodePaths, registerNode: true);
 
-Step 4: Adding Optional Pedestrian Infrastructure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3: Designing Pedestrian Navigation Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If AI pedestrians are supported, sidewalk and crosswalk points are allocated by assigning standalone ``PedestrianNodeData`` structures within the same segment.
+Pedestrian simulation tracks are defined using sequences of coordinates. To add pedestrian paths or crosswalks to your segment, avoid manual node initialization. Instead, simply pass your list of ``Vector3`` positions directly into the official ``AddPedestrianNodes`` API method.
+
+* **Regular Sidewalks**: Pass a sequential list of positions representing sidewalk coordinates. The ``crosswalk`` optional parameter defaults to ``false``.
+* **Pedestrian Crosswalks**: To construct a functioning crosswalk link, supply a list containing **exactly 2 positions** representing opposite sides of the traffic lanes, and you **must set the crosswalk parameter to true**.
+
+.. important::
+   **Automatic Crosswalk Stitching:**
+   When a segment is compiled, the system **automatically stitches and links the outer end bounds of regular sidewalk tracks to the nearest crosswalk crossing nodes**, dynamically weaving them into a unified simulation mesh.
+
+Here is an example of isolating this logic into clean, reusable helper methods:
 
 .. code-block:: csharp
 
-   PedestrianNodeData sidewalkNode = new PedestrianNodeData()
+   // Method to build and register a standard sidewalk path from a list of positions
+   public void AddSidewalkPath(RuntimeSegmentCustom segment, List<Vector3> positions)
    {
-       Owner = customSegment,
-       Position = new Vector3(54f, 0f, 17.5f), // Physical placement next to the roadway
-       PedestrianNodeType = PedestrianNodeType.Default,
-       NodeShapeType = NodeShapeType.Circle,
-       ChanceToSpawn = 1.0f,
-       Weight = 1.0f
-   };
+       // Forward the vector list directly to the official segment API method (crosswalk is false by default)
+       segment.AddPedestrianNodes(positions);
+   }
 
-   customSegment.PedestrianNodes.Add(sidewalkNode);
+   // Method to create a dedicated road crosswalk link from exactly 2 positions
+   public void AddCrosswalkLink(RuntimeSegmentCustom segment, List<Vector3> crossingPoints)
+   {
+       if (crossingPoints == null || crossingPoints.Count != 2)
+       {
+           Debug.LogError("A crosswalk requires exactly 2 boundary vector positions.");
+           return;
+       }
 
-Step 5: Submitting the Segment to the System Manager
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Once the dataset within your ``RuntimeSegmentCustom`` instance is complete, invoke the synchronization pipeline of the system manager to build and inject Entity Component System (ECS) elements.
-
-.. code-block:: csharp
-
-   // Wrap your segment into an iterable list
-   List<RuntimeSegmentCustom> segmentsToRegister = new List<RuntimeSegmentCustom> { customSegment };
-
-   // Submit for instant integration
-   roadManager.AddSegmentsSync(segmentsToRegister);
-
-	.. note::
-		**Node Stitched/Connections (v1.5.1+):**
-		If **Auto Connect Nodes** is activated inside your ``RuntimeRoadManagerCustom`` settings, the system automatically checks external node proximities and stitches connections over cross-segment borders, removing the need for manual connection loops.
+       // CRITICAL: For crosswalk generation, the crosswalk optional flag must be set to true
+       segment.AddPedestrianNodes(crossingPoints, crosswalk: true);
+   }
 
 Procedural Example: Connecting a Straight Road to a 4-Way Intersection
 -----------------------------------------------------------------------
 
 This example demonstrates how to programmatically initialize a complex junction entity—a classic **4-Way X-Intersection**—where its southern boundary node seamlessly connects to the straight road created above by sharing the exact same position:
+
+.. note::
+   **Intersection Paths Simplification:**
+   In a production environment, **every approaching node inside an intersection must contain its own set of internal paths** mapping out all allowed directions (e.g., left turns, right turns, straight movement). To keep this demonstration clear and prevent cluttered code, we will only map out a single right-turn path for the South Node, while the remaining nodes will be registered with empty path lists.
 
 .. code-block:: csharp
 
@@ -201,51 +189,91 @@ This example demonstrates how to programmatically initialize a complex junction 
        Vector3 dirFromSouth = Vector3.Normalize(intersectionCenter - southPos);
        Vector3 dirFromWest  = Vector3.Normalize(intersectionCenter - westPos);
 
-       // Configure 4 TrafficNodeData segment sides.
-       // Notice that entry nodes are inverted (LookRotation(-dir)) according to the architectural rule.
+       // ==========================================
+       // SOUTH NODE DATA SETUP (Local Index 0)
+       // ==========================================
        TrafficNodeData southNode = new TrafficNodeData() {
-           Owner = intersectionSegment, Position = southPos, Rotation = Quaternion.LookRotation(-dirFromSouth),
-           LaneCountData = new Vector2Int(1, 1), LaneWidth = 4.0f, LocalNodeIndex = 0
-       };
-       TrafficNodeData northNode = new TrafficNodeData() {
-           Owner = intersectionSegment, Position = northPos, Rotation = Quaternion.LookRotation(dirFromSouth),
-           LaneCountData = new Vector2Int(1, 1), LaneWidth = 4.0f, LocalNodeIndex = 1
-       };
-       TrafficNodeData westNode = new TrafficNodeData() {
-           Owner = intersectionSegment, Position = westPos, Rotation = Quaternion.LookRotation(-dirFromWest),
-           LaneCountData = new Vector2Int(1, 1), LaneWidth = 4.0f, LocalNodeIndex = 2
-       };
-       TrafficNodeData eastNode = new TrafficNodeData() {
-           Owner = intersectionSegment, Position = eastPos, Rotation = Quaternion.LookRotation(dirFromWest),
-           LaneCountData = new Vector2Int(1, 1), LaneWidth = 4.0f, LocalNodeIndex = 3
+           Position = southPos, Rotation = Quaternion.LookRotation(-dirFromSouth),
+           LaneCount = 1, LaneWidth = 4.0f
        };
 
-       intersectionSegment.Nodes.Add(southNode); // LocalIndex 0
-       intersectionSegment.Nodes.Add(northNode); // LocalIndex 1
-       intersectionSegment.Nodes.Add(westNode);  // LocalIndex 2
-       intersectionSegment.Nodes.Add(eastNode);  // LocalIndex 3
-
-       // 2. Populate a RIGHT-TURN path (from South Side (0) to East Side (3))
+       // Populate a RIGHT-TURN path (from South Side (0) to East Side (3))
        PathData southToEastPath = new PathData()
        {
-           SourceLaneIndex = 0,
-           ConnectedLaneIndex = 0,
-           ConnectedNodeIndex = 3, // Array index of eastNode in Nodes list
-           Priority = -5,           // Right turns typically get secondary cross priority
-           LocalPathIndex = 0
+           Priority = -1,           // Secondary crossing priority constraints
        };
-       southToEastPath.SetSpeedLimitByKmh(30f); // Slower speed limit for tight intersection curve
-
-       // Shape the turn trajectory curve via a midpoint waypoint
+       southToEastPath.SetSpeedLimitByKmh(30f);
        southToEastPath.Waypoints.Add(southPos);
        southToEastPath.Waypoints.Add(new Vector3(45f, 0f, 45f)); // Curve midpoint
        southToEastPath.Waypoints.Add(eastPos);
 
-       intersectionSegment.AllPaths.Add(southToEastPath);
+       List<PathData> southNodePaths = new List<PathData> { southToEastPath };
+       intersectionSegment.AddNodeData(southNode, southNodePaths, registerNode: true);
+
+       // ==========================================
+       // REMAINING INTERSECTION NODES SETUP
+       // ==========================================
+       TrafficNodeData northNode = new TrafficNodeData() {
+           Position = northPos, Rotation = Quaternion.LookRotation(dirFromSouth),
+           LaneCount = 1, LaneWidth = 4.0f
+       };
+       intersectionSegment.AddNodeData(northNode, new List<PathData>(), registerNode: true); // Local Index 1
+
+       TrafficNodeData westNode = new TrafficNodeData() {
+           Position = westPos, Rotation = Quaternion.LookRotation(-dirFromWest),
+           LaneCount = 1, LaneWidth = 4.0f
+       };
+       intersectionSegment.AddNodeData(westNode, new List<PathData>(), registerNode: true);  // Local Index 2
+
+       TrafficNodeData eastNode = new TrafficNodeData() {
+           Position = eastPos, Rotation = Quaternion.LookRotation(dirFromWest),
+           LaneCount = 1, LaneWidth = 4.0f
+       };
+       intersectionSegment.AddNodeData(eastNode, new List<PathData>(), registerNode: true);  // Local Index 3
+
+       // 2. Automatically generate traffic light signaling configuration for the intersection
+       intersectionSegment.AddTrafficLights();
 
        // 3. Register the newly created intersection block into the runtime engine
        roadManager.AddSegmentsSync(new List<RuntimeSegmentCustom> { intersectionSegment });
    }
+
+Step 4: Configuring Traffic Lights and Signaling Phases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before sending a segment to the manager, you must define its traffic light behavior if it acts as an intersection. You can configure signaling phases using one of the following approaches:
+
+* **Automatic Generation**: Call the official ``AddTrafficLights()`` method on your segment. The system will analyze angles and positions of the registered traffic nodes, then automatically assign valid synchronized ``LightIndex`` IDs across the boundaries.
+* **Manual Setup**: Manually assign the ``LightIndex`` property on each ``TrafficNodeData`` instance to map specific boundaries to custom traffic light phase queues or external controllers.
+
+.. note::
+   If you want the intersection to act as an unregulated crossing governed entirely by path priorities without traffic signals, set the ``ForceDisableLight`` property to ``true``.
+
+.. code-block:: csharp
+
+   // Approach A: Automatic calculation of signaling phases based on node positions
+   customSegment.AddTrafficLights();
+
+   // Approach B: Manual phase indexing per traffic node boundary
+   // entryNode.LightIndex = 0;
+   // exitNode.LightIndex = 1;
+
+Step 5: Submitting the Segment to the System Manager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the dataset within your ``RuntimeSegmentCustom`` instance is complete, invoke the synchronization pipeline of the system manager to build and inject Entity Component System (ECS) elements.
+
+.. code-block:: csharp
+
+   // Wrap your segment into an iterable list
+   List<RuntimeSegmentCustom> segmentsToRegister = new List<RuntimeSegmentCustom> { customSegment };
+
+   // Submit for instant integration
+   roadManager.AddSegmentsSync(segmentsToRegister);
+
+.. important::
+   **Automatic Node Stitching & Merging:**
+   When different road segments connect, their boundary ``TrafficNodeData`` points **automatically stitch and merge together if they share the exact same spatial position** (or fall within internal proximity thresholds). The manager dynamically calculates cross-segment linkages over these borders, discarding the need to create manual external stitching logic loops during procedural network generation.
 
 How to Dynamically Remove Segments
 ----------------------------------
@@ -257,6 +285,7 @@ To tear down a road grid or clear memory blocks during runtime execution, pass t
    // Unlinks the graph data from spatial hashes and safely unloads running entity references
    runtimeRoadManagerCustom.RemoveSegments(segmentsToRemove);
 
+
 API Reference
 -------------
 
@@ -266,6 +295,10 @@ Core Runtime Structures
 ``RuntimeSegmentCustom``
   The primary structural tracking entity containing all physical lane nodes, walkway links, and traffic behaviors for a specific area.
   
+  * ``public void AddNodeData(TrafficNodeData node, List<PathData> nodePaths, bool registerNode = true)``: Registers a traffic node and its associated paths into the segment, automatically assigning sequential internal path tracking IDs.
+  * ``public void AddPedestrianNodes(List<Vector3> positions, bool crosswalk = false)``: Official runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
+  * ``public void AddTrafficLights()``: Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
+  * ``public bool ForceDisableLight { get; set; }``: When enabled, forces the segment to operate without traffic lights, relying purely on path crossing priorities.
   * ``public List<TrafficNodeData> Nodes``: Grid of entry/exit boundaries (segment sides).
   * ``public List<PathData> AllPaths``: Track vectors mapped out within this block.
   * ``public List<PedestrianNodeData> PedestrianNodes``: Localized navigation graph markers for pedestrian simulation.
@@ -273,21 +306,84 @@ Core Runtime Structures
 ``TrafficNodeData``
   A low-level metadata block mapping out lane parameters across boundaries (segment sides).
   
+  * ``public RuntimeSegmentCustom Owner``: Reference to the parent runtime segment structure that holds this node.
+  * ``public TrafficNodeData ConnectedExternalNode``: Reference to an adjacent segment's external node that this boundary node is stitched to.
+  * ``public PedestrianNodeData CrosswalkNodeLeft``: Left-side boundary pedestrian node allocated for a crosswalk crossing.
+  * ``public PedestrianNodeData CrosswalkNodeRight``: Right-side boundary pedestrian node allocated for a crosswalk crossing.
+  * ``public TrafficNodeType NodeType``: Defines the structural node style constraint (e.g., Default, DestroyVehicle, etc.).
+  * ``public Vector3 Position``: Spatial world position coordinates of this segment boundary side.
+  * ``public Quaternion Rotation``: Direction orientation tracker. Must look backwards on entry nodes.
   * ``public Vector2Int LaneCountData``: Vector tracking configurations where ``X`` controls forward capacity (entry lanes) and ``Y`` controls backward lanes (exit lanes).
-  * ``public float LaneWidth``: Sets space width requirements per vehicle.
-  * ``public Quaternion Rotation``: Direction orientation tracker. Must look backwards on entry nodes (calculated dynamically based on path direction vectors).
+  * ``public float LaneWidth``: Sets space width requirements per vehicle (Defaults to 4.0).
+  * ``public float Offset``: Side positioning offset shift value from standard path origin curves.
+  * ``public float DividerWidth``: Physical center width separating left and right traffic lane rows.
+  * ``public bool IsOneWay``: Toggles whether the route operates exclusively as a one-way path network.
+  * ``public bool IsEndOfOneWay``: Designates if this node acts as the final terminal exit of a one-way road layout.
+  * ``public bool AddPedestrianNodes``: Flag tracking whether regular sidewalk node structures should auto-generate here (Defaults to true).
+  * ``public bool AddCrosswalk``: Toggles the auto-generation of pedestrian crosswalk markings across lanes (Defaults to true).
+  * ``public float CrosswalkOffset``: Linear positioning displacement adjustment for the crosswalk link.
+  * ``public int LightIndex``: Identifies the traffic light group/phase assigned to this specific boundary node. Can be assigned manually or generated automatically via ``AddTrafficLights()``. Defaults to ``-1`` (no traffic light).
+  * ``public float ChanceToSpawn``: Density probability weight influencing vehicle background generation loops.
+  * ``public float Weight``: Relative path selection preference modifier for traffic routing AI calculations.
+  * ``public float CustomAchieveDistance``: Custom stopping distance accuracy tolerance value for paths intersecting near this boundary.
+  * ``public int LocalNodeIndex { get; set; }``: The index position assigned to this unique node within its parent segment.
+  * ``public int CrosswalkIndex``: Internal sequence tracker for crosswalk entity instances.
+  * ``public bool InverseCrosswalk``: Property to mirror or flip crosswalk vector alignment.
+  * ``public int MinLocalPathIndex { get; set; }``: Flat bounding helper representing the lowest localized index slice assigned to this node's tracks.
+  * ``public int MaxLocalPathIndex { get; set; }``: Flat bounding helper representing the upper localized index boundary assigned to this node's tracks.
 
 ``PathData``
-  Low-level mathematical structure housing positions tracking real-time vehicle routes.
+  Low-level mathematical structure housing positions tracking real-time vehicle routes. Refers directly to **PathData.cs**.
   
   * ``public List<Vector3> Waypoints``: Coordinate lists shaping out lane trajectories.
+  * ``public int GlobalPathIndex``: A unique, absolute simulation path ID assigned automatically by the pipeline.
+  * ``public int SourceLaneIndex``: The original source index track of the lane (if -1, it auto-detects based on layout).
+  * ``public int ConnectedLaneIndex``: The target lane row index on the destination boundary side.
+  * ``public int ConnectedNodeIndex``: Local index targeting the specific destination traffic node inside the segment.
+  * ``public bool External``: Flag marking if this path forms a cross-boundary connection linking outward to a separate road segment.
+  * ``public int LocalPathIndex { get; set; }``: The sequential sequence tracker assigned automatically by the parent runtime segment.
+  * ``public float SpeedLimit``: Raw target maximum vehicle traversal speed limits tracked in meters per second (M/S).
+  * ``public int Priority``: Crossing intersection priority ranking configuration (Higher values gain right-of-way).
+  * ``public int TrafficGroup``: Mask filter group determining types of vehicles permitted to traverse this path lane.
   * ``public void SetSpeedLimitByKmh(float speedLimitKmh)``: Sets and scales target velocities appropriately to matching internal physics architectures (KM/H to M/S).
+
+``PedestrianNodeData``
+  Localized navigation graph markers managing civilian simulation walking path blocks. Refers directly to **PedestrianNodeData_2.cs**.
+  
+  * ``public int RuntimeID``: Absolute unique tracker ID assigned dynamically by the manager at network initialization.
+  * ``public RuntimeSegmentCustom Owner``: Link reference to the parent custom runtime segment containing this walker node.
+  * ``public PedestrianNodeData Previous``: Link node reference back to the previous coordinate step along the current sidewalk chain.
+  * ``public PedestrianNodeData Next``: Link node reference targeting the subsequent coordinate node step forward along the sidewalk chain.
+  * ``public List<PedestrianNodeData> CustomConnectedNodes``: Connection matrix managing non-standard pathway logic links (e.g., doorway pathways or branching side-alleys).
+  * ``public Vector3 Position``: Exact 3D world space coordinates locating this specific pedestrian junction marker.
+  * ``public int ConnectedNodeIndex``: Structural connection index marker pointing towards neighboring target traffic nodes.
+  * ``public int LightIndex``: Maps the node to a specific pedestrian crosswalk light signaling step phase. Defaults to ``-1``.
+  * ``public PedestrianNodeType PedestrianNodeType``: Defines behavioral mode attributes assigned to the node (e.g., Default, Crosswalk, etc.).
+  * ``public NodeShapeType NodeShapeType``: Form shape layout style for target reaching mechanics (e.g., Circle, Square bounding).
+  * ``public bool CanSpawnInView``: Toggles whether fresh pedestrian agents can spawn on this node inside active camera viewing fields.
+  * ``public float ChanceToSpawn``: AI traffic density distribution weight configuration.
+  * ``public float Weight``: Pathfinding cost weight modifier used during long-distance walking route calculations.
+  * ``public float CustomAchieveDistance``: Specific reaching threshold overriding default proximity target arrival checks.
+  * ``public float Width``: Area space sizing width parameter assigned to the pedestrian track node.
+  * ``public float Height``: Area space sizing height parameter assigned to the pedestrian track node.
+  * ``public bool HasMovementRandomOffset``: Enables chaotic walk variance drift distributions preventing pedestrians from walking in a single thin line.
 
 Manager Interaction Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use these operational methods inside ``RuntimeRoadManagerCustom`` to affect changes over the entire live simulation grid:
+``RuntimeRoadManagerCustom``
+  The main runtime engine manager coordinating initialization, stitching, lifecycle tracking, and destruction of entities within the ECS world.
 
-* ``AddSegmentsSync(List<RuntimeSegmentCustom> segments)``: Blocks execution flow temporarily while constructing entities instantly. Use this for quick map adjustments.
-* ``AddSegments(List<RuntimeSegmentCustom> segments)``: Asynchronous initialization routine. Recommended for vast chunks or heavily threaded procedural loading patterns to prevent frame drops.
-* ``RemoveSegments(List<RuntimeSegmentCustom> segments)``: Immediately updates internal spatial hash indexes, ensuring traffic paths detour around deleted tracks seamlessly.
+  **Properties & Fields**
+  
+  * ``public bool InProgress { get; }``: Returns true if there is an active asynchronous construction or processing batch currently executing.
+
+  **Public Methods**
+
+  * ``public void AddSegmentsSync(List<RuntimeSegmentCustom> segments)``: Blocks execution flow temporarily while constructing and stitching entities instantly within the simulation grid. Use this for immediate runtime map generation or small updates.
+  * ``public void AddSegments(List<RuntimeSegmentCustom> segments)``: Starts a background asynchronous initialization routine for the submitted list. Highly recommended for vast chunks or heavily threaded procedural environments to prevent frame rate drops.
+  * ``public void AddSegmentsAsync(List<RuntimeSegmentCustom> segments, Action<List<RuntimeSegmentCustom>> onResult = null, int addSegmentPerIteration = 20)``: Spawns a Coroutine task that incrementally initializes a fixed batch of segments (``addSegmentPerIteration``) per frame, triggering an optional callback complete loop (``onResult``) when done.
+  * ``public async Task AddSegmentsAsyncTask(List<RuntimeSegmentCustom> segments)``: A fully async/await compatible asynchronous wrapper task that completes when all requested segments have successfully processed and loaded into the active world state.
+  * ``public void CreateCustomRuntimeNodes(List<PedestrianNodeData> pedestrianNodes)``: Low-level initialization loop that processes a collection of pedestrian nodes, pre-calculating boundaries, checking crosswalk links, and registering them within the simulation grid. **Note:** This method requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
+  * ``public void CreateCustomRuntimeNode(PedestrianNodeData pedestrianNode)``: Low-level method to initialize a single pedestrian node. It generates its runtime tracking ID, sets up connections with neighboring nodes, and prepares its position data for the pedestrian simulation hash grid. **Note:** This method requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
+  * ``public void RemoveSegments(List<RuntimeSegmentCustom> segments)``: Immediately removes and cleans up the specified list of road segments. It clears spatial hash index positions, removes tracking data from neighbor nodes, and unloads any live simulation entities safely.

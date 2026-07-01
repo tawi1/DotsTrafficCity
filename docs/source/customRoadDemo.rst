@@ -124,7 +124,7 @@ Setup the boundary structures dynamically based on your path direction. In this 
 Step 3: Designing Pedestrian Navigation Nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pedestrian simulation tracks are defined using sequences of coordinates. To add pedestrian paths or crosswalks to your segment, avoid manual node initialization. Instead, simply pass your list of ``Vector3`` positions directly into the official ``AddPedestrianNodes`` API method.
+Pedestrian simulation tracks are defined using sequences of coordinates. To add pedestrian paths or crosswalks to your segment, avoid manual node initialization. Instead, simply pass your list of ``Vector3`` positions directly into the ``AddPedestrianNodes`` API method.
 
 * **Regular Sidewalks**: Pass a sequential list of positions representing sidewalk coordinates. The ``crosswalk`` optional parameter defaults to ``false``.
 * **Pedestrian Crosswalks**: To construct a functioning crosswalk link, representing opposite sides of the traffic lanes, and you **must set the crosswalk parameter to true**.
@@ -140,7 +140,7 @@ Here is an example of isolating this logic into clean, reusable helper methods:
    // Method to build and register a standard sidewalk path from a list of positions
    public void AddSidewalkPath(RuntimeSegmentCustom segment, List<Vector3> positions)
    {
-       // Forward the vector list directly to the official segment API method (crosswalk is false by default)
+       // Forward the vector list directly to the segment API method (crosswalk is false by default)
        segment.AddPedestrianNodes(positions);
    }
 
@@ -233,7 +233,7 @@ Step 4: Configuring Traffic Lights and Signaling Phases
 
 Before sending a segment to the manager, you must define its traffic light behavior if it acts as an intersection. You can configure signaling phases using one of the following approaches:
 
-* **Automatic Generation**: Call the official ``AddTrafficLights()`` method on your segment. The system will analyze angles and positions of the registered traffic nodes, then automatically assign valid synchronized ``LightIndex`` IDs across the boundaries.
+* **Automatic Generation**: Call the ``AddTrafficLights()`` method on your segment. The system will analyze angles and positions of the registered traffic nodes, then automatically assign valid synchronized ``LightIndex`` IDs across the boundaries.
 * **Manual Setup**: Manually assign the ``LightIndex`` property on each ``TrafficNodeData`` instance to map specific boundaries to custom traffic light phase queues or external controllers.
 
 .. note::
@@ -299,7 +299,10 @@ Core Runtime Structures
        - Registers a traffic node and its associated paths into the segment, automatically assigning sequential internal path tracking IDs.
      * - ``AddPedestrianNodes``
        - ``void (List<Vector3> positions, bool crosswalk = false)``
-       - Official runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
+       - Runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
+	 * - ``AddPedestrianCrosswalk``
+       - ``(PedestrianNodeData, PedestrianNodeData) (Vector3 nodePosition1, Vector3 nodePosition2, float width = 1f, float height = 2f, NodeShapeType crosswalkShapeType = NodeShapeType.Rectangle)``
+       - Direct method to instantiate a localized pedestrian crosswalk between two exact coordinates. Allocates fresh runtime nodes, establishes their sequential links, and returns the tracking tuple.
      * - ``AddTrafficLights``
        - ``void ()``
        - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.

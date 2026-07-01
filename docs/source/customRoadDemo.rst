@@ -285,7 +285,7 @@ Core Runtime Structures
 ``RuntimeSegmentCustom``
   The primary structural tracking entity containing all physical lane nodes, walkway links, and traffic behaviors for a specific area. Refers directly to **RuntimeSegmentCustom.cs**.
 
-	**Methods:**
+  **Methods:**
 
   .. list-table::
      :widths: 35 25 40
@@ -307,7 +307,7 @@ Core Runtime Structures
        - ``void ()``
        - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
 	   
-	**Properties & Fields:**
+  **Properties & Fields:**
 
   .. list-table::
      :widths: 30 20 50

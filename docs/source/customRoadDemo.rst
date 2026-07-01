@@ -50,7 +50,7 @@ Rather than manually adding nodes and paths directly into internal segment colle
 
 .. important::
    **The Traffic Node Rotation Rule:**
-   To align with the internal traffic navigation matrix, the rotation of an entry boundary node must look **backwards (**:ref:`oriented in the opposite direction <trafficNodeRotation>`**)** relative to the track's path direction. Exit nodes face the natural forward path direction.
+   To align with the internal traffic navigation matrix, the rotation of an entry boundary node must look **backwards** (:ref:`oriented in the opposite direction <trafficNodeRotation>`) relative to the track's path direction. Exit nodes face the natural forward path direction.
 
 Setup the boundary structures dynamically based on your path direction. In this example, the straight road ends at ``(50f, 0f, 35f)``, which acts as the entry boundary for the next intersection segment:
 

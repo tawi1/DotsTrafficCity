@@ -42,7 +42,7 @@ Every localized section of a road or an intersection must be encapsulated by a `
 Step 2: Designing Traffic Control Nodes and Associated Paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A ``TrafficNodeData`` represents a specific outer side (boundary) of a segment containing its own set of paths. The paths of this node enter the segment for the right lanes.
+* A ``TrafficNodeData`` represents a specific outer side (boundary) of a segment containing its own set of paths. The paths of this node enter the segment for the right lanes.
 * **Straight Road**: Requires exactly **2 nodes** (an entry side and an exit side).
 * **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
 
@@ -127,7 +127,7 @@ Step 3: Designing Pedestrian Navigation Nodes
 Pedestrian simulation tracks are defined using sequences of coordinates. To add pedestrian paths or crosswalks to your segment, avoid manual node initialization. Instead, simply pass your list of ``Vector3`` positions directly into the official ``AddPedestrianNodes`` API method.
 
 * **Regular Sidewalks**: Pass a sequential list of positions representing sidewalk coordinates. The ``crosswalk`` optional parameter defaults to ``false``.
-* **Pedestrian Crosswalks**: To construct a functioning crosswalk link, supply a list containing **exactly 2 positions** representing opposite sides of the traffic lanes, and you **must set the crosswalk parameter to true**.
+* **Pedestrian Crosswalks**: To construct a functioning crosswalk link, representing opposite sides of the traffic lanes, and you **must set the crosswalk parameter to true**.
 
 .. important::
    **Automatic Crosswalk Stitching:**
@@ -539,3 +539,53 @@ Core Runtime Structures
      * - ``HasMovementRandomOffset``
        - ``bool``
        - Enables chaotic walk variance drift distributions preventing pedestrians from walking in a single thin line.
+	   
+Manager Interaction Methods
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``RuntimeRoadManagerCustom``
+  The main runtime engine manager coordinating initialization, stitching, lifecycle tracking, and destruction of entities within the ECS world. Refers directly to **RuntimeRoadManagerCustom.cs**.
+
+  **Properties & Fields:**
+
+  .. list-table::
+     :widths: 30 20 50
+     :header-rows: 1
+
+     * - Name
+       - Type
+       - Description
+     * - ``InProgress``
+       - ``bool``
+       - Returns true if there is an active asynchronous construction or processing batch currently executing.
+
+  **Public Methods:**
+
+  .. list-table::
+     :widths: 30 30 40
+     :header-rows: 1
+
+     * - Method Name
+       - Signature / Return Type
+       - Description
+     * - ``AddSegmentsSync``
+       - ``void (List<RuntimeSegmentCustom> segments)``
+       - Blocks execution flow temporarily while constructing and stitching entities instantly within the simulation grid. Use this for immediate runtime map generation or small updates.
+     * - ``AddSegments``
+       - ``void (List<RuntimeSegmentCustom> segments)``
+       - Starts a background asynchronous initialization routine for the submitted list. Highly recommended for vast chunks or heavily threaded procedural environments to prevent frame rate drops.
+     * - ``AddSegmentsAsync``
+       - ``void (List<RuntimeSegmentCustom> segments, Action<List<RuntimeSegmentCustom>> onResult = null, int addSegmentPerIteration = 20)``
+       - Spawns a Coroutine task that incrementally initializes a fixed batch of segments (``addSegmentPerIteration``) per frame, triggering an optional callback complete loop (``onResult``) when done.
+     * - ``AddSegmentsAsyncTask``
+       - ``Task (List<RuntimeSegmentCustom> segments)``
+       - A fully async/await compatible asynchronous wrapper task that completes when all requested segments have successfully processed and loaded into the active world state.
+     * - ``CreateCustomRuntimeNodes``
+       - ``void (List<PedestrianNodeData> pedestrianNodes)``
+       - Low-level initialization loop that processes a collection of pedestrian nodes, pre-calculating boundaries, checking crosswalk links, and registering them within the simulation grid. **Note:** Requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
+     * - ``CreateCustomRuntimeNode``
+       - ``void (PedestrianNodeData pedestrianNode)``
+       - Low-level method to initialize a single pedestrian node. It generates its runtime tracking ID, sets up connections with neighboring nodes, and prepares its position data for the pedestrian simulation hash grid. **Note:** Requires the ``runtimePedestrianNodes`` feature flag to be enabled in the manager's Inspector.
+     * - ``RemoveSegments``
+       - ``void (List<RuntimeSegmentCustom> segments)``
+       - Immediately removes and cleans up the specified list of road segments. It clears spatial hash index positions, removes tracking data from neighbor nodes, and unloads any live simulation entities safely.

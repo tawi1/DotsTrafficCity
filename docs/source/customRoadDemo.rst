@@ -300,12 +300,12 @@ Core Runtime Structures
      * - ``AddPedestrianNodes``
        - ``void (List<Vector3> positions, bool crosswalk = false)``
        - Runtime API method to register pedestrian path networks directly from raw vector coordinate lists. Set ``crosswalk`` to ``true`` when creating specialized crossing routes.
-     * - ``AddTrafficLights``
-       - ``void ()``
-       - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
      * - ``AddPedestrianCrosswalk``
        - ``(PedestrianNodeData, PedestrianNodeData) (List<Vector3> nodes, float width = 1f, float height = 2f, NodeShapeType crosswalkShapeType = NodeShapeType.Rectangle)``
        - Creates a dedicated pedestrian crosswalk pathway based on a provided list of coordinates (requires at least 2 points). Automatically links the generated nodes together and returns a tuple of the start and end nodes.
+	 * - ``AddTrafficLights``
+       - ``void ()``
+       - Analyzes registered node configurations and positions to automatically calculate and assign synchronized traffic light signaling phase indexes.
 	   
 	**Properties & Fields:**
 

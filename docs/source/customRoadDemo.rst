@@ -313,15 +313,15 @@ Core Runtime Structures
      * - Name
        - Type
        - Description
+	 * - ``CrossroadID``
+       - ``int``
+       - Internal uniquely allocated simulation ID for intersection registration.
      * - ``Position``
        - ``Vector3``
        - Center position of this localized road section grid.
      * - ``ForceDisableLight``
        - ``bool``
        - Forces the segment to operate without traffic lights, relying purely on path crossing priorities.
-     * - ``CrossroadID``
-       - ``int``
-       - Internal uniquely allocated simulation ID for intersection registration.
      * - ``Nodes``
        - ``List<TrafficNodeData>``
        - Grid collection of entry/exit traffic boundary sides.
@@ -539,7 +539,7 @@ Core Runtime Structures
      * - ``HasMovementRandomOffset``
        - ``bool``
        - Enables chaotic walk variance drift distributions preventing pedestrians from walking in a single thin line.
-	   
+
 Manager Interaction Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

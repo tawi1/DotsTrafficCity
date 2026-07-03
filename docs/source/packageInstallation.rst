@@ -4,7 +4,7 @@ Project Requirements
 ====================
 
 Minimum **Unity** version:
-	* 2022.3.21+ (`except 2022.3.40 - 2022.3.50 <https://discussions.unity.com/t/missing-prefab-references-when-baking-a-subscene/1502057>`_).
+	* 2022.3.21+ or 6.0.23+ (`except 2022.3.40 - 2022.3.50 <https://discussions.unity.com/t/missing-prefab-references-when-baking-a-subscene/1502057>`_).
 
 **Required packages:**
 	* `Entities 1.2.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.2/manual/index.html>`_

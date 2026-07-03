@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.7.6] - 01-07-2026
+[1.7.6] - 03-07-2026
 --------------------
 
 * Added a new method to RuntimeSegmentCustom for directly adding runtime road data without needing RoadSceneUtils data containers.
@@ -15,6 +15,9 @@ Fixed
 * Fixed project update for some versions.
 * Fixed a race condition issue for car sound systems.
 * Fixed temporal ragdoll disappearance for some corner cases.
+* Fixed the raycasting issue for mono vehicles when the Unity Physics package is removed.
+* Fixed compilation when Unity Physics or Entities Graphics package was removed.
+* Fixed Rukhanka animation system when custom animation is in use.
 
 [1.7.5] - 27-06-2026
 --------------------

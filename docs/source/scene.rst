@@ -15,7 +15,7 @@ Bootstrap
 	
 * If you want to start the scene with code, assign `CityEntryPoint` with `SceneBootstrap` script to your script & use follow method, example:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		[SerializeField] private SceneBootstrapBase sceneBootstrapBase;
 		
@@ -26,7 +26,7 @@ Bootstrap
 		
 * Use this code if you need to know when the bootstrap is complete, example:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		[SerializeField] private SceneBootstrapBase sceneBootstrapBase;
 		
@@ -52,7 +52,7 @@ Scene Unload
 * You can use this sample code:
 
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		[SerializeField] private EntityWorldService entityWorldService;
 		
@@ -63,6 +63,6 @@ Scene Unload
 		
 * Or use simply use:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
             EntityWorldService.Instance.DisposeWorld();

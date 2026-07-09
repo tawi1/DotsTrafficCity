@@ -53,7 +53,7 @@ Steps
 			
 	.. _packageInstallationOptional:
 	
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 6-8 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 5-7 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**
@@ -67,8 +67,8 @@ Steps
 #. Install the :ref:`FMOD sound <fmodSound>` settings.
 
 	.. note::
-		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 12**.
-		* If you are updating an existing project, follow steps **9 to 11** manually inside the initialization window.
+		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 11**.
+		* If you are updating an existing project, follow steps **8 to 10** manually inside the initialization window.
 
 #. **[Manual Setup]** Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+ <https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@14.0/manual/rendering/forward-plus-rendering-path.html>`_ in your pipeline settings.
 #. **[Manual Setup]** Open the `Layer settings` tab, select the layers to import according to your use case, and press the `Apply` button.

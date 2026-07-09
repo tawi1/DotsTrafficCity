@@ -8,8 +8,8 @@ Structure
 Project Scenes
 ----------------
 
-#. **Demo Lite** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
-#. **Demo Mono Lite** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
+#. **Demo Traffic** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
+#. **Demo Traffic Mono** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
 #. **Traffic test scene** : :ref:`traffic test scene <trafficTestScene>` where all parameters can be tested with a set of most :ref:`traffic <trafficCar>` situations.
 #. **Props test scene** : :ref:`props test scene <propsTestScene>` where the workability of entities can be tested.
 #. **Traffic stress scene** : stressed scene is extremely crowded with :ref:`vehicles <trafficCar>`.

@@ -3,40 +3,56 @@
 Traffic Car
 =====
 
-.. contents::
-   :local:
+.. contents:: 
+	:local:
+	:depth: 2
    
 How To Create
 ----------------
 
-#. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool (for example :ref:`Simple physics entity <entityType>` type, if you need traffic with controller based on `MonoBehaviour`, read this :ref:`article <hybridMonoVehicle>`).
+To start creating traffic vehicles, follow the instructions below based on your desired physics and architecture type.
 
-	.. image:: /images/entities/trafficCar/howTo/Step1.png
-	:ref:`Car Prefab Creator <carPrefabCreator>` final step example.
-	
-#. Make sure, that the :ref:`vehicle collection <vehicleCollection>` contains vehicle you have created.
+MonoBehaviour-Based Traffic (Hybrid Mono)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	.. image:: /images/entities/trafficCar/howTo/Step2.png
-	
-#. Make sure, that the :ref:`preset <trafficPreset>` contains the vehicle.
+.. note::
+   Before starting, ensure that **World simulation type** is set to `Hybrid mono` in the global :ref:`General settings <generalSettingsConfig>`.
 
-	.. image:: /images/entities/trafficCar/howTo/Step3.png
+#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool from the Unity toolbar: ``Spirit604/CityEditor/Car Prefab Creator``.
+#. In the **Prefab** tab, set **Car type** to `Traffic` and drag & drop your vehicle models (make sure source models do not contain any default Colliders, Rigidbodies, or Wheel Colliders).
+#. In the **Save** tab, set **Entity type** to `Hybrid entity mono physics`.
+#. **Choose your controller integration:**
+   
+	* **For Arcade (built-in sample):** 
+		* Set **Controller type** to `Arcade`. 
+		* Set your preset/paths in the **Save** tab.
+		* Click **Scan**.
+		* Adjust **body/wheel offsets** in the **Prefab Info** tab, and press **Create**. 
+		* After generation, ensure the raycast layer in `ArcadeVehicleController` matches your **Ground** layer.
+	* **For Custom user controller:** 
+		* Set **Controller type** to `Custom user`. 
+		* Create and assign an adapter script implementing the `IVehicleInput` interface to link traffic logic with your custom controller (see :ref:`Input Info <inputInfo>` and the :ref:`VehicleInput Example Code <vehicleInputCode>`). 
+		* Click **Scan**, adjust **body/wheel offsets and steering angle** in the **Prefab Info** tab to match your custom car's setup, and press **Create**.
 
-#. Open the :ref:`Traffic settings <trafficCarSettings>` and select the :ref:`Simple physics entity <entityType>` type (if you have created a `Simple physics entity`).
+#. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` and your selected :ref:`preset <trafficPreset>` by default.
+#. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
+#. Open your `EntitySubScene`, locate the `TrafficCarEntityPoolBakerRef` component on both the main scene and the subscene, and make sure the correct preset is assigned.
+#. *(Optional)* To prevent your player-controlled car from pushing or glitching through AI traffic, attach the :ref:`CarPlayerBlocker <carPlayerBlocker>` component to the generated vehicle hull prefab and configure its physics layer.
 
-	.. image:: /images/entities/trafficCar/howTo/Step4.png
-	
-#. Open the :ref:`Hub <roadEntitySubscene>` object in the scene and press the `Copy To Subscene` button.
+Standard DOTS Traffic (Simple / Custom Physics)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	.. image:: /images/entities/trafficCar/howTo/Step5.png
-	
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
-
-	.. image:: /images/entities/trafficCar/howTo/Step6.png
-	
-#. Adjust the traffic settings of the created vehicles.
-	* For :ref:`Simple physics <trafficCarSettings>`.
-	* For :ref:`Custom physics <customPhysicsVehicle>`. 
+#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool from the Unity toolbar: ``Spirit604/CityEditor/Car Prefab Creator``.
+#. Drag & drop your source prefabs, configure common settings, choose your physics type (**Simple Physics** or **Custom Physics**), and **adjust body/wheel offsets** in the **Prefab Info** tab to ensure the model aligns correctly. Follow the detailed generator steps inside the :ref:`Car Prefab Creator <carPrefabCreator>` guide.
+#. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` by default. You can open the collection to ensure they appear in the list.
+#. Make sure that your active :ref:`traffic preset <trafficPreset>` includes these new vehicles.
+#. Open the global :ref:`Traffic settings <trafficCarSettings>` and ensure the **Entity type** matches your choice (e.g., `Simple physics entity`).
+#. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).
+#. Open your `EntitySubScene`, locate the `TrafficCarEntityPoolBakerRef` component on both the main scene and the subscene, and verify that the correct preset is assigned.
+#. **Adjust the specific traffic parameters of the created vehicles based on their physics type:**
+   
+   * For :ref:`Simple physics <trafficCarSettings>`.
+   * For :ref:`Custom physics <customPhysicsVehicle>`.
 
 .. _vehicleType:
 
@@ -131,7 +147,7 @@ Engine
 	.. image:: /images/entities/trafficCar/custom/engine1.png
 
 | **Torque** : engine torque.
-| **Transimission rate** : engine torque to wheel speed ratio.
+| **Transmission rate** : engine torque to wheel speed ratio.
 
 Scene Settings
 """"""""""""""""""
@@ -162,7 +178,7 @@ Template Settings
 	* **Physics settings** : copy the physics settings (mass, damping, gravity) of the `PhysicsBody` component.
 	* **Center of mass** : copy the center of mass local position of the `PhysicsBody` component.
 	* **Offsets** : copy the local offset of the wheels.
-	* **Settings** : copy the settings of `the VehicleAuthoring` component.
+	* **Settings** : copy the settings of the `VehicleAuthoring` component.
 
 Wheel Refs
 """"""""""""""""""
@@ -226,10 +242,9 @@ No Physics
 ~~~~~~~~~~~~
 
 * :ref:`Pure entities <pureEntity>` that moved by transform system without physics.
-* Contains the same components as :ref:`Simple Physics <simplePhysicsVehicle>`.
+* Contains the same non-physics components as :ref:`Simple Physics <simplePhysicsVehicle>` (e.g., `CarWheelAuthoring`).
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Pure entity no physics <entityType>` type refer to this.
-
 
 .. _hybridMonoVehicle:
 
@@ -239,70 +254,24 @@ Hybrid Mono
 * Before using this vehicle type, make sure that you selected `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>`.
 * :ref:`Hybrid entities <hybridEntity>` that moved by custom monobehaviour controller.
 * :ref:`Hybrid entity mono physics <entityType>` type refer to this.
+* Full creation process is described in the :ref:`How To Create <trafficCar>` section above.
 
-How To Create
-""""""""""""""
+.. _inputInfo:
 
-Arcade (built-in sample)
-^^^^^^^^^^^^^^^^^^^^^^
-
-If you want to use `Arcade's` built-in sample controller, follow these steps:
-
-#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
-#. Select `Prefab` tab.
-#. Set `Car type` to `Traffic`.
-#. Drag & drop your prefabs into the prefabs field (make sure your source `Prefabs` don't have any `Colliders`, `Wheel colliders` & `Rigidbodies`).
-#. Press `Scan` button.
-#. Select `Save` tab.
-#. Set `Entity type` to `Hybrid entity mono physics`.
-#. Set `Controller type` to `Arcade`.
-#. Set desired preset. Also hull & save paths.
-#. Select `Prefab info` tab.
-#. Customize hull & wheel offsets.
-#. Customize traffic related settings.
-#. Press `Create` button.
-#. In the `ArcadeVehicleController`, make sure the raycast layer matches your `Ground` layer.
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
-
-	.. image:: /images/entities/trafficCar/howTo/Step6.png
-
-Custom user controller
-^^^^^^^^^^^^^^^^^^^^^^
-
-If you want to use your own custom solution, follow these steps:
-
-#. Open the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
-#. Select `Prefab` tab.
-#. Set `Car type` to `Traffic`.
-#. Drag & drop your prefabs into the prefabs field.
-#. Press `Scan` button.
-#. Select `Save` tab.
-#. Set `Entity type` to `Hybrid entity mono physics`.
-#. Set `Controller type` to `Custom user`.
-#. Create script that implements `IVehicleInput` interface to link traffic input & your vehicle controller input (code example below)
-#. Assign created script into the `Input script` field.
-#. Set desired preset. Also hull & save paths.
-#. Select `Prefab info` tab.
-#. Set the steering angle to match the steering of your custom car controller.
-#. Customize traffic related settings.
-#. Press `Create` button.
-#. To set your own custom Car Controller parameters to handle the most common traffic situations, use the :ref:`Traffic test scene <trafficTestScene>`.
-#. Open the `EntitySubScene`, find the `TrafficCarEntityPoolBakerRef` gameobject on the main & subscene, make sure the correct :ref:`preset <trafficPreset>` is assigned to both scenes.
-
-	.. image:: /images/entities/trafficCar/howTo/Step6.png
-	
-Input info
-^^^^^^^^^^^^^^^^^^^^^^
+Input Info
+~~~~~~~~~~
 * Throttle [1] : forward motion.
 * Throttle [-1] : reverse motion.
 * Throttle [0] : hand brake.
 * Throttle [-0.9] : braking, for example, if the current speed is higher than permitted. (the value can be changed in the :ref:`Traffic settings <trafficCarSettings>`)
-* Steering [-1, 1]
+* Steering [-1, 1].
 
-VehicleInput example code
-^^^^^^^^^^^^^^^^^^^^^^
+.. _vehicleInputCode:
 
-	..  code-block:: r
+VehicleInput Example Code
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	..  code-block:: csharp
 
 		public class UVC_adapter : MonoBehaviour, IVehicleInput
 		{
@@ -397,7 +366,7 @@ Components
 
 	.. image:: /images/entities/trafficCar/hybridMono/CarEntityAdapter.png
 	
-Component to syncronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
+Component to synchronize gameobject & entity, also to switch physics & scripts of the :ref:`vehicle <hybridMonoVehicle>` when :ref:`cull state <cullPointStates>` changes with `PhysicsSwitcher` & `ScriptSwitcher` components.
 	
 	.. note:: You can turn off traffic physics culling in the :ref:`Traffic settings <trafficCarSettings>`.
 	
@@ -511,7 +480,7 @@ Pure DOTS
 * Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		public Entity TryToSelectEntity(Vector3 worldPosition)
 		{
@@ -523,7 +492,7 @@ Hybrid Mono
 
 Entity can be retrieved if the car has a collider:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 			private Entity GetEntity()
 			{
@@ -572,7 +541,7 @@ Raycast
 	
 To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `GetTargetQuery` method in the ``TrafficCarRaycastObstacleTargetQueryProvider`` class, which returns the `EntityQuery <https://docs.unity.cn/Packages/com.unity.entities@1.0/api/Unity.Entities.EntityQuery.html>`_ of the targets.
 
-..  code-block:: r
+..  code-block:: csharp
 
 	public static EntityQuery GetTargetQuery(
 			   SystemBase sourceSystem,
@@ -644,7 +613,7 @@ To set a custom destination for a specific traffic car, do the following:
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
-	..  code-block:: r
+	..  code-block:: csharp
 
 		private void Awake()
 		{
@@ -668,7 +637,7 @@ To set a custom node destination for a specific traffic car, do the following:
 * Create a new gameobject with ``TrafficCustomPathService`` component.
 * Use this sample code:
 
-	..  code-block:: r
+	..  code-block:: csharp
 	
 		private void Awake()
 		{

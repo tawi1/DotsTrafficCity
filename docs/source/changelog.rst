@@ -30,11 +30,19 @@ Fixed
 * Fixed pedestrian node corners for one-way roads.
 * Fixed the pedestrian animation stress scene.
 
-[1.7.6] - 03-07-2026
+[1.7.6] - 09-07-2026
 --------------------
+
+Added
+~~~~~
 
 * Added a new method to RuntimeSegmentCustom for directly adding runtime road data without needing RoadSceneUtils data containers.
 * Added new dedicated pedestrian crosswalk creation methods to `RuntimeSegmentCustom`.
+
+Changed
+~~~~~~~
+
+* The road segment placer has been removed for public use.
 
 Fixed
 ~~~~~
@@ -45,6 +53,9 @@ Fixed
 * Fixed the raycasting issue for mono vehicles when the Unity Physics package is removed.
 * Fixed compilation when Unity Physics or Entities Graphics package was removed.
 * Fixed Rukhanka animation system when custom animation is in use.
+* Fixed road segment generation from the Unity spline.
+* Fixed exception for Animation Baker when the animation collection is null.
+* Fixed the exception that occurred during the initial serialization of the dictionary for the component being added in the inspector.
 
 [1.7.5] - 27-06-2026
 --------------------

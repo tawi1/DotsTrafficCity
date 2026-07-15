@@ -3,6 +3,33 @@
 Change Log
 ************
 
+[1.8.0] - 15-07-2026
+--------------------
+
+Added
+~~~~~
+
+* Added support for Unity 6.6+.
+* Added new "Traffic Demo" and "Traffic Demo Mobile" scenes.
+* Added presets for the Path Creator to quickly save, reuse, and switch between path generation settings.
+* Added road reuse protection for Road Constructor: automatically binds and reuses existing road segments during regeneration to prevent losing custom modifications.
+* Added manual node overrides for Road Constructor: introduced an inspector panel to force crosswalks at road ends, configure custom offsets, and easily manage saved overrides.
+* Added snapping for pedestrian nodes on road segments.
+
+Changed
+~~~~~~~
+
+* Replaced all managed components with UnityObjectRef to reduce chunk fragmentation and speed up structural changes.
+* Updated the position handle of road segments with a sphere to distinguish it from other handles.
+* Tab selection index is now shared between road segment creators.
+
+Fixed
+~~~~~
+
+* Fixed crowd avoidance for pedestrians on different floors.
+* Fixed pedestrian node corners for one-way roads.
+* Fixed the pedestrian animation stress scene.
+
 [1.7.6] - 03-07-2026
 --------------------
 

@@ -3,7 +3,7 @@
 Change Log
 ************
 
-[1.8.0] - 15-07-2026
+[1.8.0] - 16-07-2026
 --------------------
 
 Added
@@ -26,6 +26,7 @@ Changed
 Fixed
 ~~~~~
 
+* Fixed traffic cars potentially getting permanently stuck on pedestrians in a temporary ragdoll state.
 * Fixed crowd avoidance for pedestrians on different floors.
 * Fixed pedestrian node corners for one-way roads.
 * Fixed the pedestrian animation stress scene.

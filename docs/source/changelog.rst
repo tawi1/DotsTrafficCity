@@ -3,13 +3,14 @@
 Change Log
 ************
 
-[1.8.0] - 16-07-2026
+[1.8.0] - 17-07-2026
 --------------------
 
 Added
 ~~~~~
 
 * Added support for Unity 6.6+.
+* Added Floating Origin system for DOTS & Mono with seamless hybrid synchronization for jitter-free massive maps.
 * Added new `Traffic Demo` and `Traffic Demo Mobile` scenes.
 * Added presets for the `Path Creator` to quickly save, reuse, and switch between path generation settings.
 * Added road reuse protection for `Road Constructor`: automatically binds and reuses existing road segments during regeneration to prevent losing custom modifications.

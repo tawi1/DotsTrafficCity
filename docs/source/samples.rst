@@ -10,3 +10,4 @@ Samples
 		/demo.rst
 		/testScenes.rst
 		/runtimeDemo.rst
+		/floatingOrigin.rst

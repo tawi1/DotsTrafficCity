@@ -13,6 +13,7 @@ This system resolves these issues by dynamically shifting the entire world back 
 How To Use
 ----------
 
+* Import the `Floating Origin` sample via the **Package Initialization** window before proceeding.
 * This instruction is for the demo scene and for demonstrating purposes only. You can use it with your own character and camera by replacing the ``SampleFloatingPlayerService`` and ``SampleCameraHandlerService`` scripts according to your character and camera setup.
 * Open the `Demo mono` scene.
 * Disable road streaming in the :ref:`Road Streaming Config <roadStreamingConfig>`.

@@ -35,6 +35,8 @@ How To Use
 
 	.. image:: /images/road/floatingOrigin/floatingOrigin5.png
 
+* Launch the scene.
+
 Known Issues
 ------------
 

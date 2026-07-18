@@ -34,3 +34,8 @@ How To Use
 * Open the child object named ``Chunk``, which contains the ``FloatingOriginChunkService`` script, and assign the parent objects in the scene that need to be moved.
 
 	.. image:: /images/road/floatingOrigin/floatingOrigin5.png
+
+Known Issues
+------------
+
+* **Pedestrian Ragdoll Shifting:** Active pedestrian ragdolls don't transition properly during coordinate shifts. This issue will be addressed in future updates.

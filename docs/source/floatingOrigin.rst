@@ -26,7 +26,7 @@ How To Use
 
 	.. image:: /images/road/floatingOrigin/floatingOrigin3.png
 	
-* Set the threshold to 10 for testing purposes.
+* Set the threshold to 10 for testing purposes (in real-world scenarios, this value should be set between 200 and 1000).
 * In the Inspector, press the `Reset` button.
 
 	.. image:: /images/road/floatingOrigin/floatingOrigin4.png

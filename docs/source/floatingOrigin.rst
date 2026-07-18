@@ -3,6 +3,13 @@
 Floating Origin
 ===============
 
+Overview
+--------
+
+The Floating Origin system is designed to bypass the floating-point precision limitations inherent in modern game engines like Unity. When a player moves far away from the world center (0,0,0)—typically beyond 3–5 kilometers—the precision of standard ``float`` coordinates begins to degrade significantly. This results in noticeable visual artifacts, including vertex skinning jitter on animated meshes, rendering stutter, and physical instability/collision failures within physics engines.
+
+This system resolves these issues by dynamically shifting the entire world back toward the origin whenever the player exceeds a specific threshold distance. The coordinate translation happens seamlessly within a single frame, combining high-performance ECS processing with hybrid MonoBehaviour synchronization to ensure jitter-free rendering and physics stability on massive scale maps.
+
 How To Use
 ----------
 

@@ -89,6 +89,32 @@ Editor Scene
 #. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>`.
 #. The next step is to set up `Vehicles`_
 
+Road Re-use Protection & Node Overrides
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, the generator creates a standard layout based on the Road Constructor data. However, you can protect specific road segments from being overwritten or manually adjust individual node properties.
+
+Locking Segments (Road Re-use Protection)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you have manually adjusted or configured a specific generated road segment and want to preserve it during subsequent road network regenerations:
+
+#. Select the generated segment's gameobject in the scene hierarchy.
+#. Add the ``RC_Object`` component to it.
+#. When you press the **Generate** button in the ``RC_EditorSceneGenerator`` again, any segment containing this component will act as a lock mechanism—it will be automatically bound and re-used instead of being destroyed and replaced.
+
+Manual Crosswalk Override
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To selectively override node settings or adjust pedestrian layouts on specific road segments without altering the global generation rules:
+
+#. In the inspector, unfold the **Overrides Settings** panel.
+#. Enable the **Show Scene Buttons** toggle.
+#. In the Scene View, select the desired node you want to modify (e.g., Node 1 or Node 2) by clicking its corresponding scene button.
+#. In the inspector, configure which settings to overwrite, such as enabling **Force Crosswalk** or setting a **Custom Crosswalk Offset**.
+#. Click the **Add Settings** button in the inspector to save the override.
+#. Use the panel to track, apply, or clear any saved manual overrides directly from the inspector interface.
+
 Runtime Scene
 ------------
 

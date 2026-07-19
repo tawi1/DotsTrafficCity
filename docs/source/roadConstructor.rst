@@ -86,8 +86,10 @@ Editor Scene
 	.. image:: /images/integration/rc9.png	
 	
 #. In the :ref:`Hub <subsceneGenerator>`, generate the subscene.
-#. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>`.
+#. If you need to regenerate roads, select :ref:`Hub <subsceneGenerator>`, press `Move back` button, then regenerate roads in `RC_EditorSceneGenerator` & press `Generate` again in the :ref:`Hub <subsceneGenerator>` (see :ref:`roadReuseProtection` for details on how to preserve custom segments).
 #. The next step is to set up `Vehicles`_
+
+.. _roadReuseProtection:
 
 Road Re-use Protection & Node Overrides
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

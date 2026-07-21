@@ -17,6 +17,7 @@ How To Use
 * This instruction is for the demo scene and for demonstrating purposes only. You can use it with your own character and camera by replacing the ``SampleFloatingPlayerService`` and ``SampleCameraHandlerService`` scripts according to your character and camera setup.
 * Open the `Demo mono` scene.
 * Disable road streaming in the :ref:`Road Streaming Config <roadStreamingConfig>`.
+* Disable `Traffic Public Support` in the in the :ref:`General Settings <generalSettingsConfig>`.
 * Configure the Cinemachine camera according to the settings shown in the image below (set `Rotation Control` to `Hard Look At` and in the `Cinemachine Follow` component, set `Binding Mode` to `World Space`).
 
 	.. image:: /images/road/floatingOrigin/floatingOrigin1.png

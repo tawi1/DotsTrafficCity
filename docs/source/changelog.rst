@@ -3,6 +3,23 @@
 Change Log
 ************
 
+[1.8.1] - 22-07-2026
+--------------------
+
+Changed
+~~~~~~~
+
+* TransformRef now uses TransformHandle for Unity 6.3+.
+* Improved performance of entity synchronization between GameObjects and entities in Unity 6.3+.
+* Improved performance of hybrid Mono traffic.
+* Optimized the Arcade Vehicle Controller.
+* Tweaked crowd avoidance configuration for better vehicle avoidance.
+
+Fixed
+~~~~~
+
+* Fixed endless forward-and-back jitter near targets in crowd avoidance when close to a vehicle.
+
 [1.8.0] - 17-07-2026
 --------------------
 

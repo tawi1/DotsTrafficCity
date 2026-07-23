@@ -3,8 +3,13 @@
 Change Log
 ************
 
-[1.8.1] - 22-07-2026
+[1.8.1] - 23-07-2026
 --------------------
+
+Added
+~~~~~
+
+* Added GameObjectRef entity component to reference a GameObject from an entity.
 
 Changed
 ~~~~~~~
@@ -13,6 +18,7 @@ Changed
 * Improved performance of entity synchronization between GameObjects and entities in Unity 6.3+.
 * Improved performance of hybrid Mono traffic.
 * Optimized the Arcade Vehicle Controller.
+* Smoother transition from No physics to DOTS traffic vehicle mode after disabling physics culling.
 * Tweaked crowd avoidance configuration for better vehicle avoidance.
 
 Fixed

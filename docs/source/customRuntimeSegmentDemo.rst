@@ -51,8 +51,15 @@ Populate a ``RuntimeSegmentCustom`` instance with pre-configured boundary nodes 
         newSegment.Nodes.Add(node);
     }
 
-    // 3. Generate internal paths, lane connections, U-turns, and crosswalks
+    // 3. Configure shared light state container and enable traffic light signal control for intersection nodes
+    newSegment.LightStateContainer = baseLightContainer;
+    newSegment.AddTrafficLights();
+
+    // 4. Generate internal paths, lane connections, U-turns, and crosswalks
     RuntimeGenerationUtils.GenerateAutoCrossroad(newSegment, generationSettings);
+
+.. note::
+   Calling ``newSegment.AddTrafficLights()`` marks the intersection's traffic nodes to operate under traffic light control modes and assigns light indices to connected lane paths.
 
 .. important::
    Before calling ``GenerateAutoCrossroad(newSegment, ...)``, the ``newSegment.Nodes`` list **must already be populated** with valid ``TrafficNodeData`` instances containing precise world positions and orientations.

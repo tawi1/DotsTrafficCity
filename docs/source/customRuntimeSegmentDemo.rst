@@ -14,6 +14,7 @@ Key Components & Utilities
 ---------------------------
 
 * **RuntimeGenerationUtils**: A static helper class containing low-level path calculations, Bezier curve evaluations, straight segment math, and automated crossroad topology generation.
+* **TrafficNodeData**: A lightweight runtime data structure representing an entry/exit boundary node of a road segment. It defines lane counts, widths, crosswalk settings, and position/rotation transforms for connecting adjacent roads.
 * **RuntimeGenerationPool**: A zero-allocation object pool used to pop and recycle ``RuntimeSegmentCustom``, ``TrafficNodeData``, and ``PathData`` instances during runtime operations.
 * **RuntimeRoadManagerCustom**: The runtime manager responsible for registering generated road segments into the live DOTS simulation world.
 
@@ -78,20 +79,24 @@ How the Sample Works
 2. **Parsing Raw Road Data**:
    The sample iterates over a list of reference editor road objects purely to read their underlying structural data (lane count, width, speed limits, pedestrian spacing) as an input source.
 
-3. **Processing Straight Roads vs. Crossroads**:
+3. **Configuring TrafficNodeData Instances**:
+   For each boundary node, a pooled ``TrafficNodeData`` instance is populated with geometric parameters (lane counts, divider widths, crosswalk offsets) and assigned transform data. Node rotations are assigned facing **opposite to the entrance direction** of the node.
+
+4. **Processing Straight Roads vs. Crossroads**:
    
    * **Straight Roads**: Evaluates middle waypoint positions, pops nodes from the pool, and calls ``RuntimeGenerationUtils.GenerateStraightSegment()`` to build multi-lane geometry and lateral pedestrian paths.
    * **Crossroads**: Assigns shared traffic light containers and automatically computes turns, Bezier curves, and pedestrian links via ``RuntimeGenerationUtils.GenerateAutoCrossroad()``.
 
-4. **Registering with Simulation World**:
+5. **Registering with Simulation World**:
    Once segments are generated, they are registered synchronously with the DOTS world using ``runtimeRoadManagerCustom.AddSegmentsSync(newSegments)``.
 
-5. **Traffic Light & Frame Binding**:
+6. **Traffic Light & Frame Binding**:
    Upon completion of segment addition, physical traffic light MonoBehaviours in the scene are bound to their respective crossroad IDs via ``RegisterTrafficLights()``.
 
 Best Practices
 --------------
 
+* **Ensure Correct Node Orientation**: Always Orient ``TrafficNodeData`` rotations facing opposite to the segment entrance vector so path curves and Bezier tangents align correctly.
 * **Use Custom Data Sources**: Feel free to replace the sample's scene road references with your own custom runtime data structures or procedural algorithms.
 * **Use Object Pooling**: Always use ``RuntimeGenerationPool.Instance.PopSegment()`` and ``PopTrafficNode()`` instead of instantiating new objects directly to prevent GC spikes during runtime generation.
 * **Recycle Removed Segments**: When tearing down chunks or removing road segments, return them to the pool using ``runtimeGenerationPool.RecycleSegment(segment)``.

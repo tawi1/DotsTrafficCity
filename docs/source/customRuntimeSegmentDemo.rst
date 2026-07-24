@@ -18,6 +18,71 @@ Key Components & Utilities
 * **RuntimeGenerationPool**: A zero-allocation object pool used to pop and recycle ``RuntimeSegmentCustom``, ``TrafficNodeData``, and ``PathData`` instances during runtime operations.
 * **RuntimeRoadManagerCustom**: The runtime manager responsible for registering generated road segments into the live DOTS simulation world.
 
+Segment Connection Principles
+-----------------------------
+
+Adjacent road segments seamlessly snap together at their boundary ``TrafficNodeData`` nodes. 
+
+When connecting two segments (e.g., a straight road segment and an intersection):
+
+* **Position**: The boundary nodes of both connecting segments must share the exact same world position.
+* **Rotation**: The boundary nodes must have opposite (inverted) rotations—facing 180 degrees away from each other. 
+
+This inverse rotation aligns incoming lanes from one segment directly with outgoing lanes of the adjacent segment.
+
+Generating Straight Roads
+-------------------------
+
+Straight road segments connect two boundary traffic nodes (Start & End) and can consist of straight lanes, crosswalks, and optional pedestrian side paths along the segment.
+
+To generate a straight road segment, create two boundary nodes, define guide path waypoints, and call ``RuntimeGenerationUtils.GenerateStraightSegment()``:
+
+.. code-block:: csharp
+
+    // 1. Pop or instantiate a new custom segment
+    var newSegment = runtimeGenerationPool.PopSegment();
+
+    // 2. Instantiate and configure Start (index 0) and End (index 1) boundary nodes
+    for (int i = 0; i < 2; i++)
+    {
+        var node = runtimeGenerationPool.PopTrafficNode();
+        node.Owner = newSegment;
+        node.LocalNodeIndex = i;
+
+        node.Position = nodePositions[i];
+        node.Rotation = nodeRotations[i]; // Facing opposite to entrance vector
+
+        node.LaneCount = 2;
+        node.LaneWidth = 3.75f;
+
+        newSegment.Nodes.Add(node);
+    }
+
+    // 3. Define path waypoints (e.g. start position, intermediate spline points, end position)
+    List<Vector3> waypoints = new List<Vector3> { startPos, endPos };
+
+    // 4. Configure straight segment parameters
+    var straightSettings = new RoadSceneUtils.StraightSegmentSettings()
+    {
+        LaneCount = 2,
+        LaneWidth = 3.75f,
+        IsOneWay = false,
+        IsEndOfOneWay = false,
+
+        AddCrosswalk = true,
+        AddPedestrianNodes = true,
+        AddPedestrianAlongLine = true,
+        PedestrianNodeSpacing = 5f
+    };
+
+    float speedLimit = 60f; // Speed limit in km/h
+
+    // 5. Generate parallel lane paths, crosswalks, and pedestrian routes
+    RuntimeGenerationUtils.GenerateStraightSegment(newSegment, waypoints, straightSettings, speedLimit);
+
+.. note::
+   Straight road segments always require exactly **two** boundary nodes in ``newSegment.Nodes`` (index 0 for Start, index 1 for End).
+
 Generating Auto Crossroads
 ---------------------------
 
@@ -128,7 +193,7 @@ Best Practices
 --------------
 
 * **Populate Segment Nodes Before Generation**: Ensure ``newSegment.Nodes`` contains fully initialized ``TrafficNodeData`` objects with accurate positions and properties before passing it to ``GenerateAutoCrossroad()``.
-* **Ensure Correct Node Orientation**: Always orient ``TrafficNodeData`` rotations facing opposite to the segment entrance vector so path curves and Bezier tangents align correctly.
+* **Ensure Correct Node Orientation & Alignment**: Always place boundary ``TrafficNodeData`` nodes at the exact same position with inverted (opposite) rotations so adjacent road segments align and stitch seamlessly.
 * **Use Custom Data Sources**: Feel free to replace the sample's scene road references with your own custom runtime data structures or procedural algorithms.
 * **Use Object Pooling**: Always use ``RuntimeGenerationPool.Instance.PopSegment()`` and ``PopTrafficNode()`` instead of instantiating new objects directly to prevent GC spikes during runtime generation.
 * **Recycle Removed Segments**: When tearing down chunks or removing road segments, return them to the pool using ``runtimeGenerationPool.RecycleSegment(segment)``.

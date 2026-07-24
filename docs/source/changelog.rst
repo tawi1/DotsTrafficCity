@@ -3,12 +3,13 @@
 Change Log
 ************
 
-[1.8.1] - 23-07-2026
+[1.8.1] - 24-07-2026
 --------------------
 
 Added
 ~~~~~
 
+* Added new runtime generation sample scene demonstrating dynamic road segment generation from raw data.
 * Added GameObjectRef entity component to reference a GameObject from an entity.
 
 Changed
@@ -25,6 +26,7 @@ Fixed
 ~~~~~
 
 * Fixed endless forward-and-back jitter near targets in crowd avoidance when close to a vehicle.
+* Fixed pedestrian cornering generation for runtime segments created via auto crossroad generation.
 
 [1.8.0] - 17-07-2026
 --------------------

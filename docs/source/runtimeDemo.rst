@@ -9,3 +9,4 @@ Runtime Demo
 		/tileDemo.rst
 		/chunkRoadDemo.rst
 		/customRoadDemo.rst
+		/customRuntimeSegmentDemo.rst

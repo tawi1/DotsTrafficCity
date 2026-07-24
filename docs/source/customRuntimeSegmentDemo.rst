@@ -64,14 +64,19 @@ The framework includes a dedicated sample scene demonstrating dynamic road segme
 * **Location**: ``Spirit604/DotsCity/Samples/RuntimeGenerationSample/RuntimeGenerationSample.unity``
 * **Script**: ``RuntimeGenerationSample.cs``
 
+.. note::
+   **Demonstration Notice**: The road creators (``RoadSegmentCreator``) and scene objects present in this sample scene are used **strictly as data containers** to extract raw parameters (such as waypoint positions, lane widths, and connection rules) for API demonstration purposes. 
+   
+   You are **not limited** to using these editor components. The runtime generation API is entirely decoupled from scene MonoBehaviours, allowing you to feed your own custom data sources (e.g., procedural grid generators, tilemap databases, external JSON files, or network streams) directly into ``RuntimeGenerationUtils``.
+
 How the Sample Works
 ~~~~~~~~~~~~~~~~~~~~
 
 1. **Initialization & Pooling Warmup**:
    On ``Start()``, the sample initializes the ``RuntimeGenerationPool`` and calls ``RuntimeGenerationUtils.Warmup()`` to pre-allocate internal collection capacities, eliminating garbage collector allocations during road generation.
 
-2. **Parsing Raw Editor Road Creators**:
-   The script iterates over a list of scene ``RoadSegmentCreator`` objects, reading raw structural data (lane count, width, speed limits, pedestrian spacing).
+2. **Parsing Raw Road Data**:
+   The sample iterates over a list of reference editor road objects purely to read their underlying structural data (lane count, width, speed limits, pedestrian spacing) as an input source.
 
 3. **Processing Straight Roads vs. Crossroads**:
    
@@ -87,6 +92,7 @@ How the Sample Works
 Best Practices
 --------------
 
+* **Use Custom Data Sources**: Feel free to replace the sample's scene road references with your own custom runtime data structures or procedural algorithms.
 * **Use Object Pooling**: Always use ``RuntimeGenerationPool.Instance.PopSegment()`` and ``PopTrafficNode()`` instead of instantiating new objects directly to prevent GC spikes during runtime generation.
 * **Recycle Removed Segments**: When tearing down chunks or removing road segments, return them to the pool using ``runtimeGenerationPool.RecycleSegment(segment)``.
 * **Pre-allocate with Warmup**: Call ``RuntimeGenerationUtils.Warmup()`` during game startup or scene loading to ensure zero-allocation performance when constructing road networks dynamically.

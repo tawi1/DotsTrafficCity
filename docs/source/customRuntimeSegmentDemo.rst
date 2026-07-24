@@ -26,12 +26,36 @@ The framework provides automated crossroad generation via ``RuntimeGenerationUti
 1. Standard Crossroad Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Construct a single ``RuntimeSegmentCustom`` object, attach boundary traffic nodes to it, and pass it into the generator:
+Populate a ``RuntimeSegmentCustom`` instance with pre-configured boundary nodes (``TrafficNodeData``) explicitly defining the intersection's outer entry/exit points, then pass the segment to the generator:
 
 .. code-block:: csharp
 
-    // Generate internal paths, lane connections, U-turns, and crosswalks
+    // 1. Pop or instantiate a new custom segment
+    var newSegment = runtimeGenerationPool.PopSegment();
+
+    // 2. Instantiate and configure boundary nodes with correct positions, rotations, and lane settings
+    for (int i = 0; i < nodeCount; i++)
+    {
+        var node = runtimeGenerationPool.PopTrafficNode();
+        node.Owner = newSegment;
+        node.LocalNodeIndex = i;
+        
+        // Assign correct world position and facing direction (opposite to entrance)
+        node.Position = nodePositions[i];
+        node.Rotation = nodeRotations[i]; // Facing opposite to entrance vector
+        
+        node.LaneCount = 2;
+        node.LaneWidth = 3.75f;
+        
+        // Add boundary node to segment
+        newSegment.Nodes.Add(node);
+    }
+
+    // 3. Generate internal paths, lane connections, U-turns, and crosswalks
     RuntimeGenerationUtils.GenerateAutoCrossroad(newSegment, generationSettings);
+
+.. important::
+   Before calling ``GenerateAutoCrossroad(newSegment, ...)``, the ``newSegment.Nodes`` list **must already be populated** with valid ``TrafficNodeData`` instances containing precise world positions and orientations.
 
 2. Stitching Existing Connected Straight Roads
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +120,8 @@ How the Sample Works
 Best Practices
 --------------
 
-* **Ensure Correct Node Orientation**: Always Orient ``TrafficNodeData`` rotations facing opposite to the segment entrance vector so path curves and Bezier tangents align correctly.
+* **Populate Segment Nodes Before Generation**: Ensure ``newSegment.Nodes`` contains fully initialized ``TrafficNodeData`` objects with accurate positions and properties before passing it to ``GenerateAutoCrossroad()``.
+* **Ensure Correct Node Orientation**: Always orient ``TrafficNodeData`` rotations facing opposite to the segment entrance vector so path curves and Bezier tangents align correctly.
 * **Use Custom Data Sources**: Feel free to replace the sample's scene road references with your own custom runtime data structures or procedural algorithms.
 * **Use Object Pooling**: Always use ``RuntimeGenerationPool.Instance.PopSegment()`` and ``PopTrafficNode()`` instead of instantiating new objects directly to prevent GC spikes during runtime generation.
 * **Recycle Removed Segments**: When tearing down chunks or removing road segments, return them to the pool using ``runtimeGenerationPool.RecycleSegment(segment)``.

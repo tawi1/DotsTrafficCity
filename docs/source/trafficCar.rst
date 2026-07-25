@@ -32,7 +32,7 @@ MonoBehaviour-Based Traffic (Hybrid Mono)
 	* **For Custom user controller:** 
 		* Set **Controller type** to `Custom user`. 
 		* Create and assign an adapter script implementing the `IVehicleInput` interface to link traffic logic with your custom controller (see :ref:`Input Info <inputInfo>` and the :ref:`VehicleInput Example Code <vehicleInputCode>`). 
-		* Click **Scan**, adjust **body/wheel offsets and steering angle** in the **Prefab Info** tab to match your custom car's setup, and press **Create**.
+		* Click **Scan** & **Create** buttons.
 
 #. Once generated, the vehicles are automatically added to the :ref:`vehicle collection <vehicleCollection>` and your selected :ref:`preset <trafficPreset>` by default.
 #. Find the :ref:`Hub <roadEntitySubscene>` object in your scene and press the **Copy To Subscene** button (this is required to synchronize the active presets between the main scene and the subscene).

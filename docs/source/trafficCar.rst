@@ -24,7 +24,7 @@ MonoBehaviour-Based Traffic (Hybrid Mono)
 #. **Choose your controller integration:**
    
 	* **For Arcade (built-in sample):** 
-		* Set **Controller type** to `Arcade`. 
+		* Set **Controller type** to `Arcade Heavy Mass`. 
 		* Set your preset/paths in the **Save** tab.
 		* Click **Scan**.
 		* Adjust **body/wheel offsets** in the **Prefab Info** tab, and press **Create**. 

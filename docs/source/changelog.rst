@@ -14,7 +14,7 @@ Changed
 Fixed
 ~~~~~
 
-* Fixed a rare issue where traffic cars would unexpectedly go in reverse.
+* Fixed a rare issue where traffic cars unexpectedly reversed due to a gas input delay.
 * Fixed a rare issue where traffic with a passive driving style performed unexpected reverse avoidance maneuvers.
 
 [1.8.1] - 24-07-2026

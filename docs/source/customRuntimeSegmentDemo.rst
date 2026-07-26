@@ -151,8 +151,10 @@ You can also stitch together an intersection from existing straight road segment
     newSegments.Add(newIntersection);
 
 .. note::
-   Setting ``areExistsNodes: true`` tells the utility to reuse the boundary transformations and configuration of existing nodes rather than instantiating new ones. This ensures seamless lane stitching between pre-existing straight roads and the new crossroad.
-
+   Setting ``areExistsNodes: true`` instructs the utility to process boundary nodes belonging to existing straight roads. 
+   
+   The generator will automatically instantiate new intersection nodes with **inverted orientations (180° rotation)** derived from the connected road nodes, ensuring incoming and outgoing lanes line up correctly without requiring manual transform setup.
+   
 Sample Scene: Runtime Generation
 --------------------------------
 

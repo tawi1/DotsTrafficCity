@@ -23,6 +23,14 @@ Installation & Setup
 
    **Disclaimer**: The code examples in this guide are for **demonstration purposes only**. They are not fully functional for production use and do not include necessary error handling or performance optimizations. Please use them as a conceptual starting point to build your own robust implementation.
 
+Generating Topology: Manual vs. Automated Utilities
+---------------------------------------------------
+
+When constructing road segments, you have two approaches depending on your pipeline:
+
+* **Manual Graph Construction (Covered in this guide)**: You manually instantiate ``TrafficNodeData``, compute waypoint lists, and register individual ``PathData`` instances. This gives you full, low-level control over exact lane paths, custom curves, and complex track priorities.
+* **Automated Generation Utility**: If you do not have pre-calculated path waypoints or custom node setups, you can use ``RuntimeGenerationUtils`` (covered in detail in the :ref:`Custom Runtime Segment Generation <customRuntimeSegment>` guide). Helper methods such as ``GenerateStraightSegment()`` and ``GenerateAutoCrossroad()`` automatically calculate lane offsets, Bezier turn curves, crosswalks, and pedestrian networks from high-level parameters.
+
 How to Use: Step-by-Step Graph Initialization
 ---------------------------------------------
 
@@ -47,6 +55,9 @@ Step 2: Designing Traffic Control Nodes and Associated Paths
 * **Intersection**: Requires **3 or more nodes** (one node for each approaching crossroad side).
 
 Rather than manually adding nodes and paths directly into internal segment collections, always populate the ``TrafficNodeData`` first, prepare its outgoing ``PathData`` list, and then register them using the structured execution loop of ``AddNodeData``.
+
+.. note::
+   **Automated Alternative**: If you do not want to manually create and position every internal lane path and waypoint, use ``RuntimeGenerationUtils.GenerateStraightSegment()`` to automatically populate straight multi-lane roads.
 
 .. important::
    **The Traffic Node Rotation Rule:**
@@ -155,6 +166,9 @@ Procedural Example: Connecting a Straight Road to a 4-Way Intersection
 -----------------------------------------------------------------------
 
 This example demonstrates how to programmatically initialize a complex junction entity—a classic **4-Way X-Intersection**—where its southern boundary node seamlessly connects to the straight road created above by sharing the exact same position:
+
+.. note::
+   **Automated Intersection Generation**: Constructing all turn paths, curves, and connections for complex crossroads manually can be time-consuming. You can use ``RuntimeGenerationUtils.GenerateAutoCrossroad()`` to generate all inner turn paths, U-turns, and crosswalks automatically from boundary node positions. See the :ref:`Custom Runtime Segment Generation <customRuntimeSegment>` documentation for full details.
 
 .. note::
    **Intersection Paths Simplification:**

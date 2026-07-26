@@ -3,6 +3,20 @@
 Change Log
 ************
 
+[1.8.2] - 26-07-2026
+--------------------
+
+Changed
+~~~~~~~
+
+* Improved physics for the simple mono vehicle controller.
+
+Fixed
+~~~~~
+
+* Fixed a rare issue where traffic cars would unexpectedly go in reverse.
+* Fixed a rare issue where traffic with a passive driving style performed unexpected reverse avoidance maneuvers.
+
 [1.8.1] - 24-07-2026
 --------------------
 

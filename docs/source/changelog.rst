@@ -3,6 +3,20 @@
 Change Log
 **********
 
+[1.8.3] - 08-08-2026
+--------------------
+
+Added
+~~~~~
+
+* Added truck with trailer support.
+* Added compatibility to split long vehicles (e.g. buses) into multiple sub-entities for better obstacle detection at intersections.
+
+Fixed
+~~~~~
+
+* Fixed navmesh obstacle loading for vehicles [1.8.1 regression fix].
+
 [1.8.2] - 26-07-2026
 --------------------
 

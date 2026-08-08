@@ -12,6 +12,7 @@ Added
 * Added truck with trailer support.
 * Added compatibility to split long vehicles (e.g. buses) into multiple sub-entities for better obstacle detection at intersections.
 * Added custom pedestrian groups for spawning and filtering group-specific node access.
+* Added Spawn Weight field to PedestrianAuthoring to control individual prefab spawn probabilities.
 * Updated crowd avoidance to merge multiple obstacles into a single one and avoid them correctly.
 * Added pedestrian death after falling a certain distance during temporary ragdoll state.
 

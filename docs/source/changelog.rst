@@ -3,6 +3,24 @@
 Change Log
 ************
 
+[1.8.3] - 08-08-2026
+--------------------
+
+Added
+~~~~~
+
+* Added truck with trailer support.
+* Added compatibility to split long vehicles (e.g. buses) into multiple sub-entities for better obstacle detection at intersections.
+* Added custom pedestrian groups for spawning and filtering group-specific node access.
+* Updated crowd avoidance to merge multiple obstacles into a single one and avoid them correctly.
+* Added pedestrian death after falling a certain distance during temporary ragdoll state.
+
+Fixed
+~~~~~
+
+* Fixed navmesh obstacle loading for vehicles [1.8.1 regression fix].
+* Fixed potential X-axis rotation for pedestrians during crowd avoidance.
+
 [1.8.2] - 26-07-2026
 --------------------
 

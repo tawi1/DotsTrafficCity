@@ -22,7 +22,7 @@ Limitations
 ===========
 
 * WebGL not supported.
-* Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
+* Vehicles with trailers are supported with physics (DOTS Entities & Hybrid Mono), but not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 
 Package Installation
 ====================

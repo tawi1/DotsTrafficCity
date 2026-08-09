@@ -838,7 +838,7 @@ Action State
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 				
-				.. _pedestrianAllowedGroups:
+.. _pedestrianAllowedGroups:
 
 Allowed Groups
 --------------
@@ -847,6 +847,9 @@ Pedestrians use the ``PedestrianGroupType`` bitmask to filter which nodes they c
 
 * **Node Filtering**: A pedestrian can only enter or spawn on a node if the pedestrian's group matches the node's ``AllowedGroups`` mask.
 * **Prefab Grouping**: Groups can be configured per prefab to separate different pedestrian types (e.g., Civilians, Police, VIPs) and restrict their movement to designated areas or paths.
+
+.. note::
+   The count and names of available groups can be modified via the Unity toolbar: **CityEditor/Window/Global settings**, or directly in the ``PedestrianGroupType.cs`` file.
 
 Entity Customization
 --------------------

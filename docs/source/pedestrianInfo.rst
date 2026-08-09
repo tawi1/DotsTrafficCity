@@ -1,24 +1,24 @@
 .. _pedestrianEntity:
 
 Pedestrian
-=====
+==========
 
 .. contents::
    :local:
 
 
 How To Create
-----------------
+-------------
 
 .. _pedestrianHybridLegacy:
 
 Hybrid Legacy Skin
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 A `Hybrid legacy skin` is a :ref:`hybrid entity <hybridEntity>` that combines the default `GameObject` (with `animator <https://docs.unity3d.com/ScriptReference/Animator.html>`_) and the DOTS entity.
 
 Factory
-""""""""""""""
+"""""""
 
 	#. Open `PedestrianSkinFactory` in the scene.
 	
@@ -36,7 +36,7 @@ Factory
 		Each `Hybrid legacy` pedestrian prefab should have `PedestrianEntityRef` component.
 		
 Animations
-""""""""""""""
+""""""""""
 
 By default, each pedestrian has a `PedestrianBaseController` animator.
 
@@ -76,7 +76,7 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 .. _legacyAnimatorExample:
 
 Animation authoring
-""""""""""""""
+"""""""""""""""""""
 
 * Add your animation to `AnimationState` script file.
 * In the scene find:
@@ -99,14 +99,14 @@ Animation authoring
 .. _pedestrianGPU:
 
 Pure GPU Skin
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 `Pure GPU skin` is a :ref:`pure entity <pureEntity>` that combines the GPU texture animations and the DOTS entity.
 
 .. _crowdSkinFactory:
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 	#. Create :ref:`GPU prefabs <animationBakerHowTo>` in the :ref:`Animation baker <animationBaker>` tool.
 
@@ -137,7 +137,7 @@ How To Create
 .. _gpuAnimatorExample:
 
 Animation authoring
-""""""""""""""
+"""""""""""""""""""
 
 * Add your animation to `AnimationState` script file.
 * In the scene find:
@@ -154,7 +154,7 @@ Animation authoring
 * How to play animation described :ref:`here <pedestrianAnimation>`.
 
 Crowd GPU Custom Animator
-""""""""""""""
+"""""""""""""""""""""""""
 
 The Crowd GPU Custom animator is used for transitions between baked animations (implemented by `CrowdAnimatorTransitionSystem` system).
 
@@ -192,12 +192,12 @@ The Crowd GPU Custom animator is used for transitions between baked animations (
 .. _hybridAndGpu:
 
 Hybrid and GPU
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 New hybrid GPU mode that allows you to mix hybrid animator models for near and GPU animation for far at the same time.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 * Create :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
 * Add desired animations in the :ref:`Animation state authoring <legacyAnimatorExample>` for :ref:`Legacy <pedestrianHybridLegacy>` pedestrians.
@@ -207,29 +207,29 @@ How To Create
 * How to play animation described :ref:`here <pedestrianAnimation>`.
 
 Cull state
-""""""""""""""
+""""""""""
 
 * :ref:`InViewOfCamera <cullPointStates>`: :ref:`Hybrid <pedestrianHybridLegacy>` legacy skin is enabled.
 * :ref:`CloseToCamera <cullPointStates>`: :ref:`GPU <pedestrianGPU>` skin is enabled.
 
 Hybrid On Request And GPU
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, the entity is animated by the `GPU` until a `Hybrid skin` is requested.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 * Create entity as :ref:`Hybrid and GPU <hybridAndGpu>` pedestrians.
 * Hybrid skin is enabled if the entity disables the `PreventHybridSkinTagTag` tag, to switch back to `GPU`, enable `PreventHybridSkinTagTag` tag again.
 
 Hybrid Shape GPU
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 `Hybrid Shape GPU skin` is a :ref:`hybrid entity <hybridEntity>` animated on `GPU` in `DOTS` & has hybrid monobehaviour collider to interact with pedestrians in a familiar way.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 * Create :ref:`GPU <pedestrianGPU>` pedestrians.
 * The hybrid shape can be edited here:
@@ -239,12 +239,12 @@ How To Create
 .. _rukhankaSkin:
 
 Rukhanka
-~~~~~~~~~~~~
+~~~~~~~~
 
 Pure entities animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ in `DOTS`.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 * Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader from the sample).
 
@@ -267,12 +267,12 @@ How To Create
 .. _rukhankaHybridSkin:
 
 Rukhanka Hybrid
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Hybrid entities animated with `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_ with hybrid monobehaviour collider & rigidbody to control or interact with pedestrians in a familiar way.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 * Import `Rukhanka` samples (it uses `AnimatedLitShader URP` shader from the sample).
 
@@ -330,7 +330,7 @@ You can control the `Rukhanka Hybrid` npc with the monobehaviour script:
 		}
 		
 How To Attach
-""""""""""""""
+"""""""""""""
 
 If you need to attach some gameobject weapon e.g:
 
@@ -364,7 +364,7 @@ If you need to attach some gameobject weapon e.g:
 		}
 		
 Animation Event
-""""""""""""""
+"""""""""""""""
 
 * In `RigDefinitionAuthoring <https://docs.rukhanka.com/getting_started#authoring-object-setup>`_ component enable `Has Animation Events` option.
 * Then, use this sample code:
@@ -398,12 +398,12 @@ Animation Event
 .. _animatronSkin:
 
 Animatron
-~~~~~~~~~~~~
+~~~~~~~~~
 
 Pure entities animated with `Animatron <https://assetstore.unity.com/packages/tools/animation/animatron-314750>`_ in `DOTS`.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Unpack `AnimatronSample` prefabs:
 
@@ -467,12 +467,12 @@ How To Create
 .. _animatronHybridSkin:
 
 Animatron Hybrid
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Hybrid entities animated with `Animatron <https://assetstore.unity.com/packages/tools/animation/animatron-314750>`_ in `DOTS`.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Follow steps of :ref:`Animatron <animatronSkin>`.
 #. Add `AnimatronEntityAdapter` component to `NpcHybridShape` prefab.
@@ -483,7 +483,7 @@ How To Create
 #. Now, you can disable the pedestrian from the :ref:`DOTS simulation <pedestrianDisableSimulation>` at any time and handle it manually via the `AnimatronEntityAdapter` component.
 		
 Runtime Attachment
-""""""""""""""
+""""""""""""""""""
 
 #. Add `AnimatronRuntimeAttachment` component to your attachment.
 #. Use ``SetAttachment`` method of `AnimatronRuntimeAttachment` to attach to the `AnimatronEntityAdapter` with the specified `Joint name`.
@@ -491,12 +491,12 @@ Runtime Attachment
 .. _pedestrianRagdoll:
 
 Ragdoll
-~~~~~~~~~~~~
+~~~~~~~
 
 Ragdoll is created at the scene of the pedestrian's death. Make sure ragdoll is :ref:`enabled <pedestrianSettingsConfig>`.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Add all the colliders and rigidbodies to character according to the `RagdollWizard <https://docs.unity3d.com/2021.1/Documentation/Manual/wizard-RagdollWizard.html>`_ tutorial.
 
@@ -528,7 +528,7 @@ How To Create
 .. _pedestrianNavigation:
 
 Navigation
-----------------
+----------
 
 | Navigation is used for pedestrian obstacle avoidance.
 | There are 3 types of navigation:
@@ -536,7 +536,7 @@ Navigation
 .. _pedestrianNavmeshNavigation:
 
 NavMesh Navigating
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ .
 
@@ -545,7 +545,7 @@ Useful links:
 	* :ref:`Test scene <pedestrianNavigationTest>`.
 	
 Installation
-""""""""""""""
+""""""""""""
 
 * Check that the :ref:`Navigation package <packageInstallationOptional>` is installed.
 * Make sure that navigation is enabled in the :ref:`General Config <generalSettingsConfig>`.
@@ -553,7 +553,7 @@ Installation
 * Each dynamic object in the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
 
 How To Setup
-""""""""""""""
+""""""""""""
 
 * Create a new gameobject & add `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ component.
 * Set `Agent type` to `Humanoid` & press the `Bake` button in the created `NavMeshSurface`.
@@ -561,7 +561,7 @@ How To Setup
 * Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
 
 Pros And Cons
-""""""""""""""
+"""""""""""""
 	
 Pros:
 	* High precision.
@@ -573,7 +573,7 @@ Cons:
 .. _pedestrianLocalAvoidance:
 
 Local Avoidance 
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 DOTS system to avoid local obstacles (vehicles).
 
@@ -582,13 +582,13 @@ Useful links:
 	* :ref:`Test scene <pedestrianNavigationTest>`.
 
 How To Setup
-""""""""""""""
+""""""""""""
 
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Local Avoidance`.
 * Configure :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`.
 
 Pros And Cons
-""""""""""""""
+"""""""""""""
 
 Pros:
 	* Low CPU load.
@@ -600,12 +600,12 @@ Cons:
 .. _pedestrianAgentsNavigation:
 
 Agents Navigation 
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_  using `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 
 How To Setup
-""""""""""""""
+""""""""""""
 
 * Make sure that you purchased & downloaded `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 * Set the :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Agents Navigation`.
@@ -616,12 +616,12 @@ How To Setup
 .. _pedestrianAnimation:
 
 Animation
-----------------
+---------
 
 .. _customAnimatorState:
 
 Custom Animation
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 To handle custom animation, follow these steps:
 
@@ -692,7 +692,7 @@ To handle custom animation, follow these steps:
 .. _pedestrianStates:
 
 States
-----------------
+------
 
 Common Logic
 ~~~~~~~~~~~~
@@ -718,7 +718,7 @@ Common Logic
 #. If you want to set the :ref:`Custom animation <customAnimatorState>` for pedestrian read :ref:`this <customAnimatorState>`.
 
 How To Change
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 ..  code-block:: csharp
 
@@ -767,7 +767,7 @@ How To Change
 	}
 	
 Custom State System
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 If you want to temporarily control certain pedestrians with monobehaviour :ref:`read this article <pedestrianDisableSimulation>` or see the sample code below to control pedestrians with `DOTS` script:
 
@@ -814,7 +814,7 @@ If you want to temporarily control certain pedestrians with monobehaviour :ref:`
 .. _pedestrianMovementState:
 
 Movement State
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 * Default
 * Idle
@@ -838,26 +838,37 @@ Action State
 	.. note:: 
 		You can edit state logic :ref:`here <pedestrianStateAuthoring>`.
 				
-Entity Customization
-----------------
+				.. _pedestrianAllowedGroups:
 
-By default, 1 entity prefab shared across all pedestrian, but if you want customize (change weight, add custom entity component etc.) certain entity for certain skin:
+Allowed Groups
+--------------
+
+Pedestrians use the ``PedestrianGroupType`` bitmask to filter which nodes they can spawn on and travel through:
+
+* **Node Filtering**: A pedestrian can only enter or spawn on a node if the pedestrian's group matches the node's ``AllowedGroups`` mask.
+* **Prefab Grouping**: Groups can be configured per prefab to separate different pedestrian types (e.g., Civilians, Police, VIPs) and restrict their movement to designated areas or paths.
+
+Entity Customization
+--------------------
+
+By default, 1 entity prefab is shared across all pedestrians, but if you want to customize a certain entity for a specific skin (change spawn weight, set :ref:`allowed group type <pedestrianAllowedGroups>`, add custom entity components, etc.):
 
 * Open :ref:`Pedestrian settings <pedestrianSettingsConfig>`.
 
 	.. image:: /images/configs/pedestrian/entityCustomization1.png
 	
-* Duplicate the entity prefab. Set unique customization for the prefab authorings (the order of the entity prefabs within the prefab container should match that of the factory). 
-* See the image below for an example of a prefab container (there are 2 prefabs, 1 for pedestrian, 1 unique for police)
+* Duplicate the entity prefab. On each prefab's ``PedestrianAuthoring`` component, you can configure unique settings such as its spawn weight (``spawnWeight``) and allowed group mask (``groupType``), as well as add custom entity authorings.
+* Set unique customization for the prefab authorings (the order of the entity prefabs within the prefab container should match that of the factory). 
+* See the image below for an example of a prefab container (there are 2 prefabs: 1 for standard pedestrians, 1 unique for police):
 
 	.. image:: /images/configs/pedestrian/entityCustomization2.png
 	
-* The number of entries of entities prefab in this scriptable object should match with the factory it uses (`PedestrianSkinFactory` for the hybrid pedestrians or `PedestrianGPUSkinFactory` for the GPU pedestrians)
+* The number of entries of entity prefabs in this scriptable object should match the factory it uses (``PedestrianSkinFactory`` for hybrid pedestrians or ``PedestrianGPUSkinFactory`` for GPU pedestrians).
 
 .. _pedestrianDisableSimulation:
 				
 User Custom Control & Interaction
-----------------
+---------------------------------
 
 If you need to temporarily take full control of specific `Pedestrian` in your own way, use this:
 
@@ -865,7 +876,7 @@ If you need to temporarily take full control of specific `Pedestrian` in your ow
 * Use this sample code to temporarily remove/restore pedestrians from built-in DOTS systems.
 
 PedestrianInteractUtils Methods
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	..  code-block:: csharp
 	
@@ -878,7 +889,7 @@ PedestrianInteractUtils Methods
 		PedestrianInteractUtils.RestoreToSimulation(entity);
 		
 Interaction Mono Example
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 	..  code-block:: csharp
 	
@@ -933,7 +944,7 @@ Entity Selection
 Entity can be retrieved using one of these methods:
 		
 Pure DOTS
-~~~~~~~~~~~~
+~~~~~~~~~
 
 * Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
@@ -946,7 +957,7 @@ Pure DOTS
 		}
 
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 Entity can be retrieved if the NPC has a collider:
 
@@ -970,40 +981,40 @@ Entity can be retrieved if the NPC has a collider:
 .. include:: temporaryRagdoll.rst
 
 Common Info
-----------------
+-----------
 
 Collision
-~~~~~~~~~~~~
+~~~~~~~~~
 
 In some cases pedestrians can get stuck in obstacles (vehicles), to solve this problem, adjust the :ref:`Antistuck config <pedestrianAntistuckConfig>`.
 
 Authoring Components
-----------------
+--------------------
 
 Authoring components that make up the pedestrian entity.
 
 PedestrianAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Contains the main components of pedestrian entity **[required]**.
 
 PlayerTargetAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Component for player targeting systems **[optional]**.
 
 Physics
-~~~~~~~~~~~~
+~~~~~~~
 
 `PhysicsBody` and `PhysicsShape` components for physics related systems **[optional]**.
 
 .. _pedestrianConfigs:
 
 Configs
-----------------
+-------
 
 Pedestrian Spawner Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianSpawnerConfig.png
 	``Hub/Configs/PedestrianConfigs/CommonConfig``
@@ -1016,13 +1027,13 @@ Pedestrian Spawner Config
 .. _pedestrianSettingsConfig:
 	
 Pedestrian Settings Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianSettingsConfig.png
 	``Hub/Configs/PedestrianConfigs/CommonConfig``
 
 Skin Type
-""""""""""""""""""
+"""""""""
 
 * **Rig show only in view** : rig skin will be loaded in the camera's view area.
 * **Rig show always** : rig skin will be loaded when the entity is created and will exist until it is destroyed.
@@ -1031,7 +1042,7 @@ Skin Type
 .. _rigType:
 	
 Rig Type
-""""""""""""""""""
+""""""""
 
 * :ref:`Hybrid legacy <pedestrianHybridLegacy>` : hybrid entity with animator component.
 * :ref:`Pure GPU <pedestrianGPU>` : pure entity with GPU animations.
@@ -1046,13 +1057,13 @@ Rig Type
 .. _pedestrianEntityType:
 
 Entity Type
-""""""""""""""""""
+"""""""""""
 
 * **No physics** : pedestrian not contains `PhysicsShape` component.
 * **Physics** : pedestrian contains `PhysicsShape` component.
 	
 Common Settings
-""""""""""""""""""
+"""""""""""""""
 
 | **Pedestrian collider radius** : pedestrian collider radius for `No physics` type.
 | **Walking speed** : walking speed.
@@ -1065,7 +1076,7 @@ Common Settings
 .. _pedestrianObstacleAvoidanceType:
 	
 Obstacle Avoidance Type
-""""""""""""""""""
+"""""""""""""""""""""""
 
 | **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
 | **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
@@ -1074,7 +1085,7 @@ Obstacle Avoidance Type
 .. _pedestrianNavigationType:
 
 Pedestrian Navigation Type **[** :ref:`NavMesh <pedestrianNavmeshNavigation>` **navigation only]**
-""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 * **Temp** : navigation will be enabled if there is an obstacle in front of pedestrian.
 * **Persist** : navigation is always on.
@@ -1083,7 +1094,7 @@ Pedestrian Navigation Type **[** :ref:`NavMesh <pedestrianNavmeshNavigation>` **
 .. _pedestrianCollisionType:
 	
 Collision type
-""""""""""""""""""
+""""""""""""""
 
 * **Calculate** :  collision is calculated manually (:ref:`for NoPhysics type<pedestrianEntityType>`).
 * **Physics** : collision is calculated with `Unity.Physics` (:ref:`for Physics type<pedestrianEntityType>`).
@@ -1094,7 +1105,7 @@ Collision type
 .. _pedestrianNavAgentConfig:
 
 NavAgent Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
 
@@ -1112,7 +1123,7 @@ Config for :ref:`NavMesh <pedestrianNavmeshNavigation>` navigating.
 .. _pedestrianLocalAvoidanceConfig:
 
 Obstacle Local Avoidance Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 
@@ -1131,7 +1142,7 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigating.
 .. _pedestrianAntistuckConfig:
 
 Antistuck Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Anti-stuck config for pedestrians stucked in a collision.
 
@@ -1144,7 +1155,7 @@ Anti-stuck config for pedestrians stucked in a collision.
 | **Target point offset** : distance between collision and anti-stuck point.
 	
 Trigger Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianTriggerConfig.png
 	``Hub/Configs/PedestrianConfigs/TriggerConfigs/PedestrianCommonTriggerConfig``
@@ -1158,19 +1169,19 @@ Trigger Config
 .. _pedestrianScaryTrigger:
 
 Scary Trigger Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/pedestrian/PedestrianScaryTriggerConfig.png
 	``Hub/Configs/PedestrianConfigs/TriggerConfigs/PedestrianScaryTriggerConfigAuthoring``
 	
 Trigger settings
-""""""""""""""""""
+""""""""""""""""
 
 | **Death trigger squared distance** : death trigger squared distance (squared distance == distance * distance).
 | **Death trigger duration** : death trigger duration.
 		
 Sound settings
-""""""""""""""""""
+""""""""""""""
 
 | **Has scream sound** : on/off scream sound.
 | **Scream entity limit** : maximum number of screaming pedestrians at the same time.
@@ -1192,7 +1203,7 @@ Bench Config
 | **Custom achieve sit point distance** :  distance to achieve the sit point on the bench.
 	
 Common Sound Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Common pedestrian sound settings
 
@@ -1207,10 +1218,10 @@ Common pedestrian sound settings
 .. _pedestrianStateAuthoring:
 
 State Authoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 	
 State Dictionary
-""""""""""""""""""
+""""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring1.png
 	``Hub/Configs/PedestrianConfigs/PedestrianStateAuthoring``
@@ -1226,7 +1237,7 @@ State Dictionary
 .. _pedestrianStateBinding:
 
 Movement State Binding Dictionary
-""""""""""""""""""
+"""""""""""""""""""""""""""""""""
 
 	.. image:: /images/configs/pedestrian/PedestrianStateAuthoring2.png
 	``Hub/Configs/PedestrianConfigs/PedestrianStateAuthoring``

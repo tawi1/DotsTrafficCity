@@ -900,8 +900,8 @@ Interaction Mono Example
 
 	..  code-block:: csharp
 	
-	public class PedestrianInteractable : MonoBehaviour
-	{
+		public class PedestrianInteractable : MonoBehaviour
+		{
 		private IHybridEntityRef hybridEntityRef;
 		private bool activated;
 
@@ -966,7 +966,7 @@ Interaction Mono Example
 
 			return !activated;
 		}
-	}
+		}
 		
 .. _pedestrianEntitySelection:
 		

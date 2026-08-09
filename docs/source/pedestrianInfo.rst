@@ -65,8 +65,10 @@ By default, each pedestrian has a `PedestrianBaseController` animator.
 | Talking 1, 2, 3        |- Talking     |   - 0,1,2 | By default                        |
 |                        |              |           |                                   |
 +------------------------+--------------+-----------+-----------------------------------+
-| GettingUp              |- GettingUp   |   - true  | Starts after getting up from      |
-|                        |              |           | ragdoll                           |
+| GettingUp              |- GetUp       |   - 0, 1  | Starts after getting up from      |
+|                        |              |           | ragdoll:                          |
+|                        |              |           | 0: Getting Up Face Up             |
+|                        |              |           | 1: Standing Up Face Down          |
 +------------------------+--------------+-----------+-----------------------------------+
 
 **Used in systems:**

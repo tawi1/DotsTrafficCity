@@ -847,8 +847,9 @@ Allowed Groups
 
 Pedestrians use the ``PedestrianGroupType`` bitmask to filter which nodes they can spawn on and travel through:
 
-* **Node Filtering**: A pedestrian can only enter or spawn on a node if the pedestrian's group matches the node's ``AllowedGroups`` mask.
+* **Node Filtering**: Set the ``AllowedGroups`` mask on each :ref:`PedestrianNode <pedestrianNode>` to specify which types of pedestrians are allowed to spawn on or navigate through that specific node.
 * **Prefab Grouping**: Groups can be configured on the ``PedestrianAuthoring`` component of each entity prefab (see :ref:`Entity Customization <entityCustomization>`) to separate different pedestrian types (e.g., Civilians, Police, VIPs) and restrict their movement to designated areas or paths.
+* **Bitmask Matching**: For a pedestrian to spawn on or travel through a node, the pedestrian's group mask and the node's ``AllowedGroups`` mask must share at least one common flag (``(pedestrianGroup & nodeAllowedGroups) != 0``).
 
 .. note::
    The count and names of available groups can be modified via the Unity toolbar: **CityEditor/Window/Global settings**, or directly in the ``PedestrianGroupType.cs`` file.

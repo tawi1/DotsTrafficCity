@@ -1,12 +1,12 @@
 .. _carPrefabCreator:
 
 Car Prefab Creator
-=====
+==================
 
-`Youtube tutorial. <https://youtu.be/7or3H0GB1HQ>`_
+`Youtube tutorial. <https://www.youtube.com/watch?v=twCJQ0-tvF8&t=957s>`_
 
 How To Use
-----------------
+----------
 
 #. From the `Unity` toolbar, open `Car Prefab Creator`.
 

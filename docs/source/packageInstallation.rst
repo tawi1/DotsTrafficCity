@@ -23,7 +23,7 @@ Limitations
 
 * WebGL not supported.
 * Built-in RP only works with :ref:`Mono <hybridMonoVehicle>` cars & :ref:`Hybrid legacy <pedestrianHybridLegacy>` pedestrians.
-* Vehicles with trailers or wagons are not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
+* Vehicles with trailers are supported with physics (DOTS Entities & Hybrid Mono), but not currently supported for :ref:`NoPhysics <noPhysicsVehicle>`.
 * `Animator <https://docs.unity3d.com/Manual/class-Animator.html>`_ with skeletal bone animation in pure `DOTS <https://unity.com/dots>`_ space is currently available if you have `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_; otherwise it's available only for :ref:`hybrid <hybridEntity>` entities with Animator approach or :ref:`pure <pureEntity>` entities with :ref:`GPU <pedestrianGPU>` animations.
 * `NavMesh surface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html>`_ obstacles only calculated with `NavMeshObstacle <https://docs.unity3d.com/2020.1/Documentation/Manual/class-NavMeshObstacle.html>`_.
 * :ref:`Ragdoll <pedestrianRagdoll>` currently only collides with `default colliders <https://docs.unity3d.com/ScriptReference/Collider.html>`_. For DOTS Ragdolls, you need the `Rukhanka Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_.

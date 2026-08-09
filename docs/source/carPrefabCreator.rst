@@ -3,7 +3,7 @@
 Car Prefab Creator
 =====
 
-`Youtube tutorial. <https://youtu.be/7or3H0GB1HQ>`_
+`Youtube tutorial. <https://www.youtube.com/watch?v=0L84dkGqCCE&t=1251s>`_
 
 How To Use
 ----------------

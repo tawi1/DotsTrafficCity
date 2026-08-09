@@ -900,48 +900,73 @@ Interaction Mono Example
 
 	..  code-block:: csharp
 	
-		public class PedestrianInteractable : MonoBehaviour
+	public class PedestrianInteractable : MonoBehaviour
+	{
+		private IHybridEntityRef hybridEntityRef;
+		private bool activated;
+
+		public bool Activated => activated;
+
+		private void Awake()
 		{
-			private IHybridEntityRef hybridEntityRef;
-			private bool activated;
+			hybridEntityRef = GetComponent<IHybridEntityRef>();
 
-			public bool Activated => activated;
+			// Note: NodeHashMapSystem.Register() is called here as an example, 
+			// but in production it should be registered once in a dedicated manager or initialization service.
+			NodeHashMapSystem.Register();
+		}
 
-			private void Awake()
+		/// <summary>
+		/// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using MonoBehaviour scripts.
+		/// </summary>
+		public bool Activate()
+		{
+			if (activated) return false;
+
+			if (PedestrianInteractUtils.RemoveFromSimulation(hybridEntityRef.RelatedEntity))
 			{
-				hybridEntityRef = GetComponent<IHybridEntityRef>();
+				activated = true;
 			}
 
-			/// <summary>
-			/// Remove the pedestrian entity from the DOTS simulation. All custom states, locomotion & animation should be handled by custom user code using MonoBehaviour scripts.
-			/// </summary>
-			public bool Activate()
-			{
-				if (activated) return false;
+			return activated;
+		}
 
-				if (PedestrianInteractUtils.RemoveFromSimulation(hybridEntityRef.RelatedEntity))
+		/// <summary>
+		/// Return the entity to the simulation.
+		/// </summary>
+		/// <param name="reassignClosestNode">Optional flag to set destination to the closest node if pedestrian moved away.</param>
+		public bool Deactivate(bool reassignClosestNode = false)
+		{
+			if (!activated) return false;
+
+			var entity = hybridEntityRef.RelatedEntity;
+
+			if (PedestrianInteractUtils.RestoreToSimulation(entity))
+			{
+				activated = false;
+
+				// [Optional] Find the closest node and reassign destination if the pedestrian moved away
+				if (reassignClosestNode)
 				{
-					activated = true;
-				}
+					var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
-				return activated;
+					// Find the closest node relative to the pedestrian's current position
+					Entity closestNode = NodeHashMapSystem.GetClosestNode(transform.position, out Vector3 nodePosition);
+
+					if (entityManager.HasComponent<DestinationComponent>(entity))
+					{
+						var destinationComponent = entityManager.GetComponentData<DestinationComponent>(entity);
+						destinationComponent.DestinationNode = closestNode;
+						destinationComponent.Value = nodePosition;
+
+						entityManager.SetComponentData(entity, destinationComponent);
+					}
+				}
 			}
 
-			/// <summary>
-			/// Return the entity to the simulation.
-			/// </summary>
-			public bool Deactivate()
-			{
-				if (!activated) return false;
-
-				if (PedestrianInteractUtils.RestoreToSimulation(hybridEntityRef.RelatedEntity))
-				{
-					activated = false;
-				}
-
-				return !activated;
-			}
-		}		
+			return !activated;
+		}
+	}
 		
 .. _pedestrianEntitySelection:
 		

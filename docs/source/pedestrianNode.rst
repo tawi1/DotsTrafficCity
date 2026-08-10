@@ -207,6 +207,13 @@ Trigger And Destroy
 
 Node to notify the user that the entity has reached the node & then destroy the entity. Use case is the same as the `Trigger type`.
 
+Crosswalk Node
+^^^^^^^^^^^^^^
+
+Node used to place crosswalks in arbitrary positions without using :ref:`traffic nodes <trafficNode>` and :ref:`road segments <roadSegment>`.
+
+For detailed setup instructions, configuration details, and system behavior, read the :ref:`Custom Crosswalk <customCrosswalk>` section.
+
 .. _pedestrianNodeSettings:
 
 Common Settings
@@ -240,6 +247,7 @@ Hotkeys
 
 	.. image:: /images/road/pedestrianNode/PedestrianNodeCreatorHotkeyConfig.png
 
+.. include:: customCrosswalk.rst
 
 CullState Info
 --------------

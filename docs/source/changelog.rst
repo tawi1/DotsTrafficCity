@@ -3,6 +3,14 @@
 Change Log
 **********
 
+[1.8.4] - 10-08-2026
+--------------------
+
+Added
+~~~~~
+
+* Added motorcycle & three-wheeler templates for the car prefab creator.
+
 [1.8.3] - 09-08-2026
 --------------------
 

@@ -11,6 +11,10 @@ Project Scenes
 #. **Demo** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
 #. **Demo Mono** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
 #. **Demo source** : same as `Demo` scene, but contains raw 3D models without optimization, also scene :ref:`streaming objects <sceneStreaming>` are disabled, including :ref:`static physics colliders <physicsShapeTransfer>`.
+#. **Demo Traffic** : a large-map sample scene dedicated exclusively to traffic simulation.
+#. **Demo Traffic Mono** : a large-map sample scene dedicated exclusively to traffic simulation interacting with monobehaviour scripts.
+#. **Demo Traffic Mobile** : a simple sample scene with traffic simulation optimized for mobile devices.
+#. **Demo Traffic Mobile Mono** : a simple sample scene with traffic simulation interacting with monobehaviour scripts, optimized for mobile devices.
 #. **RuntimeTile Road Demo** : :ref:`sample scene <runtimeTileDemo>` showing how to create a city builder based on tiles (runtime spline can be used with `Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_ plugin). **(new)**
 #. **RuntimeTile Road Mobile Demo** : :ref:`sample scene <runtimeTileDemo>` showing how to create a city builder based on tiles *[mobile version]*. **(new)**
 #. **Runtime ChunkRoad Demo** : :ref:`sample scene <chunkRoadDemo>` demonstrating the road chunks added at runtime. **(new)**

@@ -647,16 +647,27 @@ How To Setup
 * Ensure a valid `NavMeshSurface` is baked in the scene.
 * Configure parameters in the `Pedestrian Crowd Avoidance Authoring` component (see :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`).
 
+NavMesh Y-Surface Snapping Only Mode
+""""""""""""""""""""""""""""""""""""
+
+You can also use **Crowd Avoidance NavMesh** in a lightweight mode purely for **vertical alignment (Y-axis snapping)** onto the NavMesh surface, without enabling heavy NavMesh pathfinding or obstacle avoidance routines.
+
+* **Height Conformance:** Ideal when pedestrian movement is primarily driven by grid paths or direct node networks, but agents still need to align accurately with uneven terrain, ramps, or subtle elevation changes.
+* **Avoid Getting Stuck on Complex Geometry:** Bypasses full NavMesh pathfinding queries. If your NavMesh geometry is overly complex, detailed, or contains narrow topological traps, standard NavMesh navigation can cause agents to get stuck or enter recalculation loops; using pure Y-snapping prevents this entirely.
+* **Performance Optimization:** Leverages cached ground height sampling while skipping expensive raycasting and path queries, offering smooth terrain tracking with minimal CPU overhead.
+* **Seamless Integration:** Allows standard Crowd Avoidance to handle horizontal density and separation logic while the NavMesh strictly manages vertical placement.
+
 Pros And Cons
 """""""""""""
 
 Pros:
 	* Full height-mapping support for sloped or multi-level terrain.
 	* Prevents agents from colliding with or walking through static NavMesh walls and obstacles.
+	* Can be used purely for Y-surface snapping.
 	* Combines dynamic agent crowd separation with static environment boundary logic.
 
 Cons:
-	* Slightly higher CPU load compared to flat Crowd Avoidance due to NavMesh raycasting.
+	* Slightly higher CPU load compared to flat Crowd Avoidance due to NavMesh raycasting (unless operating in pure Y-snapping mode).
 
 .. _pedestrianAgentsNavigation:
 

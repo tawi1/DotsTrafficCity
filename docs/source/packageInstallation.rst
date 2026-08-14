@@ -55,23 +55,7 @@ Steps
 			* **UNITY_PHYSICS_CUSTOM**
 			
 #. After the packages have been downloaded & installed, if the console has :ref:`nunit.framework <nunitFix>` or `Burst` compilation errors, restart `Unity`.
-			
-	.. _packageInstallationOptional:
-	
-#. Click `Load Optional Packages` to start downloading the optional packages *(optional package,* :ref:`git <gitFix>` *required)*.
-
-	.. note::
-		**Optional packages:**
-			* **Reese's DOTS Navigation** (`com.reese.path`) - Reese's DOTS navigation package for :ref:`navigating <pedestrianNavigation>` on the NavMesh (`original git <https://github.com/reeseschultz/ReeseUnityDemos>`_) (the project uses the `604spirit's fork version <https://github.com/tawi1/ReeseUnityDemos>`_).
-		
-	.. note::
-		**Script define symbols required for the project:**
-			* **REESE_PATH**	
-		
-	.. warning::
-		If you get the error 'No git executable was found', read :ref:`this <gitFix>`.
-			
-#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 7-9 are optional, a built-in audio engine is available by default]`:
+#. Download the optional assets from the `Asset Store` `[from version v1.1.0, steps 6-8 are optional, a built-in audio engine is available by default]`:
 
 	.. note::
 		**Optional asset store packages:**
@@ -85,8 +69,8 @@ Steps
 #. Install the :ref:`FMOD sound <fmodSound>` settings.
 
 	.. note::
-		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 13**.
-		* If you are updating an existing project, follow steps **10 to 12** manually inside the initialization window.
+		* If the project is created from scratch, the **Pipeline**, **Layer settings**, and **Project settings** will be configured automatically. You can skip the next steps and proceed directly to **Step 12**.
+		* If you are updating an existing project, follow steps **9 to 11** manually inside the initialization window.
 
 #. **[Manual Setup]** Open the `Pipeline` tab, press the `Import Graphics` button if you want to use the demo pipelines (optional step), otherwise set `Rendering path` to `Forward+ <https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@14.0/manual/rendering/forward-plus-rendering-path.html>`_ in your pipeline settings.
 #. **[Manual Setup]** Open the `Layer settings` tab, select the layers to import according to your use case, and press the `Apply` button.

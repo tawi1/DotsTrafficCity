@@ -3,6 +3,26 @@
 Change Log
 **********
 
+[1.8.5] - 14-08-2026
+--------------------
+
+Added
+~~~~~
+
+* Added new Crowd Avoidance NavMesh feature to bypass NavMesh obstacles and maintain correct Y-axis snapping along NavMesh surface.
+
+Changed
+~~~~~~~
+
+* Removed Reese Path Navigation package and replaced it with a built-in package.
+* Renamed `Calc Nav Path` avoidance method to `Simple NavMesh`.
+* Reduced oscillation issues for crowd avoidance method.
+
+Fixed
+~~~~~
+
+* Fixed an Exception when using Train Mono.
+
 [1.8.4] - 10-08-2026
 --------------------
 

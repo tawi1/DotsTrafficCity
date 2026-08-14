@@ -533,12 +533,12 @@ Navigation
 ----------
 
 | Navigation is used for pedestrian obstacle avoidance.
-| There are 3 types of navigation:
+| There are 5 types of navigation:
 
 .. _pedestrianNavmeshNavigation:
 
-NavMesh Navigating
-~~~~~~~~~~~~~~~~~~
+Simple NavMesh
+~~~~~~~~~~~~~~
 
 DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
 
@@ -549,7 +549,6 @@ Useful links:
 Installation
 """"""""""""
 
-* Check that the :ref:`Navigation package <packageInstallationOptional>` is installed.
 * Make sure that navigation is enabled in the :ref:`General Config <generalSettingsConfig>`.
 * Ensure that :ref:`NavMeshObstacle <trafficNavMeshObstacle>` is enabled for traffic.
 * Each dynamic object in the scene must have a `NavMeshObstacle <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshObstacle.html>`_ component.
@@ -599,6 +598,66 @@ Cons:
 	* Can avoid vehicles only.
 	* Works on flat surfaces only.
 	
+.. _pedestrianCrowdAvoidance:
+
+Crowd Avoidance
+~~~~~~~~~~~~~~~
+
+High-performance DOTS-based crowd avoidance system designed for high agent density. It calculates lateral steering and separation/push forces between pedestrians, handles vehicle OBB avoidance with support for merging overlapping vehicle bounds (such as trailers or traffic jams), and dynamically enforces path boundary constraints.
+
+Useful links:
+	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
+	* :ref:`Test scene <pedestrianNavigationTest>`.
+
+How To Setup
+""""""""""""
+
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance`.
+* Configure parameters in the `Pedestrian Crowd Avoidance Authoring` component or via the :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`.
+
+Pros And Cons
+"""""""""""""
+
+Pros:
+	* High performance and scalability for large crowds.
+	* Handles both pedestrian-to-pedestrian separation and vehicle obstacle avoidance.
+	* Automatically keeps agents within sidewalk and crosswalk path boundaries.
+
+Cons:
+	* Designed primarily for flat surfaces.
+
+.. _pedestrianCrowdAvoidanceNavMesh:
+
+Crowd Avoidance NavMesh
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Extends the Crowd Avoidance pipeline with NavMesh query integration. It uses multi-ray fan casts against the NavMesh to detect static geometry, providing wall repulsion and sliding forces, while continuously mapping agent height (`TargetY`) for uneven terrain.
+
+.. warning::
+   If **Move Inside Path** is enabled and a `NavMeshObstacle` blocks the path, pedestrians may get stuck permanently. To prevent this, either disable **Move Inside Path** or ensure the path is wide enough for agents to bypass the obstacle.
+
+Useful links:
+	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
+	* :ref:`Test scene <pedestrianNavigationTest>`.
+
+How To Setup
+""""""""""""
+
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh`.
+* Ensure a valid `NavMeshSurface` is baked in the scene.
+* Configure parameters in the `Pedestrian Crowd Avoidance Authoring` component (see :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`).
+
+Pros And Cons
+"""""""""""""
+
+Pros:
+	* Full height-mapping support for sloped or multi-level terrain.
+	* Prevents agents from colliding with or walking through static NavMesh walls and obstacles.
+	* Combines dynamic agent crowd separation with static environment boundary logic.
+
+Cons:
+	* Slightly higher CPU load compared to flat Crowd Avoidance due to NavMesh raycasting.
+
 .. _pedestrianAgentsNavigation:
 
 Agents Navigation 
@@ -1171,6 +1230,110 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigation.
 | **Target point offset** : offset between an obstacle and avoidance waypoints.
 | **Achieve distance** : distance to achieve the avoidance waypoint.
 | **Check target availability** : check if destination can be reached; if not and no new target can be found, returns destination.
+
+.. _pedestrianCrowdAvoidanceConfig:
+
+Crowd Avoidance Config
+~~~~~~~~~~~~~~~~~~~~~~
+
+Config for :ref:`Crowd Avoidance <pedestrianCrowdAvoidance>` and :ref:`Crowd Avoidance NavMesh <pedestrianCrowdAvoidanceNavMesh>` navigation modes.
+
+Location in project:
+	``Hub/Configs/PedestrianConfigs/CrowdAvoidanceConfig``
+
+Key Setup Steps & Recommendations
+"""""""""""""""""""""""""""""""""
+
+When tuning the crowd avoidance configuration, follow this recommended sequence to achieve realistic movement and optimal performance:
+
+1. **Base Dimensions First**
+   * Adjust **Npc Radius** to match your pedestrian model's visual volume.
+   * Set **Effective Radius** based on local density. In dense urban environments, keeping it around 3–5 meters prevents agents from evaluating unnecessary distant interactions, saving CPU performance.
+
+2. **Detection & Early Steering (Look Ahead Pedestrian)**
+   * **Look Ahead Pedestrian** is a static configuration value (it does not dynamically scale with runtime speed changes). Set it to a fixed balance value (typically **1.5 – 2.5 meters**):
+     * *Why balance matters:* Setting this value too low (< 1.0 m) causes agents to notice collisions too late, leading to abrupt turns. Setting it too high (> 4.0–5.0 m) forces pedestrians to react to distant oncoming agents who would have already passed by, resulting in unnaturally wide avoidance arcs.
+   * Pair **Look Ahead Pedestrian** with **Side Bias Intensity** (>0.2) to ensure smooth, natural right-hand passing when two pedestrians meet head-on.
+   * **Steering vs Push Balance:** Use **Look Ahead Pedestrian** for smooth early steering reaction. If agents regularly bump into each other before turning, adjust *Look Ahead Pedestrian* before cranking up physical push forces (**Skin Pedestrian** / **Push Intensity**).
+
+3. **Pedestrian Separation & Density**
+   * For tight crowds, lower **Skin Pedestrian** and increase **Push Intensity Pedestrian** to enforce tight physical boundaries without visual clipping.
+   * If agents appear to "vibrate" or oscillate near their targets, lower **Steering Damping** slightly or increase **Arrival Fade Dist** so avoidance forces naturally decay as they reach their destination.
+
+4. **Vehicle Avoidance Tuning**
+   * Set **Look Ahead Car** based on average city traffic speeds. High-speed roads require longer look-ahead distances (8–12 meters).
+   * Always enable **Find Neighbors** if your city features large vehicles (articulated buses, trucks with trailers) or frequent traffic jams. This groups individual vehicle bounds into a unified convex shape, eliminating erratic zig-zagging between cars.
+   * Adjust **Tangent Blend Weight** (e.g., 0.6–0.8) if pedestrians should smoothly slide along the sides of stopped vehicles rather than bouncing backward.
+
+5. **Sidewalk & Crosswalk Constraints**
+   * Enable **Move Inside Path** to keep pedestrians strictly within sidewalk boundaries.
+   * If agents get pushed into the street by dense crowds, increase **Spring Multiplier** or **Apply Border Force**.
+   * Ensure **Apply Crosswalk Offset** is active if pedestrians need to spread out naturally while crossing roads.
+
+6. **NavMesh Integration (NavMesh Mode Only)**
+   * If using `Crowd Avoidance NavMesh`, fine-tune **Look Ahead Navmesh** to match pedestrian movement speed.
+   * **Important Trap:** If **Move Inside Path** is enabled alongside static `NavMeshObstacle` elements blocking the walkway, pedestrians may become stuck between path boundaries and NavMesh walls. Either disable **Move Inside Path** for complex custom static obstacles or ensure adequate clearance around obstacles.
+
+Parameters Reference
+""""""""""""""""""""
+
+**Steering Settings:**
+	* **Steering Damping** : how fast steering force returns to zero for smooth direction changes.
+	* **Side Bias Intensity** : artificial offset to break symmetry during head-on pedestrian encounters.
+	* **Arrival Fade Dist** : distance to destination where avoidance forces fade out for precise stopping.
+	* **Forward Momentum Weight** : weight for maintaining forward momentum (higher = tighter turns, lower = wider arcs).
+
+**Detection Ranges:**
+	* **Look Ahead Car** : detection distance for oncoming vehicles.
+	* **Look Ahead Pedestrian** : static forward vision distance for detecting nearby pedestrians. Controls early steering reaction before physical contact (recommended 1.5–2.5 m).
+	* **Effective Radius** : maximum grid query radius around the agent to ignore distant obstacles.
+	* **Find Neighbors** : merges overlapping vehicle bounds (e.g. trucks with trailers or jams) into a single OBB.
+
+**Margins (Skin):**
+	* **Npc Radius** : physical radius of the pedestrian.
+	* **Skin Car** : safety buffer distance around vehicles.
+	* **Skin Pedestrian** : safety buffer distance between pedestrians.
+
+**Force Intensities:**
+	* **Force Intensity Car** : multiplier for steering force when avoiding vehicles.
+	* **Force Intensity Pedestrian** : multiplier for steering force when avoiding pedestrians.
+	* **Push Intensity Car** : physical pushback force applied upon contacting vehicle colliders.
+	* **Push Intensity Pedestrian** : separation force preventing pedestrian overlapping.
+	* **Push Damping** : decay rate for physical separation and push forces.
+
+**Escape Logic:**
+	* **Escape Multiplier** : lateral force multiplier when directly facing an obstacle center.
+	* **Separation Buffer** : minimum distance threshold where physical separation push forces begin acting.
+
+**Border Settings:**
+	* **Move Inside Path** : constrains agents within sidewalk/path boundaries.
+	* **Spring Multiplier** : spring stiffness coefficient for returning agents to the sidewalk.
+	* **Apply Border Force** : enables stiff physical correction force when completely breaching sidewalk limits.
+	* **Apply Crosswalk Offset** : dynamically expands movement path width on crosswalks.
+	* **Crosswalk Offset** : additional path width offset added during crosswalk traversal.
+
+**Car Avoidance Blend Weights:**
+	* **Tangent Blend Weight** : weight of contour-sliding tangent vector parallel to vehicle edges (normal push weight derived as `1 - TangentBlendWeight`).
+
+**Bumper Fade Out Settings:**
+	* **Bumper Offset** : virtual extension of car length in meters before releasing avoidance control.
+	* **Bumper Fade Length** : distance over which avoidance force decays after clearing the bumper zone.
+
+**Global Force Limits:**
+	* **Max Push Force** : maximum capped repulsion/push force.
+	* **Max Steering Force** : maximum capped steering avoidance force.
+	* **Min Collision Speed** : minimum speed threshold used for collision impulse calculations against cars.
+
+**NavMesh Agent Settings (for Crowd Avoidance NavMesh):**
+	* **Avoid Navmesh Obstacles** : enables static NavMesh wall and edge avoidance.
+	* **Look Ahead Navmesh** : raycast distance along movement direction for wall detection.
+	* **Force Intensity Navmesh** : steering force intensity multiplier when NavMesh walls are detected.
+	* **Extents** : search box extents used for NavMeshQuery agent positioning.
+	* **Nav Agent Index** : NavMesh Agent Type ID.
+	* **Area Mask** : bitmask specifying valid NavMesh area types.
+	* **Wall Weight** : weight of perpendicular outward wall repulsion.
+	* **By Pass Weight** : weight of parallel wall-sliding bypass force.
+	* **Nav Mesh Side Padding** : extra side padding offset for left/right raycasts during wall detection.
 
 .. _pedestrianAntistuckConfig:
 

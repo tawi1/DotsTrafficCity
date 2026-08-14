@@ -633,9 +633,6 @@ Crowd Avoidance NavMesh
 
 Extends the Crowd Avoidance pipeline with NavMesh query integration. It uses multi-ray fan casts against the NavMesh to detect static geometry, providing wall repulsion and sliding forces, while continuously mapping agent height (`TargetY`) for uneven terrain.
 
-.. warning::
-   If **Move Inside Path** is enabled and a `NavMeshObstacle` blocks the path, pedestrians may get stuck permanently. To prevent this, either disable **Move Inside Path** or ensure the path is wide enough for agents to bypass the obstacle.
-
 Useful links:
 	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
 	* :ref:`Test scene <pedestrianNavigationTest>`.
@@ -646,6 +643,9 @@ How To Setup
 * Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh`.
 * Ensure a valid `NavMeshSurface` is baked in the scene.
 * Configure parameters in the `Pedestrian Crowd Avoidance Authoring` component (see :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`).
+
+.. warning::
+   If **Move Inside Path** is enabled and a `NavMeshObstacle` blocks the path, pedestrians may get stuck permanently. To prevent this, either disable **Move Inside Path** or ensure the path is wide enough for agents to bypass the obstacle.
 
 NavMesh Y-Surface Snapping Only Mode
 """"""""""""""""""""""""""""""""""""
@@ -1249,7 +1249,7 @@ Crowd Avoidance Config
 
 Config for :ref:`Crowd Avoidance <pedestrianCrowdAvoidance>` and :ref:`Crowd Avoidance NavMesh <pedestrianCrowdAvoidanceNavMesh>` navigation modes.
 
-Location in project:
+Location in scene:
 	``Hub/Configs/PedestrianConfigs/CrowdAvoidanceConfig``
 
 Key Setup Steps & Recommendations
@@ -1257,31 +1257,39 @@ Key Setup Steps & Recommendations
 
 When tuning the crowd avoidance configuration, follow this recommended sequence to achieve realistic movement and optimal performance:
 
-1. **Base Dimensions First**
+#. **Base Dimensions First**
+
    * Adjust **Npc Radius** to match your pedestrian model's visual volume.
    * Set **Effective Radius** based on local density. In dense urban environments, keeping it around 3–5 meters prevents agents from evaluating unnecessary distant interactions, saving CPU performance.
 
-2. **Detection & Early Steering (Look Ahead Pedestrian)**
+#. **Detection & Early Steering (Look Ahead Pedestrian)**
+
    * **Look Ahead Pedestrian** is a static configuration value (it does not dynamically scale with runtime speed changes). Set it to a fixed balance value (typically **1.5 – 2.5 meters**):
+
      * *Why balance matters:* Setting this value too low (< 1.0 m) causes agents to notice collisions too late, leading to abrupt turns. Setting it too high (> 4.0–5.0 m) forces pedestrians to react to distant oncoming agents who would have already passed by, resulting in unnaturally wide avoidance arcs.
+
    * Pair **Look Ahead Pedestrian** with **Side Bias Intensity** (>0.2) to ensure smooth, natural right-hand passing when two pedestrians meet head-on.
    * **Steering vs Push Balance:** Use **Look Ahead Pedestrian** for smooth early steering reaction. If agents regularly bump into each other before turning, adjust *Look Ahead Pedestrian* before cranking up physical push forces (**Skin Pedestrian** / **Push Intensity**).
 
-3. **Pedestrian Separation & Density**
+#. **Pedestrian Separation & Density**
+
    * For tight crowds, lower **Skin Pedestrian** and increase **Push Intensity Pedestrian** to enforce tight physical boundaries without visual clipping.
    * If agents appear to "vibrate" or oscillate near their targets, lower **Steering Damping** slightly or increase **Arrival Fade Dist** so avoidance forces naturally decay as they reach their destination.
 
-4. **Vehicle Avoidance Tuning**
+#. **Vehicle Avoidance Tuning**
+
    * Set **Look Ahead Car** based on average city traffic speeds. High-speed roads require longer look-ahead distances (8–12 meters).
    * Always enable **Find Neighbors** if your city features large vehicles (articulated buses, trucks with trailers) or frequent traffic jams. This groups individual vehicle bounds into a unified convex shape, eliminating erratic zig-zagging between cars.
    * Adjust **Tangent Blend Weight** (e.g., 0.6–0.8) if pedestrians should smoothly slide along the sides of stopped vehicles rather than bouncing backward.
 
-5. **Sidewalk & Crosswalk Constraints**
+#. **Sidewalk & Crosswalk Constraints**
+
    * Enable **Move Inside Path** to keep pedestrians strictly within sidewalk boundaries.
    * If agents get pushed into the street by dense crowds, increase **Spring Multiplier** or **Apply Border Force**.
    * Ensure **Apply Crosswalk Offset** is active if pedestrians need to spread out naturally while crossing roads.
 
-6. **NavMesh Integration (NavMesh Mode Only)**
+#. **NavMesh Integration (NavMesh Mode Only)**
+
    * If using `Crowd Avoidance NavMesh`, fine-tune **Look Ahead Navmesh** to match pedestrian movement speed.
    * **Important Trap:** If **Move Inside Path** is enabled alongside static `NavMeshObstacle` elements blocking the walkway, pedestrians may become stuck between path boundaries and NavMesh walls. Either disable **Move Inside Path** for complex custom static obstacles or ensure adequate clearance around obstacles.
 

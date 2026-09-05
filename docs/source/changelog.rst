@@ -3,6 +3,24 @@
 Change Log
 **********
 
+[1.9.0] - 05-09-2026
+--------------------
+
+Added
+~~~~~
+
+* Added universal networking sample for Mono networking.
+* Added FishNet networking implementation sample for Mono vehicles.
+* Added TrafficCustomBehaviorAuthoring component to allow per-entity driving behavior customization during vehicle spawn.
+* Added gear sound simulation for traffic vehicles.
+
+Fixed
+~~~~~
+
+* Fixed Netcode For Entities compatibility.
+* Fixed weight on pedestrian sub-nodes causes incorrect navigation.
+* Fixed hybrid attachment for Rukhanka for unity 6.3+.
+
 [1.8.5] - 14-08-2026
 --------------------
 

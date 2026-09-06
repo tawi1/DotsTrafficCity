@@ -3,6 +3,15 @@
 Change Log
 **********
 
+[1.9.0] - 06-09-2026
+--------------------
+
+Added
+~~~~~
+
+* Added TrafficCustomBehaviorAuthoring component to allow per-entity driving behavior customization during vehicle spawn.
+* Added gear sound simulation for traffic vehicles.
+
 [1.8.4] - 10-08-2026
 --------------------
 

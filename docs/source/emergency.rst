@@ -35,7 +35,7 @@ For Traffic Vehicles (AI)
    In :ref:`General settings <generalSettingsConfig>`, ensure that **Emergency Vehicle Support** is enabled.
 
 2. **Add Authoring Component**:
-   Add the ``EmergencyVehicleAuthoring`` component to your emergency traffic vehicle prefab.
+   Add the ``EmergencyVehicleAuthoring`` component to your emergency traffic vehicle entity prefab.
 
 3. **Configure Siren Settings**:
 

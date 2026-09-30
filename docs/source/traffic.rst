@@ -10,6 +10,7 @@ Traffic
 		/trafficCar.rst
 		/truck.rst
 		/longVehicle.rst
+		/emergency.rst
 		/carPrefabCreator.rst
 		/vehicleCollection.rst
 		/trafficPreset.rst

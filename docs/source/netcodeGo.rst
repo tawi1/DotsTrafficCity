@@ -11,7 +11,6 @@ Installation
 * Unpack ``DotsCity/Packages/Upgrades/NetcodeGOPrefabs`` package.
 * In the :ref:`Cull Config <cullConfig>`, set the calculation mode to `Multiplayer Calculate Distance` or `Multiplayer Camera View`.
 * Drag & drop `NGOPrefabRoot` into the scene & in that root, in the `PrefabRootResolve` component, press the `Resolve Refs` button (new scene only).
-* From the Unity toolbar, select ``Window > Multiplayer > Play Mode Tools``. Make sure that the `Play Mode Type` is set to ``Client & Server`` (if you are running a local simulation).
 * Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple local players **(optional)**.
 * Open `NGODemo` sample scene.
 

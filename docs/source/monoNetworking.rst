@@ -81,6 +81,7 @@ Execution Order & Data Flow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Initialization Sequence:**
+
    * ``NetworkBootstrapAdapter`` runs early (Execution Order ``-2000``).
    * It calls ``NetworkProviderSO.CreateNetworkStack()`` to initialize transport services and ``IPedestrianNetworkBroadcaster``.
    * Servicing references are registered globally in ``NetworkServiceLocator.Instance`` and ``PedestrianBroadcasterService.Instance``.
@@ -89,6 +90,7 @@ Execution Order & Data Flow
    * ``TrafficAdapter`` initializes network receivers on clients and acts as a bridge for streaming traffic batches.
 
 2. **Pedestrian Lifecycle & Synchronization Flow:**
+
    * **Server Entity Creation & Spawning:** ``PedestrianServerSpawnSyncSystem`` queries un-synced pedestrians, assigns network IDs, transmits ``PedestrianSpawnBroadcast`` to clients, and disables sync tags.
    * **Client Connection & Snapshot:** ``PedestrianClientSpawnSystem`` requests an initial snapshot via ``PedestrianBroadcasterService`` upon creation. ``PedestrianServerStateSyncSystem`` receives the request and returns a complete state snapshot of all active scene pedestrians.
    * **Spawning on Client:** Server broadcasts ``PedestrianSpawnBroadcast``; ``PedestrianClientSpawnSystem`` dequeues broadcasts, instantiates entities, and populates ``ClientEntityMap``.
@@ -99,6 +101,7 @@ Execution Order & Data Flow
    * **Despawning:** Server-side ``PedestrianServerDespawnSystem`` monitors pooled or culled entities and sends ``PedestrianDespawnBroadcast``. The payload triggers ``PedestrianClientDespawnHandler`` to destroy ECS entities and clean up local dictionary mappings.
 
 3. **Traffic & Vehicle Synchronization Flow:**
+
    * **Arcade Vehicle Bridge:** ``ArcadeVehicleNetworkBridge`` runs on execution order ``-90``. In ``FixedUpdate``, it reads physics velocity, control input (throttle/steering), sound culling tags, and horn states across registered vehicles, packing them into ``VehicleSnapshot`` arrays.
    * **Vehicle Spawning & Despawning:** On first detection, ``ArcadeVehicleNetworkBridge`` sends reliable spawn broadcasts (``VehicleSpawnData``) with model indices. Despawned or removed vehicles trigger reliable despawn events (``VehicleDespawnData``).
    * **Batch Streaming:** Server broadcasts batched snapshot arrays via ``TrafficAdapter`` (or any assigned `ITrafficNetworkSender`).
@@ -115,6 +118,7 @@ NetworkBootstrapAdapterBase & NetworkBootstrapAdapter
 
 * **Execution Order:** Defaults to `-2000` to execute prior to standard scene components.
 * **Responsibilities:**
+
   * Creates and registers transport-agnostic `INetworkService` and `IPedestrianNetworkBroadcaster` via `NetworkProviderSO`.
   * Subscribes to transport connection and disconnection events (`OnServerStarted`, `OnServerStopped`, `OnClientConnected`, `OnClientDisconnected`).
   * Orchestrates `SimulationBootstrap` startup and passes injected services down to all registered `NetworkInitializerBase` components.
@@ -135,6 +139,7 @@ NetworkInitializerBase
 `NetworkInitializerBase` is an abstract base class for components requiring managed lifecycle hooks tied to network initialization and shutdown.
 
 * **Responsibilities:**
+
   * Holds references to `ServerWorld` and `ClientWorld`.
   * Provides abstract methods `InitializeServer(bool isHost)` and `InitializeClient(bool isHost)` for system setup.
   * Provides virtual cleanup hooks `UninitializeServer()` and `UninitializeClient()` for safe handler unregistration upon disconnection.
@@ -145,6 +150,7 @@ PlayerSpawnerBase
 `PlayerSpawnerBase` extends `NetworkInitializerBase` to handle networked player instantiation and spawn location management.
 
 * **Key Features:**
+
   * Implements a singleton reference (`PlayerSpawnerBase.Instance`) with duplicate component cleanup.
   * Manages cyclic selection across an array of assigned spawn points.
   * Exposes `OnSpawned` and `OnLocalSpawned` events for dependent systems.
@@ -174,6 +180,7 @@ NetworkProviderSO
 `NetworkProviderSO` is an abstract `ScriptableObject` factory strategy.
 
 * **Methods:**
+
   * `CreateNetworkStack()`: Instantiates and configures transport-specific `INetworkService` and `IPedestrianNetworkBroadcaster` implementations.
   * `CheckIsHost()`: Evaluates if the running transport instance is currently operating in Host mode.
 
@@ -183,6 +190,7 @@ NetworkPlayerSpawnerSO
 `NetworkPlayerSpawnerSO` is an abstract `ScriptableObject` strategy for player prefab instantiation.
 
 * **Methods:**
+
   * `SpawnPlayer(...)`: Encapsulates framework-specific network spawning logic and ownership assignment on the server.
 
 UI & Connection Management
@@ -194,6 +202,7 @@ ServerConnectionBase & UniversalServerConnection
 `ServerConnectionBase` provides abstract UI state management for connection controls (Client, Server, Host, and Start buttons). `UniversalServerConnection` implements it by binding UI controls directly to `INetworkTransport` events.
 
 * **Features:**
+
   * Handles Client, Dedicated Server, and Host mode state transitions dynamically.
   * Updates button interactability, panel visibility, and text color indicators (`stoppedColor`, `changingColor`, `startedColor`).
   * Includes `EditorResolve()` for locating UI references in the Unity Editor.
@@ -217,6 +226,7 @@ VehicleNetworkRegister
 `VehicleNetworkRegister` acts as a registration bridge attached directly to individual vehicle GameObjects.
 
 * **Responsibilities:**
+
   * Caches local component references such as `Rigidbody` and `IVehicleInput`.
   * Automatically registers itself with `ArcadeVehicleNetworkBridge` during `OnEnable()` and unregisters during `OnDisable()`.
 
@@ -226,6 +236,7 @@ ArcadeVehicleNetworkBridge
 `ArcadeVehicleNetworkBridge` is a singleton manager executing early at order `-90` that collects vehicle inputs, physics transforms, sound tags, and horn states on the server.
 
 * **Key Features:**
+
   * **Snapshot Packing:** Serializes up to 1000 vehicle snapshots into `VehicleSnapshot` structs using `half3` velocities, 8-bit packed yaws, and 8-bit clamped input controls.
   * **Lifecycle & Caching:** Caches entity references, GameObjects, and model indices (`CarModelComponent`).
   * **Automated Broadcasts:** Triggers `VehicleSpawnData` when vehicles appear and `VehicleDespawnData` when vehicles are destroyed or unmanaged.
@@ -402,6 +413,7 @@ INetworkService & INetworkTransport
 High-level, zero-allocation messaging service (`INetworkService`) and low-level transport wrapper (`INetworkTransport`).
 
 * **Key Features:**
+
   * `BroadcastToClients<T>`, `BroadcastToClient<T>`, and `SendToServer<T>` for generic message transmission.
   * Strongly-typed `INetworkReceiver<T>` (client) and `INetworkServerReceiver<T>` (server) for handling messages without boxing or GC allocations.
 
@@ -583,3 +595,67 @@ CullPointFollower
 ^^^^^^^^^^^^^^^^^
 
 ``CullPointFollower`` is a utility component that synchronizes the position of an ECS culling entity (``cullEntity``) with a target Unity ``Transform`` during ``LateUpdate``.
+
+Custom Networking Integration & Setup
+-------------------------------------
+
+When implementing a custom networking solution (e.g., custom sockets, Photon, Mirror, etc.), the framework relies on separating transport-agnostic core logic from framework-specific RPCs, lifecycle wrappers, and ScriptableObject strategy providers.
+
+Scene-Level Infrastructure & Strategy Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before configuring prefabs, three core scene infrastructure and strategy implementations must be created and assigned:
+
+* **Custom NetworkProviderSO (Inherits ``NetworkProviderSO``):**
+
+  * Abstract `ScriptableObject` factory responsible for instantiating the network stack.
+  * Implement `CreateNetworkStack()` to instantiate and return your custom `INetworkService` and `IPedestrianNetworkBroadcaster` implementations.
+  * Implement `CheckIsHost()` to evaluate whether the transport is running in Host mode.
+  * **Inspector Assignment:** Assign this asset to the `NetworkProviderSO` slot on the **``NetworkBootstrapAdapter``** component in the scene.
+
+* **Custom NetworkPlayerSpawnerSO (Inherits ``NetworkPlayerSpawnerSO``):**
+
+  * Abstract `ScriptableObject` strategy for server-side player instantiation.
+  * Implement `SpawnPlayer(...)` to encapsulate framework-specific player prefab instantiation, network authority/ownership assignment (for the target `clientId`), and scene attachment on the server.
+  * **Inspector Assignment:** Assign this asset to the `NetworkPlayerSpawnerSO` slot on the **``UniversalPlayerSpawner``** component in the scene.
+
+* **Custom MonoVehicleNetworkSync (Inherits ``MonoVehicleNetworkSyncBase``):**
+
+  * Abstract base manager for vehicle network synchronization, driver assignment, DOTS-to-Mono vehicle conversion, and local state setup.
+  * Implement abstract methods `AssignVehicleOwner(vehicle, player)` and `RemoveVehicleOwner(vehicle)` to manage server-side network authority transfers during vehicle entry and exit.
+  * Override `HandleVehicleNetworkAssignment(...)` to handle framework-specific network object spawning or ownership transfers on the server.
+  * **Scene Placement:** Attach this concrete component to the scene's root network manager object (**Manager / Network Root**) as a scene-level singleton.
+
+Player Prefab Component Layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A functional player prefab requires both core framework logic components and custom networking adapters that implement framework interfaces:
+
+* **Core Framework Logic Components:**
+
+  * ``PlayerNetworkInteractionBridge``: Handles vehicle entry/exit request processing, client RPC callbacks, and driver assignment coordination with ``MonoVehicleNetworkSyncBase``.
+  * ``CullPointCore``: Handles client-side main camera matrix sampling (at configured ``sendInterval``) and updates server-side ECS culling entities (``CullPointTag``, ``CameraData``).
+  * ``PlayerMovementCore``: Controls local character movement, gravity, and input action maps.
+
+* **Custom Network Integration Adapters (replacing NGO wrappers):**
+
+  * **Custom Player RPC Transport (replaces ``NgoPlayerRpcTransport``):** Implements ``IPlayerRpcTransport`` and ``INetworkBehaviour``. Translates vehicle interaction methods (``SendServerRequestEnter``, ``SendServerRequestExit``, ``BroadcastEnteredVehicle``, ``BroadcastExitedVehicle``) into custom network RPCs/packets.
+  * **Custom Cull Point Adapter (replaces ``NgoCullPointAdapter``):** Subscribes to ``CullPointCore.OnCullDataSampled`` on local owning clients, transmits camera matrices to the server, and delegates updates to ``CullPointCore.UpdateServerEcsEntity``. Calls ``CullPointCore.CleanupServerEntity`` when despawning on the server.
+  * **Custom Player Spawn Notifier (replaces ``NgoPlayerSpawnNotifier``):** Notifies ``PlayerSpawnerBase.Instance.NotifyLocalPlayerSpawned`` when instantiated on the local client and registers/unregisters player GameObjects in ``PlayerRegistry.Instance``.
+  * **Custom Identity & Behaviour Wrappers (replacing ``NgoIdentityWrapper`` / ``NgoBehaviourWrapper``):** Implement ``INetworkIdentity`` and ``INetworkBehaviour`` to expose network IDs, owner client IDs, and ownership checks (``IsOwner``, ``IsServer``, ``IsClient``) to the core framework.
+
+Vehicle Prefab Component Layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When converting AI traffic vehicles into player-driven networked vehicles, the target vehicle prefab must include both transport-agnostic core synchronization components and custom framework adapters:
+
+* **Core Framework Vehicle Components:**
+
+  * ``VehicleNetworkRegister``: Caches local ``Rigidbody`` and ``IVehicleInput`` references and automatically registers the vehicle with ``ArcadeVehicleNetworkBridge`` during ``OnEnable()``/``OnDisable()``.
+  * ``VehicleInputSyncCore``: Core input tracker implementing ``IVehicleInput``. Samples local inputs via ``PlayerInputVehicleControl``, applies epsilon filtering to trigger ``OnInputChanged`` events, and updates target controllers on remote clients using ``ApplyRemoteInput``.
+  * ``NetworkId``: Holds the unique integer network identifier (``Id``) assigned during server initialization, allowing clients and server systems to bind entity references.
+
+* **Custom Network Vehicle Integration Adapters (replacing NGO wrappers):**
+
+  * **Custom Vehicle Network Observer (replaces ``NgoNetworkVehicleObserver``):** Implements ``INetworkVehicleObserver``. Synchronizes the unique vehicle ID across connected clients, initializes ``NetworkId``, and triggers client-side spawn/despawn hooks (``OnNetworkVehicleSpawnedClient``, ``OnNetworkVehicleDespawnedClient``) in ``MonoVehicleNetworkSyncBase``.
+  * **Custom Vehicle Input Sync Adapter (replaces ``NgoVehicleInputSyncAdapter``):** Connects ``VehicleInputSyncCore`` to the networking solution. On the owning client, listens to ``VehicleInputSyncCore.OnInputChanged`` and transmits input state updates (throttle, steering, handbrake) to the server. On non-owning clients, listens to network variable/state changes and calls ``VehicleInputSyncCore.ApplyRemoteInput``.

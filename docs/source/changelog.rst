@@ -3,6 +3,22 @@
 Change Log
 **********
 
+[1.9.1] - 30-09-2026
+--------------------
+
+Added
+~~~~~
+
+* Added Netcode for GameObjects support.
+* Added emergency system support.
+* Added ability to overtake in oncoming/opposite lanes.
+* Added random horn sounding while overtaking.
+
+Fixed
+~~~~~
+
+* Fixed sorting of intersecting paths relative to the current path.
+
 [1.9.0] - 05-09-2026
 --------------------
 

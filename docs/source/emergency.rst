@@ -13,16 +13,16 @@ This system supports both **AI Traffic Entities** and **Player-Controlled Hybrid
 .. note::
    Traffic vehicles inside the siren radius evaluate approaching emergency vehicles in real-time using high-performance DOTS ECS jobs compiled with Burst.
 
----
-
 Key Features & Workflow
 -----------------------
 
 1. **Siren Radius & Corridor Clearance**: When active, the siren broadcast radius alerts nearby traffic entities to evaluate whether they block the emergency vehicle's path.
 2. **Dynamic Traffic Avoidance**:
+
    - **Lane Changing**: Vehicles change to adjacent lanes if available and unoccupied.
    - **Pull Over**: On single-lane roads or blocked lanes, vehicles slow down, pull over to the shoulder (right side by default, or left on one-way roads), and wait in a safe zone until the emergency vehicle passes.
    - **Yield / Intersection Clearance**: Vehicles blocking intersections ignore red lights to clear the way or stop in place if pull-over is not possible.
+
 3. **Priority Overrides**: Active emergency vehicles automatically set pathing priority overrides and ignore traffic lights to maintain continuous movement.
 
 Setup & Usage Steps
@@ -38,6 +38,7 @@ For Traffic Vehicles (AI)
    Add the ``EmergencyVehicleAuthoring`` component to your emergency traffic vehicle prefab.
 
 3. **Configure Siren Settings**:
+
    - Set **Siren Radius** (e.g., ``40.0`` meters).
    - Set **Active By Default** if the siren should be turned on immediately upon spawning.
 
@@ -58,8 +59,6 @@ For Player-Controlled Vehicles (Hybrid)
 
 4. **Control Siren at Runtime**:
    Use C# API scripts (e.g., keypress handlers) to toggle siren state on and off dynamically.
-
----
 
 C# API Examples
 ---------------
@@ -113,8 +112,8 @@ To programmatically convert a standard traffic vehicle entity into an emergency 
 Configuration Reference
 -----------------------
 
-`EmergencyVehicleAuthoring` Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EmergencyVehicleAuthoring Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 25 15 60
@@ -130,8 +129,8 @@ Configuration Reference
      - ``bool``
      - If enabled, the siren state starts as active when the entity is baked or initialized at runtime.
 
-`TrafficEmergencyConfigAuthoring` Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TrafficEmergencyConfigAuthoring Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Detailed breakdown of all parameters driving the emergency avoidance FSM:
 
@@ -266,8 +265,6 @@ Detailed breakdown of all parameters driving the emergency avoidance FSM:
      - ``float``
      - Additional longitudinal buffer offset to prevent clipping adjacent vehicles during pull-over.
 
----
-
 Fine-Tuning Guidelines & Scenario Recommendations
 -------------------------------------------------
 
@@ -277,30 +274,30 @@ Setting up the configuration depends heavily on road widths, city speed profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In dense cities with 2–3 narrow lanes and close intersections, cars can easily block each other when trying to pull over.
 
-- **``pullOverLateralOffset``**: Reduce to **``1.8 – 2.2``** meters to prevent cars from clipping into building colliders or sidewalk props.
-- **``pullOverForwardStep1`` / ``Step2``**: Reduce to **``2.5``** and **``3.5``** meters for sharper, more compact pull-over trajectories.
-- **``targetPullOverSpeed``**: Lower to **``10 – 12``** km/h so vehicles decelerate quickly without rear-ending traffic ahead.
-- **``allowLeftPullOver``**: Set to **``true``** on multi-lane streets so vehicles stranded in the left lane can yield without crossing multiple lanes of traffic.
-- **``defaultPullOverClearanceRadius``**: Keep around **``3.0``** meters to ensure vehicles don't pull over into roadside obstacles or parked cars.
+- ``pullOverLateralOffset``: Reduce to **1.8 – 2.2** meters to prevent cars from clipping into building colliders or sidewalk props.
+- ``pullOverForwardStep1`` / ``Step2``: Reduce to **2.5** and **3.5** meters for sharper, more compact pull-over trajectories.
+- ``targetPullOverSpeed``: Lower to **10 – 12** km/h so vehicles decelerate quickly without rear-ending traffic ahead.
+- ``allowLeftPullOver``: Set to **true** on multi-lane streets so vehicles stranded in the left lane can yield without crossing multiple lanes of traffic.
+- ``defaultPullOverClearanceRadius``: Keep around **3.0** meters to ensure vehicles don't pull over into roadside obstacles or parked cars.
 
 2. High-Speed Highways / Suburbs (Wide Multi-Lane Roads)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Fast-moving traffic requires earlier detection and wider lateral steps.
 
-- **``speedRadiusMultiplier``**: Increase to **``2.0 – 3.0``** so fast-moving emergency vehicles clear traffic far ahead.
-- **``defaultMaxAvoidanceDist``**: Increase to **``40.0 – 60.0``** meters.
-- **``pullOverForwardStep1`` / ``Step2``**: Increase to **``6.0``** and **``10.0``** meters for smooth, high-speed diagonal transitions.
-- **``pullOverLateralOffset``**: Set to **``3.5 – 4.0``** meters to ensure full clearance of wide lanes.
-- **``criticalBrakeDistance``**: Increase to **``20.0 – 25.0``** meters to give fast oncoming traffic sufficient stopping distance.
+- ``speedRadiusMultiplier``: Increase to **2.0 – 3.0** so fast-moving emergency vehicles clear traffic far ahead.
+- ``defaultMaxAvoidanceDist``: Increase to **40.0 – 60.0** meters.
+- ``pullOverForwardStep1`` / ``Step2``: Increase to **6.0** and **10.0** meters for smooth, high-speed diagonal transitions.
+- ``pullOverLateralOffset``: Set to **3.5 – 4.0** meters to ensure full clearance of wide lanes.
+- ``criticalBrakeDistance``: Increase to **20.0 – 25.0** meters to give fast oncoming traffic sufficient stopping distance.
 
 3. Stylized / Arcade Driving (Fast Reaction & Immediate Clearance)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For action-heavy games where the player controls the emergency vehicle and needs an instant "Moses effect" clearing the road.
 
-- **``waitingInSafeZoneResumeDelay``**: Lower to **``1.5 – 2.0``** seconds so AI traffic quickly resumes normal flow after the player zooms past.
-- **``targetPullOverSpeed``**: Set higher (**``25 – 30``** km/h) for fast, snappy pull-over animations.
-- **``yieldCorridorResumeDelay``**: Set to **``1.0 – 2.0``** seconds.
-- **``defaultCorridorHalfWidth``**: Slightly expand to **``2.2 – 2.5``** meters to create a wider, more forgiving driving lane for the player.
+- ``waitingInSafeZoneResumeDelay``: Lower to **1.5 – 2.0** seconds so AI traffic quickly resumes normal flow after the player zooms past.
+- ``targetPullOverSpeed``: Set higher (**25 – 30** km/h) for fast, snappy pull-over animations.
+- ``yieldCorridorResumeDelay``: Set to **1.0 – 2.0** seconds.
+- ``defaultCorridorHalfWidth``: Slightly expand to **2.2 – 2.5** meters to create a wider, more forgiving driving lane for the player.
 
 Common Pitfalls & What to Watch Out For
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

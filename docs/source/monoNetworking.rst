@@ -15,15 +15,15 @@ Samples & Demonstration
 
 The framework includes ready-to-use sample scenes for supported networking backends:
 
-* **NGODemo Sample:** Out of the box, the `NGODemo` sample scene demonstrates full integration with Unity Netcode for GameObjects (NGO), including player spawning, pedestrian streaming, traffic batching, and traffic light synchronization[cite: 74].
+* **NGODemo Sample:** Out of the box, the `NGODemo` sample scene demonstrates full integration with Unity Netcode for GameObjects (NGO), including player spawning, pedestrian streaming, traffic batching, and traffic light synchronization.
 
-  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`NetCode For GameObjects <netcodeGo>` documentation[cite: 76].
-  * **Setup Requirements:** Requires installing the `com.unity.netcode.gameobjects` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, and importing the `NetcodeGOPrefabs` upgrade package[cite: 74, 76].
+  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`NetCode For GameObjects <netcodeGo>` documentation.
+  * **Setup Requirements:** Requires installing the `com.unity.netcode.gameobjects` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, and importing the `NetcodeGOPrefabs` upgrade package.
 
-* **FishNetDemo Sample:** Out of the box, the `FishNetDemo` sample scene demonstrates integration with the FishNet networking solution[cite: 74, 75].
+* **FishNetDemo Sample:** Out of the box, the `FishNetDemo` sample scene demonstrates integration with the FishNet networking solution.
 
-  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`FishNet Integration <fishnet>` documentation[cite: 75].
-  * **Setup Requirements:** Requires downloading and importing the `FishNet` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, importing the `FishNetPrefabs` upgrade package, and placing `FishnetPrefabRoot` into the scene[cite: 75].
+  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`FishNet Integration <fishnet>` documentation.
+  * **Setup Requirements:** Requires downloading and importing the `FishNet` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, importing the `FishNetPrefabs` upgrade package, and placing `FishnetPrefabRoot` into the scene.
 
 Architecture Diagram & Execution Flow
 ------------------------------------

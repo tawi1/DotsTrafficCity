@@ -6,13 +6,13 @@ NetCode For GameObjects
 Installation
 ------------
 
-* Install `NetCode for GameObjects <https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.13/manual/index.html>`_ package.
-* Add `CUSTOM_NETWORK` scripting define to the project settings.
-* Unpack ``DotsCity/Packages/Upgrades/NetcodeGOPrefabs`` package.
-* In the :ref:`Cull Config <cullConfig>`, set the calculation mode to `Multiplayer Calculate Distance` or `Multiplayer Camera View`.
-* Drag & drop `NGOPrefabRoot` into the scene & in that root, in the `PrefabRootResolve` component, press the `Resolve Refs` button (new scene only).
-* Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple local players **(optional)**.
-* Open `NGODemo` sample scene.
+#. Install `NetCode for GameObjects <https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.13/manual/index.html>`_ package.
+#. Add `CUSTOM_NETWORK` scripting define to the project settings.
+#. Unpack ``DotsCity/Packages/Upgrades/NetcodeGOPrefabs`` package.
+#. In the :ref:`Cull Config <cullConfig>`, set the calculation mode to `Multiplayer Calculate Distance` or `Multiplayer Camera View`.
+#. Drag & drop `NGOPrefabRoot` into the scene & in that root, in the `PrefabRootResolve` component, press the `Resolve Refs` button (new scene only).
+#. Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple local players **(optional)**.
+#. Open `NGODemo` sample scene.
 
 	.. note:: 
 		By default, only the `NGODemo` scene works out of the box.

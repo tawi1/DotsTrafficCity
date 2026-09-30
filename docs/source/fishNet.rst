@@ -8,13 +8,13 @@ This page covers the FishNet integration setup, configuration, and architectural
 Installation & Setup
 --------------------
 
-1. Download and import the `FishNet <https://assetstore.unity.com/packages/tools/network/fishnet-networking-evolved-207815>`_ package.
-2. Add the ``CUSTOM_NETWORK`` scripting define in **Project Settings > Player > Scripting Define Symbols**.
-3. Unpack the ``DotsCity/Packages/Upgrades/FishNetPrefabs`` package.
-4. In the :ref:`Cull Config <cullConfig>`, set the calculation mode to **Multiplayer Calculate Distance** or **Multiplayer Camera View**.
-5. Drag & drop ``FishnetPrefabRoot`` into the scene. In that root, on the ``PrefabRootResolve`` component, click the **Resolve Refs** button (for new scenes).
-7. Install the `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple players locally *(optional)*.
-8. Open the ``FishNetDemo`` scene to test the sample implementation.
+#. Download and import the `FishNet <https://assetstore.unity.com/packages/tools/network/fishnet-networking-evolved-207815>`_ package.
+#. Add the ``CUSTOM_NETWORK`` scripting define in **Project Settings > Player > Scripting Define Symbols**.
+#. Unpack the ``DotsCity/Packages/Upgrades/FishNetPrefabs`` package.
+#. In the :ref:`Cull Config <cullConfig>`, set the calculation mode to **Multiplayer Calculate Distance** or **Multiplayer Camera View**.
+#. Drag & drop ``FishnetPrefabRoot`` into the scene. In that root, on the ``PrefabRootResolve`` component, click the **Resolve Refs** button (for new scenes).
+#. Install the `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple players locally *(optional)*.
+#. Open the ``FishNetDemo`` scene to test the sample implementation.
 
    .. note:: 
       By default, only the ``FishNetDemo`` sample works out of the box with FishNet without extra setup.

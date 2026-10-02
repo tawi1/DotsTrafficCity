@@ -13,6 +13,7 @@ Added
 * Added emergency vehicle system support.
 * Added ability to overtake in oncoming/opposite lanes.
 * Added random horn sounding while overtaking.
+* Added the ability to override traffic vehicle priority at intersections.
 
 Fixed
 ~~~~~

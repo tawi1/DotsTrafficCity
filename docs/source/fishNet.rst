@@ -8,6 +8,7 @@ This page covers the FishNet integration setup, configuration, and architectural
 Installation & Setup
 --------------------
 
+#. Import Netcode sample.
 #. Download and import the `FishNet <https://assetstore.unity.com/packages/tools/network/fishnet-networking-evolved-207815>`_ package.
 #. Add the ``CUSTOM_NETWORK`` scripting define in **Project Settings > Player > Scripting Define Symbols**.
 #. Unpack the ``DotsCity/Packages/Upgrades/FishNetPrefabs`` package.
@@ -43,7 +44,6 @@ These components are attached directly to synchronized Vehicle prefabs to manage
 
 * **FishNetNetworkVehicleObserver:** Attached to vehicle prefabs alongside ``NetworkObject``. Implements ``INetworkVehicleObserver``, synchronizes unique vehicle IDs via ``SyncVar<int>``, and triggers client-side spawn/despawn hooks in ``MonoVehicleNetworkSyncBase``.
 * **FishNetVehicleInputSyncAdapter:** Attached to controllable vehicles alongside ``VehicleInputSyncCore`` and ``NetworkObject``. Propagates vehicle throttle, steering, and handbrake inputs across the network using ``SyncVar`` fields updated via owner ``[ServerRpc]``.
-* **FishNetVehicleNetworkSync:** Inherits from ``MonoVehicleNetworkSyncBase``. Manages server-side driver assignment, physics toggles, and network ownership delegation (using ``GiveOwnership`` or spawning unspawned network objects) when players enter or exit vehicles.
 
 3. Global & Scene Services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,6 +53,7 @@ These components are attached directly to synchronized Vehicle prefabs to manage
 * **FishNetTransport:** Low-level transport bridge implementing ``INetworkTransport``. Maps connection state events and routes broadcasts via ``BroadcastInvoker<T>``.
 * **FishNetMessageRegistry:** Central binder connecting data payloads to FishNet ``IBroadcast`` wrappers inside ``UniversalNetworkService``.
 * **FishNetIdentityWrapper & FishNetBehaviourWrapper:** Framework wrappers implementing ``INetworkIdentity`` and ``INetworkBehaviour`` over FishNet's ``NetworkObject``.
+* **FishNetVehicleNetworkSync:** Inherits from ``MonoVehicleNetworkSyncBase``. Manages server-side driver assignment, physics toggles, and network ownership delegation (using ``GiveOwnership`` or spawning unspawned network objects) when players enter or exit vehicles.
 
 Data Payloads & Custom Serialization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

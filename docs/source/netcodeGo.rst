@@ -6,6 +6,7 @@ NetCode For GameObjects
 Installation
 ------------
 
+#. Import Netcode sample.
 #. Install `NetCode for GameObjects <https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.13/manual/index.html>`_ package.
 #. Add `CUSTOM_NETWORK` scripting define to the project settings.
 #. Unpack ``DotsCity/Packages/Upgrades/NetcodeGOPrefabs`` package.

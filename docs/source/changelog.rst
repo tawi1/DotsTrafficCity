@@ -3,14 +3,14 @@
 Change Log
 **********
 
-[1.9.1] - 01-10-2026
+[1.9.1] - 02-10-2026
 --------------------
 
 Added
 ~~~~~
 
 * Added Netcode for GameObjects support.
-* Added emergency system support.
+* Added emergency vehicle system support.
 * Added ability to overtake in oncoming/opposite lanes.
 * Added random horn sounding while overtaking.
 

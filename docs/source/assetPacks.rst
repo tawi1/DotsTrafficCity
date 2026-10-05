@@ -1,7 +1,7 @@
 .. _assetPacks:
 
 Integration Cities
-============
+==================
 
 Integration packages allow you to quickly integrate your favourite cities into the `DOTS <https://unity.com/dots>`_ stack. Buy, download and integrate cities in a few clicks in less than a minute.
 
@@ -25,7 +25,7 @@ Polygon City
 	`Template example.`
 	
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Buy & download, import the following asset package:
 
@@ -39,7 +39,7 @@ How To Use
 #. Enjoy.
 
 Toon City
-------------
+---------
 
 	`SICS Games asset store <https://assetstore.unity.com/publishers/18116>`_
 	
@@ -49,7 +49,7 @@ Toon City
 	`Template example.`
 	
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Buy & download, import the following asset package:
 
@@ -64,7 +64,7 @@ How To Use
 #. Enjoy.
 
 City Pack 1
-------------
+-----------
 
 	`ithappy asset store <https://assetstore.unity.com/publishers/53539>`_
 
@@ -74,7 +74,7 @@ City Pack 1
 	`Template example.`
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Buy & download, import the following asset package:
 

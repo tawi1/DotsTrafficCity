@@ -1,19 +1,19 @@
 .. _upgrade:
 
 Upgrade Guide
-=====
+=============
 
 v1.4.x to v1.5.x
--------------------
+----------------
 
 #. Make backup before importing the package.
 #. Import the package.
-#. After that, migration will started. This process can take up to 10 minutes.
-#. Fix any code error if it occurs.
+#. After that, migration will start. This process can take up to 10 minutes.
+#. Fix any code errors if they occur.
 #. After the project has finished importing, if any asset or prefab references are lost, close `Unity` and clean up the `Library` folder. [optional]
 
 v1.1.x & 1.2.x to v1.4.x
--------------------
+------------------------
 
 #. Make backup before importing the package.
 #. Import following file:
@@ -21,7 +21,7 @@ v1.1.x & 1.2.x to v1.4.x
 	.. image:: /images/faq/upgrade_v1.4.0.png
 
 v1.0.x to v1.1.0
--------------------
+----------------
 
 #. Make backup before importing the package.
 #. Delete the following folders:
@@ -43,7 +43,7 @@ v1.0.x to v1.1.0
 		:scale: 50%
 	
 #. Remove old `Naughty attributes` package (if installed).
-#. Restart the `Unity`.
+#. Restart `Unity`.
 #. If the scene has lost the references, close the Unity & delete this file:
 
 	* `[ProjectFolder]/Library/ArtifactDB`
@@ -53,10 +53,10 @@ v1.0.x to v1.1.0
 .. _hdrp:
 
 HDRP
--------------------
+----
 
 #. Download `HDRP` template project.
-#. Remove `URP` packages in the `Package Manager` (if exist).
+#. Remove `URP` packages in the `Package Manager` (if they exist).
 #. Unpack `HDRP` package.
 
 	.. image:: /images/faq/HDRP_pack.png
@@ -86,7 +86,7 @@ HDRP
 .. _cinemachineV3:
 
 Cinemachine v3 Upgrade
--------------------
+----------------------
 
 #. Make sure you have downloaded `Cinemachine v3 <https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html>`_ package.
 #. Unpack `Main Camera City CM_v3` package.
@@ -106,7 +106,7 @@ Cinemachine v3 Upgrade
 	.. image:: /images/faq/cmv3_4.png
 	
 Cinemachine v2
--------------------
+--------------
 
 #. Unpack `Main Camera City CM_v2_legacy` package.
 	

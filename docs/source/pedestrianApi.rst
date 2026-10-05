@@ -1,17 +1,17 @@
 .. _pedestrianApi:
 
 API
-----------------
+---
 
 Section is progress.
 
 Node HashMap System
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Used to find the nearest pedestrian entity node.
 
 How To Use
-""""""""""""""
+""""""""""
 
 	..  code-block:: csharp
 	
@@ -26,7 +26,7 @@ How To Use
 		}
 		
 User Spawn
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 Spawn a pedestrian in a custom position using user code.
 
@@ -131,7 +131,7 @@ Spawn a pedestrian in a custom position using user code.
 		}
 		
 Density
-~~~~~~~~~~~~
+~~~~~~~
 
 Change the density of pedestrians at runtime.
 

@@ -1,7 +1,7 @@
 .. _mvr:
 
 MicroVerse Roads
-============
+================
 
 How To Use
 ------------
@@ -12,7 +12,7 @@ How To Use
 	* `MicroVerse - Roads <https://assetstore.unity.com/packages/tools/terrain/microverse-roads-208590>`_
 
 Getting Started
-------------
+---------------
 
 #. Unpack microverse prefab package:
 
@@ -37,12 +37,12 @@ Getting Started
 #. If you want to regenerate roads, press `Move back` button in the :ref:`Hub <hub>` & regenerate roads in `MVR_Generator` & generate subscene in the :ref:`Hub <hub>` again.
 
 MVR UserPrefab
-------------
+--------------
 
 This component helps users conveniently add prefabs to the `MVR config`.
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 * Create a road segment in the scene where you want your custom intersection.
 * Add your segment to prefabs.
@@ -52,12 +52,12 @@ How To Use
 * Now, your prefab addded to MVR config & you can regenerate the scene.
 
 MVR UserSceneSegment
-------------
+--------------------
 
 This component prevents the road segment from being cleaned up during regeneration, useful for unique road objects.
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 * Create a road segment in the scene where you want your custom intersection.
 * Add ``MVR_UserSceneSegment`` component.

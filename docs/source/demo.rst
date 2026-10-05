@@ -1,7 +1,7 @@
 .. _demo:
 
 Demo City
-=====
+=========
 
 	.. toctree::
 		:maxdepth: 2

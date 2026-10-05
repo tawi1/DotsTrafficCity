@@ -1,10 +1,10 @@
 .. _demoCity:
 
 Demo City
-----------------
+---------
 
 Getting Started
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 #. Initial scene example:
 

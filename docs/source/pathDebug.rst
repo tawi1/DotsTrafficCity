@@ -1,7 +1,7 @@
 .. _pathDebug:
 
 Path Debug
-============
+==========
 
 .. contents::
    :local:
@@ -9,84 +9,84 @@ Path Debug
 .. _pathDebugger:
 
 Path Debugger
-------------
+-------------
 
-`Youtube tutorial. <https://youtu.be/93772MIsD2Q>`_
+`YouTube tutorial. <https://youtu.be/93772MIsD2Q>`_
 
 How To Open
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 In the scene, select:
 
 	`CityDebugger/PathDebugger`
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 	
 	.. image:: /images/debuggers/path/PathDebugger.png		
 	
-| **Draw editor traffic path** : on/off :ref:`path <path>` visualisation in the scene in `Editor`.
-**Draw entity traffic path** : on/off entity :ref:`path <path>` visualisation in the scene at runtime.
-	* **Draw entity traffic node connection** : on/off draw :ref:`TrafficNode <trafficNode>` entity connection debug at runtime.
-**Draw pedestrian connection path** : on/off :ref:`PedestrianNode <pedestrianNode>` connection visualisation in the scene in the `Editor`.
+| **Draw editor traffic path** : enables/disables :ref:`path <path>` visualization in the Scene view during editing.
+**Draw entity traffic path** : enables/disables runtime entity :ref:`path <path>` visualization.
+	* **Draw entity traffic node connection** : toggles runtime :ref:`TrafficNode <trafficNode>` connection lines.
+**Draw pedestrian connection path** : enables/disables :ref:`PedestrianNode <pedestrianNode>` connection lines in the editor.
 	
 .. _pathDataViewer:
 
 Path Data Viewer
-------------
+----------------
 
-Tool for quick visualisation of :ref:`path <path>` parameters.
+Tool for inspecting and validating :ref:`path <path>` parameters across the city.
 
 How To Open
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
-In the `Unity` toolbar:
+From the Unity toolbar:
 
 	`Spirit604/CityEditor/Window/Path Data Viewer`
 
 	.. image:: /images/debuggers/path/PathDataViewerOpenExample.png		
 	
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
-#. Select :ref:`Path view type <pathDataViewerSettings>`.
-#. In the :ref:`Colors info <pathDataViewerSettings>` tab, press `-` to hide the paths with the selected option.
-#. Press `+` to display the hidden path with the selected option again.
-#. Press `x` to reset saved color of the parameter.
+#. Select the desired :ref:`Path view type <pathDataViewerSettings>`.
+#. In the :ref:`Colors info <pathDataViewerSettings>` list, click `-` to hide paths matching that parameter.
+#. Click `+` to show hidden paths again.
+#. Click `x` to reset the saved color for a parameter.
 
 .. _pathDataViewerSettings:
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/debuggers/path/PathDataViewer.png		
 	
-| **Default color** : default :ref:`path <path>` color.
+| **Default color** : default display color for paths.
 
-**Path view type:** selected :ref:`parameter <pathSettings>` for visualisation (:ref:`examples <pathDataViewerExamples>`)
-	* **Speed limit** : speed limit of the :ref:`paths <path>.
-	* **Priority** : priority of the :ref:`paths <path>.
-	* **Path type** : path type of the :ref:`paths <path>.
-	* :ref:`Traffic path group <pathTrafficGroup>` : :ref:`traffic group <pathTrafficGroup>` of the :ref:`paths <path>.
-	* :ref:`Traffic path node group <pathWaypointInfo>` : :ref:`traffic group <pathTrafficGroup>` of the :ref:`waypoints <pathWaypointInfo>`
-	* **Node direction** : node direction (forward or backward) of the :ref:`waypoints <pathWaypointInfo>` in the :ref:`paths <path>`.
-	* **Arrow light** : shows the :ref:`paths <path>` with the assigned custom light.
-	* **Rail** : shows the :ref:`paths <path>` with the :ref:`rail <trafficRail>` parameter.
+**Path view type:** parameter displayed in the Scene view:
+	* **Speed limit** : speed limits of :ref:`paths <path>`.
+	* **Priority** : priority values of :ref:`paths <path>`.
+	* **Path type** : road types of :ref:`paths <path>`.
+	* **Traffic path group** : :ref:`traffic group <pathTrafficGroup>` masks of :ref:`paths <path>`.
+	* **Traffic path node group** : :ref:`traffic group <pathTrafficGroup>` of individual :ref:`waypoints <pathWaypointInfo>`.
+	* **Node direction** : forward or reverse direction of :ref:`waypoints <pathWaypointInfo>`.
+	* **Arrow light** : paths assigned custom light arrows.
+	* **Rail** : paths configured for :ref:`rail movement <trafficRail>`.
 	
-| **Draw custom colors** : on/off custom colors of the :ref:`paths <path>` in the scene.
-| **Show world buttons** : show world :ref:`path <path>` selection buttons.
-| **Show intersect point** : on/off visual :ref:`intersection points <pathIntersects>` in the scene.
-| **Show waypoints** : on/off :ref:`waypoints <pathWaypointInfo>` of the :ref:`path <path>` in the scene.
-| **Show path handles** : on/off :ref:`path <path>` position handles of the selected path.
-| **Show path edit buttons** : on/off :ref:`path <path>` edit buttons of the selected path.
-| **Multiple selection** : on/off feature to select multiple :ref:`paths <path>` at the same time (useful for setting the same value for multiple :ref:`paths <path>`).
-| **Show unselect buttons** : show unselect button for already selected :ref:`paths <path>` in multiple selection mode.
-| **Refresh** : update :ref:`path <path>` data in the viewer.
+| **Draw custom colors** : enables/disables custom parameter coloring.
+| **Show world buttons** : displays in-scene path selection buttons.
+| **Show intersect point** : visualizes :ref:`intersection points <pathIntersects>`.
+| **Show waypoints** : displays :ref:`waypoints <pathWaypointInfo>` along paths.
+| **Show path handles** : displays position handles on the selected path.
+| **Show path edit buttons** : displays node addition/removal buttons.
+| **Multiple selection** : enables selecting multiple paths simultaneously.
+| **Show unselect buttons** : displays deselect buttons in multi-selection mode.
+| **Refresh** : refreshes cached path data.
 
 .. _pathDataViewerExamples:
 
 Examples
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/debuggers/path/PathDataViewerPathTypeExample.png		
 	`Path type example.`
@@ -98,39 +98,30 @@ Examples
 	`Speed limit path example.`
 	
 Path Index Debugger
-------------
+-------------------
 
 How To Open
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 In the scene, select:
 
 	`CityDebugger/PathDebugger`
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/debuggers/path/Runtime/PathIndexDebugger.png		
 	
-| **Should debug** : on/off debugger.
-| **Select path** : on/off path selection settings.
-| **Selected path index** : display the data for the selected path (-1 path is not selected).
+| **Should debug** : enables/disables index debugging.
+| **Select path** : enables path selection filters.
+| **Selected path index** : target path index to inspect (-1 shows all).
 **Path debug mode** :
-	* **Default** : only the current path index is shown.
-	* **Parallel** : parallel path indexes.
-	* **Neighbor paths** : neighbor path indexes (paths that start from the same point).
-	* **Next connected paths** : indexes to which the current path is connected.
-	* **Intersected paths** : intersection paths indexes.
-	* **Car count** : number of cars with the current path index.
+	* **Default** : displays current path index only.
+	* **Parallel** : displays parallel path indices.
+	* **Neighbor paths** : displays neighbor path indices originating from the same node.
+	* **Next connected paths** : displays next connected route indices.
+	* **Intersected paths** : displays intersecting path indices.
+	* **Car count** : displays number of cars currently traversing the path.
 	
-Index example:
-	* 543 (544, 545, 546) - current path index is 543. Other relevant path indexes, depending on the chosen `Path debug mode`.
-	
-Examples
-~~~~~~~~~~~~
-
-	.. image:: /images/debuggers/path/Runtime/PathIndexDebuggerExample1.png	
-	`Default "Path debug mode" example`.
-	
-	.. image:: /images/debuggers/path/Runtime/PathIndexDebuggerExample2.png		
-	`Parallel paths "Path debug mode" example`.
+Index format:
+	* ``543 (544, 545, 546)`` — active path index followed by related indices depending on the mode.

@@ -1,19 +1,19 @@
 .. _astar:
 
 Aron's A* Pathfinding project
-============
+=============================
 
 A* solution can be used for `Traffic` & `Pedestrian` navigation as an alternative to the built-in A* solution.
 
 How To Use
-------------
+----------
 
 #. Buy & download, import the following asset plugin:
 
 	`A* Pathfinding Project Pro <https://assetstore.unity.com/packages/tools/behavior-ai/a-pathfinding-project-pro-87744>`_
 
 Getting Started
-------------
+---------------
 
 #. Create a new gameobject & add `AstarPath` component
 #. Add 2 `Point Graph` to the `AstarPath` component (if you are going to navigate for either traffic or pedestrian, create only 1 graph)
@@ -50,7 +50,7 @@ Used for static scenes created in the `Editor`.
 #. Add components `AstarPedestrianStaticGraph` & `AstarTrafficStaticGraph` & assign these references to corresponding services, making sure local graph indexes are different for both graphs & matched with `AstarPath` (e.g. 0 index for pedestrian & 1 index for traffic).
 
 Runtime Graph
-------------
+-------------
 
 Used for run-time generated scenes.
 

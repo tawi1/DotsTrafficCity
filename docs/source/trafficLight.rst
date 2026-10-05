@@ -1,15 +1,15 @@
 .. _trafficLight:
 
-************
+*************
 Traffic Light
-************
+*************
 
-`Youtube tutorial. <https://youtu.be/r85kMJ4BL5E&t=49>`_
+`YouTube tutorial. <https://youtu.be/r85kMJ4BL5E?t=49>`_
 
 .. _trafficLightGlobalLightHowToUse:
 
 How To Customize City Crossroads
-------------
+--------------------------------
 	
 #. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
 
@@ -21,67 +21,64 @@ How To Customize City Crossroads
 
 	.. image:: /images/road/trafficLight/GlobalLightViewExample1.png
 	
-#. You can now quickly view and adjust the timelines of all the crossroads.
-#. Enable :ref:`Show disabled Lights <trafficLightGlobalLightCommonSettings>` to see crossroads with traffic lights switched off.
+#. Adjust the timelines for city crossroads as needed.
+#. Enable :ref:`Show disabled Lights <trafficLightGlobalLightCommonSettings>` to display crossroads with deactivated signals.
 
 	.. image:: /images/road/trafficLight/GlobalLightViewExample2.png
 	
-#. Select the desired crossroad and press `Select`.
-#. In the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component, you can now set the timings.
+#. Select the desired crossroad and click `Select`.
+#. In the :ref:`TrafficLightCrossroad <trafficLightCrossroad>` component, configure state timings.
 
 .. _trafficLightAutoConnection:
 
 How To Auto Connect Lights
-------------
+--------------------------
 
-You can automatically reconnect traffic and pedestrian lights to their closest relevant road nodes using the built-in auto-connector tool.
+Automatically reconnects traffic and pedestrian lights to the closest road nodes using the built-in connector tool.
 
 Requirements for Light Objects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For the auto-connector to detect and link your traffic lights correctly, ensure that the following setup is met:
-
-* The root GameObject of the traffic light must contain both the **TrafficLightObjectAuthoring** and the :ref:`TrafficLightObject <trafficLightObject>` components.
-* Each child :ref:`TrafficLightFrame <trafficLightFrame>` component must have its **Index direction** property set strictly in accordance with where the physical frame (visor/lens) is facing. This direction is critical for the algorithm to properly align the traffic light orientation with the target road and traffic node. **A small ray is displayed in the Scene view to visualize this direction.**
+* The root GameObject of the traffic light must contain both the **TrafficLightObjectAuthoring** and :ref:`TrafficLightObject <trafficLightObject>` components.
+* Each child :ref:`TrafficLightFrame <trafficLightFrame>` must have its **Index direction** aligned with the physical visor/lens facing vector. **A guide ray is displayed in the Scene view to visualize this direction.**
 
 Execution Steps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 #. Open :ref:`Global Light Settings <trafficLightGlobalLight>`.
-#. Expand the **Auto Light Connector** foldout section.
-#. Configure the following parameters:
+#. Expand the **Auto Light Connector** foldout.
+#. Configure search parameters:
    
-   * **Raycast Distance**: Set the maximum search radius for finding nearby nodes.
-   * **Connect Only Missing**: If enabled, the system will skip lights that are already connected to a valid crossroad.
-   * **Traffic Lights**: Enable this checkbox to process vehicle traffic lights.
-   * **Pedestrian Lights**: Enable this checkbox to process pedestrian lights.
-   * **Pedestrian Name Pattern**: Enter a substring (e.g., ``Pedestrian``) to identify pedestrian light objects by their name.
+   * **Raycast Distance**: Search radius for finding adjacent road nodes.
+   * **Connect Only Missing**: Skips lights already connected to a crossroad.
+   * **Traffic Lights**: Processes vehicle traffic signals.
+   * **Pedestrian Lights**: Processes pedestrian traffic signals.
+   * **Pedestrian Name Pattern**: Substring used to identify pedestrian signal GameObjects (e.g., ``Pedestrian``).
 
-#. Click the **Reconnect Lights** button.
+#. Click **Reconnect Lights**.
 
 .. note::
-   The tool performs a proximity and directional search. Vehicle lights will be linked to the closest aligned :ref:`TrafficNode <trafficNode>`, while pedestrian lights will look for a matching crosswalk node based on your name pattern.
+   Vehicle lights link to the nearest aligned :ref:`TrafficNode <trafficNode>`, while pedestrian lights match crosswalk nodes based on name filters.
    
 .. important::
-	If **DOTS Simulation** is enabled in your project settings and you want to use these traffic lights in the main scene during runtime, ensure that the **Is Active** checkbox is enabled on the **TrafficLightHybridService** component present in the scene. Without activating this option, scene traffic lights will not receive real-time state updates from the ECS simulation loop. 
-		*Note: If you are using the classic MonoBehaviour (Mono) simulation, this component is active by default and does not require manual toggling.*
+   If **DOTS Simulation** is enabled, ensure the **Is Active** toggle on the **TrafficLightHybridService** component is enabled. Otherwise, scene traffic lights will not receive state updates from ECS. *(Mono simulation enables this by default).*
 
 How To Assign Light
-------------
+-------------------
 
 #. Open :ref:`Global Light Settings <trafficLightGlobalLightHowToUse>`.
 #. Enable :ref:`Show light connections <trafficLightGlobalLightConnectionSettings>`.
 
 	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
-#. Select :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>` for example :ref:`Traffic node <trafficNode>`.
+#. Set :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>` (e.g., :ref:`Traffic node <trafficNode>`).
 
 	.. image:: /images/road/trafficLight/GlobalLightViewTrafficNodeConnection.png
 	
-#. Select :ref:`H0 <trafficLightGlobalLightObjectDescription>` or :ref:`H1 <trafficLightGlobalLightObjectDescription>` depending on the desired light index.
-#. Next, select the desired :ref:`T <trafficLightGlobalLightObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
-#. Now, the selected :ref:`TrafficNode <trafficNode>` will have the selected  :ref:`TrafficLightHandler <trafficLightHandler>`.
-#. In the same way, you can assign :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing the :ref:`Light connection type <trafficLightGlobalLightConnectionSettings>`.
+#. Select :ref:`H0 <trafficLightSceneViewObjectDescription>` or :ref:`H1 <trafficLightSceneViewObjectDescription>` according to the desired light handler.
+#. Select the target :ref:`T <trafficLightSceneViewObjectDescription>` (:ref:`TrafficNode <trafficNode>`).
+#. The selected :ref:`TrafficNode <trafficNode>` is now linked to the :ref:`TrafficLightHandler <trafficLightHandler>`.
+#. Repeat to bind :ref:`PedestrianNodes <pedestrianNode>` and :ref:`Light objects <trafficLightObject>` by changing the connection type.
 
 	.. image:: /images/road/trafficLight/GlobalLightViewPedestrianConnection.png
 	`Pedestrian node connection example.`
@@ -92,28 +89,23 @@ How To Assign Light
 .. _trafficLightGlobalLight:
 
 Global Lights Settings 
-------------
+----------------------
 
-Window for quick display of crossroad timings and for linking the traffic lights to different entities.
-
-How To Use
-~~~~~~~~~~~~
-
-Read more :ref:`here <trafficLightGlobalLightHowToUse>`.
+Window for crossroad signal timing adjustments and entity linking.
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/road/trafficLight/GlobalLightSettings.png
 
 .. _trafficLightGlobalLightCommonSettings:
 
 Common Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
-| **Focus on select** : move the `SceneView` camera to the selected traffic light crossroad when you select.
-| **Show world info** : show enabled traffic light data in the scene (:ref:`example <trafficLightSceneInfo>`).
-| **Show disabled lights** : show all traffic light data (include disabled) in the scene (:ref:`example <trafficLightSceneInfo2>`).
+| **Focus on select** : frames the `SceneView` camera onto the selected crossroad.
+| **Show world info** : displays active traffic signal data in the scene (:ref:`example <trafficLightSceneInfo>`).
+| **Show disabled lights** : displays all traffic light data, including inactive ones (:ref:`example <trafficLightSceneInfo2>`).
 
 .. _trafficLightSceneInfo:
 
@@ -123,26 +115,26 @@ Common Settings
 .. _trafficLightSceneInfo2:
 
 	.. image:: /images/road/trafficLight/GlobalLightViewExample2.png
-	`Scene light info (include disabled) example.`
+	`Scene light info (including disabled) example.`
 
-.. _trafficLightGlobalLightObjectDescription:
+.. _trafficLightGlobalLightConnectionSettings:
 
 Connection Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficLight/GlobalLightConnectionSettings.png
 	
-| **Show light connections** : on/off light connections in the scene.
-| **Auto unselect handler** : auto unselect :ref:`TrafficLightHandler <trafficLightHandler>` when connecting :ref:`TrafficLightHandler <trafficLightHandler>` traffic lights to any object.
-| **Allow override light index** : allow index traffic light overrides in traffic :ref:`light objects <trafficLightObject>`.
-| **Reparent light** : traffic :ref:`light object <trafficLightObject>` will be a child of the connected crossroad.
+| **Show light connections** : toggles visible connection lines in the scene.
+| **Auto unselect handler** : automatically deselects the current handler after linking.
+| **Allow override light index** : allows overriding light indices on assigned signal objects.
+| **Reparent light** : reparents the light GameObject under the connected crossroad.
 **Light connection type** : 
-	* **All** : show all connection types.
-	* **Traffic node** : show :ref:`traffic node <trafficNode>` connection only.
-	* **Pedestrian node** : show :ref:`pedestrian node <pedestrianNode>` connection only.
-	* **Light** : show light object connection only.
-| **Show connection buttons** : show connection buttons for selected `Light connection type`.
-| **Lights index** : objects with a selected :ref:`light index <trafficLightIndex>` are displayed (-1 value - all indexes are displayed).
+	* **All** : displays all connection types.
+	* **Traffic node** : displays :ref:`traffic node <trafficNode>` connections only.
+	* **Pedestrian node** : displays :ref:`pedestrian node <pedestrianNode>` connections only.
+	* **Light** : displays light object connections only.
+| **Show connection buttons** : displays linking buttons for the selected connection type.
+| **Lights index** : filters displayed objects by :ref:`light index <trafficLightIndex>` (-1 displays all).
 	
 	.. image:: /images/road/trafficLight/GlobalLightViewTrafficNodeConnection2.png
 	`Selected Light connection type : [TrafficNode] and Lights index : [0] example.`
@@ -150,77 +142,75 @@ Connection Settings
 World Lights
 ~~~~~~~~~~~~
 
-| **Custom settings** : on/off custom timeline settings for selected crossroad.
-**Timeline:** shows :ref:`light states <trafficLightState>` of crossroad and total duration.
-	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`light index <trafficLightIndex>` 0.
-	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler>` with :ref:`light index <trafficLightIndex>` 1.
+| **Custom settings** : enables/disables custom timeline settings for the selected crossroad.
+**Timeline:** displays :ref:`light states <trafficLightState>` and phase durations.
+	* **TrafficLight [0]** : :ref:`TrafficLightHandler <trafficLightHandler>` with index 0.
+	* **TrafficLight [1]** : :ref:`TrafficLightHandler <trafficLightHandler>` with index 1.
 	
-.. _trafficLightGlobalLightObjectDescription:
+.. _trafficLightSceneViewObjectDescription:
 	
 SceneView Light Objects Description
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Select:
-	* H0/H1 : :ref:`TrafficLightHandler <trafficLightHandler>` (index 0, index 1).
-	* T0/T1/T : :ref:`TrafficNode <trafficNode>` (index 0, index 1, no index).
-	* P0/P1/P : :ref:`PedestrianNode <pedestrianNode>` (index 0, index 1, no index).
-	* L0/L1/L : :ref:`Light object <trafficLightObject>` (index 0, index 1, no index).
+Selection icons:
+	* **H0 / H1** : :ref:`TrafficLightHandler <trafficLightHandler>` (index 0, index 1).
+	* **T0 / T1 / T** : :ref:`TrafficNode <trafficNode>` (index 0, index 1, unassigned).
+	* **P0 / P1 / P** : :ref:`PedestrianNode <pedestrianNode>` (index 0, index 1, unassigned).
+	* **L0 / L1 / L** : :ref:`Light object <trafficLightObject>` (index 0, index 1, unassigned).
 
-Unselect:
-	* H- : unselect :ref:`TrafficLightHandler <trafficLightHandler>`.
-	* T- : unselect :ref:`TrafficNode <trafficNode>`.
-	* P- : unselect :ref:`PedestrianNode <pedestrianNode>`.
-	* L- : unselect :ref:`Light object <trafficLightObject>`.
+Deselect icons:
+	* **H-** : deselects :ref:`TrafficLightHandler <trafficLightHandler>`.
+	* **T-** : deselects :ref:`TrafficNode <trafficNode>`.
+	* **P-** : deselects :ref:`PedestrianNode <pedestrianNode>`.
+	* **L-** : deselects :ref:`Light object <trafficLightObject>`.
 
 	.. image:: /images/road/trafficLight/GlobalLightAllConnections.png
-	`All connection types and -1` :ref:`light index <trafficLightIndex>` `are enabled example.`
+	`All connection types with -1 light index filter enabled.`
 
 .. _sharedLightStateReplace:
 
 How To Replace Global Light States
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Open :ref:`Global Light Settings <trafficLightGlobalLight>` window.
-#. Click the `*` button to expand the `Replace settings`.
+#. Open the :ref:`Global Light Settings <trafficLightGlobalLight>` window.
+#. Click the `*` button to expand `Replace settings`.
 
 	.. image:: /images/road/trafficLight/replaceShared0.png
 	
-#. Select the source :ref:`state container <sharedLightStates>` you wish to replace.
-
+#. Select the source :ref:`state container <sharedLightStates>` to replace.
 
 	.. image:: /images/road/trafficLight/replaceShared1.png
 	
-#. Select your new desired :ref:`State container <sharedLightStates>`.
+#. Select the new target :ref:`State container <sharedLightStates>`.
 	
 	.. image:: /images/road/trafficLight/replaceShared2.png
 	
-#. Click the `Replace` button.
-#. As a result, all the source :ref:`State containers <sharedLightStates>` are replaced.
+#. Click `Replace`. All matching containers across crossroads are updated.
 
 	.. image:: /images/road/trafficLight/replaceShared3.png
 
 .. _sharedLightStates:
 
 Shared Light State Container
-------------
+----------------------------
 
-Contains common timings of :ref:`light states <trafficLightState>` that are shared between :ref:`traffic light crossroads <trafficLightCrossroad>`. You can easily replace shared containers using the :ref:`Global Light Settings <sharedLightStateReplace>` tool.
+ScriptableObject holding synchronized timings of :ref:`light states <trafficLightState>` shared across multiple :ref:`traffic light crossroads <trafficLightCrossroad>`.
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 from the project context :
 
 	.. image:: /images/road/trafficLight/sharedLightStatesPath.png
 	
 Default Container Path
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficLight/sharedLightStatesProjectPath.png
 	`Project path example.`
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/road/trafficLight/sharedLightStates.png
 	`Example.`
@@ -230,91 +220,79 @@ Settings
 Light States
 ------------
 
-* Green : car only drives on a green lights.
-* Red
-* Yellow
-* Red Yellow : red and yellow lights at the same time, shown as orange in the inspector.
+* **Green** : traffic proceeds.
+* **Red** : traffic halts.
+* **Yellow** : transition state before red/green.
+* **Red Yellow** : simultaneous red and yellow phase indicating an impending green signal.
 
 .. _trafficLightIndex:
 
 Light Index
-------------
+-----------
 
-Unique traffic light ID in :ref:`TrafficLightCrossroad <trafficLightCrossroad>` defined in :ref:`TrafficLightHandler <trafficLightHandler>` used to link :ref:`TrafficLightHandlers <trafficLightHandler>` and :ref:`traffic lights <trafficLightFrame>` by index.
+Unique group identifier in a :ref:`TrafficLightCrossroad <trafficLightCrossroad>` assigned to a :ref:`TrafficLightHandler <trafficLightHandler>` and used to synchronize :ref:`light frames <trafficLightFrame>` with specific signal phases.
 
 .. _trafficLightHandler:
 
 Traffic Light Handler
-----------------
+---------------------
 
-`Traffic Light Handler` is an entity for handling the state of a traffic light. Is part of :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
+Entity representing an active traffic signal phase inside a :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/road/trafficLight/TrafficLightHandler.png
 	
-| **Traffic light crossroad** : reference to the :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
-| **Triggers** : nodes that relate to the handler.
-| **Traffic light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
-| **Pedestrian light parent** : parent to which the :ref:`light objects <trafficLightObject>` will be added.
-| **Related light index** : linked traffic :ref:`light traffic index <trafficLightIndex>`.
+| **Traffic light crossroad** : parent :ref:`TrafficLightCrossroad <trafficLightCrossroad>`.
+| **Triggers** : road nodes assigned to this handler.
+| **Traffic light parent** : parent transform where vehicle :ref:`light objects <trafficLightObject>` reside.
+| **Pedestrian light parent** : parent transform where pedestrian light objects reside.
+| **Related light index** : associated :ref:`light index <trafficLightIndex>`.
 | **Child lights** : list of attached child :ref:`light objects <trafficLightObject>`.
 | **Custom lights** : list of attached custom :ref:`light objects <trafficLightObject>`.
-| **Light states** : :ref:`light state of handler <trafficLightState>`.
-
-Components
-~~~~~~~~~~~~
-
-Authoring
-~~~~~~~~~~~~ 
+| **Light states** : current :ref:`state <trafficLightState>` of the handler.
 
 .. _trafficLightObject:
 
 Traffic Light Object
-------------
+--------------------
 
-Main Component
-~~~~~~~~~~~~ 
-
-Traffic light object in the scene (parent component of the traffic light). 
-
-Contains data on the :ref:`light frames <trafficLightFrame>` and linked :ref:`light indexes <trafficLightIndex>`.
+Root component for physical traffic light models in the scene.
 
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectComponents.png
 	
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectExample.png
-	`Traffic light object example.`
 
 .. _trafficLightFrame:
 
 Light Frame
-~~~~~~~~~~~~ 
+~~~~~~~~~~~
 
-A child component that contains the data for the traffic light indicators.
+Child component controlling individual lenses/indicators.
 
 	.. image:: /images/road/trafficLight/TrafficLightObject/TrafficLightObjectFrameAssignExample.png
 
-| **Traffic light object** : reference to :ref:`light frames <trafficLightObject>`.
-| **Red light** : red light :ref:`state <trafficLightState>` entity.
-| **Yellow light** : yellow light :ref:`state <trafficLightState>` entity.
-| **Green light** : green light :ref:`state <trafficLightState>` entity.
+| **Traffic light object** : reference to the parent :ref:`traffic light object <trafficLightObject>`.
+| **Red light** : mesh/light entity for the red indicator.
+| **Yellow light** : mesh/light entity for the yellow indicator.
+| **Green light** : mesh/light entity for the green indicator.
 | **Initial light index** : initial :ref:`light index <trafficLightIndex>`.
-| **Index direction** : direction in which the :ref:`light index <trafficLightIndex>` is displayed in the scene. A small ray is displayed in the Scene view to visualize this direction.
+| **Index direction** : facing vector of the lens/visor. A visual guide ray is rendered in the Scene view.
 
 .. _trafficLightHybridService:
 
 Traffic Light Hybrid Service
 ----------------------------
 
-The ``TrafficLightHybridService`` component is responsible for synchronizing light states between the DOTS simulation ECS world and MonoBehaviour listeners/components on the scene.
+Synchronizes light states between the DOTS simulation world and scene `MonoBehaviour` components.
 
 .. important::
-   If **DOTS Simulation** is enabled in your project settings and you want to use traffic lights in the main scene, you must ensure that the **Is Active** checkbox is enabled on the ``TrafficLightHybridService`` component present in the scene. Without activating this option, scene traffic lights will not receive real-time state updates from the ECS simulation loop.
+   When **DOTS Simulation** is enabled, ensure **Is Active** is checked on the ``TrafficLightHybridService`` component in the scene. Otherwise, scene signals will not reflect DOTS simulation states.
 
 Settings
 ~~~~~~~~
 
-* **Is Active**: Main toggle to enable or disable the hybrid synchronization. Only available and required when DOTS Simulation is active (for Mono simulation, it's active by default).
-* **Register Light States**: Enable this if you need to read the current light state of a crossroad from classic MonoBehaviour scripts using the ``GetLightState(int id)`` method.
-* **Register Light Entities**: Enable this if you need to dynamically force or modify the light states of ECS entities via standard scripts.
+* **Is Active**: Main toggle to enable hybrid state synchronization.
+* **Register Light States**: Enables reading crossroad light states via standard scripts using ``GetLightState(int id)``.
+* **Register Light Entities**: Exposes ECS light entities for dynamic script modification.

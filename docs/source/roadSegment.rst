@@ -1,14 +1,14 @@
 .. _roadSegment:
 
 Road Segment
-=====
+============
 
 `Road Segment` is the main component of the road that contains :ref:`traffic nodes <trafficNode>`, :ref:`paths <path>`, and :ref:`pedestrian nodes <pedestrianNode>`.
 
 `Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
 How To Create
-------------
+-------------
 
 Select from the `Unity` toolbar:
 
@@ -22,7 +22,7 @@ By default, `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>
 	
 	
 Main Components
-------------
+---------------
 
 Road Segment
 ~~~~~~~~~~~~
@@ -32,14 +32,14 @@ Component for connection to other road segments.
 	.. image:: /images/road/roadSegment/RoadSegment.png
 	
 Variables
-""""""""""""""
+"""""""""
 
 | **Road segment placer** : reference to the :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
 | **Short title name** : short name for :ref:`RoadSegmentPlacer <roadSegmentPlacer>`.
 | **Show intersected paths** : on/off :ref:`intersection points <roadSegmentIntersectionExample>` in the scene.
 	
 Buttons
-""""""""""""""
+"""""""
 
 | **Connect nodes** : :ref:`auto-connect <autoPathConnection>` :ref:`Traffic Nodes<trafficNode>`.
 | **Reset nodes** : reset already :ref:`auto-connected <autoPathConnection>` paths of :ref:`Traffic Nodes<trafficNode>` (except :ref:`locked <trafficNode>` nodes).
@@ -48,12 +48,12 @@ Buttons
 .. _trafficLightCrossroad:
 	
 TrafficLightCrossroad
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Component for handling traffic lights at crossroad. For a quick look at timelines of city crossroads and traffic light connections, :ref:`see here <trafficLight>`.
 
 Cached
-""""""""""""""
+""""""
 
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCached.png
 	
@@ -62,7 +62,7 @@ Cached
 | **Traffic light handler data** : light index and light handlers that are linked to the `TrafficLightCrossroad`.
 
 Timeline common
-""""""""""""""
+"""""""""""""""
 	
 Timeline common uses the timeline from the :ref:`Shared state container <sharedLightStates>`.
 	
@@ -72,7 +72,7 @@ Timeline common uses the timeline from the :ref:`Shared state container <sharedL
 		You can easily replace the :ref:`shared state container <sharedLightStates>` for all crossroads using the :ref:`Global Light Settings <trafficLightGlobalLight>` tool.
 
 Timeline custom
-""""""""""""""
+"""""""""""""""
 
 ``Custom timeline is designed for custom timings of the traffic light segment``
 
@@ -103,7 +103,7 @@ Once you have set up 1 `TrafficLightHandler`, you can loop to the 2nd :ref:`Traf
 	.. image:: /images/road/roadSegment/TrafficLightCrossroadCustomTimelineLoopExample2.png
 
 Custom arrow lights
-""""""""""""""
+"""""""""""""""""""
 
 Arrows are used for the custom traffic light for the selected :ref:`path <path>`.
 
@@ -126,7 +126,7 @@ Arrows are used for the custom traffic light for the selected :ref:`path <path>`
 .. _roadSegmentBakingInfo:
 
 Baking info
-------------
+-----------
 
 The intersection of :ref:`paths <pathBakingInfo>` is only baked in those :ref:`paths <pathBakingInfo>` that are in the segment. How to :ref:`bake <bakingInfo>`.
 

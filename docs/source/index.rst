@@ -1,5 +1,5 @@
 Welcome to DOTS Traffic City documentation!
-===================================
+===========================================
 
 **DOTS Traffic City** is a tool for quickly creating performant city traffic.
 

@@ -1,17 +1,17 @@
 .. _trafficNode:
 
 Traffic Node
-=====
+============
 
 `Traffic node is a set of traffic node entities that are connected to other traffic node entities by a` :ref:`path <path>`
 
 .. _trafficNodeSettings:
 
 Settings
-----------------
+--------
 
 Cached
-~~~~~~~~~~~~
+~~~~~~
 
 	.. image:: images/road/trafficNode/TrafficNode.png
 	
@@ -19,7 +19,7 @@ Cached
 | **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
 
 Lane Data
-~~~~~~~~~~~~
+~~~~~~~~~
 
 	.. image:: images/road/trafficNode/TrafficNode2.png
 	
@@ -27,7 +27,7 @@ Lane Data
 | **External lanes** : :ref:`left side lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: images/road/trafficNode/TrafficNode3.png
 
@@ -51,38 +51,38 @@ Settings
 | **Auto path is created** : auto path is created (:ref:`more info <autoPathConnection>`).
 
 Traffic Node Type
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Default
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
 
 Parking
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
 	
 Node where cars are :ref:`parked <trafficArea>` (read more :ref:`parking states <trafficParking>`).
 	
 Traffic public stop
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 Node where :ref:`public traffic <trafficPublic>` stops to pick up passengers. 
 	
 Destroy vehicle
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Node where the vehicle entity is destroyed (useful for nodes outside the map).
 	
 Traffic area
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 :ref:`TrafficArea node <trafficArea>`.
 	
 Idle
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^
 	
 Node where the vehicle is idling.
 
 Trigger
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^
 
 Node to notify the user that the entity has reached the node.
 
@@ -126,12 +126,12 @@ If you need to associate a scene object with the trigger event, follow these ste
 	* Now you can listen to entities arriving on this node by subscribing to ``TriggerNodeHybridListener.OnTriggerEnter`` with code in the `TriggerNodeHybridListener` component or by using `UnityEvent` in the inspector of this component.
 			
 Trigger And Destroy
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 Node to notify the user that the entity has reached the node & then destroy the entity. Use case is the same as the `Trigger type`.
 	 
 Buttons
-~~~~~~~~~~~~
+~~~~~~~
 
 | **Connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes if no external paths are created yet.
 | **Force connect** : node will try to :ref:`connect <autoPathConnection>` to other nodes whether it is :ref:`connected <autoPathConnection>` now or not (except `Lock path auto creation` option is enabled).
@@ -161,12 +161,12 @@ Node example key features:
 .. _trafficNodeConnectionInfo:
 
 Direction Connection Info
-----------------
+-------------------------
 
 .. _trafficNodeRightDirection:
 
 Rightside Lanes
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~
 
 Rightside lanes (default lanes) connect :ref:`TrafficNodes <trafficNode>` within a :ref:`RoadSegment <roadSegment>`.
 
@@ -176,7 +176,7 @@ Rightside lanes (default lanes) connect :ref:`TrafficNodes <trafficNode>` within
 .. _trafficNodeLeftDirection:
 
 Leftside Lanes
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~
 
 Leftside lanes (external lanes) connect :ref:`TrafficNodes <trafficNode>` in external :ref:`RoadSegments <roadSegment>` (:ref:`external connection example <trafficNodeConnectionExample>`).
 
@@ -190,7 +190,7 @@ Leftside lanes (external lanes) connect :ref:`TrafficNodes <trafficNode>` in ext
 .. _trafficNodeRotation:
 
 Node Rotation
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 	
 Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the center of the segment
 
@@ -204,14 +204,14 @@ Direction of each :ref:`TrafficNode <trafficNode>` must be opposite to the cente
 .. _autoPathConnection:
 
 Auto-path Connection
-----------------
+--------------------
 
 * To quickly create connections between :ref:`RoadSegments <roadSegment>` on the same line, the `Auto-Path` connection is used. 
 * If the :ref:`segments <roadSegment>` are not on the same line you should to create another :ref:`Custom straight road segment <roadSegmentCreatorCustomStraight>` or :ref:`Custom segment <roadSegmentCreatorCustomSegment>` between them and do the same connection.
 * You can also manually create paths between :ref:`segments <roadSegment>` using the :ref:`PathCreator tool <pathCreator>`.
 
 How To Use
-~~~~~~~~~~~~ 
+~~~~~~~~~~
 
 * To activate auto-connection paths for all nodes you can in :ref:`RoadParent <roadParentInfo>` by pressing `Connect` button. 
 * Each time you create a new :ref:`RoadSegment <roadSegment>`, press `Force connect` in :ref:`RoadParent <roadParentInfo>`, then `Bake Path Data` (:ref:`baking info <pathBakingInfo>`).
@@ -229,10 +229,10 @@ How To Use
 	`Auto path connection example.`
 	
 CullState Info
-----------------
+--------------
 
 :ref:`States <cullPointInfo>`
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Culled** : entity not available for spawning.
 * **CloseToCamera** : entity available for spawn.

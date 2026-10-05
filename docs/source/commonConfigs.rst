@@ -1,5 +1,5 @@
 Common Configs
-=====
+==============
 
 .. _commonConfigs:
 
@@ -7,28 +7,28 @@ Common Configs
    :local:
 
 Common Configs
--------------------
+--------------
 
 .. _generalSettingsConfig:
 
 General Settings Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Config to quickly on/off optional features.
 
 Where To Find
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsOnScene.png
 	
 Config Example	
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
 		:scale: 70%
 
 Traffic Car Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 | **Has traffic** : on/off traffic vehicle in the city.	
 
@@ -44,7 +44,7 @@ Traffic Car Settings
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 
 Pedestrian Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 | **Has pedestrian** : on/off pedestrians in the city.	
 
@@ -56,7 +56,7 @@ Pedestrian Settings
 | **Navigation support** : on/off navigation systems for pedestrians.
 
 Other Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 **World simulation type:**
 	* **DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
@@ -77,12 +77,12 @@ Other Settings
 | **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
 
 Sound Configs
--------------------	
+-------------
 
 .. _soundConfig:
 
 Common Sound Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/CommonSoundConfig.png
 	``Hub/Configs/SoundConfigs/SoundConfig``
@@ -96,7 +96,7 @@ Common Sound Config
 .. _soundCrowdConfig:
 	
 Crowd Sound Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Сonfig for crowd background sound. The sound of the crowd is calculated based on of two areas: the inner circle and the outer circle. The sound in the inner circle is louder than the sound in the outer circle.
 

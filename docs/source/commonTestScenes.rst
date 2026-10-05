@@ -1,10 +1,10 @@
 Common Test Scenes
-=====
+==================
 
 .. _propsTestScene:
 
 Props Test Scene
-------------
+----------------
 
 The scene is designed to test the reaction of the :ref:`props <propsInfo>` to damage.
 

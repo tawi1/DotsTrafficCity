@@ -1,14 +1,14 @@
 .. _trafficCar:
    
 Traffic Car
-=====
+===========
 
 .. contents:: 
 	:local:
 	:depth: 2
    
 How To Create
-----------------
+-------------
 
 To start creating traffic vehicles, follow the instructions below based on your desired physics and architecture type.
 
@@ -57,27 +57,27 @@ Standard DOTS Traffic (Simple / Custom Physics)
 .. _vehicleType:
 
 Vehicle Physics Types
-----------------
+---------------------
 
 .. _customPhysicsVehicle:
 
 Custom Physics
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 * Entities that are moved by the custom physical system.
 * :ref:`Hybrid Entity Custom Physics <entityType>` & :ref:`Pure Entity Custom Physics <entityType>` types refer to this.
 * `Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=eLWD_bzS9i9fGDsO&t=199>`_
 
 Authoring components
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 Vehicle Authoring
-""""""""""""""""""
+"""""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/vehicleAuthoring.png
 	
 Wheel
-""""""""""""""""""
+"""""
 
 	.. image:: /images/entities/trafficCar/custom/wheel.png
 	
@@ -96,7 +96,7 @@ Wheel
 | **Cast layer** : physical layer that collides with the wheel.
 
 Suspension
-""""""""""""""""""
+""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/suspension.png
 	
@@ -105,7 +105,7 @@ Suspension
 | **Damping** : force to return spring to its original length.
 
 Friction
-""""""""""""""""""
+""""""""
 
 	.. image:: /images/entities/trafficCar/custom/friction1.png
 	
@@ -117,7 +117,7 @@ Friction
 | **Drag** : drag value of the vehicle.
 
 Transient Forces
-""""""""""""""""""
+""""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/transientForce.png
 	
@@ -134,7 +134,7 @@ Transient force is required to hold the car on an inclined ramp during manual br
 | **Lateral relax multiplier** : step of lateral force increase per frame.
 
 Brakes
-""""""""""""""""""
+""""""
 
 	.. image:: /images/entities/trafficCar/custom/brakes.png
 
@@ -142,7 +142,7 @@ Brakes
 | **Handbrake torque** : torque of handbrake.
 
 Engine
-""""""""""""""""""
+""""""
 
 	.. image:: /images/entities/trafficCar/custom/engine1.png
 
@@ -150,7 +150,7 @@ Engine
 | **Transmission rate** : engine torque to wheel speed ratio.
 
 Scene Settings
-""""""""""""""""""
+""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/sceneSettings.png
 	
@@ -165,7 +165,7 @@ Scene Settings
 	* **Suspension** : on/off handle for suspension and wheel origin.
 
 Template Settings
-""""""""""""""""""
+"""""""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/templateSettings.png
 
@@ -181,7 +181,7 @@ Template Settings
 	* **Settings** : copy the settings of the `VehicleAuthoring` component.
 
 Wheel Refs
-""""""""""""""""""
+""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/wheelRefs.png
 
@@ -192,12 +192,12 @@ Wheel Refs
 | **Handbrake rate** : handbrake rate.
 
 PhysicsBody
-""""""""""""""""""
+"""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/physicsBody.png
 	
 PhysicsShape 
-""""""""""""""""""
+""""""""""""
 
 	.. image:: /images/entities/trafficCar/custom/physicsShape.png
 	`Example`
@@ -205,17 +205,17 @@ PhysicsShape
 .. _simplePhysicsVehicle:
 
 Simple Physics
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 * Entities moved by the simple physical system (by simply adding the physics velocity to the physics body).
 * :ref:`Settings <trafficCarSettings>`.
 * :ref:`Hybrid entity simple physics <entityType>` & :ref:`Pure entity simple physics <entityType>` types refer to this.
 
 Authoring components
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 CarWheelAuthoring
-""""""""""""""""""
+"""""""""""""""""
 
 	.. image:: /images/entities/trafficCar/CarWheelAuthoring.png
 	
@@ -224,12 +224,12 @@ CarWheelAuthoring
 | **Steering wheels** : wheels that can turn.
 
 PhysicsBody
-""""""""""""""""""
+"""""""""""
 
 	.. image:: /images/entities/trafficCar/PhysicsBody.png
 	
 PhysicsShape 
-""""""""""""""""""
+""""""""""""
 
 	.. image:: /images/entities/trafficCar/physicsShape.png
 	`Example`
@@ -239,7 +239,7 @@ Optional components if the car moves with physics.
 .. _noPhysicsVehicle:
 
 No Physics
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 * :ref:`Pure entities <pureEntity>` that moved by transform system without physics.
 * Contains the same non-physics components as :ref:`Simple Physics <simplePhysicsVehicle>` (e.g., `CarWheelAuthoring`).
@@ -249,7 +249,7 @@ No Physics
 .. _hybridMonoVehicle:
 
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 * Before using this vehicle type, make sure that you selected `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>`.
 * :ref:`Hybrid entities <hybridEntity>` that moved by custom monobehaviour controller.
@@ -260,6 +260,7 @@ Hybrid Mono
 
 Input Info
 ~~~~~~~~~~
+
 * Throttle [1] : forward motion.
 * Throttle [-1] : reverse motion.
 * Throttle [0] : hand brake.
@@ -314,7 +315,7 @@ VehicleInput Example Code
 .. _carPlayerBlocker:
 
 Car Player Blocker
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 The ``CarPlayerBlocker`` component is designed specifically for **Hybrid Mono** vehicles. It prevents a custom player physics controller from pushing or moving AI traffic vehicles upon collision. 
 
@@ -324,7 +325,7 @@ It achieves this by dynamically creating an independent kinematic collider on a 
    This component works **only** for vehicles with the `Hybrid entity mono physics` type. It does not affect Pure DOTS entities.
 
 How It Works
-""""""""""""""
+""""""""""""
 
 1. **Editor Generation:** The editor script copies the dimensions and center boundaries of your vehicle's main source collider (supports ``BoxCollider`` or ``MeshCollider``).
 2. **Layer Isolation:** It places this newly generated box collider onto a custom physics layer (e.g., `PlayerBlocker`).
@@ -360,7 +361,7 @@ Follow these steps to set up the blocker for your vehicles:
    This matrix setup ensures the blocker collider interacts *only* with the player and remains completely invisible to traffic, NPCs, raycasts, and ground physics layers.
    
 Components
-""""""""""""""
+""""""""""
 
 **CarEntityAdapter**
 
@@ -383,12 +384,12 @@ Component to on/off physics of the vehicle.
 Component to on/off scripts of the vehicle.
 
 Common Authoring Components
-----------------
+---------------------------
 
 .. _trafficCarEntityAuthoring:
 
 TrafficCarEntityAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 	.. image:: /images/entities/trafficCar/TrafficCarEntityAuthoring.png
 	
@@ -402,44 +403,44 @@ Main component of traffic entity **[required]**.
 | **Traffic group** : selected :ref:`traffic group <pathTrafficGroup>`.
 
 Shared Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Each vehicle has a common set of settings that are described :ref:`here <vehicleCollection>`
 
 NavMeshObstacleAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/NavMeshObstacleAuthoring.png
 	
 `NavMeshObstacleData` entity component for runtime loading of `NavMeshObstacle` objects for :ref:`pedestrian navigation <pedestrianNavmeshNavigation>`. Make sure, that option is enabled in the :ref:`traffic settings <trafficNavMeshObstacle>` **[optional]**.
 	
 CarSoundAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/CarSoundAuthoring.png
 	
 Component for vehicle :ref:`sounds <sharedSoundSettings>` **[optional]**.
-	
+
 HealthAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Vehicle health component for damage system (DOTS only) **[optional]**.
 
 CarDamageEngineAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Component for visual presentation of damage in the damage systems (DOTS only) **[optional]**.
 
 PlayerTargetAuthoring
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Component for player targeting systems **[optional]**.
 
 CullState Info
-----------------
+--------------
 
 :ref:`States <cullPointInfo>`
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Culled** : entity is destroyed.
 
@@ -452,12 +453,12 @@ CullState Info
 .. _trafficParking:
 
 Parking
-----------------
+-------
 
 Car parking consists of the following states:
 
 Entering parking states
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 #. The car has chosen the path containing the :ref:`parking node <trafficNode>`.
 #. The car links the :ref:`parking node <trafficNode>` to prevent it from being selected by other cars (the list of linked nodes can be customized :ref:`here <trafficRoadConfig>`).
@@ -466,7 +467,7 @@ Entering parking states
 #. Pedestrian gets out of the car.
 
 Exiting parking states
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 #. The Pedestrian enters the :ref:`pedestrian parking node <pedestrianNode>`, if available.
 #. The parking car removes link with :ref:`TrafficNode <trafficNode>`.
@@ -476,7 +477,7 @@ Exiting parking states
 .. _trafficAvoidance:
 
 Avoidance
-----------------
+---------
 
 Avoidance is used to resolve situations where vehicles become stuck and cannot clear their path.
 Currently, it is triggered in the following scenarios:
@@ -499,7 +500,7 @@ Entity Selection
 Entity can be retrieved using one of these methods:
 		
 Pure DOTS
-~~~~~~~~~~~~
+~~~~~~~~~
 
 * Create a new gameobject with `EntitySelectionService` component
 * Use world position to get the nearest entity for that position.
@@ -512,7 +513,7 @@ Pure DOTS
 		}
 
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 Entity can be retrieved if the car has a collider:
 
@@ -534,7 +535,7 @@ Entity can be retrieved if the car has a collider:
 .. _trafficRail:
 
 Rail Movement
-----------------
+-------------
 
 The `Rail movement` is used to drive the vehicle precisely along the :ref:`path <path>`, which can be useful in small enclosed :ref:`parking areas <path>`, for example.
 To enable rail movement, tick on the `Rail` parameter in the :ref:`path settings <pathSettings>`.
@@ -543,12 +544,12 @@ Open the :ref:`rail config <trafficRailConfig>` to adjust the `Rail` parameters 
 	.. note:: Enabled by default for :ref:`trams <trafficPublicType>`.
 
 Obstacle Detection
-----------------
+------------------
 
 .. _trafficCarRaycastInfo:
 
 Raycast
-~~~~~~~~~~~~
+~~~~~~~
 
 **Config**
 
@@ -584,7 +585,7 @@ To define raycast targets for `Hybrid` or `Raycast only` modes, redefine the `Ge
 		* Layer constants are stored in the `ProjectConstants.cs` file.
 		
 Obstacle Avoidance
-----------------
+------------------
 
 If you want the traffic to avoid obstacles, follow these steps:
 
@@ -594,29 +595,29 @@ If you want the traffic to avoid obstacles, follow these steps:
 * Add components to the obstacle object from the example below, depending on the type of obstacle.
 
 Player Character
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/player/PlayerCharacterAvoidance.png
 	
 	.. note:: Make sure that `Player Npc Hybrid Component` is removed.
 
 Player Car
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 	.. image:: /images/configs/player/PlayerCarAvoidance.png
 
 Dynamic Obstacle
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/player/CustomObstacleAvoidance.png
 
 Static Obstacle
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/player/CustomStaticObstacleAvoidance.png
 	
 Left-hand Drive
-----------------
+---------------
 
 To make the traffic left-hand drive:
 
@@ -626,7 +627,7 @@ To make the traffic left-hand drive:
 	.. note:: Changing this parameter will only affect newly created scenes. Old scenes with a different lane direction will not work.
 	
 Pathfinding
-----------------
+-----------
 
 Custom Point
 ~~~~~~~~~~~~
@@ -653,7 +654,7 @@ To set a custom destination for a specific traffic car, do the following:
 * Use the ``OnStatusUpdated`` callback in ``TrafficCustomPathService`` to listen to the current state of the traffic car's pathfinding.
 		
 Custom Node
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 To set a custom node destination for a specific traffic car, do the following:
 

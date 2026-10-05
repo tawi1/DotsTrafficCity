@@ -24,7 +24,7 @@ This method is ideal for creating a standalone roundabout "from scratch" in an e
 #. If you need to fine-tune the layout, you can manually move elements directly in the Scene View using Gizmos handles by selecting the appropriate **Active Handle** mode.
 
 Method 2. Custom Mode (Based on Existing Roads)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method allows you to seamlessly integrate a roundabout into your current road network. Instead of creating a standalone asset and trying to snap it manually, the tool uses the final :ref:`Traffic Nodes <trafficNode>` of the straight roads that approach the intersection as anchor points.
 

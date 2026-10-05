@@ -11,7 +11,7 @@ Common Debug
 .. _cullPointDebug:
 
 CullPoint Debugger
-------------
+------------------
 
 Displays the :ref:`cull point <cullPointInfo>` radius (:ref:`example <cullPointExamples>`).
 
@@ -21,7 +21,7 @@ Displays the :ref:`cull point <cullPointInfo>` radius (:ref:`example <cullPointE
 | **Enable debug** : on/off debugger.
 	
 CullState Object Debugger
-------------
+-------------------------
 
 Displays the :ref:`cull state <cullPointStates>` of objects in the scene (:ref:`example <cullPointExamples>`).
 
@@ -31,13 +31,13 @@ Displays the :ref:`cull state <cullPointStates>` of objects in the scene (:ref:`
 .. _cullPointExamples:
 
 Examples
-~~~~~~~~~~~~
+~~~~~~~~
 	
 	.. image:: /images/debuggers/other/CullStateObjectDebuggerExample.png		
 	`Cull point debug and cull state object debugger are enabled example (red - culled, blue - close to camera, green - in view of camera).`
 	
 Hashmap Grid Debugger
-------------
+---------------------
 
 Displays the size and position of the hashmap cell (can be useful when choosing the basic hashmap cell size in `DOTS` systems).
 
@@ -55,7 +55,7 @@ Displays the size and position of the hashmap cell (can be useful when choosing 
 .. _sectionDebugger:
 	
 Section Debugger
-------------
+----------------
 
 Displays the :ref:`load section <roadStreaming>` radius, created road sections, road connections (:ref:`TrafficNodes <trafficNode>` and :ref:`PedestrianNodes <pedestrianNode>`).
 

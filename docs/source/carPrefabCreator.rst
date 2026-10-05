@@ -1,12 +1,12 @@
 .. _carPrefabCreator:
 
 Car Prefab Creator
-=====
+==================
 
 `Youtube tutorial. <https://www.youtube.com/watch?v=0L84dkGqCCE&t=1251s>`_
 
 How To Use
-----------------
+----------
 
 #. From the `Unity` toolbar, open `Car Prefab Creator`.
 
@@ -62,7 +62,7 @@ Simple Physics (Pure/Hybrid)
 5. If some of the body or wheel offsets are wrong, drag and drop the created car prefab into the scene & use this tool to re-create cars with new offsets using the `Create` button again until the desired result is achieved.
 
 Prefab Settings
-----------------
+---------------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabSettings.png
 
@@ -84,7 +84,7 @@ Prefab Settings
 .. _carPrefabCreatorCommonSettings:
 
 Common Settings
-----------------
+---------------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/CommonSettings.png
 	
@@ -104,7 +104,7 @@ Common Settings
 .. _carPrefabCreatorSaveSettings:
 	
 Save Settings
-----------------
+-------------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/SaveSettings.png
 	
@@ -143,7 +143,7 @@ Save Settings
 .. _carPrefabCreatorTemplateSettings:
 	
 Template Settings
-----------------
+-----------------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/TemplateSettings.png
 	
@@ -168,10 +168,10 @@ Preview Settings
 .. _carPrefabCreatorAdditionalSettings:
 
 Additional Settings
-----------------
+-------------------
 
 Common Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings.png
 	
@@ -184,7 +184,7 @@ Common Settings
 		* Arrow-button applies the setting for the selected parameter.
 		
 Physics
-~~~~~~~~~~~~
+~~~~~~~
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings2-1.png
 	
@@ -195,12 +195,12 @@ Physics
 | **Mass** : mass of the vehicle.
  
 Info Tab
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings2-2.png
 
 Graphics
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings3-1.png
 	
@@ -221,19 +221,19 @@ Graphics
 		Wheel sharing is useful for using the same wheel model for all wheels to reduce drawcalls.
 	
 Info Tab
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/AdditionalSettings3-2.png
 	
 .. _carPrefabCreatorPrefabInfo:
 	
 Prefab Info
-----------------
+-----------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/PrefabInfo.png
 	
 Car Info
-~~~~~~~~~~~~
+~~~~~~~~
 
 * **Prefab** : reference to source prefab.
 * **Name** : user's :ref:`name <carModel>` of the vehicle.
@@ -258,7 +258,7 @@ Car Info
 * **Suspension length** : suspension length of the vehicle. **(can be unique value)** **[Custom physics vehicles only]**
 		
 Buttons
-----------------
+-------
 
 	.. image:: /images/entities/trafficCar/carPrefabCreator/Buttons.png
 	

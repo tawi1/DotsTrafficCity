@@ -1,7 +1,7 @@
 .. _trafficArea:
 
 Traffic Area
-=====
+============
 
 `Traffic Area` is used for restricted traffic areas with an order of entry and exit.
 
@@ -12,7 +12,7 @@ Use-case examples:
 `Youtube tutorial. <https://youtu.be/KnLjpAt_AFE>`_
 
 How To Create
-------------
+-------------
 
 #. Create an empty `GameObject` and add :ref:`TrafficAreaAuthoring <trafficAreaSettings>` component
 #. Set the :ref:`Button select type <trafficAreaSceneVisual>` to `Select node` value.
@@ -46,12 +46,12 @@ How To Create
 .. _trafficAreaSettings:
 
 Settings
-------------
+--------
 
 	.. image:: /images/road/TrafficArea.png
 	
 Settings
-~~~~~~~~~~~~ 
+~~~~~~~~
 	
 | **Max queue count** : maximum number of cars in a queue (if the maximum number is exceeded the entrance node will be closed).
 | **Max skip enter order count** : number of vehicles that can be let in at the entrance (1 value example: 1 enters vehicle - 1 exits - 1 enters - 1 exits).
@@ -60,7 +60,7 @@ Settings
 .. _trafficAreaSceneVisual:
 
 Scene visual
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~
 
 | **Draw connection** : on/off visual connections.
 | **Draw connection lines** : on/off connection lines to the :ref:`traffic nodes <trafficNode>`.
@@ -75,7 +75,7 @@ Scene visual
 .. _trafficAreaNodeType:
 
 Node type
-~~~~~~~~~~~~ 
+~~~~~~~~~
 
 * **Default** : a node which is included in the `TrafficArea` but does not belong to one of the types listed below.
 * **Enter** : entrance node to the `TrafficArea` (if the maximum number of vehicles in the queue is exceeded, the node will be closed).

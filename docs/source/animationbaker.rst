@@ -1,16 +1,15 @@
 .. _animationBaker:
 
 Animation Baker
-=====
+===============
 
 .. contents::
    :local:
 
-
 .. _animationBakerHowTo:
 
 How To Bake
-------------
+-----------
 
 	#. Open `Baker` from the `Unity` toolbar.
 	
@@ -62,7 +61,7 @@ How To Bake
 .. _animationBakerHowToMulti:
 		
 How To Bake Multi-Mesh
-------------
+----------------------
 
 	#. This only works for vertex skinning method.
 	#. Enable `Multimesh` type in the :ref:`Settings type <animationBakerSettings>`.
@@ -77,7 +76,7 @@ Baker Window
 .. _animationBakerSettings:
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 	.. image:: /images/pedestrian/baker/window/Settings.png
 	
@@ -108,12 +107,12 @@ Settings
 .. _animationBakedSourceData:
 
 Source Data
-~~~~~~~~~~~~
+~~~~~~~~~~~
 	
 .. _animationBakerToolbar:
 	
 Toolbar
-""""""""""""""
+"""""""
 
 	.. image:: /images/pedestrian/baker/window/Toolbar.png
 	
@@ -121,7 +120,7 @@ Toolbar
 | **Skin toolbar** : character selection toolbar for selecting preview animation.
 	
 Clip Data
-""""""""""""""
+"""""""""
 
 	.. image:: /images/pedestrian/baker/window/ClipData.png
 
@@ -133,7 +132,7 @@ Clip Data
 * **Preview** : on/off preview playback of baked animation (make sure the texture is created and any character is selected in the :ref:`toolbar <animationBakerToolbar>`).
 		
 How To Preview
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 #. :ref:`Bake <animationBakerHowTo>` the texture.
 #. Select any character (for example `Character1`).
@@ -143,14 +142,14 @@ How To Preview
 	.. image:: /images/pedestrian/baker/window/RefreshAlways.png
 
 Texture Data
-""""""""""""""
+""""""""""""
 
 Shows a preview of the created texture.
 
 	.. image:: /images/pedestrian/baker/window/TextureData.png
 	
 Transition Data
-""""""""""""""
+"""""""""""""""
 
 Shows a preview of the transition animation between two selected animations.
 
@@ -165,7 +164,7 @@ Shows a preview of the transition animation between two selected animations.
 .. _animationTransitionEditor:
 	
 How To Use
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 #. Enable :ref:`Transition mode <animationBakerSettings>` in the settings.
 #. :ref:`Bake <animationBakerHowTo>` the texture.
@@ -175,7 +174,7 @@ How To Use
 #. Adjust the `Transition duration` if required.
 
 Buttons
-""""""""""""""
+"""""""
 
 | **Create new** : create a new texture.
 | **Save as new** : save the texture as a new asset.
@@ -183,15 +182,15 @@ Buttons
 | **Clear** : clean up the texture.
 
 Crowd GPU Animator
-------------
+------------------
 
 The `Crowd GPU Animator` is used for transitions between GPU animations.
 	
 How To
-~~~~~~~~~~~~
+~~~~~~
 
 Open
-""""""""""""""
+""""
 
 Open in the scene `CrowdGPUAnimatorAuthoring`.
 
@@ -209,12 +208,12 @@ Initial Set Up
 	.. image:: /images/pedestrian/baker/animator/CrowdGPUAnimatorAuthoring.png
 	
 Create Node
-""""""""""""""
+"""""""""""
 
 Right-click in the window and select the :ref:`desired node<animationBakerAnimatorNodeTypes>` from the context menu.
 
 Create Transition
-""""""""""""""
+"""""""""""""""""
 	
 Transition is a sequential set of nodes StartNode-->AnimNode-->TransitionNode-->AnimNode-->TransitionNode-->AnimNode-->... (:ref:`example <animationBakerAnimatorTransitionExample>`).
 	
@@ -226,24 +225,24 @@ Transition is a sequential set of nodes StartNode-->AnimNode-->TransitionNode-->
 .. _animationBakerAnimatorNewTransitionLayer:
 
 Create Transition Layer
-""""""""""""""
+"""""""""""""""""""""""
 
 Press the `+` button on the main toolbar at custom animator to create a new layer, or press `-` to delete the currently selected layer.
 
 Test
-""""""""""""""
+""""
 
 You can test the transition between two animations & adjust the transition duration in the editor in :ref:`AnimationBakerWindow <animationTransitionEditor>`.
 
 .. _animationBakerAnimatorNodeTypes:
 
 Graph Nodes
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 .. _animationBakerAnimatorStartNode:
 
 Start Node
-""""""""""""""
+""""""""""
 
 Node where the transition begins by trigger.
 
@@ -273,7 +272,7 @@ Animation playback node.
 .. _animationBakerAnimatorTransitionNode:
 
 Transition Node
-""""""""""""""
+"""""""""""""""
 
 Node with settings for switching between animations.
 
@@ -292,7 +291,7 @@ Node with settings for switching between animations.
 .. _animationBakerAnimatorTransitionExample:
 
 Transition example
-""""""""""""""
+""""""""""""""""""
 
 	.. image:: /images/pedestrian/baker/animator/StartSitTransitionExample.png
 	`Start sit transition example.`
@@ -303,19 +302,19 @@ Transition example
 .. _animationGPUAnimationCollection:
 
 Animation Collection
-------------
+--------------------
 
 Contains meta-data of existing animations for the pedestrians.
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 From the project context :
 	
 	``Spirit604/Animation Baker/Animation Collection``
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 	
 	.. image:: /images/pedestrian/baker/animator/AnimationCollectionExample.png
 
@@ -332,7 +331,7 @@ Settings
 .. _animationGPUAnimatorContainer:
 
 Animator Data Container
-------------
+-----------------------
 
 Contains data about animation transitions.
 

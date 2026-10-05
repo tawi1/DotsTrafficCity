@@ -1,17 +1,17 @@
 .. _trafficApi:
 
 API
-----------------
+---
 
 Section is progress.
 
 Path HashMap System
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Used to find the nearest path of the road to a given position.
 
 How To Use
-""""""""""""""
+""""""""""
 
 	..  code-block:: csharp
 	
@@ -26,7 +26,7 @@ How To Use
 		}
 		
 User Spawn
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 Spawn a traffic car in a custom position using user code.
 
@@ -84,7 +84,7 @@ Spawn a traffic car in a custom position using user code.
 		
 		
 Density
-~~~~~~~~~~~~
+~~~~~~~
 
 Change the density of traffic at runtime.
 

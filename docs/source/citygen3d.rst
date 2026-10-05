@@ -1,23 +1,23 @@
 .. _cityGen3D:
 
 CityGen3D
-============
+=========
 
 Limitations
-------------
+-----------
 
 * For some complex generated roads may end up with artifact & may require manual fixing for them.
 * Currently, pedestrian nodes are not generated.
 
 How To Use
-------------
+----------
 
 #. Buy & download, import the following asset plugin:
 
 	`CityGen3D <https://assetstore.unity.com/packages/tools/terrain/citygen3d-162468>`_
 
 Getting Started
-------------
+---------------
 
 #. Add the `CITYGEN_3D` scripting define to the `Player Settings` of the project.
 #. Open your scene.

@@ -1,12 +1,12 @@
 .. _trafficPublicRoute:
 
 Traffic Public Route
-=====
+====================
 
 Defined public route for :ref:`public transport <trafficPublic>`.
 
 How To Create
-------------
+-------------
 
 #. Create necessary :ref:`road segments <roadSegmentCreator>`.
 #. Connect the created segments by :ref:`paths <path>`.
@@ -21,14 +21,14 @@ How To Create
 #. Make sure you have created at least one compatible (matching :ref:`TrafficPublicType <trafficPublicType>` and :ref:`Car model <carModel>`) :ref:`TrafficPublic <trafficPublic>` vehicle.
 
 Transition Info
-------------
+---------------
 
 Transition paths are used for transition between lanes of public transport.
 
 .. _trafficPublicRouteHowToCreateTransition:
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 #. Select source path.
 
@@ -46,14 +46,14 @@ How To Create
 .. _trafficPublicRouteComponent:
 
 Component
-------------
+---------
 
 	.. image:: /images/road/PublicRoute/PublicRouteSettings.png
 	
 .. _trafficPublicRouteSettings:
 
 Route settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~
 
 | **Vehicle data collection** : reference to the :ref:`vehicle collection <vehicleCollection>`.
 | **Max vehicle count** : maximum number of vehicles on the route.
@@ -71,7 +71,7 @@ Route settings
 .. _trafficPublicRouteTransitionSettings:
 
 Transition settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~
 
 | **Source offset** : offset start point of transition in source path.
 | **Target offset** : offset end point of transition in target path.
@@ -80,7 +80,7 @@ Transition settings
 .. _trafficPublicRouteSceneSettings:
 
 Scene settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~
 
 | **Highlight route** : highlight added paths of route.
 | **Show path selection buttons** : on/off display add buttons paths to route.
@@ -88,7 +88,7 @@ Scene settings
 | **Show only related nodes** : only nodes that are neighbours of nodes that have already been added will be displayed.
 
 Route data
-~~~~~~~~~~~~ 
+~~~~~~~~~~
 
 | **Traffic node route data** : internal related traffic nodes route data.
 | **Route change lane transitions** : :ref:`transition <trafficPublicRouteHowToCreateTransition>` data.
@@ -98,7 +98,7 @@ Route data
 	`Transition data example.`
 
 Buttons
-~~~~~~~~~~~~ 
+~~~~~~~
 
 | **Update transitions** 
 | **Clear route** 

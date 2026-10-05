@@ -1,7 +1,7 @@
 .. _roadSegmentCreator:
 
 Road Segment Creator
-=====
+====================
 
 `Road Segment Creator` is a tool for creating and customizing a :ref:`RoadSegment<roadSegment>`
 
@@ -11,7 +11,7 @@ Road Segment Creator
 .. _roadSegmentCreatorHowToUse:
 
 How To Use
-------------
+----------
 
 `Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
@@ -36,12 +36,12 @@ How To Use
 .. _roadSegmentCreatorCustomSettings:
 
 Standard Shapes
-------------
+---------------
 
 `Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
 
 Default Crossroad
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorDefaultCrossroadSettings.png
 	
@@ -51,7 +51,7 @@ Default Crossroad
 	`Example`.
 	
 Turn Road
-~~~~~~~~~~~~ 
+~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTurnRoadSettings.png
 	
@@ -65,7 +65,7 @@ Turn Road
 
 	
 Straight Road
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentStraightSettings.png
 	
@@ -78,7 +78,7 @@ Straight Road
 	`Example`.
 	
 Merge Crossroad	
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
  
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadSettings.png
 	
@@ -90,7 +90,7 @@ Merge Crossroad
 	`Example`.
 	
 Merge Straight Road
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionStraightRoadSettings.png
 	
@@ -104,7 +104,7 @@ Merge Straight Road
 	`Example`.
 	
 Merge Crossroad To Oneway Road
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentTransitionCrossroadToOneWaySettings.png
 	
@@ -117,7 +117,7 @@ Merge Crossroad To Oneway Road
 	`Example`.
 	
 Oneway Straight
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayStraightSettings.png
 	
@@ -131,7 +131,7 @@ Oneway Straight
 	`Example`.
 	
 Oneway Turn
-~~~~~~~~~~~~ 
+~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentOneWayTurnSettings.png
 	
@@ -147,14 +147,14 @@ Oneway Turn
 .. _roadSegmentCreatorCustomStraight:
 
 Custom Straight Road
-------------
+--------------------
 
 Creator for creating straight roads of any shape.
 
 `Youtube tutorial. <https://youtu.be/JbhGYxVscew>`_
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Place the custom  straight segment where you want it.
 #. Place the :ref:`traffic nodes <trafficNode>` at the start and the end of the path (or expand the road by holding `left-shift` key and clicking the `left-mouse` button).
@@ -166,10 +166,10 @@ How To Use
 #. Complete all the :ref:`default steps <roadSegmentCreatorHowToUse>`.
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 Custom Settings
-""""""""""""""
+"""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightCustomSettings.png
 	
@@ -178,14 +178,14 @@ Custom Settings
 | **Show Y position** : show Y position of the nodes.
 
 Snap Node Settings
-""""""""""""""
+""""""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapNodeSettings.png
 	
 :ref:`Info <roadSegmentCreatorId11>`.
 	
 Snap Surface Settings
-""""""""""""""
+"""""""""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightSnapSurfaceSettings.png
 
@@ -202,7 +202,7 @@ Snap Surface Settings
 .. _snapLine:
 	
 Snap Line Settings
-""""""""""""""
+""""""""""""""""""
 
 Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes of the collider to make the :ref:`path <path>` follow the shape of the collider **(v 1.0.4+)**.  
 
@@ -220,7 +220,7 @@ Creates additional :ref:`path nodes <pathWaypointInfo>` along the curved meshes 
 .. _roadSegmentCreatorCustomStraightPathSettings:
 
 Path Settings
-""""""""""""""
+"""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomStraightPathSettings.png
 	
@@ -230,7 +230,7 @@ Path Settings
 | **Speedlimit** : speed limit for all paths of the segment.
 
 Examples
-""""""""""""""
+""""""""
 	
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomStraight.png
 	`Source segment example.`
@@ -244,20 +244,20 @@ Examples
 .. _roadSegmentCreatorCustomSegment:
 
 Custom Segment 
------------- 
+--------------
 
 Creator for creating segments of any shape and complexity.
 
 `Youtube tutorial. <https://youtu.be/AMrGJ7YGBNo>`_
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Place the custom segment where you want it.
 #. Choose one of the following methods to create your intersection or layout:
 
 Option A: Manual Connection (Fine-tuning)
-""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
      
 * Toggle on the :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` parameter.
 * Select the `New node settings type` and create new :ref:`TrafficNodes <trafficNode>` by pressing the **Add Traffic Node** button.
@@ -266,14 +266,14 @@ Option A: Manual Connection (Fine-tuning)
 * Open the manual :ref:`PathCreator tool <pathCreator>` to manually create and link :ref:`paths <path>` between the nodes.
 
 Option B: Auto-Crossroads Mode (From Scratch)
-""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""
      
 * Create and arrange your child :ref:`Traffic nodes <trafficNode>` inside this custom segment at the entry and exit points of the intersection.
 * Open the **Path settings** tab and change **Additional Settings** to ``AutoCrossroad``.
 * Press **Clear** to wipe any existing paths, then click **Create** to automatically calculate crossroad geometry and build all traffic paths.
 
 Option C: Intersection Creation Mode (From Existing Scene Roads)
-""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
      
 	.. note::
 	   You do **not** need to manually add or create new Traffic Nodes for this method. The creator will automatically generate internal nodes based on your scene selection.
@@ -293,10 +293,10 @@ Option C: Intersection Creation Mode (From Existing Scene Roads)
 	.. note:: You can convert any :ref:`default template <roadSegmentCreatorCustomSettings>` to `Custom Segment`_ in the `Other settings`_ tab.
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 New Node Settings
-""""""""""""""
+"""""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomNewNodeUniqueSettings.png
 
@@ -313,7 +313,7 @@ New node settings type [custom settings enabled] new :ref:`TrafficNode <trafficN
 		* **Copy node index**
 			
 Custom Path Settings
-""""""""""""""
+""""""""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentNodeHandles.png
 	
@@ -321,12 +321,12 @@ Custom Path Settings
 | **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwading.
 
 Additional Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 .. _extrudeLane:
 
 Extrude Lane
-""""""""""""""
+""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/ExtrudeLaneSettings.png
 	
@@ -343,12 +343,12 @@ Extrude Lane
 	`Example.`
 	
 Parking Builder
-""""""""""""""
+"""""""""""""""
 
 :ref:`Parking Builder info <roadSegmentCreatorParkingBuilder>`.
 	
 Custom Settings
-""""""""""""""
+"""""""""""""""
 	
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomCustomSettings.png
 	
@@ -358,14 +358,14 @@ Custom Settings
 .. _roadSegmentCreatorCustomSnapNodeSettings:
 
 Snap Node Settings
-""""""""""""""
+""""""""""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomSnapNodeSettings.png
 	
 :ref:`Info <roadSegmentCreatorId11>`.
 	
 Custom TrafficNode Editor Window
-""""""""""""""
+""""""""""""""""""""""""""""""""
 		
 Window that you can configure each :ref:`TrafficNode settings <trafficNodeSettings>`. :ref:`Custom settings <roadSegmentCreatorCustomCustomSettingsOption>` should be enabled.
 
@@ -373,18 +373,18 @@ Window that you can configure each :ref:`TrafficNode settings <trafficNodeSettin
 	
 	
 Examples
-""""""""""""""
+""""""""
 
 	.. image:: /images/road/roadSegment/examples/RoadSegmentCustomExample.png
 	`Example`.
 	
 Settings Description
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~
 
 .. _roadSegmentCreatorId11:
 
 Snap Node Settings
-""""""""""""""
+""""""""""""""""""
 
 **Snap object type:**
 	* **All** : snap `TrafficNode` & `Path node`.
@@ -401,12 +401,12 @@ Snap Node Settings
 .. include:: roundabout.rst
 
 Components
-------------
+----------
 
 .. _roadSegmentCreatorGeneralSettings:
 
 General settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png
 
@@ -416,14 +416,14 @@ General settings
 | **Path corner offset** : offset to change the rotation angle of curved paths.
 
 Custom settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~
 
 :ref:`Custom settings <roadSegmentCreatorCustomSettings>`.
 
 .. _roadSegmentCreatorPedestrianSettings:
 
 Pedestrian node settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorGeneralSettings.png	
 
@@ -442,14 +442,14 @@ Pedestrian node settings
 .. _roadSegmentCreatorLightSettings:
 
 Light settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorLightSettings.png
 	
 `Youtube tutorial. <https://youtu.be/r85kMJ4BL5E>`_
 	
 How To Use
-""""""""""""""
+""""""""""
 
 #. Turn on traffic light option.
 #. Select `Light prefab type`.
@@ -485,7 +485,7 @@ Traffic lights
 	* **Flip index** : switches to the opposite :ref:`light index <trafficLightIndex>` in the traffic light.
 	
 Pedestrian lights
-""""""""""""""
+"""""""""""""""""
 
 | **Add pedestrian lights** : add pedestrian light to the segment.
 | **Pedestrian light offset** : local pedestrian light offset relative to :ref:`traffic node <trafficNode>`
@@ -494,12 +494,12 @@ Pedestrian lights
 .. _roadSegmentCreatorPathSettings:
 
 Path settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 	
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorPathSettings.png
 	
 Node selection panel
-""""""""""""""
+""""""""""""""""""""
 
 **How to customize path:**
 	#. Select `TrafficNode` on the inspector panel.
@@ -508,7 +508,7 @@ Node selection panel
 	#. Press `Open Path Settings` button to customize :ref:`Path settings window<pathSettingsWindow>`.
 	
 Road settings
-""""""""""""""
+"""""""""""""
 
 **StraightRoad settings:** [:ref:`settings <pathSettings>` for straight paths of the segment]
 	* **Waypoint Straightroad count** 
@@ -532,7 +532,7 @@ Scene settings
 	* **Show waypoints info** : on/off info of waypoints (local index, speedlimit).
 
 Turn connection settings
-""""""""""""""
+""""""""""""""""""""""""
 
 | **Custom node turn settings** : on/off the turn settings for each :ref:`traffic node <trafficNode>`.
 | **Left turn count** : number of left turns from the :ref:`traffic node <trafficNode>`.
@@ -543,7 +543,7 @@ Turn connection settings
 .. _roadSegmentCreatorSegmentSettings:
 
 Segment handler settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
 	
@@ -556,7 +556,7 @@ Segment handler settings
 | **Snap segment to surface** : snap the segment to the surface.
 	
 Other settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~
 
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorOtherSettings.png
 		
@@ -567,14 +567,14 @@ Other settings
 | **Save to prefab** : save segment to prefab.
 
 Buttons
-""""""""""""""
+"""""""
 
 | **Rotate -90°/90°** : rotate segment by 90° degree.
 | **Recreate** : recreate segment.
 | **Clear** : clear segment.
 
 Hotkeys
-~~~~~~~~~~~~ 
+~~~~~~~
 
 | **Capslock** : rotate segment by 90° degree.
 
@@ -582,14 +582,14 @@ Hotkeys
 .. _roadSegmentCreatorParkingBuilder:
 
 Parking Builder
-------------
+---------------
 
 A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
 
 `Youtube tutorial. <https://youtu.be/1F-8J0WC83Y>`_
 
 How To Use
-~~~~~~~~~~~~ 
+~~~~~~~~~~
 		
 #. Position a :ref:`custom segment <roadSegmentCreatorCustomSegment>` on the road where the parking spaces will be.
 
@@ -674,12 +674,12 @@ How To Use
 			.. image:: /images/road/roadSegment/ParkingBuilder/PlaceCustomSegmentSettings7.png
 
 Settings
-~~~~~~~~~~~~ 
+~~~~~~~~
 
 .. _roadSegmentCreatorParkingBuilderCommonSettings:
 
 Common
-""""""""""""""
+""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderCommon.png
 
@@ -703,7 +703,7 @@ Common
 .. _roadSegmentCreatorParkingBuilderPath:
 
 Path
-""""""""""""""
+""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPath.png
 
@@ -743,7 +743,7 @@ Path
 		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
 		
 Node
-""""""""""""""
+""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderNode.png
 
@@ -754,7 +754,7 @@ Node
 .. _roadSegmentCreatorParkingBuilderPedestrian:
 	
 Pedestrian
-""""""""""""""
+""""""""""
 
 	.. image:: /images/road/roadSegment/creator/RoadSegmentCustomParkingBuilderPedestrian.png
 
@@ -768,12 +768,12 @@ Pedestrian
 .. _roadSegmentCreatorAuto:
 
 Auto Crossroad
-------------
+--------------
 
 For automatic generation of custom crossroads, use this feature.
 
 How To Use
-~~~~~~~~~~~~ 
+~~~~~~~~~~
 
 #. Create a :ref:`Custom road segment <roadSegmentCreatorCustomSegment>`.
 
@@ -807,15 +807,15 @@ How To Use
 .. _deadEnd:
 
 Dead End
-------------
+--------
 
 Destroy
-~~~~~~~~~~~~
+~~~~~~~
 
 If you want traffic to be destroyed at the dead end (e.g. when it drives beyond the scene), enable the `Destroy vehicle` type in the :ref:`Traffic node <trafficNode>`.
 
 U Turn
-~~~~~~~~~~~~ 
+~~~~~~
 
 To create u turn path:
 

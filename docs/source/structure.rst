@@ -1,12 +1,12 @@
 .. _structure:
 
 Structure
-============
+=========
 
 .. _projectScenes:
 
 Project Scenes
-----------------
+--------------
 
 #. **Demo** : the main optimized :ref:`demo scene <demo>` of the project (read more about scene structure :ref:`here <sceneStructure>`).
 #. **Demo Mono** : the new demo scene of the project, which contains an example of traffic & NPCs fully interacting with monobehaviour scripts (v1.1.0+).
@@ -41,7 +41,7 @@ Project Scenes
 .. _sceneStructure:
 
 Scene Hierarchy
-----------------
+---------------
 
 .. image:: /images/road/sceneStructure.png
    :alt: Scene Hierarchy Diagram
@@ -73,7 +73,7 @@ Scene Components
 .. _roadParentInfo:
 	
 Road Parent
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 The root of all crossroads in the scene.
 
@@ -82,12 +82,12 @@ The root of all crossroads in the scene.
    :align: center
 
 How To Use
-""""""""""""""
+""""""""""
 
 Read more in the :ref:`Road Network Workflow <roadNetworkWorkflow>` section.
 
 Settings
-""""""""""""""
+""""""""
 
 Connection waypoint offset
   Automatically adds a :ref:`waypoint <pathWaypointInfo>` at each selected offset to the :ref:`automatically <autoPathConnection>` created :ref:`paths <path>` (if the value is greater than zero).
@@ -102,7 +102,7 @@ Connect crosswalks
   Auto-connect :ref:`Pedestrian node <pedestrianNode>` crosswalks.
 
 Utils
-""""""""""""""
+"""""
 
 Add crossroads
   Adds a scene crossroad if it is missing.
@@ -114,7 +114,7 @@ Clear unattached paths
   Deletes the :ref:`paths <path>` that are not connected to any :ref:`TrafficNode <trafficNode>`.
 
 Buttons
-""""""""""""""
+"""""""
 
 Connect segments
   Creates the :ref:`automatically generated paths <autoPathConnection>` for missing paths of :ref:`external <trafficNodeConnectionInfo>` nodes.
@@ -128,25 +128,25 @@ Bake path data
 .. _subsceneGenerator:
 
 Entity Subscene Generator
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /images/road/installation/HubInfo.png
    :alt: Entity Subscene Generator View
    :align: center
 
 Where To Find
-""""""""""""""
+"""""""""""""
 
 1. Create a :ref:`city base <cityCreation>` **[if missing, optional step]**.
 2. Select the :ref:`Hub <hub>` in the scene.
 
 How To Use
-""""""""""""""
+""""""""""
 
 Read more in the :ref:`Road Entity Subscene <roadEntitySubscene>` section.
 
 Settings
-""""""""""""""
+""""""""
 
 Entity subscene save path
   Save path of the :ref:`subscene <subscene>`.
@@ -173,7 +173,7 @@ Copy physics shapes
   On/off feature of physics shape :ref:`cloning <physicsShapeTransfer>`.
 
 Config
-""""""""""""""
+""""""
 
 Copy to subscene
   The :ref:`subscene <subscene>` configs will be synchronized with the :ref:`main scene <mainScene>`.
@@ -182,7 +182,7 @@ Copy from subscene
   The :ref:`main scene <mainScene>` configs will be synchronized with the :ref:`subscene <subscene>`.
 
 Buttons
-""""""""""""""
+"""""""
 
 Generate
   Generates the :ref:`subscene <subscene>`.
@@ -191,7 +191,7 @@ Move back
   Move the road from the :ref:`subscene <subscene>` to the :ref:`main scene <mainScene>` (can be useful for editing roads in the :ref:`main scene <mainScene>` due to Editor performance).
   
 PedestrianNode Transfer Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tool for cloning :ref:`Pedestrian nodes <pedestrianNode>` that are part of the prefab from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
 
@@ -202,14 +202,14 @@ Tool for cloning :ref:`Pedestrian nodes <pedestrianNode>` that are part of the p
 .. note:: For example, can be useful to separate the `Building prefab` asset and its attached :ref:`Pedestrian nodes <pedestrianNode>`.
 
 How To Use
-""""""""""""""
+""""""""""
 
 Automatically used by the :ref:`Entity Subscene Generator <subsceneGenerator>`.
 
 .. _physicsShapeTransfer:
 
 PhysicsShape Transfer Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * This tool only works for `DOTS` if the `DOTS` simulation type is selected in the :ref:`General Settings <generalSettingsConfig>`.
 * Tool for cloning physical shapes from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>`.
@@ -222,7 +222,7 @@ Current project use cases:
 .. note:: The tool can only use one tool at a time, either an :ref:`Entity Subscene Generator <subsceneGenerator>` or a :ref:`SubSceneChunk Creator <subSceneCreator>`.
 
 Settings
-""""""""""""""
+""""""""
 
 .. image:: /images/road/installation/PhysicsShapeTransferService.png
    :alt: PhysicsShape Transfer Service Settings View

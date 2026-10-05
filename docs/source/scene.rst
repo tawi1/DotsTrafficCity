@@ -3,7 +3,7 @@ Scene Handle
 ************
 
 Bootstrap
-============
+=========
 
 * To start the scene automatically on the `Build` application, tick the `Auto-bootstrap` option in the `CityEntryPoint` (in the `Editor`, the scene loads by default).
 

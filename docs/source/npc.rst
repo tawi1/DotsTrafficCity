@@ -1,16 +1,16 @@
 .. _npcData:
 
 Npc
-=====
+===
 
 .. contents::
    :local:
 	
 Configs
-------------
+-------
 
 Npc Common Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/npc/NpcCommonConfig.png
 	

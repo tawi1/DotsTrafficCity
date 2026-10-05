@@ -7,12 +7,12 @@ Player Character
    :local:
 
 Hybrid DOTS
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 The player character behaviour is handled by the `DOTS` systems.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Add an `Animator` component to your character if it's missing & assign a `PlayerBaseController` if you want to use project animations.
 #. Add all required components to your character from the list below.
@@ -22,7 +22,7 @@ How To Create
 #. Select your character from the list in the :ref:`PlayerSpawner <playerSpawner>`.
 
 Components
-""""""""""""""
+""""""""""
 
 	.. image:: /images/configs/player/PlayerNpcComponents.png
 	
@@ -49,19 +49,19 @@ Components
 .. _playerNpcFactory:
 	
 Factory
-""""""""""""""
+"""""""
 
 Factory that contains player `Hybrid DOTS` NPCs.
 
 	.. image:: /images/configs/player/PlayerNpcFactory.png
 			
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 The player character behaviour is handled by the mono controller.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Add animator to your model & assign `PlayerBaseController` into the controller field.
@@ -73,7 +73,7 @@ How To Create
 	.. note:: `Demo Mono` scene & `Gangster Mono outside Player` prefab are examples.
 	
 Components
-""""""""""""""
+""""""""""
 
 * **Player actor** : camera tracking component **[required]**.
 * **Character controller** : default unity component **[required]**.
@@ -91,7 +91,7 @@ Components
 .. _playerHybridMonoFactory:
 
 Factory
-""""""""""""""
+"""""""
 
 Factory that contains player `Hybrid Mono` NPCs.
 

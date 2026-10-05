@@ -1,8 +1,8 @@
 .. _pedestrian:
 
-*******
+**********
 Pedestrian
-*******
+**********
 
 	.. toctree::
 		:maxdepth: 2

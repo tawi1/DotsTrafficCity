@@ -1,34 +1,34 @@
 .. _demoConfigs:
 
 Demo Configs
-=====
+============
 
 .. contents::
    :local:
 	
 Configs
-------------
+-------
 
 .. _generalSettingsDemo:
 
 General Settings Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Config to quickly on/off optional features.
 
 Where To Find
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsOnScene.png
 	
 Config Example	
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsConfigDemo.png
 		:scale: 70%
 
 Player Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 	
 **Player agent type:**
 	* **Player** : player will be spawned.
@@ -60,12 +60,12 @@ Player Target Settings
 | **Default aim point Y position** : default Y-axis crosshair position.	
 
 Common Car Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 | **Car visual damage system support** : on/off visual hit feature for traffic vehicles by bullets.	
 
 Traffic Car Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 | **Has traffic** : on/off traffic vehicle in the city.	
 
@@ -81,7 +81,7 @@ Traffic Car Settings
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 
 Pedestrian Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 | **Has pedestrian** : on/off pedestrians in the city.	
 
@@ -92,7 +92,7 @@ Pedestrian Settings
 | **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due bullets etc...).
 
 Other Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 **World simulation type:**
 	* **DOTS** : simulation of traffic & pedestrians entirely in `DOTS` space.
@@ -114,7 +114,7 @@ Other Settings
 | **Show FPS** : on/off fps ui panel.
 		
 Npc Ground Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/npc/NpcGroundConfig.png
 

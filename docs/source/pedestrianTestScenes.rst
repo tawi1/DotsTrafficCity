@@ -1,10 +1,10 @@
 .. _pedestrianTestScene:
 
 Pedestrian Test Scene
-=====
+=====================
 
 How To Use
-------------
+----------
 
 `Youtube tutorial. <https://youtu.be/sgFJLXiP4og>`_
 
@@ -24,14 +24,14 @@ How To Use
 .. _pedestrianLocalSpawner:
 
 Pedestrian Local Spawner
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/PedestrianDebugLocalSpawner.png
 	
 .. _pedestrianLocalSpawnerCommonSettings:
 
 Common settings
-""""""""""""""
+"""""""""""""""
 
 | **Spawn on play** : spawn the pedestrian after the start of the scene.
 | **Show scene buttons** : show add :ref:`pedestrian node <pedestrianNode>` button to the component in the scene
@@ -40,13 +40,13 @@ Common settings
 | **Show child nodes only** : only the child :ref:`pedestrian nodes <pedestrianNode>` will be shown.
 
 Spawn info
-""""""""""""""
+""""""""""
 
 | **Pedestrian node** : linked :ref:`pedestrian node <pedestrianNode>`.
 | **Spawn amount** : number of pedestrians that will be spawned in the :ref:`pedestrian node <pedestrianNode>`.
 
 Test Cases
-------------
+----------
 
 Walking Test
 ~~~~~~~~~~~~
@@ -62,7 +62,7 @@ Test case to test the :ref:`walking parameters <pedestrianSettingsConfig>`.
 .. _pedestrianTalkAreaTest:
 	
 TalkArea Test
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/pedestrian/TalkAreaTest.png
 	`Source node.`
@@ -71,7 +71,7 @@ TalkArea Test
 	`Result.`
 	
 Crossroad Test
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Test case of pedestrians waiting at traffic lights and crossing the crossroad.
 
@@ -87,7 +87,7 @@ Test case of pedestrians waiting at traffic lights and crossing the crossroad.
 .. _pedestrianBenchTest:
 	
 Bench Test
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 Test case to test bench :ref:`seating <pedestrianNodeSit>`.
 
@@ -100,7 +100,7 @@ Test case to test bench :ref:`seating <pedestrianNodeSit>`.
 .. _pedestrianHouseTest:
 	
 House & Idle Test
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Test case for :ref:`idling <pedestrianNodeIdle>` and entering the :ref:`house <pedestrianNodeHouse>`.
 
@@ -113,7 +113,7 @@ Test case for :ref:`idling <pedestrianNodeIdle>` and entering the :ref:`house <p
 .. _pedestrianNavigationTest:
 
 Navigation Test
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Test case for :ref:`navigation <pedestrianNavmeshNavigation>`.
 Red circle navigation is disabled. Green circle navigation is enabled.

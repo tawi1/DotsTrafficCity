@@ -1,7 +1,7 @@
 .. _chunkRoadDemo:
 
 Chunk Road Demo
-=====
+===============
 
 Sample scene demonstrating the road chunks added at runtime.
 
@@ -15,6 +15,6 @@ Installation
 * Open the `Runtime ChunkRoad Demo` to get started.
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 The chunk is created in the same way as in the :ref:`Runtime tile scene <runtimeTileDemo>`.

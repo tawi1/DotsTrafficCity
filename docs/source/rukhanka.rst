@@ -1,10 +1,10 @@
 .. _rukhanka:
 
 Rukhanka - ECS Animation System
-============
+===============================
 
 How To Use
-------------
+----------
 
 #. Buy & download, import the following asset plugin:
 

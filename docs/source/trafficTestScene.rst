@@ -1,10 +1,10 @@
 .. _trafficTestScene:
 
 Traffic Test Scene
-=====
+==================
 
 How To Use
-------------
+----------
 
 `Youtube tutorial. <https://youtu.be/wYSuXm7ekFI>`_
 	
@@ -18,12 +18,12 @@ How To Use
 #. Learn more about the :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` settings.
 
 Test Cases
-------------
+----------
 
 .. _trafficTestSceneObstacle:
 
 Check Obstacle
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Config :ref:`obstacle <trafficCarObstacleConfig>` parameters.
 
@@ -36,7 +36,7 @@ Config :ref:`obstacle <trafficCarObstacleConfig>` parameters.
 .. _trafficTestSceneNextConnectedPath:
 
 Check Next Connected Path
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Config :ref:`Next connected path <trafficCarObstacleConfig>` parameter.
 
@@ -50,12 +50,12 @@ Config :ref:`Next connected path <trafficCarObstacleConfig>` parameter.
 .. _trafficTestSceneIntersectedPath:
 
 Check Intersected Path
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 Config :ref:`Intersected <trafficCarObstacleConfig>` parameters.
 
 Two cars
-""""""""""""""
+""""""""
 
 	.. image:: /images/testscenes/traffic/IntersectedPathTest.png
 	`Source settings.`
@@ -64,7 +64,7 @@ Two cars
 	`Test case result.`
 	
 Multiple cars
-""""""""""""""
+"""""""""""""
 
 	.. image:: /images/testscenes/traffic/IntersectedPathTest3.png
 	`Source settings.`
@@ -75,7 +75,7 @@ Multiple cars
 .. _trafficTestSceneCrossroadJam:
 	
 Check Crossroad Jam
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Config :ref:`Avoid crossroad jam <trafficCarObstacleConfig>` parameter.
 
@@ -88,12 +88,12 @@ Config :ref:`Avoid crossroad jam <trafficCarObstacleConfig>` parameter.
 .. _trafficTestSceneChangeLane:
 	
 Check Change Lane
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Config :ref:`parameters <trafficCarChangeLaneConfig>`.
 
 Traffic jam in the lane
-""""""""""""""
+"""""""""""""""""""""""
 
 	.. image:: /images/testscenes/traffic/ChangeLaneTest1.png
 	`Source settings.`
@@ -104,7 +104,7 @@ Traffic jam in the lane
 .. _trafficTestSceneTrafficGroup:
 	
 Traffic fobbidden node test
-""""""""""""""
+"""""""""""""""""""""""""""
 
 	.. image:: /images/testscenes/traffic/ChangeLaneNodeTest1.png
 	`Source settings.`
@@ -113,7 +113,7 @@ Traffic fobbidden node test
 	`Test case result.`
 	
 Multiple lanes test 1
-""""""""""""""
+"""""""""""""""""""""
 
 	.. image:: /images/testscenes/traffic/ChangeLaneTest3.png
 	`Source settings.`
@@ -122,7 +122,7 @@ Multiple lanes test 1
 	`Test case result.`
 	
 Multiple lanes test 2
-""""""""""""""
+"""""""""""""""""""""
 
 	.. image:: /images/testscenes/traffic/ChangeLaneTest5.png
 	`Source settings.`
@@ -133,7 +133,7 @@ Multiple lanes test 2
 .. _trafficTestSceneChangeLane4:
 	
 High speed change lane
-""""""""""""""
+""""""""""""""""""""""
 	
 	.. image:: /images/testscenes/traffic/ChangeLaneTest7.png
 	`Source settings.`
@@ -145,7 +145,7 @@ High speed change lane
 .. _trafficTestSceneParking:
 	
 Check Traffic Parking
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Config :ref:`parameters <trafficCarParkingConfig>`.
 
@@ -161,7 +161,7 @@ Config :ref:`parameters <trafficCarParkingConfig>`.
 .. _trafficTestSceneTrafficReverse:
 	
 Check Traffic Reverse
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/testscenes/traffic/BackwardTest1.png
 	`Source.`
@@ -172,7 +172,7 @@ Check Traffic Reverse
 .. _trafficTestSceneAvoidance:
 	
 Check Avoidance
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Test case of traffic :ref:`avoidance config <trafficAvoidance>`.
 
@@ -188,14 +188,14 @@ Test case of traffic :ref:`avoidance config <trafficAvoidance>`.
 .. _testSceneTrafficCarRoadDebugger:
 
 Traffic Road Debugger	
-------------
+---------------------
 
 	.. image:: /images/testscenes/traffic/TrafficCarRoadDebugger.png
 
 .. _testSceneTrafficCarRoadDebuggerSceneSettings:
 
 Scene settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 	
 | **Vehicle data collection** : reference to the :ref:`collection <vehicleCollection>` of all vehicles.
 | **Enable visual debug** : on/off visual debug in the scene.
@@ -203,7 +203,7 @@ Scene settings
 | **Highlight path after add** : on/off highlight :ref:`path <path>` after adding.
 	
 Spawn settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 | **Spawn on play** : spawn the cars after the start of the scene.
 | **Auto clear on spawn** : previously created cars in the test case will be destroyed on a new spawn.
@@ -211,20 +211,20 @@ Spawn settings
 | **Disable lane changing** : forcibly disabling the ability for vehicles to change lanes.
 
 Other settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 | **Show description** : show description of test case.
 
 Traffic spawn test entry
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-| **Related trafficlight crossroad** : linked :ref:`trafficlight crossroad <trafficLightCrossroad>`.
+| **Related trafficlight crossroad** : linked :ref:`traffic light crossroad <trafficLightCrossroad>`.
 | **Path** : linked :ref:`path <path>` for the spawned cars.
-| **Highlight** : on/off highlight :ref:`path <path>`.
-| **Show info** : on/off visual info of spawned cars in the scene.
-| **Idle car** : on/off vehicle idle of the spawned vehicle.
-| **Normalized path position** : min approach speed.
-| **Spawn delay** : delayed vehicle spawn after test case spawn has started.
+| **Highlight** : enables/disables path highlighting.
+| **Show info** : enables/disables visual debug labels for spawned cars.
+| **Idle car** : enables/disables idle state upon spawning.
+| **Normalized path position** : normalized spawn position along the path [0..1].
+| **Spawn delay** : delay before spawning vehicles after test scene startup.
 
 
 

@@ -1,18 +1,18 @@
 .. _trafficNodeDebug:
 
 Traffic Node Debug
-============
+==================
 
 .. contents::
    :local:
 
 Traffic Node Data Viewer
-------------
+------------------------
 
 Tool for finding :ref:`traffic nodes <trafficNode>` with filtering of selected parameters that differ from prefab.
 
 How To Open
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 In the `Unity` toolbar:
 
@@ -21,13 +21,13 @@ In the `Unity` toolbar:
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDataViewerOpenExample.png		
 	
 How To Filter
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 #. Enable `Filter node data` option.
 #. If you need to filter by a selected parameter enable `Custom param filter` and add desired parameters.
 
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 	
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDataViewer.png		
 	
@@ -53,7 +53,7 @@ Settings
 	
 		
 Traffic Node Debug
-------------
+------------------
 
 For debugging :ref:`traffic node <trafficNode>` entities in runtime.
 
@@ -62,7 +62,7 @@ For debugging :ref:`traffic node <trafficNode>` entities in runtime.
 .. _trafficNodeIndexDebug:
 
 Index Debug
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 Shows the node index.
 For example: 450 (E: 3308) - [local :ref:`index for spawning <trafficDebugSpawnHelper>` a vehicle] [entity index].
@@ -70,21 +70,21 @@ For example: 450 (E: 3308) - [local :ref:`index for spawning <trafficDebugSpawnH
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerIndex.png		
 
 Available Debug
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Shows the availability of a node for spawning.
 
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerAvailableExample.png		
 
 Light State Debug
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Shows :ref:`light state <trafficLightState>` node traffic.
 
 	.. image:: /images/debuggers/trafficNode/TrafficNodeDebuggerLightExample.png	
 
 Capacity Debug
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Shows the capacity of the node and the linked vehicle.
 

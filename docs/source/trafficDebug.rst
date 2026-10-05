@@ -1,172 +1,172 @@
 .. _trafficDebug:
 
 Traffic Debug
-============
+=============
 
 .. contents::
    :local:
 
 How To Open
-------------
+-----------
 
-`Youtube tutorial. <https://youtu.be/rj1Rww-9Yq8>`_
+`YouTube tutorial. <https://youtu.be/rj1Rww-9Yq8>`_
 
-On the scene select:
+In the scene, select:
 
 	`CityDebugger/TrafficDebugger/`
 
 .. _trafficDebugSpawnHelper:
 
 Traffic Spawn Button Helper
-------------
+---------------------------
 
-For manual spawn of a car by the :ref:`selected index <trafficNodeIndexDebug>`.
+Manually spawns a vehicle at the :ref:`selected index <trafficNodeIndexDebug>`.
 
 	.. image:: /images/debuggers/traffic/TrafficCarSpawnButtonHelper.png		
 	
 Traffic Debugger
-------------
+----------------
 
 	.. image:: /images/debuggers/traffic/TrafficCarDebugger.png		
 	
-| **Enable debug** : on/off debugger.
+| **Enable debug** : enables/disables traffic debugging.
 
 Debugger Type 
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 
 Default
-""""""""""""""""""
+"""""""
 
 	.. image:: /images/debuggers/traffic/TrafficCarDebuggerExample.png	
 	
 Target  
-""""""""""""""""""
+""""""
 
-Shows the target position of the vehicle.
+Shows the current target position of the vehicle.
 
 Approach speed 
-""""""""""""""""""
+""""""""""""""
 
-Shows the vehicle's approach speed.
+Shows the vehicle's calculated approach speed.
 
 State 
-""""""""""""""""""
+"""""
 
-Shows the state of the vehicle.
+Shows the current internal state of the vehicle.
 
 Idle State
-""""""""""""""""""
+""""""""""
 
-Shows the reason for the vehicle's idle state.
+Shows the root cause of the vehicle's idle state.
 
 Target index 
-""""""""""""""""""
+""""""""""""
 
-Shows the target indexes of the vehicle.
+Shows the active target node index of the vehicle.
 
 Path index
-""""""""""""""""""
+""""""""""
 
 Shows the global path index of the vehicle.
  
 Speed limit
-""""""""""""""""""
+"""""""""""
 	
-Shows the current speed and the speed limit of the vehicle.
+Shows the current speed and speed limit of the vehicle.
 	 
 	.. image:: /images/debuggers/traffic/TrafficCarDebuggerSpeedLimitExample.png		
 
 Change lane
-""""""""""""""""""
+"""""""""""
 
-Shows the change lane point on the lane in the scene.	
+Visualizes the target lane change point along the lane.
 
 Collision
-""""""""""""""""""
+"""""""""
 
-Shows the collision direction of the vehicle.
+Shows the detected collision contact normal and direction.
 
 Obstacle
-""""""""""""""""""
+""""""""
 
-Shows the obstacle entity & obstacle reason type of the vehicle.
+Shows the detected obstacle entity and reason type.
 
-Obstacle reason type:
+Obstacle reason types:
     * **Undefined**
-    * **DefaultPath** : default obstacle in the current path or next connected path of the vehicle.
-    * **NeighborPath** : obstacle on neighbouring paths, that starts from the current path.
-    * **JamCase_1** : the vehicle stays at the entrance of the crossroad & doesn't enter to avoid traffic jams.
-    * **FewChangeLaneCars** : obstacle when the current vehicle and the obstacle vehicle change lanes at the same time.
-    * **ChangingLane** : the obstacle vehicle changes lanes to the lane of the current vehicle.
-    * **Intersect_1_TargetCarCloseToIntersectPoint** : target obstacle vehicle too close to intersection of two paths (both vehicles are close, but the target vehicle is closer).
-    * **Intersect_2_TargetCarCloseToIntersectPoint** : target obstacle vehicle too close to intersection of two paths (only target vehicle is too close).
-    * **Intersect_3_OtherHasPriority** : vehicles meeting at an intersection of two paths have different priorities, with the higher priority vehicle passing first (unless the vehicle is too close to the intersection).
-    * **Intersect_4_SamePriority** : vehicles that meet at an intersection of two paths have the same priority, whichever vehicle is closer to the intersection that passes first.
+    * **DefaultPath** : obstacle present along the current or next connected path.
+    * **NeighborPath** : obstacle detected on a neighboring path originating from the same node.
+    * **JamCase_1** : car stops before entering an intersection to avoid gridlock.
+    * **FewChangeLaneCars** : conflict caused by multiple cars changing lanes simultaneously.
+    * **ChangingLane** : lead vehicle is actively changing into the current lane.
+    * **Intersect_1_TargetCarCloseToIntersectPoint** : conflicting car is closer to the intersection crossing point.
+    * **Intersect_2_TargetCarCloseToIntersectPoint** : conflicting car is already at the intersection point.
+    * **Intersect_3_OtherHasPriority** : yielding to another vehicle with higher road priority.
+    * **Intersect_4_SamePriority** : vehicles have equal priority; the car closer to the intersection proceeds first.
 	
 No target
-""""""""""""""""""
+"""""""""
 
-Shows the list of vehicles without a destination.
+Lists vehicles currently without an assigned destination node.
 	 
 Settings
-~~~~~~~~~~~~ 
+~~~~~~~~
 	 
-| **Text color** : colour of scene text UI.
-| **Show obstacle info** : display obstacles for vehicles (red color vehicle has obstacle).
-| **Show common info** : show the entity index of the vehicles.
+| **Text color** : color of the in-scene debug labels.
+| **Show obstacle info** : highlights cars with active obstacles in red.
+| **Show common info** : displays entity IDs above vehicles.
 
 .. _trafficCarRaycastDebugger:
 
 Traffic Raycast Debugger
-------------
+------------------------
 
-Shows the raycast box of the car. (:ref:`Config <trafficCarRaycastConfig>`) (:ref:`info <trafficCarRaycastInfo>`)
+Visualizes the detection box volume of vehicles (:ref:`Config <trafficCarRaycastConfig>`).
 
 	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebugger.png		
 	
-| **Enable debug** : on/off debugger.
+| **Enable debug** : enables/disables raycast volume visualization.
 
 Example
-~~~~~~~~~~~~
+~~~~~~~
 
 	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebuggerExample.png		
 
 .. _trafficCarNpcObstacleDebugger:
 
 Traffic NpcObstacle Debugger
-------------
+----------------------------
 
-Shows the calculation area and the vehicle's obstacle NPCs.
+Visualizes the NPC calculation area and detected pedestrian obstacles.
 
 	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebugger.png		
 	
-| **Enable debug** : on/off debugger.
-| **Area color** : colour of the area where the vehicle calculates the npc obstacles.
-| **Selected index** : only for this entity index will debug be enabled (-1 all entities).
+| **Enable debug** : enables/disables visualization.
+| **Area color** : color of the NPC calculation bounding box.
+| **Selected index** : restricts debugging to a single entity index (-1 displays all).
 	
 Example
-~~~~~~~~~~~~
+~~~~~~~
 
 	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebuggerExample.png		
 	
 Traffic Public Debugger
-------------
+-----------------------
 	
-Shows :ref:`public transport traffic <trafficPublic>` data.
+Visualizes :ref:`public transport <trafficPublic>` route and schedule data.
 	
 	.. image:: /images/debuggers/traffic/TrafficPublicDebugger.png		
 	
-| **Enable debug** : on/off debugger.
-| **Text color** : colour of scene text UI.
+| **Enable debug** : enables/disables visualization.
+| **Text color** : text label color.
 
 Example
-~~~~~~~~~~~~
+~~~~~~~
 
 	.. image:: /images/debuggers/traffic/TrafficPublicDebuggerExample.png		
 	
 Traffic Light Debugger
-------------
+----------------------
 
-Shows the :ref:`state <trafficLightState>` of :ref:`traffic light objects <trafficLightObject>`.
+Visualizes the active :ref:`state <trafficLightState>` of scene :ref:`traffic light objects <trafficLightObject>`.
 
-	.. image:: /images/debuggers/traffic/TrafficLightDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficLightDebugger.png

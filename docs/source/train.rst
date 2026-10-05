@@ -4,10 +4,10 @@ Train
 =====
 
 Mono
-------------
+----
 
 How To Create
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 
 #. Create a vehicle as well as :ref:`Arcade vehicle <hybridMonoVehicle>`.
 #. In the `Traffic preset`, open `Hull` prefab (all presets assigned in `TrafficCarEntityPoolBakerRef`, in this case :ref:`HybridEntityMonoPhysics <entityType>` type).
@@ -51,7 +51,7 @@ How To Create
 #. Create a :ref:`Public route <trafficPublicRoute>` & select `Forbidden/Everything` :ref:`Traffic Group Mask <groupMaskType>` for each path of the route to prevent other vehicles from spawning.
 
 Settings
-------------
+--------
 
 Train settings for the built-in solution can be found in ``Configs/TrafficCarConfigs/RailConfig/Train Settings``.
 

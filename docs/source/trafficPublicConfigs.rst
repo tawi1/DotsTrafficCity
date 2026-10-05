@@ -1,10 +1,10 @@
 .. _trafficPublicConfigs:
 
 Public Traffic Configs
-============
+======================
 
 Traffic Public Spawner Settings
-------------
+-------------------------------
 
 Spawning config for :ref:`Traffic Public <trafficPublic>` vehicles.
 

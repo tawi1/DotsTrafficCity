@@ -1,13 +1,13 @@
 .. _playerCar:
 
 Player Car
-----------------
+----------
 
 .. contents::
    :local:
 
 Common Info
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 * Each player car only works in :ref:`Hybrid custom physics <entityType>` type & consists of 2 parts: `DOTS` entity is handled by DOTS systems & `Monobehaviour` hybrid skin (required for camera tracking & npc car layout) that follows the binded :ref:`DOTS entity <playerHybridDots>`.
 * Player hybrid skin car should have following components:
@@ -22,13 +22,13 @@ Common Info
 .. _playerHybridDots:
 
 Hybrid DOTS
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 * Player vehicle physics handled by `DOTS` systems.
 * The hybrid skin follows the `DOTS` entity.
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Open :ref:`Car Prefab Creator <carPrefabCreator>` & set `Car type` to `Player` in the `Prefab` tab.
 #. Create a vehicle using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
@@ -40,7 +40,7 @@ How To Create
 .. _playerHybridMono:
 
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 * Player vehicle physics handled by custom user's `Monobehaviour physics plugin`.
 * Unlike the :ref:`Hybrid DOTS <playerHybridDots>`, the entity following & presents collider for `DOTS` world without mesh representation.
@@ -54,7 +54,7 @@ Hybrid Mono
 	* `Sim-Cade Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/sim-cade-vehicle-physics-243624>`_
 
 How To Create
-""""""""""""""
+"""""""""""""
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config (make sure that config on the :ref:`subscene <subscene>` has the same value).
 #. Open the :ref:`Car Prefab Creator <carPrefabCreator>` & set `Car type` to `Player` in the `Prefab` tab.
@@ -73,10 +73,10 @@ How To Create
 .. _playerCarPool:
 
 Player Car Pool
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Where To Find
-""""""""""""""
+"""""""""""""
 
 In the scene:
 
@@ -85,12 +85,12 @@ In the scene:
 	.. image:: /images/configs/player/PlayerCarPool.png
 	
 How To Use
-""""""""""""""
+""""""""""
 
 Player cars spawned by `PlayerCarSpawner`.
 
 Example
-""""""""""""""
+"""""""
 
 	.. image:: /images/configs/player/PlayerCarPoolExample.png
 	

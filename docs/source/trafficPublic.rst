@@ -1,11 +1,11 @@
 .. _trafficPublic:
 
 Traffic Public
-=====
+==============
 
 Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>` and picking up passengers at :ref:`stop station nodes <pedestrianNodeStopStation>`.
 
-`Youtube tutorial. <https://youtu.be/6y1c_iNpT7M>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=H-FXHN7_cfRnMCMK&t=1990>`_
 
 How To Create
 ------------
@@ -19,12 +19,12 @@ How To Create
 #. Create the :ref:`TrafficPublicRoute <trafficPublicRoute>` entity and set the :ref:`CarModel <carModel>` according to created public transport vehicle. **[Optional step]**
 
 Components
-------------
+----------
 
-.. _trafficPublicAuthoring
+.. _trafficPublicAuthoring:
 
 TrafficPublicAuthoring
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~~
 
 Authoring component that contains settings for public transport.
 
@@ -38,7 +38,7 @@ Authoring component that contains settings for public transport.
 .. _trafficPublicCarCapacity:
 
 Car capacity authoring
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~~
 
 Authoring component that contains capacity settings of the vehicle.
 
@@ -56,7 +56,7 @@ Authoring component that contains capacity settings of the vehicle.
 .. _vehicleEntryAuthoring:
 
 VehicleEntryAuthoring
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/entities/trafficCar/VehicleEntryAuthoring.png
 

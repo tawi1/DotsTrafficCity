@@ -52,7 +52,7 @@ For Player-Controlled Vehicles (Hybrid)
    In :ref:`General settings <generalSettingsConfig>`, ensure that **Emergency Vehicle Support** is enabled.
    
 2. **Attach Authoring Component**:
-   Add ``EmergencyVehicleAuthoring`` to the root GameObject or parent of your hybrid player car.
+   Add ``EmergencyVehicleAuthoring`` to the root GameObject or parent of your :ref:`hybrid player car <playerCustom>`.
 
 3. **Runtime Initialization**:
    During vehicle instantiation, call ``Initialize()`` via your vehicle setup pipeline to bind the ``EmergencyVehicleComponent`` to the player's ECS Entity.

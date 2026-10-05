@@ -14,6 +14,7 @@ Installation & Setup
 #. Unpack the ``DotsCity/Packages/Upgrades/FishNetPrefabs`` package.
 #. In the :ref:`Cull Config <cullConfig>`, set the calculation mode to **Multiplayer Calculate Distance** or **Multiplayer Camera View**.
 #. Drag & drop ``FishnetPrefabRoot`` into the scene. In that root, on the ``PrefabRootResolve`` component, click the **Resolve Refs** button (for new scenes).
+#. In the ``CityEntryPoint`` object on the scene, uncheck the ``Auto Bootstrap`` option in the ``SceneBootstrap`` component (new scene only).
 #. Install the `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple players locally *(optional)*.
 #. Open the ``FishNetDemo`` scene to test the sample implementation.
 

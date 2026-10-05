@@ -8,10 +8,11 @@ Installation
 
 #. Import Netcode sample.
 #. Install `NetCode for GameObjects <https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.13/manual/index.html>`_ package.
-#. Add `CUSTOM_NETWORK` scripting define to the project settings.
+#. Add the ``CUSTOM_NETWORK`` scripting define in **Project Settings > Player > Scripting Define Symbols**.
 #. Unpack ``DotsCity/Packages/Upgrades/NetcodeGOPrefabs`` package.
 #. In the :ref:`Cull Config <cullConfig>`, set the calculation mode to `Multiplayer Calculate Distance` or `Multiplayer Camera View`.
 #. Drag & drop `NGOPrefabRoot` into the scene & in that root, in the `PrefabRootResolve` component, press the `Resolve Refs` button (new scene only).
+#. In the ``CityEntryPoint`` object on the scene, uncheck the ``Auto Bootstrap`` option in the ``SceneBootstrap`` component (new scene only).
 #. Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate multiple local players **(optional)**.
 #. Open `NGODemo` sample scene.
 

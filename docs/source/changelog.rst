@@ -3,7 +3,15 @@
 Change Log
 **********
 
-[1.9.1] - 02-10-2026
+[1.9.2] - 05-10-2026
+--------------------
+
+Changed
+~~~~~~~
+
+* Removed `Preinit` culling layer. Use the `CullStateEntityAuthoring` (or `CullStateConfigEntityAuthoring`) component to override culling layer distances instead.
+
+[1.9.1] - 03-10-2026
 --------------------
 
 Added

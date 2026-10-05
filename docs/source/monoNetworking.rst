@@ -22,7 +22,7 @@ The framework includes ready-to-use sample scenes for supported networking backe
 
 * **FishNetDemo Sample:** Out of the box, the `FishNetDemo` sample scene demonstrates integration with the FishNet networking solution.
 
-  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`FishNet Integration <fishnet>` documentation.
+  * **Documentation:** For detailed setup, configuration, and architectural breakdown, see the :ref:`FishNet Integration <fishNet>` documentation.
   * **Setup Requirements:** Requires downloading and importing the `FishNet` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, importing the `FishNetPrefabs` upgrade package, and placing `FishnetPrefabRoot` into the scene.
 
 Architecture Diagram & Execution Flow

@@ -1,4 +1,4 @@
-.. _fishnet:
+.. _fishNet:
 
 FishNet
 =======

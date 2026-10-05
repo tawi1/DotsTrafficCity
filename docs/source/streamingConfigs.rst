@@ -1,12 +1,12 @@
 .. _streamingConfigs:
 
 Configs
--------------------
+-------
 	
 .. _cullConfig:
 
 Cull Config
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 Config of the :ref:`cull point <cullPointInfo>`.
 
@@ -38,7 +38,7 @@ Config of the :ref:`cull point <cullPointInfo>`.
 .. _roadStreamingConfig:
 
 Road Streaming Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref:`subscene <subscene>`.
 
@@ -55,7 +55,7 @@ Config for :ref:`load/unload <roadStreaming>` road sections from the entity :ref
 .. _streamingLevelConfig:
 
 Streaming Level Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 Config for :ref:`load/unload <sceneStreaming>` content subscenes (DOTS subscenes only).
 

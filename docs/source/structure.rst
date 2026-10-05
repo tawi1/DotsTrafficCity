@@ -241,8 +241,8 @@ Proccesing type
   * **Stay previous** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>`, useful to keep `default collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ and `Unity.Physics collider <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ running at the same time.
   * **Disable collider** : cloning found `PhysicsShape <https://docs.unity3d.com/Packages/com.unity.physics@1.0/manual/custom-samples-physics-components.html>`_ or `Collider <https://docs.unity3d.com/ScriptReference/Collider.html>`_ to :ref:`subscene <subscene>` and disable it in the main scene.
 
-Preinit layer
-  Enable :ref:`pre-init <extendedStateList>` cull state for physics objects.
+Override culling
+  Override culling distances for DOTS static physics objects.
 
 New layer
   Assigns new layer for cloned shape.

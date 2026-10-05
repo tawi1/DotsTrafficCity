@@ -30,7 +30,7 @@ Pedestrian Node
 
 `Pedestrian node` is a node for creating a :ref:`pedestrian <pedestrianEntity>` route.
 
-`Youtube tutorial. <https://youtu.be/Jj1kShmYbrE>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=SDu2O7usJb6RlOp1&t=2190>`_
 
 	.. image:: /images/road/pedestrianNode/PedestrianNode.png
 	
@@ -257,7 +257,7 @@ CullState Info
 
 * **Culled** : entity not available for spawning.
 * **CloseToCamera** : entity available for spawning.
-* **InVisionOfCamera** : entity available for spawning only during the initial scene start (unless the :ref:`Can spawn in view <pedestrianNodeSettings>` option is enabled).
+* **InViewOfCamera** : entity available for spawning only during the initial scene start (unless the :ref:`Can spawn in view <pedestrianNodeSettings>` option is enabled).
 
 .. _pedestrianNodeCreator:
 		
@@ -266,7 +266,7 @@ Pedestrian Node Creator
 
 `Pedestrian Node Creator` is a tool to quickly create and connect :ref:`pedestrian nodes <pedestrianNode>`.
 		
-`Youtube tutorial. <https://youtu.be/ZSqvrWD9Xz4>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=fZCy6XzNCbC94m76&t=2415>`_
 		
 How To Create
 ~~~~~~~~~~~~~

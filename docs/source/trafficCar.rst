@@ -66,7 +66,7 @@ Custom Physics
 
 * Entities that are moved by the custom physical system.
 * :ref:`Hybrid Entity Custom Physics <entityType>` & :ref:`Pure Entity Custom Physics <entityType>` types refer to this.
-* `Youtube tutorial. <https://youtu.be/uxKg2lklHaw>`_
+* `Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=eLWD_bzS9i9fGDsO&t=199>`_
 
 Authoring components
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -447,7 +447,7 @@ CullState Info
 	* Cull physics (if :ref:`enabled <trafficCarOtherSettings>`) : :ref:`custom physics <customPhysicsVehicle>` & :ref:`simple physics <simplePhysicsVehicle>` temporarily converted to :ref:`no physics <noPhysicsVehicle>` entity.
 	* Cull wheel (if :ref:`enabled <trafficCarOtherSettings>`) : disabling wheel rotating.
 
-* **InVisionOfCamera** : entity fully enabled.
+* **InViewOfCamera** : entity fully enabled.
 
 .. _trafficParking:
 

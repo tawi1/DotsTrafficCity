@@ -31,7 +31,7 @@ Limitations
 Package Installation
 ====================
 
-`Youtube tutorial. <https://youtu.be/q5S5cErl32g>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=jXWDBT5EraTB17rA&t=38>`_
 
 Steps
 -----

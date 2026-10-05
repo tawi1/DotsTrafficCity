@@ -1,17 +1,17 @@
 .. _fcg:
 
 Fantastic City Generator
-============
+========================
 
 How To Use
-------------
+----------
 
 #. Buy & download, import the following asset plugin:
 
 	`Fantastic City Generator (FCG) <https://assetstore.unity.com/packages/3d/environments/urban/fantastic-city-generator-157625>`_
 
 Getting Started
-------------
+---------------
 
 #. Add the `FCG` scripting define to the `Player Settings` of the project.
 #. Open your scene.
@@ -57,7 +57,7 @@ Getting Started
 #. Select mode type depending on your needs.
 
 Editor Mode
-------------
+-----------
 
 :ref:`Road segments <roadSegment>` are connected with pregenerated prefab blocks in the `Editor`.
 

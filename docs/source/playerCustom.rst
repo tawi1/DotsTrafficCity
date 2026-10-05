@@ -1,7 +1,7 @@
 .. _playerCustom:
 
 User Custom Solution
-=====
+====================
 
 This topic about how to replace the player with a custom user solution.
 	
@@ -27,7 +27,7 @@ If you want your own script to spawn player character, follow these steps:
 #. Your player prefab character is ready.
 
 Player Car
-----------------
+----------
 
 If you want your own script to spawn player car, follow these steps:
 

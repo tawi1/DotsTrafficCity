@@ -1,8 +1,8 @@
 .. _debug:
 
-************
+*****
 Debug
-************
+*****
 
 `Youtube tutorial. <https://youtu.be/5ZtQahmDoO0>`_
 

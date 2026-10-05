@@ -1,8 +1,8 @@
 .. _sound:
 
-************
+*****
 Sound
-************
+*****
 
 Built-in
 ============
@@ -10,7 +10,7 @@ Built-in
 By default is used for all sounds in the project (if :ref:`FMOD <fmod>` is not installed).
 
 How To Use
-------------
+----------
 
 #. Create :ref:`Sound Data <soundData>` in the `Unity` project.
 
@@ -29,10 +29,10 @@ How To Use
 #. Now, we can trigger the sound using the code examples below.	
 
 Code Examples
-------------
+-------------
 
 MonoBehaviour
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 ..  code-block:: csharp
 
@@ -47,14 +47,14 @@ MonoBehaviour
 	}
 	
 Jobs
-~~~~~~~~~~~~
+~~~~
 
 If you want to create sound in Job, :ref:`read here <soundCodeExample>`.
 
 .. _fmodSound:
 
 FMOD
-============
+====
 
 `FMOD <https://www.fmod.com/docs/2.02/studio/welcome-to-fmod-studio.html>`_ is used for all sounds in the project (if `FMOD` installed).
 
@@ -80,7 +80,7 @@ Installation
 	.. image:: /images/sound/FMOD-settings.png
 
 How To Use
-------------
+----------
 
 #. Open `FMOD Studio` installed on your computer.
 
@@ -134,17 +134,17 @@ How To Use
 #. Now, we can trigger the sound from the :ref:`code <soundCodeExample>`.	
 
 Data
-============
+====
 
 .. _soundData:
 
 Sound Data
-------------
+----------
 
 Contains data about the sound.
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Select from the project context menu:
 
@@ -153,10 +153,10 @@ Select from the project context menu:
 	.. image:: /images/sound/SoundDataCreation.png
 	
 Settings
-~~~~~~~~~~~~
+~~~~~~~~
 
 Built-in
-""""""""""""""
+""""""""
 
 	.. image:: /images/sound/SoundDataBuiltin.png
 	
@@ -167,7 +167,7 @@ Built-in
 | **Audio clip** : reference to `AudioClip <https://docs.unity3d.com/ScriptReference/AudioClip.html>`_ .
 
 FMOD
-""""""""""""""
+""""
 
 	.. image:: /images/sound/SoundDataExample.png
 	
@@ -178,7 +178,7 @@ FMOD
 .. _soundContainer:
 
 Sound Data Container
-------------
+--------------------
 
 Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
 
@@ -189,12 +189,12 @@ Contains data on all :ref:`sounds <soundData>` in the `Unity` project.
 .. _soundCodeExample:
 
 Code Examples
-============
+=============
 
 .. _soundType:
 
 Sound Types
-------------
+-----------
 
 * **Default** : default sound entity.
 * **One Shot** : entity played once & destroyed afterwards.
@@ -205,10 +205,10 @@ Sound Types
 .. _soundCodeHowToCreate:
 
 How To Create
-------------
+-------------
 
 EntityManager methods
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: csharp
 
@@ -226,7 +226,7 @@ EntityManager methods
 	// Creation of a sound entity that will be a child of a given entity.
 	
 CommandBuffer methods
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Burst compatible methods.
 
@@ -243,7 +243,7 @@ Burst compatible methods.
 .. _soundPrefabExample:
 
 Create prefab query method
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 ..  code-block:: csharp
 
@@ -251,7 +251,7 @@ Create prefab query method
 	// Get `EntityQuery` with the selected `Sound type`.
 	
 Create sound example
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: csharp
 
@@ -275,7 +275,7 @@ Create sound example
 		}
 	
 Params
-~~~~~~~~~~~~
+~~~~~~
             
 * soundId : id of sound taken from :ref:`sound data <soundData>`.
 * soundPrefabEntity : sound :ref:`prefab entity <soundPrefabExample>` taken from :ref:`EntityQuery <soundPrefabExample>`.
@@ -283,7 +283,7 @@ Params
 * volume : volume of the sound (0..1 range).
 	
 How To Play
-------------
+-----------
 
 ..  code-block:: csharp
 	
@@ -325,12 +325,12 @@ How To Play
 	}
 	
 How To Destroy
-------------
+--------------
 
 Enable the `PooledEventTag` component in the `sound` entity.
 
 How To Loop
-------------
+-----------
 
 #. Create a :ref:`Sound entity <soundCodeHowToCreate>`.
 #. Add a `LoopSoundData` component (assign a `Duration` value).

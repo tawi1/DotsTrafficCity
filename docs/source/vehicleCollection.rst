@@ -1,7 +1,7 @@
 .. _vehicleCollection:
 
 Vehicle Collection
-=====
+==================
 
 The `Vehicle collection` contains data on all vehicles in the city and their :ref:`shared settings <sharedSoundSettings>`.
 
@@ -9,7 +9,7 @@ The `Vehicle collection` contains data on all vehicles in the city and their :re
 		:scale: 60%
 
 Entity Conversion
-----------------
+-----------------
 
 Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref:`EntitySubScene <subscene>` subscene.
 
@@ -17,18 +17,18 @@ Vehicle collection assigned to the `VehicleDataHolder` and converted in the :ref
 
 
 How To
-----------------
+------
 
 Add To Collection
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 	
 Vehicles can only be added to the collection using the :ref:`Car Prefab Creator <carPrefabCreator>` tool.
 	
 Override Settings
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Steps
-""""""""""""""
+"""""
 
 #. Tick on `Show Custom Data`.
 
@@ -58,14 +58,14 @@ Steps
 .. _trafficId:
 
 Unique ID
-----------------
+---------
 
 | **ID** - is the unique, immutable ID based on the main mesh name of the vehicle.
 
 .. _carModel:
 
 Car Model
-----------------
+---------
 
 | **Car model** - the name of the vehicle that is assigned to the :ref:`Vehicle data <vehicleCollection>` and associated with an immutable :ref:`ID <trafficId>` (:ref:`car model index <carModelIndex>` can be found in the :ref:`Collection <vehicleCollection>` before the name of the car). 
 
@@ -75,14 +75,14 @@ Car Model
 .. _carModelIndex:
 
 Car Model Index
-----------------
+---------------
 
-| **Car model index** - model index that used for spawning, can be found in the :ref:`Collection <vehicleCollection>` before the name of the car.
+| **Car model index** - model index used for spawning, can be found in the :ref:`Collection <vehicleCollection>` before the name of the car.
 
 .. _sharedSoundSettings:
 
 Sound Settings
-----------------
+--------------
 	
 	.. image:: /images/entities/trafficCar/vehicleCollection/SharedSoundSettings.png
 	
@@ -95,7 +95,7 @@ Sound Settings
 .. _sharedSounds:
 
 Sounds
-----------------
+------
 
 	.. image:: /images/entities/trafficCar/vehicleCollection/SharedSounds.png
 

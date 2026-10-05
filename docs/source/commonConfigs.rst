@@ -1,5 +1,5 @@
 Common Configs
-=====
+==============
 
 .. _commonConfigs:
 
@@ -7,28 +7,28 @@ Common Configs
    :local:
 
 Common Configs
--------------------
+--------------
 
 .. _generalSettingsConfig:
 
 General Settings Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Config to quickly on/off optional features.
 
 Where To Find
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsOnScene.png
 	
-Config Example	
-~~~~~~~~~~~~
+Config Example
+~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsConfig.png
 		:scale: 70%
 
 Traffic Car Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 | **Has traffic** : on/off traffic vehicle in the city.	
 
@@ -43,7 +43,7 @@ Traffic Car Settings
 | **Wheel system support** : on/off simple wheel system for traffic vehicles.	
 
 Other Settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 **World simulation type:**
 	* **DOTS** : simulation of traffic entirely in `DOTS` space.
@@ -64,12 +64,12 @@ Other Settings
 | **Props damage system support** : on/off damage systems for :ref:`props <propsInfo>`.
 
 Sound Configs
--------------------	
+-------------
 
 .. _soundConfig:
 
 Common Sound Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/CommonSoundConfig.png
 	``Hub/Configs/SoundConfigs/SoundConfig``

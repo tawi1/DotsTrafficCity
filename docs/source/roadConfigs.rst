@@ -1,10 +1,10 @@
 .. _roadConfigs:
 
 Road Configs
-=====
+============
 
 Overlap Config
-------------
+--------------
 
 Config of overlapping of :ref:`traffic cars <trafficCar>` with :ref:`traffic nodes <trafficNode>`.
 
@@ -19,7 +19,7 @@ Config of overlapping of :ref:`traffic cars <trafficCar>` with :ref:`traffic nod
 .. _trafficRoadConfig:
 
 Traffic Road Config
-------------
+-------------------
 
 The config contains which categories each :ref:`traffic nodes <trafficNode>` belongs to.
 

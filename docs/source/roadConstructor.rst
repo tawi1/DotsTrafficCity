@@ -1,18 +1,17 @@
 .. _roadConstructor:
 
 Road Constructor
-============
+================
 
 Where To Find
-------------
+-------------
 
 #. Buy & download, import the following asset plugin:
 
 	`Road Constructor <https://assetstore.unity.com/packages/tools/level-design/road-constructor-287445>`_
 
-
 Getting Started
-------------
+---------------
 
 #. Add the `ROAD_CONSTRUCTOR` scripting define to the `Player Settings` of the project.
 #. Open demo scene.
@@ -102,7 +101,7 @@ If you have manually adjusted or configured a specific generated road segment an
 #. When you press the **Generate** button in the ``RC_EditorSceneGenerator`` again, any segment containing this component will act as a lock mechanism—it will be automatically bound and re-used instead of being destroyed and replaced.
 
 Vehicles
-------------
+--------
 
 Hybrid Mono
 ~~~~~~~~~~~~
@@ -114,7 +113,7 @@ Physics simulation vehicles run on standart `Monobehaviour` scripts.
 #. Create :ref:`Hybrid Mono <hybridMonoVehicle>` vehicles. 
 
 No Physics
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 Vehicles without physics.
 
@@ -124,7 +123,7 @@ Vehicles without physics.
 #. Create :ref:`No physics <trafficCar>` vehicles. 
 
 Custom Physics
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Vehicles with `DOTS` physics (works only in the `Editor scene`).
 

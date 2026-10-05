@@ -1,6 +1,6 @@
-*******
+***********
 Multiplayer
-*******
+***********
 
 	.. toctree::
 		:maxdepth: 2

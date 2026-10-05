@@ -1,5 +1,5 @@
 Welcome to DOTS Traffic Core documentation!
-===================================
+===========================================
 
 **DOTS Traffic Core** is a tool for quickly creating performant city traffic.
 

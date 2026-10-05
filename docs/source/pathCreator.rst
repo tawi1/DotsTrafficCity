@@ -1,12 +1,12 @@
 .. _pathCreator:
 
 Path Creator
-=====
+============
 
 `Path Creator` is a tool for quickly creating :ref:`paths <path>` between :ref:`traffic nodes <trafficNode>`.
 
 How To Use
-------------
+----------
 
 #. Open the tool from the `Unity` toolbar:
 
@@ -22,10 +22,10 @@ How To Use
 #. :ref:`Customize <pathCustomize>` the created :ref:`paths <path>`.
 
 Settings
-------------
+--------
 
 Node Settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficNode/pathCreator/NodeSettings.png
 	
@@ -36,7 +36,7 @@ Node Settings
 .. _pathCreatorPathSettings:
 
 Path Settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficNode/pathCreator/PathSettings.png
 	
@@ -44,7 +44,7 @@ Path Settings
 | **Select after create** : the path will be selected in the inspector after creation.
 	
 Visual Settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficNode/pathCreator/VisualSettings.png
 	
@@ -62,7 +62,7 @@ Visual Settings
 .. _pathCreatorConnectionSettings:
 
 Connection Settings
-~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/trafficNode/pathCreator/ConnectionSettings.png
 	
@@ -93,7 +93,7 @@ Connection Settings
 	* **Target lane index** : connected lane index.
 	
 Buttons
-~~~~~~~~~~~~ 
+~~~~~~~
 
 	.. image:: /images/road/trafficNode/pathCreator/Buttons.png
 	
@@ -103,7 +103,7 @@ Buttons
 .. _pathCreatorExamples:
 
 Examples
------------- 
+--------
 
 	.. image:: /images/road/trafficNode/pathCreator/Example1.png
 	`Connection available example (allow override path enabled, show overriden path disabled).`

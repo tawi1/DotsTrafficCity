@@ -1,18 +1,18 @@
 .. _commonInfo:
 
 Common Info
-=====
+===========
 
 .. contents::
    :local:
 
 Hybrid Entities
--------------------
+---------------
 
 Entities that combine `DOTS` entities and default `GameObjects` (game objects are tied by position to an entity).
 
 How To Create
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 #. Create a prefab entity through the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_.
 #. Add the ``CopyTransformToGameObject`` component and add your custom init component to the `baking <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/baking.html>`_ process for initialization, pseudocode example:
@@ -81,12 +81,12 @@ How To Create
 .. _propsInfo:
 
 Props
--------------------
+-----
 
 Props are active entities that react to damage.
 
 How To Use
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 #. Create props prefab.
 #. Add :ref:`Props Authoring <propsAuthoring>` component.
@@ -97,8 +97,7 @@ How To Use
 .. _propsAuthoring:
 
 Props Authoring
-~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~
 
 	.. image:: /images/other/PropsAuthoring.png
 	

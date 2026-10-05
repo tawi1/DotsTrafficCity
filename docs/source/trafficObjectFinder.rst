@@ -1,7 +1,7 @@
 .. _trafficObjectFinder:
 
 Traffic Object Finder
-============
+=====================
 
 .. contents::
    :local:
@@ -11,7 +11,7 @@ Tool for finding traffic objects in the scene by `InstanceID` for troubleshootin
 .. _trafficObjectFinderTypes:
 
 Available Types
-------------
+---------------
 
 * :ref:`Traffic nodes <trafficNode>`.
 * :ref:`Path <path>`.
@@ -20,7 +20,7 @@ Available Types
 * :ref:`Traffic Light Crossroad <trafficLightCrossroad>`.
 
 How To Open
-------------
+-----------
 
 In the `Unity` toolbar:
 
@@ -29,7 +29,7 @@ In the `Unity` toolbar:
 	.. image:: /images/debuggers/other/trafficObjectFinderOpen.png		
 	
 How To Use
-------------
+----------
 
 #. Select :ref:`type <trafficObjectFinderTypes>` of traffic object.
 #. Copy & paste `InstanceID` from the error message into the window.

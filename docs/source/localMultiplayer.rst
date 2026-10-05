@@ -1,7 +1,7 @@
 .. _netcodeLocal:
 
 Local Split Screen Multiplayer
-=====
+==============================
 
 To create a local split screen for use by multiple players:
 

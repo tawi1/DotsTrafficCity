@@ -4,7 +4,7 @@
 Traffic Light
 *************
 
-`YouTube tutorial. <https://youtu.be/r85kMJ4BL5E?t=49>`_
+`YouTube tutorial. <https://youtu.be/0L84dkGqCCE?si=NhYzMJcyJ5RoJxoS&t=1379>`_
 
 .. _trafficLightGlobalLightHowToUse:
 

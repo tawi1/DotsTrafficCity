@@ -9,7 +9,7 @@ Use-case examples:
 	* To enter a petrol station. 
 	* Used for :ref:`large parking areas <roadSegmentCreatorParkingBuilder>`.
 
-`Youtube tutorial. <https://youtu.be/KnLjpAt_AFE>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=lfyUrvC49hsfva4t&t=1713>`_
 
 How To Create
 -------------

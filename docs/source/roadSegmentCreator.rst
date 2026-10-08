@@ -13,7 +13,7 @@ Road Segment Creator
 How To Use
 ----------
 
-`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=YeW8yuG-wwsYu6u9&t=820>`_
 
 #. Create a :ref:`RoadSegment<roadSegment>`.
 #. Place the segment at the desired position.
@@ -38,7 +38,7 @@ How To Use
 Standard Shapes
 ---------------
 
-`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=YeW8yuG-wwsYu6u9&t=820>`_
 
 Default Crossroad
 ~~~~~~~~~~~~~~~~~
@@ -151,7 +151,7 @@ Custom Straight Road
 
 Creator for creating straight roads of any shape.
 
-`Youtube tutorial. <https://youtu.be/JbhGYxVscew>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=aLwX8beW76a9T1KR&t=940>`_
 
 How To Use
 ~~~~~~~~~~
@@ -248,7 +248,7 @@ Custom Segment
 
 Creator for creating segments of any shape and complexity.
 
-`Youtube tutorial. <https://youtu.be/AMrGJ7YGBNo>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=l4bnIfGm5iN-D0Pc&t=1030>`_
 
 How To Use
 ~~~~~~~~~~
@@ -586,7 +586,7 @@ Parking Builder
 
 A tool to quickly create a parking space. Is part of the :ref:`RoadSegmentCreator <roadSegmentCreator>` and can only be enabled in the :ref:`custom segment <roadSegmentCreatorCustomSegment>`.
 
-`Youtube tutorial. <https://youtu.be/1F-8J0WC83Y>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=d5SCI5Ke7NFY4dQl&t=1528>`_
 
 How To Use
 ~~~~~~~~~~

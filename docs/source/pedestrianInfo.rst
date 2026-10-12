@@ -131,6 +131,8 @@ How To Create
 	#. Assign :ref:`Ragdolls <pedestrianRagdoll>` **[optional step]**.
 	
 		.. image:: /images/pedestrian/baker/animBaker6.png
+		
+	#. Find ``PedestrianRagdollSpawner`` in the scene and check ``Sync Animation`` if you want to sync the GPU animation with the initial ragdoll animation (the ragdoll should contain an Animator with the appropriate animations, i.e., the animations used in the hybrid pedestrian animator; note that the binding between GPU animations and hybrid pedestrian animations is defined in the ``PedestrianAnimationStateAuthoring`` object in the scene). **[optional step]**.
 	
 	**Used in systems:**
 		* GPUAnimatorSystem

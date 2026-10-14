@@ -3,6 +3,19 @@
 Change Log
 **********
 
+[1.9.3] - 14-10-2026
+--------------------
+
+Fixed
+~~~~~
+
+* Fixed potential jittering for Mono vehicles on flat surface.
+* Fixed incorrect overtaking in the oncoming lane when it is occupied or lacks space to merge back.
+* Fixed missing scripting directives when using only hybrid Mono simulation packages.
+* Fixed incorrect offsetting during creation for non-default scale vehicles.
+* Fixed obsolete API/warning messages in the Navigation package for Unity 6.3.
+* Fixed Netcode compatibility regression from v1.9.2.
+
 [1.9.2] - 05-10-2026
 --------------------
 

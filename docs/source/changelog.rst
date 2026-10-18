@@ -3,6 +3,16 @@
 Change Log
 **********
 
+[1.9.4] - 18-10-2026
+--------------------
+
+Fixed
+~~~~~
+
+* Fixed hybrid mono traffic jitter/stutter when switching from culled to active physics state.
+* Fixed culling state list attribute.
+* Fixed missing asmdef reference for Netcode.
+
 [1.9.3] - 14-10-2026
 --------------------
 

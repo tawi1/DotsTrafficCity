@@ -3,6 +3,25 @@
 Change Log
 **********
 
+[1.9.5] - 02-11-2026
+--------------------
+
+Added
+~~~~~
+
+* Added Unity 6.7 & Unity 7 support.
+* Added preset caching to Car Prefab Creator.
+
+Changed
+~~~~~~~
+
+* Renamed TransformRef to HybridTransformRef to prevent name collisions in Unity 7.
+
+Fixed
+~~~~~
+
+* Fixed range attribute for SimpleVehicleController.
+
 [1.9.4] - 18-10-2026
 --------------------
 

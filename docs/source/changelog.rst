@@ -10,6 +10,7 @@ Added
 ~~~~~
 
 * Added Unity 6.7 & Unity 7 support.
+* Added Domain Reload Disabled support.
 * Added preset caching to Car Prefab Creator.
 
 Changed

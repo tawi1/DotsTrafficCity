@@ -3,6 +3,36 @@
 Change Log
 **********
 
+[1.9.5] - 04-11-2026
+--------------------
+
+Added
+~~~~~
+
+* Added Unity 6.7 & Unity 7 support.
+* Added Domain Reload Disabled support.
+* Added preset caching to Car Prefab Creator.
+* Added emergency vehicle system support.
+* Added ability to overtake in oncoming/opposite lanes.
+* Added random horn sounding while overtaking.
+* Added the ability to override traffic vehicle priority at intersections.
+
+Changed
+~~~~~~~
+
+* Renamed TransformRef to HybridTransformRef to prevent name collisions in Unity 7.
+* Removed `Preinit` culling layer. Use the `CullStateEntityAuthoring` (or `CullStateConfigEntityAuthoring`) component to override culling layer distances instead.
+
+Fixed
+~~~~~
+
+* Fixed sorting of intersecting paths relative to the current path.
+* Fixed potential jittering for Mono vehicles on flat surface.
+* Fixed missing scripting directives when using only hybrid Mono simulation packages.
+* Fixed incorrect offsetting during creation for non-default scale vehicles.
+* Fixed hybrid mono traffic jitter/stutter when switching from culled to active physics state.
+* Fixed range attribute for SimpleVehicleController.
+
 [1.9.0] - 06-09-2026
 --------------------
 

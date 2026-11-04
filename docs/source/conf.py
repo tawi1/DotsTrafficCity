@@ -6,8 +6,8 @@ project = 'DOTS Traffic Core'
 copyright = '2026, 604Spirit'
 author = '604Spirit'
 
-release = '1.9.0'
-version = '1.9.0'
+release = '1.9.5'
+version = '1.9.5'
 
 # -- General configuration
 

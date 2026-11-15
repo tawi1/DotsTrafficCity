@@ -15,7 +15,7 @@ Object Layers
 ~~~~~~~~~~~~~
 
 * **Ground [18]** : ground surface layer, but you can use any custom ground layer you want if you set it in the `Traffic` cars for ground detection. *[optional]*
-* **StaticPhysicsShape [22]** : :ref:`Static object <physicsShapeTransfer>` layer collider layer (e.g. house, fence). *[optional, only used for DOTS scenes]* 
+* **StaticPhysicsShape [22]** : :ref:`Static object <physicsShapeTransfer>` collider layer (e.g. house, fence). *[optional, only used for DOTS scenes]*
 * **Props [23]** :  collider layer of :ref:`props <propsInfo>` (e.g. traffic light, hydrant, mailbox). *[optional]*
 
 Misc Layers

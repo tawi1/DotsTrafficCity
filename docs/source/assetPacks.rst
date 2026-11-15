@@ -9,7 +9,7 @@ Integration packages contain the following items:
 	* Routes for traffic are fully configured.
 	* Routes for pedestrians are fully configured.
 	* Automatic configuration of vehicles and their integration into the city.
-	* Automatic configuration of pedestrian and their integration into the city.
+	* Automatic configuration of pedestrians and their integration into the city.
 
 .. contents::
    :local:

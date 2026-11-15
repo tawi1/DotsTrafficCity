@@ -80,11 +80,11 @@ Preview Icon
 
 To create a `Preview icon` for the `Prefab tile`, follow these steps:
 
-* Select from ``Spirit604/CityEditor/Window/Prefab Preview Saver`` the toolbar context menu.
+* Select ``Spirit604/CityEditor/Window/Prefab Preview Saver`` from the toolbar context menu.
 
 	.. image:: /images/road/runtimeRoad/preview1.png
 
-* Drag & drop create tile prefabs into the list field.
+* Drag & drop created tile prefabs into the list field.
 
 	.. image:: /images/road/runtimeRoad/preview2.png
 	
@@ -166,7 +166,7 @@ Structure
 #. *MapBounds* : limits of the movement of the `CameraFollowObject`, used by `CameraMover`  **[optional]**.
 #. *Input* : user input of the tile game, used by `TileGameManager`  **[optional, can be replaced by an implementation of `TileGameInputBase`]**.
 #. *TileGameManager* : main sample tile manager, which controls all sample placement logic **[required, if you are using RuntimeTileRoad demo scripts]**.
-#. *RuntimeRoadTilePlacer* : manager which responsible for tile layout on the scene **[required, only if you are using RuntimeTileRoad demo scripts]**.
+#. *RuntimeRoadTilePlacer* : manager responsible for tile layout on the scene **[required, only if you are using RuntimeTileRoad demo scripts]**.
 	* *TileGrid* : map of tiles added to the scene. **[optional, can be replaced by an implementation of `TileGridBase`]**.
 	* *GridSceneView* : grid display on the scene **[optional, can be replaced by an implementation of `GridSceneViewBase`]**.
 	* *PreviewService* : display a preview of an object on the scene before it is created **[optional, can be replaced by an implementation of `PreviewServiceBase`]**.

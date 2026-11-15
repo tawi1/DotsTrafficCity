@@ -14,15 +14,15 @@ Configs
 General Settings Config
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Config to quickly on/off optional features.
+Config to quickly turn optional features on/off.
 
 Where To Find
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 	.. image:: /images/configs/common/GeneralSettingsOnScene.png
 	
-Config Example	
-~~~~~~~~~~~~~~
+Config Example
+^^^^^^^^^^^^^^
 
 	.. image:: /images/configs/common/GeneralSettingsConfigDemo.png
 		:scale: 70%
@@ -89,7 +89,7 @@ Pedestrian Settings
 	* **Editor subscene** : all pedestrian entities are converted at editor subscene time.
 	* **Runtime** : all pedestrian entities are converted at runtime.
 	
-| **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due bullets etc...).
+| **Pedestrian trigger system support** : on/off trigger feature for pedestrians (fear running due to bullets, etc...).
 
 Other Settings
 ^^^^^^^^^^^^^^
@@ -99,12 +99,12 @@ Other Settings
 	* **Hybrid mono** : physics simulation run on `Monobehaviour` scripts, but input taken from `DOTS` entities simulation.
 	
 **Physics simulation type:**
-	* **No physics** : dots physics off.
-	* **Unity physics** : `Unity` dots physics on.
-	* **Havok physics** : `Havok` dots physics on (havok physical package is required).
+	* **No physics** : DOTS physics off.
+	* **Unity physics** : `Unity` DOTS physics on.
+	* **Havok physics** : `Havok` DOTS physics on (`Havok Physics` package is required).
 	
 | **Cull physics** : on/off culling of the physics of dynamic objects that are far from the player.
-| **Cull static physics** :on/off culling of the physics of static objects that are far from the player.
+| **Cull static physics** : on/off culling of the physics of static objects that are far from the player.
 | **Force legacy physics** : force enable `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ , otherwise `built-in physics <https://docs.unity3d.com/Manual/PhysicsOverview.html>`_ will be disabled when :ref:`ragdoll <pedestrianRagdoll>` is disabled.
 | **Health system support** : on/off health systems for all entities (vehicles, pedestrians, etc...).
 | **Navigation support** : on/off navigation systems for pedestrians.

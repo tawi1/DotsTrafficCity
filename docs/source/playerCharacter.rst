@@ -27,7 +27,7 @@ Components
 	.. image:: /images/configs/player/PlayerNpcComponents.png
 	
 * **Player actor** : camera tracking component **[required]**.
-* **Npc behaviour entity** : holds reference to bind entity & read input from `DOTS entity world`, also controls animator & npc weapon behaviour **[required]**.
+* **Npc behaviour entity** : holds a reference to the bound entity & reads input from the `DOTS entity world`, also controls the animator & NPC weapon behaviour **[required]**.
 * **Npc weapon holder** : reference to the anchor bone that holds the weapon & reference to the weapon.
 * **Npc hit reaction behaviour** : behaviour that handles the reaction to a bullet hit.
 * **Ragdoll base** : activates `Ragdoll` when the NPC dies.
@@ -82,7 +82,7 @@ Components
 * **Npc weapon holder** : reference to the anchor bone that holds the weapon & reference to the weapon.
 * **Npc hit reaction behaviour** : behaviour that handles the reaction to a bullet hit.
 * **Ragdoll base** : activates `Ragdoll` when the NPC dies.
-* **Hybrid entity runtime authoring** : automatically  load the entity on enable at runtime for this gameobject. **[required]**.
+* **Hybrid entity runtime authoring** : automatically loads the entity on enable at runtime for this GameObject **[required]**.
 
 	.. image:: /images/configs/player/PlayerNpcHybridAuthoring.png
 	

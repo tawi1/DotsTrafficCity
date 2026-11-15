@@ -6,11 +6,11 @@ Rukhanka - ECS Animation System
 How To Use
 ----------
 
-#. Buy & download, import the following asset plugin:
+#. Buy, download & import the following asset plugin:
 
 	`Rukhanka - ECS Animation System <https://assetstore.unity.com/packages/tools/animation/rukhanka-ecs-animation-system-241472>`_
 
-* Import `Rukhanka` samples.
+#. Import `Rukhanka` samples.
 
 	.. image:: /images/integration/rukhanka0.png	
 	

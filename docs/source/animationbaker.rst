@@ -29,7 +29,7 @@ How To Bake
 	
 	#. Customize texture & save path :ref:`settings <animationBakerSettings>`.
 	#. Drag & drop selected `SkinnedMeshRenderer` of pedestrians into `Skins` :ref:`field <animationBakedSourceData>`.
-	#. By default, animations are taken from `TemplateClipData Interpolated` template when selected template type. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
+	#. By default, animations are taken from the `TemplateClipData Interpolated` template when the template type is selected. Select the `Custom` type in the `Clip data source` to add new animations or override the existing template.
 	
 		.. image:: /images/pedestrian/baker/window/animBaker1_1.png
 	
@@ -325,7 +325,7 @@ Settings
 	
 **Animation type:** 
 	* **Mandatory** : each entity of the crowd must have this animation.
-	* **Optional** : each entity of the crowd doesn't necessarily have to have this animation [:ref:`step 16 <crowdSkinFactory>`].
+	* **Optional** : each entity of the crowd doesn't necessarily have to have this animation [:ref:`see here <crowdSkinFactory>`].
 
 .. _animationGPUAnimatorContainer:
 

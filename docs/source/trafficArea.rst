@@ -67,9 +67,9 @@ Scene visual
 **Button select type:**
 	* **Disabled**
 	* **Remove node** : selected node will be removed from `TrafficArea`.
-	* **Select node** : selected node will be added to `TrafficArea` with the select `New node type`.
+	* **Select node** : selected node will be added to `TrafficArea` with the selected `New node type`.
 | **Show traffic area node type** : :ref:`nodes <trafficNode>` with the selected :ref:`node type <trafficAreaNodeType>` will be displayed in the scene.
-| **Show scene nodes** : on/off display add buttons paths to `TrafficArea`.
+| **Show scene nodes** : on/off display of buttons to add paths to `TrafficArea`.
 | **New node type** : :ref:`TrafficNode <trafficNode>` with the selected :ref:`node type <trafficAreaNodeType>` will be added to the `TrafficArea`.
 
 .. _trafficAreaNodeType:

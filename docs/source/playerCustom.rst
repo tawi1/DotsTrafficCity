@@ -3,7 +3,7 @@
 User Custom Solution
 ====================
 
-This topic about how to replace the player with a custom user solution.
+This section explains how to replace the built-in player with a custom user solution.
 	
 Player Character
 ----------------

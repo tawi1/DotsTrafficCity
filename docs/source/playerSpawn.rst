@@ -30,8 +30,8 @@ How To Use
 How To Replace
 ~~~~~~~~~~~~~~
 
-You can replace spawner by your own solution.
-By default, `Player Spawner Service` implements `IPlayerSpawnerService` interface & called by `PlayerSpawnCommand.cs` script, create your own `Monobehaviour` class that implements `IPlayerSpawnerService` & assign here:
+You can replace the spawner with your own solution.
+By default, `Player Spawner Service` implements the `IPlayerSpawnerService` interface and is called by the `PlayerSpawnCommand.cs` script. Create your own `MonoBehaviour` class that implements `IPlayerSpawnerService` and assign it here:
 
 Steps
 """""

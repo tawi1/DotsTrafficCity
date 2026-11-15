@@ -11,7 +11,7 @@ If you want to add your own camera solution, follow these steps:
 Steps
 ~~~~~
 
-#. Create a new `MonoBehaviour` script & implement the class that derived from `CameraBase` & add it to the root of your custom camera (the code example in the `Code Example` section below).
+#. Create a new `MonoBehaviour` script, implement a class derived from `CameraBase`, and add it to the root of your custom camera (see the code example in the `Code Example` section below).
 #. Find the `UIInstaller` object on the scene.
 
 	.. image:: /images/integration/CustomCameraExample1.png

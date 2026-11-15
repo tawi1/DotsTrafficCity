@@ -8,7 +8,7 @@ Traffic vehicles following public transport :ref:`routes <trafficPublicRoute>` a
 `Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=H-FXHN7_cfRnMCMK&t=1990>`_
 
 How To Create
-------------
+-------------
 
 #. Create a vehicle by following these :ref:`steps <trafficCar>`.
 #. Set :ref:`traffic group <pathTrafficGroup>` to `Public Transport` in the :ref:`TrafficCarEntityAuthoring <trafficCarEntityAuthoring>` component.
@@ -45,7 +45,7 @@ Authoring component that contains capacity settings of the vehicle.
 	.. image:: /images/entities/trafficCar/CarCapacityComponent.png
 	
 | **Max capacity** : max capacity of the vehicle.
-| **Entry point** : any `GameObject` that contain :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` component.
+| **Entry point** : any `GameObject` that contains the :ref:`VehicleEntryAuthoring <vehicleEntryAuthoring>` component.
 | **Show entry point** : on/off display entry point.
 
 	.. image:: /images/entities/trafficCar/TrafficPublicTramExample.png

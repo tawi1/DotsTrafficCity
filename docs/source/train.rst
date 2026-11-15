@@ -9,7 +9,7 @@ Mono
 How To Create
 ~~~~~~~~~~~~~
 
-#. Create a vehicle as well as :ref:`Arcade vehicle <hybridMonoVehicle>`.
+#. Create a vehicle in the same way as an :ref:`Arcade vehicle <hybridMonoVehicle>`.
 #. In the `Traffic preset`, open `Hull` prefab (all presets assigned in `TrafficCarEntityPoolBakerRef`, in this case :ref:`HybridEntityMonoPhysics <entityType>` type).
 
 	.. image:: /images/entities/train/train0-1.png

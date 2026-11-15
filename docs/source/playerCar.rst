@@ -9,7 +9,7 @@ Player Car
 Common Info
 ~~~~~~~~~~~
 
-* Each player car only works in :ref:`Hybrid custom physics <entityType>` type & consists of 2 parts: `DOTS` entity is handled by DOTS systems & `Monobehaviour` hybrid skin (required for camera tracking & npc car layout) that follows the binded :ref:`DOTS entity <playerHybridDots>`.
+* Each player car only works with the :ref:`Hybrid custom physics <entityType>` type & consists of 2 parts: a `DOTS` entity handled by DOTS systems & a `MonoBehaviour` hybrid skin (required for camera tracking & NPC car layout) that follows the bound :ref:`DOTS entity <playerHybridDots>`.
 * Player hybrid skin car should have following components:
 
 	* **Player Actor** : camera tracking component.
@@ -42,10 +42,10 @@ How To Create
 Hybrid Mono
 ~~~~~~~~~~~
 
-* Player vehicle physics handled by custom user's `Monobehaviour physics plugin`.
-* Unlike the :ref:`Hybrid DOTS <playerHybridDots>`, the entity following & presents collider for `DOTS` world without mesh representation.
+* Player vehicle physics is handled by a custom user `MonoBehaviour` physics plugin.
+* Unlike :ref:`Hybrid DOTS <playerHybridDots>`, the entity follows the vehicle & provides a collider for the `DOTS` world without a mesh representation.
 
-* List of vehicle controllers from the Asset Store that can be used for (e.g.) 
+* List of vehicle controllers from the Asset Store that can be used (e.g.):
 	* `Edy's Vehicle Physics <https://assetstore.unity.com/packages/tools/physics/edy-s-vehicle-physics-403>`_
 	* `Realistic Car Controller Pro <https://assetstore.unity.com/packages/tools/physics/realistic-car-controller-pro-178967>`_
 	* `NWH Vehicle Physics 2 <https://assetstore.unity.com/packages/tools/physics/nwh-vehicle-physics-2-166252>`_

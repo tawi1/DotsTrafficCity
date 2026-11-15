@@ -3,8 +3,8 @@
 Presets
 =======
 
-* Preset contain prefabs that are converted to entities.
-* There are several :ref:`Entity type <entityType>`. 
+* Presets contain prefabs that are converted to entities.
+* There are several :ref:`Entity types <entityType>`. 
 * The preset for conversion is selected from the :ref:`Entity type <entityType>` in the :ref:`Traffic Settings <trafficCarSettings>`.
 
 	.. warning::
@@ -40,4 +40,4 @@ Examples
 	`Simple physics entity traffic preset example`
 	
 	.. note::
-		`Pure entity simple physics` type and `Pure entity no physics` type has the same preset.
+		`Pure entity simple physics` type and `Pure entity no physics` type share the same preset.

@@ -5,7 +5,6 @@ Streaming
 
 .. contents::
    :local:
-   streamingConfigs
 
 .. _cullPointInfo:
 

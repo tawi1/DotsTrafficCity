@@ -344,7 +344,7 @@ If you need to attach a GameObject weapon, e.g.:
 
  	..  code-block:: csharp
 	
-		public struct AttachExample : MonoBehaviour
+		public class AttachExample : MonoBehaviour
 		{		  
 			[SerializeField] private GameObject attachment;
 		
@@ -375,7 +375,7 @@ Animation Event
 
  	..  code-block:: csharp
 	
-		public struct AnimationEventExample : MonoBehaviour
+		public class AnimationEventExample : MonoBehaviour
 		{		  
 			[SerializeField] private string desiredAnimationEventName;
 		
@@ -534,15 +534,15 @@ How To Create
 Navigation
 ----------
 
-| Navigation is used for pedestrian obstacle avoidance.
-| There are 5 types of navigation:
+| Navigation is used for pedestrian pathfinding and obstacle avoidance.
+| There are 6 types of navigation:
 
 .. _pedestrianNavmeshNavigation:
 
 Simple NavMesh
 ~~~~~~~~~~~~~~
 
-DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_.
+Basic DOTS pathfinding on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_. Builds paths through NavMesh polygons, but does not calculate dynamic obstacle or agent-to-agent avoidance.
 
 Useful links:
 	* :ref:`NavAgent Config <pedestrianNavAgentConfig>`
@@ -567,18 +567,19 @@ Pros And Cons
 """""""""""""
 	
 Pros:
-	* High precision.
-	* Can avoid any obstacle.
+	* High pathfinding precision around static geometry.
+	* Can build bypass routes around any carved `NavMeshObstacle`.
 	
 Cons:
-	* High CPU load.
+	* No agent-to-agent crowd separation or smooth OBB vehicle sliding.
+	* High CPU load when recalculating paths frequently.
 
 .. _pedestrianLocalAvoidance:
 
 Local Avoidance 
 ~~~~~~~~~~~~~~~
 
-DOTS system to avoid local obstacles (vehicles).
+Simple DOTS system to avoid local vehicle obstacles.
 
 Useful links:
 	* :ref:`Local Avoidance Config <pedestrianLocalAvoidanceConfig>`
@@ -594,10 +595,10 @@ Pros And Cons
 """""""""""""
 
 Pros:
-	* Low CPU load.
+	* Very low CPU load.
 	
 Cons:
-	* Can avoid vehicles only.
+	* Avoids vehicles only (no pedestrian-to-pedestrian separation).
 	* Works on flat surfaces only.
 	
 .. _pedestrianCrowdAvoidance:
@@ -605,7 +606,7 @@ Cons:
 Crowd Avoidance
 ~~~~~~~~~~~~~~~
 
-High-performance DOTS-based crowd avoidance system designed for high agent density. It calculates lateral steering and separation/push forces between pedestrians, handles vehicle OBB avoidance with support for merging overlapping vehicle bounds (such as trailers or traffic jams), and dynamically enforces path boundary constraints.
+Standalone, high-performance OBB-based pedestrian and vehicle avoidance system (no NavMesh required). It calculates lateral steering and separation/push forces between pedestrians, handles vehicle OBB avoidance with support for merging overlapping vehicle bounds (such as trailers or traffic jams), and dynamically enforces sidewalk path boundary constraints.
 
 Useful links:
 	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
@@ -621,19 +622,19 @@ Pros And Cons
 """""""""""""
 
 Pros:
-	* High performance and scalability for large crowds.
-	* Handles both pedestrian-to-pedestrian separation and vehicle obstacle avoidance.
+	* Maximum performance and scalability for large crowds (zero NavMesh overhead).
+	* Handles both pedestrian-to-pedestrian separation and vehicle OBB avoidance.
 	* Automatically keeps agents within sidewalk and crosswalk path boundaries.
 
 Cons:
-	* Designed primarily for flat surfaces.
+	* Designed for flat surfaces (no terrain height sampling or NavMesh wall detection).
 
-.. _pedestrianCrowdAvoidanceNavMesh:
+.. _pedestrianCrowdAvoidanceNavMeshRaycast:
 
-Crowd Avoidance NavMesh
-~~~~~~~~~~~~~~~~~~~~~~~
+Crowd Avoidance NavMesh Raycast
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Extends the Crowd Avoidance pipeline with NavMesh query integration. It uses multi-ray fan casts against the NavMesh to detect static geometry, providing wall repulsion and sliding forces, while continuously mapping agent height (`TargetY`) for uneven terrain.
+Hybrid local avoidance combining OBB crowd and vehicle logic with NavMesh boundary raycasts, edge sliding, and ground Y-height snapping (without global pathfinding). It uses multi-ray fan casts and corner probes against the NavMesh to detect static geometry, providing wall repulsion and sliding forces while continuously mapping agent height (`TargetY`) onto uneven terrain.
 
 Useful links:
 	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
@@ -642,41 +643,75 @@ Useful links:
 How To Setup
 """"""""""""
 
-* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh`.
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh Raycast`.
 * Ensure a valid `NavMeshSurface` is baked in the scene.
 * Configure parameters in the `Pedestrian Crowd Avoidance Authoring` component (see :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`).
 
 .. warning::
-   If **Move Inside Path** is enabled and a `NavMeshObstacle` blocks the path, pedestrians may get stuck permanently. To prevent this, either disable **Move Inside Path** or ensure the path is wide enough for agents to bypass the obstacle.
+   If **Move Inside Path** is enabled and a `NavMeshObstacle` completely blocks the walkway, pedestrians may get stuck because global pathfinding is not active in this mode. To prevent this, either disable **Move Inside Path**, ensure the path is wide enough to slide around the obstacle, or use :ref:`Crowd Avoidance NavMesh Path <pedestrianCrowdAvoidanceNavMeshPath>`.
 
 NavMesh Y-Surface Snapping Only Mode
 """"""""""""""""""""""""""""""""""""
 
-You can also use **Crowd Avoidance NavMesh** in a lightweight mode purely for **vertical alignment (Y-axis snapping)** onto the NavMesh surface, without enabling heavy NavMesh pathfinding or obstacle avoidance routines.
+You can also use **Crowd Avoidance NavMesh Raycast** in a lightweight mode purely for **vertical alignment (Y-axis snapping)** onto the NavMesh surface by disabling **Avoid Navmesh Obstacles** in the config:
 
-* **Height Conformance:** Ideal when pedestrian movement is primarily driven by grid paths or direct node networks, but agents still need to align accurately with uneven terrain, ramps, or subtle elevation changes.
-* **Avoid Getting Stuck on Complex Geometry:** Bypasses full NavMesh pathfinding queries. If your NavMesh geometry is overly complex, detailed, or contains narrow topological traps, standard NavMesh navigation can cause agents to get stuck or enter recalculation loops; using pure Y-snapping prevents this entirely.
-* **Performance Optimization:** Leverages cached ground height sampling while skipping expensive raycasting and path queries, offering smooth terrain tracking with minimal CPU overhead.
-* **Seamless Integration:** Allows standard Crowd Avoidance to handle horizontal density and separation logic while the NavMesh strictly manages vertical placement.
+* **Height Conformance:** Ideal when pedestrian movement is driven by node networks, but agents need to align accurately with uneven terrain, ramps, or elevation changes.
+* **Avoid Getting Stuck on Complex Geometry:** Bypasses both global pathfinding and wall raycasts, preventing agents from getting stuck in narrow topological traps.
+* **Performance Optimization:** Samples ground height via `MapLocation` while skipping wall raycasting and path queries, offering smooth terrain tracking with minimal CPU overhead.
 
 Pros And Cons
 """""""""""""
 
 Pros:
-	* Full height-mapping support for sloped or multi-level terrain.
-	* Prevents agents from colliding with or walking through static NavMesh walls and obstacles.
-	* Can be used purely for Y-surface snapping.
-	* Combines dynamic agent crowd separation with static environment boundary logic.
+	* Full height-mapping support (`TargetY`) for sloped or multi-level terrain.
+	* Local multi-ray whisker & corner probes prevent walking through static NavMesh walls.
+	* Can be used purely for lightweight Y-surface snapping.
+	* No global pathfinding CPU overhead.
 
 Cons:
-	* Slightly higher CPU load compared to flat Crowd Avoidance due to NavMesh raycasting (unless operating in pure Y-snapping mode).
+	* Slightly higher CPU load than standalone `Crowd Avoidance` due to NavMesh queries.
+	* Cannot plan global detours around complex U-shaped dead-ends without global pathfinding.
+
+.. _pedestrianCrowdAvoidanceNavMeshPath:
+
+Crowd Avoidance NavMesh Path
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Full NavMesh pathfinding combined with OBB pedestrian/vehicle crowd avoidance, boundary raycasts, and ground Y-height snapping. Agents plan global paths across NavMesh polygons (`PathPlanSystem` / `NavAgentNavigationSystem`) while simultaneously using `CrowdAvoidanceNavMeshSystem` to steer around dynamic crowds, vehicles, and local wall edges.
+
+Useful links:
+	* :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>`
+	* :ref:`NavAgent Config <pedestrianNavAgentConfig>`
+	* :ref:`Test scene <pedestrianNavigationTest>`.
+
+How To Setup
+""""""""""""
+
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh Path`.
+* Ensure a valid `NavMeshSurface` is baked in the scene.
+* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` (activates pathfinding dynamically when blocked) or `Persist` (always follows NavMesh paths).
+* Configure crowd and wall parameters in :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>` and pathfinding parameters in :ref:`NavAgent Config <pedestrianNavAgentConfig>`.
+
+.. note::
+   When an agent is actively following a calculated NavMesh steering path (`HasSteeringTarget`), strict sidewalk boundary clamping (**Move Inside Path**) is automatically bypassed so the pedestrian can freely detour outside the node link corridor to get around large obstacles.
+
+Pros And Cons
+"""""""""""""
+
+Pros:
+	* Combines global NavMesh detour pathfinding with smooth local OBB crowd & vehicle avoidance.
+	* Automatically bypasses sidewalk width constraints during active NavMesh detours.
+	* Full ground Y-height snapping and local wall sliding.
+
+Cons:
+	* Highest CPU load among built-in modes (combines path planning queries with local crowd & raycast queries).
 
 .. _pedestrianAgentsNavigation:
 
 Agents Navigation 
 ~~~~~~~~~~~~~~~~~
 
-DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ using `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
+Advanced DOTS navigation on `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ provided by the 3rd-party `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin.
 
 How To Setup
 """"""""""""
@@ -924,7 +959,7 @@ Pedestrians use the ``PedestrianGroupType`` bitmask to filter which nodes they c
 * **Bitmask Matching**: For a pedestrian to spawn on or travel through a node, the pedestrian's group mask and the node's ``AllowedGroups`` mask must share at least one common flag (``(pedestrianGroup & nodeAllowedGroups) != 0``).
 
 .. note::
-   The count and names of available groups can be modified via the Unity toolbar: **CityEditor/Window/Global settings**, or directly in the ``PedestrianGroupType.cs`` file.
+   The count and names of available groups can be modified via the Unity toolbar: **Spirit604/CityEditor/Window/Global settings**, or directly in the ``PedestrianGroupType.cs`` file.
 
 .. _entityCustomization:
 
@@ -1183,10 +1218,13 @@ Common Settings
 Obstacle Avoidance Type
 """""""""""""""""""""""
 
-| **Calc nav path** : navigating based on :ref:`NavMesh <pedestrianNavmeshNavigation>` (:ref:`config <pedestrianNavAgentConfig>`).
-| **Local avoidance** : simple :ref:`obstacle avoidance <pedestrianLocalAvoidance>` navigation (:ref:`config <pedestrianLocalAvoidanceConfig>`).
-| **Agents navigation** : navigating with the `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin (:ref:`how to setup <pedestrianAgentsNavigation>`).
-	
+| **Simple NavMesh** : basic pathfinding using Unity NavMesh API without dynamic agent-to-agent avoidance (:ref:`info <pedestrianNavmeshNavigation>`, :ref:`config <pedestrianNavAgentConfig>`).
+| **Local avoidance** : simple vehicle obstacle avoidance navigation (:ref:`info <pedestrianLocalAvoidance>`, :ref:`config <pedestrianLocalAvoidanceConfig>`).
+| **Crowd avoidance** : standalone OBB-based pedestrian & vehicle avoidance without NavMesh (:ref:`info <pedestrianCrowdAvoidance>`, :ref:`config <pedestrianCrowdAvoidanceConfig>`).
+| **Crowd avoidance NavMesh Raycast** : hybrid local OBB crowd/vehicle avoidance with NavMesh boundary raycasts, edge sliding, and Y-height snapping (:ref:`info <pedestrianCrowdAvoidanceNavMeshRaycast>`, :ref:`config <pedestrianCrowdAvoidanceConfig>`).
+| **Crowd avoidance NavMesh Path** : full NavMesh pathfinding combined with OBB crowd/vehicle avoidance, boundary raycasts, and Y-height snapping (:ref:`info <pedestrianCrowdAvoidanceNavMeshPath>`, :ref:`config <pedestrianCrowdAvoidanceConfig>`).
+| **Agents navigation** : advanced navigation on NavMesh provided by the `Agents Navigation <https://assetstore.unity.com/packages/tools/behavior-ai/agents-navigation-239233>`_ plugin (:ref:`how to setup <pedestrianAgentsNavigation>`).
+
 .. _pedestrianNavigationType:
 
 Pedestrian Navigation Type **[** :ref:`NavMesh <pedestrianNavmeshNavigation>` **navigation only]**
@@ -1249,7 +1287,7 @@ Config for :ref:`Local Avoidance <pedestrianLocalAvoidance>` navigation.
 Crowd Avoidance Config
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Config for :ref:`Crowd Avoidance <pedestrianCrowdAvoidance>` and :ref:`Crowd Avoidance NavMesh <pedestrianCrowdAvoidanceNavMesh>` navigation modes.
+Config for :ref:`Crowd Avoidance <pedestrianCrowdAvoidance>` and :ref:`Crowd Avoidance NavMesh <pedestrianCrowdAvoidanceNavMeshPath>` navigation modes.
 
 Location in scene:
 	``Hub/Configs/PedestrianConfigs/CrowdAvoidanceConfig``
@@ -1345,16 +1383,22 @@ Parameters Reference
 	* **Max Steering Force** : maximum capped steering avoidance force.
 	* **Min Collision Speed** : minimum speed threshold used for collision impulse calculations against cars.
 
-**NavMesh Agent Settings (for Crowd Avoidance NavMesh):**
-	* **Avoid Navmesh Obstacles** : enables static NavMesh wall and edge avoidance.
+**NavMesh Agent Settings (for Crowd Avoidance NavMesh Raycast / Path):**
+	* **Avoid Navmesh Obstacles** : enables static NavMesh wall and edge avoidance via raycasts.
 	* **Look Ahead Navmesh** : raycast distance along movement direction for wall detection.
 	* **Force Intensity Navmesh** : steering force intensity multiplier when NavMesh walls are detected.
-	* **Extents** : search box extents used for NavMeshQuery agent positioning.
+	* **Extents** : search box extents used for `MapLocation` NavMesh agent positioning.
 	* **Nav Agent Index** : NavMesh Agent Type ID.
 	* **Area Mask** : bitmask specifying valid NavMesh area types.
 	* **Wall Weight** : weight of perpendicular outward wall repulsion.
 	* **By Pass Weight** : weight of parallel wall-sliding bypass force.
-	* **Nav Mesh Side Padding** : extra side padding offset for left/right raycasts during wall detection.
+	* **Nav Mesh Side Padding** : extra side padding offset for left/right whisker raycasts during wall detection.
+	* **Whisker Spread Ratio** : angular spread ratio of left/right whisker rays relative to check distance.
+	* **Grazing Ignore Multiplier** : multiplier of side padding to ignore distant grazing hits on side whiskers when the center ray is clear.
+	* **Corner Probe Depth Offset** : depth offset beyond the wall plane for secondary wide corner-detection raycasts.
+	* **Corner Probe Width** : lateral width of secondary corner probes used to find the shortest bypass direction around a wall.
+	* **Corner Clearance Threshold** : minimum distance difference between left and right corner probes required to pick a corner bypass side.
+	* **Corner Hug Weight Multiplier** : multiplier reducing outward wall repulsion when the center ray is clear so agents hug corners tightly.
 
 .. _pedestrianAntistuckConfig:
 

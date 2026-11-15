@@ -318,7 +318,7 @@ Custom Path Settings
 	.. image:: /images/road/roadSegment/creator/RoadSegmentNodeHandles.png
 	
 | **Show traffic node handles** : on/off handles of :ref:`TrafficNodes <trafficNode>`
-| **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwading.
+| **Show traffic node forward** : on/off display of :ref:`TrafficNode <trafficNode>` forwarding.
 
 Additional Settings
 ~~~~~~~~~~~~~~~~~~~
@@ -548,7 +548,7 @@ Segment handler settings
 	.. image:: /images/road/roadSegment/creator/RoadsegmentCreatorSegmentHandlerSettings.png
 	
 | **Show segment position handle** : on/off position handle for segment.
-| **Snap segment position** : on/off snap segmant position.
+| **Snap segment position** : on/off snap segment position.
 | **Add half offset** : the snapped object is shifted by half of the set snapping size.
 | **Custom snap size** : snapping value.
 | **Snap surface offset** : snap surface offset.

@@ -23,7 +23,7 @@ There are two ways to edit:
 	#. Using the :ref:`Advanced Settings Window <pathSettingsWindow>`.
 
 Nodes
-~~~~~~~~~~~~
+~~~~~
 
 How To Move
 """""""""""
@@ -31,12 +31,12 @@ How To Move
 #. Enable :ref:`Show handles <pathSettings>` option.
 #. Drag the desired path handles.
 
-How Add & Remove
-""""""""""""""""
+How To Add & Remove
+"""""""""""""""""""
 
 #. Enable :ref:`Show handles <pathSettings>` option.
 #. Enable :ref:`Show edit buttons <pathSettings>` option.
-#. Press the `+` button to add or press the `x` to remove node.
+#. Press the `+` button to add or press the `x` to remove a node.
 
 Path Settings
 -------------
@@ -96,10 +96,10 @@ Settings
 .. _pathWaypointsPerCurve:
 
 | **Waypoints count per curve** : number of waypoints in the curve segment.
-| **Path speed limit** : speed limit for the entire route
+| **Path speed limit** : speed limit for the entire route.
 | **Connected lane index** : connected lane index.
-| **Hightlight normalized length** : normalized length of the highlighted path (editor only).
-| **Rail** : cars entering this path will move with a :ref:`rail movement <trafficRail>`.
+| **Highlight normalized length** : normalized length of the highlighted path (editor only).
+| **Rail** : cars entering this path will move with :ref:`rail movement <trafficRail>`.
 | **Reversed connection side** : path will be connected to the :ref:`opposite side of the node <trafficNodeConnectionInfo>`.
 	
 .. _pathVisualSettings:
@@ -112,13 +112,13 @@ Visual Settings
 Common settings
 """""""""""""""
 
-| **Show info on select** : shared parameter between paths instances that automatically enables `Show info waypoints` on selecting new path.
+| **Show info on select** : shared parameter between path instances that automatically enables `Show info waypoints` on selecting a new path.
 | **Show info waypoints** : show info of waypoints in the scene.
 | **Lock Y axis** : lock Y-axis for position handles of nodes.
 | **Show intersected points** : show intersected points in the scene.
 | **Show handles** : show position handles for nodes.
 | **Show edit buttons** : show edit buttons for path (add/remove nodes).
-| **Hightlight color** : hightlight color of the path.
+| **Highlight color** : highlight color of the path.
 | **Show Y position** : show Y-position of nodes.
 
 Curved settings
@@ -242,7 +242,7 @@ Mask Types
 Default
 """""""
 
-Default group of the :ref:`TrafficGroupType <pathTrafficGroup>` that defined in the :ref:`settings <trafficGroupSettings>`.
+Default group of the :ref:`TrafficGroupType <pathTrafficGroup>` that is defined in the :ref:`settings <trafficGroupSettings>`.
 
 Allowed
 """""""
@@ -252,12 +252,12 @@ User-selected :ref:`TrafficGroupType <pathTrafficGroup>` types that can go throu
 Forbidden
 """""""""
 
-User-selected :ref:`TrafficGroupType <pathTrafficGroup>` types that are forbidden the path (not selected in the list is allowed).
+User-selected :ref:`TrafficGroupType <pathTrafficGroup>` types that are forbidden on the path (any type not selected in the list is allowed).
 
 Custom Group
 """"""""""""
 
-Custom group of :ref:`TrafficGroupType <pathTrafficGroup>` that defined in the :ref:`settings <trafficGroupSettings>`.
+Custom group of :ref:`TrafficGroupType <pathTrafficGroup>` that is defined in the :ref:`settings <trafficGroupSettings>`.
 
 .. _pathSettingsWindow:
 

@@ -53,11 +53,11 @@ Visual Settings
 	* **Arrow spacing** : arrow spacing.
 	
 | **Show forbidden path** : on/off display of forbidden connection line.
-| **Show overriden path** : on/off display of overriden connection line (if disabled preview color will be taken).
+| **Show overridden path** : on/off display of overridden connection line (if disabled, preview color will be taken).
 | **Font color** : font color of traffic node index gizmos.
 | **Preview connection color** : preview connection line color.
 | **Forbidden connection color** : forbidden connection line color.
-| **Overriden connection color** : overriden connection line color.
+| **Overridden connection color** : overridden connection line color.
 
 .. _pathCreatorConnectionSettings:
 
@@ -106,10 +106,10 @@ Examples
 --------
 
 	.. image:: /images/road/trafficNode/pathCreator/Example1.png
-	`Connection available example (allow override path enabled, show overriden path disabled).`
+	`Connection available example (allow override path enabled, show overridden path disabled).`
 	
-	.. image:: /images/road/trafficNode/pathCreator/Example2.png	
-	`Connection available example (allow override path enabled, show overriden path enabled, paths already created for these nodes & overwritable).`
+	.. image:: /images/road/trafficNode/pathCreator/Example2.png
+	`Connection available example (allow override path enabled, show overridden path enabled, paths already created for these nodes & overwritable).`
 	
 	.. image:: /images/road/trafficNode/pathCreator/Example3.png
 	`Connection forbidden example (path already created for these nodes & can't be overwritten).`

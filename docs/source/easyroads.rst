@@ -12,7 +12,7 @@ How To Use
 
 #. Open your scene.
 #. Create a new game object & add `ER3D_RSGenerator` component.
-#. In the `Config` field select default config or duplicate exist sample config.
+#. In the `Config` field, select the default config or duplicate an existing sample config.
 #. Set `Min road length` to the desired value to ignore short roads.
 #. Select any 2-lane road in the scene.
 
@@ -39,7 +39,7 @@ How To Use
 
 	.. image:: /images/integration/easyroads3_3.png
 	
-#. If your scene have custom road prefabs with `ER Crossing Prefabs` component:
+#. If your scene has custom road prefabs with the `ER Crossing Prefabs` component:
 	#. Create the :ref:`Road segment <roadSegmentCreator>` where your custom prefab road is located.
 	
 		.. image:: /images/integration/easyroads4.png
@@ -53,7 +53,7 @@ How To Use
 		.. image:: /images/integration/easyroads5.png
 		`Example`		
 		
-	#. Make sure the `Selected scene object` field have the correct scene road.
+	#. Make sure the `Selected scene object` field has the correct scene road.
 	
 		.. image:: /images/integration/easyroads6.png
 
@@ -73,8 +73,8 @@ How To Use
 		:scale: 70%
 
 #. Check the generated data for errors & dead ends.
-#. If you want to customize road & exclude the desired road from being deleted for the new generation:
+#. If you want to customize a road & exclude the desired road from being deleted during a new generation:
 	#. Select the desired `Road segment` on the scene.
 	#. In the `RSSceneBinding` component, tick on the `Lock auto recreation` option.
-	#. If you now regenerate roads with `ER3D_RSGenerator`, this road will be saved for destruction.
+	#. If you now regenerate roads with `ER3D_RSGenerator`, this road will be saved from destruction.
 		

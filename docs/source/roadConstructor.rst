@@ -153,9 +153,9 @@ Vehicles
 --------
 
 Hybrid Mono
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
-Physics simulation vehicles run on standart `Monobehaviour` scripts.
+Physics simulation vehicles run on standard `MonoBehaviour` scripts.
 
 #. Set the `World simulation type` to `Hybrid mono` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Find the `HybridTrafficCarMonoSkinBase Arcade` prefab & set the ground layer to match the ground collider layer in the `Road Constructor`.
@@ -168,7 +168,7 @@ Vehicles without physics.
 
 #. Set the `World simulation type` to `DOTS` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set the `Physics simulation type` to `No physics` in the :ref:`General settings <generalSettingsConfig>` config.
-#. Set `Entity type` to :ref:`Pure entity no physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
+#. Set `Entity type` to :ref:`Pure entity no physics <entityType>` in the :ref:`Traffic Settings <trafficCarSettings>`.
 #. Create :ref:`No physics <trafficCar>` vehicles. 
 
 Custom Physics
@@ -178,11 +178,11 @@ Vehicles with `DOTS` physics (works only in the `Editor scene`).
 
 #. Set the `World simulation type` to `DOTS` in the :ref:`General settings <generalSettingsConfig>` config.
 #. Set the `Physics simulation type` to `Unity physics` in the :ref:`General settings <generalSettingsConfig>` config.
-#. Set `Entity type` to :ref:`Pure custom physics <entityType>` in the :ref:`Traffic Settings  <trafficCarSettings>`
-#. Select :ref:`Hub <subsceneGenerator>` object in the scene
-#. Enable the `Copy Physics Shapes` option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`sub-scene <subScene>` after each :ref:`sub-scene <subScene>` regeneration.
-#. Add layer according to your ground layer in the `Road Constructor` (read more about :ref:`physics shape transferring <physicsShapeTransfer>`)
+#. Set `Entity type` to :ref:`Pure custom physics <entityType>` in the :ref:`Traffic Settings <trafficCarSettings>`.
+#. Select :ref:`Hub <subsceneGenerator>` object in the scene.
+#. Enable the `Copy Physics Shapes` option to clone surfaces from the :ref:`main scene <mainScene>` to the :ref:`subscene <subscene>` after each :ref:`subscene <subscene>` regeneration.
+#. Add layer according to your ground layer in the `Road Constructor` (read more about :ref:`physics shape transferring <physicsShapeTransfer>`).
 
 	.. image:: /images/integration/rc12.png	
 	
-#. Create :ref:`Custom physics <trafficCar>` vehicles. 
+#. Create :ref:`Custom physics <trafficCar>` vehicles.

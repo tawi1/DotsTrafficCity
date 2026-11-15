@@ -3,6 +3,26 @@
 Change Log
 **********
 
+[1.9.6] - 15-11-2026
+--------------------
+
+Added
+~~~~~
+
+* Added new CrowdAvoidanceNavMeshPath navigation mode combining full NavMesh pathfinding with OBB-based vehicle & pedestrian crowd avoidance.
+* ArcadeVehicleController: Added PerWheel and PerAxle transient anti-slip modes to fix idle yaw drift on uneven slopes, with fast-path optimizations for flat surfaces.
+* Added Entities 7.0+ (Unity 7 alpha 16+) support.
+
+Changed
+~~~~~~~
+
+* Renamed CrowdAvoidance NavMesh to CrowdAvoidance NavMesh Raycast avoidance type.
+
+Fixed
+~~~~~
+
+* Fix Multimesh combining for Bone skinning (remap bone weights, per-bone bindpose alignment)
+
 [1.9.5] - 02-11-2026
 --------------------
 

@@ -21,7 +21,7 @@ Where To Find
 
 	.. image:: /images/configs/common/GeneralSettingsOnScene.png
 	
-Config Example	
+Config Example
 ~~~~~~~~~~~~~~
 
 	.. image:: /images/configs/common/GeneralSettingsConfig.png

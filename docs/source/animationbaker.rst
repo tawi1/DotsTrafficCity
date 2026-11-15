@@ -63,7 +63,6 @@ How To Bake
 How To Bake Multi-Mesh
 ----------------------
 
-	#. This only works for vertex skinning method.
 	#. Enable `Multimesh` type in the :ref:`Settings type <animationBakerSettings>`.
 	#. Customize modular character with desired skinned mesh renderers.
 	#. Add gameobjects with the desired attachments to the child of the desired bone **[optional]**.
@@ -88,7 +87,7 @@ Settings
 	* **Common** : shows common settings (custom offset & custom animation name).
 	* **Transition mode** : allows you to preview the transition from one animation to another in the editor.
 	* **Animation binding** : shows binding settings of the :ref:`Animation collection <animationGPUAnimationCollection>`.
-	* **Multimesh** : allows you to bake animations with multi-skin renderers or with custom attachments **[vertex skinning method only]**.
+	* **Multimesh** : allows you to bake animations with multi-skin renderers or with custom attachments.
 
 | **Add normal texture** : add normal texture.
 

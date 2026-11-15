@@ -22,12 +22,12 @@ Traffic Spawn Button Helper
 
 Manually spawns a vehicle at the :ref:`selected index <trafficNodeIndexDebug>`.
 
-	.. image:: /images/debuggers/traffic/TrafficCarSpawnButtonHelper.png		
+	.. image:: /images/debuggers/traffic/TrafficCarSpawnButtonHelper.png
 	
 Traffic Debugger
 ----------------
 
-	.. image:: /images/debuggers/traffic/TrafficCarDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficCarDebugger.png
 	
 | **Enable debug** : enables/disables traffic debugging.
 
@@ -37,7 +37,7 @@ Debugger Type
 Default
 """""""
 
-	.. image:: /images/debuggers/traffic/TrafficCarDebuggerExample.png	
+	.. image:: /images/debuggers/traffic/TrafficCarDebuggerExample.png
 	
 Target  
 """"""
@@ -74,7 +74,7 @@ Speed limit
 	
 Shows the current speed and speed limit of the vehicle.
 	 
-	.. image:: /images/debuggers/traffic/TrafficCarDebuggerSpeedLimitExample.png		
+	.. image:: /images/debuggers/traffic/TrafficCarDebuggerSpeedLimitExample.png
 
 Change lane
 """""""""""
@@ -122,14 +122,14 @@ Traffic Raycast Debugger
 
 Visualizes the detection box volume of vehicles (:ref:`Config <trafficCarRaycastConfig>`).
 
-	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebugger.png
 	
 | **Enable debug** : enables/disables raycast volume visualization.
 
 Example
 ~~~~~~~
 
-	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebuggerExample.png		
+	.. image:: /images/debuggers/traffic/TrafficCarRaycastDebuggerExample.png
 
 .. _trafficCarNpcObstacleDebugger:
 
@@ -138,7 +138,7 @@ Traffic NpcObstacle Debugger
 
 Visualizes the NPC calculation area and detected pedestrian obstacles.
 
-	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebugger.png
 	
 | **Enable debug** : enables/disables visualization.
 | **Area color** : color of the NPC calculation bounding box.
@@ -147,14 +147,14 @@ Visualizes the NPC calculation area and detected pedestrian obstacles.
 Example
 ~~~~~~~
 
-	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebuggerExample.png		
+	.. image:: /images/debuggers/traffic/TrafficCarNpcObstacleDebuggerExample.png
 	
 Traffic Public Debugger
 -----------------------
 	
 Visualizes :ref:`public transport <trafficPublic>` route and schedule data.
 	
-	.. image:: /images/debuggers/traffic/TrafficPublicDebugger.png		
+	.. image:: /images/debuggers/traffic/TrafficPublicDebugger.png
 	
 | **Enable debug** : enables/disables visualization.
 | **Text color** : text label color.
@@ -162,7 +162,7 @@ Visualizes :ref:`public transport <trafficPublic>` route and schedule data.
 Example
 ~~~~~~~
 
-	.. image:: /images/debuggers/traffic/TrafficPublicDebuggerExample.png		
+	.. image:: /images/debuggers/traffic/TrafficPublicDebuggerExample.png
 	
 Traffic Light Debugger
 ----------------------

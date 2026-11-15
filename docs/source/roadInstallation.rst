@@ -43,7 +43,7 @@ For any further modifications to existing roads, layouts, or runtime parameters,
 .. _roadEntitySubscene:
 
 Entity Subscene Creation
-----------------
+------------------------
 	
 From `DOTS 1.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/index.html>`_ onwards, all entity conversions must be done using subscenes. It's necessary to create a separate :ref:`subscene <subscene>` for roads.
 
@@ -60,17 +60,17 @@ Steps:
 .. _configEdit:
 
 Config Editing Workflow
-----------------
+-----------------------
 
 There are 4 variants to edit configs:
 
 Main Scene Editing
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/installation/MainSceneExample.png
 
 Steps
-""""""""""""""
+"""""
 
 #. Select :ref:`Hub <hub>` in the scene.
 #. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row.
@@ -78,12 +78,12 @@ Steps
 	.. image:: /images/road/installation/Hub.png
 	
 Directional Editing
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/installation/EntitySubSceneExample.png
 	
 Steps
-""""""""""""""
+"""""
 
 #. Open the `EntitySubScene` :ref:`subscene <subscene>`.
 #. Edit any config.
@@ -91,19 +91,19 @@ Steps
 #. Save & close :ref:`subscene <subscene>`.
 
 Manual Sync Local Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Steps
-""""""""""""""
+"""""
 
 #. Change the desired value of the desired config.
 #. After that, the `Sync To Subscene` button will appear to synchronize this config with the subscene.
 
 Auto-Sync Local Config
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 Steps
-""""""""""""""
+"""""
 
 #. Open project settings from the `Unity` toolbar:
 

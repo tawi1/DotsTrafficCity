@@ -5,7 +5,7 @@ Road Segment
 
 `Road Segment` is the main component of the road that contains :ref:`traffic nodes <trafficNode>`, :ref:`paths <path>`.
 
-`Youtube tutorial. <https://youtu.be/wNa8GgBPyqU>`_
+`Youtube tutorial. <https://youtu.be/0L84dkGqCCE?si=YeW8yuG-wwsYu6u9&t=820>`_
 
 How To Create
 -------------
@@ -16,7 +16,7 @@ Select from the `Unity` toolbar:
 	
 	
 How To Customize
-------------
+----------------
 
 By default, `RoadSegment` contains :ref:`RoadSegmentCreator <roadSegmentCreator>` component that can be used to customize a segment.
 	

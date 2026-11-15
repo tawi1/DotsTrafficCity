@@ -312,7 +312,7 @@ You can control the `Rukhanka Hybrid` NPC with a MonoBehaviour script:
 
  	..  code-block:: csharp
 	
-		public struct AnimationControlExample : MonoBehaviour
+		public class AnimationControlExample : MonoBehaviour
 		{		  
 			private RukhankaEntityAdapterBase adapter;
 			
@@ -560,7 +560,7 @@ How To Setup
 
 * Create a new GameObject & add the `NavMeshSurface <https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html>`_ component.
 * Set `Agent type` to `Humanoid` & press the `Bake` button in the created `NavMeshSurface`.
-* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Calc Nav Path`.
+* Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Simple NavMesh`.
 * Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` or `Persist` mode.
 
 Pros And Cons

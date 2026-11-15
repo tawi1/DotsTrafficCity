@@ -710,7 +710,7 @@ Path
 **Parking connection source type** :
 	* **Path** [paths will be connected to the `Parking source path` (:ref:`PathPoint connection <pathPointConnection>`)]
 		* **Parking source path** : path from which the created parking slot paths will start and end.
-		* **Show select path buttons** : on/off display exist paths of the segment to add a parking source path.
+		* **Show select path buttons** : on/off display existing paths of the segment to add a parking source path.
 	* **Node** [paths will be connected to the selected `TrafficNodes` (:ref:`TrafficNode connection <trafficNodeConnection>`)]
 		* **Source TrafficNode** : node from which the created parking slot paths will start.
 		* **Target TrafficNode** : node to which the paths connected from the parking place.
@@ -737,10 +737,10 @@ Path
 	* **None** : displayed `Enter` & `Exit` paths.
 	* **Enter** : displayed only `Enter` paths.
 		* **Initial path speed limit** : initial speed limit of `Enter` paths.
-		* **Node clone count** : number of nodes in the next paths that are will clone position from source path.
+		* **Node clone count** : number of nodes in the next paths that will clone position from source path.
 	* **Exit** : displayed only `Exit` paths
 		* **Initial path speed limit** : initial speed limit of exit paths.
-		* **Node skip last count** : number of last nodes in the next paths that are will clone position the last nodes from source path.
+		* **Node skip last count** : number of last nodes in the next paths that will clone position the last nodes from source path.
 		
 Node
 """"

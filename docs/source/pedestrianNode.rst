@@ -203,12 +203,12 @@ If you need to associate a scene object with the trigger event, follow these ste
 			
 
 Trigger And Destroy
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 Node to notify the user that the entity has reached the node & then destroy the entity. Use case is the same as the `Trigger type`.
 
 Crosswalk Node
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Node used to place crosswalks in arbitrary positions without using :ref:`traffic nodes <trafficNode>` and :ref:`road segments <roadSegment>`.
 

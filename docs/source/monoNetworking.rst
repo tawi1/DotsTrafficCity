@@ -26,7 +26,7 @@ The framework includes ready-to-use sample scenes for supported networking backe
   * **Setup Requirements:** Requires downloading and importing the `FishNet` package, adding the `CUSTOM_NETWORK` scripting define in Project Settings, importing the `FishNetPrefabs` upgrade package, and placing `FishnetPrefabRoot` into the scene.
 
 Architecture Diagram & Execution Flow
-------------------------------------
+-------------------------------------
 
 The following diagram illustrates the interaction between scene bootstrapping, strategy providers, core services, pedestrian network broadcasters, traffic adapters, vehicle network bridges, and client/server synchronization systems:
 
@@ -208,7 +208,7 @@ ServerConnectionBase & UniversalServerConnection
   * Includes `EditorResolve()` for locating UI references in the Unity Editor.
 
 Entity Identification & Registration
------------------------------------
+------------------------------------
 
 NetworkId
 ~~~~~~~~~
@@ -518,7 +518,7 @@ MonoVehicleInteractCaster
 ``MonoVehicleInteractCaster`` extends ``PlayerInteractCasterBase`` to handle interaction casting specifically for vehicles. It validates driver availability via ``MonoVehicleNetworkSyncBase`` and delegates entry and exit requests to an assigned ``IVehicleNetworkBridge`` upon input detection.
 
 Vehicle Network Synchronization & Driver Management
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 IPlayerNetworkInteractionBridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

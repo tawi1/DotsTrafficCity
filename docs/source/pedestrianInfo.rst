@@ -689,7 +689,6 @@ How To Setup
 
 * Set :ref:`Avoidance type <pedestrianObstacleAvoidanceType>` to `Crowd Avoidance NavMesh Path`.
 * Ensure a valid `NavMeshSurface` is baked in the scene.
-* Set :ref:`Pedestrian navigation type <pedestrianNavigationType>` to `Temp` (activates pathfinding dynamically when blocked) or `Persist` (always follows NavMesh paths).
 * Configure crowd and wall parameters in :ref:`Crowd Avoidance Config <pedestrianCrowdAvoidanceConfig>` and pathfinding parameters in :ref:`NavAgent Config <pedestrianNavAgentConfig>`.
 
 .. note::

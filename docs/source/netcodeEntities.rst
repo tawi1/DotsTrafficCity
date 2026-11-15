@@ -9,7 +9,7 @@ NetCode For Entities
 
 	.. image:: /images/multiplayer/netcode1.png
 
-* In the :ref:`Cull config <cullConfig>`, make sure `Multiplayer Calculate Distance` or `Multiplayer Camera View` type.
+* In the :ref:`Cull config <cullConfig>`, make sure the `Multiplayer Calculate Distance` or `Multiplayer Camera View` mode is selected.
 * Add a new gameobject to the subscene with the `NetcodeCullPointPrefab` component and assign the `NetcodeCullPoint` prefab to it. The sample scene contains this prefab by default.
 * From the Unity toolbar, select ``Window > Multiplayer > Play Mode Tools``. Make sure that the `Play Mode Type` is set to ``Client & Server`` (if you are running a local simulation).
 * Install `Multiplayer Play Mode <https://docs.unity3d.com/Packages/com.unity.multiplayer.playmode@2.0/manual/index.html>`_ package to simulate a few players locally **(optional)**. 

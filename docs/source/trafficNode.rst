@@ -13,23 +13,23 @@ Settings
 Cached
 ~~~~~~
 
-	.. image:: images/road/trafficNode/TrafficNode.png
+	.. image:: /images/road/trafficNode/TrafficNode.png
 	
 | **Traffic light crossroad** : the :ref:`crossroad <trafficLightCrossroad>` to which the node belongs.
-| **Traffic light handler** : traffic light that the traffic node is linked (:ref:`TrafficLightHandler <trafficLightHandler>`).
+| **Traffic light handler** : traffic light that the traffic node is linked to (:ref:`TrafficLightHandler <trafficLightHandler>`).
 
 Lane Data
 ~~~~~~~~~
 
-	.. image:: images/road/trafficNode/TrafficNode2.png
+	.. image:: /images/road/trafficNode/TrafficNode2.png
 	
 | **Lanes** : :ref:`right side lanes <trafficNodeRightDirection>` (to connect `TrafficNodes` within a :ref:`RoadSegment <roadSegment>`).
-| **External lanes** : :ref:`left side lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additonal info <trafficNodeLeftDirectionInfo>`).
+| **External lanes** : :ref:`left side lanes <trafficNodeLeftDirection>` (to connect nodes in :ref:`external RoadSegments <trafficNodeConnectionExample>`) (:ref:`additional info <trafficNodeLeftDirectionInfo>`).
 	
 Settings
 ~~~~~~~~
 
-	.. image:: images/road/trafficNode/TrafficNode3.png
+	.. image:: /images/road/trafficNode/TrafficNode3.png
 
 | **Lane count** : number of lanes.
 | **Lane width** : lane width.
@@ -44,7 +44,7 @@ Settings
 	* **Left** : left-hand lanes have traffic lights.
 	* **Right and left** : right and left lanes have traffic lights.
 	
-| **Has crollwalk** : quick on/off crosswalk option for pedestrians.
+| **Has crosswalk** : quick on/off crosswalk option for pedestrians.
 | **Is one way** : all lanes are one-way traffic lanes (:ref:`more info <trafficNodeOneWay>`).
 | **Is end of one way** : node ends one-way traffic for this :ref:`RoadSegment <roadSegment>` (:ref:`more info <trafficNodeOneWay>`).
 | **Lock path auto creation** : on/off prevent auto path creation (:ref:`more info <autoPathConnection>`).

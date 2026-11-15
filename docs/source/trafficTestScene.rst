@@ -11,7 +11,7 @@ How To Use
 #. Create a :ref:`road segment <roadSegmentCreator>`.
 #. Create a parent `GameObject` and add the :ref:`TrafficCarRoadDebugger <testSceneTrafficCarRoadDebugger>` component.
 #. In the created component, press the :ref:`Show buttons <testSceneTrafficCarRoadDebuggerSceneSettings>`.
-#. Select the in paths in the scene where you want the vehicle to spawn.
+#. Select the paths in the scene where you want the vehicle to spawn.
 #. Adjust the normalized :ref:`path <path>` position to set the spawn point.
 #. Start the scene.
 #. Click the `Spawn` button in the component.
@@ -103,7 +103,7 @@ Traffic jam in the lane
 	
 .. _trafficTestSceneTrafficGroup:
 	
-Traffic fobbidden node test
+Traffic forbidden node test
 """""""""""""""""""""""""""
 
 	.. image:: /images/testscenes/traffic/ChangeLaneNodeTest1.png
@@ -167,7 +167,7 @@ Check Traffic Reverse
 	`Source.`
 		
 	.. image:: /images/testscenes/traffic/BackwardTest2.png
-	`Final result result.`
+	`Final result.`
 	
 .. _trafficTestSceneAvoidance:
 	

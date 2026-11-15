@@ -5,7 +5,7 @@ Scene Handle
 Bootstrap
 =========
 
-* To start the scene automatically on the `Build` application, tick the `Auto-bootstrap` option in the `CityEntryPoint` (in the `Editor`, the scene loads by default).
+* If you want to start the scene with code, assign `CityEntryPoint` with the `SceneBootstrap` script to your script & use the following method, example:
 
 	.. image:: /images/core/CityEntryPoint.png
 	`CityEntryPoint.`
@@ -61,7 +61,7 @@ Scene Unload
 			entityWorldService.DisposeWorld();
 		}
 		
-* Or use simply use:
+* Or simply use:
 
 	..  code-block:: csharp
 	

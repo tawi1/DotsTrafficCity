@@ -5,9 +5,9 @@ Sound
 *****
 
 Built-in
-============
+========
 
-By default is used for all sounds in the project (if :ref:`FMOD <fmod>` is not installed).
+By default, this is used for all sounds in the project (if :ref:`FMOD <fmodSound>` is not installed).
 
 How To Use
 ----------
@@ -264,16 +264,17 @@ Create sound example
             soundPrefabQuery = SoundExtension.GetSoundQuery(EntityManager, SoundType.Default);
         }
 		
-		protected override void OnUpdate()
-		{
-			var commandBuffer = ...
-			var soundPrefabEntity = soundPrefabQuery.GetSingletonEntity();
+        protected override void OnUpdate()
+        {
+            var commandBuffer = ...
+            var soundPrefabEntity = soundPrefabQuery.GetSingletonEntity();
 			
-			// Pass 'commandBuffer' & 'soundPrefabEntity' into the IJobEntity or Entities.ForEach
-			// commandBuffer.CreateSoundEntity(soundPrefabEntity, soundId, position);
-			// 'soundId' can be taken from 'SoundData'
-		}
-	
+            // Pass 'commandBuffer' & 'soundPrefabEntity' into the IJobEntity or Entities.ForEach
+            // commandBuffer.CreateSoundEntity(soundPrefabEntity, soundId, position);
+            // 'soundId' can be taken from 'SoundData'
+        }
+    }	
+
 Params
 ~~~~~~
             
@@ -289,39 +290,38 @@ How To Play
 	
 	public partial class PlayAndStopSoundExampleSystem : SystemBase
 	{
-	protected override void OnUpdate()
-	{
-	
-	// Get world sounds
-	var sounds = GetComponentLookup<SoundEventComponent>(false);
-	
-	Entities
-	.WithBurst()
-	.ForEach((
-		Entity entity
-		in SoundHolder soundHolder) =>
-	{
-		// Some play condition
-		bool shouldPlay = true; 
-		
-		// Some sound entity container component 
-		Entity soundEntity = soundHolder.Entity 
-		
-		SoundEventComponent soundEvent = sounds[soundEntity];
-		
-		if (shouldPlay)
+		protected override void OnUpdate()
 		{
-			soundEvent.SetEvent(SoundEventType.Play);
-		}
-		else
-		{
-			soundEvent.SetEvent(SoundEventType.StopFadeout);
-		}
-		
-		sounds[soundEntity] = soundEvent;
+			// Get world sounds
+			var sounds = GetComponentLookup<SoundEventComponent>(false);
 			
-	}).Schedule();
-	}
+			Entities
+			.WithBurst()
+			.ForEach((
+				Entity entity,
+				in SoundHolder soundHolder) =>
+			{
+				// Some play condition
+				bool shouldPlay = true; 
+				
+				// Some sound entity container component 
+				Entity soundEntity = soundHolder.Entity;
+				
+				SoundEventComponent soundEvent = sounds[soundEntity];
+				
+				if (shouldPlay)
+				{
+					soundEvent.SetEvent(SoundEventType.Play);
+				}
+				else
+				{
+					soundEvent.SetEvent(SoundEventType.StopFadeout);
+				}
+				
+				sounds[soundEntity] = soundEvent;
+					
+			}).Schedule();
+		}
 	}
 	
 How To Destroy

@@ -15,18 +15,18 @@ How To Use
 Getting Started
 ---------------
 
-#. Create a new gameobject & add `AstarPath` component
-#. Add 2 `Point Graph` to the `AstarPath` component (if you are going to navigate for either traffic or pedestrian, create only 1 graph)
+#. Create a new gameobject & add the `AstarPath` component.
+#. Add 2 `Point Graphs` to the `AstarPath` component (if you are going to navigate for either traffic or pedestrians only, create just 1 graph).
 
 	.. image:: /images/integration/astar2.png
 	
-#. Create a new gameobject & `AstarPedestrianPathService` for pedestrians & `AstarTrafficPathService` for traffic.
+#. Create a new gameobject & add `AstarPedestrianPathService` for pedestrians & `AstarTrafficPathService` for traffic.
 
 	.. image:: /images/integration/astar1.png
 	
-#. The next step is to create a graph for runtime or static scene.
-#. To retrieve traffic or pedestrians, read the :ref:`traffic entity selection <TrafficEntitySelection>` or :ref:`Pedestrian entity selection <pedestrianEntitySelection>`
-#. To get entity nodes on the scenes, read `TrafficNodeSelector` & `PedestrianNodeSelector` examples.
+#. The next step is to create a graph for a runtime or static scene.
+#. To retrieve traffic or pedestrians, read the :ref:`Traffic entity selection <trafficEntitySelection>` or :ref:`Pedestrian entity selection <pedestrianEntitySelection>`.
+#. To get entity nodes on the scenes, read the `TrafficNodeSelector` & `PedestrianNodeSelector` examples.
 #. After you have added service & graph, use this code:
 
 	..  code-block:: csharp

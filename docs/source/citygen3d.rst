@@ -6,7 +6,7 @@ CityGen3D
 Limitations
 -----------
 
-* For some complex generated roads may end up with artifact & may require manual fixing for them.
+* Some complex generated roads may end up with artifacts & require manual fixing.
 * Currently, pedestrian nodes are not generated.
 
 How To Use

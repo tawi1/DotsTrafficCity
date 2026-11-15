@@ -26,8 +26,8 @@ Getting Started
 	.. image:: /images/integration/mvr2.png
 	
 #. Customize all settings according to your needs.
-#. Press `Generate` button
-#. View a `Generated data`, fix any problems if this tab has them & generate again.
+#. Press `Generate` button.
+#. View the `Generated data` tab, fix any problems if this tab has them & generate again.
 
 	.. image:: /images/integration/mvr3.png
 	`Result example.`
@@ -49,7 +49,7 @@ How To Use
 * Add ``MVR_UserPrefab`` component.
 * Select the `Intersection` in the scene by pressing the `Select` button.
 * Press `Add Prefab` button in the inspector.
-* Now, your prefab addded to MVR config & you can regenerate the scene.
+* Now, your prefab is added to the `MVR config` & you can regenerate the scene.
 
 MVR UserSceneSegment
 --------------------

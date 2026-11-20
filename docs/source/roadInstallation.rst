@@ -33,8 +33,8 @@ Phase 4: Baking & Subscenes
 #. Select the **Road Parent** component in the hierarchy.
 
 	.. image:: /images/road/installation/RoadParent.png
-      :alt: Road Parent Inspector View
-      :align: center
+		:alt: Road Parent Inspector View
+		:align: center
 
 #. Click the **Bake** button.
 

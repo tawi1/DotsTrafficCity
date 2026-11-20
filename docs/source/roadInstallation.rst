@@ -97,6 +97,9 @@ Steps
 #. Enable ``Sync Config On Change``.
 #. Any config changes made on the Main Scene will now automatically synchronize to the SubScene.
 
+.. note::
+   ``Auto-Sync Local Config`` only synchronizes the specific config currently being modified. If you want to synchronize all configs at once, use the **Main Scene Editing** method below.
+
 Manual Sync Local Config
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,16 +109,16 @@ Steps
 #. Change the target field or assign a new asset on the config component in the Main Scene.
 #. A ``Sync To Subscene`` button will appear in the component's Inspector — press it to synchronize this config with the SubScene.
 
-Main Scene Editing
-~~~~~~~~~~~~~~~~~~
+Main Scene Editing (Sync All)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/installation/MainSceneExample.png
 
 Steps
 """""
 
-#. Edit or reassign the required config on the Main Scene.
-#. Select :ref:`Hub <subsceneGenerator>` in the scene and press ``Copy To Subscene``. If the config is not a ScriptableObject, apply the prefab override for the selected config row.
+#. Edit or reassign the required configs on the Main Scene.
+#. Select :ref:`Hub <subsceneGenerator>` in the scene and press ``Copy To Subscene`` to synchronize all configs at once. If a config is not a ScriptableObject, apply the prefab override for the selected config row.
 
 	.. image:: /images/road/installation/Hub.png
 

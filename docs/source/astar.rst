@@ -52,7 +52,7 @@ Used for static scenes created in the `Editor`.
 Runtime Graph
 -------------
 
-Used for run-time generated scenes.
+Used for tile-based run-time generated scenes with `RuntimeRoadManager`.
 
 #. Create a new gameobject & add a `RuntimeRoadManager` component & you can use :ref:`Runtime Road <runtimeRoad>` for demo.
 #. Add components `AstarPedestrianRuntimeGraphModifier` & `AstarTrafficRuntimeGraphModifier` & assign these references to corresponding services, making sure local graph indexes are different for both graphs & matched with `AstarPath` (e.g. 0 index for pedestrian & 1 index for traffic).
@@ -65,4 +65,28 @@ Used for run-time generated scenes.
 		.. image:: /images/integration/astar3.png
 		
 	#. Do the same for traffic.
-	
+
+Runtime Graph (Custom)
+----------------------
+
+Used for spline-based / custom run-time generated scenes with `RuntimeRoadManagerCustom`.
+
+#. Create a new gameobject & add a `RuntimeRoadManagerCustom` component.
+#. Add components `AstarPedestrianRuntimeCustomGraphModifier` & `AstarTrafficRuntimeCustomGraphModifier` & assign these references to corresponding services, making sure local graph indexes are different for both graphs & matched with `AstarPath` (e.g. 0 index for pedestrian & 1 index for traffic).
+#. Make sure that you have assigned `RuntimeRoadManagerCustom` to these modifiers.
+
+Performance Optimization (Authoring)
+------------------------------------
+
+By default, `allowStructuralChanges` is enabled on `AstarPedestrianPathService` & `AstarTrafficPathService`. This mode adds & removes pathfinding components at runtime and is suitable for infrequent pathfinding on a small number of entities.
+
+If you plan to search paths frequently or for a large number of entities, avoid runtime structural changes by baking the required components directly onto your entity prefabs:
+
+#. Disable `allowStructuralChanges` on `AstarPedestrianPathService` and/or `AstarTrafficPathService`.
+#. Add the corresponding authoring components to your entity prefabs:
+
+	* **Pedestrians:** `PedestrianPathfindingAuthoring` & `AstarAgentAuthoring`
+	* **Traffic:** `TrafficPathfindingAuthoring` & `AstarAgentAuthoring`
+
+.. note::
+	When `allowStructuralChanges` is disabled, all entities requesting a path must have these authoring components on their prefabs; otherwise, the service will log an error & fall back to structural changes.

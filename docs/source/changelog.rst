@@ -3,6 +3,25 @@
 Change Log
 **********
 
+[1.9.7] - 20-11-2026
+--------------------
+
+Added
+~~~~~
+
+* Added Play Mode check for Main Scene / SubScene config synchronization mismatches.
+
+Changed
+~~~~~~~
+
+* Runtime road scripts improvements.
+
+Fixed
+~~~~~
+
+* Fixed non-deterministic subscene baking in PedestrianNodeAuthoring and TrafficRoadDebuggerBaker caused by InstanceID usage.
+* Fixed Aron's A* compatibility issues.
+
 [1.9.6] - 15-11-2026
 --------------------
 

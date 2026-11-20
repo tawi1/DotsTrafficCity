@@ -9,7 +9,7 @@ Phase 1: Initial Setup
 ----------------------
 
 #. Create the initial :ref:`scene base <cityCreation>` objects via the Unity toolbar.
-#. Create the required :ref:`Road Segments <roadSegment>`. 
+#. Create the required :ref:`Road Segments <roadSegment>`.
 #. Add all created segments as children to the **Road Parent** object in your scene hierarchy.
 
 Phase 2: Path & Node Creation
@@ -31,13 +31,13 @@ Phase 4: Baking & Subscenes
 ---------------------------
 
 #. Select the **Road Parent** component in the hierarchy.
-	
-   .. image:: /images/road/installation/RoadParent.png
+
+	.. image:: /images/road/installation/RoadParent.png
       :alt: Road Parent Inspector View
       :align: center
 
-#. Click the **Bake** button. 
-   
+#. Click the **Bake** button.
+
    .. warning:: Data baking must be done after *every* road modification and strictly before entering Play Mode. For more details, see :ref:`Baking Info <bakingInfo>`.
 
 #. Generate the :ref:`Entity Subscene <roadEntitySubscene>`. This is a **one-time procedure** to convert standard GameObjects into high-performance DOTS entities.
@@ -51,26 +51,60 @@ For any further modifications to existing roads, layouts, or runtime parameters,
 
 Entity Subscene Creation
 ------------------------
-	
+
 From `DOTS 1.0 <https://docs.unity3d.com/Packages/com.unity.entities@1.0/manual/index.html>`_ onwards, all entity conversions must be done using subscenes. It's necessary to create a separate :ref:`subscene <subscene>` for roads.
 
 	.. image:: /images/road/installation/Hub.png
-	
-Steps:
-	#. Select :ref:`Hub <hub>` in the scene.
-	#. Select `Entity subscene path` the path to create a :ref:`subscene <subscene>`.
-	#. Enter the `Entity subscene name` or use the default name.
-	#. On/off autosync configs (before migrating the configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs that are in the :ref:`Hub <hub>`).
-	#. On/off copy physics shapes feature (read more about :ref:`physics shape transferring <physicsShapeTransfer>`) **[required if you plan to use DOTS physics]**.
-	#. Press the `Generate` button.
-	#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
+
+Steps
+~~~~~
+
+#. Select :ref:`Hub <hub>` in the scene.
+#. Set ``Entity subscene path`` to specify where to create the :ref:`subscene <subscene>`.
+#. Enter the ``Entity subscene name`` or use the default name.
+#. Toggle ``Autosync configs`` on or off (before migrating configs to the :ref:`subscene <subscene>`, they will be synchronized with the configs in the :ref:`Hub <hub>`).
+#. Toggle ``Copy physics shapes`` on or off (read more about :ref:`physics shape transferring <physicsShapeTransfer>`) **[required if you plan to use DOTS physics]**.
+#. Press the ``Generate`` button.
+#. All created :ref:`RoadSegments <roadSegment>` and :ref:`PedestrianNodes <pedestrianNode>` will automatically be moved to the :ref:`subscene <subscene>`.
 
 .. _configEdit:
 
 Config Editing Workflow
 -----------------------
 
-There are 4 variants to edit configs:
+Why Configs Exist on Both Scenes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In Unity DOTS, the **Entity SubScene** and the **Main Scene** serve different roles and both need access to the same configuration assets:
+
+* **Entity SubScene:** Bakers convert these configs into ECS entity components and ``BlobAssets`` used by DOTS simulation systems.
+* **Main Scene:** MonoBehaviour initializers and managers use the same configs at runtime to initialize main-scene systems, hybrid components, and scene-level dependencies.
+
+Because both scenes hold their own references to these config assets, they must stay synchronized. If the assigned assets differ, a ``[Config Sync Mismatch]`` error will be logged upon entering Play Mode.
+
+There are 4 ways to edit and synchronize configs:
+
+Auto-Sync Local Config (Recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Steps
+"""""
+
+#. Open Project Settings from the Unity toolbar:
+
+   * ``Edit/ProjectSettings/604Spirit/City Settings/``
+
+#. Enable ``Sync Config On Change``.
+#. Any config changes made on the Main Scene will now automatically synchronize to the SubScene.
+
+Manual Sync Local Config
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Steps
+"""""
+
+#. Change the target field or assign a new asset on the config component in the Main Scene.
+#. A ``Sync To Subscene`` button will appear in the component's Inspector — press it to synchronize this config with the SubScene.
 
 Main Scene Editing
 ~~~~~~~~~~~~~~~~~~
@@ -80,42 +114,20 @@ Main Scene Editing
 Steps
 """""
 
-#. Select :ref:`Hub <hub>` in the scene.
-#. After editing any config in the main scene :ref:`Hub <subsceneGenerator>` press the `Copy To Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row.
-	
+#. Edit or reassign the required config on the Main Scene.
+#. Select :ref:`Hub <subsceneGenerator>` in the scene and press ``Copy To Subscene``. If the config is not a ScriptableObject, apply the prefab override for the selected config row.
+
 	.. image:: /images/road/installation/Hub.png
-	
-Directional Editing
-~~~~~~~~~~~~~~~~~~~
+
+Direct SubScene Editing
+~~~~~~~~~~~~~~~~~~~~~~~
 
 	.. image:: /images/road/installation/EntitySubSceneExample.png
-	
-Steps
-"""""
-
-#. Open the `EntitySubScene` :ref:`subscene <subscene>`.
-#. Edit any config.
-#. After editing any config in the subscene, in the :ref:`Hub <subsceneGenerator>` press the `Copy From Subscene` button or if the config is a non-scriptable object, apply the prefab to the selected config row in the subscene.
-#. Save & close :ref:`subscene <subscene>`.
-
-Manual Sync Local Config
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 Steps
 """""
 
-#. Change the desired value of the desired config.
-#. After that, the `Sync To Subscene` button will appear to synchronize this config with the subscene.
-
-Auto-Sync Local Config
-~~~~~~~~~~~~~~~~~~~~~~
-
-Steps
-"""""
-
-#. Open project settings from the `Unity` toolbar:
-
-	* `Edit/ProjectSettings/604Spirit/City Settings/`
-	
-#. Tick on `Sync Config On Change`.
-#. After that, any configuration changes made to the main scene are automatically synchronized to the subscene.	
+#. Open the ``EntitySubScene`` :ref:`subscene <subscene>`.
+#. Edit or reassign the required config.
+#. In :ref:`Hub <subsceneGenerator>`, press ``Copy From Subscene``. If the config is not a ScriptableObject, apply the prefab override for the selected config row in the SubScene.
+#. Save & close the :ref:`subscene <subscene>`.

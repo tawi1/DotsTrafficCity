@@ -20,6 +20,7 @@ Fixed
 ~~~~~
 
 * Fixed non-deterministic subscene baking in PedestrianNodeAuthoring and TrafficRoadDebuggerBaker caused by InstanceID usage.
+* Fixed UniqueID baking for standalone PedestrianNode objects outside RoadSegment or default parent.
 * Fixed Aron's A* compatibility issues.
 
 [1.9.6] - 15-11-2026

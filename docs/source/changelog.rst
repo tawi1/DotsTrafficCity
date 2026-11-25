@@ -9,6 +9,7 @@ Change Log
 Fixed
 ~~~~~
 
+* Added SoundListenerOffset to SoundLevelConfig to prevent abrupt left/right stereo switching when the audio listener is close to a sound source.
 * Fixed deprecation warnings.
 
 [1.9.7] - 20-11-2026

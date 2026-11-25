@@ -6,8 +6,8 @@ project = 'DOTS Traffic City'
 copyright = '2026, 604Spirit'
 author = '604Spirit'
 
-release = '1.9.7'
-version = '1.9.7'
+release = '1.9.8'
+version = '1.9.8'
 
 # -- General configuration
 
